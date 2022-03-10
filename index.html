@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,20 +56,20 @@
     <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/style.css" rel="stylesheet">
     
     <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.css" rel="stylesheet">
-    
+     <!-- <script src="/staticfiles/landing_page_gen/render.js"></script>   -->
     <script src="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.js"></script> 
 </head>
 
 <body>
 
-
-
 <div class = "flex w-full flex-col">  
-    <div class="fixed z-40 w-full lg:h-25 lg:py-4 items-start justify-start  bg-white text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    
+
+<div class="fixed z-40 w-full lg:h-25 lg:py-4 items-start justify-start  bg-white text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800">
   <div x-data="{ open: false }" class="flex flex-col lg:flex-r max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6 lg:px-8">
     <div class="py-4 flex flex-row items-center justify-between">
       
-        <a href= " #about "> <img class="h-16 w-auto relative" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/4b9d271e-c59b-425e-b1c1-955c33b8475a.png" alt="Caro&#x27;s Landscaping &amp; Lawncare logo"> </a>
+        <a href= " index "> <img class="h-16 w-auto relative" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/4b9d271e-c59b-425e-b1c1-955c33b8475a.png" alt="Caro&#x27;s Landscaping &amp; Lawncare logo"> </a>
       
       <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -77,51 +78,78 @@
         </svg>
       </button>
     </div>
-    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:flex-row  lg:justify-end ">
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:flex-row  lg:justify-center ">
     
       
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="#about">About U
+    href="index">About U
 </a>
       
       
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="#services">Our Services
-</a>
-     
-      
-<a 
-    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="#our-work">Our Best Work
-</a>
-     
-      
-<a 
-    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="#for-sale">For Sale
-</a>
-     
-      
-<a 
-    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="#testimonials">Testimonials &amp; Reviews
+    href="services">Our Services
 </a>
  
-         
+      
+        
+
+<div id='mobile-dropdown-parent' onclick='toggleDropDownMobile()' class="px-4 py-2 mt-2 text-lg font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 group flex flex-col relative ">
+    <div> Galleries
+        <i class="fa fa-caret-down"></i>
+    </div>
+    <!-- for desktop -->
+    <div class="hidden lg:group-hover:opacity-100 lg:opacity-0 transition duration-500 ease-in-out lg:flex flex-col bg-white z-50 w-full min-w-max absolute top-10 shadow-lg rounded-md px-4 py-4 space-y-3">
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Grass-Seeding"> Grass/Seeding </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-2"> 2 </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-6"> 6 </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-1"> 1 </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Test-Gallery"> Test Gallery </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-3"> 3 </a>
+        
+    </div> 
+    <!-- for mobile b/c can't enable tailwind variants w/o postcss build -->
+    <div id='mobile-dropdown' class="lg:hidden hidden transition duration-500 ease-in-out flex flex-col bg-white z-50 w-full min-w-max absolute top-10 shadow-lg rounded-md px-4 py-4 space-y-3">
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Grass-Seeding"> Grass/Seeding </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-2"> 2 </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-6"> 6 </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-1"> 1 </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Test-Gallery"> Test Gallery </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-3"> 3 </a>
+        
+    </div> 
+
+</div>
+
+
+  
+      
       
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="#faqs">Faqs
+    href="store">For Sale
 </a>
      
       
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="#find-us">Service Areas
+    href="testimonials">Testimonials &amp; Reviews
 </a>
-   
+ 
+              
     
   
 
@@ -136,6 +164,8 @@
     </nav>
   </div>
 </div>
+
+
     <section   style= "background-color:#ffffff"  
 class="flex relative flex-col w-full  bg-green-900 text-white  lg:flex-row lg:flex-wrap sm:mx-auto pt-12 mt-12">
     <div class="flex justify-end p-8 lg:py-32 lg:px-16 lg:pl-10 lg:w-1/2">
@@ -664,628 +694,136 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
     </section>
     
     
+        
+ 
+    <div id="" class="flex text-center justify-center items-center  w-full lg:w-auto " x-data="{open: false}">
+        
+<button 
+ 
+    onMouseOver="this.style.backgroundColor='white'; this.style.color='#ffffff' "
+    onMouseOut="this.style.backgroundColor='#e64d3d'; this.style.color='white'"
+    style="background-color:#e64d3d; color:white"               
+
+ id="side-button" type="button" x-on:click.prevent="open = true" class=" 
+  
+
+   mb-3 fixed bottom-0 -right-80 z-10 mr-3 md:mr-0 z-40 inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-green-400 text-white hover:bg-white hover:text-green-900 z-30">
+    <h5 class="text-3xl font-extrabold">text</h5> 
+</button>
+
+        <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
+    <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5 z-50">
+            <h3 class="mb-6 text-2xl font-medium text-black text-center">text</h3>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="first-name" id="2-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="last-name" id="2-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="phone-number" id="2-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <textarea name="message" cols="5" id="2-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
+        </div>
+        <div class="block">
+        <button type="button" 
+         
+            onMouseOver="this.style.backgroundColor='#ffffff'; this.style.color='#e64d3d' "
+            onMouseOut="this.style.backgroundColor='#e64d3d'; this.style.color='white'"
+            style="background-color:#e64d3d; color:white"               
+
+         
+        onclick= "send_sms(2, 'caro-landscaping')" 
+        class="w-full px-3 py-4 font-bold font-lg text-white  bg-green-400 text-white hover:bg-black hover:text-green-400 rounded-lg">Send</button> 
+        </div>           
+
+    </form>
+</div>
+    </div>
+
+    
     
     <section  style= "background-color:#ffffff"   id= "services" class="lg:mt-0 relative w-full px-8 font-sans leading-6  bg-green-900 border-0 border-green-200 text-white border-solid ">
-        <div class="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24 ">
+        <div class="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24  mt-24 ">
             
             <h2 class="mb-3 lg:pr-9 text-3xl mx-auto font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide text-center">
                 Our Services
             </h2>
             <h2  style= "color:#e64d3d"  class="w-full lg:pr-9 max-w-3xl mx-0 mx-auto mt-4 mb-0 font-sans text-sm font-medium leading-relaxed text-center text-green-400 border-0 border-green-200 lg:text-lg md:text-base">
-                What we are best at  - expert  remodeling and construction companies 
-                
+                <!-- What we are best at  - expert  remodeling and construction companies  -->
+                We provide a variety of remodeling and construction companies services!
             </h2>
 
             <div class="grid grid-cols-3 gap-5 mt-10 sm:grid-cols-8 lg:grid-cols-12">
 
                     
-                <div class="max-w-xs col-span-4 font-sans border-0 border-green-200 ">
-                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
-                        
-                        <div  class="md:mt-6 font-sans text-center border-0 border-green-200 ">
-                            <h3  style= "color:#e64d3d"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-green-400  ">NEW SERVICE 0</h3>
-                            <p
-                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
-                                
-                            </p>
+                <div class="max-w-xs col-span-4 font-sans rounded-lg border border-green-200 ">
+                        <a href= "services">
+                            <div class="box-border flex flex-col h-full md:py-8 leading-6 border-solid rounded-lg bg-white border-green-200">
+                                    
+                        <div  class="font-sans text-center border-green-200 flex justify-left">
+                            <i  style="color:#e64d3d"  class="fas fa-check-square fa-3x pl-5 pr-5 text-green-400"></i>
+                            <!-- <i  style="color:#e64d3d"  class="fal fa-check fa-3x pl-5 pr-5 text-green-400"></i> -->
+                            <div style="display:flex; justify-content: center; align-items:center">
+                                <h3  class="box-border text-lg font-bold leading-none tracking-wider border-solid text-gray-900">NEW SERVICE 0</h3>
+                            </div>
                         </div>
                     </div>
+                    </a>
                 </div>        
                     
-                <div class="max-w-xs col-span-4 font-sans border-0 border-green-200 ">
-                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
-                        
-                        <div  class="md:mt-6 font-sans text-center border-0 border-green-200 ">
-                            <h3  style= "color:#e64d3d"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-green-400  ">NEW SERVICE 1</h3>
-                            <p
-                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
-                                
-                            </p>
+                <div class="max-w-xs col-span-4 font-sans rounded-lg border border-green-200 ">
+                        <a href= "services">
+                            <div class="box-border flex flex-col h-full md:py-8 leading-6 border-solid rounded-lg bg-white border-green-200">
+                                    
+                        <div  class="font-sans text-center border-green-200 flex justify-left">
+                            <i  style="color:#e64d3d"  class="fas fa-check-square fa-3x pl-5 pr-5 text-green-400"></i>
+                            <!-- <i  style="color:#e64d3d"  class="fal fa-check fa-3x pl-5 pr-5 text-green-400"></i> -->
+                            <div style="display:flex; justify-content: center; align-items:center">
+                                <h3  class="box-border text-lg font-bold leading-none tracking-wider border-solid text-gray-900">NEW SERVICE 1</h3>
+                            </div>
                         </div>
                     </div>
+                    </a>
                 </div>        
                     
-                <div class="max-w-xs col-span-4 font-sans border-0 border-green-200 ">
-                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
-                        
-                        <div  class="md:mt-6 font-sans text-center border-0 border-green-200 ">
-                            <h3  style= "color:#e64d3d"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-green-400  ">Mowing</h3>
-                            <p
-                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
-                                The NEW SERVICE 2 service is a hardworking and reasonably priced service that pays attention to detail. We work diligently to get the job done right, and our customers are always happy with the results. We're proud to offer this service, and we're sure you'll be happy with the results.
-                            </p>
+                <div class="max-w-xs col-span-4 font-sans rounded-lg border border-green-200 ">
+                        <a href= "services">
+                            <div class="box-border flex flex-col h-full md:py-8 leading-6 border-solid rounded-lg bg-white border-green-200">
+                                    
+                        <div  class="font-sans text-center border-green-200 flex justify-left">
+                            <i  style="color:#e64d3d"  class="fas fa-check-square fa-3x pl-5 pr-5 text-green-400"></i>
+                            <!-- <i  style="color:#e64d3d"  class="fal fa-check fa-3x pl-5 pr-5 text-green-400"></i> -->
+                            <div style="display:flex; justify-content: center; align-items:center">
+                                <h3  class="box-border text-lg font-bold leading-none tracking-wider border-solid text-gray-900">Mowing</h3>
+                            </div>
                         </div>
                     </div>
+                    </a>
                 </div>        
                     
-                <div class="max-w-xs col-span-4 font-sans border-0 border-green-200 ">
-                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
-                        
-                        <div  class="md:mt-6 font-sans text-center border-0 border-green-200 ">
-                            <h3  style= "color:#e64d3d"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-green-400  ">longgggggggg serviceeeee nam eee ee ee</h3>
-                            <p
-                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
-                                NEW SERVICE 3 is a hardworking, reasonably priced service that pays attention to detail. We take pride in our work and always put our customers first. We are here to help you with whatever needs you may have, and we will work tirelessly to make sure you are happy with the final product. Contact us today
-                            </p>
+                <div class="max-w-xs col-span-4 font-sans rounded-lg border border-green-200 ">
+                        <a href= "services">
+                            <div class="box-border flex flex-col h-full md:py-8 leading-6 border-solid rounded-lg bg-white border-green-200">
+                                    
+                        <div  class="font-sans text-center border-green-200 flex justify-left">
+                            <i  style="color:#e64d3d"  class="fas fa-check-square fa-3x pl-5 pr-5 text-green-400"></i>
+                            <!-- <i  style="color:#e64d3d"  class="fal fa-check fa-3x pl-5 pr-5 text-green-400"></i> -->
+                            <div style="display:flex; justify-content: center; align-items:center">
+                                <h3  class="box-border text-lg font-bold leading-none tracking-wider border-solid text-gray-900">longgggggggg serviceeeee nam eee ee ee</h3>
+                            </div>
                         </div>
                     </div>
+                    </a>
                 </div>        
             
             </div>
         </div>
     </section>
+    <!-- </a> -->
+
     
-    
-    
-    
-
-    <div id="our-work" class="relative mb-0 w-full pt-12 overflow-hidden   bg-white text-green-900   md:pt-20 xl:pt-20 xl:pb-20">
-        <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-            <h2  style= "color:#ffffff" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
-            <h2  style= "color:#e64d3d" class="my-3 mb-10 text-xl font-medium  text-green-400  text-center">See why our customers love us</h2>
-            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0d57ee7a-ef4d-4447-ac4d-bef76809bbc3.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/720fd33c-9da0-4f9c-bfd9-6e1a73449ee2.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a2aee314-5673-4441-a846-8dda37035cb4.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6f73a0fc-9c67-4bf2-a2f2-a3fb558607db.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c76265b4-ba78-4bfc-b793-1a21966d5544.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/364c7381-10dd-4bc8-8947-d1ad1ca0bb88.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/51564d69-64cf-40e7-b4c1-8e9971e43643.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6003f432-b1bb-4537-873f-7ccf074c17f8.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/2ef8ba26-a5bb-43c6-a017-0352525f14dd.png', 'photo'],   ] }" @keydown.escape= "open = false"   >
-                <!-- <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/0d57ee7a-ef4d-4447-ac4d-bef76809bbc3.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/720fd33c-9da0-4f9c-bfd9-6e1a73449ee2.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/a2aee314-5673-4441-a846-8dda37035cb4.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/6f73a0fc-9c67-4bf2-a2f2-a3fb558607db.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/c76265b4-ba78-4bfc-b793-1a21966d5544.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/364c7381-10dd-4bc8-8947-d1ad1ca0bb88.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/51564d69-64cf-40e7-b4c1-8e9971e43643.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/6003f432-b1bb-4537-873f-7ccf074c17f8.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/2ef8ba26-a5bb-43c6-a017-0352525f14dd.png', 'photo'],   ] }" @keydown.escape= "open = false"   > -->
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0d57ee7a-ef4d-4447-ac4d-bef76809bbc3.jpeg"  alt = "Photo number 0 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0d57ee7a-ef4d-4447-ac4d-bef76809bbc3.jpeg"  alt = "Photo number 0 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/720fd33c-9da0-4f9c-bfd9-6e1a73449ee2.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/720fd33c-9da0-4f9c-bfd9-6e1a73449ee2.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a2aee314-5673-4441-a846-8dda37035cb4.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a2aee314-5673-4441-a846-8dda37035cb4.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6f73a0fc-9c67-4bf2-a2f2-a3fb558607db.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6f73a0fc-9c67-4bf2-a2f2-a3fb558607db.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/c76265b4-ba78-4bfc-b793-1a21966d5544.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c76265b4-ba78-4bfc-b793-1a21966d5544.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/364c7381-10dd-4bc8-8947-d1ad1ca0bb88.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/364c7381-10dd-4bc8-8947-d1ad1ca0bb88.png"  alt = "Photo number 1 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/51564d69-64cf-40e7-b4c1-8e9971e43643.png"  alt = "Photo number 4 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/51564d69-64cf-40e7-b4c1-8e9971e43643.png"  alt = "Photo number 4 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6003f432-b1bb-4537-873f-7ccf074c17f8.jpeg"  alt = "Photo number 5 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6003f432-b1bb-4537-873f-7ccf074c17f8.jpeg"  alt = "Photo number 5 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                                    
-                        
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/2ef8ba26-a5bb-43c6-a017-0352525f14dd.png"  alt = "Photo number 6 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div>
-                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/2ef8ba26-a5bb-43c6-a017-0352525f14dd.png"  alt = "Photo number 6 of Caro&#x27;s Landscaping &amp; Lawncare&#x27;s best work performing a null job"   loading="lazy" ></div> -->
-                    
-                 
-                                    
-        
-                <div class="z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center" x-show.transition="open" >
-
-
-                
-                
-                    <div class="flex items-center justify-start w-12  ml-6 md:m-2 z-50 absolute bottom-1/4 md:bottom-0 transform translate-x-12 md:translate-x-32" >
-                    <button
-                     style= "background-color:#e64d3d" 
-                            class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none bg-green-400"                                
-                            @click="open = false">
-                         <span class = "text-white"> <i class="fas fa-lg fa-times"></i> </span>
-                    </button>
-                    </div>
-
-                    <div class= "h-90 w-90 flex items-center justify-center overflow-hidden">
-
-                        <template  x-for="(slide, index, collection) in slides" :key="index">
-                            <div class="h-full w-full flex items-center justify-center absolute">
-                                <div class="absolute top-0 bottom-0 py-2  px-2 flex flex-col items-center justify-center"
-                                    x-show="activeSlide === index" 
-                                    x-transition:enter="transition ease-out duration-150"
-                                    x-transition:enter-start="opacity-0 transform scale-90"
-                                    x-transition:enter-end="opacity-100 transform scale-100"
-                                    x-transition:leave="transition ease-in duration-150"
-                                    x-transition:leave-start="opacity-100 transform scale-100"
-                                    x-transition:leave-end="opacity-0 transform scale-90">
-
-                                    <template x-if="slide[1] === 'photo' ">
-                                        <img :src="slide[0]" class="object-contain max-w-full max-h-full rounded shadow-lg" />
-                                    </template>
-                                    
-                                    <template x-if="slide[1] != 'photo'  ">
-                                        <video class="object-contain max-w-full max-h-full rounded shadow-lg"  controls> <source :src="slide[0]" >
-                                        </video>
-                                    </template> 
-                                    
-                                </div>
-                                <div  style= "color:#e64d3d"  class="fixed text-green-400 text-sm font-bold bottom-0 transform -translate-x-10 w-40 h-12 mb-2 hidden md:flex justify-center items-center"
-                                    x-show="activeSlide === index">
-                                    <span class="w-12 text-right" x-text="index + 1"></span>
-                                    <span class="w-4 text-center">/</span>
-                                    <span class="w-12 text-left" x-text="slides.length"></span>
-                                </div>
-                            </div>
-                        </template>
-
-                    <div class="fixed md:fixed z-50 absolute bottom-1/4 md:bottom-0 md:mb-2 transform -translate-x-8 md:-translate-x-10 flex justify-center" @click.away="open = false">
-                        <div class="flex items-center justify-end w-12 mr-3 md:mr-16">
-                        <button 
-                                type="button"
-                                 style= "background-color:#e64d3d" 
-                                class="w-12 h-12 rounded-full focus:outline-none flex items-center justify-center bg-green-400" 
-                               
-                                @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">
-                                <span class = "text-white"> <i class="fas fa-lg fa-chevron-left"></i> </span>
-                           
-                        </button>
-                        </div>
-                        <div class="flex items-center justify-start w-12 md:ml-16">
-                        <button 
-                                type="button"
-                                 style= "background-color:#e64d3d" 
-                                class="text-white font-bold w-12 h-12 rounded-full focus:outline-none flex items-center justify-center  bg-green-400   "
-                               
-                                @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">
-                           <span class = "text-white"> <i class="fas fa-lg fa-chevron-right"></i> </span>
-                        </button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            </div>
-        </div>     
-
-            
-</div>
-        
-    
-
-    <div id="for-sale" class=" relative mb-0 w-full pt-12 overflow-hidden bg-white md:pt-20 xl:pt-20 xl:pb-20">
-        <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
-            <h2  style= "color:#ffffff"  class="mb-3 text-3xl text-green-900 font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">For Sale</h2>
-            <h2  style= "color:#e64d3d"  class="my-3 mb-10 text-xl font-medium text-green-500 text-center">The best price and quality</h2>
-            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row">
-            
-                
-                <div class="flex flex-col sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 text-center space-y-3">
-                     <a target="_blank" href = "//test2.com"> 
-                                                              
-                                <img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/https%3A/landing-page-app-hero-images.s3.amazonaws.com/media/758fd45b-b748-4254-b721-679f5d9be3d1.png"  loading="lazy" alt="photo of past work"> 
-                        
-                     </a>  
-                     
-                    <p  style= "color:#ffffff"  class="font-medium  text-green-500 text-center"> Test 2 </p>
-                    
-                     
-                    <p   style= "color:#e64d3d"  class="font-large font-bold text-green-500 text-center"> Test 2 </p>
-                                            
-                </div>  
-                                
-            
-                
-                <div class="flex flex-col sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 text-center space-y-3">
-                     <a target="_blank" href = "//test.com"> 
-                                                              
-                                <img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/https%3A/landing-page-app-hero-images.s3.amazonaws.com/media/b0907389-b195-472e-be1f-8d0d511a9688.png"  loading="lazy" alt="photo of past work"> 
-                        
-                     </a>  
-                     
-                    <p  style= "color:#ffffff"  class="font-medium  text-green-500 text-center"> Test </p>
-                    
-                     
-                    <p   style= "color:#e64d3d"  class="font-large font-bold text-green-500 text-center"> Test </p>
-                                            
-                </div>  
-                                
-             
-            </div>                 
-        </div>
-    </div>
-    
-    
-    
-    <div  style= "background-color:#ffffff"  id= "testimonials" class=" flex items-center justify-center  bg-green-900 text-white  py-20 min-w-screen px-4">
-        <div class="px-16 ">
-            <div class="container flex flex-col items-center lg:items-startmx-auto lg:items-center">
-                <div class = "sm:mb-4 md:mb-0">
-                <h2  style= "color:#e64d3d"  class="relative flex  text-green-400 text-center sm:justify-center sm:mb-8 md:justify-start w-full text-lg font-bold tracking-wider uppercase lg:justify-center lg:items-center mb-10">Don&#x27;t just take our word for it</h2>
-                </div>
-
-
-                <h2 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide text-center ">
-                    
-                    Testimonials &amp; Reviews</h2>
-                <div class="block w-full h-1 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
-                
-                
-
-                <div class="items-start justify-start w-full mt-12 mb-4 lg:flex lg:flex-wrap">
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  ">Micah Keeton</h3>
-                            <h3 class=" text-white ">Homeowner  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"I have had my car for 4 years and I have never gotten it detailed. I also have had my dog that long and my car was jam packed with dog hair! Let me tell you, they got every piece of dog hair out of my car and it looks brand new! I am so so so happy with the job they did and it was well worth the price I paid! They drove to me and they also took way less time than I thought they would! I highly recommend their services!"</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  ">Chris Reasons</h3>
-                            <h3 class=" text-white ">Homeowner  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Peter did an incredible job on our car. The interior looks brand new now! Easy to schedule an appointment and reasonable pricing. We are very impressed and will definitely asdf use Detail On Demand again."</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  ">Jennifer Sannizzaro</h3>
-                            <h3 class=" text-white ">Homeowner  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Very difficult to find a good mobile service. Peter was quick to respond, courteous and did a great job."</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  ">Matt K</h3>
-                            <h3 class=" text-white ">Homeowner  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"meh"</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  ">Matthew Konicke</h3>
-                            <h3 class=" text-white ">Homeowner  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Bad seeding, yo"</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  ">Michaela Lafon</h3>
-                            <h3 class=" text-white ">Homeowner  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Got my car detailed inside/out and had a great experience! My car smells so good and looks new again. Very professional and great communication. I would recommend them and use them again! Thank you 😊"</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  ">Timmy Erganian</h3>
-                            <h3 class=" text-white ">Homeowner  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"They take there time and get ever detail right highly recommended"</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  ">Olivia Skylar Cutle</h3>
-                            <h3 class=" text-white ">Homeowner  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"I don't think my jeep looked this nice when I pulled it off of the car lot. Detail on Demand did an above and beyond PHENOMENAL job 👏"</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                </div>  
-                
-                <div class = "flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0 ">
-                
-                <a target= "_blank" href="www.facebook.com/prophoneapp/reviews"  class="w-full">
-                    <button  
-                onMouseOver="this.style.backgroundColor='white'; this.style.color='#ffffff' "
-                onMouseOut="this.style.backgroundColor='#e64d3d'; this.style.color='white'"
-                style="background-color:#e64d3d; color:white"               
-                
-                   type="button" class="inline-flex w-full items-center justify-center h-16 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none   text-black  bg-green-400  hover:bg-white hover:text-green-900 ">
-                            <h5 class="text-2xl font-extrabold">Leave a Review</h5> 
-                    </button>
-                </a>
-                
-             
-                
-                <a target= "_blank" href="www.facebook.com" class="w-full">
-                    <button  
-                onMouseOver="this.style.backgroundColor='white'; this.style.color='#ffffff' "
-                onMouseOut="this.style.backgroundColor='#e64d3d'; this.style.color='white'"
-                style="background-color:#e64d3d; color:white"               
-                
-                  type="button" class="inline-flex w-full  items-center justify-center h-16 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none   text-black  bg-green-400  hover:bg-white hover:text-green-900 ">
-                            <h5 class="text-2xl font-extrabold">See More Reviews</h5> 
-                    </button>
-                </a>
-               
-            </div>
-
-                         
-
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-<section id= "faqs" class="py-16   bg-white text-green-900  md:py-20 lg:py-24">
-    <div class="max-w-5xl px-12 mx-auto xl:px-0">
-
-        <h2  style= "color:#ffffff"  class="mb-5 text-3xl  mx-auto text-center font-extrabold leading-none sm:text-4xl lg:text-7xl">Faqs</h2>
-         <h2  style= "color:#e64d3d"  class="my-3 mb-10  text-xl font-medium  text-green-400 text-center">Your questions answered</h2>
-
-        <div class="relative mt-12 space-y-3">
-
-        
-
-            <!-- Question 1 -->
-            <div x-data="{ show: false }" class="relative overflow-hidden border-b border-green-100 select-none">
-                <h3  
-                onMouseOver="this.style.color='#e64d3d' "
-                onMouseOut=" this.style.color='#ffffff'"
-                style="color:#ffffff;"               
-                
-                                 
-                @click="show=!show" class=" text-center flex items-center justify-between px-2 text-xl font-medium text-green-900  cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-green-400  lg:text-left">
-                    <span class = "flex text-left lg:text-left">What differentiates Caro's from others?</span>
-                    <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </h3>
-                <p  style= "color:#ffffff"  class="px-2 pt-0 -mt-2  sm:text-lg py-7 text-green-900 text-center lg:text-left"
-                    x-transition:enter="transition-all ease-out duration-300"
-                    x-transition:enter-start="opacity-0 transform -translate-y-4"
-                    x-transition:enter-end="opacity-100 transform -translate-y-0"
-                    x-transition:leave="transition-all ease-in duration-300"
-                    x-transition:leave-start="opacity-100 transform -translate-y-0"
-                    x-transition:leave-end="opacity-0 transform -translate-y-4"
-                    x-show="show"
-                    x-cloak>Our Customer Service!</p>
-            </div>
-
-        
-
-            <!-- Question 1 -->
-            <div x-data="{ show: false }" class="relative overflow-hidden border-b border-green-100 select-none">
-                <h3  
-                onMouseOver="this.style.color='#e64d3d' "
-                onMouseOut=" this.style.color='#ffffff'"
-                style="color:#ffffff;"               
-                
-                                 
-                @click="show=!show" class=" text-center flex items-center justify-between px-2 text-xl font-medium text-green-900  cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-green-400  lg:text-left">
-                    <span class = "flex text-left lg:text-left">Do you provide estimates upfront and are you competitively priced?</span>
-                    <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </h3>
-                <p  style= "color:#ffffff"  class="px-2 pt-0 -mt-2  sm:text-lg py-7 text-green-900 text-center lg:text-left"
-                    x-transition:enter="transition-all ease-out duration-300"
-                    x-transition:enter-start="opacity-0 transform -translate-y-4"
-                    x-transition:enter-end="opacity-100 transform -translate-y-0"
-                    x-transition:leave="transition-all ease-in duration-300"
-                    x-transition:leave-start="opacity-100 transform -translate-y-0"
-                    x-transition:leave-end="opacity-0 transform -translate-y-4"
-                    x-show="show"
-                    x-cloak>We provide free estimates and are very competitively priced!</p>
-            </div>
-
-        
-
-            <!-- Question 1 -->
-            <div x-data="{ show: false }" class="relative overflow-hidden border-b border-green-100 select-none">
-                <h3  
-                onMouseOver="this.style.color='#e64d3d' "
-                onMouseOut=" this.style.color='#ffffff'"
-                style="color:#ffffff;"               
-                
-                                 
-                @click="show=!show" class=" text-center flex items-center justify-between px-2 text-xl font-medium text-green-900  cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-green-400  lg:text-left">
-                    <span class = "flex text-left lg:text-left">How can I get an estimate?</span>
-                    <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </h3>
-                <p  style= "color:#ffffff"  class="px-2 pt-0 -mt-2  sm:text-lg py-7 text-green-900 text-center lg:text-left"
-                    x-transition:enter="transition-all ease-out duration-300"
-                    x-transition:enter-start="opacity-0 transform -translate-y-4"
-                    x-transition:enter-end="opacity-100 transform -translate-y-0"
-                    x-transition:leave="transition-all ease-in duration-300"
-                    x-transition:leave-start="opacity-100 transform -translate-y-0"
-                    x-transition:leave-end="opacity-0 transform -translate-y-4"
-                    x-show="show"
-                    x-cloak>Call us at (857) 240-0114!</p>
-            </div>
-
-        
-
-        </div>
-    </div>
-</section>
 
     
 
@@ -1332,8 +870,9 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
 </section>
 
 
+    
 
-    <section  style= "background-color:#ffffff"   class="py-10 bg-green-900">
+<section  style= "background-color:#ffffff"   class="py-10 bg-green-900">
     
         <div class="flex flex-col justify-around text-center md:flex-row">
             <p class="order-last text-sm leading-tight text-green-400 md:order-first"> Crafted with <a  href="https://www.prophone.com/prosite" class="  text-white ">ProPhone</a>. Built with ❤️ by our team. </p>
@@ -1361,7 +900,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
             </ul>
         </div>
     </div>
-</section>     
+</section> 
 </div> 
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
