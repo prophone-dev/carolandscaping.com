@@ -32,6 +32,20 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-3</loc>
+        <lastmod>2022-03-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-6</loc>
+        <lastmod>2022-03-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-Grass-Seeding</loc>
         <lastmod>2022-03-10</lastmod>
         <changefreq>weekly</changefreq>
@@ -54,20 +68,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-2</loc>
-        <lastmod>2022-03-10</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-3</loc>
-        <lastmod>2022-03-10</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-6</loc>
         <lastmod>2022-03-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
