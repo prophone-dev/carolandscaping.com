@@ -231,8 +231,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2  style= "color:#000000" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Grass/Seeding</h2>
             <h2  style= "color:#e64d3d" class="my-3 mb-10 text-xl font-medium  text-green-400  text-center">Our Best Work</h2>
-            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [  ] }" @keydown.escape= "open = false"   >
-                <!-- <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [  ] }" @keydown.escape= "open = false"   > -->
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a2e95c1c-31a8-4d90-9512-87fc53f75c21.png', 'photo'],   ] }" @keydown.escape= "open = false"   >
+                <!-- <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/a2e95c1c-31a8-4d90-9512-87fc53f75c21.png', 'photo'],   ] }" @keydown.escape= "open = false"   > -->
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a2e95c1c-31a8-4d90-9512-87fc53f75c21.png"  alt="photo of best work"   loading="lazy" ></div>
+                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a2e95c1c-31a8-4d90-9512-87fc53f75c21.png"  alt="photo of best work"   loading="lazy" ></div> -->
+                    
                  
                                     
         
@@ -345,6 +350,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                 <li> <a   style= "color:#e64d3d" href="#services" class="px-2 md:px-4 text-green-400 hover:text-white">Our Services</a> </li>
                 
+                
+                <li> <a style= "color:#e64d3d"   href="#our-work" class=" px-2 md:px-4 text-green-400 hover:text-white">Our Best Work</a> </li>
                 
                 
                 <li> <a  style= "color:#e64d3d"  href="#testimonials" class="px-2 md:px-4 text-green-400 hover:text-white">Testimonials &amp; Reviews</a></li>
