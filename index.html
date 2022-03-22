@@ -19,14 +19,14 @@
     
     <title>
          
-            ,  - Customer First Landscaping | Caro&#x27;s Landscaping &amp; Lawncare
+            San Diego, WI - Customer First Landscaping | Caro&#x27;s Landscaping &amp; Lawncare
         
     </title>
     <meta name="description" content="Schedule your free quote today! Proudly serving 
          
              
                 
-                    ,
+                    San Diego,
                  
              
                 
@@ -42,7 +42,7 @@
                  
              
          
-        San Diego For over 16 years, Caro&#x27;s Landscaping &amp; Lawncare has been providing quality landscaping services to the area. From lawn care to garden design, …"
+        San Diego Caro&#x27;s Landscaping &amp; Lawncare is a family-owned and operated landscaping company in , and surrounding areas. We provide quality landscaping services to residential …"
     >
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -183,7 +183,7 @@ class="flex relative flex-col w-full  bg-green-900 text-white  lg:flex-row lg:fl
                      
                          
                             
-                                ,
+                                San Diego,
                              
                          
                             
@@ -200,7 +200,7 @@ class="flex relative flex-col w-full  bg-green-900 text-white  lg:flex-row lg:fl
                          
                      
                   -->
-                San Diego We are a full-service landscaping company serving the /Fort Worth area. We offer a wide range of services, from landscape design to lawn care.
+                San DiegoWe are a full-service landscaping company that offers quality lawncare services to residents in and around . We have a team of experienced professionals who are dedicated to meeting your needs and exceeding your expectations. Contact us today for a free consultation!
             </h1>
             
             <h2 class="py-5 mb-5 lg:text-xl text-center lg:text-left">
@@ -210,8 +210,7 @@ class="flex relative flex-col w-full  bg-green-900 text-white  lg:flex-row lg:fl
                 <div class=" w-full lg:w-auto">
                 
  
-        <a  class="font-small   w-full lg:w-auto " target = "_blank" href="mailto:test@prophone.com?subject=[company type] Job - Requesting a quote&body=Hi [[Owner Name]],%0d%0a %0d%0a  My name is [your name]. I&#x27;m writing from your website about requesting a quote for a [[company type]] job. I&#x27;ve included my information below - %0d%0a%0d%0a Quick Description: %0d%0a Address: [your address here] %0d%0a Urgency: [low, medium, high] %0d%0a Would like a quote by: [date] %0d%0a Additional notes: %0d%0a %0d%0a Thanks!">
-        <div class="flex text-center justify-center items-center">
+    <div id="" class="flex text-center justify-center items-center  w-full lg:w-auto " x-data="{open: false}">
         
 <button 
  
@@ -223,11 +222,39 @@ class="flex relative flex-col w-full  bg-green-900 text-white  lg:flex-row lg:fl
   w-full lg:w-auto 
 
     inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-green-400 text-white hover:bg-white hover:text-green-900 z-30">
-    <h5 class="text-3xl font-extrabold">Email Us</h5> 
+    <h5 class="text-3xl font-extrabold">here</h5> 
 </button>
 
+        <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
+    <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5 z-50">
+            <h3 class="mb-6 text-2xl font-medium text-black text-center">here</h3>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="first-name" id="3-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="last-name" id="3-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="phone-number" id="3-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <textarea name="message" cols="5" id="3-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
+        </div>
+        <div class="block">
+        <button type="button" 
+         
+            onMouseOver="this.style.backgroundColor='#000000'; this.style.color='#e64d3d' "
+            onMouseOut="this.style.backgroundColor='#e64d3d'; this.style.color='white'"
+            style="background-color:#e64d3d; color:white"               
+
+         
+        onclick= "send_sms(3, 'caro-landscaping')" 
+        class="w-full px-3 py-4 font-bold font-lg text-white  bg-green-400 text-white hover:bg-black hover:text-green-400 rounded-lg">Send</button> 
+        </div>           
+
+    </form>
+</div>
     </div>
-        </a>
  
                 </div>
 
@@ -337,7 +364,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     About U
                 </h5>
                 <p class="py-5 px-5 lg:px-0 mb-5 text-center lg:text-left  lg:text-xl">
-                San Diego For over 16 years, Caro's Landscaping & Lawncare has been providing quality landscaping services to the  area. From lawn care to garden design, we can help you create and maintain the perfect outdoor space for your home or business.
+                San Diego Caro's Landscaping & Lawncare is a family-owned and operated landscaping company in , and surrounding areas. We provide quality landscaping services to residential and commercial customers. From landscape design and installation to lawn care and maintenance, we can do it all! Contact us today for a free estimate!
                 </p>                
             </div>
 
@@ -652,18 +679,6 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                 <div class="mt-10 mb-0 flex flex-col items-center md:flex-row justify-center text-center w-full lg:max-w-lg ">
                     
                         <div class = "flex flex-col col-span-1">
-                        <img class="object-contain pt-8 w-full h-32" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Base-Set-Venusaur-art-ptcg-1200x900.jpeg" alt="award photo"> 
-                        <br>
-                        <h3 class="font-large font-bold text-green-400 text-center"> Venosauraward </h3>
-                        </div>
-                    
-                        <div class = "flex flex-col col-span-1">
-                        <img class="object-contain pt-8 w-full h-32" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Caro_Logo_WcezUqN.png" alt="award photo"> 
-                        <br>
-                        <h3 class="font-large font-bold text-green-400 text-center"> Caroooooo </h3>
-                        </div>
-                    
-                        <div class = "flex flex-col col-span-1">
                         <img class="object-contain pt-8 w-full h-32" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/97011bbb-bc7c-4f02-ae11-ba2720d8031b.jpeg" alt="award photo"> 
                         <br>
                         <h3 class="font-large font-bold text-green-400 text-center">  </h3>
@@ -673,6 +688,18 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                         <img class="object-contain pt-8 w-full h-32" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e8eb11c5-143c-419a-a408-20ded37086c7.jpeg" alt="award photo"> 
                         <br>
                         <h3 class="font-large font-bold text-green-400 text-center">  </h3>
+                        </div>
+                    
+                        <div class = "flex flex-col col-span-1">
+                        <img class="object-contain pt-8 w-full h-32" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Base-Set-Venusaur-art-ptcg-1200x900.jpeg" alt="award photo"> 
+                        <br>
+                        <h3 class="font-large font-bold text-green-400 text-center"> Venosauraward </h3>
+                        </div>
+                    
+                        <div class = "flex flex-col col-span-1">
+                        <img class="object-contain pt-8 w-full h-32" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/Caro_Logo_WcezUqN.png" alt="award photo"> 
+                        <br>
+                        <h3 class="font-large font-bold text-green-400 text-center"> Caroooooo </h3>
                         </div>
                     
                 </div>
@@ -807,22 +834,22 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
 <div id="service-area-array" class = "hidden">
 
     
-        [[&#x27;&#x27;, &#x27;&#x27;, 50], [&#x27;San Antonio&#x27;, &#x27;TX&#x27;, 50], [&#x27;San Diego&#x27;, &#x27;WI&#x27;, 400], [&#x27;Gastonia&#x27;, &#x27;NC&#x27;, 50]]
-        <div class="city">  </div>
-        <div class="state">  </div>
+        [[&#x27;San Diego&#x27;, &#x27;WI&#x27;, 50], [&#x27;San Antonio&#x27;, &#x27;TX&#x27;, 50], [&#x27;San Diego&#x27;, &#x27;WI&#x27;, 400], [&#x27;Gastonia&#x27;, &#x27;NC&#x27;, 50]]
+        <div class="city"> San Diego </div>
+        <div class="state"> WI </div>
         <div class="radius"> 50 </div>
     
-        [[&#x27;&#x27;, &#x27;&#x27;, 50], [&#x27;San Antonio&#x27;, &#x27;TX&#x27;, 50], [&#x27;San Diego&#x27;, &#x27;WI&#x27;, 400], [&#x27;Gastonia&#x27;, &#x27;NC&#x27;, 50]]
+        [[&#x27;San Diego&#x27;, &#x27;WI&#x27;, 50], [&#x27;San Antonio&#x27;, &#x27;TX&#x27;, 50], [&#x27;San Diego&#x27;, &#x27;WI&#x27;, 400], [&#x27;Gastonia&#x27;, &#x27;NC&#x27;, 50]]
         <div class="city"> San Antonio </div>
         <div class="state"> TX </div>
         <div class="radius"> 50 </div>
     
-        [[&#x27;&#x27;, &#x27;&#x27;, 50], [&#x27;San Antonio&#x27;, &#x27;TX&#x27;, 50], [&#x27;San Diego&#x27;, &#x27;WI&#x27;, 400], [&#x27;Gastonia&#x27;, &#x27;NC&#x27;, 50]]
+        [[&#x27;San Diego&#x27;, &#x27;WI&#x27;, 50], [&#x27;San Antonio&#x27;, &#x27;TX&#x27;, 50], [&#x27;San Diego&#x27;, &#x27;WI&#x27;, 400], [&#x27;Gastonia&#x27;, &#x27;NC&#x27;, 50]]
         <div class="city"> San Diego </div>
         <div class="state"> WI </div>
         <div class="radius"> 400 </div>
     
-        [[&#x27;&#x27;, &#x27;&#x27;, 50], [&#x27;San Antonio&#x27;, &#x27;TX&#x27;, 50], [&#x27;San Diego&#x27;, &#x27;WI&#x27;, 400], [&#x27;Gastonia&#x27;, &#x27;NC&#x27;, 50]]
+        [[&#x27;San Diego&#x27;, &#x27;WI&#x27;, 50], [&#x27;San Antonio&#x27;, &#x27;TX&#x27;, 50], [&#x27;San Diego&#x27;, &#x27;WI&#x27;, 400], [&#x27;Gastonia&#x27;, &#x27;NC&#x27;, 50]]
         <div class="city"> Gastonia </div>
         <div class="state"> NC </div>
         <div class="radius"> 50 </div>
@@ -837,7 +864,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
    
 
     <h2  style= "color:#000000"   class="mb-5 text-3xl  mx-auto text-center font-extrabold leading-none sm:text-4xl lg:text-7xl"> Service Areas </h2>
-    <h2  style= "color:#e64d3d"  class="my-3 mb-10  text-xl font-medium text-green-400 text-center"> Proudly Serving   ,    San Antonio,    San Diego,    Gastonia & Surrounding Areas   </h2>
+    <h2  style= "color:#e64d3d"  class="my-3 mb-10  text-xl font-medium text-green-400 text-center"> Proudly Serving   San Diego,    San Antonio,    San Diego,    Gastonia & Surrounding Areas   </h2>
     <div style="height:500px; width:100%;" id="map"></div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
