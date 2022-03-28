@@ -236,12 +236,17 @@
         <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2  style= "color:#000000" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">1</h2>
             <h2  style= "color:#e64d3d" class="my-3 mb-10 text-xl font-medium  text-green-400  text-center">Our Best Work</h2>
-            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/36f2d610-397b-4eee-8fa7-eb3bf2d03d96.png', 'photo'],   ] }" @keydown.escape= "open = false"   >
-                <!-- <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/36f2d610-397b-4eee-8fa7-eb3bf2d03d96.png', 'photo'],   ] }" @keydown.escape= "open = false"   > -->
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/36f2d610-397b-4eee-8fa7-eb3bf2d03d96.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/4af83c1b-933b-4c9f-bedc-001d72d04c89.png', 'photo'],   ] }" @keydown.escape= "open = false"   >
+                <!-- <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/36f2d610-397b-4eee-8fa7-eb3bf2d03d96.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1026x720/media/4af83c1b-933b-4c9f-bedc-001d72d04c89.png', 'photo'],   ] }" @keydown.escape= "open = false"   > -->
                                     
                         
                         <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/36f2d610-397b-4eee-8fa7-eb3bf2d03d96.png"  alt="photo of best work"   loading="lazy" ></div>
                         <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/36f2d610-397b-4eee-8fa7-eb3bf2d03d96.png"  alt="photo of best work"   loading="lazy" ></div> -->
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/4af83c1b-933b-4c9f-bedc-001d72d04c89.png"  alt="photo of best work"   loading="lazy" ></div>
+                        <!-- <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/4af83c1b-933b-4c9f-bedc-001d72d04c89.png"  alt="photo of best work"   loading="lazy" ></div> -->
                     
                  
                                     
