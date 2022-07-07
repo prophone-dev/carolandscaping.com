@@ -51,7 +51,42 @@
 
 
     </style>
-    <script type="text/javascript" defer>
+    <script type="text/javascript">
+        function segmentScript(){
+            var prophoneSegmentId = 'Z6dq7zq7CtZubdSRrh4EHjCsAasGDPiE'
+            var customerPagesSegmentId = '9Ce585PETlETCGamY79KkSoBrcAdcdPc'
+
+            if (window.location.href.includes('prosite.prophone.com')) {
+                segmentId = prophoneSegmentId
+            } else {
+                segmentId = customerPagesSegmentId
+            }
+            console.log('bucksaaaaaa')
+
+            var analytics=window.analytics=window.analytics||[];
+            if(!analytics.initialize)
+            if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");
+            else{
+                    analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];
+                analytics.factory=function(e){
+                    return function(){
+                        var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics
+                    }
+                };
+                for(var e=0;e<analytics.methods.length;e++){
+                    var key=analytics.methods[e];analytics[key]=analytics.factory(key)
+                }
+                analytics.load=function(key,e){var t=document.createElement("script");
+                t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+                var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e
+                };
+                analytics._writeKey=segmentId;;
+                analytics.SNIPPET_VERSION="4.15.3";
+                analytics.load(segmentId);
+                analytics.page();
+            };
+        }
+        segmentScript()
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
                         sendButton.disabled = true
@@ -308,14 +343,17 @@
                     :class="{'hidden': !scrolledFromTop, 'hidden': scrolledFromTop}"
                     class="sm:flex text-white text-sm mb-3 sm:mb-0"
                 >
+                    
                     You’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+                    
+                    bucks
                 </div>
             </div>
             <div class="flex flex-row items-center">
                 <a class="flex bg-white px-4 py-2 rounded-md text-orange-600 mr-4 text-sm" href="https://app.prophone.com/checkout?id=11">
                     Launch my site
                 </a>
-                <a id="contact-us-button" class="flex bg-white px-4 py-2 rounded-md text-orange-600 mr-4 text-sm" href=tel:8573653045">
+                <a id="contact-us-button" class="flex bg-white px-4 py-2 rounded-md text-orange-600 mr-4 text-sm" href="tel:8573653045">
                     Contact Us
                 </a>
                 <a class="flex font-bold underline underline-offset-4 text-white text-sm" href="https://www.prophone.com/learn-more?id=11">
@@ -491,6 +529,14 @@
                                                     </a>
                                                  
                                                     <a
+                                                        href=" #service-Fertilization "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">Fertilization</p>
+                                                    </a>
+                                                 
+                                                    <a
                                                         href=" #service-Retaining-Wall-Construction "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -504,14 +550,6 @@
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <p class="mt-1 text-sm text-gray-500">Fencing Repair &amp; Installation</p>
-                                                    </a>
-                                                 
-                                                    <a
-                                                        href=" #service-Fertilization "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Fertilization</p>
                                                     </a>
                                                  
                                                     <a
@@ -547,14 +585,6 @@
                                                     </a>
                                                  
                                                     <a
-                                                        href=" #service-Deerservice "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">Deerservice</p>
-                                                    </a>
-                                                 
-                                                    <a
                                                         href=" #service-No-good "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -579,11 +609,11 @@
                                                     </a>
                                                  
                                                     <a
-                                                        href=" #service-NEW-SERVICE-18 "
+                                                        href=" #service-NEW-SERVICE-189999 "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">NEW SERVICE 18</p>
+                                                        <p class="mt-1 text-sm text-gray-500">NEW SERVICE 189999</p>
                                                     </a>
                                                
                                             </div>
@@ -899,16 +929,16 @@
                                                     <p class="mt-1 text-sm text-gray-500">Stone Wall Installation</p>
                                                 </a>
                                             
+                                                <a href="#service-Fertilization" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">Fertilization</p>
+                                                </a>
+                                            
                                                 <a href="#service-Retaining-Wall-Construction" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">Retaining Wall Construction</p>
                                                 </a>
                                             
                                                 <a href="#service-Fencing-Repair-&amp;-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">Fencing Repair &amp; Installation</p>
-                                                </a>
-                                            
-                                                <a href="#service-Fertilization" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Fertilization</p>
                                                 </a>
                                             
                                                 <a href="#service-Lawn-Aeration" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -927,10 +957,6 @@
                                                     <p class="mt-1 text-sm text-gray-500">trees</p>
                                                 </a>
                                             
-                                                <a href="#service-Deerservice" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Deerservice</p>
-                                                </a>
-                                            
                                                 <a href="#service-No-good" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">No good</p>
                                                 </a>
@@ -943,8 +969,8 @@
                                                     <p class="mt-1 text-sm text-gray-500">Junk Removal</p>
                                                 </a>
                                             
-                                                <a href="#service-NEW-SERVICE-18" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">NEW SERVICE 18</p>
+                                                <a href="#service-NEW-SERVICE-189999" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">NEW SERVICE 189999</p>
                                                 </a>
                                             
                                         </div>
@@ -1080,7 +1106,11 @@
     }
     const isMobile = detectMob()
 
-    if (window.location.href.includes('prosite.prophone.com')) {
+    if (window.location.href.includes('prosite.prophone.com')
+     || window.location.href.includes('dev.prosite.prophone.com')
+     || window.location.href.includes('stage.prosite.prophone.com')
+     || window.location.href.includes('127.0.0.1:8000')
+     || window.location.href.includes('localhost')) {
         launchBanner.style.display = 'block'
         if (isMobile) {
             navBar.className = "fixed inset-x-0 sm:top-16 z-20 transition-all duration-200"
@@ -1691,7 +1721,7 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/fall-and-spring-clean-up-2.jpeg" alt=" for caro-landscapings in Seattle, Washington" loading="lazy"
+                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/fall-and-spring-clean-up-3.jpeg" alt=" for caro-landscapings in Seattle, Washington" loading="lazy"
                                         alt=""
                                     />
                                 
@@ -1865,6 +1895,60 @@
                         class="group service-item"
                     >
                         <a
+                            href="service-Fertilization"
+                            style="transform-style: preserve-3d"
+                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
+                            aria-label="Fertilization"
+                        >
+                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Fertilization</span>
+                            </div>
+                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Fertilization</span>
+                                <p
+                                    class="
+                                        text-lg
+                                        block
+                                        mt-1.5
+                                        line-clamp-8
+                                        sm:line-clamp-7
+                                        font-medium
+                                        leading-6
+                                        text-center
+                                        transition
+                                        duration-500
+                                        sm:opacity-0
+                                        group-hover:opacity-100
+                                    "
+                                    style="
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 5;
+                                    -webkit-box-orient: vertical;  "
+                                >
+                                    
+                                </p>
+                            </div>
+
+                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
+                            
+                                
+                                    <img
+                                        class="object-cover grayscale"
+                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f1ae45c6-3ebf-4057-8193-628be478e6f0.png" alt=" for caro-landscapings in Seattle, Washington" loading="lazy"
+                                        alt=""
+                                    />
+                                
+
+                            
+                        </a>
+                    </li>
+                
+                    <li
+                        x-transition
+                        style="perspective: 800px"
+                        class="group service-item"
+                    >
+                        <a
                             href="service-Retaining-Wall-Construction"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
@@ -1960,60 +2044,6 @@
                                 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
                                 alt=""
                             />
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <a
-                            href="service-Fertilization"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Fertilization"
-                        >
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Fertilization</span>
-                            </div>
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Fertilization</span>
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    
-                                </p>
-                            </div>
-
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            
-                                
-                                    <img
-                                        class="object-cover grayscale"
-                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/https:/d3p2r6ofnvoe67.cloudfront.net/fit-in/media/fertilization-3.jpeg" alt=" for caro-landscapings in Seattle, Washington" loading="lazy"
-                                        alt=""
-                                    />
-                                
-
                             
                         </a>
                     </li>
@@ -2234,60 +2264,6 @@
                         class="group service-item"
                     >
                         <a
-                            href="service-Deerservice"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="Deerservice"
-                        >
-                            <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Deerservice</span>
-                            </div>
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Deerservice</span>
-                                <p
-                                    class="
-                                        text-lg
-                                        block
-                                        mt-1.5
-                                        line-clamp-8
-                                        sm:line-clamp-7
-                                        font-medium
-                                        leading-6
-                                        text-center
-                                        transition
-                                        duration-500
-                                        sm:opacity-0
-                                        group-hover:opacity-100
-                                    "
-                                    style="
-                                    display: -webkit-box;
-                                    -webkit-line-clamp: 5;
-                                    -webkit-box-orient: vertical;  "
-                                >
-                                    Deerservice is a full-service deer deterrent company that offers both traditional and innovative solutions to keeping deer away from your property. With over 15 years of experience, we have the knowledge and expertise to help you find the best solution for your needs.
-                                </p>
-                            </div>
-
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
-                            
-                                
-                                    <img
-                                        class="object-cover grayscale"
-                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/1eac7c8a-3329-49d2-9c32-7da01d008035.png" alt="Deerservice is a full-service deer deterrent company that offers both traditional and innovative solutions to keeping deer away from your property. With over 15 years of experience, we have the knowledge and expertise to help you find the best solution for your needs. for caro-landscapings in Seattle, Washington" loading="lazy"
-                                        alt=""
-                                    />
-                                
-
-                            
-                        </a>
-                    </li>
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item"
-                    >
-                        <a
                             href="service-No-good"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
@@ -2327,7 +2303,7 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8ab988c8-fe1a-47c5-b878-d1c671562de7.jpeg" alt="We are not a landscaping company. We provide no good service to homeowners viewing our website. for caro-landscapings in Seattle, Washington" loading="lazy"
+                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/87fb7e2d-76d3-44ba-812f-b0bdf87928a5.jpeg" alt="We are not a landscaping company. We provide no good service to homeowners viewing our website. for caro-landscapings in Seattle, Washington" loading="lazy"
                                         alt=""
                                     />
                                 
@@ -2450,16 +2426,16 @@
                         class="group service-item"
                     >
                         <a
-                            href="service-NEW-SERVICE-18"
+                            href="service-NEW-SERVICE-189999"
                             style="transform-style: preserve-3d"
                             class="text-center relative block overflow-hidden transition duration-500  rotate-y-180 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
-                            aria-label="NEW SERVICE 18"
+                            aria-label="NEW SERVICE 189999"
                         >
                             <div aria-hidden="true" class="absolute inset-0 z-20 items-center justify-center hidden text-white sm:flex">
-                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">NEW SERVICE 18</span>
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">NEW SERVICE 189999</span>
                             </div>
                             <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 rotate-y-180">
-                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">NEW SERVICE 18</span>
+                                <span class="text-2xl font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">NEW SERVICE 189999</span>
                                 <p
                                     class="
                                         text-lg
@@ -2486,11 +2462,14 @@
 
                             <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary"></div>
                             
-                            <img
-                                class="object-cover grayscale"
-                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
-                                alt=""
-                            />
+                                
+                                    <img
+                                        class="object-cover grayscale"
+                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/new-service-189999-1.jpeg" alt=" for caro-landscapings in Seattle, Washington" loading="lazy"
+                                        alt=""
+                                    />
+                                
+
                             
                         </a>
                     </li>
@@ -2636,7 +2615,7 @@
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 13,
+        amountOfImages: 14,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -2657,7 +2636,7 @@
                     <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/42e7ad84-e012-4b6a-b164-42b49224ef7d.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/08f10ded-c187-4d3c-9a7e-43ce7dc8f5d0.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2674,7 +2653,7 @@
                     <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c1550815-1350-49a4-978c-7eea71536523.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/42e7ad84-e012-4b6a-b164-42b49224ef7d.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2691,7 +2670,7 @@
                     <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f1ae45c6-3ebf-4057-8193-628be478e6f0.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c1550815-1350-49a4-978c-7eea71536523.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2708,7 +2687,7 @@
                     <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0d3abd49-4dcb-4f9e-aa00-aa8e44478183.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f1ae45c6-3ebf-4057-8193-628be478e6f0.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2725,7 +2704,7 @@
                     <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/b3729185-e3e3-4823-bb75-15dab106c597.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0d3abd49-4dcb-4f9e-aa00-aa8e44478183.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2742,7 +2721,7 @@
                     <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c940e478-7d81-48be-8a92-ebeefd87176c.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/b3729185-e3e3-4823-bb75-15dab106c597.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2759,7 +2738,7 @@
                     <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/1b5b6d84-7a1b-4dba-b8cf-9f88c1c83e38.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c940e478-7d81-48be-8a92-ebeefd87176c.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2776,8 +2755,7 @@
                     <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3f290c9e-f844-470c-b285-df2e11b5d1c5.quicktime#t=0.5" >
-                                </video>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/1b5b6d84-7a1b-4dba-b8cf-9f88c1c83e38.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2794,7 +2772,7 @@
                     <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/1b267612-8342-44d7-a4ef-2e4eab597297.mp4#t=0.5" >
+                                <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3f290c9e-f844-470c-b285-df2e11b5d1c5.quicktime#t=0.5" >
                                 </video>
                             
                         </div>
@@ -2829,7 +2807,8 @@
                     <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0318a6bb-458c-4cc4-a199-692caf4d6cd4.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/1b267612-8342-44d7-a4ef-2e4eab597297.mp4#t=0.5" >
+                                </video>
                             
                         </div>
 
@@ -2846,7 +2825,7 @@
                     <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/1eac7c8a-3329-49d2-9c32-7da01d008035.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0318a6bb-458c-4cc4-a199-692caf4d6cd4.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                             
                         </div>
 
@@ -2861,6 +2840,23 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/1eac7c8a-3329-49d2-9c32-7da01d008035.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 13; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8ab988c8-fe1a-47c5-b878-d1c671562de7.jpeg" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
@@ -2920,64 +2916,63 @@
                                 
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/42e7ad84-e012-4b6a-b164-42b49224ef7d.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/08f10ded-c187-4d3c-9a7e-43ce7dc8f5d0.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c1550815-1350-49a4-978c-7eea71536523.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/42e7ad84-e012-4b6a-b164-42b49224ef7d.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 2">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/f1ae45c6-3ebf-4057-8193-628be478e6f0.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c1550815-1350-49a4-978c-7eea71536523.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 3">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/0d3abd49-4dcb-4f9e-aa00-aa8e44478183.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/f1ae45c6-3ebf-4057-8193-628be478e6f0.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 4">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/b3729185-e3e3-4823-bb75-15dab106c597.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/0d3abd49-4dcb-4f9e-aa00-aa8e44478183.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 5">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c940e478-7d81-48be-8a92-ebeefd87176c.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/b3729185-e3e3-4823-bb75-15dab106c597.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 6">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/1b5b6d84-7a1b-4dba-b8cf-9f88c1c83e38.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c940e478-7d81-48be-8a92-ebeefd87176c.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 7">
-                                        
-                                            <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3f290c9e-f844-470c-b285-df2e11b5d1c5.quicktime#t=0.5" >
-                                            </video>
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/1b5b6d84-7a1b-4dba-b8cf-9f88c1c83e38.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 8">
                                         
-                                            <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/1b267612-8342-44d7-a4ef-2e4eab597297.mp4#t=0.5" >
+                                            <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3f290c9e-f844-470c-b285-df2e11b5d1c5.quicktime#t=0.5" >
                                             </video>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2991,20 +2986,28 @@
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 10">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/0318a6bb-458c-4cc4-a199-692caf4d6cd4.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                        
+                                            <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/1b267612-8342-44d7-a4ef-2e4eab597297.mp4#t=0.5" >
+                                            </video>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 11">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/1eac7c8a-3329-49d2-9c32-7da01d008035.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/0318a6bb-458c-4cc4-a199-692caf4d6cd4.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 12">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/1eac7c8a-3329-49d2-9c32-7da01d008035.png" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 13">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/8ab988c8-fe1a-47c5-b878-d1c671562de7.jpeg" alt="Mowing for caro-landscapings in Seattle, Washington" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3059,6 +3062,248 @@
         </div>
 
         <div class="mt-12 grid grid-cols-1 gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
+            
+                <ul class="space-y-8">
+                    
+                    
+
+                        <li class=" hidden sm:block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                            <div class="flex">
+                                <div aria-hidden="true" class="space-x-1.5 flex">
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                </div>
+                                <span class="sr-only"> out of 5 stars</span>
+                            </div>
+
+                            <blockquote class="mt-6">
+                                <div class="relative">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <p lorem="1" class="relative text-lg font-medium">
+                                        
+                                    </p>
+                                </div>
+                                <footer class="flex items-center justify-between mt-8 space-x-4">
+                                    <div>
+                                        <span class="block font-medium text-primary"></span>
+                                        <span class="block font-medium">Kon Kon, Japarsy</span>
+                                    </div>
+
+                                    <div class="flex-shrink-0">
+                                        <span class="sr-only">None</span>
+                                        
+                                    
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        </li>
+                    
+                    
+                    
+                    
+                    
+
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                            <div class="flex">
+                                <div aria-hidden="true" class="space-x-1.5 flex">
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                </div>
+                                <span class="sr-only"> out of 5 stars</span>
+                            </div>
+
+                            <blockquote class="mt-6">
+                                <div class="relative">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <p lorem="1" class="relative text-lg font-medium">
+                                        
+                                    </p>
+                                </div>
+                                <footer class="flex items-center justify-between mt-8 space-x-4">
+                                    <div>
+                                        <span class="block font-medium text-primary">aaaaaaaa</span>
+                                        <span class="block font-medium">Seattle, Washington</span>
+                                    </div>
+
+                                    <div class="flex-shrink-0">
+                                        <span class="sr-only">None</span>
+                                        
+                                    
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        </li>
+                    
+                    
+                    
+
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                            <div class="flex">
+                                <div aria-hidden="true" class="space-x-1.5 flex">
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                </div>
+                                <span class="sr-only"> out of 5 stars</span>
+                            </div>
+
+                            <blockquote class="mt-6">
+                                <div class="relative">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <p lorem="1" class="relative text-lg font-medium">
+                                        adsf
+                                    </p>
+                                </div>
+                                <footer class="flex items-center justify-between mt-8 space-x-4">
+                                    <div>
+                                        <span class="block font-medium text-primary">bucks</span>
+                                        <span class="block font-medium">Kon Kon, Japarsy</span>
+                                    </div>
+
+                                    <div class="flex-shrink-0">
+                                        <span class="sr-only">None</span>
+                                        
+                                    
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        </li>
+                    
+                    
+                    
+                    
+                </ul>
             
                 <ul class="space-y-8">
                     
@@ -3768,248 +4013,6 @@
                         </li>
                     
                     
-                    
-                    
-                </ul>
-            
-                <ul class="space-y-8">
-                    
-                    
-
-                        <li class=" hidden sm:block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
-                                        
-                                    </p>
-                                </div>
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        <span class="block font-medium text-primary">aaaaaaaa</span>
-                                        <span class="block font-medium">Seattle, Washington</span>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">None</span>
-                                        
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
-                    
-
-                        <li class=" hidden sm:block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
-                                        adsf
-                                    </p>
-                                </div>
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        <span class="block font-medium text-primary">bucks</span>
-                                        <span class="block font-medium">Kon Kon, Japarsy</span>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">None</span>
-                                        
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
-                    
-                    
-                    
-
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
-                                        
-                                    </p>
-                                </div>
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        <span class="block font-medium text-primary"></span>
-                                        <span class="block font-medium">Kon Kon, Japarsy</span>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">None</span>
-                                        
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
                 </ul>
             
         </div>
@@ -4031,7 +4034,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="32523"
+                                aria-controls="32629"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">What&#x27;s the best way to reach you?</span>
@@ -4050,7 +4053,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="32523">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="32629">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Give us a call or senad us a text at 2629574136. Thanks!b</p>
                         </dd>
@@ -4062,7 +4065,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="32524"
+                                aria-controls="32630"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">Do you provide free estimates?</span>
@@ -4081,7 +4084,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="32524">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="32630">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">what aabc are you heredre we doingddd</p>
                         </dd>
@@ -4093,7 +4096,7 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="32525"
+                                aria-controls="32631"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">How are you different?</span>
@@ -4112,7 +4115,7 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="32525">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="32631">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">We&#x27;re a customer-first company that will do whatever it takes tdfsdfsdfasfdasfso make sure the job is well done.</p>
                         </dd>
@@ -4450,6 +4453,14 @@ observer.observe(target)
                               <a
                                   href="#services"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Fertilization</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="#services"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Retaining Wall Construction</a
                               >
                           </li>
@@ -4459,14 +4470,6 @@ observer.observe(target)
                                   href="#services"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Fencing Repair &amp; Installation</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#services"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Fertilization</a
                               >
                           </li>
                           
@@ -4506,14 +4509,6 @@ observer.observe(target)
                               <a
                                   href="#services"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Deerservice</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#services"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >No good</a
                               >
                           </li>
@@ -4538,7 +4533,7 @@ observer.observe(target)
                               <a
                                   href="#services"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >NEW SERVICE 18</a
+                                  >NEW SERVICE 189999</a
                               >
                           </li>
                           
@@ -4752,211 +4747,200 @@ observer.observe(target)
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126657"
-                                                    name="126657"
+                                                    id="contact-service-126845"
+                                                    name="126845"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mowing"
                                             />
-                                            <label for="contact-label-service-126657" class="ml-3 text-sm font-medium text-gray-700">Mowing</label>
+                                            <label for="contact-label-service-126845" class="ml-3 text-sm font-medium text-gray-700">Mowing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126658"
-                                                    name="126658"
+                                                    id="contact-service-126846"
+                                                    name="126846"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mulch Installation"
                                             />
-                                            <label for="contact-label-service-126658" class="ml-3 text-sm font-medium text-gray-700">Mulch Installation</label>
+                                            <label for="contact-label-service-126846" class="ml-3 text-sm font-medium text-gray-700">Mulch Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126659"
-                                                    name="126659"
+                                                    id="contact-service-126847"
+                                                    name="126847"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Shrub Trimming"
                                             />
-                                            <label for="contact-label-service-126659" class="ml-3 text-sm font-medium text-gray-700">Shrub Trimming</label>
+                                            <label for="contact-label-service-126847" class="ml-3 text-sm font-medium text-gray-700">Shrub Trimming</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126660"
-                                                    name="126660"
+                                                    id="contact-service-126848"
+                                                    name="126848"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Fall and Spring Clean Up"
                                             />
-                                            <label for="contact-label-service-126660" class="ml-3 text-sm font-medium text-gray-700">Fall and Spring Clean Up</label>
+                                            <label for="contact-label-service-126848" class="ml-3 text-sm font-medium text-gray-700">Fall and Spring Clean Up</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126661"
-                                                    name="126661"
+                                                    id="contact-service-126849"
+                                                    name="126849"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Patio Design & Construction"
                                             />
-                                            <label for="contact-label-service-126661" class="ml-3 text-sm font-medium text-gray-700">Patio Design & Construction</label>
+                                            <label for="contact-label-service-126849" class="ml-3 text-sm font-medium text-gray-700">Patio Design & Construction</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126662"
-                                                    name="126662"
+                                                    id="contact-service-126850"
+                                                    name="126850"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Driveway Design & Build"
                                             />
-                                            <label for="contact-label-service-126662" class="ml-3 text-sm font-medium text-gray-700">Driveway Design & Build</label>
+                                            <label for="contact-label-service-126850" class="ml-3 text-sm font-medium text-gray-700">Driveway Design & Build</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126663"
-                                                    name="126663"
+                                                    id="contact-service-126851"
+                                                    name="126851"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Stone Wall Installation"
                                             />
-                                            <label for="contact-label-service-126663" class="ml-3 text-sm font-medium text-gray-700">Stone Wall Installation</label>
+                                            <label for="contact-label-service-126851" class="ml-3 text-sm font-medium text-gray-700">Stone Wall Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126664"
-                                                    name="126664"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Retaining Wall Construction"
-                                            />
-                                            <label for="contact-label-service-126664" class="ml-3 text-sm font-medium text-gray-700">Retaining Wall Construction</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-126665"
-                                                    name="126665"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Fencing Repair & Installation"
-                                            />
-                                            <label for="contact-label-service-126665" class="ml-3 text-sm font-medium text-gray-700">Fencing Repair & Installation</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-126666"
-                                                    name="126666"
+                                                    id="contact-service-126852"
+                                                    name="126852"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Fertilization"
                                             />
-                                            <label for="contact-label-service-126666" class="ml-3 text-sm font-medium text-gray-700">Fertilization</label>
+                                            <label for="contact-label-service-126852" class="ml-3 text-sm font-medium text-gray-700">Fertilization</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126667"
-                                                    name="126667"
+                                                    id="contact-service-126853"
+                                                    name="126853"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Retaining Wall Construction"
+                                            />
+                                            <label for="contact-label-service-126853" class="ml-3 text-sm font-medium text-gray-700">Retaining Wall Construction</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-126854"
+                                                    name="126854"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fencing Repair & Installation"
+                                            />
+                                            <label for="contact-label-service-126854" class="ml-3 text-sm font-medium text-gray-700">Fencing Repair & Installation</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-126855"
+                                                    name="126855"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Lawn Aeration"
                                             />
-                                            <label for="contact-label-service-126667" class="ml-3 text-sm font-medium text-gray-700">Lawn Aeration</label>
+                                            <label for="contact-label-service-126855" class="ml-3 text-sm font-medium text-gray-700">Lawn Aeration</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126668"
-                                                    name="126668"
+                                                    id="contact-service-126856"
+                                                    name="126856"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Snow Removal"
                                             />
-                                            <label for="contact-label-service-126668" class="ml-3 text-sm font-medium text-gray-700">Snow Removal</label>
+                                            <label for="contact-label-service-126856" class="ml-3 text-sm font-medium text-gray-700">Snow Removal</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126669"
-                                                    name="126669"
+                                                    id="contact-service-126857"
+                                                    name="126857"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Natural Stone Hardscape"
                                             />
-                                            <label for="contact-label-service-126669" class="ml-3 text-sm font-medium text-gray-700">Natural Stone Hardscape</label>
+                                            <label for="contact-label-service-126857" class="ml-3 text-sm font-medium text-gray-700">Natural Stone Hardscape</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126670"
-                                                    name="126670"
+                                                    id="contact-service-126858"
+                                                    name="126858"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="trees"
                                             />
-                                            <label for="contact-label-service-126670" class="ml-3 text-sm font-medium text-gray-700">trees</label>
+                                            <label for="contact-label-service-126858" class="ml-3 text-sm font-medium text-gray-700">trees</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126671"
-                                                    name="126671"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Deerservice"
-                                            />
-                                            <label for="contact-label-service-126671" class="ml-3 text-sm font-medium text-gray-700">Deerservice</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-126672"
-                                                    name="126672"
+                                                    id="contact-service-126859"
+                                                    name="126859"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="No good"
                                             />
-                                            <label for="contact-label-service-126672" class="ml-3 text-sm font-medium text-gray-700">No good</label>
+                                            <label for="contact-label-service-126859" class="ml-3 text-sm font-medium text-gray-700">No good</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126673"
-                                                    name="126673"
+                                                    id="contact-service-126860"
+                                                    name="126860"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="ok"
                                             />
-                                            <label for="contact-label-service-126673" class="ml-3 text-sm font-medium text-gray-700">ok</label>
+                                            <label for="contact-label-service-126860" class="ml-3 text-sm font-medium text-gray-700">ok</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126674"
-                                                    name="126674"
+                                                    id="contact-service-126861"
+                                                    name="126861"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Junk Removal"
                                             />
-                                            <label for="contact-label-service-126674" class="ml-3 text-sm font-medium text-gray-700">Junk Removal</label>
+                                            <label for="contact-label-service-126861" class="ml-3 text-sm font-medium text-gray-700">Junk Removal</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126675"
-                                                    name="126675"
+                                                    id="contact-service-126862"
+                                                    name="126862"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="NEW SERVICE 18"
+                                                    value="NEW SERVICE 189999"
                                             />
-                                            <label for="contact-label-service-126675" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 18</label>
+                                            <label for="contact-label-service-126862" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 189999</label>
                                         </div>
                                         
                                     </div>
@@ -4985,211 +4969,200 @@ observer.observe(target)
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126657"
-                                                    name="126657"
+                                                    id="contact-service-126845"
+                                                    name="126845"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mowing"
                                             />
-                                            <label for="contact-label-service-126657" class="ml-3 text-sm font-medium text-gray-700">Mowing</label>
+                                            <label for="contact-label-service-126845" class="ml-3 text-sm font-medium text-gray-700">Mowing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126658"
-                                                    name="126658"
+                                                    id="contact-service-126846"
+                                                    name="126846"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mulch Installation"
                                             />
-                                            <label for="contact-label-service-126658" class="ml-3 text-sm font-medium text-gray-700">Mulch Installation</label>
+                                            <label for="contact-label-service-126846" class="ml-3 text-sm font-medium text-gray-700">Mulch Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126659"
-                                                    name="126659"
+                                                    id="contact-service-126847"
+                                                    name="126847"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Shrub Trimming"
                                             />
-                                            <label for="contact-label-service-126659" class="ml-3 text-sm font-medium text-gray-700">Shrub Trimming</label>
+                                            <label for="contact-label-service-126847" class="ml-3 text-sm font-medium text-gray-700">Shrub Trimming</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126660"
-                                                    name="126660"
+                                                    id="contact-service-126848"
+                                                    name="126848"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Fall and Spring Clean Up"
                                             />
-                                            <label for="contact-label-service-126660" class="ml-3 text-sm font-medium text-gray-700">Fall and Spring Clean Up</label>
+                                            <label for="contact-label-service-126848" class="ml-3 text-sm font-medium text-gray-700">Fall and Spring Clean Up</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126661"
-                                                    name="126661"
+                                                    id="contact-service-126849"
+                                                    name="126849"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Patio Design & Construction"
                                             />
-                                            <label for="contact-label-service-126661" class="ml-3 text-sm font-medium text-gray-700">Patio Design & Construction</label>
+                                            <label for="contact-label-service-126849" class="ml-3 text-sm font-medium text-gray-700">Patio Design & Construction</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126662"
-                                                    name="126662"
+                                                    id="contact-service-126850"
+                                                    name="126850"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Driveway Design & Build"
                                             />
-                                            <label for="contact-label-service-126662" class="ml-3 text-sm font-medium text-gray-700">Driveway Design & Build</label>
+                                            <label for="contact-label-service-126850" class="ml-3 text-sm font-medium text-gray-700">Driveway Design & Build</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126663"
-                                                    name="126663"
+                                                    id="contact-service-126851"
+                                                    name="126851"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Stone Wall Installation"
                                             />
-                                            <label for="contact-label-service-126663" class="ml-3 text-sm font-medium text-gray-700">Stone Wall Installation</label>
+                                            <label for="contact-label-service-126851" class="ml-3 text-sm font-medium text-gray-700">Stone Wall Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126664"
-                                                    name="126664"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Retaining Wall Construction"
-                                            />
-                                            <label for="contact-label-service-126664" class="ml-3 text-sm font-medium text-gray-700">Retaining Wall Construction</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-126665"
-                                                    name="126665"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Fencing Repair & Installation"
-                                            />
-                                            <label for="contact-label-service-126665" class="ml-3 text-sm font-medium text-gray-700">Fencing Repair & Installation</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-126666"
-                                                    name="126666"
+                                                    id="contact-service-126852"
+                                                    name="126852"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Fertilization"
                                             />
-                                            <label for="contact-label-service-126666" class="ml-3 text-sm font-medium text-gray-700">Fertilization</label>
+                                            <label for="contact-label-service-126852" class="ml-3 text-sm font-medium text-gray-700">Fertilization</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126667"
-                                                    name="126667"
+                                                    id="contact-service-126853"
+                                                    name="126853"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Retaining Wall Construction"
+                                            />
+                                            <label for="contact-label-service-126853" class="ml-3 text-sm font-medium text-gray-700">Retaining Wall Construction</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-126854"
+                                                    name="126854"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fencing Repair & Installation"
+                                            />
+                                            <label for="contact-label-service-126854" class="ml-3 text-sm font-medium text-gray-700">Fencing Repair & Installation</label>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-126855"
+                                                    name="126855"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Lawn Aeration"
                                             />
-                                            <label for="contact-label-service-126667" class="ml-3 text-sm font-medium text-gray-700">Lawn Aeration</label>
+                                            <label for="contact-label-service-126855" class="ml-3 text-sm font-medium text-gray-700">Lawn Aeration</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126668"
-                                                    name="126668"
+                                                    id="contact-service-126856"
+                                                    name="126856"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Snow Removal"
                                             />
-                                            <label for="contact-label-service-126668" class="ml-3 text-sm font-medium text-gray-700">Snow Removal</label>
+                                            <label for="contact-label-service-126856" class="ml-3 text-sm font-medium text-gray-700">Snow Removal</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126669"
-                                                    name="126669"
+                                                    id="contact-service-126857"
+                                                    name="126857"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Natural Stone Hardscape"
                                             />
-                                            <label for="contact-label-service-126669" class="ml-3 text-sm font-medium text-gray-700">Natural Stone Hardscape</label>
+                                            <label for="contact-label-service-126857" class="ml-3 text-sm font-medium text-gray-700">Natural Stone Hardscape</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126670"
-                                                    name="126670"
+                                                    id="contact-service-126858"
+                                                    name="126858"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="trees"
                                             />
-                                            <label for="contact-label-service-126670" class="ml-3 text-sm font-medium text-gray-700">trees</label>
+                                            <label for="contact-label-service-126858" class="ml-3 text-sm font-medium text-gray-700">trees</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126671"
-                                                    name="126671"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Deerservice"
-                                            />
-                                            <label for="contact-label-service-126671" class="ml-3 text-sm font-medium text-gray-700">Deerservice</label>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-126672"
-                                                    name="126672"
+                                                    id="contact-service-126859"
+                                                    name="126859"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="No good"
                                             />
-                                            <label for="contact-label-service-126672" class="ml-3 text-sm font-medium text-gray-700">No good</label>
+                                            <label for="contact-label-service-126859" class="ml-3 text-sm font-medium text-gray-700">No good</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126673"
-                                                    name="126673"
+                                                    id="contact-service-126860"
+                                                    name="126860"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="ok"
                                             />
-                                            <label for="contact-label-service-126673" class="ml-3 text-sm font-medium text-gray-700">ok</label>
+                                            <label for="contact-label-service-126860" class="ml-3 text-sm font-medium text-gray-700">ok</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126674"
-                                                    name="126674"
+                                                    id="contact-service-126861"
+                                                    name="126861"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Junk Removal"
                                             />
-                                            <label for="contact-label-service-126674" class="ml-3 text-sm font-medium text-gray-700">Junk Removal</label>
+                                            <label for="contact-label-service-126861" class="ml-3 text-sm font-medium text-gray-700">Junk Removal</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-126675"
-                                                    name="126675"
+                                                    id="contact-service-126862"
+                                                    name="126862"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="NEW SERVICE 18"
+                                                    value="NEW SERVICE 189999"
                                             />
-                                            <label for="contact-label-service-126675" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 18</label>
+                                            <label for="contact-label-service-126862" class="ml-3 text-sm font-medium text-gray-700">NEW SERVICE 189999</label>
                                         </div>
                                         
                                     </div>
