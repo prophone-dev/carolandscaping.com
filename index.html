@@ -11,7 +11,7 @@
 
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"/>
     <title>landscaping near me in Bucksville, WI | caro-landscapings |  Home</title>
     <meta name="description"
           content="">
@@ -23,14 +23,14 @@
 
     <link rel="preload" href="https://prophone-templates.vercel.app/assets/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css"></noscript>
-    <script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
-<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-<script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>
-<script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-<script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
-<script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
+    <!--<script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>-->
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src='https://cdn.tailwindcss.com'></script>
+<!--    <script src='https://cdn.tailwindcss.com'></script>-->
 
     <style>
             :root {
@@ -64,7 +64,6 @@
                 segmentId = customerPagesSegmentId
             }
             console.log('bucksaaaaaa')
-
             var analytics=window.analytics=window.analytics||[];
             if(!analytics.initialize)
             if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");
@@ -79,7 +78,7 @@
                     var key=analytics.methods[e];analytics[key]=analytics.factory(key)
                 }
                 analytics.load=function(key,e){var t=document.createElement("script");
-                t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
+                t.type="text/javascript";t.defer=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
                 var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e
                 };
                 analytics._writeKey=segmentId;;
@@ -88,7 +87,7 @@
                 analytics.page();
             };
         }
-        segmentScript()
+        //segmentScript()
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
                         sendButton.disabled = true
@@ -249,7 +248,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
+                        fetch("https://prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -394,7 +393,7 @@
                         >
                             <img
                                 class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
-                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/2c9d4912-c360-43a6-800a-3fe9e542e51a.png"
+                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/100x100/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/2c9d4912-c360-43a6-800a-3fe9e542e51a.png"
                                 alt="Brand Logo"
                                 width="160" height="160"
                                 loading="lazy"
@@ -821,7 +820,7 @@
                             href=" #about "
                             class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                         >
-                            <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/2c9d4912-c360-43a6-800a-3fe9e542e51a.png" alt="Brand Logo" />
+                            <img class="h-[80px]" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/100x100/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/2c9d4912-c360-43a6-800a-3fe9e542e51a.png" alt="Brand Logo" />
                         </a>
                     </div>
                     <div class="-mr-2">
@@ -1629,10 +1628,10 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(30)/filters:format(webp)/media/daa55bd9-0ece-4fa0-9d6b-0f549671b609.jpeg"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/250x250/filters:quality(80)/filters:strip_exif()/filters:format(webp)/media/daa55bd9-0ece-4fa0-9d6b-0f549671b609.jpeg"
                                         alt="go bucks for caro-landscapings in Bucksville, WI"
                                         loading="lazy"
-                                        width="640" height="360"
+                                        width="250" height="250"
                                     />
                                 
 
@@ -1667,10 +1666,10 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(30)/filters:format(webp)/media/fall-and-spring-clean-up-1.jpeg"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/250x250/filters:quality(80)/filters:strip_exif()/filters:format(webp)/media/fall-and-spring-clean-up-1.jpeg"
                                         alt=" for caro-landscapings in Bucksville, WI"
                                         loading="lazy"
-                                        width="640" height="360"
+                                        width="250" height="250"
                                     />
                                 
 
@@ -1705,10 +1704,10 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(30)/filters:format(webp)/media/patio-design-construction-1.jpeg"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/250x250/filters:quality(80)/filters:strip_exif()/filters:format(webp)/media/patio-design-construction-1.jpeg"
                                         alt=" for caro-landscapings in Bucksville, WI"
                                         loading="lazy"
-                                        width="640" height="360"
+                                        width="250" height="250"
                                     />
                                 
 
@@ -1743,10 +1742,10 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(30)/filters:format(webp)/media/driveway-design-build-3.jpeg"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/250x250/filters:quality(80)/filters:strip_exif()/filters:format(webp)/media/driveway-design-build-3.jpeg"
                                         alt=" for caro-landscapings in Bucksville, WI"
                                         loading="lazy"
-                                        width="640" height="360"
+                                        width="250" height="250"
                                     />
                                 
 
@@ -1813,10 +1812,10 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(30)/filters:format(webp)/media/897244e9-f8ec-4cce-b9ed-62120dec3f1b.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/250x250/filters:quality(80)/filters:strip_exif()/filters:format(webp)/media/897244e9-f8ec-4cce-b9ed-62120dec3f1b.png"
                                         alt="Our trees service provides homeowners with the necessary knowledge and tools to properly maintain their trees. Our expert staff can help diagnose any tree-related issue and provide a solution tailored to the homeowner&#x27;s needs. for caro-landscapings in Bucksville, WI"
                                         loading="lazy"
-                                        width="640" height="360"
+                                        width="250" height="250"
                                     />
                                 
 
@@ -1851,10 +1850,10 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(30)/filters:format(webp)/media/87fb7e2d-76d3-44ba-812f-b0bdf87928a5.jpeg"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/250x250/filters:quality(80)/filters:strip_exif()/filters:format(webp)/media/87fb7e2d-76d3-44ba-812f-b0bdf87928a5.jpeg"
                                         alt="We are not a landscaping company. We provide no good service to homeowners viewing our website. for caro-landscapings in Bucksville, WI"
                                         loading="lazy"
-                                        width="640" height="360"
+                                        width="250" height="250"
                                     />
                                 
 
@@ -1889,10 +1888,10 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(30)/filters:format(webp)/media/f9470d22-f62d-4701-84bb-21107deede3d.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/250x250/filters:quality(80)/filters:strip_exif()/filters:format(webp)/media/f9470d22-f62d-4701-84bb-21107deede3d.png"
                                         alt="We are a full-service landscaping company that provides quality work at an affordable price. We take pride in our work and always put the customer first. Contact us today for a free estimate on your next project! for caro-landscapings in Bucksville, WI"
                                         loading="lazy"
-                                        width="640" height="360"
+                                        width="250" height="250"
                                     />
                                 
 
@@ -1927,10 +1926,10 @@
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(30)/filters:format(webp)/media/2293b19d-8717-4972-a8af-849a3056ff7a.jpeg"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/250x250/filters:quality(80)/filters:strip_exif()/filters:format(webp)/media/2293b19d-8717-4972-a8af-849a3056ff7a.jpeg"
                                         alt="Go bucks for caro-landscapings in Bucksville, WI"
                                         loading="lazy"
-                                        width="640" height="360"
+                                        width="250" height="250"
                                     />
                                 
 
@@ -4367,7 +4366,7 @@ observer.observe(target)
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 xl:col-span-1">
               
-              <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/2c9d4912-c360-43a6-800a-3fe9e542e51a.png" alt=""  width="80" height="80" />
+              <img class="h-[80px]" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/100x100/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/2c9d4912-c360-43a6-800a-3fe9e542e51a.png" alt=""  width="80" height="80" />
               
               <p class="text-base text-gray-100">
                   caro-landscapings<br/>
