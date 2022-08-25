@@ -111,14 +111,11 @@
                 ]
                 allUnkpgScripts.map(script=> dynamicallyLoadJS(script))
         }
-        //segmentScript()
-        window.onload = function() {
-            setTimeout(()=>{
-                       segmentScript()
-               loadUnpkgScripts()
-            }), 5000);
-
-        };
+            //segmentScript()
+            window.onload = function() {
+                    segmentScript()
+                   loadUnpkgScripts()
+            };
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
                         sendButton.disabled = true
