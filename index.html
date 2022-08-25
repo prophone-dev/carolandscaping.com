@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
 
-<!--    <script defer src='https://cdn.tailwindcss.com'></script>-->
+    <script defer src='https://cdn.tailwindcss.com'></script>
     
 
     <meta charset="utf-8"/>
@@ -56,6 +56,16 @@
 
     </style>
     <script type="text/javascript">
+        function dynamicallyLoadJS(file) {
+                    // DOM: Create the script element
+                    var jsElm = document.createElement("script");
+                    // set the type attribute
+                    jsElm.type = "application/javascript";
+                    // make the script element load file
+                    jsElm.src = file;
+                    // finally insert the element to the body element in order to load the script
+                    document.head.appendChild(jsElm);
+        }
         function segmentScript(){
             var prophoneSegmentId = 'Z6dq7zq7CtZubdSRrh4EHjCsAasGDPiE'
             var customerPagesSegmentId = '9Ce585PETlETCGamY79KkSoBrcAdcdPc'
@@ -89,7 +99,22 @@
                 analytics.page();
             };
         }
+        function loadUnpkgScripts(){
+                var allUnkpgScripts = [
+                    "https://unpkg.com/siema@1.5.1/dist/siema.min.js",
+                    "https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js",
+                    "https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js",
+                    "https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js",
+                    "https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js",
+                    "https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"
+                ]
+                allUnkpgScripts.map(script=> dynamicallyLoadJS(script))
+        }
         //segmentScript()
+        window.onload = function() {
+           segmentScript()
+           loadUnpkgScripts()
+        };
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
                         sendButton.disabled = true
