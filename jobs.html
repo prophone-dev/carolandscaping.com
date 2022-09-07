@@ -289,7 +289,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("http: // 127.0.0.1: 8000/sms/" + slug , {
+                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -387,9 +387,7 @@
                     class="sm:flex text-white text-sm mb-3 sm:mb-0"
                 >
                     
-
-                    d, you’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
-
+                    You’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
                     
                     bucks
                 </div>
@@ -586,22 +584,6 @@
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                   
                                                     <a
-                                                        href=" gallery-dghcfjgkh "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">dghcfjgkh</p>
-                                                    </a>
-                                                 
-                                                    <a
-                                                        href=" gallery-bucksgallery "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
-                                                    </a>
-                                                 
-                                                    <a
                                                         href=" gallery-cfbhgjfh "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -615,6 +597,22 @@
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <p class="mt-1 text-sm text-gray-500">Gallery 1</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" gallery-dghcfjgkh "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">dghcfjgkh</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" gallery-bucksgallery "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
                                                     </a>
                                                  
                                                     <a
@@ -868,20 +866,20 @@
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
-                                                <a href="gallery-dghcfjgkh" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">dghcfjgkh</p>
-                                                </a>
-                                            
-                                                <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
-                                                </a>
-                                            
                                                 <a href="gallery-cfbhgjfh" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">cfbhgjfh</p>
                                                 </a>
                                             
                                                 <a href="gallery-Gallery-1" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">Gallery 1</p>
+                                                </a>
+                                            
+                                                <a href="gallery-dghcfjgkh" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">dghcfjgkh</p>
+                                                </a>
+                                            
+                                                <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
                                                 </a>
                                             
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1198,7 +1196,7 @@
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("http: // 127.0.0.1: 8000/sms/" + slug, {
+  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1490,14 +1488,6 @@
                               <a
                                   href="#service-area-section"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Kon Kon, Japarsy</a
-                              >
-                          </li>
-                          
-                          <li>
-                              <a
-                                  href="#service-area-section"
-                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Portland, ME</a
                               >
                           </li>
@@ -1506,7 +1496,7 @@
                               <a
                                   href="#service-area-section"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >, </a
+                                  >Boston, MA</a
                               >
                           </li>
                           
@@ -1514,7 +1504,47 @@
                               <a
                                   href="#service-area-section"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Seattle, Washington</a
+                                  >Bangor, ME</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="#service-area-section"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >4, 4</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="#service-area-section"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >5, 5</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="#service-area-section"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >6, 6</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="#service-area-section"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >7, 7</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="#service-area-section"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >8, 8</a
                               >
                           </li>
                           
@@ -1729,14 +1759,14 @@
                                         <div class="flex items-center">
                                            
                                             <input
-                                                    id="contact-service-131128"
-                                                    name="131128"
+                                                    id="contact-service-131193"
+                                                    name="131193"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mowing 2222 go pack goooo"
                                             />
         
-                                            <label for="contact-service-131128" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
+                                            <label for="contact-service-131193" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
                                      
                                             
                                         </div>
@@ -1777,14 +1807,18 @@
 
                                         
                                         <div class="flex items-center">
-                                            <input
-                                                    id="contact-service-131128"
-                                                    name="131128"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Mowing 2222 go pack goooo"
+                                           
+                                         <label class="label text-sm font-medium text-gray-700 flex"> 
+                                            <input type="checkbox" name="131193" value="Mowing 2222 go pack goooo" id="contact-service-131193" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <label for="contact-label-service-131128" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
+    
+                                            <span class="ml-3 items-start">
+                                             Mowing 2222 go pack goooo
+                                            </span>
+                                          </label>
+                  
+                                        
+                                        
                                         </div>
                                         
                                     </div>
