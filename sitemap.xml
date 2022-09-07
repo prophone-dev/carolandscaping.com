@@ -5,7 +5,77 @@
 
     <url>
         <loc>https://carolandscaping.com/index</loc>
-        <lastmod>2022-09-06</lastmod>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/store</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/jobs</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/teams</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/reviews</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-All</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-dghcfjgkh</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-bucksgallery</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-cfbhgjfh</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Gallery-1</loc>
+        <lastmod>2022-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Mowing-2222-go-pack-goooo</loc>
+        <lastmod>2022-09-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
