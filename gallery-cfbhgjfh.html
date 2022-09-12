@@ -290,7 +290,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
+                        fetch("http://127.0.0.1:8000/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -1021,7 +1021,7 @@
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 1,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1036,25 +1036,6 @@
     }"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-        
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            
-                                
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/b03b3fba-1d1d-4a53-a244-5cd95514b17c.png" alt="cfbhgjfh for caro-landscapings in Austin, WI" loading="lazy"/>
-                                
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
         
     </ul>
 
@@ -1098,13 +1079,6 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 0">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/b03b3fba-1d1d-4a53-a244-5cd95514b17c.png" alt="cfbhgjfh for caro-landscapings in Austin, WI" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
                                 
                             </ul>
 
@@ -1421,8 +1395,8 @@
       <div class="pt-10 mt-12 text-center border-t-2 border-primary-darker">
         <div>
             <a href="https://www.prophone.com" target="_blank">
-                <img class="w-56 m-auto" src="/staticfiles/landing_page_gen/built-with-love.png" width="1080" height="1920" />
-
+                <img class="w-56 m-auto" src="https://prosite.prophone.com/staticfiles/landing_page_gen/built-with-love.png" width="1080" height="1920" />
+            
      <!--   <div class="flex justify-center">
             <a class="flex" href="https://www.prophone.com" target="_blank">
                 <svg width="232" height="24" viewBox="0 0 232 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1589,14 +1563,14 @@
                                         <div class="flex items-center">
                                            
                                             <input
-                                                    id="contact-service-131620"
-                                                    name="131620"
+                                                    id="contact-service-131621"
+                                                    name="131621"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mowing 2222 go pack goooo"
                                             />
         
-                                            <label for="contact-service-131620" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
+                                            <label for="contact-service-131621" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
                                      
                                             
                                         </div>
@@ -1639,7 +1613,7 @@
                                         <div class="flex items-center">
                                            
                                          <label class="label text-sm font-medium text-gray-700 flex"> 
-                                            <input type="checkbox" name="131620" value="Mowing 2222 go pack goooo" id="contact-service-131620" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="131621" value="Mowing 2222 go pack goooo" id="contact-service-131621" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
     
                                             <span class="ml-3 items-start">
@@ -1867,7 +1841,7 @@
                     
                     
                     <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJWdAow_Z3RogRlopu0Oy73qQ" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                        <a target="_blank" rel="noopener noreferrer" href="https://bucks.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             bbb
                         </a>
                     </li>
