@@ -290,7 +290,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
+                        fetch("http://127.0.0.1:8000/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -1197,7 +1197,7 @@
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
+  fetch("http://127.0.0.1:8000/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1511,8 +1511,8 @@
       <div class="pt-10 mt-12 text-center border-t-2 border-primary-darker">
         <div>
             <a href="https://www.prophone.com" target="_blank">
-                <img class="w-56 m-auto" src="/staticfiles/landing_page_gen/built-with-love.png" width="1080" height="1920" />
-
+                <img class="w-56 m-auto" src="https://prosite.prophone.com/staticfiles/landing_page_gen/built-with-love.png" width="1080" height="1920" />
+            
      <!--   <div class="flex justify-center">
             <a class="flex" href="https://www.prophone.com" target="_blank">
                 <svg width="232" height="24" viewBox="0 0 232 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1679,14 +1679,14 @@
                                         <div class="flex items-center">
                                            
                                             <input
-                                                    id="contact-service-131620"
-                                                    name="131620"
+                                                    id="contact-service-131621"
+                                                    name="131621"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mowing 2222 go pack goooo"
                                             />
         
-                                            <label for="contact-service-131620" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
+                                            <label for="contact-service-131621" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
                                      
                                             
                                         </div>
@@ -1729,7 +1729,7 @@
                                         <div class="flex items-center">
                                            
                                          <label class="label text-sm font-medium text-gray-700 flex"> 
-                                            <input type="checkbox" name="131620" value="Mowing 2222 go pack goooo" id="contact-service-131620" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="131621" value="Mowing 2222 go pack goooo" id="contact-service-131621" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
     
                                             <span class="ml-3 items-start">
@@ -1957,7 +1957,7 @@
                     
                     
                     <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJWdAow_Z3RogRlopu0Oy73qQ" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                        <a target="_blank" rel="noopener noreferrer" href="https://bucks.com" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             bbb
                         </a>
                     </li>
