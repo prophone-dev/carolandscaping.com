@@ -290,7 +290,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("http: // 127.0.0.1: 8000/sms/" + slug , {
+                        fetch("http://127.0.0.1:8000/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -1197,7 +1197,7 @@
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("http: // 127.0.0.1: 8000/sms/" + slug, {
+  fetch("http://127.0.0.1:8000/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1543,8 +1543,8 @@
       <div class="pt-10 mt-12 text-center border-t-2 border-primary-darker">
         <div>
             <a href="https://www.prophone.com" target="_blank">
-                <img class="w-56 m-auto" src="/staticfiles/landing_page_gen/built-with-love.png" width="1080" height="1920" />
-
+                <img class="w-56 m-auto" src="https://prosite.prophone.com/staticfiles/landing_page_gen/built-with-love.png" width="1080" height="1920" />
+            
      <!--   <div class="flex justify-center">
             <a class="flex" href="https://www.prophone.com" target="_blank">
                 <svg width="232" height="24" viewBox="0 0 232 24" fill="none" xmlns="http://www.w3.org/2000/svg">
