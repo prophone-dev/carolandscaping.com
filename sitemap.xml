@@ -46,6 +46,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery--</loc>
+        <lastmod>2022-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-a-a-b-k</loc>
         <lastmod>2022-09-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -95,7 +102,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-a-.--b---,-m-k-p-'-a</loc>
+        <loc>https://carolandscaping.com/service-a-.--b-/-,-m-k-p-'-a</loc>
         <lastmod>2022-09-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
