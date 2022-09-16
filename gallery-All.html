@@ -290,7 +290,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("http://127.0.0.1:8000/sms/" + slug , {
+                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -609,14 +609,6 @@
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                   
                                                     <a
-                                                        href=" gallery-bucksgallery "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
-                                                    </a>
-                                                 
-                                                    <a
                                                         href=" gallery-Gallery-1 "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -662,6 +654,14 @@
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <p class="mt-1 text-sm text-gray-500">2018 Forest River Hemisphere GLX, BAR 337</p>
+                                                    </a>
+                                                 
+                                                    <a
+                                                        href=" gallery-bucksgallery "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
                                                     </a>
                                                  
                                                     <a
@@ -927,10 +927,6 @@
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
-                                                <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
-                                                </a>
-                                            
                                                 <a href="gallery-Gallery-1" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">Gallery 1</p>
                                                 </a>
@@ -953,6 +949,10 @@
                                             
                                                 <a href="gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500">2018 Forest River Hemisphere GLX, BAR 337</p>
+                                                </a>
+                                            
+                                                <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
                                                 </a>
                                             
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1092,7 +1092,7 @@
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 115,
+        amountOfImages: 112,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -3234,63 +3234,6 @@
                 </div>
             </li>
         
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 112; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            
-                                
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/b81c47c8-c096-4394-9866-e23e1066fd3b.png" alt="All Photos for caro-landscapings in Austin, WI" loading="lazy"/>
-                                
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 113; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            
-                                
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0e701d02-0ebe-4760-b756-0cbcb65c27b2.png" alt="All Photos for caro-landscapings in Austin, WI" loading="lazy"/>
-                                
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 114; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            
-                                
-                                    <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8043e470-9b41-43ea-b06e-071cf2065664.png" alt="All Photos for caro-landscapings in Austin, WI" loading="lazy"/>
-                                
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
     </ul>
 
     <template x-teleport="body">
@@ -4120,27 +4063,6 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 112">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/b81c47c8-c096-4394-9866-e23e1066fd3b.png" alt="All Photos for caro-landscapings in Austin, WI" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 113">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/0e701d02-0ebe-4760-b756-0cbcb65c27b2.png" alt="All Photos for caro-landscapings in Austin, WI" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 114">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/8043e470-9b41-43ea-b06e-071cf2065664.png" alt="All Photos for caro-landscapings in Austin, WI" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
                             </ul>
 
                             <button :class="activeImage < amountOfImages - 1 ? 'opacity-100' : 'opacity-0'" @click="next" class="text-6xl transition-opacity focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75">
@@ -4642,14 +4564,14 @@
                                         <div class="flex items-center">
                                            
                                             <input
-                                                    id="contact-service-132241"
-                                                    name="132241"
+                                                    id="contact-service-132351"
+                                                    name="132351"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mowing 2222 go pack goooo"
                                             />
         
-                                            <label for="contact-service-132241" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
+                                            <label for="contact-service-132351" class="ml-3 text-sm font-medium text-gray-700">Mowing 2222 go pack goooo</label>
                                      
                                             
                                         </div>
@@ -4658,14 +4580,14 @@
                                         <div class="flex items-center">
                                            
                                             <input
-                                                    id="contact-service-132242"
-                                                    name="132242"
+                                                    id="contact-service-132352"
+                                                    name="132352"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="a .  b / , m k p ' a"
                                             />
         
-                                            <label for="contact-service-132242" class="ml-3 text-sm font-medium text-gray-700">a .  b / , m k p ' a</label>
+                                            <label for="contact-service-132352" class="ml-3 text-sm font-medium text-gray-700">a .  b / , m k p ' a</label>
                                      
                                             
                                         </div>
@@ -4674,14 +4596,14 @@
                                         <div class="flex items-center">
                                            
                                             <input
-                                                    id="contact-service-132243"
-                                                    name="132243"
+                                                    id="contact-service-132353"
+                                                    name="132353"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="!#$@#$%^$&%*^;/'"
                                             />
         
-                                            <label for="contact-service-132243" class="ml-3 text-sm font-medium text-gray-700">!#$@#$%^$&%*^;/'</label>
+                                            <label for="contact-service-132353" class="ml-3 text-sm font-medium text-gray-700">!#$@#$%^$&%*^;/'</label>
                                      
                                             
                                         </div>
@@ -4690,14 +4612,14 @@
                                         <div class="flex items-center">
                                            
                                             <input
-                                                    id="contact-service-132244"
-                                                    name="132244"
+                                                    id="contact-service-132354"
+                                                    name="132354"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="!#$@#$%^$&%*^;/'afdsdf;38384"
                                             />
         
-                                            <label for="contact-service-132244" class="ml-3 text-sm font-medium text-gray-700">!#$@#$%^$&%*^;/'afdsdf;38384</label>
+                                            <label for="contact-service-132354" class="ml-3 text-sm font-medium text-gray-700">!#$@#$%^$&%*^;/'afdsdf;38384</label>
                                      
                                             
                                         </div>
@@ -4740,7 +4662,7 @@
                                         <div class="flex items-center">
                                            
                                          <label class="label text-sm font-medium text-gray-700 flex"> 
-                                            <input type="checkbox" name="132241" value="Mowing 2222 go pack goooo" id="contact-service-132241" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="132351" value="Mowing 2222 go pack goooo" id="contact-service-132351" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
     
                                             <span class="ml-3 items-start">
@@ -4755,7 +4677,7 @@
                                         <div class="flex items-center">
                                            
                                          <label class="label text-sm font-medium text-gray-700 flex"> 
-                                            <input type="checkbox" name="132242" value="a .  b / , m k p ' a" id="contact-service-132242" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="132352" value="a .  b / , m k p ' a" id="contact-service-132352" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
     
                                             <span class="ml-3 items-start">
@@ -4770,7 +4692,7 @@
                                         <div class="flex items-center">
                                            
                                          <label class="label text-sm font-medium text-gray-700 flex"> 
-                                            <input type="checkbox" name="132243" value="!#$@#$%^$&%*^;/'" id="contact-service-132243" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="132353" value="!#$@#$%^$&%*^;/'" id="contact-service-132353" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
     
                                             <span class="ml-3 items-start">
@@ -4785,7 +4707,7 @@
                                         <div class="flex items-center">
                                            
                                          <label class="label text-sm font-medium text-gray-700 flex"> 
-                                            <input type="checkbox" name="132244" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-132244" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="132354" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-132354" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
     
                                             <span class="ml-3 items-start">
@@ -5020,7 +4942,7 @@
                     
                     
                     <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/ozarksdetail" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                        <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/ozarksdetail/reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             cccc
                         </a>
                     </li>
