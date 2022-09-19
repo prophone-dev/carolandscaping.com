@@ -443,9 +443,20 @@
                         </a>
                     
                     </div>
+                </div>
+                <div class="flex flex-row items-center text-gray-500 xl:hidden">
+                    <span class="uppercase">Menu</span>
+                    <button @click="mobileOpen = !mobileOpen" class="p-2">
+                        <span hidden class="sr-only">Open/CLose menu TODO:</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center hidden space-x-3 xl:flex">
                     <div
-                        :class="{'h-16': !scrolledFromTop, 'h-16 -translate-x-24': scrolledFromTop}"
-                        class="hidden transition-all duration-200 xl:ml-6 xl:flex xl:space-x-5"
+                        :class="{'h-16': !scrolledFromTop, 'h-16': scrolledFromTop}"
+                        class="hidden transition-all duration-200 xl:flex xl:space-x-5 mr-2"
                     >
                     
                             <div
@@ -458,7 +469,7 @@
                                 
                                     <a
                                         href=" index "
-                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
                                         Home 
                                     </a>
@@ -481,11 +492,11 @@
                                         :aria-expanded="desktopOpen"
                                         aria-controls="navitem_2"
                                         @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2 uppercase"
                                     >
                                         <span>Services</span>
                                         <svg
-                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
+                                            class="w-5 h-5 ml-1 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -512,7 +523,7 @@
                                         x-transition:leave-end="opacity-0 translate-y-1"
                                         id="navitem_2"
                                         role="menu"
-                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform top-12 left-1/2 sm:px-0"
                                         aria-orientation="vertical"
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
@@ -523,33 +534,33 @@
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Mowing 2222 go pack goooo</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Mowing 2222 go pack goooo</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" service-a-.--b---,-m-k-p-&#x27;-a "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">a .  b / , m k p &#x27; a</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">a .  b / , m k p &#x27; a</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" service------------*---&#x27; "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">!#$@#$%^$&amp;%*^;/&#x27;</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" service------------*---&#x27;afdsdf-38384 "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">!#$@#$%^$&amp;%*^;/&#x27;afdsdf;38384</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;afdsdf;38384</p>
                                                     </a>
-                                               
+                                            
                                             </div>
                                         </div>
                                     </div>
@@ -571,11 +582,11 @@
                                         :aria-expanded="desktopOpen"
                                         aria-controls="navitem_3"
                                         @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2 uppercase"
                                     >
                                         <span>Galleries</span>
                                         <svg
-                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
+                                            class="w-5 h-5 ml-1 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -602,7 +613,7 @@
                                         x-transition:leave-end="opacity-0 translate-y-1"
                                         id="navitem_3"
                                         role="menu"
-                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform top-12 left-1/2 sm:px-0"
                                         aria-orientation="vertical"
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
@@ -613,65 +624,65 @@
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">Gallery 1</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Gallery 1</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" gallery-dghcfjgkh "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">dghcfjgkh</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">dghcfjgkh</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" gallery------------*---&#x27; "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">!#$@#$%^$&amp;%*^;/&#x27;</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" gallery-a-a-,-b-----k "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">a a , b - / k</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">a a , b - / k</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" gallery-cfbhgjfh "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">cfbhgjfh</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">cfbhgjfh</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337 "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">2018 Forest River Hemisphere GLX, BAR 337</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" gallery-bucksgallery "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
                                                     </a>
-                                                 
+                                              
                                                     <a
                                                         href=" gallery-All "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500">All Photos</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
                                                     </a>
-                                               
+                                            
                                             </div>
                                         </div>
                                     </div>
@@ -689,7 +700,7 @@
                                 
                                     <a
                                         href=" reviews "
-                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
                                         Reviews 
                                     </a>
@@ -708,7 +719,7 @@
                                 
                                     <a
                                         href=" team "
-                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
                                         Team 
                                     </a>
@@ -727,7 +738,7 @@
                                 
                                     <a
                                         href=" jobs "
-                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
                                         Jobs 
                                     </a>
@@ -738,18 +749,6 @@
                         
 
                     </div>
-                </div>
-                <div class="flex flex-col items-center text-gray-500 xl:hidden">
-                    <span>Menu</span>
-                    <button @click="mobileOpen = !mobileOpen" class="p-2">
-                        <span hidden class="sr-only">Open/CLose menu TODO:</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="items-center hidden space-x-5 xl:flex">
                     <p :class="{'translate-x-0': !scrolledFromTop, 'translate-x-12': scrolledFromTop}" class="text-gray-500 transition-transform">
                         
                     </p>
@@ -757,7 +756,7 @@
                         
                         <div class="w-full sm:w-auto cta_text_button">
                             <button
-                            :class="{'scale-100': !scrolledFromTop, 'scale-75 translate-x-8': scrolledFromTop}"
+                            :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
                             @click="contactModalOpen = true"
                                 class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none hover:bg-primary-darker sm:w-auto bg-primary focus-visible:ring-2 ring-primary ring-opacity-75 ring-offset-2"
                                 >
@@ -772,7 +771,7 @@
                     
                     
                     </div>
-                    <div class="inline-flex w-full ml-3 sm:w-auto">
+                    <div class="inline-flex w-full sm:w-auto">
                         
                     </div>
                 </div>
@@ -789,9 +788,9 @@
             x-transition:leave="duration-100 ease-in"
             x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-95"
-            class="fixed inset-0 z-30 h-screen p-2 overflow-y-scroll transition origin-top-right transform xl:hidden"
+            class="fixed inset-0 z-30 h-screen overflow-y-scroll transition origin-top-right transform xl:hidden"
         >
-            <div class="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
+            <div class="flex flex-col h-full overflow-hidden bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div class="flex items-center justify-between px-5 pt-4">
                     <div>
                         <a
@@ -814,14 +813,14 @@
                         </button>
                     </div>
                 </div>
-                <div class="overflow-y-scroll">
-                    <div x-data="{ openMenu: '' }" class="flex flex-col px-2 pt-2 pb-3 space-y-1">
+                <div class="flex flex-col grow overflow-y-scroll">
+                    <div x-data="{ openMenu: '' }" class="flex flex-col grow px-2 pt-2 pb-3 space-y-1">
                         
                             <div x-trap.inert="openMenu == 'navitem_1'">
                                 
                                     <a
                                         href=" index "
-                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
+                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                         >Home</a
                                     >
                                 
@@ -835,7 +834,7 @@
                                         :aria-expanded="openMenu == 'navitem_2'"
                                         aria-controls="mobile-navitem_2"
                                         @click="openMenu = openMenu == 'navitem_2' ? '' : 'navitem_2'"
-                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-700 transition rounded-md  border-secondary"
+                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
                                         :class="openMenu == 'navitem_2' ? 'z-30' : 'z-0'"
                                     >
                                         <span>Services</span>
@@ -868,19 +867,19 @@
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
                                                 <a href="service-Mowing-2222-go-pack-goooo" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Mowing 2222 go pack goooo</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">Mowing 2222 go pack goooo</p>
                                                 </a>
                                             
                                                 <a href="service-a-.--b---,-m-k-p-&#x27;-a" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">a .  b / , m k p &#x27; a</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">a .  b / , m k p &#x27; a</p>
                                                 </a>
                                             
                                                 <a href="service------------*---&#x27;" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">!#$@#$%^$&amp;%*^;/&#x27;</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
                                                 </a>
                                             
                                                 <a href="service------------*---&#x27;afdsdf-38384" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">!#$@#$%^$&amp;%*^;/&#x27;afdsdf;38384</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;afdsdf;38384</p>
                                                 </a>
                                             
                                         </div>
@@ -895,7 +894,7 @@
                                         :aria-expanded="openMenu == 'navitem_3'"
                                         aria-controls="mobile-navitem_3"
                                         @click="openMenu = openMenu == 'navitem_3' ? '' : 'navitem_3'"
-                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-700 transition rounded-md  border-secondary"
+                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
                                         :class="openMenu == 'navitem_3' ? 'z-30' : 'z-0'"
                                     >
                                         <span>Galleries</span>
@@ -928,35 +927,35 @@
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
                                                 <a href="gallery-Gallery-1" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">Gallery 1</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">Gallery 1</p>
                                                 </a>
                                             
                                                 <a href="gallery-dghcfjgkh" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">dghcfjgkh</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">dghcfjgkh</p>
                                                 </a>
                                             
                                                 <a href="gallery------------*---&#x27;" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">!#$@#$%^$&amp;%*^;/&#x27;</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
                                                 </a>
                                             
                                                 <a href="gallery-a-a-,-b-----k" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">a a , b - / k</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">a a , b - / k</p>
                                                 </a>
                                             
                                                 <a href="gallery-cfbhgjfh" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">cfbhgjfh</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">cfbhgjfh</p>
                                                 </a>
                                             
                                                 <a href="gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">2018 Forest River Hemisphere GLX, BAR 337</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
                                                 </a>
                                             
                                                 <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">bucksgallery</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
                                                 </a>
                                             
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500">All Photos</p>
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
                                                 </a>
                                             
                                         </div>
@@ -968,7 +967,7 @@
                                 
                                     <a
                                         href=" reviews "
-                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
+                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                         >Reviews</a
                                     >
                                 
@@ -979,7 +978,7 @@
                                 
                                     <a
                                         href=" team "
-                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
+                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                         >Team</a
                                     >
                                 
@@ -990,7 +989,7 @@
                                 
                                     <a
                                         href=" jobs "
-                                        class=" 'text-gray-700'  block px-3 py-2 text-base font-medium rounded-md border-secondary transition"
+                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                         >Jobs</a
                                     >
                                 
@@ -998,19 +997,19 @@
                             </div>
                       
                     </div>
-                    <div class="d-none p-1 bg-primary sm:bg-gray-50">
+                        <div class="flex flex-col d-none p-2 bg-primary sm:bg-gray-50">
+                            
+                                <button
+                                @click="contactModalOpen = true"
+                                class="relative block w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary hover:bg-gray-100 my-2"
+                                >
+                                    Send us a Text
+                                </button>
+                            
+                             
                         
-                            <button
-                            @click="contactModalOpen = true"
-                            class="relative block w-full px-5 py-3 font-medium text-center rounded-md  focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary  hover:bg-gray-100"
-                            >
-                                Send us a Text
-                            </button>
-                        
-                         
-                     
-                
-                            </div>
+                    
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -1490,6 +1489,13 @@
                               >
                           </li>
                           
+                          <li>
+                              <a
+                                  href='https://app.prophone.com/'
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Login</a
+                              >
+                          </li>
                       </ul>
                   </div>
                   <div class="mt-12 md:mt-0">
@@ -1551,7 +1557,7 @@
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Tues:  10:00am - 12:00am 
+                                Tue:  10:00am - 12:00am 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
