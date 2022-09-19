@@ -290,7 +290,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
+                        fetch("http://127.0.0.1:8000/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -1272,7 +1272,7 @@
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
+  fetch("http://127.0.0.1:8000/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
