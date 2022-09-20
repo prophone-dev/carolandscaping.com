@@ -1128,10 +1128,11 @@
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
-        }"
-            x-init="loop"
-            class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-        >
+    }"
+        x-init="loop"
+        class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
+    >
+        
         <div
             class="absolute inset-0"
             x-show="activeImage === 1"
@@ -1142,18 +1143,17 @@
             x-transition:leave-start="transform"
             x-transition:leave-end="transform -translate-x-full"
         >
-        
             
-            <img
-                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/4fbd7f52-2527-4699-967a-8f28357e8731.png"
-                alt=""
-                width="640" height="360"
-            />
-                
-        
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/AL88OQ85IVKJNGTKE9LBP47M9EIR9NPJS68Z6UOK.jpeg"
+                    alt="landscaping near me company caro-landscapings in Austin, WI"
+                    width="640" height="360"
+                />
             
+
         </div>
+        
     </div>
     
 </div>
