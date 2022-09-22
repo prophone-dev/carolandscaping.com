@@ -292,7 +292,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
+                        fetch("https://prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -756,7 +756,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                     </p>
                     <div class="w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
+                        <div class="w-full sm:w-auto cta_text_button">
                             <button
                             :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
                             @click="contactModalOpen = true"
@@ -766,6 +766,12 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                             </button>
                         </div> 
                         
+                            
+                     
+                    
+                    
+                    
+                    
                     </div>
                     <div class="inline-flex w-full sm:w-auto">
                         
@@ -995,16 +1001,13 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                     </div>
                         <div class="flex flex-col d-none p-2 bg-primary sm:bg-gray-50">
                             
-                            <div onclick="postCtaClick('text')" class="w-full sm:w-auto">
                                 <button
                                 @click="contactModalOpen = true"
                                 class="relative block w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary hover:bg-gray-100 my-2"
                                 >
                                     Send us a Text
                                 </button>
-                            </div>
                             
-
                              
                         
                     
@@ -1046,17 +1049,6 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         launchBanner.style.display = 'none'
         navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-20 transition-all duration-200"
     }
-
-    async function postCtaClick(type) {
-        try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
-                method: 'GET',
-            })
-        } catch (e) {
-            console.log('error', e)
-        }
-        return
-    }
 </script>
 
 
@@ -1065,7 +1057,6 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     x-init="buttonVisible = window.pageYOffset >= 400 && (window.innerHeight + window.pageYOffset) <= document.body.scrollHeight - 500"
     @scroll.window="window.pageYOffset >= 400 && (window.innerHeight + window.scrollY) <= document.body.scrollHeight - 500 ? buttonVisible = true : buttonVisible = false"
     class="fixed z-40 right-7 bottom-7"
-    onclick="postCtaClick('text')"
 >
     <div
         x-cloak
@@ -1110,9 +1101,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
         <div class="mx-auto mt-12 text-lg text-gray-500 max-w-prose space-y-7">
             <p lorem="2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p lorem="2"></p>
         </div>
@@ -1284,7 +1275,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
+  fetch("https://prosite.prophone.com/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1329,7 +1320,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         <div class="flex justify-center mt-8">
             
             
-            <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
+            <div class="w-full sm:w-auto cta_text_button">
                 <button
                     @click="contactModalOpen = true"
                     class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary"
