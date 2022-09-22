@@ -1086,14 +1086,14 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     <div class="mx-auto max-w-7xl mb-12 sm:mb-0">
         <div class="relative z-10 py-8 bg-primary text-white sm:py-16 md:py-20 lg:max-w-2xl lg:w-full lg:py-28 xl:py-32">
             <svg
-                class="absolute inset-y-0 right-0 hidden w-48 h-full text-primary transform translate-x-1/2 lg:block"
-                fill="currentColor"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                aria-hidden="true"
-                style="z-index:-1"
+                    class="absolute inset-y-0 right-0 hidden w-48 h-full text-primary transform translate-x-1/2 lg:block"
+                    fill="currentColor"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                    style="z-index:-1"
             >
-                <polygon points="50,0 100,0 50,100 0,100" />
+                <polygon points="50,0 100,0 50,100 0,100"/>
             </svg>
 
             <main class="px-4 mx-auto max-w-7xl  h-96  sm:h-full sm:px-6 lg:px-8">
@@ -1108,14 +1108,14 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                         
                         <div class="w-full sm:w-auto cta_text_button">
                             <button
-                                @click="contactModalOpen = true"
-                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-secondary-darker focus:outline-none ring-offset-2 focus:ring-2 ring-primary ring-opacity-75 sm:w-auto bg-secondary"
-                                >
+                                    @click="contactModalOpen = true"
+                                    class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-secondary-darker focus:outline-none ring-offset-2 focus:ring-2 ring-primary ring-opacity-75 sm:w-auto bg-secondary"
+                            >
                                 Get a Free Quote
                             </button>
-                        </div> 
+                        </div>
                         
-                            
+
                         
                     </div>
                 </div>
@@ -1124,35 +1124,45 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     </div>
     
     <div
-        x-data="{
+            x-data="{
         activeImage: 1,
         amountOfImages: 1,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
     }"
-        x-init="loop"
-        class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
+            x-init="loop"
+            class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
     >
         
         <div
-            class="absolute inset-0"
-            x-show="activeImage === 1"
-            x-transition:enter="transition duration-1000"
-            x-transition:enter-start="transform translate-x-full"
-            x-transition:enter-end="transform translate-x-0"
-            x-transition:leave="transition duration-1000"
-            x-transition:leave-start="transform"
-            x-transition:leave-end="transform -translate-x-full"
+                class="absolute inset-0"
+                x-show="activeImage === 1"
+                x-transition:enter="transition duration-1000"
+                x-transition:enter-start="transform translate-x-full"
+                x-transition:enter-end="transform translate-x-0"
+                x-transition:leave="transition duration-1000"
+                x-transition:leave-start="transform"
+                x-transition:leave-end="transform -translate-x-full"
         >
 
             
+            <picture>
+                <source class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(60)/filters:strip_exif()/media/AL88OQ85IVKJNGTKE9LBP47M9EIR9NPJS68Z6UOK.jpeg"
+                        media="(min-width: 500px)"
+                        alt="landscaping near me company caro-landscapings oy oy oy in Austin, WI"
+                        width="640" height="360"
+                >
                 <img
-                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                    src="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(50)/filters:strip_exif()/media/AL88OQ85IVKJNGTKE9LBP47M9EIR9NPJS68Z6UOK.jpeg"
-                    alt="landscaping near me company caro-landscapings oy oy oy in Austin, WI"
-                    width="640" height="360"
+                        class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                        src="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(10)/filters:strip_exif()/media/AL88OQ85IVKJNGTKE9LBP47M9EIR9NPJS68Z6UOK.jpeg"
+                        alt="landscaping near me company caro-landscapings oy oy oy in Austin, WI"
+                        width="180" height="90"
                 />
+            </picture>
+
+            AL88OQ85IVKJNGTKE9LBP47M9EIR9NPJS68Z6UOK.jpeg
             
 
         </div>
