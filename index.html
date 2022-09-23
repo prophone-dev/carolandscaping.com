@@ -118,7 +118,7 @@
             return new Promise(function(resolve, reject) {
                 let gfgData = document.createElement('script');
                 gfgData.src = info;
-                gfgData.async = false;
+                gfgData.defer = true;
                 gfgData.onload = () => {
                     resolve(info);
                 };
