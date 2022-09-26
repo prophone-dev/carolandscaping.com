@@ -219,7 +219,6 @@
     </style>
     <script type="text/javascript">
         function dynamicallyLoadJS(file) {
-        console.log(file)
                     // DOM: Create the script element
                     var jsElm = document.createElement("script");
                     // set the type attribute
@@ -274,15 +273,14 @@
                 ]
                 allUnkpgScripts.map(script=> dynamicallyLoadJS(script))
         }
-            document.addEventListener("DOMContentLoaded",  function() {
-            console.log("entering")
+            window.onload = function() {
              setTimeout(function() {
                     segmentScript()
                 }, 2000);
                 setTimeout(function() {
                     loadUnpkgScripts()
                 }, 500);
-            });
+            };
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
                         sendButton.disabled = true
