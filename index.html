@@ -171,7 +171,7 @@
         @media (min-width: 769px) {
           .hero-image {
             background-color: var(--color-primary-foreground);
-            background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/800x1048/filters:quality(60)/media/AL88OQ85IVKJNGTKE9LBP47M9EIR9NPJS68Z6UOK.jpeg");
+            background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:quality(60)/media/AL88OQ85IVKJNGTKE9LBP47M9EIR9NPJS68Z6UOK.jpeg");
             background-size: 100% 100%;
           }
         }
@@ -219,6 +219,7 @@
     </style>
     <script type="text/javascript">
         function dynamicallyLoadJS(file) {
+        console.log(file)
                     // DOM: Create the script element
                     var jsElm = document.createElement("script");
                     // set the type attribute
@@ -263,28 +264,25 @@
         }
         function loadUnpkgScripts(){
                 var allUnkpgScripts = [
+                "https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js",
                     "https://unpkg.com/siema@1.5.1/dist/siema.min.js",
                     "https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js",
                     "https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js",
                     "https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js",
+                    "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
 
                 ]
                 allUnkpgScripts.map(script=> dynamicallyLoadJS(script))
         }
-            window.onload = function() {
+            document.addEventListener("DOMContentLoaded",  function() {
+            console.log("entering")
              setTimeout(function() {
                     segmentScript()
                 }, 2000);
                 setTimeout(function() {
-                    dynamicallyLoadJS("https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js")
-                }, 100);
-                setTimeout(function() {
-                    dynamicallyLoadJS("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-                }, 1500);
-                setTimeout(function() {
                     loadUnpkgScripts()
-                }, 1500);
-            };
+                }, 500);
+            });
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
                         sendButton.disabled = true
@@ -301,7 +299,7 @@
                                   mime = arr[0].match(/:(.*?);/)[1]
                             return mime.split('/')[1]
                         }
-  
+
                           const getFileName = (dataUrl) =>{
                               const uuid = uuidV4()
                               const fileName = `${uuid}.${getFileExtenstion(dataUrl)}`
@@ -313,11 +311,11 @@
                                   bstr = atob(arr[1]),
                                   n = bstr.length,
                                   u8arr = new Uint8Array(n);
-  
+
                               while(n--){
                                   u8arr[n] = bstr.charCodeAt(n);
                               }
-  
+
                               return new File([u8arr], filename, {type:mime});
                           }
                         function uploadFile(file, signedRequest, url) {
@@ -338,7 +336,7 @@
                                 xhr.send(file)
                             })
                         }
-                        
+
                         function getSignedRequest(file,fileName) {
                             return new Promise(function (resolve, reject) {
                                 const xhr = new XMLHttpRequest()
@@ -481,7 +479,7 @@
                             alert("There was a problem sending your text. Please reach out to ProPhone.")
                         })
                     }
-                
+
                     console.log('go bucks')
                     $('document').ready(function(){
                         console.log('doc ready')
@@ -4294,7 +4292,7 @@ observer.observe(target)
                             <path d="M845 2413.2l239.7 2.1c119-3.2 210 209 56.3 323 205 57.3 131 335-33.3 335.5L843 3078l-37.5-120.9 252.2 2.1c79.9 2.3 85-159 2.1-160.5l-231.3 4.2-6.3-125h206.3c94 3.9 64.8-146 2.1-145.9l-206.3-4.2-20.8-93.8 41.7-20.8z" fill-rule="evenodd"/>
                             <path d="m1331.3 2413.3h148v665.2h-148z"/>
                             <path d="m1477.2 2413.2 239.7 2.1c119-3.2 210 209 56.3 323 205 57.3 131 335-33.3 335.5l-264.7 4.2-37.5-120.9 252.2 2.1c79.9 2.3 85-159 2.1-160.5l-231.3 4.2-6.3-125h206.3c94 3.9 64.8-146 2.1-145.9l-206.3-4.2-20.8-93.8 41.7-20.8z" fill-rule="evenodd"/>
-                    </svg>                       
+                    </svg>
                   </a>
                   
               </div>
@@ -4470,12 +4468,13 @@ observer.observe(target)
                     <rect width="94.6667" height="20" fill="white" transform="translate(121.167 2)"/>
                     </clipPath>
                     </defs>
-                </svg>                    
+                </svg>
             </a>
         </div>
       </div>
   </div>
 </footer>
+
 
 <template x-teleport="body">
     <div
