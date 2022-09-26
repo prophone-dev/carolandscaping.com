@@ -528,7 +528,7 @@
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'top-32': !scrolledFromTop, 'top-16': scrolledFromTop}"
-    class="fixed inset-x-0 z-20"
+    class=" inset-x-0 z-20"
 >
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
