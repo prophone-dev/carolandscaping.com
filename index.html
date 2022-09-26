@@ -273,11 +273,9 @@
                 allUnkpgScripts.map(script=> dynamicallyLoadJS(script))
         }
             window.onload = function() {
-             setTimeout(function() {
-                    segmentScript()
-                }, 2000);
                 setTimeout(function() {
                     loadUnpkgScripts()
+                    segmentScript()
                 }, 100);
             };
                     function send_sms(slug){
