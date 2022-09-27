@@ -148,6 +148,7 @@
                     var jsElm = document.createElement("script");
                     // set the type attribute
                     jsElm.type = "application/javascript";
+                    jsElm.defer = true
                     // make the script element load file
                     jsElm.src = file;
                     // finally insert the element to the body element in order to load the script
