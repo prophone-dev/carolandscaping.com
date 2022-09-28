@@ -320,7 +320,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("http://127.0.0.1:8000/sms/" + slug , {
+                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -801,7 +801,7 @@
                         <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto">
                             <a
                                 target = "_blank" 
-                                href="tel:+12629574136"
+                                href="tel:+19142003591"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
                                 class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
                                 >
@@ -1049,7 +1049,7 @@
                             <div onclick="postCtaClick('call')" class="w-full sm:w-auto">
                                 <a
                                     target = "_blank" 
-                                    href="tel:+12629574136"
+                                    href="tel:+19142003591"
                                     :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
                                     class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 sm:w-auto text-primary my-2"
                                     >
@@ -1100,7 +1100,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1201,7 +1201,7 @@
             <div onclick="postCtaClick('call')" class="inline-flex w-full ml-3 sm:w-auto">
                 <a
                     target = "_blank" 
-                    href="tel:+12629574136"
+                    href="tel:+19142003591"
                     class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"
                 >
                     Give us a Call
@@ -1551,7 +1551,7 @@ observer.observe(target)
             <div onclick="postCtaClick('call')" class="inline-flex w-full ml-3 sm:w-auto">
                 <a
                     target = "_blank" 
-                    href="tel:+12629574136"
+                    href="tel:+19142003591"
                     class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"
                 >
                     Give us a Call
@@ -1577,7 +1577,7 @@ observer.observe(target)
                   
                       2nd Street District,Austin,WI, <br/>
                   
-                  +12629574136
+                  +19142003591
               </p>
               <div class="flex flex-wrap align-middle items-center">
                   
