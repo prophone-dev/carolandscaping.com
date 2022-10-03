@@ -1177,7 +1177,7 @@
     >
         
             <div
-                class="flex screen-height-minus-navbar w-full bg-center bg-cover bg-fixed bg-[url('https://landing-page-app-hero-images.s3.amazonaws.com/media/e5c19b14-91e4-41e1-9851-bb610903c803.jpeg')]"
+                class="flex screen-height-minus-navbar w-full bg-center bg-cover bg-fixed bg-[url('https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fda445-a62c-43c9-82c0-86fbba6c9cea.jpeg')]"
             >
                 <main
                     class="flex screen-height-minus-navbar justify-center m-auto w-full bg-primary bg-opacity-75"
@@ -1227,7 +1227,7 @@
             <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 3,
+        amountOfImages: 4,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1249,7 +1249,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:format(webp)/media/e5c19b14-91e4-41e1-9851-bb610903c803.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
+                                    <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:format(webp)/media/c2fda445-a62c-43c9-82c0-86fbba6c9cea.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
                                 
                             
                         </div>
@@ -1268,7 +1268,7 @@
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
-                                    <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:format(webp)/media/89535500-2c84-4e19-8533-84219a567743.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
+                                    <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:format(webp)/media/e5c19b14-91e4-41e1-9851-bb610903c803.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
                                 
                             
                         </div>
@@ -1284,6 +1284,25 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <div class="aspect-w-3 aspect-h-2">
+                            
+                                
+                                    <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:format(webp)/media/89535500-2c84-4e19-8533-84219a567743.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
+                                
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                         <div class="aspect-w-3 aspect-h-2">
                             
                                 
@@ -1345,19 +1364,26 @@
                                 
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/e5c19b14-91e4-41e1-9851-bb610903c803.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c2fda445-a62c-43c9-82c0-86fbba6c9cea.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/89535500-2c84-4e19-8533-84219a567743.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/e5c19b14-91e4-41e1-9851-bb610903c803.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 2">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/89535500-2c84-4e19-8533-84219a567743.jpeg" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 3">
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/e357a84e-4f70-4220-9b93-faca237c7eea.png" alt="bucksgallery for caro-landscapings oy oy oy in Austin, WI" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
