@@ -232,6 +232,8 @@
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
                         sendButton.disabled = true
+                        const errorStateMessageElement = document.getElementById("error-state-modal")
+                        errorStateMessageElement.innerHTML = ''
                         console.log('send_sms',1, slug)
                         event.preventDefault()
                         function uuidV4() {
@@ -359,11 +361,40 @@
                             else {return ""}
 
                         }
+                        const addErrorMessageToForm = (message) =>{
+                             var tag = document.createElement("div");
+                             var cross = document.createElement("h1");
+                             cross.innerHTML = "\u274C"
+                             var messageh1 = document.createElement("h1");
+                                messageh1.innerHTML = message
+                                messageh1.className = "ml-3"
+                             tag.appendChild(cross);
+                             tag.appendChild(messageh1);
+                             tag.className = "flex text-red-900 w-full p-4 rounded  item-center align-center bg-red-100"
+                            const errorStateMessageElement = document.getElementById("error-state-modal")
+                            errorStateMessageElement.appendChild(tag)
+                        }
 
 
                         const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
                         var sender_number = getIdValue(`#contact-phone-number`)
                         var sender_email = getIdValue(`#contact-email`)
+
+                        console.log(sender_full_name,"sender_full_name",sender_number,"sender_number",sender_email,"sender_email")
+                        if (!sender_full_name){
+                            const message = "Full Name is required"
+                            addErrorMessageToForm(message)
+                            sendButton.disabled = false
+                            return
+                        }
+                        if (!sender_number && !sender_email){
+                            const message ="Phone Number OR Email required"
+                            addErrorMessageToForm(message)
+                            sendButton.disabled = false
+                            return
+                        }
+
+
                         var sender_contact_date = getIdValue(`#contact-date`)
                         var sender_promo = getIdValue(`#contact-promo-code`)
                         var sender_address = getIdValue(`#contact-address`)
@@ -2235,7 +2266,8 @@
                     <p class="my-6 text-lg text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
                     <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
                 </div>
-
+                <div id="error-state-modal" class="p-2">
+                </div>
                 <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping')">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
@@ -2243,7 +2275,6 @@
                             <div>
                                 <label for="contact-full-name" class="font-medium text-base text-white">Full name</label>
                                 <input
-                                    required
                                     type="text"
                                     name="full-name"
                                     id="contact-full-name"
@@ -2256,7 +2287,6 @@
                             <div>
                                 <label for="contact-phone-number" class="font-medium text-base text-white">Phone number</label>
                                 <input
-                                    required
                                     type="tel"
                                     name="phone-number"
                                     id="contact-phone-number"
@@ -2269,7 +2299,6 @@
                             <div>
                                 <label for="contact-email" class="font-medium text-base text-white">Email</label>
                                 <input
-                                    required
                                     type="email"
                                     name="email"
                                     id="contact-email"
@@ -2576,6 +2605,12 @@
 
                 <ul class="mt-2 space-y-6">
                     <span hidden class="sr-only">Review types</span>
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJWdAow_Z3RogRlopu0Oy73qQ" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            Google
+                        </a>
+                    </li>
                     
                     
                     <li>
