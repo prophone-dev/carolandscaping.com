@@ -148,6 +148,8 @@
                     function send_sms(slug){
                         const sendButton = document.getElementById('sendButton')
                         sendButton.disabled = true
+                        const errorStateMessageElement = document.getElementById("error-state-modal")
+                        errorStateMessageElement.innerHTML = ''
                         console.log('send_sms',1, slug)
                         event.preventDefault()
                         function uuidV4() {
@@ -276,10 +278,40 @@
 
                         }
 
+                        const addErrorMessageToForm = (message) =>{
+                            var tag = document.createElement("div");
+                            var cross = document.createElement("h1");
+                            cross.innerHTML = "\u274C"
+                            var messageh1 = document.createElement("h1");
+                               messageh1.innerHTML = message
+                               messageh1.className = "ml-3"
+                            tag.appendChild(cross);
+                            tag.appendChild(messageh1);
+                            tag.className = "flex text-red-900 w-full p-4 rounded  item-center align-center bg-red-100"
+                           const errorStateMessageElement = document.getElementById("error-state-modal")
+                           errorStateMessageElement.appendChild(tag)
+                       }
 
-                        const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
-                        var sender_number = getIdValue(`#contact-phone-number`)
-                        var sender_email = getIdValue(`#contact-email`)
+
+                       const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
+                       var sender_number = getIdValue(`#contact-phone-number`)
+                       var sender_email = getIdValue(`#contact-email`)
+
+                       console.log(sender_full_name,"sender_full_name",sender_number,"sender_number",sender_email,"sender_email")
+                       if (!sender_full_name){
+                           const message = "Full Name is required"
+                           addErrorMessageToForm(message)
+                           sendButton.disabled = false
+                           return
+                       }
+                       if (!sender_number && !sender_email){
+                           const message ="Phone Number OR Email required"
+                           addErrorMessageToForm(message)
+                           sendButton.disabled = false
+                           return
+                       }
+
+
                         var sender_contact_date = getIdValue(`#contact-date`)
                         var sender_promo = getIdValue(`#contact-promo-code`)
                         var sender_address = getIdValue(`#contact-address`)
@@ -305,7 +337,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("http://127.0.0.1:8000/sms/" + slug , {
+                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -546,20 +578,20 @@
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                   
                                                     <a
-                                                        href=" service-Mowing-2222-go-pack-goooooaaaa "
+                                                        href=" service-Mowing-2222-go-pack-goooo "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-gray-500 uppercase">Mowing 2222 go pack goooooaaaa</p>
+                                                        <p class="mt-1 text-base font-medium text-gray-500 uppercase">Mowing 2222 go pack goooo</p>
                                                         <p class="mt-1 text-sm text-gray-500 line-clamp-2"> go bucksss </p>
                                                     </a>
                                               
                                                     <a
-                                                        href=" service-a-.--b---,-m-k-p-&#x27;-afaaa "
+                                                        href=" service-a-.--b---,-m-k-p-&#x27;-a "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-gray-500 uppercase">a .  b / , m k p &#x27; afaaa</p>
+                                                        <p class="mt-1 text-base font-medium text-gray-500 uppercase">a .  b / , m k p &#x27; a</p>
                                                         <p class="mt-1 text-sm text-gray-500 line-clamp-2"> aa </p>
                                                     </a>
                                               
@@ -900,12 +932,12 @@
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
-                                                <a href="service-Mowing-2222-go-pack-goooooaaaa" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">Mowing 2222 go pack goooooaaaa</p>
+                                                <a href="service-Mowing-2222-go-pack-goooo" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">Mowing 2222 go pack goooo</p>
                                                 </a>
                                             
-                                                <a href="service-a-.--b---,-m-k-p-&#x27;-afaaa" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">a .  b / , m k p &#x27; afaaa</p>
+                                                <a href="service-a-.--b---,-m-k-p-&#x27;-a" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">a .  b / , m k p &#x27; a</p>
                                                 </a>
                                             
                                                 <a href="service------------*---&#x27;" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1089,7 +1121,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1372,51 +1404,38 @@
 
 
 
-    <section>
-        <div
-            class="relative flex w-full overflow-hidden items-center justify-center h-[400px] sm:h-[800px]"
-        >
-            <video
-                id="hero-video"
-                class="absolute top-0 left-0 w-full h-full object-cover" autoplay loop playsinline muted
-            >
-                <source src="" type = "" >
-            </video>
-            <main
-                class="flex h-[400px] sm:h-[800px] relative justify-center m-auto w-full bg-primary bg-opacity-100"
-            >
-                <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
-                    <h2 class="flex flex-col items-center text-3xl text-white font-extrabold sm:text-6xl">
-                        <span class="flex">Ready to get started?</span>
-                        <span class="flex">Book an appointment today.</span>
-                    </h2>
-                    <div class="w-full mt-5 sm:mt-8 flex justify-center">
-                        
-                        <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
-                            <button 
-                                @click="contactModalOpen = true"
-                                class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-white hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
-                            >
-                                <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                <span class="relative">Get a Free Quote</span>
-                            </button>
-                        </div> 
-                        
-                            
-                        
-                        <div onclick="postCtaClick('call')" class="w-full sm:w-auto mr-4 cta_text_button">
-                            <a
-                                target = "_blank" 
-                                href="tel:+14049345709"
-                                class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
-                                <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                <span class="relative">Give us a Call</span>
-                            </a>
-                        </div>
-                        
-                    </div>
+    <section class="flex two-thirds-screen-height w-full bg-center bg-cover bg-[url('https://landing-page-app-hero-images.s3.amazonaws.com/media/89535500-2c84-4e19-8533-84219a567743.jpeg')]">
+    
+            <div class="flex flex-col items-center justify-center px-6 py-12 text-center sm:px-6 lg:py-16 lg:px-8 w-full bg-opacity-75">
+            <h2 class="flex flex-col items-center text-3xl text-white font-extrabold sm:text-6xl">
+                <span class="flex">Ready to get started?</span>
+                <span class="flex">Book an appointment today.</span>
+            </h2>
+            <div class="w-full mt-5 sm:mt-8 flex justify-center">
+                
+                <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
+                    <button 
+                        @click="contactModalOpen = true"
+                        class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-white hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
+                    >
+                        <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                        <span class="relative">Get a Free Quote</span>
+                    </button>
+                </div> 
+                
+                    
+                
+                <div onclick="postCtaClick('call')" class="w-full sm:w-auto mr-4 cta_text_button">
+                    <a
+                        target = "_blank" 
+                        href="tel:+14049345709"
+                        class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
+                        <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                        <span class="relative">Give us a Call</span>
+                    </a>
                 </div>
-            </main>
+                
+            </div>
         </div>
     </section>
 
@@ -1628,17 +1647,17 @@
                           
                           <li>
                               <a
-                                  href="service-Mowing-2222-go-pack-goooooaaaa"
+                                  href="service-Mowing-2222-go-pack-goooo"
                                   class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                  >Mowing 2222 go pack goooooaaaa</a
+                                  >Mowing 2222 go pack goooo</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-a-.--b---,-m-k-p-&#x27;-afaaa"
+                                  href="service-a-.--b---,-m-k-p-&#x27;-a"
                                   class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                  >a .  b / , m k p &#x27; afaaa</a
+                                  >a .  b / , m k p &#x27; a</a
                               >
                           </li>
                           
@@ -1790,7 +1809,8 @@
                     <p class="my-6 text-lg text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
                     <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
                 </div>
-
+                <div id="error-state-modal" class="p-2">
+                </div>
                 <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping')">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
@@ -1798,7 +1818,6 @@
                             <div>
                                 <label for="contact-full-name" class="font-medium text-base text-white">Full name</label>
                                 <input
-                                    required
                                     type="text"
                                     name="full-name"
                                     id="contact-full-name"
@@ -1811,7 +1830,6 @@
                             <div>
                                 <label for="contact-phone-number" class="font-medium text-base text-white">Phone number</label>
                                 <input
-                                    required
                                     type="tel"
                                     name="phone-number"
                                     id="contact-phone-number"
@@ -1824,7 +1842,6 @@
                             <div>
                                 <label for="contact-email" class="font-medium text-base text-white">Email</label>
                                 <input
-                                    required
                                     type="email"
                                     name="email"
                                     id="contact-email"
@@ -1854,23 +1871,23 @@
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="133923" value="Mowing 2222 go pack goooooaaaa" id="contact-service-133923" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="133992" value="Mowing 2222 go pack goooo" id="contact-service-133992" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
-                                                Mowing 2222 go pack goooooaaaa
+                                                Mowing 2222 go pack goooo
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="133924" value="a .  b / , m k p ' afaaa" id="contact-service-133924" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="133993" value="a .  b / , m k p ' a" id="contact-service-133993" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
-                                                a .  b / , m k p ' afaaa
+                                                a .  b / , m k p ' a
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="133925" value="!#$@#$%^$&%*^;/'" id="contact-service-133925" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="133994" value="!#$@#$%^$&%*^;/'" id="contact-service-133994" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 !#$@#$%^$&%*^;/'
@@ -1878,7 +1895,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="133926" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-133926" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="133995" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-133995" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 !#$@#$%^$&%*^;/'afdsdf;38384
@@ -1955,49 +1972,49 @@
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-133923"
-                                        name="133923"
+                                        id="contact-service-133992"
+                                        name="133992"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Mowing 2222 go pack goooooaaaa"
+                                        value="Mowing 2222 go pack goooo"
                                     />
-                                    <label for="contact-service-133923" class="ml-3 text-sm font-normal text-gray-700">Mowing 2222 go pack goooooaaaa</label>
+                                    <label for="contact-service-133992" class="ml-3 text-sm font-normal text-gray-700">Mowing 2222 go pack goooo</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-133924"
-                                        name="133924"
+                                        id="contact-service-133993"
+                                        name="133993"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="a .  b / , m k p ' afaaa"
+                                        value="a .  b / , m k p ' a"
                                     />
-                                    <label for="contact-service-133924" class="ml-3 text-sm font-normal text-gray-700">a .  b / , m k p ' afaaa</label>
+                                    <label for="contact-service-133993" class="ml-3 text-sm font-normal text-gray-700">a .  b / , m k p ' a</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-133925"
-                                        name="133925"
+                                        id="contact-service-133994"
+                                        name="133994"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="!#$@#$%^$&%*^;/'"
                                     />
-                                    <label for="contact-service-133925" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'</label>
+                                    <label for="contact-service-133994" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-133926"
-                                        name="133926"
+                                        id="contact-service-133995"
+                                        name="133995"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="!#$@#$%^$&%*^;/'afdsdf;38384"
                                     />
-                                    <label for="contact-service-133926" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'afdsdf;38384</label>
+                                    <label for="contact-service-133995" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'afdsdf;38384</label>
                                 </div>
                             
                                 
@@ -2131,12 +2148,6 @@
 
                 <ul class="mt-2 space-y-6">
                     <span hidden class="sr-only">Review types</span>
-                    
-                    <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJWdAow_Z3RogRlopu0Oy73qQ" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
-                            Google
-                        </a>
-                    </li>
                     
                     
                     <li>
