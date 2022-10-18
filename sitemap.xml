@@ -46,6 +46,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-test</loc>
+        <lastmod>2022-10-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-a-a-,-b-----k</loc>
         <lastmod>2022-10-18</lastmod>
         <changefreq>weekly</changefreq>
@@ -95,6 +102,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-ok</loc>
+        <lastmod>2022-10-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-Mowing-2222-go-pack-goooo</loc>
         <lastmod>2022-10-18</lastmod>
         <changefreq>weekly</changefreq>
@@ -117,6 +131,20 @@
 
     <url>
         <loc>https://carolandscaping.com/service------------*---'afdsdf-38384</loc>
+        <lastmod>2022-10-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-test</loc>
+        <lastmod>2022-10-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-test123</loc>
         <lastmod>2022-10-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
