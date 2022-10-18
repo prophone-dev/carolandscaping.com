@@ -37,6 +37,34 @@
     input[type="date"]:valid::before {
         content: "" !important;
     }
+    .quill ul, .quil li {
+        list-style: disc;
+        list-style-position: inside;
+    }
+    .quill ol, .quil li{
+        list-style: decimal;
+        list-style-position: inside;
+    }
+    .quill h1 {
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
+    .quill h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-top: 0.83em;
+        margin-bottom: 0.83em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" href="https://prophone-templates.vercel.app/assets/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -423,7 +451,9 @@
                     class="sm:flex text-white text-sm mb-3 sm:mb-0"
                 >
                     
-                    You’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+
+                    Matthew, you’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+
                     
                     bucks
                 </div>
@@ -1163,8 +1193,8 @@
             </div>
         </header>
 
-        <div class="mx-auto mt-12 text-lg text-gray-500 max-w-prose space-y-7">
-            <p lorem="2">
+        <div class="mx-auto mt-12 text-lg text-gray-500 max-w-prose space-y-7 quill">
+            <p lorem="2" class="quill">
                 <p><p><strong>latest job</strong></p></p>
             </p>
             <p lorem="2"></p>
