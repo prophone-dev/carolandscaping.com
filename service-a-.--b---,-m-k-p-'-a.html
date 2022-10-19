@@ -37,34 +37,6 @@
     input[type="date"]:valid::before {
         content: "" !important;
     }
-    .quill ul, .quil li {
-        list-style: disc;
-        list-style-position: inside;
-    }
-    .quill ol, .quil li{
-        list-style: decimal;
-        list-style-position: inside;
-    }
-    .quill h1 {
-        display: block;
-        font-size: 2em;
-        margin-top: 0.67em;
-        margin-bottom: 0.67em;
-        margin-left: 0;
-        margin-right: 0;
-        font-weight: bold;
-    }
-
-    .quill h2 {
-        display: block;
-        font-size: 1.5em;
-        margin-top: 0.83em;
-        margin-bottom: 0.83em;
-        margin-left: 0;
-        margin-right: 0;
-        font-weight: bold;
-    }
-
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" href="https://prophone-templates.vercel.app/assets/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -325,6 +297,9 @@
                            sendButton.disabled = false
                            return
                        }
+
+
+                        const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
                         var sender_contact_date = getIdValue(`#contact-date`)
                         var sender_promo = getIdValue(`#contact-promo-code`)
                         var sender_address = getIdValue(`#contact-address`)
@@ -350,7 +325,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
+                        fetch("http://127.0.0.1:8000/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -1201,7 +1176,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1280,12 +1255,12 @@
         </div>
 
         <div class="relative z-10 flex flex-col items-center">
-            <div class="space-y-5 quill">
+            <div class="space-y-5">
                 <h1>
                     <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Services</span>
                     <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">a .  b / , m k p &#x27; a</span>
                 </h1>
-                <div class="max-w-3xl text-xl text-center text-gray-500 quill">aa</div>
+                <p class="max-w-3xl text-xl text-center text-gray-500">aa</p>
             </div>
             <div class="flex justify-center w-full mt-8">
                      
@@ -1413,7 +1388,7 @@
         </div>
         <div class="relative">
             <content>
-                <p class="quill">abbbbb</p>
+                <p>abbbbb</p>
             </content>
         </div>
     </div>
