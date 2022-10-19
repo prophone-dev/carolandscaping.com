@@ -37,6 +37,34 @@
     input[type="date"]:valid::before {
         content: "" !important;
     }
+    .quill ul, .quil li {
+        list-style: disc;
+        list-style-position: inside;
+    }
+    .quill ol, .quil li{
+        list-style: decimal;
+        list-style-position: inside;
+    }
+    .quill h1 {
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
+    .quill h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-top: 0.83em;
+        margin-bottom: 0.83em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" href="https://prophone-templates.vercel.app/assets/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -325,7 +353,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("http://127.0.0.1:8000/sms/" + slug , {
+                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -423,7 +451,9 @@
                     class="sm:flex text-white text-sm mb-3 sm:mb-0"
                 >
                     
-                    You’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+
+                    m, you’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+
                     
                     bucks
                 </div>
@@ -1152,7 +1182,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1233,12 +1263,12 @@
         </div>
 
         <div class="relative z-10 flex flex-col items-center">
-            <div class="space-y-5">
+            <div class="space-y-5 quill">
                 <h1>
                     <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Services</span>
                     <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">!#$@#$%^$&amp;%*^;/&#x27;</span>
                 </h1>
-                <p class="max-w-3xl text-xl text-center text-gray-500">adfasfsdaf</p>
+                <div class="max-w-3xl text-xl text-center text-gray-500 quill">adfasfsdaf</div>
             </div>
             <div class="flex justify-center w-full mt-8">
                      
@@ -1396,7 +1426,7 @@
         </div>
         <div class="relative">
             <content>
-                <p>afsdasdf</p>
+                <p class="quill">afsdasdf</p>
             </content>
         </div>
     </div>
