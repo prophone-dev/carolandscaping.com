@@ -37,6 +37,34 @@
     input[type="date"]:valid::before {
         content: "" !important;
     }
+    .quill ul, .quil li {
+        list-style: disc;
+        list-style-position: inside;
+    }
+    .quill ol, .quil li{
+        list-style: decimal;
+        list-style-position: inside;
+    }
+    .quill h1 {
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
+    .quill h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-top: 0.83em;
+        margin-bottom: 0.83em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+    }
+
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" href="https://prophone-templates.vercel.app/assets/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -297,9 +325,6 @@
                            sendButton.disabled = false
                            return
                        }
-
-
-                        const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
                         var sender_contact_date = getIdValue(`#contact-date`)
                         var sender_promo = getIdValue(`#contact-promo-code`)
                         var sender_address = getIdValue(`#contact-address`)
@@ -325,7 +350,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("http://127.0.0.1:8000/sms/" + slug , {
+                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -1152,7 +1177,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1229,12 +1254,12 @@
         </div>
 
         <div class="relative z-10 flex flex-col items-center">
-            <div class="space-y-5">
+            <div class="space-y-5 quill">
                 <h1>
                     <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Services</span>
                     <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Mowing 2222 go pack goooo</span>
                 </h1>
-                <p class="max-w-3xl text-xl text-center text-gray-500"><ol><li><strong>hellooooo servic﻿e</strong></li></ol><ul><li><strong>hello</strong></li></ul></p>
+                <div class="max-w-3xl text-xl text-center text-gray-500 quill"><ol><li><strong>hellooooo servic﻿e</strong></li></ol><ul><li><strong>hello</strong></li></ul></div>
             </div>
             <div class="flex justify-center w-full mt-8">
                      
@@ -1392,7 +1417,7 @@
         </div>
         <div class="relative">
             <content>
-                <p><p>Spring has sprung and with it the need to get our yards in shape! If you're like me, you don't have the time or energy to spend hours on your knees pulling weeds and mowing the lawn. That's where Mowing 2222 go pack goooo comes in! Caro-Landscaping's Mowing 2222 go pack goooo service is a great way to get your yard looking great without lifting a finger. You simply book a time for them to come and take care of everything, from mowing the lawn to trimming the bushes and pulling the weeds. We even fertilize and weed control your yard for an extra fee if you choose. I've used Caro-Landscaping's Mowing 2222 go pack goooo service for several seasons now and I love it! It's so nice not to have to worry about getting my yard ready for summer. I can just relax and know that my yard is in good hands. If you're looking for an easy way to get your yard ready for summer, I highly recommend booking a Mowing 2222 go pack goooo service from Caro-Landscaping's oy oy oy, a landscaping near me company. You won't be disappointed!</p></p>
+                <p class="quill"><p>Spring has sprung and with it the need to get our yards in shape! If you're like me, you don't have the time or energy to spend hours on your knees pulling weeds and mowing the lawn. That's where Mowing 2222 go pack goooo comes in! Caro-Landscaping's Mowing 2222 go pack goooo service is a great way to get your yard looking great without lifting a finger. You simply book a time for them to come and take care of everything, from mowing the lawn to trimming the bushes and pulling the weeds. We even fertilize and weed control your yard for an extra fee if you choose. I've used Caro-Landscaping's Mowing 2222 go pack goooo service for several seasons now and I love it! It's so nice not to have to worry about getting my yard ready for summer. I can just relax and know that my yard is in good hands. If you're looking for an easy way to get your yard ready for summer, I highly recommend booking a Mowing 2222 go pack goooo service from Caro-Landscaping's oy oy oy, a landscaping near me company. You won't be disappointed!</p></p>
             </content>
         </div>
     </div>
