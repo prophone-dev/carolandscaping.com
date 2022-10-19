@@ -37,34 +37,6 @@
     input[type="date"]:valid::before {
         content: "" !important;
     }
-    .quill ul, .quil li {
-        list-style: disc;
-        list-style-position: inside;
-    }
-    .quill ol, .quil li{
-        list-style: decimal;
-        list-style-position: inside;
-    }
-    .quill h1 {
-        display: block;
-        font-size: 2em;
-        margin-top: 0.67em;
-        margin-bottom: 0.67em;
-        margin-left: 0;
-        margin-right: 0;
-        font-weight: bold;
-    }
-
-    .quill h2 {
-        display: block;
-        font-size: 1.5em;
-        margin-top: 0.83em;
-        margin-bottom: 0.83em;
-        margin-left: 0;
-        margin-right: 0;
-        font-weight: bold;
-    }
-
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" href="https://prophone-templates.vercel.app/assets/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -325,6 +297,9 @@
                            sendButton.disabled = false
                            return
                        }
+
+
+                        const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
                         var sender_contact_date = getIdValue(`#contact-date`)
                         var sender_promo = getIdValue(`#contact-promo-code`)
                         var sender_address = getIdValue(`#contact-address`)
@@ -350,7 +325,7 @@
 
 
                         console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("https://dev.prosite.prophone.com/sms/" + slug , {
+                        fetch("http://127.0.0.1:8000/sms/" + slug , {
                             method: 'POST',
                             body: JSON.stringify({
                                 sender_full_name : sender_full_name,
@@ -1201,7 +1176,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1263,11 +1238,9 @@
                     <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
                         <span class="block xl:inline">caro-landscapings oy oy oy!!!!!</span>
                     </h1>
-                    <div class="quill">
-                        <p class="mt-3 text-base sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 quill">
-                        <p>We are a full-service landscaping company that offers design, installation, and maintenance services for residential and commercial properties in New York City and the surrounding areas.</p>
-                        </p>
-                    </div>
+                    <p class="mt-3 text-base sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        &lt;p&gt;We are a full-service landscaping company that offers design, installation, and maintenance services for residential and commercial properties in New York City and the surrounding areas.&lt;/p&gt;
+                    </p>
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         
                         <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
@@ -1451,12 +1424,12 @@
           </div>
           <div class="mt-12 lg:m-0 lg:pl-1">
               <div class="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:px-0 lg:pt-20 lg:pb-11 lg:max-w-none">
-                  <div class="text-primary quill">
+                  <div class="text-primary">
                       <h2 class="text-3xl font-extrabold lg:text-4xl">About Us</h2>
                       <!-- <ol class="list-decimal list-inside">
                         <li class="list-decimal list-inside">test</li>
                       </ol> -->
-                      <p class="mt-6 text-xl quill">
+                      <p class="mt-6 text-xl">
                         <p>If you're looking for quality landscaping near me services, look no further than caro-landscapings oy oy oy!. We offer a wide range of services for both residential and commercial properties, and we're dedicated to providing our clients with the best possible results. Contact us today for a free consultation!</p> hellosdfsdf
                       </p>
                   </div>
@@ -4164,7 +4137,7 @@
                                 aria-controls="37071"
                                 :aria-expanded="expanded"
                             >
-                            <span class="font-medium text-white quill"><p>What is our business <strong>hours?﻿</strong></p></span>
+                            <span class="font-medium text-white"><p>What is our business <strong>hours?﻿</strong></p></span>
                             <span class="flex items-center ml-6 h-7">
                                     <svg
                                         class="w-6 h-6 transition-transform duration-200 transform"
@@ -4180,9 +4153,9 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="37071">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="37071">
                             <div aria-hidden="true" class="invisible h-2"></div>
-                            <p class="mt-2 text-base text-gray-100 quill"><p>We are open every weekday from<strong> 9-5﻿</strong></p></p>
+                            <p class="mt-2 text-base text-gray-100"><p>We are open every weekday from<strong> 9-5﻿</strong></p></p>
                         </dd>
                     </div>
                 
@@ -4195,7 +4168,7 @@
                                 aria-controls="37072"
                                 :aria-expanded="expanded"
                             >
-                            <span class="font-medium text-white quill"><p>What type of landscaping services do you offer</p></span>
+                            <span class="font-medium text-white"><p>What type of landscaping services do you offer</p></span>
                             <span class="flex items-center ml-6 h-7">
                                     <svg
                                         class="w-6 h-6 transition-transform duration-200 transform"
@@ -4211,9 +4184,9 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="37072">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="37072">
                             <div aria-hidden="true" class="invisible h-2"></div>
-                            <p class="mt-2 text-base text-gray-100 quill"><p>We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p></p>
+                            <p class="mt-2 text-base text-gray-100"><p>We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p></p>
                         </dd>
                     </div>
                 
@@ -4226,7 +4199,7 @@
                                 aria-controls="37073"
                                 :aria-expanded="expanded"
                             >
-                            <span class="font-medium text-white quill"><p>What is your pricing</p></span>
+                            <span class="font-medium text-white"><p>What is your pricing</p></span>
                             <span class="flex items-center ml-6 h-7">
                                     <svg
                                         class="w-6 h-6 transition-transform duration-200 transform"
@@ -4242,9 +4215,9 @@
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="37073">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="37073">
                             <div aria-hidden="true" class="invisible h-2"></div>
-                            <p class="mt-2 text-base text-gray-100 quill"><p>We offer competitive pricing and free estimates.</p></p>
+                            <p class="mt-2 text-base text-gray-100"><p>We offer competitive pricing and free estimates.</p></p>
                         </dd>
                     </div>
                 
