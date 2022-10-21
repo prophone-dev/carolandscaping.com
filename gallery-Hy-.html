@@ -1,1 +1,1418 @@
-{"message": "landing_page_gen/src/pages/v2.1/components/gallery-with-modal.html"}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="caro-landscapings oy oy oy!!!!!" property="og:title">
+
+    
+        <meta content="https://landing-page-app-hero-images.s3.amazonaws.com/media/6db03a38-1415-4c9c-96d4-3347e9f6fdcb.jpeg" property="og:image">
+        <meta content="caro-landscapings oy oy oy!!!!!" property="twitter:title">
+        <meta content="https://landing-page-app-hero-images.s3.amazonaws.com/media/6db03a38-1415-4c9c-96d4-3347e9f6fdcb.jpeg" property="twitter:image">
+        <link href="https://landing-page-app-hero-images.s3.amazonaws.com/media/6db03a38-1415-4c9c-96d4-3347e9f6fdcb.jpeg" rel="shortcut icon" type="image/x-icon">
+        <link href="https://landing-page-app-hero-images.s3.amazonaws.com/media/6db03a38-1415-4c9c-96d4-3347e9f6fdcb.jpeg" rel="apple-touch-icon">     
+    
+    <title>
+         
+            New York City, NY - Quality landscaping near me | caro-landscapings oy oy oy!!!!!
+        
+    </title>
+    <meta name="description" content="Schedule your free quote today! Proudly serving 
+         
+             
+                
+                    New York City,
+                 
+             
+                 
+                    Buffalo & surrounding areas.
+                 
+             
+         
+        &lt;p&gt;If you&#x27;re looking for quality landscaping near me services, look no further than caro-landscapings oy oy oy!. We offer a wide range of services for …"
+    >
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/4f07488cb7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+       
+     
+    
+    <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/style.css" rel="stylesheet">
+    <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.css" rel="stylesheet">
+    <script src="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.js"></script>
+</head>
+
+<body>
+
+
+
+<div class = "flex w-full flex-col">  
+    <div class="fixed z-40 w-full lg:h-25 lg:py-4 items-start justify-start  bg-white text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800">
+  <div x-data="{ open: false,buttonDisabled: false }" class="flex flex-col lg:flex-r max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6 lg:px-8">
+    <div class="py-4 flex flex-row items-center justify-between">
+      
+        <a href= " #about "> <img class="h-16 w-auto relative" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/6db03a38-1415-4c9c-96d4-3347e9f6fdcb.jpeg" alt="caro-landscapings oy oy oy!!!!! logo"> </a>
+      
+      <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:flex-row  lg:justify-end ">
+    
+      
+<a 
+    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
+    href="#about">About Us
+</a>
+      
+      
+<a 
+    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
+    href="#services">Our Services
+</a>
+     
+      
+<a 
+    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
+    href="#our-work">Our Best Work
+</a>
+     
+           
+      
+<a 
+    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
+    href="#testimonials">Testimonials &amp; Reviews
+</a>
+ 
+         
+      
+<a 
+    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
+    href="#faqs">FAQs
+</a>
+     
+      
+<a 
+    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
+    href="#find-us">Service Areas
+</a>
+   
+    
+  
+
+
+    
+      <div class = "px-4 py-2 lg:pb-3 mt-2 text-xl font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline "x-data="{open: false}">
+      
+          <a target = "_blank"  x-on:click.prevent="open = true" class="" href="">Send us a Text</a>
+            <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
+    <form  x-data="{ buttonDisabled: false }" x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5 z-50">
+            <h3 class="mb-6 text-2xl font-medium text-black text-center">Send us a Text</h3>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="first-name" id="0-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="last-name" id="0-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="phone-number" id="0-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <textarea name="message" cols="5" id="0-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
+        </div>
+        <div class="block">
+        <button
+
+                x-on:click.debounce.500ms="buttonDisabled = true ;send_sms(0, 'caro-landscaping')"
+                 x-bind:disabled="buttonDisabled"
+                type="button"
+         
+            onMouseOver="this.style.backgroundColor='#52ffd4'; this.style.color='#ee00ff' "
+            onMouseOut="this.style.backgroundColor='#ee00ff'; this.style.color='white'"
+            style="background-color:#ee00ff; color:white"               
+
+         
+
+        class="w-full px-3 py-4 font-bold font-lg text-white  bg-#111827-400 text-white hover:bg-black hover:text-#111827-400 rounded-lg">Send</button> 
+        </div>           
+
+    </form>
+</div>
+           
+      
+        
+    </nav>
+  </div>
+</div>
+    <section   style= "background-color:#52ffd4"  
+class="flex relative flex-col w-full  bg-#00823B-900 text-white  lg:flex-row lg:flex-wrap sm:mx-auto pt-12 mt-12">
+    <div class="flex justify-end p-8 lg:py-32 lg:px-16 lg:pl-10 lg:w-1/2">
+        <div class="flex flex-col items-center lg:items-start justify-center w-full lg:max-w-lg">
+            <h2 class="mb-3 text-3xl text-center font-extrabold  leading-none sm:text-4xl lg:text-7xl text-center lg:text-left">
+                caro-landscapings oy oy oy!!!!! 
+            </h2>
+            
+            <h1 class="pt-5 lg:text-xl text-center lg:text-left">
+                <p>We are a full-service landscaping company that offers design, installation, and maintenance services for residential and commercial properties in New York City and the surrounding areas.</p>
+            </h1>
+            
+            <h2 class="py-5 mb-5 lg:text-xl text-center lg:text-left">
+            </h2>
+            
+            <div class="flex flex-col lg:flex-row flex-grow flex-col space-y-5 md:space-y-0 w-full lg:w-auto md:space-y-5 lg:space-y-0">
+                <div class=" w-full lg:w-auto">
+                
+ 
+        <a  class="font-small  w-full lg:w-auto" target = "_blank" href="tel:+12078316678">
+        <div class="flex text-center justify-center items-center  w-full md:auto">
+            
+<button 
+ 
+    onMouseOver="this.style.backgroundColor='white'; this.style.color='#52ffd4' "
+    onMouseOut="this.style.backgroundColor='#ee00ff'; this.style.color='white'"
+    style="background-color:#ee00ff; color:white"               
+
+ id="" type="button" x-on:click.prevent="open = true" class=" 
+  w-full lg:w-auto 
+
+    inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-#111827-400 text-white hover:bg-white hover:text-#00823B-900 z-30">
+    <h5 class="text-3xl font-extrabold">Give us a Call</h5> 
+</button>
+
+        </div>
+        </a>
+ 
+                </div>
+
+                <div id="cover-button" class="w-full lg:w-auto ">
+                    
+ 
+    <div id="" class="flex text-center justify-center items-center  w-full lg:w-auto " x-data="{open: false}">
+        
+<button 
+ 
+    onMouseOver="this.style.backgroundColor='white'; this.style.color='#52ffd4' "
+    onMouseOut="this.style.backgroundColor='#ee00ff'; this.style.color='white'"
+    style="background-color:#ee00ff; color:white"               
+
+ id="" type="button" x-on:click.prevent="open = true" class=" 
+  w-full lg:w-auto 
+
+    inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-#111827-400 text-white hover:bg-white hover:text-#00823B-900 z-30">
+    <h5 class="text-3xl font-extrabold">Get a Free Quote</h5> 
+</button>
+
+        <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
+    <form  x-data="{ buttonDisabled: false }" x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5 z-50">
+            <h3 class="mb-6 text-2xl font-medium text-black text-center">Get a Free Quote</h3>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="first-name" id="1-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="last-name" id="1-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="phone-number" id="1-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <textarea name="message" cols="5" id="1-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
+        </div>
+        <div class="block">
+        <button
+
+                x-on:click.debounce.500ms="buttonDisabled = true ;send_sms(1, 'caro-landscaping')"
+                 x-bind:disabled="buttonDisabled"
+                type="button"
+         
+            onMouseOver="this.style.backgroundColor='#52ffd4'; this.style.color='#ee00ff' "
+            onMouseOut="this.style.backgroundColor='#ee00ff'; this.style.color='white'"
+            style="background-color:#ee00ff; color:white"               
+
+         
+
+        class="w-full px-3 py-4 font-bold font-lg text-white  bg-#111827-400 text-white hover:bg-black hover:text-#111827-400 rounded-lg">Send</button> 
+        </div>           
+
+    </form>
+</div>
+    </div>
+ 
+                </div>
+
+                <div>
+                    
+ 
+    <div id="" class="flex text-center justify-center items-center  w-full lg:w-auto " x-data="{open: false}">
+        
+<button 
+ 
+    onMouseOver="this.style.backgroundColor='white'; this.style.color='#52ffd4' "
+    onMouseOut="this.style.backgroundColor='#ee00ff'; this.style.color='white'"
+    style="background-color:#ee00ff; color:white"               
+
+ id="side-button" type="button" x-on:click.prevent="open = true" class=" 
+  
+
+   mb-3 fixed bottom-0 -right-80 z-10 mr-3 lg:mr-0 z-40 inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-#111827-400 text-white hover:bg-white hover:text-#00823B-900 z-30">
+    <h5 class="text-3xl font-extrabold">Send Us a Text</h5> 
+</button>
+
+        <div x-show.transition.opacity="open" class="transform-none p-4 fixed h-screen w-screen flex justify-center items-center bottom-0 right-0 bg-black bg-opacity-75 z-50">
+    <form  x-data="{ buttonDisabled: false }" x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5 z-50">
+            <h3 class="mb-6 text-2xl font-medium text-black text-center">Send Us a Text</h3>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="first-name" id="2-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="last-name" id="2-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <input type="text" name="phone-number" id="2-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
+        </div>
+        <div class="block mb-4 border border-gray-200 rounded-lg">
+            <textarea name="message" cols="5" id="2-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
+        </div>
+        <div class="block">
+        <button
+
+                x-on:click.debounce.500ms="buttonDisabled = true ;send_sms(2, 'caro-landscaping')"
+                 x-bind:disabled="buttonDisabled"
+                type="button"
+         
+            onMouseOver="this.style.backgroundColor='#52ffd4'; this.style.color='#ee00ff' "
+            onMouseOut="this.style.backgroundColor='#ee00ff'; this.style.color='white'"
+            style="background-color:#ee00ff; color:white"               
+
+         
+
+        class="w-full px-3 py-4 font-bold font-lg text-white  bg-#111827-400 text-white hover:bg-black hover:text-#111827-400 rounded-lg">Send</button> 
+        </div>           
+
+    </form>
+</div>
+    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="relative order-first lg:order-last block lg:w-1/2 ">
+
+    
+        
+            <img src="https://landing-page-app-hero-images.s3.amazonaws.com/media/4fbd7f52-2527-4699-967a-8f28357e8731.png"   alt="Hero Image"  class="object-cover w-full lg:absolute h-80 lg:h-full">
+            
+    
+    </div>
+
+
+        
+</section>
+    <section  style= "color:#52ffd4 "   id = "about" 
+class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  bg-white text-#00823B-900 ">
+        <div class="relative lg:w-1/2">
+        
+            
+                <img src="https://landing-page-app-hero-images.s3.amazonaws.com/media/6f605744-20d8-4a7b-8e19-011c7f7cb37d.jpeg"   alt="About Us Image"  class="object-cover w-full lg:absolute h-80 lg:h-full">
+            
+        
+           
+        </div>
+        <div class="py-5 lg:py-0 flex flex-col lg:py-32 lg:px-16 lg:w-1/2">
+            <div class="flex flex-col items-center lg:items-start w-full lg:max-w-lg">
+                <h5 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl">
+                    About Us
+                </h5>
+                <p class="py-5 px-5 lg:px-0 mb-5 text-center lg:text-left  lg:text-xl quill">
+                <p>If you're looking for quality landscaping near me services, look no further than caro-landscapings oy oy oy!. We offer a wide range of services for both residential and commercial properties, and we're dedicated to providing our clients with the best possible results. Contact us today for a free consultation!</p> hellosdfsdf
+                </p>                
+            </div>
+
+            <div class = "flex flex-row flex-wrap text-center w-full lg:max-w-lg">
+                
+    <div 
+     style= "color:#ee00ff"   
+    class="pb-30 mx-auto w-1/3   text-#111827-400 " data-aos="fade-down" data-aos-delay="400" >
+        <span> <i class="fas fa-shield-alt fa-2x "></i> </span>
+        <div class="mt-5 text-md font-bold uppercase ">
+            Insured
+        </div>
+
+        
+        <br>
+    </div>
+
+                
+                
+                
+                
+    <div 
+     style= "color:#ee00ff"   
+    class="pb-30 mx-auto w-1/3   text-#111827-400 " data-aos="fade-down" data-aos-delay="400" >
+        <span> <i class="fas fa-heart fa-2x "></i> </span>
+        <div class="mt-5 text-md font-bold uppercase ">
+            Family Owned
+        </div>
+
+        
+        <br>
+    </div>
+
+                
+    <div 
+     style= "color:#ee00ff"   
+    class="pb-30 mx-auto w-1/3   text-#111827-400 " data-aos="fade-down" data-aos-delay="400" >
+        <span> <i class="fas fa-home fa-2x "></i> </span>
+        <div class="mt-5 text-md font-bold uppercase ">
+            Locally Owned
+        </div>
+
+        
+        <br>
+    </div>
+
+                
+                
+    <div 
+     style= "color:#ee00ff"   
+    class="pb-30 mx-auto w-1/3   text-#111827-400 " data-aos="fade-down" data-aos-delay="400" >
+        <span> <i class="fas fa-id-card fa-2x "></i> </span>
+        <div class="mt-5 text-md font-bold uppercase ">
+            Licensed
+        </div>
+
+        
+            <div class="mt-2 text-md font-bold  uppercase ">
+                #123
+            </div>
+        
+        <br>
+    </div>
+
+                
+            
+            </div>
+            
+                <div class = "mt-10 mb-0 flex flex-row justify-center lg:justify-start text-center w-full lg:max-w-lg">
+                
+                    <h2  style= "color:#52ffd4 "  class="mb-3 text-4xl justify-center lg:justify-start text-center lg:text-left text-#00823B-900 font-extrabold leading-none tracking-wide text-center">
+                        Connect with us on Social
+                    </h2>
+                
+                </div>
+                <div class = "flex flex-row mb-5 justify-center space-x-3 md:space-x-8 lg:space-x-12 lg:flex-nowrap mt-4   w-full lg:max-w-lg">
+                    
+    <a 
+    target="_blank" 
+    href = "https://facebook.com/ozarksdetail"> 
+        <span 
+             
+                style= "color:#ee00ff " 
+             
+            class = " text-#111827-400 "> 
+            
+            <i class="fab fa-facebook fa-3x lg:fa-3x "></i>
+        </span> 
+    </a> 
+
+                    
+    <a 
+    target="_blank" 
+    href = "https://instagram.com"> 
+        <span 
+             
+                style= "color:#ee00ff " 
+             
+            class = " text-#111827-400 "> 
+            
+            <i class="fab fa-instagram fa-3x lg:fa-3x "></i>
+        </span> 
+    </a> 
+
+                    
+    <a 
+    target="_blank" 
+    href = "https://yelp.com"> 
+        <span 
+             
+                style= "color:#ee00ff " 
+             
+            class = " text-#111827-400 "> 
+            
+            <i class="fab fa-yelp fa-3x lg:fa-3x "></i>
+        </span> 
+    </a> 
+
+                    
+                    
+                    
+    <a 
+    target="_blank" 
+    href = "https://youtube.com"> 
+        <span 
+             
+                style= "color:#ee00ff " 
+             
+            class = " text-#111827-400 "> 
+            
+            <i class="fab fa-youtube fa-3x lg:fa-3x "></i>
+        </span> 
+    </a> 
+
+                    
+                    
+    <a 
+    target="_blank" 
+    href = "https://www.nextdoor.com"> 
+        <span 
+             
+                style= "color:#ee00ff " 
+             
+            class = " text-#111827-400 "> 
+            
+            <i class="fab fas fa-home fa-3x lg:fa-3x "></i>
+        </span> 
+    </a> 
+
+                    
+                    
+    <a 
+    target="_blank" 
+    href = "https://twitter.com"> 
+        <span 
+             
+                style= "color:#ee00ff " 
+             
+            class = " text-#111827-400 "> 
+            
+            <i class="fab fa-twitter fa-3x lg:fa-3x "></i>
+        </span> 
+    </a> 
+
+                    
+    <a 
+    target="_blank" 
+    href = "https://thumbtack.com"> 
+        <span 
+             
+                style= "color:#ee00ff " 
+             
+            class = " text-#111827-400 "> 
+            
+            <i class="fab fas fa-thumbtack fa-3x lg:fa-3x "></i>
+        </span> 
+    </a> 
+
+                    
+    <a 
+    target="_blank" 
+    href = "https://tiktok.com"> 
+        <span 
+             
+                style= "color:#ee00ff " 
+             
+            class = " text-#111827-400 "> 
+            
+            <i class="fab fa-tiktok fa-3x lg:fa-3x "></i>
+        </span> 
+    </a> 
+              
+     
+
+               </div>
+            
+            
+        </div>
+        
+        
+
+
+    </section>
+    
+    
+    <section  style= "background-color:#52ffd4"   id= "services" class="lg:mt-0 relative w-full px-8 font-sans leading-6  bg-#00823B-900 border-0 border-#00823B-200 text-white border-solid ">
+        <div class="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24 ">
+            
+            <h2 class="mb-3 lg:pr-9 text-3xl mx-auto font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide text-center">
+                Our Services
+            </h2>
+            <h2  style= "color:#ee00ff"  class="w-full lg:pr-9 max-w-3xl mx-0 mx-auto mt-4 mb-0 font-sans text-sm font-medium leading-relaxed text-center text-#111827-400 border-0 border-#00823B-200 lg:text-lg md:text-base">
+                What we are best at  - expert  landscaping near me 
+                
+            </h2>
+
+            <div class="grid grid-cols-3 gap-5 mt-10 sm:grid-cols-8 lg:grid-cols-12">
+
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-#00823B-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        <div  class="md:mt-6 font-sans text-center border-0 border-#00823B-200 ">
+                            <h3  style= "color:#ee00ff"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-#111827-400  ">Mowing 2222 go pack goooo</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid quill">
+                                <ol><li><strong>hellooooo servic﻿e</strong></li></ol><ul><li><strong>hello</strong></li></ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-#00823B-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        <div  class="md:mt-6 font-sans text-center border-0 border-#00823B-200 ">
+                            <h3  style= "color:#ee00ff"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-#111827-400  ">a .  b / , m k p ' a</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid quill">
+                                aa
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-#00823B-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        <div  class="md:mt-6 font-sans text-center border-0 border-#00823B-200 ">
+                            <h3  style= "color:#ee00ff"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-#111827-400  ">!#$@#$%^$&%*^;/'</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid quill">
+                                adfasfsdaf
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-#00823B-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        <div  class="md:mt-6 font-sans text-center border-0 border-#00823B-200 ">
+                            <h3  style= "color:#ee00ff"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-#111827-400  ">!#$@#$%^$&%*^;/'afdsdf;38384</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid quill">
+                                asdfasf
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-#00823B-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        <div  class="md:mt-6 font-sans text-center border-0 border-#00823B-200 ">
+                            <h3  style= "color:#ee00ff"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-#111827-400  ">test</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid quill">
+                                Wow
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-#00823B-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        <div  class="md:mt-6 font-sans text-center border-0 border-#00823B-200 ">
+                            <h3  style= "color:#ee00ff"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-#111827-400  ">test123</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid quill">
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-#00823B-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        <div  class="md:mt-6 font-sans text-center border-0 border-#00823B-200 ">
+                            <h3  style= "color:#ee00ff"  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-#111827-400  ">test2123</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid quill">
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+            
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <div id="our-work" class="relative mb-0 w-full pt-12 overflow-hidden   bg-white text-#00823B-900   md:pt-20 xl:pt-20 xl:pb-20">
+        <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+            <h2  style= "color:#52ffd4" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
+            <h2  style= "color:#ee00ff" class="my-3 mb-10 text-xl font-medium  text-#111827-400  text-center">See why our customers love us</h2>
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/6db03a38-1415-4c9c-96d4-3347e9f6fdcb.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/38c712c8-b838-4f8e-94ee-561135790e40.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/6f605744-20d8-4a7b-8e19-011c7f7cb37d.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ae450777-17fd-439b-829b-e199a41a48c3.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/30ac5e04-0b1d-4c4c-b8c7-b7158522461f.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9a422ec7-99a8-42fd-9214-e5e5af43eca6.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/840e2306-471a-4c5c-9b49-d8775854159a.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/a3fbdb00-7f02-4277-a40b-76f9036b0d06.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/4d23e44d-b390-4015-b39b-40a4d14c9746.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/fb0df1be-d51a-4202-9bcc-57c204600666.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/e059b3b7-9d12-457b-b40e-6369cb34b279.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/865f8021-66f9-4f4b-bb76-eec9d935794c.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/79ae8192-34fc-46a5-8610-33999b229b4d.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8f382f08-1ffc-474b-89d6-92370580e693.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/aa2f4e5c-dd7e-44d5-aa70-0f45c83be9cc.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/d3a83072-8019-4379-829f-11d684c704ec.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c4d517a3-2e47-4ba5-9eaa-7477cf10c749.jpeg', 'photo'],        [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9dba170e-209a-48dd-9b1d-dcdfe73c6c73.jpeg', 'photo'],      [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8865cd18-ea78-47ca-aaf0-92bd1f88e268.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/12404d91-2c7b-4248-b97c-ac26d18aa8b7.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f45b2c4b-a734-4cf1-9e9b-ea9bb3e54f79.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c2804e45-bde4-423a-82a4-27c6dee4f046.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f8d1a0e3-830a-49d6-83ae-1740089e7c21.png', 'photo'],   ] }" @keydown.escape= "open = false"   >
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/6db03a38-1415-4c9c-96d4-3347e9f6fdcb.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/38c712c8-b838-4f8e-94ee-561135790e40.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/6f605744-20d8-4a7b-8e19-011c7f7cb37d.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ae450777-17fd-439b-829b-e199a41a48c3.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/30ac5e04-0b1d-4c4c-b8c7-b7158522461f.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9a422ec7-99a8-42fd-9214-e5e5af43eca6.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/840e2306-471a-4c5c-9b49-d8775854159a.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/a3fbdb00-7f02-4277-a40b-76f9036b0d06.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/4d23e44d-b390-4015-b39b-40a4d14c9746.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/fb0df1be-d51a-4202-9bcc-57c204600666.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/e059b3b7-9d12-457b-b40e-6369cb34b279.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/865f8021-66f9-4f4b-bb76-eec9d935794c.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 12; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/79ae8192-34fc-46a5-8610-33999b229b4d.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 13; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8f382f08-1ffc-474b-89d6-92370580e693.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 14; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/aa2f4e5c-dd7e-44d5-aa70-0f45c83be9cc.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 15; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/d3a83072-8019-4379-829f-11d684c704ec.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 16; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c4d517a3-2e47-4ba5-9eaa-7477cf10c749.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                    
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40">
+                            <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ea25a13c-dc64-41f0-8d3e-a04320787956.csv#t=0.5" >
+                            </video>
+                        </div>
+                    
+                                    
+                    
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40">
+                            <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/59011e1a-5c7b-4830-8f1d-66af5535e7b8.csv#t=0.5" >
+                            </video>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 19; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9dba170e-209a-48dd-9b1d-dcdfe73c6c73.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                    
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40">
+                            <video class="rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/dd195acc-aa04-4574-b60d-0b89bc1a244a.csv#t=0.5" >
+                            </video>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 21; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8865cd18-ea78-47ca-aaf0-92bd1f88e268.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 22; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/12404d91-2c7b-4248-b97c-ac26d18aa8b7.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 23; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f45b2c4b-a734-4cf1-9e9b-ea9bb3e54f79.jpeg"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 24; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c2804e45-bde4-423a-82a4-27c6dee4f046.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 25; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f8d1a0e3-830a-49d6-83ae-1740089e7c21.png"  alt="photo of best work"   loading="lazy" ></div>
+                    
+                 
+                                    
+        
+                <div class="z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center" x-show.transition="open" >
+
+
+                
+                
+                    <div class="flex items-center justify-start w-12  ml-6 md:m-2 z-50 absolute bottom-1/4 md:bottom-0 transform translate-x-12 md:translate-x-32" >
+                    <button
+                     style= "background-color:#ee00ff" 
+                            class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none bg-#111827-400"                                
+                            @click="open = false">
+                         <span class = "text-white"> <i class="fas fa-lg fa-times"></i> </span>
+                    </button>
+                    </div>
+
+                    <div class= "h-90 w-90 flex items-center justify-center overflow-hidden">
+
+                        <template  x-for="(slide, index, collection) in slides" :key="index">
+                            <div class="h-full w-full flex items-center justify-center absolute">
+                                <div class="absolute top-0 bottom-0 py-2  px-2 flex flex-col items-center justify-center"
+                                    x-show="activeSlide === index" 
+                                    x-transition:enter="transition ease-out duration-150"
+                                    x-transition:enter-start="opacity-0 transform scale-90"
+                                    x-transition:enter-end="opacity-100 transform scale-100"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform scale-100"
+                                    x-transition:leave-end="opacity-0 transform scale-90">
+
+                                    <template x-if="slide[1] === 'photo' ">
+                                        <img :src="slide[0]" class="object-contain max-w-full max-h-full rounded shadow-lg" />
+                                    </template>
+                                    
+                                    <template x-if="slide[1] != 'photo'  ">
+                                        <video class="object-cover max-w-full max-h-full rounded shadow-lg"  controls> <source :src="slide[0]" >
+                                        </video>
+                                    </template> 
+                                    
+                                </div>
+                                <div  style= "color:#ee00ff"  class="fixed text-#111827-400 text-sm font-bold bottom-0 transform -translate-x-10 w-40 h-12 mb-2 hidden md:flex justify-center items-center"
+                                    x-show="activeSlide === index">
+                                    <span class="w-12 text-right" x-text="index + 1"></span>
+                                    <span class="w-4 text-center">/</span>
+                                    <span class="w-12 text-left" x-text="slides.length"></span>
+                                </div>
+                            </div>
+                        </template>
+
+                    <div class="fixed md:fixed z-50 absolute bottom-1/4 md:bottom-0 md:mb-2 transform -translate-x-8 md:-translate-x-10 flex justify-center" @click.away="open = false">
+                        <div class="flex items-center justify-end w-12 mr-3 md:mr-16">
+                        <button 
+                                type="button"
+                                 style= "background-color:#ee00ff" 
+                                class="w-12 h-12 rounded-full focus:outline-none flex items-center justify-center bg-#111827-400" 
+                               
+                                @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">
+                                <span class = "text-white"> <i class="fas fa-lg fa-chevron-left"></i> </span>
+                           
+                        </button>
+                        </div>
+                        <div class="flex items-center justify-start w-12 md:ml-16">
+                        <button 
+                                type="button"
+                                 style= "background-color:#ee00ff" 
+                                class="text-white font-bold w-12 h-12 rounded-full focus:outline-none flex items-center justify-center  bg-#111827-400   "
+                               
+                                @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">
+                           <span class = "text-white"> <i class="fas fa-lg fa-chevron-right"></i> </span>
+                        </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>     
+
+            
+</div>
+        
+    
+    
+    <div  style= "background-color:#52ffd4"  id= "testimonials" class=" flex items-center justify-center  bg-#00823B-900 text-white  py-20 min-w-screen px-4">
+        <div class="px-16 ">
+            <div class="container flex flex-col items-center lg:items-startmx-auto lg:items-center">
+                <div class = "sm:mb-4 md:mb-0">
+                <h2  style= "color:#ee00ff"  class="relative flex  text-#111827-400 text-center sm:justify-center sm:mb-8 md:justify-start w-full text-lg font-bold tracking-wider uppercase lg:justify-center lg:items-center mb-10">Don&#x27;t just take our word for it</h2>
+                </div>
+
+
+                <h2 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide text-center ">
+                    Testimonials &amp; Reviews</h2>
+                <div class="block w-full h-1 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
+                
+                
+
+                <div class="items-start justify-start w-full mt-12 mb-4 lg:flex lg:flex-wrap">
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Kaia Anh Duong</h3>
+                            <h3 class=" text-white ">Buffalo, NY  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Amazing service! Very responsive!"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Shannon Stewart</h3>
+                            <h3 class=" text-white ">Buffalo, NY  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"They did excellent job. Made our siding look brand new. Highly recommend"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Danielle Miller</h3>
+                            <h3 class=" text-white ">Buffalo, NY  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"This company was so extremely responsive and the quality of work was amazing. Everything that was washed turned out perfect!."</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Happy Facebook Customer</h3>
+                            <h3 class=" text-white ">Buffalo, NY  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"God... Where do I even start? Dylan and the entire team are just so athletic, spry, and downright witty. They saved my cat from a tree and unlocked my chakras! Insane customer service with a warm personality to match. ProPhone Cypress is my new religion and I look forward to donating my savings to Dylan's just cause - to the end brothers!"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Samantha Watts</h3>
+                            <h3 class=" text-white ">Buffalo, NY  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Great company! Very professional and even better prices! Our house and sidewalks looked amazing after they cleaned them!  10/10 would recommend!!"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Jonathan Stern</h3>
+                            <h3 class=" text-white ">Home Owner  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32."</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Dena Yoak</h3>
+                            <h3 class=" text-white ">Buffalo, NY  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Best professional, hard working, consumer comes first business ever dealt with! Highly recommend to anyone needing services!!! 10/10"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Dylan Durham</h3>
+                            <h3 class=" text-white ">Buffalo, NY  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Awesome company here and traveled all the way to Indiana just to wash 1 house. Did an amazing job will definitely be in touch again."</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Happy Facebook Customer</h3>
+                            <h3 class=" text-white ">Home Owner  , Mowing 2222 go pack goooo  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Best service I have ever experienced. Highly recommended."</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                </div>  
+                
+                <div class = "flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0 ">
+                
+             
+                
+                <a target= "_blank" href="https://www.google.com" class="w-full">
+                    <button  
+                onMouseOver="this.style.backgroundColor='white'; this.style.color='#52ffd4' "
+                onMouseOut="this.style.backgroundColor='#ee00ff'; this.style.color='white'"
+                style="background-color:#ee00ff; color:white"               
+                
+                  type="button" class="inline-flex w-full  items-center justify-center h-16 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none   text-black  bg-#111827-400  hover:bg-white hover:text-#00823B-900 ">
+                            <h5 class="text-2xl font-extrabold">bbb</h5> 
+                    </button>
+                </a>
+               
+            </div>
+
+                         
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<section id= "faqs" class="py-16   bg-white text-#00823B-900  md:py-20 lg:py-24">
+    <div class="max-w-5xl px-12 mx-auto xl:px-0">
+
+        <h2  style= "color:#52ffd4"  class="mb-5 text-3xl  mx-auto text-center font-extrabold leading-none sm:text-4xl lg:text-7xl">FAQs</h2>
+         <h2  style= "color:#ee00ff"  class="my-3 mb-10  text-xl font-medium  text-#111827-400 text-center">Your questions answered</h2>
+
+        <div class="relative mt-12 space-y-3">
+
+        
+
+            <div x-data="{ show: false }" class="relative overflow-hidden border-b border-#00823B-100 select-none">
+                <h3  
+                onMouseOver="this.style.color='#ee00ff' "
+                onMouseOut=" this.style.color='#52ffd4'"
+                style="color:#52ffd4;"               
+                
+                                 
+                @click="show=!show" class=" text-center flex items-center justify-between px-2 text-xl font-medium text-#00823B-900  cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-#111827-400  lg:text-left">
+                    <span class = "flex text-left lg:text-left quill"><p>What is our business <strong>hours?﻿</strong></p></span>
+                    <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </h3>
+                <p  style= "color:#52ffd4"  class="px-2 pt-0 -mt-2  sm:text-lg py-7 text-#00823B-900 text-center lg:text-left"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-in duration-300"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4"
+                    x-show="show"
+                    x-cloak><p>We are open every weekday from<strong> 9-5﻿</strong></p></p>
+            </div>
+
+        
+
+            <div x-data="{ show: false }" class="relative overflow-hidden border-b border-#00823B-100 select-none">
+                <h3  
+                onMouseOver="this.style.color='#ee00ff' "
+                onMouseOut=" this.style.color='#52ffd4'"
+                style="color:#52ffd4;"               
+                
+                                 
+                @click="show=!show" class=" text-center flex items-center justify-between px-2 text-xl font-medium text-#00823B-900  cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-#111827-400  lg:text-left">
+                    <span class = "flex text-left lg:text-left quill"><p>What type of landscaping services do you offer</p></span>
+                    <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </h3>
+                <p  style= "color:#52ffd4"  class="px-2 pt-0 -mt-2  sm:text-lg py-7 text-#00823B-900 text-center lg:text-left"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-in duration-300"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4"
+                    x-show="show"
+                    x-cloak><p>We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p></p>
+            </div>
+
+        
+
+            <div x-data="{ show: false }" class="relative overflow-hidden border-b border-#00823B-100 select-none">
+                <h3  
+                onMouseOver="this.style.color='#ee00ff' "
+                onMouseOut=" this.style.color='#52ffd4'"
+                style="color:#52ffd4;"               
+                
+                                 
+                @click="show=!show" class=" text-center flex items-center justify-between px-2 text-xl font-medium text-#00823B-900  cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-#111827-400  lg:text-left">
+                    <span class = "flex text-left lg:text-left quill"><p>What is your pricing</p></span>
+                    <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </h3>
+                <p  style= "color:#52ffd4"  class="px-2 pt-0 -mt-2  sm:text-lg py-7 text-#00823B-900 text-center lg:text-left"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-in duration-300"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4"
+                    x-show="show"
+                    x-cloak><p>We offer competitive pricing and free estimates.</p></p>
+            </div>
+
+        
+
+        </div>
+    </div>
+</section>
+
+    
+
+<div id="service-area-array" class = "hidden">
+
+    
+        [[&#x27;New York City&#x27;, &#x27;NY&#x27;, 50, 1], [&#x27;Buffalo&#x27;, &#x27;NY&#x27;, 50, 2]]
+        <div class="city"> New York City </div>
+        <div class="state"> NY </div>
+        <div class="radius"> 50 </div>
+    
+        [[&#x27;New York City&#x27;, &#x27;NY&#x27;, 50, 1], [&#x27;Buffalo&#x27;, &#x27;NY&#x27;, 50, 2]]
+        <div class="city"> Buffalo </div>
+        <div class="state"> NY </div>
+        <div class="radius"> 50 </div>
+    
+</div> 
+
+<section id="find-us" class="py-16   bg-white text-#00823B-900  md:py-20 lg:py-20">
+
+   
+   
+    <div class="max-w-5xl px-12 mx-auto text-center xl:px-0">
+   
+
+    <h2  style= "color:#52ffd4"   class="mb-5 text-3xl  mx-auto text-center font-extrabold leading-none sm:text-4xl lg:text-7xl"> Service Areas </h2>
+    <h2  style= "color:#ee00ff"  class="my-3 mb-10  text-xl font-medium text-#111827-400 text-center"> Proudly Serving   New York City,    Buffalo & Surrounding Areas   </h2>
+
+    <div class="relative col-span-3 row-start-1 mt-6 lg:mt-0 lg:col-start-1">
+        <div aria-hidden="true" x-cloak x-data="{ shown: false }" x-intersect.half="shown = true" class="hidden lg:block">
+            <svg
+                x-show="shown"
+                x-transition:enter="transition duration-1000"
+                x-transition:enter-start="transform translate-x-full opacity-0"
+                x-transition:enter-end="transform translate-x-0 opacity-100"
+                x-transition:leave="transition duration-1000 opacity-100"
+                x-transition:leave-start="transform opacity-0"
+                x-transition:leave-end="transform translate-x-full"
+                class="absolute top-0 -right-48"
+                width="404"
+                height="404"
+                fill="none"
+                viewBox="0 0 404 404"
+            >
+                <defs>
+                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
+            </svg>
+        </div>
+        <div class="relative h-[500px] w-full rounded-2xl shadow-xl overflow-hidden">
+            <div class="w-full h-full bg-gray-400">
+                <div style="height:500px; width:100%;" id="map"></div>
+                <script >
+                    async function coordinate(url) {
+const res = await fetch(url)
+const coordinates = await res.json()
+return [
+    coordinates.results[0].geometry.location.lat,
+    coordinates.results[0].geometry.location.lng,
+]
+}
+async function initMap() {
+let radius = document.querySelector('#radius').innerText
+let city = document.querySelector('#city').innerText
+let state = document.querySelector('#state').innerText
+console.log('radius - city ', city)
+console.log('radius - radius ', state)
+let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}+${state}&key=AIzaSyDuL9weltDy_kOcISLRucx5-JSFsezZpVE`
+
+let coordinates = await coordinate(url)
+
+const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {
+        lat: coordinates[0],
+        lng: coordinates[1],
+    },
+    mapTypeId: 'terrain',
+})
+
+const cityCircle = new google.maps.Circle({
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35,
+    map,
+    animation: google.maps.Animation.DROP,
+    center: {
+        lat: coordinates[0],
+        lng: coordinates[1],
+    },
+    radius: radius * 1638,
+})
+}
+
+const target = document.querySelector('#map')
+
+const handleIntersection = (entries) => {
+console.log("it got here")
+entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        const script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src =
+            'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSw3qRocbSgfTrtxZbCsTjSHZaaJuUXF4&callback=initMap&libraries=&v=weekly'
+        document.body.appendChild(script)
+        console.log("it got there")
+        observer.unobserve(entry.target)
+    }
+})
+}
+const observer = new IntersectionObserver(handleIntersection)
+observer.observe(target)
+            
+                </script>
+<!--                    <script-->
+<!--                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSw3qRocbSgfTrtxZbCsTjSHZaaJuUXF4&callback=initMap&libraries=&v=weekly"-->
+<!--                    async-->
+<!--                    defer-->
+<!--                  ></script> -->
+          
+            <span class="sr-only" id="city">New York City</span>
+            <span class="sr-only" id="state">NY</span>
+            <span class="sr-only" id="radius">50</span>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+
+
+    <section  style= "background-color:#52ffd4"   class="py-10 bg-#00823B-900">
+        <div class="flex flex-col justify-around text-center md:flex-row">
+            <p class="order-last text-sm leading-tight text-#111827-400 md:order-first"> Crafted with <a  href="https://www.prophone.com/prosite" class="  text-white ">ProPhone</a>. Built with ❤️ by our team. </p>
+            <ul class="flex flex-row flex-wrap text-center justify-center pb-3 lg:-ml-4 lg:-mr-4 text-sm">
+                <li> <a  style= "color:#ee00ff"  href="#about" class="px-2 md:px-4 text-#111827-400 hover:text-white">About Us</a> </li>
+                
+                <li> <a   style= "color:#ee00ff" href="#services" class="px-2 md:px-4 text-#111827-400 hover:text-white">Our Services</a> </li>
+                
+                
+                <li> <a style= "color:#ee00ff"   href="#our-work" class=" px-2 md:px-4 text-#111827-400 hover:text-white">Our Best Work</a> </li>
+                
+                
+                <li> <a  style= "color:#ee00ff"  href="#testimonials" class="px-2 md:px-4 text-#111827-400 hover:text-white">Testimonials &amp; Reviews</a></li>
+                
+                
+                <li> <a  style= "color:#ee00ff"  href="#faqs" class="px-2 md:px-4 text-#111827-400 hover:text-white">FAQs</a></li>
+                
+                
+                
+                <li> <a  style= "color:#ee00ff"  href="#find-us" class=" px-2 md:px-4 text-#111827-400 hover:text-white">Service Areas</a></li>
+                
+                
+                <li> <a  style= "color:#ee00ff"  href="carolandscaping.com/sitemap.xml" class=" px-2 md:px-4 text-#111827-400 hover:text-white">Sitemap</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</section>     
+</div> 
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
