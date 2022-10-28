@@ -46,41 +46,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Gallery-1</loc>
-        <lastmod>2022-10-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-test1</loc>
-        <lastmod>2022-10-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-testtest</loc>
-        <lastmod>2022-10-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-cfbhgjfh</loc>
-        <lastmod>2022-10-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery------------*---'</loc>
-        <lastmod>2022-10-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-bucksgallery</loc>
         <lastmod>2022-10-28</lastmod>
         <changefreq>weekly</changefreq>
@@ -123,28 +88,42 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-Gallery-1</loc>
+        <lastmod>2022-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-test1</loc>
+        <lastmod>2022-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-testtest</loc>
+        <lastmod>2022-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-cfbhgjfh</loc>
+        <lastmod>2022-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery------------*---'</loc>
+        <lastmod>2022-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-Bucks</loc>
-        <lastmod>2022-10-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-test7</loc>
-        <lastmod>2022-10-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-test8</loc>
-        <lastmod>2022-10-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Mowing-2222-go-pack-goooo</loc>
         <lastmod>2022-10-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -159,6 +138,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service------------*---'</loc>
+        <lastmod>2022-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Mowing-2222-go-pack-goooo</loc>
         <lastmod>2022-10-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -229,6 +215,20 @@
 
     <url>
         <loc>https://carolandscaping.com/service-test6</loc>
+        <lastmod>2022-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-test7</loc>
+        <lastmod>2022-10-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-test8</loc>
         <lastmod>2022-10-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
