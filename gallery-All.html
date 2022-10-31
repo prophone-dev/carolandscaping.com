@@ -475,7 +475,7 @@ function send_sms(slug) {
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("http://127.0.0.1:8000/sms/" + slug, {
+  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1555,7 +1555,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1667,7 +1667,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 24,
+        amountOfImages: 25,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1688,15 +1688,13 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
     <ul role="list" class="bg-white space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
         
             
-                <li data-id="gallery_media" data-gallery="ok" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
-                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/c7ce6a27-e1b7-4deb-8e7f-ec0baddd0674.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>218{item.name}}</div>
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/9a7f20a0-b179-489a-8671-ebd2b1a08549.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                 
                                 
                             </div>
@@ -1718,8 +1716,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/41f55bbc-fbbb-46bc-a273-3dbb72fb123f.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>217{item.name}}</div>
                                 
                                 
                             </div>
@@ -1741,8 +1737,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/5442c0c9-b383-4f5c-b7fe-1aafe96694b9.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>216{item.name}}</div>
                                 
                                 
                             </div>
@@ -1764,8 +1758,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/5749dab9-ad83-463c-9007-7e87f516eb4e.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>215{item.name}}</div>
                                 
                                 
                             </div>
@@ -1787,8 +1779,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/968b69d1-5a7c-427b-8ba0-73bb0a0a00fe.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>211{item.name}}</div>
                                 
                                 
                             </div>
@@ -1810,8 +1800,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/784e3d92-5069-469f-b912-8661c571d64e.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>210{item.name}}</div>
                                 
                                 
                             </div>
@@ -1833,8 +1821,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/426dddda-a41c-4628-833f-bfec6ff80b36.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>209{item.name}}</div>
                                 
                                 
                             </div>
@@ -1856,8 +1842,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/05aeb788-f384-4287-9fd2-296f488c8d8a.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>208{item.name}}</div>
                                 
                                 
                             </div>
@@ -1879,8 +1863,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/d3ec2160-d4d0-42a9-b6fb-1760623a8012.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>207{item.name}}</div>
                                 
                                 
                             </div>
@@ -1902,8 +1884,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/84c7f958-21da-46a6-b637-4fe2beebad25.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>206{item.name}}</div>
                                 
                                 
                             </div>
@@ -1925,8 +1905,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/cb5f3a0e-9aaa-4443-b7ad-79f88a4fbe35.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>205{item.name}}</div>
                                 
                                 
                             </div>
@@ -1948,8 +1926,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/40eff10f-402e-48e3-b51b-2829c846decd.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>204{item.name}}</div>
                                 
                                 
                             </div>
@@ -1971,8 +1947,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/32aabd87-e021-4016-b2e6-137d353ad96a.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>203{item.name}}</div>
                                 
                                 
                             </div>
@@ -1994,8 +1968,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/37823344-003e-40ed-a6c5-99f7a7214a46.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>202{item.name}}</div>
                                 
                                 
                             </div>
@@ -2017,8 +1989,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/c310322a-82f4-4a68-acb7-673fc5fcdb1c.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>201{item.name}}</div>
                                 
                                 
                             </div>
@@ -2040,8 +2010,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/a2fe8f5c-edeb-464d-a094-8f72a417cbea.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>200{item.name}}</div>
                                 
                                 
                             </div>
@@ -2063,8 +2031,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/1468eaba-482f-405c-a7ab-2c8a420c6220.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>199{item.name}}</div>
                                 
                                 
                             </div>
@@ -2086,8 +2052,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/a50fd517-abbe-4e86-9a4f-140db56fdac9.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>198{item.name}}</div>
                                 
                                 
                             </div>
@@ -2109,8 +2073,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/2905aea8-7921-4961-807c-c890c4ff51ed.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>197{item.name}}</div>
                                 
                                 
                             </div>
@@ -2132,8 +2094,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/d02ce05a-bf70-469d-8fa4-3ee08141b504.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>196{item.name}}</div>
                                 
                                 
                             </div>
@@ -2155,8 +2115,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/88aab6c3-ccea-4702-8397-326ba59c58f6.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>195{item.name}}</div>
                                 
                                 
                             </div>
@@ -2178,8 +2136,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/ac72f164-79e7-422b-aaa8-656d39a95a57.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>0{item.name}}</div>
                                 
                                 
                             </div>
@@ -2201,8 +2157,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/44e4b87e-44a8-4d53-b12e-23128bbe5a01.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>0{item.name}}</div>
                                 
                                 
                             </div>
@@ -2224,8 +2178,27 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/1065c84b-d653-4a4a-aa9c-4dbadc0c44b5.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>0{item.name}}</div>
+                                
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="ok" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 24; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/c7ce6a27-e1b7-4deb-8e7f-ec0baddd0674.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                 
                                 
                             </div>
@@ -2284,7 +2257,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c7ce6a27-e1b7-4deb-8e7f-ec0baddd0674.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9a7f20a0-b179-489a-8671-ebd2b1a08549.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
@@ -2446,6 +2419,13 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 <li class="flex flex-col" x-show="activeImage === 23">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/1065c84b-d653-4a4a-aa9c-4dbadc0c44b5.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 24">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c7ce6a27-e1b7-4deb-8e7f-ec0baddd0674.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
