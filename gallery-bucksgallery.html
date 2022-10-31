@@ -475,7 +475,7 @@ function send_sms(slug) {
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("http://127.0.0.1:8000/sms/" + slug, {
+  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1555,7 +1555,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1669,7 +1669,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 9,
+        amountOfImages: 10,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1696,9 +1696,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
-                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/41fc3570-afa1-45e4-98a9-9975ba9ffe2f.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>223{item.name}}</div>
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/322ce647-5d3a-40f6-b393-97e50271a383.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                 
                                 
                             </div>
@@ -1719,9 +1717,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
-                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/d2bd6c6f-bfd4-4378-9225-84b9322d03f9.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>222{item.name}}</div>
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/41fc3570-afa1-45e4-98a9-9975ba9ffe2f.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                 
                                 
                             </div>
@@ -1742,9 +1738,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
-                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/9c6e4cca-d6af-41f4-9c5b-b54d68542d56.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>221{item.name}}</div>
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/d2bd6c6f-bfd4-4378-9225-84b9322d03f9.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                 
                                 
                             </div>
@@ -1765,9 +1759,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
-                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/607734aa-5f95-4f60-979e-a811b26c663e.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>220{item.name}}</div>
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/9c6e4cca-d6af-41f4-9c5b-b54d68542d56.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                 
                                 
                             </div>
@@ -1788,9 +1780,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
-                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/9a7f20a0-b179-489a-8671-ebd2b1a08549.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>219{item.name}}</div>
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/607734aa-5f95-4f60-979e-a811b26c663e.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                 
                                 
                             </div>
@@ -1805,6 +1795,25 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
         
             
+                <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/9a7f20a0-b179-489a-8671-ebd2b1a08549.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
         
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
@@ -1814,8 +1823,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/41f55bbc-fbbb-46bc-a273-3dbb72fb123f.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>217{item.name}}</div>
                                 
                                 
                             </div>
@@ -1837,8 +1844,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/5749dab9-ad83-463c-9007-7e87f516eb4e.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>215{item.name}}</div>
                                 
                                 
                             </div>
@@ -1860,8 +1865,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/a50fd517-abbe-4e86-9a4f-140db56fdac9.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                            
-                                <div>198{item.name}}</div>
                                 
                                 
                             </div>
@@ -1873,6 +1876,8 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                         </button>
                     </div>
                 </li>
+            
+        
             
         
     </ul>
@@ -1920,42 +1925,42 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/41fc3570-afa1-45e4-98a9-9975ba9ffe2f.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/322ce647-5d3a-40f6-b393-97e50271a383.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 1">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/d2bd6c6f-bfd4-4378-9225-84b9322d03f9.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/41fc3570-afa1-45e4-98a9-9975ba9ffe2f.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 2">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9c6e4cca-d6af-41f4-9c5b-b54d68542d56.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/d2bd6c6f-bfd4-4378-9225-84b9322d03f9.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 3">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/607734aa-5f95-4f60-979e-a811b26c663e.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9c6e4cca-d6af-41f4-9c5b-b54d68542d56.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 4">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9a7f20a0-b179-489a-8671-ebd2b1a08549.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/607734aa-5f95-4f60-979e-a811b26c663e.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 5">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c7ce6a27-e1b7-4deb-8e7f-ec0baddd0674.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/9a7f20a0-b179-489a-8671-ebd2b1a08549.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
@@ -1977,6 +1982,13 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 <li class="flex flex-col" x-show="activeImage === 8">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/a50fd517-abbe-4e86-9a4f-140db56fdac9.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 9">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/c7ce6a27-e1b7-4deb-8e7f-ec0baddd0674.png" alt="bucksgallery for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
