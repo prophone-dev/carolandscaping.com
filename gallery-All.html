@@ -1667,7 +1667,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 21,
+        amountOfImages: 24,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1688,9 +1688,72 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
     <ul role="list" class="bg-white space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
         
             
-                <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/f67fa192-c5ca-4e36-ae30-45efc1c49cba.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                <video class="object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
+                                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/2ae44e60-a02d-4fde-b5eb-22066d65fc14.quicktime#t=0.5">
+                                </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                <video class="object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
+                                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/1a735d66-9805-4bdb-9e21-24f7e412b8af.quicktime#t=0.5">
+                                </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1711,7 +1774,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1732,7 +1795,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1753,7 +1816,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1774,7 +1837,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1795,7 +1858,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1816,7 +1879,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1837,7 +1900,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 <video class="object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
@@ -1858,7 +1921,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1879,7 +1942,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1900,7 +1963,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 13; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1921,7 +1984,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 14; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1942,7 +2005,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 15; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1963,7 +2026,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 13; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 16; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -1984,7 +2047,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="bucksgallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 14; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 17; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -2005,49 +2068,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 15; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                            <div class="aspect-w-3 aspect-h-2">
-                                
-                                
-                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/6a92e7f4-78e6-4388-baaf-137b1a6748b1.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                                
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 16; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                            <div class="aspect-w-3 aspect-h-2">
-                                
-                                
-                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/61215691-ee83-4437-93cd-15a706f2c4c6.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                                
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 17; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 18; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -2068,7 +2089,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 18; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 19; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -2089,7 +2110,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 19; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 20; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
@@ -2110,11 +2131,53 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 20; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <button @click="activeImage = 21; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
                                 <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/4480ef2b-82d8-45ed-bbcf-8f80039c1caa.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 22; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/6a92e7f4-78e6-4388-baaf-137b1a6748b1.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 23; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                
+                                <img  class="object-cover " src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/61215691-ee83-4437-93cd-15a706f2c4c6.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                 
                                 
                             </div>
@@ -2173,54 +2236,79 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                 
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/eb8a87bf-305e-49a4-aa45-8d2e9a105d80.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/f67fa192-c5ca-4e36-ae30-45efc1c49cba.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 1">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/3d0f904f-e269-4b11-bddb-1b8920cae028.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
+                                        <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/2ae44e60-a02d-4fde-b5eb-22066d65fc14.quicktime#t=0.5">
+                                    </video>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 2">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/280d4201-81aa-456c-b8c9-e1cff7e5c850.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
+                                        <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/1a735d66-9805-4bdb-9e21-24f7e412b8af.quicktime#t=0.5">
+                                    </video>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 3">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/de44a6b1-78ec-471c-976f-bdad00461838.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/eb8a87bf-305e-49a4-aa45-8d2e9a105d80.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 4">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/e2a60981-1165-432c-ba4a-40197b279e1f.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/3d0f904f-e269-4b11-bddb-1b8920cae028.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 5">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/b1276b95-b7dd-437a-95bc-cf41f83a94ea.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/280d4201-81aa-456c-b8c9-e1cff7e5c850.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 6">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/3133e277-12f1-4457-b68d-9734e49945d1.jpeg" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/de44a6b1-78ec-471c-976f-bdad00461838.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 7">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/e2a60981-1165-432c-ba4a-40197b279e1f.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 8">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/b1276b95-b7dd-437a-95bc-cf41f83a94ea.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 9">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/3133e277-12f1-4457-b68d-9734e49945d1.jpeg" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 10">
                                     
                                     <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
                                         <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/f9eb0834-b98d-4de3-8a8b-2c28e9542960.quicktime#t=0.5">
@@ -2229,93 +2317,93 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 8">
+                                <li class="flex flex-col" x-show="activeImage === 11">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/bd4aa297-518c-4de8-9d0f-108f0540f75e.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 9">
+                                <li class="flex flex-col" x-show="activeImage === 12">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/1092d710-640e-456c-8cfc-6e9e895fd78d.jpeg" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 10">
+                                <li class="flex flex-col" x-show="activeImage === 13">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/5ed25ba4-a842-45cf-bfa5-d2cc9295ae55.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 11">
+                                <li class="flex flex-col" x-show="activeImage === 14">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/50a4e569-e9ef-49f1-80ff-2b2c0500b1e3.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 12">
+                                <li class="flex flex-col" x-show="activeImage === 15">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/33670592-b63a-428b-9209-691dcf252396.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 13">
+                                <li class="flex flex-col" x-show="activeImage === 16">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/a6e9880b-53b8-4962-9219-825d49b32e2d.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 14">
+                                <li class="flex flex-col" x-show="activeImage === 17">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/e5347386-8781-4170-9536-fcb0a8588f4d.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 15">
-                                    
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/6a92e7f4-78e6-4388-baaf-137b1a6748b1.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                                    <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    
-                                </li>
-                                
-                                <li class="flex flex-col" x-show="activeImage === 16">
-                                    
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/61215691-ee83-4437-93cd-15a706f2c4c6.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
-                                    <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    
-                                </li>
-                                
-                                <li class="flex flex-col" x-show="activeImage === 17">
+                                <li class="flex flex-col" x-show="activeImage === 18">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/ef8ad76f-4da6-4522-addb-5ffcdd3a7bea.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 18">
+                                <li class="flex flex-col" x-show="activeImage === 19">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/302fbdc5-a319-44f7-b0d1-ff5ec17a5aa6.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 19">
+                                <li class="flex flex-col" x-show="activeImage === 20">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/b0d5d095-6a6e-4066-940b-f791d8cc790f.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 20">
+                                <li class="flex flex-col" x-show="activeImage === 21">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/4480ef2b-82d8-45ed-bbcf-8f80039c1caa.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 22">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/6a92e7f4-78e6-4388-baaf-137b1a6748b1.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 23">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/684x480/media/61215691-ee83-4437-93cd-15a706f2c4c6.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in New York City, NY" loading="lazy"/>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
