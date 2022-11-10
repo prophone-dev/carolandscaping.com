@@ -488,7 +488,7 @@ function send_sms(slug) {
       photo,
       services,
     }));
-  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
+  fetch("http://127.0.0.1:8000/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1628,7 +1628,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -3292,7 +3292,7 @@ observer.observe(target)
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="138210" value="Mowing 2222 go pack goooo" id="contact-service-138210" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138242" value="Mowing 2222 go pack goooo" id="contact-service-138242" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              Mowing 2222 go pack goooo
@@ -3300,7 +3300,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="138211" value="a .  b / , m k p ' a" id="contact-service-138211" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138243" value="a .  b / , m k p ' a" id="contact-service-138243" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              a .  b / , m k p ' a
@@ -3308,7 +3308,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="138212" value="!#$@#$%^$&%*^;/'" id="contact-service-138212" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138244" value="!#$@#$%^$&%*^;/'" id="contact-service-138244" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              !#$@#$%^$&%*^;/'
@@ -3316,7 +3316,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="138213" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-138213" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138245" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-138245" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              !#$@#$%^$&%*^;/'afdsdf;38384
@@ -3324,7 +3324,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="138214" value="test" id="contact-service-138214" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138246" value="test" id="contact-service-138246" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              test
@@ -3332,7 +3332,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="138215" value="test123" id="contact-service-138215" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138247" value="test123" id="contact-service-138247" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              test123
@@ -3340,7 +3340,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="138216" value="test2123" id="contact-service-138216" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138248" value="test2123" id="contact-service-138248" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              test2123
@@ -3348,14 +3348,14 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="138217" value="test1" id="contact-service-138217" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138249" value="test1" id="contact-service-138249" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              test1
                                             </span>
                                         </div>
                                         
-                                 
+                                        
                                         <div class="flex flex-col">
                                             <div class="flex items-center">
                                                 <input
@@ -3375,7 +3375,7 @@ observer.observe(target)
                                                 class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
                                                 />
                                         </div>
-                                     
+                                        
                                     </div>
                                 </fieldset>
                             </div>
@@ -3436,101 +3436,101 @@ observer.observe(target)
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-138210"
-                                                name="138210"
+                                                id="contact-service-138242"
+                                                name="138242"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="Mowing 2222 go pack goooo"
                                         />
-                                        <label for="contact-service-138210" class="ml-3 text-sm text-gray-600">Mowing 2222 go pack goooo</label>
+                                        <label for="contact-service-138242" class="ml-3 text-sm text-gray-600">Mowing 2222 go pack goooo</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-138211"
-                                                name="138211"
+                                                id="contact-service-138243"
+                                                name="138243"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="a .  b / , m k p ' a"
                                         />
-                                        <label for="contact-service-138211" class="ml-3 text-sm text-gray-600">a .  b / , m k p ' a</label>
+                                        <label for="contact-service-138243" class="ml-3 text-sm text-gray-600">a .  b / , m k p ' a</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-138212"
-                                                name="138212"
+                                                id="contact-service-138244"
+                                                name="138244"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="!#$@#$%^$&%*^;/'"
                                         />
-                                        <label for="contact-service-138212" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'</label>
+                                        <label for="contact-service-138244" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-138213"
-                                                name="138213"
+                                                id="contact-service-138245"
+                                                name="138245"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="!#$@#$%^$&%*^;/'afdsdf;38384"
                                         />
-                                        <label for="contact-service-138213" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'afdsdf;38384</label>
+                                        <label for="contact-service-138245" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'afdsdf;38384</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-138214"
-                                                name="138214"
+                                                id="contact-service-138246"
+                                                name="138246"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="test"
                                         />
-                                        <label for="contact-service-138214" class="ml-3 text-sm text-gray-600">test</label>
+                                        <label for="contact-service-138246" class="ml-3 text-sm text-gray-600">test</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-138215"
-                                                name="138215"
+                                                id="contact-service-138247"
+                                                name="138247"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="test123"
                                         />
-                                        <label for="contact-service-138215" class="ml-3 text-sm text-gray-600">test123</label>
+                                        <label for="contact-service-138247" class="ml-3 text-sm text-gray-600">test123</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-138216"
-                                                name="138216"
+                                                id="contact-service-138248"
+                                                name="138248"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="test2123"
                                         />
-                                        <label for="contact-service-138216" class="ml-3 text-sm text-gray-600">test2123</label>
+                                        <label for="contact-service-138248" class="ml-3 text-sm text-gray-600">test2123</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-138217"
-                                                name="138217"
+                                                id="contact-service-138249"
+                                                name="138249"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="test1"
                                         />
-                                        <label for="contact-service-138217" class="ml-3 text-sm text-gray-600">test1</label>
+                                        <label for="contact-service-138249" class="ml-3 text-sm text-gray-600">test1</label>
                                     </div>
                                 
                                     
-                                
+                                    
                                     <div class="flex flex-col">
                                         <div class="flex items-center">
                                              <input
@@ -3550,7 +3550,7 @@ observer.observe(target)
                                         class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
                                     />
                                     </div>
-                        
+                                    
                                 </div>
                             </fieldset>
                             
