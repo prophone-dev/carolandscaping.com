@@ -1742,64 +1742,148 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
     }
 </style>
 <section class="overflow-hidden bg-white">
-    
-        <div class="relative flex w-full overflow-x-hidden">
+    <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-20 lg:pb-28 lg:px-8">
+        <div class="hidden sm:block" x-cloak x-data="{ shown: false }" x-intersect.half="shown = true">
+            <svg x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-x-full opacity-0" x-transition:enter-end="transform translate-x-1/2 opacity-100" class="absolute top-0 transform translate-x-1/2 left-3/4" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
+                <defs>
+                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>å
+                </defs>
+                <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
+            </svg>
+        </div>
+        <div class="hidden sm:block" x-cloak x-data="{ shown: false }" x-intersect.half="shown = true">
+            <svg x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform -translate-x-full opacity-0" x-transition:enter-end="transform translate-x-0 opacity-100" class="absolute transform -bottom-32 -left-1/4" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
+                <defs>
+                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
+            </svg>
+        </div>
+
+        <div class="relative z-10 flex flex-col items-center">
+            <div class="space-y-5 quill">
+                <h1>
+                    <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Services</span>
+                    <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">!#$@#$%^$&amp;%*^;/&#x27;</span>
+                </h1>
+                <div class="max-w-3xl text-xl text-center text-gray-500 quill">adfasfsdaf</div>
+            </div>
+            <div class="flex justify-center w-full mt-8">
+                     
             
-            <div
-                class="relative flex w-full overflow-x-hidden"
-            >
-                <div
-                    class="flex screen-height-minus-navbar w-full bg-center bg-cover bg-scroll bg-[url('https://landing-page-app-hero-images.s3.amazonaws.com/media/043e3b0b-2713-4cda-a664-314d90f5bb4d.jpeg')]"
-                >
-                    <div
-                        class="flex screen-height-minus-navbar justify-center m-auto w-full bg-primary bg-opacity-75"
+            <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
+                <button
+                    @click="contactModalOpen = true"
+                    class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary"
                     >
-                        <div class="flex relative justify-center items-center mx-2 sm:w-1/2">
-                            <div class="flex relative z-10 flex flex-col items-center">
-                                <div class="space-y-5 quill">
-                                    <h1>
-                                        <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Services</span>
-                                        <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-white sm:text-6xl">!#$@#$%^$&amp;%*^;/&#x27;</span>
-                                    </h1>
-                                    <div class="text-xl text-center text-white font-light quill">adfasfsdaf</div>
-                                </div>
-                                <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
-                                    
-                                    <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
-                                        <button 
-                                            @click="contactModalOpen = true"
-                                            class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-white hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
-                                        >
-                                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                            <span class="relative">Get a Free Quote</span>
-                                        </button>
-                                    </div> 
-                                    
-                                        
-                                    
-                                    <div onclick="postCtaClick('call')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
-                                        <a
-                                            target = "_blank" 
-                                            href="tel:+12078316678"
-                                            class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
-                                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                            <span class="relative">Give us a Call</span>
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
+                    Get a Free Quote
+                </button>
+            </div> 
+            
+                
+            
+            <div onclick="postCtaClick('call')" class="inline-flex w-full ml-3 sm:w-auto">
+                <a
+                    target = "_blank" 
+                    href="tel:+12078316678"
+                    class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"
+                >
+                    Give us a Call
+                </a>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-4 bg-white">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-48">
+        <div class="relative px-10">
+            <div class="relative">
+                <div
+                    x-data="{
+        slider: null,
+        interval: null,
+        next() {
+            clearInterval(this.interval);
+            this.slider.next();
+            this.loop();
+        },
+        prev() {
+            clearInterval(this.interval);
+            this.slider.prev();
+            this.loop();
+        },
+        loop() {
+            this.interval = setInterval(() =>{ this.next(); }, 5000);
+        }
+    }"
+                    x-init="slider = new Siema({ loop: true, duration: 400, selector: '#services-image-slider' }); loop();"
+                    class="flex flex-col w-full"
+                >
+                    <div @keydown.right="next" @keydown.left="prev" tabindex="0" role="region" aria-labelledby="carousel-label" class="relative focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2">
+                        <h2 id="carousel-label" class="sr-only" hidden>Reviews Carousel</h2>
+                        <div class="absolute flex justify-between -inset-8">
+                            <button @click="prev" class="text-6xl">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m10 19-7-7m0 0 7-7m-7 7h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to previous review</span>
+                            </button>
+                            <button @click="next" class="text-6xl">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m14 5 7 7m0 0-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to next slide</span>
+                            </button>
                         </div>
+                        <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+                        <ul id="services-image-slider" x-ref="slider" tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="hide-scrollbars">
+                            
+                                <li class="translate-z-0" role="option">
+                                    <div class="flex flex-col items-center justify-center w-full p-2 overflow-hidden">
+                                        <div class="h-[229px] sm:h-[481px] overflow-hidden rounded-lg">
+                                           
+                                            
+                                           <img class="block sm:hidden object-cover" 
+                                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/043e3b0b-2713-4cda-a664-314d90f5bb4d.jpeg"
+                                                alt="!#$@#$%^$&amp;%*^;/&#x27; for caro-landscapings oy oy oy!!!!! in New York City, NY"
+                                                style="
+                                                max-width: 100%;
+                                                width:auto;
+                                                height: 100%;
+                                                margin: auto;
+                                                "
+                                            >
+                                            <img class="hidden min-h-full min-w-full sm:block object-cover" 
+                                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(40)/filters:format(webp)/media/043e3b0b-2713-4cda-a664-314d90f5bb4d.jpeg"
+                                                alt="!#$@#$%^$&amp;%*^;/&#x27; for caro-landscapings oy oy oy!!!!! in New York City, NY"
+                                                style="
+                                                    max-width: 960px;
+                                                    height: auto;
+                                                    max-height: 600px;
+                                                    margin: auto;
+                                                "
+                                            >
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                            
+                        </ul>
                     </div>
                 </div>
             </div>
-            
         </div>
-    
+    </div>
 </section>
-
-<section class="relative px-4 py-6 mx-auto prose prose-lg overflow-hidden bg-primary bg-opacity-10 max-w-full sm:px-6 lg:py-16 lg:px-48">
-    <div class="relative px-4 py-6 mx-auto max-w-7xl sm:px-6 sm:py-0">
+<section class="overflow-hidden bg-white">
+    <div class="relative px-4 py-6 mx-auto prose prose-lg max-w-7xl sm:px-6 lg:py-16 lg:px-48">
         <div x-cloak x-data="{ shown: false }" x-intersect.half="shown = true">
             <svg
                 x-show="shown"
@@ -1844,7 +1928,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
         </div>
         <div class="relative">
             <content>
-                <div class="text-gray-500 quill">afsdasdf</div>
+                <p class="quill">afsdasdf</p>
             </content>
         </div>
     </div>
@@ -3309,7 +3393,7 @@ observer.observe(target)
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="137986" value="Mowing 2222 go pack goooo" id="contact-service-137986" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138018" value="Mowing 2222 go pack goooo" id="contact-service-138018" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              Mowing 2222 go pack goooo
@@ -3317,7 +3401,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="137987" value="a .  b / , m k p ' a" id="contact-service-137987" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138019" value="a .  b / , m k p ' a" id="contact-service-138019" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              a .  b / , m k p ' a
@@ -3325,7 +3409,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="137988" value="!#$@#$%^$&%*^;/'" id="contact-service-137988" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138020" value="!#$@#$%^$&%*^;/'" id="contact-service-138020" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              !#$@#$%^$&%*^;/'
@@ -3333,7 +3417,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="137989" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-137989" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138021" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-138021" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              !#$@#$%^$&%*^;/'afdsdf;38384
@@ -3341,7 +3425,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="137990" value="test" id="contact-service-137990" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138022" value="test" id="contact-service-138022" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              test
@@ -3349,7 +3433,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="137991" value="test123" id="contact-service-137991" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138023" value="test123" id="contact-service-138023" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              test123
@@ -3357,7 +3441,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="137992" value="test2123" id="contact-service-137992" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138024" value="test2123" id="contact-service-138024" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              test2123
@@ -3365,7 +3449,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="137993" value="test1" id="contact-service-137993" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="138025" value="test1" id="contact-service-138025" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start">
                                              test1
@@ -3453,97 +3537,97 @@ observer.observe(target)
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-137986"
-                                                name="137986"
+                                                id="contact-service-138018"
+                                                name="138018"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="Mowing 2222 go pack goooo"
                                         />
-                                        <label for="contact-service-137986" class="ml-3 text-sm text-gray-600">Mowing 2222 go pack goooo</label>
+                                        <label for="contact-service-138018" class="ml-3 text-sm text-gray-600">Mowing 2222 go pack goooo</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-137987"
-                                                name="137987"
+                                                id="contact-service-138019"
+                                                name="138019"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="a .  b / , m k p ' a"
                                         />
-                                        <label for="contact-service-137987" class="ml-3 text-sm text-gray-600">a .  b / , m k p ' a</label>
+                                        <label for="contact-service-138019" class="ml-3 text-sm text-gray-600">a .  b / , m k p ' a</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-137988"
-                                                name="137988"
+                                                id="contact-service-138020"
+                                                name="138020"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="!#$@#$%^$&%*^;/'"
                                         />
-                                        <label for="contact-service-137988" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'</label>
+                                        <label for="contact-service-138020" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-137989"
-                                                name="137989"
+                                                id="contact-service-138021"
+                                                name="138021"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="!#$@#$%^$&%*^;/'afdsdf;38384"
                                         />
-                                        <label for="contact-service-137989" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'afdsdf;38384</label>
+                                        <label for="contact-service-138021" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'afdsdf;38384</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-137990"
-                                                name="137990"
+                                                id="contact-service-138022"
+                                                name="138022"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="test"
                                         />
-                                        <label for="contact-service-137990" class="ml-3 text-sm text-gray-600">test</label>
+                                        <label for="contact-service-138022" class="ml-3 text-sm text-gray-600">test</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-137991"
-                                                name="137991"
+                                                id="contact-service-138023"
+                                                name="138023"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="test123"
                                         />
-                                        <label for="contact-service-137991" class="ml-3 text-sm text-gray-600">test123</label>
+                                        <label for="contact-service-138023" class="ml-3 text-sm text-gray-600">test123</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-137992"
-                                                name="137992"
+                                                id="contact-service-138024"
+                                                name="138024"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="test2123"
                                         />
-                                        <label for="contact-service-137992" class="ml-3 text-sm text-gray-600">test2123</label>
+                                        <label for="contact-service-138024" class="ml-3 text-sm text-gray-600">test2123</label>
                                     </div>
                                 
                                     
                                     <div class="flex items-center">
                                         <input
-                                                id="contact-service-137993"
-                                                name="137993"
+                                                id="contact-service-138025"
+                                                name="138025"
                                                 type="checkbox"
                                                 class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 value="test1"
                                         />
-                                        <label for="contact-service-137993" class="ml-3 text-sm text-gray-600">test1</label>
+                                        <label for="contact-service-138025" class="ml-3 text-sm text-gray-600">test1</label>
                                     </div>
                                 
                                     
