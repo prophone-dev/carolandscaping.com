@@ -488,7 +488,7 @@ function send_sms(slug) {
       photo,
       services,
     }));
-  fetch("http://127.0.0.1:8000/sms/" + slug, {
+  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1628,7 +1628,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1765,7 +1765,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
         </div>
 
         <div class="max-w-4xl mt-24 overflow-hidden rounded-lg">
-            <img class="object-cover" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/56d123c3-7b04-4332-b40b-cd75f7dd3787.png" alt="caro-landscapings oy oy oy!!!!! team in New York City, NY" />
+            <img class="object-cover" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/DF7V8FB5IZ5P3G9BLFQ3XZ500RLHPVEYXBVJMS6N.mp4" alt="caro-landscapings oy oy oy!!!!! team in New York City, NY" />
         </div>
 
         <div class="mt-24">
@@ -1987,7 +1987,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                             </span>
                                         </div>
                                         
-                                        
+                                 
                                         <div class="flex flex-col">
                                             <div class="flex items-center">
                                                 <input
@@ -2007,7 +2007,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                                 class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
                                                 />
                                         </div>
-                                        
+                                     
                                     </div>
                                 </fieldset>
                             </div>
@@ -2162,7 +2162,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                     </div>
                                 
                                     
-                                    
+                                
                                     <div class="flex flex-col">
                                         <div class="flex items-center">
                                              <input
@@ -2182,7 +2182,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                         class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
                                     />
                                     </div>
-                                    
+                        
                                 </div>
                             </fieldset>
                             
