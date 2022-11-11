@@ -488,7 +488,7 @@ function send_sms(slug) {
       photo,
       services,
     }));
-  fetch("http://127.0.0.1:8000/sms/" + slug, {
+  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
@@ -1628,7 +1628,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1817,7 +1817,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                     </h1>
                                     <div class="text-xl text-center text-white font-light quill">If you're in need of a fencing repair or installation, our team is here to help. We have years of experience and can get the job done quickly and efficiently. Contact us today for a free quote!</div>
                                 </div>
-                                <div class="w-full mt-5 sm:mt-8 flex justify-center">
+                                <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
                                     
                                     <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
                                         <button 
@@ -1831,7 +1831,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                     
                                         
                                     
-                                    <div onclick="postCtaClick('call')" class="w-full sm:w-auto mr-4 cta_text_button">
+                                    <div onclick="postCtaClick('call')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
                                         <a
                                             target = "_blank" 
                                             href="tel:+12078316678"
@@ -3426,7 +3426,7 @@ observer.observe(target)
                                             </span>
                                         </div>
                                         
-                                        
+                                 
                                         <div class="flex flex-col">
                                             <div class="flex items-center">
                                                 <input
@@ -3446,7 +3446,7 @@ observer.observe(target)
                                                 class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
                                                 />
                                         </div>
-                                        
+                                     
                                     </div>
                                 </fieldset>
                             </div>
@@ -3601,7 +3601,7 @@ observer.observe(target)
                                     </div>
                                 
                                     
-                                    
+                                
                                     <div class="flex flex-col">
                                         <div class="flex items-center">
                                              <input
@@ -3621,7 +3621,7 @@ observer.observe(target)
                                         class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
                                     />
                                     </div>
-                                    
+                        
                                 </div>
                             </fieldset>
                             
