@@ -5,63 +5,98 @@
 
     <url>
         <loc>https://carolandscaping.com/index</loc>
-        <lastmod>2022-11-16</lastmod>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://carolandscaping.com/store</loc>
-        <lastmod>2022-11-16</lastmod>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://carolandscaping.com/reviews</loc>
-        <lastmod>2022-11-16</lastmod>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://carolandscaping.com/gallery-All</loc>
-        <lastmod>2022-11-16</lastmod>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Exterior-Detailing</loc>
-        <lastmod>2022-11-16</lastmod>
+        <loc>https://carolandscaping.com/gallery-Hardscaping</loc>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Ceramic-Coating</loc>
-        <lastmod>2022-11-16</lastmod>
+        <loc>https://carolandscaping.com/gallery-Landscaping</loc>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Exterior-Detailing</loc>
-        <lastmod>2022-11-16</lastmod>
+        <loc>https://carolandscaping.com/gallery-Lawn-Care</loc>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Full-Detail-Service</loc>
-        <lastmod>2022-11-16</lastmod>
+        <loc>https://carolandscaping.com/service-Fall-and-Spring-Clean-Up</loc>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Interior-Detailing</loc>
-        <lastmod>2022-11-16</lastmod>
+        <loc>https://carolandscaping.com/service-Lawn-Aeration</loc>
+        <lastmod>2022-11-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Mowing</loc>
+        <lastmod>2022-11-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Mulch-Installation</loc>
+        <lastmod>2022-11-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Patio-Design---Construction</loc>
+        <lastmod>2022-11-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Retaining-Wall-Construction</loc>
+        <lastmod>2022-11-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Shrub-Trimming</loc>
+        <lastmod>2022-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
