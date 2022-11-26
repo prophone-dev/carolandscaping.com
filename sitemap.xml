@@ -46,13 +46,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Gallery-1</loc>
-        <lastmod>2022-11-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery------------*---'</loc>
         <lastmod>2022-11-26</lastmod>
         <changefreq>weekly</changefreq>
@@ -74,14 +67,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/blog</loc>
+        <loc>https://carolandscaping.com/gallery-New-Gallery2</loc>
         <lastmod>2022-11-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/blog-post-36</loc>
+        <loc>https://carolandscaping.com/blog</loc>
         <lastmod>2022-11-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -138,6 +131,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-devansh2345</loc>
+        <lastmod>2022-11-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Devansh234543</loc>
         <lastmod>2022-11-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
