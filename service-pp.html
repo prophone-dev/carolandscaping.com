@@ -747,6 +747,22 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                                     >
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">pp</p>
                                                     </a>
+                                              
+                                                    <a
+                                                        href=" service-devansh "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">devansh</p>
+                                                    </a>
+                                              
+                                                    <a
+                                                        href=" service-devansh234 "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">devansh234</p>
+                                                    </a>
                                             
                                             </div>
                                         </div>
@@ -1096,6 +1112,14 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                                     <p class="mt-1 text-sm text-gray-500 uppercase">pp</p>
                                                 </a>
                                             
+                                                <a href="service-devansh" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">devansh</p>
+                                                </a>
+                                            
+                                                <a href="service-devansh234" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">devansh234</p>
+                                                </a>
+                                            
                                         </div>
                                     </div>
                                 
@@ -1288,7 +1312,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://localhost:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -3024,6 +3048,22 @@ observer.observe(target)
                                             </span>
                                         </div>
                                         
+                                        <div class="flex items-center">
+                                            <input type="checkbox" name="139103" value="devansh" id="contact-service-139103" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            />
+                                            <span class="ml-3 items-start text-gray-600">
+                                                devansh
+                                            </span>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <input type="checkbox" name="139105" value="devansh234" id="contact-service-139105" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            />
+                                            <span class="ml-3 items-start text-gray-600">
+                                                devansh234
+                                            </span>
+                                        </div>
+                                        
                         
                                          <div class="flex flex-col">
                                             <div class="flex items-center">
@@ -3172,6 +3212,30 @@ observer.observe(target)
                                         value="pp"
                                     />
                                     <label for="contact-service-139102" class="ml-3 text-sm font-normal text-gray-700">pp</label>
+                                </div>
+                            
+                                
+                                <div class="flex items-center">
+                                    <input
+                                        id="contact-service-139103"
+                                        name="139103"
+                                        type="checkbox"
+                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                        value="devansh"
+                                    />
+                                    <label for="contact-service-139103" class="ml-3 text-sm font-normal text-gray-700">devansh</label>
+                                </div>
+                            
+                                
+                                <div class="flex items-center">
+                                    <input
+                                        id="contact-service-139105"
+                                        name="139105"
+                                        type="checkbox"
+                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                        value="devansh234"
+                                    />
+                                    <label for="contact-service-139105" class="ml-3 text-sm font-normal text-gray-700">devansh234</label>
                                 </div>
                             
                                 
@@ -3365,6 +3429,10 @@ const toggleOtherServices = () => {
 </template>
 
 
+                                
+                            
+                                
+                            
                                 
                             
                         
@@ -3690,6 +3758,22 @@ const toggleOtherServices = () => {
                                   href="service-pp"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >pp</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-devansh"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >devansh</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-devansh234"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >devansh234</a
                               >
                           </li>
                           
