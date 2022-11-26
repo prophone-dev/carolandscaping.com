@@ -823,6 +823,14 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                   
                                                     <a
+                                                        href=" gallery-Gallery-1 "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Gallery 1</p>
+                                                    </a>
+                                              
+                                                    <a
                                                         href=" gallery------------*---&#x27; "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -844,14 +852,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-New-Gallery "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery</p>
                                                     </a>
                                               
                                                     <a
@@ -1164,6 +1164,10 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
+                                                <a href="gallery-Gallery-1" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">Gallery 1</p>
+                                                </a>
+                                            
                                                 <a href="gallery------------*---&#x27;" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
                                                 </a>
@@ -1174,10 +1178,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                             
                                                 <a href="gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
-                                                </a>
-                                            
-                                                <a href="gallery-New-Gallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery</p>
                                                 </a>
                                             
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1312,7 +1312,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://localhost:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1612,7 +1612,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
+  fetch("http://localhost:8000/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
