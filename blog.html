@@ -492,8 +492,8 @@ function send_sms(slug) {
     if(window.location.href.includes('dev')){
       prosite_url = 'https://dev.prosite.prophone.com'
     }
-    else if(window.location.href.includes('dev')){
-      prosite_url = 'https://prosite.prophone.com'
+    else if(window.location.href.includes('stage')){
+      prosite_url = 'https://stage.prosite.prophone.com'
     }
     else if(window.location.href.includes('8000')){
       prosite_url = 'http://127.0.0.1:8000'
@@ -1324,7 +1324,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1462,7 +1462,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                 
                     <div class="flex flex-col bg-white rounded-lg shadow-lg p-8 items-start">
                         <div class="text-left text-sm text-gray-500">Nov 30, 2022</div>
-                        <div class="text-left text-xl text-gray-900 font-semibold mt-2">How to Choose the Right Landscaping &amp; Hardscaping Company</div>
+                        <div class="text-left text-xl text-gray-900 font-semibold mt-2">Mkay, How to Choose the Right Landscaping &amp; Hardscaping Company</div>
                         <div class="text-left text-base text-gray-500 line-clamp-5 mt-4">Finding a good company to work with on a home project can be a daunting task. But, with a little bit of research, it can be easy to find the perfect company for the job.One of the most impo…</div>
                         <div class="text-left mt-4">
                             <a
@@ -1488,7 +1488,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             aria-modal="true"
             x-id="['modal-title']"
             :aria-labelledby="$id('modal-title')"
-            class="fixed inset-0 z-40 md:pt-8 md:pb-30"
+            class="fixed inset-0 z-40 md:pt-8 md:pb-20"
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
     >
