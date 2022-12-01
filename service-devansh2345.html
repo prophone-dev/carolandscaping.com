@@ -40,10 +40,10 @@
                 content: "" !important;
             }
             input[type="date"]::-webkit-inner-spin-button,
-            input[type="date"]::-webkit-calendar-picker-indicator {
+            /* input[type="date"]::-webkit-calendar-picker-indicator {
                 display: none;
                 -webkit-appearance: none;
-            }
+            } */
             .transform {
                 transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
                 }
@@ -170,330 +170,406 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
         function dynamicallyLoadJS(file) {
-                    // DOM: Create the script element
-                    var jsElm = document.createElement("script");
-                    // set the type attribute
-                    jsElm.type = "application/javascript";
-                    // make the script element load file
-                    jsElm.src = file;
-                    // finally insert the element to the body element in order to load the script
-                    document.head.appendChild(jsElm);
+  // DOM: Create the script element
+  var jsElm = document.createElement("script");
+  // set the type attribute
+  jsElm.type = "application/javascript";
+  // make the script element load file
+  jsElm.src = file;
+  // finally insert the element to the body element in order to load the script
+  document.head.appendChild(jsElm);
+}
+
+function segmentScript() {
+  var prophoneSegmentId = "Z6dq7zq7CtZubdSRrh4EHjCsAasGDPiE";
+  var customerPagesSegmentId = "9Ce585PETlETCGamY79KkSoBrcAdcdPc";
+
+  if (window.location.href.includes("prosite.prophone.com")) {
+    segmentId = prophoneSegmentId;
+  } else {
+    segmentId = customerPagesSegmentId;
+  }
+  var analytics = (window.analytics = window.analytics || []);
+  if (!analytics.initialize) {
+    if (analytics.invoked) {
+      window.console &&
+        console.error &&
+        console.error("Segment snippet included twice.");
+    } else {
+      analytics.invoked = !0;
+      analytics.methods = [
+        "trackSubmit",
+        "trackClick",
+        "trackLink",
+        "trackForm",
+        "pageview",
+        "identify",
+        "reset",
+        "group",
+        "track",
+        "ready",
+        "alias",
+        "debug",
+        "page",
+        "once",
+        "off",
+        "on",
+        "addSourceMiddleware",
+        "addIntegrationMiddleware",
+        "setAnonymousId",
+        "addDestinationMiddleware",
+      ];
+      analytics.factory = function (e) {
+        return function () {
+          var t = Array.prototype.slice.call(arguments);
+          t.unshift(e);
+          analytics.push(t);
+          return analytics;
+        };
+      };
+      for (var e = 0; e < analytics.methods.length; e++) {
+        var key = analytics.methods[e];
+        analytics[key] = analytics.factory(key);
+      }
+      analytics.load = function (key, e) {
+        var t = document.createElement("script");
+        t.type = "text/javascript";
+        t.defer = !0;
+        t.src =
+          "https://cdn.segment.com/analytics.js/v1/" +
+          key +
+          "/analytics.min.js";
+        var n = document.getElementsByTagName("script")[0];
+        n.parentNode.insertBefore(t, n);
+        analytics._loadOptions = e;
+      };
+      analytics._writeKey = segmentId;
+      analytics.SNIPPET_VERSION = "4.15.3";
+      analytics.load(segmentId);
+      analytics.page();
+    }
+  }
+}
+
+function send_sms(slug) {
+    const sendButton = document.getElementById("sendButton");
+    sendButton.disabled = true;
+    const errorStateMessageElement = document.getElementById("error-state-modal");
+    errorStateMessageElement.innerHTML = "";
+    event.preventDefault();
+    
+    function uuidV4() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+    (
+    c ^
+    (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+    ).toString(16)
+    );
+    }
+    
+    const getFileExtenstion = (dataUrl) => {
+    var arr = dataUrl.split(","),
+    mime = arr[0].match(/:(.*?);/)[1];
+    return mime.split("/")[1];
+    };
+    
+    const getFileName = (dataUrl) => {
+    const uuid = uuidV4();
+    const fileName = `${uuid}.${getFileExtenstion(dataUrl)}`;
+    return fileName;
+    };
+    
+    function dataURLtoFile(dataUrl, filename) {
+    var arr = dataUrl.split(","),
+    mime = arr[0].match(/:(.*?);/)[1],
+    bstr = atob(arr[1]),
+    n = bstr.length,
+    u8arr = new Uint8Array(n);
+    
+    while (n--) {
+    u8arr[n] = bstr.charCodeAt(n);
+    }
+    
+    return new File([u8arr], filename, {
+    type: mime,
+    });
+    }
+    
+    function uploadFile(file, signedRequest, url) {
+    return new Promise(function (resolve, reject) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("PUT", signedRequest);
+    xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log(url, "url in uploadFile");
+        resolve(file.name);
+        //   resolve(url)
+      } else {
+        alert("Could not upload file.");
+      }
+    }
+    };
+    xhr.send(file);
+    });
+    }
+    
+    function getSignedRequest(file, fileName) {
+    return new Promise(function (resolve, reject) {
+    const xhr = new XMLHttpRequest();
+    console.log(fileName, "fileName");
+    const newUrl = `https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${fileName}&file_type=${file.type}`;
+    console.log("newurl", newUrl);
+    xhr.open("GET", newUrl);
+    xhr.onreadystatechange = async function () {
+    console.log("getSignedRequest - in onreadystatechange - xhr", xhr);
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        const response = JSON.parse(xhr.responseText);
+        const uploaded = await uploadFile(
+          file,
+          response.signedRequest,
+          response.url
+        );
+        resolve(fileName);
+      } else {
+        alert("Could not get signed URL.");
+      }
+    }
+    };
+    console.log("getSignedRequest -pre xhr.send");
+    xhr.send();
+    });
+    }
+    const get_sender_attachment = () => {
+    var ImageSrc = getIdValue(`#contact-attachment`);
+    console.log(ImageSrc, "ImageSrc");
+    if (ImageSrc) {
+    const fileName = getFileName(ImageSrc);
+    const fileObject = dataURLtoFile(ImageSrc, fileName);
+    getSignedRequest(fileObject, fileName).then((res) => console.log(res));
+    return fileName;
+    }
+    return "";
+    };
+    
+    // var sender_fname = $(`#${form_num}-first-name`).val()
+    // var sender_lname = $(`#${form_num}-last-name`).val()
+    // var sender_number = $(`#${form_num}-phone-number`).val()
+    // console.log(sender_number)
+    // var sender_message = $(`#${form_num}-message`).val()
+    
+    const checkIdExist = (id) => {
+    if ($(id).length) return true;
+    return false;
+    };
+    
+    const getIdValue = (id) => {
+    if (checkIdExist(id)) return $(id).val();
+    else return "";
+    };
+    const getSenderName = () => {
+    const sender_full_name = getIdValue(`#contact-full-name`);
+    if (sender_full_name) {
+    const full_name_split = sender_full_name.split(" ");
+    const sender_fname = full_name_split.shift();
+    const sender_lname = full_name_split.join(" ");
+    return [sender_full_name, sender_fname, sender_lname];
+    } else {
+    return ["", "", ""];
+    }
+    };
+    const getSelectedServices = () => {
+    const allSelectedServiced = Array.from(
+    document.querySelectorAll('[id^="contact-service"]')
+    );
+    if (allSelectedServiced.length) {
+    const activeService = allSelectedServiced
+    .filter((x) => x.checked && x.value!=="Other")
+    .map((item) => item.value)
+    .join(",");
+    // check if contact-service-Other or contact-service-other-checkbox is checked get contact-service-other-text value
+    const otherService =
+    getIdValue(`#contact-service-other-text`) ||
+    getIdValue(`#contact-service-other-text2`) ||
+    "";
+    if (otherService) {
+    if (activeService) {
+      return `${activeService},${otherService}`;
+    } else {
+      return otherService;
+    }
+    }
+    
+    return activeService;
+    } else {
+    return "";
+    }
+    };
+    
+    const addErrorMessageToForm = (message) => {
+    var tag = document.createElement("div");
+    var cross = document.createElement("h1");
+    cross.innerHTML = "\u274C";
+    var messageh1 = document.createElement("h1");
+    messageh1.innerHTML = message;
+    messageh1.className = "ml-3";
+    tag.appendChild(cross);
+    tag.appendChild(messageh1);
+    tag.className =
+    "flex text-red-900 w-full p-4 rounded  item-center align-center bg-red-100";
+    const errorStateMessageElement =
+    document.getElementById("error-state-modal");
+    errorStateMessageElement.appendChild(tag);
+    };
+    
+    const [sender_full_name, sender_fname, sender_lname] = getSenderName();
+    var sender_number = getIdValue(`#contact-phone-number`);
+    var sender_email = getIdValue(`#contact-email`);
+    if (!sender_full_name) {
+    const message = "Full Name is required";
+    addErrorMessageToForm(message);
+    sendButton.disabled = false;
+    return;
+    }
+    if (!sender_number && !sender_email) {
+    const message = "Phone Number OR Email required";
+    addErrorMessageToForm(message);
+    sendButton.disabled = false;
+    return;
+    }
+    var sender_contact_date = getIdValue(`#contact-date`);
+    var sender_promo = getIdValue(`#contact-promo-code`);
+    var sender_address = getIdValue(`#contact-address`);
+    const photo = get_sender_attachment();
+    // TODO As services are multiple choice option do user can select only one or user can select multiple option
+    // discuss about how this should happen
+    // iterate over the service
+    const services = getSelectedServices();
+    // var sender_service = "" //$(`#contact-phone-number`).val()
+    
+    const sender_message_1 = getIdValue(`#contact-concern-1`);
+    const sender_message_2 = getIdValue(`#contact-concern-2`);
+    
+    let sender_message = "";
+    try {
+    if (sender_message_1?.length > 0) {
+    sender_message = sender_message_1;
+    } else {
+    sender_message = sender_message_2;
+    }
+    } catch (e) {
+    sender_message = "";
+    }
+    // TODO add a better validator for each field
+    // Perform validation before any computation
+    
+    // if (!sender_fname || !sender_number || !sender_message){
+    // // if (!sender_fname || !sender_lname || !sender_number || !sender_message){
+    //     alert("Please make sure to fill out all the form fields")
+    //     return
+    // }
+    
+    var cleaned_sender_number = sender_number
+    .replace("(", "")
+    .replace(")", "")
+    .replace("-", "")
+    .replace(" ", "");
+    console.log(JSON.stringify({
+    sender_full_name: sender_full_name,
+    sender_email: sender_email,
+    sender_promo: sender_promo,
+    sender_fname: sender_fname,
+    sender_lname: sender_lname,
+    sender_number: cleaned_sender_number,
+    sender_message: sender_message,
+    sender_address: sender_address,
+    sender_date: sender_contact_date,
+    photo,
+    services,
+    }));
+    let prosite_url = 'https://prosite.prophone.com'
+    if(window.location.href.includes('dev')){
+      prosite_url = 'https://dev.prosite.prophone.com'
+    }
+    else if(window.location.href.includes('stage')){
+      prosite_url = 'https://stage.prosite.prophone.com'
+    }
+    else if(window.location.href.includes('8000')){
+      prosite_url = 'http://127.0.0.1:8000'
+    }
+    fetch(prosite_url + "/sms/" + slug, {
+    method: "POST",
+    body: JSON.stringify({
+    sender_full_name: sender_full_name,
+    sender_email: sender_email,
+    sender_promo: sender_promo,
+    sender_fname: sender_fname,
+    sender_lname: sender_lname,
+    sender_number: cleaned_sender_number,
+    sender_message: sender_message,
+    sender_address: sender_address,
+    sender_date: sender_contact_date,
+    photo,
+    services,
+    }),
+    })
+    .then((result) => {
+    //Here body is not ready yet, throw promise
+    if (!result.ok) throw result;
+    return result.json();
+    })
+    .then((result) => {
+    const sendTextModalId = document.getElementById("send-text-modal");
+    sendTextModalId.style.display = "none";
+    const modalId = document.getElementById("text-thank-you");
+    modalId.style.display = "block";
+    setTimeout(() => {
+    location.reload();
+    }, 3000);
+    return result;
+    })
+    .catch((result) => {
+    sendButton.disabled = false;
+    alert(
+    "There was a problem sending your text. Please reach out to ProPhone."
+    );
+    });
+    }
+
+$("document").ready(function () {
+  let cover = $("#cover-button");
+
+  if (cover.position() !== undefined) {
+    let cover_bottom = cover.position().top - 40;
+    $(window).scroll(function () {
+      if ($(window).scrollTop() < cover_bottom) {
+        if ($("#side-button").hasClass("-translate-x-80")) {
+          $("#side-button")
+            .removeClass("-translate-x-80")
+            .addClass("translate-x-64");
         }
-        function segmentScript(){
-            var prophoneSegmentId = 'Z6dq7zq7CtZubdSRrh4EHjCsAasGDPiE'
-            var customerPagesSegmentId = '9Ce585PETlETCGamY79KkSoBrcAdcdPc'
+      } else {
+        $("#side-button").addClass(
+          "transform -translate-x-80 ease-in duration-700"
+        );
+      }
+    });
+  } else {
+    $("#side-button").addClass(
+      "transform -translate-x-80 ease-in duration-700"
+    );
+  }
+});
 
-            if (window.location.href.includes('prosite.prophone.com')) {
-                segmentId = prophoneSegmentId
-            } else {
-                segmentId = customerPagesSegmentId
-            }
-            console.log('bucksaaaaaa')
-            var analytics=window.analytics=window.analytics||[];
-            if(!analytics.initialize)
-            if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");
-            else{
-                    analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];
-                analytics.factory=function(e){
-                    return function(){
-                        var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics
-                    }
-                };
-                for(var e=0;e<analytics.methods.length;e++){
-                    var key=analytics.methods[e];analytics[key]=analytics.factory(key)
-                }
-                analytics.load=function(key,e){var t=document.createElement("script");
-                t.type="text/javascript";t.defer=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";
-                var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e
-                };
-                analytics._writeKey=segmentId;;
-                analytics.SNIPPET_VERSION="4.15.3";
-                analytics.load(segmentId);
-                analytics.page();
-            };
-        }
-                    function send_sms(slug){
-                        const sendButton = document.getElementById('sendButton')
-                        sendButton.disabled = true
-                        const errorStateMessageElement = document.getElementById("error-state-modal")
-                        errorStateMessageElement.innerHTML = ''
-                        console.log('send_sms',1, slug)
-                        event.preventDefault()
-                        
-                        function uuidV4() {
-                            return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-                              (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-                            );
-                          }
-
-                        const getFileExtenstion = (dataUrl) =>{
-                            var arr = dataUrl.split(','),
-                                  mime = arr[0].match(/:(.*?);/)[1]
-                            return mime.split('/')[1]
-                        }
-  
-                          const getFileName = (dataUrl) =>{
-                              const uuid = uuidV4()
-                              const fileName = `${uuid}.${getFileExtenstion(dataUrl)}`
-                              return fileName
-                          }
-                          function dataURLtoFile(dataUrl, filename) {
-                              var arr = dataUrl.split(','),
-                                  mime = arr[0].match(/:(.*?);/)[1],
-                                  bstr = atob(arr[1]),
-                                  n = bstr.length,
-                                  u8arr = new Uint8Array(n);
-  
-                              while(n--){
-                                  u8arr[n] = bstr.charCodeAt(n);
-                              }
-  
-                              return new File([u8arr], filename, {type:mime});
-                          }
-                        function uploadFile(file, signedRequest, url) {
-                            return new Promise(function (resolve, reject) {
-                                const xhr = new XMLHttpRequest()
-                                xhr.open('PUT', signedRequest)
-                                xhr.onreadystatechange = () => {
-                                    if (xhr.readyState === 4) {
-                                        if (xhr.status === 200) {
-                                            console.log(url, 'url in uploadFile')
-                                            resolve(file.name)
-                                            //   resolve(url)
-                                        } else {
-                                            alert('Could not upload file.')
-                                        }
-                                    }
-                                }
-                                xhr.send(file)
-                            })
-                        }
-                        
-                        function getSignedRequest(file,fileName) {
-                            return new Promise(function (resolve, reject) {
-                                const xhr = new XMLHttpRequest()
-                                console.log(fileName, 'fileName')
-                                const newUrl = `https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${fileName}&file_type=${file.type}`
-                                console.log('newurl', newUrl)
-                                xhr.open('GET', newUrl)
-                                xhr.onreadystatechange = async function () {
-                                    console.log('getSignedRequest - in onreadystatechange - xhr', xhr)
-                                    if (xhr.readyState === 4) {
-                                        if (xhr.status === 200) {
-                                            const response = JSON.parse(xhr.responseText)
-                                            const uploaded = await uploadFile(
-                                                file,
-                                                response.signedRequest,
-                                                response.url
-                                            )
-                                            resolve(fileName)
-                                        } else {
-                                            alert('Could not get signed URL.')
-                                        }
-                                    }
-                                }
-                                console.log('getSignedRequest -pre xhr.send')
-                                xhr.send()
-                            })
-                        }
-                        const get_sender_attachment = ()=>{
-                            var ImageSrc = getIdValue(`#contact-attachment`)
-                            console.log(ImageSrc,"ImageSrc")
-                            if (ImageSrc){
-                                const fileName = getFileName(ImageSrc)
-                                const fileObject = dataURLtoFile(ImageSrc,fileName)
-                                getSignedRequest(fileObject,fileName).then(res => console.log(res))
-                                return fileName
-                            }
-                            return ""
-                        }
-
-                        // var sender_fname = $(`#${form_num}-first-name`).val()
-                        // var sender_lname = $(`#${form_num}-last-name`).val()
-                        // var sender_number = $(`#${form_num}-phone-number`).val()
-                        // console.log(sender_number)
-                        // var sender_message = $(`#${form_num}-message`).val()
-
-                        const checkIdExist = (id) =>{
-                            if ($(id).length) return true
-                            return false
-                        }
-
-                        const getIdValue = (id) => {
-                            if (checkIdExist(id)) return $(id).val()
-                            else return ""
-                        }
-                        const getSenderName = () =>{
-                        const sender_full_name = getIdValue(`#contact-full-name`)
-                        if (sender_full_name){
-                            const full_name_split = sender_full_name.split(' ')
-                        const sender_fname = full_name_split.shift()
-                        const sender_lname = full_name_split.join(' ')
-                        return [sender_full_name,sender_fname,sender_lname]
-                        }
-                        else{
-                            return ["","",""]
-                        }
-
-                        }
-                        const getSelectedServices = () =>{
-                            const allSelectedServiced = Array.from(document.querySelectorAll('[id^="contact-service"]'))
-                            if (allSelectedServiced.length){
-                                return allSelectedServiced.filter( (x)=> x.checked
-                            ).map(item => item.value).join(",");
-                            }
-                            else {return ""}
-
-                        }
-
-                        const addErrorMessageToForm = (message) =>{
-                            var tag = document.createElement("div");
-                            var cross = document.createElement("h1");
-                            cross.innerHTML = "\u274C"
-                            var messageh1 = document.createElement("h1");
-                               messageh1.innerHTML = message
-                               messageh1.className = "ml-3"
-                            tag.appendChild(cross);
-                            tag.appendChild(messageh1);
-                            tag.className = "flex text-red-900 w-full p-4 rounded  item-center align-center bg-red-100"
-                           const errorStateMessageElement = document.getElementById("error-state-modal")
-                           errorStateMessageElement.appendChild(tag)
-                       }
-
-
-                       const [sender_full_name,sender_fname,sender_lname  ]=getSenderName()
-                       var sender_number = getIdValue(`#contact-phone-number`)
-                       var sender_email = getIdValue(`#contact-email`)
-
-                       console.log(sender_full_name,"sender_full_name",sender_number,"sender_number",sender_email,"sender_email")
-                       if (!sender_full_name){
-                           const message = "Full Name is required"
-                           addErrorMessageToForm(message)
-                           sendButton.disabled = false
-                           return
-                       }
-                       if (!sender_number && !sender_email){
-                           const message ="Phone Number OR Email required"
-                           addErrorMessageToForm(message)
-                           sendButton.disabled = false
-                           return
-                       }
-                        var sender_contact_date = getIdValue(`#contact-date`)
-                        var sender_promo = getIdValue(`#contact-promo-code`)
-                        var sender_address = getIdValue(`#contact-address`)
-                        const photo = get_sender_attachment()
-                        console.log(photo,"sender_attachment")
-                        // TODO As services are multiple choice option do user can select only one or user can select multiple option
-                            // discuss about how this should happen
-                        // iterate over the service
-                        const services = getSelectedServices()
-                        // var sender_service = "" //$(`#contact-phone-number`).val()
-
-                        const sender_message_1 = getIdValue(`#contact-concern-1`)
-                        const sender_message_2 = getIdValue(`#contact-concern-2`)
-
-                        let sender_message = ''
-                        try {
-                            if (sender_message_1?.length > 0) {
-                                sender_message = sender_message_1
-                            } else {
-                                sender_message = sender_message_2
-                            }
-                        } catch (e) {
-                            sender_message = ''
-                        }
-                        // TODO add a better validator for each field
-                            // Perform validation before any computation
-
-                        // if (!sender_fname || !sender_number || !sender_message){
-                        // // if (!sender_fname || !sender_lname || !sender_number || !sender_message){
-                        //     alert("Please make sure to fill out all the form fields")
-                        //     return
-                        // }
-
-                        var cleaned_sender_number = sender_number.replace("(", "").replace(")", "").replace("-", "").replace(" ", "")
-
-
-                        console.log("text", slug, sender_fname, sender_lname, sender_number, sender_message)
-                        fetch("http://127.0.0.1:8000/sms/" + slug , {
-                            method: 'POST',
-                            body: JSON.stringify({
-                                sender_full_name : sender_full_name,
-                                sender_email : sender_email,
-                                sender_promo : sender_promo,
-                                sender_fname : sender_fname,
-                                sender_lname: sender_lname,
-                                sender_number: cleaned_sender_number,
-                                sender_message: sender_message,
-                                sender_address: sender_address,
-                                sender_date: sender_contact_date,
-                                photo,
-                                services
-                            })
-
-                        })
-                        .then(result => {
-                            //Here body is not ready yet, throw promise
-                            if (!result.ok) throw result;
-                            return result.json();
-                        })
-                        .then(result => {
-                            const sendTextModalId = document.getElementById("send-text-modal")
-                            sendTextModalId.style.display = 'none'
-                            const modalId = document.getElementById("text-thank-you")
-                            if (!modalId){
-                                location.reload()
-                              
-                            } else{
-                                modalId.style.display = 'block';
-                                setTimeout(() => {location.reload()}, 3000);
-                            }
-                            return result
-                        })
-                        .catch(result => {
-                            console.log(result)
-                            sendButton.disabled = false
-                            alert("There was a problem sending your text. Please reach out to ProPhone.")
-                        })
-                    }
-                
-                    console.log('go bucks')
-                    $('document').ready(function(){
-                        console.log('doc ready')
-                        let cover = $("#cover-button")
-                        console.log("cover", cover)
-
-                        if (cover.position() !== undefined){
-                            let cover_bottom = cover.position().top - 40
-                            $(window).scroll(function(){
-                                console.log("in scroll")
-                                console.log($(window).scrollTop(), cover_bottom)
-                            if($(window).scrollTop() < (cover_bottom)){
-                                if ( $("#side-button").hasClass('-translate-x-80')){
-                                $("#side-button").removeClass("-translate-x-80").addClass("translate-x-64")
-                                }
-
-                            }
-                            else{
-                                $("#side-button").addClass("transform -translate-x-80 ease-in duration-700");
-                            }
-                            });
-                        } else {
-                            $("#side-button").addClass("transform -translate-x-80 ease-in duration-700");
-                        }
-
-
-
-                        });
-
-        function runYourFunctionWhenJQueryIsLoaded(fn) {
-            if (window.$){
-                //possibly some other JQuery checks to make sure that everything is loaded here
-                fn();
-            } else {
-                setTimeout(()=>runYourFunctionWhenJQueryIsLoaded(fn), 5000);
-            }
-        }
+function runYourFunctionWhenJQueryIsLoaded(fn) {
+  if (window.$) {
+    //possibly some other JQuery checks to make sure that everything is loaded here
+    fn();
+  } else {
+    setTimeout(() => runYourFunctionWhenJQueryIsLoaded(fn), 5000);
+  }
+}
     </script>
 </head>
 <body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-24 md:pt-44">
@@ -1248,7 +1324,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -2848,7 +2924,7 @@ observer.observe(target)
             aria-modal="true"
             x-id="['modal-title']"
             :aria-labelledby="$id('modal-title')"
-            class="fixed inset-0 z-40"
+            class="fixed inset-0 z-40 md:pt-8 md:pb-20"
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
     >
@@ -2872,16 +2948,15 @@ observer.observe(target)
                 x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 @click="contactModalOpen = false"
-                class="relative flex items-center justify-center w-full h-full bg-primary"
+                class="relative flex items-center justify-center w-full h-full"
         >
             <div
-                @click.stop
-                class="flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full"
+                    @click.stop
+                    class="flex flex-col w-full 2xl:h-max 2xl:mt-8 sm:h-auto h-full overflow-hidden fixed text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl"
             >
-                <div class="sm:hidden relative px-6">
-                    <h2 class="mt-6 text-2xl font-bold text-center text-white" :id="$id('modal-title')">Send us a text</h2>
-                    <p class="mb-3 mt-1 font-normal text-base text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
-                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-6 text-lg font-medium text-center" :id="$id('modal-title')">Send us a text</h2>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8 bg-gradient-to-b from-white"></div>
                     <button
                             @click="contactModalOpen = false;"
                             class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
@@ -2892,146 +2967,145 @@ observer.observe(target)
                         </svg>
                     </button>
                 </div>
-                <div class="hidden sm:relative sm:px-6 sm:flex sm:flex-col">
-                    <h2 class="mt-6 text-6xl font-extrabold text-center text-white" :id="$id('modal-title')">Get a Fast Quote</h2>
-                    <p class="my-6 text-lg text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
-                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
-                </div>
                 <div id="error-state-modal" class="p-2">
                 </div>
-                <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping')">
+
+                    <form class="overflow-y-auto pb-20 sm:w-full" onsubmit="send_sms('caro-landscaping')">
+
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
-                        <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
+                        <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4 mt-8">
                             
                             <div>
-                                <label for="contact-full-name" class="font-medium text-base text-white">Full name</label>
+                                <label for="contact-full-name" class="font-medium text-base text-gray-700">Full name</label>
                                 <input
-                                    type="text"
-                                    name="full-name"
-                                    id="contact-full-name"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="Jane Rodgers"
+
+                                        type="text"
+                                        name="full-name"
+                                        id="contact-full-name"
+                                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="Jane Rodgers"
                                 />
                             </div>
                             
                             
                             <div>
-                                <label for="contact-phone-number" class="font-medium text-base text-white">Phone number</label>
+                                <label for="contact-phone-number" class="font-medium text-base text-gray-700">Phone number</label>
                                 <input
-                                    type="tel"
-                                    name="phone-number"
-                                    id="contact-phone-number"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="(555) 555-5555"
+
+                                        type="tel"
+                                        name="phone-number"
+                                        id="contact-phone-number"
+                                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="(555) 555-5555"
                                 />
                             </div>
                             
                             
                             <div>
-                                <label for="contact-email" class="font-medium text-base text-white">Email</label>
+                                <label for="contact-email" class="font-medium text-base text-gray-700">Email</label>
                                 <input
-                                    type="email"
-                                    name="email"
-                                    id="contact-email"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="name@example.com"
+                                        type="email"
+                                        name="email"
+                                        id="contact-email"
+                                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="name@example.com"
                                 />
                             </div>
                             
 
                             
                             <div>
-                                <label for="contact-address" class="font-medium text-base text-white">Address</label>
+                                <label for="contact-address" class="font-medium text-base text-gray-700">Address</label>
                                 <input
-                                    type="text"
-                                    name="address"
-                                    id="contact-address"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="123 Main Street, Springfield, MA 01103"
+                                        type="text"
+                                        name="address"
+                                        id="contact-address"
+                                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="123 Main Street, Springfield, MA 01103"
                                 />
                             </div>
                             
 
                             
                             <div class="block sm:hidden">
-                                <label class="font-medium text-base text-white">Services</label>
-                                <fieldset class="sm:hidden bg-white p-6 mt-1 rounded-md">
+                                <label class="font-medium text-base text-gray-700">Services</label>
+                                <fieldset class="sm:hidden sm:mb-0 mt-1 p-6 border border-gray-300 rounded-md">
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139494" value="Mowing 2222 go pack goooo" id="contact-service-139494" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139503" value="Mowing 2222 go pack goooo" id="contact-service-139503" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Mowing 2222 go pack goooo
+                                            <span class="ml-3 items-start">
+                                             Mowing 2222 go pack goooo
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139495" value="a .  b / , m k p ' a" id="contact-service-139495" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139504" value="a .  b / , m k p ' a" id="contact-service-139504" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                a .  b / , m k p ' a
+                                            <span class="ml-3 items-start">
+                                             a .  b / , m k p ' a
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139496" value="!#$@#$%^$&%*^;/'" id="contact-service-139496" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139505" value="!#$@#$%^$&%*^;/'" id="contact-service-139505" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                !#$@#$%^$&%*^;/'
+                                            <span class="ml-3 items-start">
+                                             !#$@#$%^$&%*^;/'
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139497" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-139497" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139506" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-139506" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                !#$@#$%^$&%*^;/'afdsdf;38384
+                                            <span class="ml-3 items-start">
+                                             !#$@#$%^$&%*^;/'afdsdf;38384
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139498" value="NEW SERVICE 333" id="contact-service-139498" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139507" value="NEW SERVICE 333" id="contact-service-139507" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                NEW SERVICE 333
+                                            <span class="ml-3 items-start">
+                                             NEW SERVICE 333
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139499" value="pp" id="contact-service-139499" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139508" value="pp" id="contact-service-139508" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                pp
+                                            <span class="ml-3 items-start">
+                                             pp
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139500" value="devansh2" id="contact-service-139500" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139509" value="devansh2" id="contact-service-139509" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                devansh2
+                                            <span class="ml-3 items-start">
+                                             devansh2
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139501" value="devansh2345" id="contact-service-139501" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139510" value="devansh2345" id="contact-service-139510" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                devansh2345
+                                            <span class="ml-3 items-start">
+                                             devansh2345
                                             </span>
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139502" value="Devansh234543" id="contact-service-139502" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139511" value="Devansh234543" id="contact-service-139511" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Devansh234543
+                                            <span class="ml-3 items-start">
+                                             Devansh234543
                                             </span>
                                         </div>
                                         
-                        
-                                         <div class="flex flex-col">
+                                 
+                                        <div class="flex flex-col">
                                             <div class="flex items-center">
                                                 <input
                                                         id="contact-service-Other"
@@ -3050,175 +3124,175 @@ observer.observe(target)
                                                 class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
                                                 />
                                         </div>
-                                 
+                                     
                                     </div>
                                 </fieldset>
                             </div>
                             
 
                             
-                            <div class="sm:hidden">
-                                <label for="contact-concern-1" class="sm:hidden font-medium text-base text-white"> How can we help - TEST? </label>
-                                <textarea
-                                    id="contact-concern-1"
-                                    name="concern"
-                                    rows="4"
-                                    class="sm:hidden block py-2.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder='Type your message here...'
-                                ></textarea>
-                            </div>
+                                <div class='sm:hidden'>
+                                    <label for="contact-concern-1" class="sm:hidden font-medium text-base text-gray-700"> How can we help - TEST? </label>
+                                    <textarea
+                                        id="contact-concern-1"
+                                        name="concern"
+                                        rows="4"
+                                        class="sm:hidden block py-3.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"                                   
+                                        placeholder='How can we help - TEST?'
+                                    ></textarea>
+                                </div>
                             
 
                             
                             <div class="relative">
-                                <label for="contact-date" class="font-medium text-base text-white">Preferred date of service</label>
+                                <label for="contact-date" class="font-medium text-base text-gray-700">Preferred Date of Service</label>
                                 <!-- <input
                                     type="text"
                                     name="date"
                                     id="contact-date"
-                                    class="block w-full border-gray-300 py-2 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="Preferred date of service"
-                                    onfocus="(this.type='date')"
+                                    class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary tracking-normal"
+                                    placeholder="mm/dd/yyyy"
+                                    onfocus="(this.type='date',this.placeholder='')"
+                                    onblur="if(this.value==''){this.type='text',this.placeholder='mm/dd/yyyy'}"
                                 /> -->
                                 <div class="w-4 h-4 absolute transform translate-y-4.5 left-4">
                                     <!-- <svg width="16" height="17" viewBox="0 0 16 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.5C3.44772 0.5 3 0.947715 3 1.5V2.5H2C0.895431 2.5 0 3.39543 0 4.5V14.5C0 15.6046 0.895431 16.5 2 16.5H14C15.1046 16.5 16 15.6046 16 14.5V4.5C16 3.39543 15.1046 2.5 14 2.5H13V1.5C13 0.947715 12.5523 0.5 12 0.5C11.4477 0.5 11 0.947715 11 1.5V2.5H5V1.5C5 0.947715 4.55228 0.5 4 0.5ZM4 5.5C3.44772 5.5 3 5.94772 3 6.5C3 7.05228 3.44772 7.5 4 7.5H12C12.5523 7.5 13 7.05228 13 6.5C13 5.94772 12.5523 5.5 12 5.5H4Z" fill="#9CA3AF"/>
                                     </svg> -->
                                 </div>
-                                <input id="contact-date" type="date" class="block text-left z-50 w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                                <input type="date" id="contact-date" placeholder="mm/dd/yyyy" class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary" />
                             </div>
                             
                             
                             <div>
-                                <label for="contact-promo-code" class="font-medium text-base text-white">Promo code</label>
+                                <label for="contact-promo-code" class="font-medium text-base text-gray-700">Promo code</label>
                                 <input
-                                    type="text"
-                                    name="promo-code"
-                                    id="contact-promo-code"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="ABCDEFG-123"
+                                        type="text"
+                                        name="promo-code"
+                                        id="contact-promo-code"
+                                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="ABCDEFG-123"
                                 />
                             </div>
                             
+                        </div>
 
-                    </div>
-
-                    <div class="hidden sm:block px-6 py-4">
-                        
-                        <label class="font-medium text-base text-white">Services</label>
-                        <fieldset class="sm:bg-white sm:p-6 sm:mt-1 rounded-md">
-                            <div class="grid auto-cols-auto gap-4 grid-cols-2">
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139494"
-                                        name="139494"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Mowing 2222 go pack goooo"
-                                    />
-                                    <label for="contact-service-139494" class="ml-3 text-sm font-normal text-gray-700">Mowing 2222 go pack goooo</label>
-                                </div>
+                        <div class="hidden sm:block px-6 py-4">
                             
+                            <label class="font-medium text-base text-gray-700">Services</label>
+                            <fieldset class="sm:bg-white border border-gray-300 rounded-md mt-1 overflow-y-visible h-auto">
+                                <div class="grid gap-4 space-y-2 grid-cols-2 p-6">
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139503"
+                                                name="139503"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Mowing 2222 go pack goooo"
+                                        />
+                                        <label for="contact-service-139503" class="ml-3 text-sm text-gray-600">Mowing 2222 go pack goooo</label>
+                                    </div>
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139495"
-                                        name="139495"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="a .  b / , m k p ' a"
-                                    />
-                                    <label for="contact-service-139495" class="ml-3 text-sm font-normal text-gray-700">a .  b / , m k p ' a</label>
-                                </div>
-                            
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139504"
+                                                name="139504"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="a .  b / , m k p ' a"
+                                        />
+                                        <label for="contact-service-139504" class="ml-3 text-sm text-gray-600">a .  b / , m k p ' a</label>
+                                    </div>
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139496"
-                                        name="139496"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="!#$@#$%^$&%*^;/'"
-                                    />
-                                    <label for="contact-service-139496" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'</label>
-                                </div>
-                            
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139505"
+                                                name="139505"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="!#$@#$%^$&%*^;/'"
+                                        />
+                                        <label for="contact-service-139505" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'</label>
+                                    </div>
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139497"
-                                        name="139497"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="!#$@#$%^$&%*^;/'afdsdf;38384"
-                                    />
-                                    <label for="contact-service-139497" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'afdsdf;38384</label>
-                                </div>
-                            
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139506"
+                                                name="139506"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="!#$@#$%^$&%*^;/'afdsdf;38384"
+                                        />
+                                        <label for="contact-service-139506" class="ml-3 text-sm text-gray-600">!#$@#$%^$&%*^;/'afdsdf;38384</label>
+                                    </div>
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139498"
-                                        name="139498"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="NEW SERVICE 333"
-                                    />
-                                    <label for="contact-service-139498" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 333</label>
-                                </div>
-                            
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139507"
+                                                name="139507"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="NEW SERVICE 333"
+                                        />
+                                        <label for="contact-service-139507" class="ml-3 text-sm text-gray-600">NEW SERVICE 333</label>
+                                    </div>
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139499"
-                                        name="139499"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="pp"
-                                    />
-                                    <label for="contact-service-139499" class="ml-3 text-sm font-normal text-gray-700">pp</label>
-                                </div>
-                            
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139508"
+                                                name="139508"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="pp"
+                                        />
+                                        <label for="contact-service-139508" class="ml-3 text-sm text-gray-600">pp</label>
+                                    </div>
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139500"
-                                        name="139500"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="devansh2"
-                                    />
-                                    <label for="contact-service-139500" class="ml-3 text-sm font-normal text-gray-700">devansh2</label>
-                                </div>
-                            
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139509"
+                                                name="139509"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="devansh2"
+                                        />
+                                        <label for="contact-service-139509" class="ml-3 text-sm text-gray-600">devansh2</label>
+                                    </div>
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139501"
-                                        name="139501"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="devansh2345"
-                                    />
-                                    <label for="contact-service-139501" class="ml-3 text-sm font-normal text-gray-700">devansh2345</label>
-                                </div>
-                            
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139510"
+                                                name="139510"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="devansh2345"
+                                        />
+                                        <label for="contact-service-139510" class="ml-3 text-sm text-gray-600">devansh2345</label>
+                                    </div>
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-139502"
-                                        name="139502"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Devansh234543"
-                                    />
-                                    <label for="contact-service-139502" class="ml-3 text-sm font-normal text-gray-700">Devansh234543</label>
-                                </div>
-                            
+                                    
+                                    <div class="flex items-center">
+                                        <input
+                                                id="contact-service-139511"
+                                                name="139511"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Devansh234543"
+                                        />
+                                        <label for="contact-service-139511" class="ml-3 text-sm text-gray-600">Devansh234543</label>
+                                    </div>
                                 
-             
-                                <div class="flex flex-col">
+                                    
+                                
+                                    <div class="flex flex-col">
                                         <div class="flex items-center">
                                              <input
                                                     id="contact-service-other-checkbox"
@@ -3237,37 +3311,55 @@ observer.observe(target)
                                         class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
                                     />
                                     </div>
-                           
-                            </div>
-                        </fieldset>
                         
-                    </div>
-
-                    <div class="block sm:flex sm:space-x-6 px-6 pb-20">
-                        
-                        <div class="sm:flex sm:flex-col sm:w-full hidden">
-                            <label for="contact-concern-2" class="sm:block hidden font-medium text-base text-white"> How can we help - TEST? </label>
-                            <textarea
-                                id="contact-concern-2"
-                                name="concern"
-                                rows="4"
-                                class="sm:flex sm:grow hidden py-2.5 px-2.5 mt-1 w-full h-auto border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                placeholder='Type your message here...'
-                            ></textarea>
+                                </div>
+                            </fieldset>
+                            
                         </div>
-                        
-    
-                        
+                        <div class="block sm:flex sm:flex-row sm:space-x-6 sm:px-6 sm:w-full">
+                            
+                            <div class="sm:flex sm:flex-col sm:w-full hidden">
+                                <label for="contact-concern-2" class="sm:block hidden font-medium text-base text-gray-700"> How can we help - TEST? </label>
+                                <textarea
+                                    id="contact-concern-2"
+                                    name="concern"
+                                    rows="4"
+                                    class="sm:flex sm:flex-grow hidden py-2 px-2.5 mt-1 w-full h-auto border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                    placeholder='Type your message here...'
+                                ></textarea>
+                            </div>
+                            
+
+                            
+                        </div>
                     </div>
-                    <div class="z-50 absolute bottom-0 px-6 py-4 bg-primary flex w-full align-middle items-center justify-center">
-                        <button
-                            id='sendButton'
-                            class="flex justify-center relative rounded-lg mx-4 py-3 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground"
-                        >
-                            Send
+                    <div class="flex items-center justify-center w-full">
+                        <button   id='sendButton'  class="
+                                    py-2.5
+                                    fixed
+                                    bottom
+                                    text-sm
+                                    font-medium
+                                    transition
+                                    border-2 border-transparent
+                                    rounded-md
+                                    bg-primary
+                                    text-primary-foreground
+                                    focus:outline-none
+                                    hover:bg-primary-darker
+                                    focus-visible:ring-2
+                                    ring-primary ring-opacity-75 ring-offset-2
+                                    disabled:bg-primary-darker"
+                                    style="
+                                    width: 90%;
+                                    position:absolute;
+                                    left: 50%;
+                                    bottom: 0;
+                                    transform: translate(-50%, -50%);
+                                    margin-top: 0;
+                                    margin-bottom: 0">Send
                         </button>
                     </div>
-
                 </form>
 
 
@@ -3290,7 +3382,7 @@ observer.observe(target)
 
         inputs.forEach(i => i.addEventListener('input', inputListener))
     })
-const toggleOtherServices = () => {
+    const toggleOtherServices = () => {
         const otherServices = document.getElementById('contact-service-other-checkbox')
         const otherServicesInput = document.getElementById('contact-service-other-text')
         if (otherServices.checked) {
@@ -3314,7 +3406,7 @@ const toggleOtherServices = () => {
     }
 </script>
                                     <div
-	class="fixed inset-0 z-40"
+	class="fixed inset-0 z-40 md:pt-8 md:pb-20"
 	id="text-thank-you"
 	style="display: none;"
 >
@@ -3322,9 +3414,9 @@ const toggleOtherServices = () => {
 		class="fixed inset-0 bg-black bg-opacity-50"
 	></div>
 	<div
-		class="fixed flex h-screen w-screen inset-x-0 z-50 mx-auto justify-center items-center p-4 shadow-lg rounded-md bg-primary"
+		class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white"
 	>
-		<div class="flex flex-col mt-3 text-center">
+		<div class="mt-3 text-center">
 			<div
 				class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
 			>
@@ -3343,10 +3435,10 @@ const toggleOtherServices = () => {
 					></path>
 				</svg>
 			</div>
-			<h3 class="sm:text-6xl text-4xl font-extrabold text-white sm:my-6 my-2">Message sent</h3>
-			<div class="p-2">
-				<p class="sm:text-xl text-sm text-gray-200">
-					We usually respond within a few minutes via SMS.
+			<h3 class="text-lg leading-6 font-medium text-gray-900">Thank you!</h3>
+			<div class="mt-1 px-7 py-3">
+				<p class="text-sm text-gray-500">
+					Your message was sent successfully. We’ll send you a text or give you a call soon.
 				</p>
 			</div>
 		</div>
@@ -3368,7 +3460,7 @@ const toggleOtherServices = () => {
         >
             <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
                 <div class="relative px-6 bg-white">
-                    <h2 class="mt-8 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
+                    <h2 class="mt-16 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
                     <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
                         <span class="sr-only">Close modal</span>
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
