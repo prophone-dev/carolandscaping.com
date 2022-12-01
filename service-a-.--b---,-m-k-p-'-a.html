@@ -1,21 +1,24 @@
-
-
-
-
+   
+ 
 
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     
 
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>landscaping near me in New York City, NY | caro-landscapings oy oy oy!!!!! |  Service | A .  B   , M K P &#x27; A</title>
-    <meta name="description"
-          content="">
-    <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/5ff2db7a-23fb-4101-9ec3-de7d3e760e76.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      landscaping near me in New York City, NY | caro-landscapings oy oy oy!!!!! |  Service |
+      A .  B   , M K P &#x27; A
+    </title>
+    <meta
+      name="description"
+      content=""
+    />
+    <link rel="icon" href="https://landing-page-app-hero-images.s3.amazonaws.com/media/5ff2db7a-23fb-4101-9ec3-de7d3e760e76.png" type="image/x-icon" />
     
 
 
@@ -37,7 +40,474 @@
 
 
 
-</head>
+<script
+defer
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="preconnect" href="https://ajax.googleapis.com" />
+<link
+rel="preload"
+href="https://prophone-templates.vercel.app/assets/output.css"
+as="style"
+onload="this.onload=null;this.rel='stylesheet'"
+/>
+<noscript
+><link
+  rel="stylesheet"
+  href="https://prophone-templates.vercel.app/assets/output.css"
+/></noscript>
+
+<script
+defer
+src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"
+></script>
+<script
+defer
+src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+></script>
+<script
+defer
+src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"
+></script>
+<script
+defer
+src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+></script>
+<script
+defer
+src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"
+></script>
+<script
+defer
+src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"
+></script>
+<script
+defer
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+></script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+function dynamicallyLoadJS(file) {
+  // DOM: Create the script element
+  var jsElm = document.createElement("script");
+  // set the type attribute
+  jsElm.type = "application/javascript";
+  // make the script element load file
+  jsElm.src = file;
+  // finally insert the element to the body element in order to load the script
+  document.head.appendChild(jsElm);
+}
+
+function segmentScript() {
+  var prophoneSegmentId = "Z6dq7zq7CtZubdSRrh4EHjCsAasGDPiE";
+  var customerPagesSegmentId = "9Ce585PETlETCGamY79KkSoBrcAdcdPc";
+
+  if (window.location.href.includes("prosite.prophone.com")) {
+    segmentId = prophoneSegmentId;
+  } else {
+    segmentId = customerPagesSegmentId;
+  }
+  var analytics = (window.analytics = window.analytics || []);
+  if (!analytics.initialize) {
+    if (analytics.invoked) {
+      window.console &&
+        console.error &&
+        console.error("Segment snippet included twice.");
+    } else {
+      analytics.invoked = !0;
+      analytics.methods = [
+        "trackSubmit",
+        "trackClick",
+        "trackLink",
+        "trackForm",
+        "pageview",
+        "identify",
+        "reset",
+        "group",
+        "track",
+        "ready",
+        "alias",
+        "debug",
+        "page",
+        "once",
+        "off",
+        "on",
+        "addSourceMiddleware",
+        "addIntegrationMiddleware",
+        "setAnonymousId",
+        "addDestinationMiddleware",
+      ];
+      analytics.factory = function (e) {
+        return function () {
+          var t = Array.prototype.slice.call(arguments);
+          t.unshift(e);
+          analytics.push(t);
+          return analytics;
+        };
+      };
+      for (var e = 0; e < analytics.methods.length; e++) {
+        var key = analytics.methods[e];
+        analytics[key] = analytics.factory(key);
+      }
+      analytics.load = function (key, e) {
+        var t = document.createElement("script");
+        t.type = "text/javascript";
+        t.defer = !0;
+        t.src =
+          "https://cdn.segment.com/analytics.js/v1/" +
+          key +
+          "/analytics.min.js";
+        var n = document.getElementsByTagName("script")[0];
+        n.parentNode.insertBefore(t, n);
+        analytics._loadOptions = e;
+      };
+      analytics._writeKey = segmentId;
+      analytics.SNIPPET_VERSION = "4.15.3";
+      analytics.load(segmentId);
+      analytics.page();
+    }
+  }
+}
+
+function send_sms(slug) {
+  const sendButton = document.getElementById("sendButton");
+  sendButton.disabled = true;
+  const errorStateMessageElement =
+    document.getElementById("error-state-modal");
+  errorStateMessageElement.innerHTML = "";
+  event.preventDefault();
+
+  function uuidV4() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+      (
+        c ^
+        (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+      ).toString(16)
+    );
+  }
+
+  const getFileExtenstion = (dataUrl) => {
+    var arr = dataUrl.split(","),
+      mime = arr[0].match(/:(.*?);/)[1];
+    return mime.split("/")[1];
+  };
+
+  const getFileName = (dataUrl) => {
+    const uuid = uuidV4();
+    const fileName = `${uuid}.${getFileExtenstion(dataUrl)}`;
+    return fileName;
+  };
+
+  function dataURLtoFile(dataUrl, filename) {
+    var arr = dataUrl.split(","),
+      mime = arr[0].match(/:(.*?);/)[1],
+      bstr = atob(arr[1]),
+      n = bstr.length,
+      u8arr = new Uint8Array(n);
+
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+
+    return new File([u8arr], filename, {
+      type: mime,
+    });
+  }
+
+  function uploadFile(file, signedRequest, url) {
+    return new Promise(function (resolve, reject) {
+      const xhr = new XMLHttpRequest();
+      xhr.open("PUT", signedRequest);
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log(url, "url in uploadFile");
+            resolve(file.name);
+            //   resolve(url)
+          } else {
+            alert("Could not upload file.");
+          }
+        }
+      };
+      xhr.send(file);
+    });
+  }
+
+  function getSignedRequest(file, fileName) {
+    return new Promise(function (resolve, reject) {
+      const xhr = new XMLHttpRequest();
+      console.log(fileName, "fileName");
+      const newUrl = `https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${fileName}&file_type=${file.type}`;
+      console.log("newurl", newUrl);
+      xhr.open("GET", newUrl);
+      xhr.onreadystatechange = async function () {
+        console.log(
+          "getSignedRequest - in onreadystatechange - xhr",
+          xhr
+        );
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            const uploaded = await uploadFile(
+              file,
+              response.signedRequest,
+              response.url
+            );
+            resolve(fileName);
+          } else {
+            alert("Could not get signed URL.");
+          }
+        }
+      };
+      console.log("getSignedRequest -pre xhr.send");
+      xhr.send();
+    });
+  }
+  const get_sender_attachment = () => {
+    var ImageSrc = getIdValue(`#contact-attachment`);
+    console.log(ImageSrc, "ImageSrc");
+    if (ImageSrc) {
+      const fileName = getFileName(ImageSrc);
+      const fileObject = dataURLtoFile(ImageSrc, fileName);
+      getSignedRequest(fileObject, fileName).then((res) =>
+        console.log(res)
+      );
+      return fileName;
+    }
+    return "";
+  };
+
+  // var sender_fname = $(`#${form_num}-first-name`).val()
+  // var sender_lname = $(`#${form_num}-last-name`).val()
+  // var sender_number = $(`#${form_num}-phone-number`).val()
+  // console.log(sender_number)
+  // var sender_message = $(`#${form_num}-message`).val()
+
+  const checkIdExist = (id) => {
+    if ($(id).length) return true;
+    return false;
+  };
+
+  const getIdValue = (id) => {
+    if (checkIdExist(id)) return $(id).val();
+    else return "";
+  };
+  const getSenderName = () => {
+    const sender_full_name = getIdValue(`#contact-full-name`);
+    if (sender_full_name) {
+      const full_name_split = sender_full_name.split(" ");
+      const sender_fname = full_name_split.shift();
+      const sender_lname = full_name_split.join(" ");
+      return [sender_full_name, sender_fname, sender_lname];
+    } else {
+      return ["", "", ""];
+    }
+  };
+  const getSelectedServices = () => {
+    const allSelectedServiced = Array.from(
+      document.querySelectorAll('[id^="contact-service"]')
+    );
+    if (allSelectedServiced.length) {
+      const activeService = allSelectedServiced
+        .filter((x) => x.checked && x.value !== "Other")
+        .map((item) => item.value)
+        .join(",");
+      // check if contact-service-Other or contact-service-other-checkbox is checked get contact-service-other-text value
+      const otherService =
+        getIdValue(`#contact-service-other-text`) ||
+        getIdValue(`#contact-service-other-text2`) ||
+        "";
+      if (otherService) {
+        if (activeService) {
+          return `${activeService},${otherService}`;
+        } else {
+          return otherService;
+        }
+      }
+
+      return activeService;
+    } else {
+      return "";
+    }
+  };
+
+  const addErrorMessageToForm = (message) => {
+    var tag = document.createElement("div");
+    var cross = document.createElement("h1");
+    cross.innerHTML = "\u274C";
+    var messageh1 = document.createElement("h1");
+    messageh1.innerHTML = message;
+    messageh1.className = "ml-3";
+    tag.appendChild(cross);
+    tag.appendChild(messageh1);
+    tag.className =
+      "flex text-red-900 w-full p-4 rounded  item-center align-center bg-red-100";
+    const errorStateMessageElement =
+      document.getElementById("error-state-modal");
+    errorStateMessageElement.appendChild(tag);
+  };
+
+  const [sender_full_name, sender_fname, sender_lname] = getSenderName();
+  var sender_number = getIdValue(`#contact-phone-number`);
+  var sender_email = getIdValue(`#contact-email`);
+  if (!sender_full_name) {
+    const message = "Full Name is required";
+    addErrorMessageToForm(message);
+    sendButton.disabled = false;
+    return;
+  }
+  if (!sender_number && !sender_email) {
+    const message = "Phone Number OR Email required";
+    addErrorMessageToForm(message);
+    sendButton.disabled = false;
+    return;
+  }
+  var sender_contact_date = getIdValue(`#contact-date`);
+  var sender_promo = getIdValue(`#contact-promo-code`);
+  var sender_address = getIdValue(`#contact-address`);
+  const photo = get_sender_attachment();
+  // TODO As services are multiple choice option do user can select only one or user can select multiple option
+  // discuss about how this should happen
+  // iterate over the service
+  const services = getSelectedServices();
+  // var sender_service = "" //$(`#contact-phone-number`).val()
+
+  const sender_message_1 = getIdValue(`#contact-concern-1`);
+  const sender_message_2 = getIdValue(`#contact-concern-2`);
+
+  let sender_message = "";
+  try {
+    if (sender_message_1?.length > 0) {
+      sender_message = sender_message_1;
+    } else {
+      sender_message = sender_message_2;
+    }
+  } catch (e) {
+    sender_message = "";
+  }
+  // TODO add a better validator for each field
+  // Perform validation before any computation
+
+  // if (!sender_fname || !sender_number || !sender_message){
+  // // if (!sender_fname || !sender_lname || !sender_number || !sender_message){
+  //     alert("Please make sure to fill out all the form fields")
+  //     return
+  // }
+
+  var cleaned_sender_number = sender_number
+    .replace("(", "")
+    .replace(")", "")
+    .replace("-", "")
+    .replace(" ", "");
+  console.log(
+    JSON.stringify({
+      sender_full_name: sender_full_name,
+      sender_email: sender_email,
+      sender_promo: sender_promo,
+      sender_fname: sender_fname,
+      sender_lname: sender_lname,
+      sender_number: cleaned_sender_number,
+      sender_message: sender_message,
+      sender_address: sender_address,
+      sender_date: sender_contact_date,
+      photo,
+      services,
+    })
+  );
+  let prosite_url = "https://prosite.prophone.com";
+  if (window.location.href.includes("dev")) {
+    prosite_url = "https://dev.prosite.prophone.com";
+  } else if (window.location.href.includes("stage")) {
+    prosite_url = "https://stage.prosite.prophone.com";
+  } else if (window.location.href.includes("8000")) {
+    prosite_url = "http://127.0.0.1:8000";
+  }
+  fetch(prosite_url + "/sms/" + slug, {
+    method: "POST",
+    body: JSON.stringify({
+      sender_full_name: sender_full_name,
+      sender_email: sender_email,
+      sender_promo: sender_promo,
+      sender_fname: sender_fname,
+      sender_lname: sender_lname,
+      sender_number: cleaned_sender_number,
+      sender_message: sender_message,
+      sender_address: sender_address,
+      sender_date: sender_contact_date,
+      photo,
+      services,
+    }),
+  })
+    .then((result) => {
+      //Here body is not ready yet, throw promise
+      if (!result.ok) throw result;
+      return result.json();
+    })
+    .then((result) => {
+      const sendTextModalId = document.getElementById("send-text-modal");
+      sendTextModalId.style.display = "none";
+      const modalId = document.getElementById("text-thank-you");
+      modalId.style.display = "block";
+      setTimeout(() => {
+        location.reload();
+      }, 3000);
+      return result;
+    })
+    .catch((result) => {
+      sendButton.disabled = false;
+      alert(
+        "There was a problem sending your text. Please reach out to ProPhone."
+      );
+    });
+}
+
+$("document").ready(function () {
+  let cover = $("#cover-button");
+
+  if (cover.position() !== undefined) {
+    let cover_bottom = cover.position().top - 40;
+    $(window).scroll(function () {
+      if ($(window).scrollTop() < cover_bottom) {
+        if ($("#side-button").hasClass("-translate-x-80")) {
+          $("#side-button")
+            .removeClass("-translate-x-80")
+            .addClass("translate-x-64");
+        }
+      } else {
+        $("#side-button").addClass(
+          "transform -translate-x-80 ease-in duration-700"
+        );
+      }
+    });
+  } else {
+    $("#side-button").addClass(
+      "transform -translate-x-80 ease-in duration-700"
+    );
+  }
+});
+
+function runYourFunctionWhenJQueryIsLoaded(fn) {
+  if (window.$) {
+    //possibly some other JQuery checks to make sure that everything is loaded here
+    fn();
+  } else {
+    setTimeout(() => runYourFunctionWhenJQueryIsLoaded(fn), 5000);
+  }
+}
+</script>
+
+  </head>
+
+
+
 <body x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, active: 0 }" class="pt-24 md:pt-44">
     
 
@@ -3381,6 +3851,7 @@ observer.observe(target)
 
 
 
+
 </body>
   
 <script>
@@ -3392,4 +3863,3 @@ observer.observe(target)
 <!--    }-->
 </script>
 </html>
-
