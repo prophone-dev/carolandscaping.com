@@ -252,162 +252,162 @@ function segmentScript() {
 }
 
 function send_sms(slug) {
-  const sendButton = document.getElementById("sendButton");
-  sendButton.disabled = true;
-  const errorStateMessageElement = document.getElementById("error-state-modal");
-  errorStateMessageElement.innerHTML = "";
-  event.preventDefault();
-
-  function uuidV4() {
+    const sendButton = document.getElementById("sendButton");
+    sendButton.disabled = true;
+    const errorStateMessageElement = document.getElementById("error-state-modal");
+    errorStateMessageElement.innerHTML = "";
+    event.preventDefault();
+    
+    function uuidV4() {
     return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
-      (
-        c ^
-        (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-      ).toString(16)
+    (
+    c ^
+    (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+    ).toString(16)
     );
-  }
-
-  const getFileExtenstion = (dataUrl) => {
+    }
+    
+    const getFileExtenstion = (dataUrl) => {
     var arr = dataUrl.split(","),
-      mime = arr[0].match(/:(.*?);/)[1];
+    mime = arr[0].match(/:(.*?);/)[1];
     return mime.split("/")[1];
-  };
-
-  const getFileName = (dataUrl) => {
+    };
+    
+    const getFileName = (dataUrl) => {
     const uuid = uuidV4();
     const fileName = `${uuid}.${getFileExtenstion(dataUrl)}`;
     return fileName;
-  };
-
-  function dataURLtoFile(dataUrl, filename) {
+    };
+    
+    function dataURLtoFile(dataUrl, filename) {
     var arr = dataUrl.split(","),
-      mime = arr[0].match(/:(.*?);/)[1],
-      bstr = atob(arr[1]),
-      n = bstr.length,
-      u8arr = new Uint8Array(n);
-
+    mime = arr[0].match(/:(.*?);/)[1],
+    bstr = atob(arr[1]),
+    n = bstr.length,
+    u8arr = new Uint8Array(n);
+    
     while (n--) {
-      u8arr[n] = bstr.charCodeAt(n);
+    u8arr[n] = bstr.charCodeAt(n);
     }
-
+    
     return new File([u8arr], filename, {
-      type: mime,
+    type: mime,
     });
-  }
-
-  function uploadFile(file, signedRequest, url) {
+    }
+    
+    function uploadFile(file, signedRequest, url) {
     return new Promise(function (resolve, reject) {
-      const xhr = new XMLHttpRequest();
-      xhr.open("PUT", signedRequest);
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            console.log(url, "url in uploadFile");
-            resolve(file.name);
-            //   resolve(url)
-          } else {
-            alert("Could not upload file.");
-          }
-        }
-      };
-      xhr.send(file);
+    const xhr = new XMLHttpRequest();
+    xhr.open("PUT", signedRequest);
+    xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log(url, "url in uploadFile");
+        resolve(file.name);
+        //   resolve(url)
+      } else {
+        alert("Could not upload file.");
+      }
+    }
+    };
+    xhr.send(file);
     });
-  }
-
-  function getSignedRequest(file, fileName) {
+    }
+    
+    function getSignedRequest(file, fileName) {
     return new Promise(function (resolve, reject) {
-      const xhr = new XMLHttpRequest();
-      console.log(fileName, "fileName");
-      const newUrl = `https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${fileName}&file_type=${file.type}`;
-      console.log("newurl", newUrl);
-      xhr.open("GET", newUrl);
-      xhr.onreadystatechange = async function () {
-        console.log("getSignedRequest - in onreadystatechange - xhr", xhr);
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-            const uploaded = await uploadFile(
-              file,
-              response.signedRequest,
-              response.url
-            );
-            resolve(fileName);
-          } else {
-            alert("Could not get signed URL.");
-          }
-        }
-      };
-      console.log("getSignedRequest -pre xhr.send");
-      xhr.send();
+    const xhr = new XMLHttpRequest();
+    console.log(fileName, "fileName");
+    const newUrl = `https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${fileName}&file_type=${file.type}`;
+    console.log("newurl", newUrl);
+    xhr.open("GET", newUrl);
+    xhr.onreadystatechange = async function () {
+    console.log("getSignedRequest - in onreadystatechange - xhr", xhr);
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        const response = JSON.parse(xhr.responseText);
+        const uploaded = await uploadFile(
+          file,
+          response.signedRequest,
+          response.url
+        );
+        resolve(fileName);
+      } else {
+        alert("Could not get signed URL.");
+      }
+    }
+    };
+    console.log("getSignedRequest -pre xhr.send");
+    xhr.send();
     });
-  }
-  const get_sender_attachment = () => {
+    }
+    const get_sender_attachment = () => {
     var ImageSrc = getIdValue(`#contact-attachment`);
     console.log(ImageSrc, "ImageSrc");
     if (ImageSrc) {
-      const fileName = getFileName(ImageSrc);
-      const fileObject = dataURLtoFile(ImageSrc, fileName);
-      getSignedRequest(fileObject, fileName).then((res) => console.log(res));
-      return fileName;
+    const fileName = getFileName(ImageSrc);
+    const fileObject = dataURLtoFile(ImageSrc, fileName);
+    getSignedRequest(fileObject, fileName).then((res) => console.log(res));
+    return fileName;
     }
     return "";
-  };
-
-  // var sender_fname = $(`#${form_num}-first-name`).val()
-  // var sender_lname = $(`#${form_num}-last-name`).val()
-  // var sender_number = $(`#${form_num}-phone-number`).val()
-  // console.log(sender_number)
-  // var sender_message = $(`#${form_num}-message`).val()
-
-  const checkIdExist = (id) => {
+    };
+    
+    // var sender_fname = $(`#${form_num}-first-name`).val()
+    // var sender_lname = $(`#${form_num}-last-name`).val()
+    // var sender_number = $(`#${form_num}-phone-number`).val()
+    // console.log(sender_number)
+    // var sender_message = $(`#${form_num}-message`).val()
+    
+    const checkIdExist = (id) => {
     if ($(id).length) return true;
     return false;
-  };
-
-  const getIdValue = (id) => {
+    };
+    
+    const getIdValue = (id) => {
     if (checkIdExist(id)) return $(id).val();
     else return "";
-  };
-  const getSenderName = () => {
+    };
+    const getSenderName = () => {
     const sender_full_name = getIdValue(`#contact-full-name`);
     if (sender_full_name) {
-      const full_name_split = sender_full_name.split(" ");
-      const sender_fname = full_name_split.shift();
-      const sender_lname = full_name_split.join(" ");
-      return [sender_full_name, sender_fname, sender_lname];
+    const full_name_split = sender_full_name.split(" ");
+    const sender_fname = full_name_split.shift();
+    const sender_lname = full_name_split.join(" ");
+    return [sender_full_name, sender_fname, sender_lname];
     } else {
-      return ["", "", ""];
+    return ["", "", ""];
     }
-  };
-  const getSelectedServices = () => {
+    };
+    const getSelectedServices = () => {
     const allSelectedServiced = Array.from(
-      document.querySelectorAll('[id^="contact-service"]')
+    document.querySelectorAll('[id^="contact-service"]')
     );
     if (allSelectedServiced.length) {
-      const activeService = allSelectedServiced
-        .filter((x) => x.checked && x.value!=="Other")
-        .map((item) => item.value)
-        .join(",");
-      // check if contact-service-Other or contact-service-other-checkbox is checked get contact-service-other-text value
-      const otherService =
-        getIdValue(`#contact-service-other-text`) ||
-        getIdValue(`#contact-service-other-text2`) ||
-        "";
-      if (otherService) {
-        if (activeService) {
-          return `${activeService},${otherService}`;
-        } else {
-          return otherService;
-        }
-      }
-
-      return activeService;
+    const activeService = allSelectedServiced
+    .filter((x) => x.checked && x.value!=="Other")
+    .map((item) => item.value)
+    .join(",");
+    // check if contact-service-Other or contact-service-other-checkbox is checked get contact-service-other-text value
+    const otherService =
+    getIdValue(`#contact-service-other-text`) ||
+    getIdValue(`#contact-service-other-text2`) ||
+    "";
+    if (otherService) {
+    if (activeService) {
+      return `${activeService},${otherService}`;
     } else {
-      return "";
+      return otherService;
     }
-  };
-
-  const addErrorMessageToForm = (message) => {
+    }
+    
+    return activeService;
+    } else {
+    return "";
+    }
+    };
+    
+    const addErrorMessageToForm = (message) => {
     var tag = document.createElement("div");
     var cross = document.createElement("h1");
     cross.innerHTML = "\u274C";
@@ -417,115 +417,125 @@ function send_sms(slug) {
     tag.appendChild(cross);
     tag.appendChild(messageh1);
     tag.className =
-      "flex text-red-900 w-full p-4 rounded  item-center align-center bg-red-100";
+    "flex text-red-900 w-full p-4 rounded  item-center align-center bg-red-100";
     const errorStateMessageElement =
-      document.getElementById("error-state-modal");
+    document.getElementById("error-state-modal");
     errorStateMessageElement.appendChild(tag);
-  };
-
-  const [sender_full_name, sender_fname, sender_lname] = getSenderName();
-  var sender_number = getIdValue(`#contact-phone-number`);
-  var sender_email = getIdValue(`#contact-email`);
-  if (!sender_full_name) {
+    };
+    
+    const [sender_full_name, sender_fname, sender_lname] = getSenderName();
+    var sender_number = getIdValue(`#contact-phone-number`);
+    var sender_email = getIdValue(`#contact-email`);
+    if (!sender_full_name) {
     const message = "Full Name is required";
     addErrorMessageToForm(message);
     sendButton.disabled = false;
     return;
-  }
-  if (!sender_number && !sender_email) {
+    }
+    if (!sender_number && !sender_email) {
     const message = "Phone Number OR Email required";
     addErrorMessageToForm(message);
     sendButton.disabled = false;
     return;
-  }
-  var sender_contact_date = getIdValue(`#contact-date`);
-  var sender_promo = getIdValue(`#contact-promo-code`);
-  var sender_address = getIdValue(`#contact-address`);
-  const photo = get_sender_attachment();
-  // TODO As services are multiple choice option do user can select only one or user can select multiple option
-  // discuss about how this should happen
-  // iterate over the service
-  const services = getSelectedServices();
-  // var sender_service = "" //$(`#contact-phone-number`).val()
-
-  const sender_message_1 = getIdValue(`#contact-concern-1`);
-  const sender_message_2 = getIdValue(`#contact-concern-2`);
-
-  let sender_message = "";
-  try {
-    if (sender_message_1?.length > 0) {
-      sender_message = sender_message_1;
-    } else {
-      sender_message = sender_message_2;
     }
-  } catch (e) {
+    var sender_contact_date = getIdValue(`#contact-date`);
+    var sender_promo = getIdValue(`#contact-promo-code`);
+    var sender_address = getIdValue(`#contact-address`);
+    const photo = get_sender_attachment();
+    // TODO As services are multiple choice option do user can select only one or user can select multiple option
+    // discuss about how this should happen
+    // iterate over the service
+    const services = getSelectedServices();
+    // var sender_service = "" //$(`#contact-phone-number`).val()
+    
+    const sender_message_1 = getIdValue(`#contact-concern-1`);
+    const sender_message_2 = getIdValue(`#contact-concern-2`);
+    
+    let sender_message = "";
+    try {
+    if (sender_message_1?.length > 0) {
+    sender_message = sender_message_1;
+    } else {
+    sender_message = sender_message_2;
+    }
+    } catch (e) {
     sender_message = "";
-  }
-  // TODO add a better validator for each field
-  // Perform validation before any computation
-
-  // if (!sender_fname || !sender_number || !sender_message){
-  // // if (!sender_fname || !sender_lname || !sender_number || !sender_message){
-  //     alert("Please make sure to fill out all the form fields")
-  //     return
-  // }
-
-  var cleaned_sender_number = sender_number
+    }
+    // TODO add a better validator for each field
+    // Perform validation before any computation
+    
+    // if (!sender_fname || !sender_number || !sender_message){
+    // // if (!sender_fname || !sender_lname || !sender_number || !sender_message){
+    //     alert("Please make sure to fill out all the form fields")
+    //     return
+    // }
+    
+    var cleaned_sender_number = sender_number
     .replace("(", "")
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  console.log(JSON.stringify({
-      sender_full_name: sender_full_name,
-      sender_email: sender_email,
-      sender_promo: sender_promo,
-      sender_fname: sender_fname,
-      sender_lname: sender_lname,
-      sender_number: cleaned_sender_number,
-      sender_message: sender_message,
-      sender_address: sender_address,
-      sender_date: sender_contact_date,
-      photo,
-      services,
+    console.log(JSON.stringify({
+    sender_full_name: sender_full_name,
+    sender_email: sender_email,
+    sender_promo: sender_promo,
+    sender_fname: sender_fname,
+    sender_lname: sender_lname,
+    sender_number: cleaned_sender_number,
+    sender_message: sender_message,
+    sender_address: sender_address,
+    sender_date: sender_contact_date,
+    photo,
+    services,
     }));
-  fetch("http://127.0.0.1:8000/sms/" + slug, {
+    let prosite_url = 'https://prosite.prophone.com'
+    if(window.location.href.includes('dev')){
+      prosite_url = 'https://dev.prosite.prophone.com'
+    }
+    else if(window.location.href.includes('stage')){
+      prosite_url = 'https://stage.prosite.prophone.com'
+    }
+    else if(window.location.href.includes('8000')){
+      prosite_url = 'http://127.0.0.1:8000'
+    }
+    fetch(prosite_url + "/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
-      sender_full_name: sender_full_name,
-      sender_email: sender_email,
-      sender_promo: sender_promo,
-      sender_fname: sender_fname,
-      sender_lname: sender_lname,
-      sender_number: cleaned_sender_number,
-      sender_message: sender_message,
-      sender_address: sender_address,
-      sender_date: sender_contact_date,
-      photo,
-      services,
+    sender_full_name: sender_full_name,
+    sender_email: sender_email,
+    sender_promo: sender_promo,
+    sender_fname: sender_fname,
+    sender_lname: sender_lname,
+    sender_number: cleaned_sender_number,
+    sender_message: sender_message,
+    sender_address: sender_address,
+    sender_date: sender_contact_date,
+    photo,
+    services,
     }),
-  })
-    .then((result) => {
-      //Here body is not ready yet, throw promise
-      if (!result.ok) throw result;
-      return result.json();
     })
     .then((result) => {
-      const sendTextModalId = document.getElementById("send-text-modal");
-      sendTextModalId.style.display = "none";
-      const modalId = document.getElementById("text-thank-you");
-      modalId.style.display = "block";
-      setTimeout(() => {
-        location.reload();
-      }, 3000);
-      return result;
+    //Here body is not ready yet, throw promise
+    if (!result.ok) throw result;
+    return result.json();
+    })
+    .then((result) => {
+    const sendTextModalId = document.getElementById("send-text-modal");
+    sendTextModalId.style.display = "none";
+    const modalId = document.getElementById("text-thank-you");
+    modalId.style.display = "block";
+    setTimeout(() => {
+    location.reload();
+    }, 3000);
+    return result;
     })
     .catch((result) => {
-      sendButton.disabled = false;
-      alert(
-        "There was a problem sending your text. Please reach out to ProPhone."
-      );
+    sendButton.disabled = false;
+    alert(
+    "There was a problem sending your text. Please reach out to ProPhone."
+    );
     });
-}
+    }
 
 $("document").ready(function () {
   let cover = $("#cover-button");
@@ -821,6 +831,14 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                                                   
                                                     <a
+                                                        href=" gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337 "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
+                                                    </a>
+                                              
+                                                    <a
                                                         href=" gallery-New-Gallery2 "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -842,14 +860,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337 "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
                                                     </a>
                                               
                                                     <a
@@ -1166,6 +1176,10 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                     >
                                         <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                             
+                                                <a href="gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
+                                                </a>
+                                            
                                                 <a href="gallery-New-Gallery2" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery2</p>
                                                 </a>
@@ -1176,10 +1190,6 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                             
                                                 <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                     <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
-                                                </a>
-                                            
-                                                <a href="gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
                                                 </a>
                                             
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1314,7 +1324,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -3068,7 +3078,7 @@ observer.observe(target)
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139485" value="Mowing 2222 go pack goooo" id="contact-service-139485" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139494" value="Mowing 2222 go pack goooo" id="contact-service-139494" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Mowing 2222 go pack goooo
@@ -3076,7 +3086,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139486" value="a .  b / , m k p ' a" id="contact-service-139486" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139495" value="a .  b / , m k p ' a" id="contact-service-139495" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 a .  b / , m k p ' a
@@ -3084,7 +3094,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139487" value="!#$@#$%^$&%*^;/'" id="contact-service-139487" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139496" value="!#$@#$%^$&%*^;/'" id="contact-service-139496" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 !#$@#$%^$&%*^;/'
@@ -3092,7 +3102,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139488" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-139488" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139497" value="!#$@#$%^$&%*^;/'afdsdf;38384" id="contact-service-139497" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 !#$@#$%^$&%*^;/'afdsdf;38384
@@ -3100,7 +3110,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139489" value="NEW SERVICE 333" id="contact-service-139489" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139498" value="NEW SERVICE 333" id="contact-service-139498" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE 333
@@ -3108,7 +3118,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139490" value="pp" id="contact-service-139490" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139499" value="pp" id="contact-service-139499" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 pp
@@ -3116,7 +3126,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139491" value="devansh2" id="contact-service-139491" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139500" value="devansh2" id="contact-service-139500" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 devansh2
@@ -3124,7 +3134,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139492" value="devansh2345" id="contact-service-139492" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139501" value="devansh2345" id="contact-service-139501" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 devansh2345
@@ -3132,7 +3142,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="139493" value="Devansh234543" id="contact-service-139493" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="139502" value="Devansh234543" id="contact-service-139502" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Devansh234543
@@ -3220,109 +3230,109 @@ observer.observe(target)
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139485"
-                                        name="139485"
+                                        id="contact-service-139494"
+                                        name="139494"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Mowing 2222 go pack goooo"
                                     />
-                                    <label for="contact-service-139485" class="ml-3 text-sm font-normal text-gray-700">Mowing 2222 go pack goooo</label>
+                                    <label for="contact-service-139494" class="ml-3 text-sm font-normal text-gray-700">Mowing 2222 go pack goooo</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139486"
-                                        name="139486"
+                                        id="contact-service-139495"
+                                        name="139495"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="a .  b / , m k p ' a"
                                     />
-                                    <label for="contact-service-139486" class="ml-3 text-sm font-normal text-gray-700">a .  b / , m k p ' a</label>
+                                    <label for="contact-service-139495" class="ml-3 text-sm font-normal text-gray-700">a .  b / , m k p ' a</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139487"
-                                        name="139487"
+                                        id="contact-service-139496"
+                                        name="139496"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="!#$@#$%^$&%*^;/'"
                                     />
-                                    <label for="contact-service-139487" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'</label>
+                                    <label for="contact-service-139496" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139488"
-                                        name="139488"
+                                        id="contact-service-139497"
+                                        name="139497"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="!#$@#$%^$&%*^;/'afdsdf;38384"
                                     />
-                                    <label for="contact-service-139488" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'afdsdf;38384</label>
+                                    <label for="contact-service-139497" class="ml-3 text-sm font-normal text-gray-700">!#$@#$%^$&%*^;/'afdsdf;38384</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139489"
-                                        name="139489"
+                                        id="contact-service-139498"
+                                        name="139498"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE 333"
                                     />
-                                    <label for="contact-service-139489" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 333</label>
+                                    <label for="contact-service-139498" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 333</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139490"
-                                        name="139490"
+                                        id="contact-service-139499"
+                                        name="139499"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="pp"
                                     />
-                                    <label for="contact-service-139490" class="ml-3 text-sm font-normal text-gray-700">pp</label>
+                                    <label for="contact-service-139499" class="ml-3 text-sm font-normal text-gray-700">pp</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139491"
-                                        name="139491"
+                                        id="contact-service-139500"
+                                        name="139500"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="devansh2"
                                     />
-                                    <label for="contact-service-139491" class="ml-3 text-sm font-normal text-gray-700">devansh2</label>
+                                    <label for="contact-service-139500" class="ml-3 text-sm font-normal text-gray-700">devansh2</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139492"
-                                        name="139492"
+                                        id="contact-service-139501"
+                                        name="139501"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="devansh2345"
                                     />
-                                    <label for="contact-service-139492" class="ml-3 text-sm font-normal text-gray-700">devansh2345</label>
+                                    <label for="contact-service-139501" class="ml-3 text-sm font-normal text-gray-700">devansh2345</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-139493"
-                                        name="139493"
+                                        id="contact-service-139502"
+                                        name="139502"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Devansh234543"
                                     />
-                                    <label for="contact-service-139493" class="ml-3 text-sm font-normal text-gray-700">Devansh234543</label>
+                                    <label for="contact-service-139502" class="ml-3 text-sm font-normal text-gray-700">Devansh234543</label>
                                 </div>
                             
                                 
