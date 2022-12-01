@@ -492,8 +492,8 @@ function send_sms(slug) {
     if(window.location.href.includes('dev')){
       prosite_url = 'https://dev.prosite.prophone.com'
     }
-    else if(window.location.href.includes('dev')){
-      prosite_url = 'https://prosite.prophone.com'
+    else if(window.location.href.includes('stage')){
+      prosite_url = 'https://stage.prosite.prophone.com'
     }
     else if(window.location.href.includes('8000')){
       prosite_url = 'http://127.0.0.1:8000'
@@ -1324,7 +1324,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1455,7 +1455,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
             <div class="space-y-5 flex flex-col items-center">
                 <h1 class="flex flex-col items-center space-y-4 mb-8">
                     <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Blog</span>
-                    <span class="text-3xl font-extrabold text-center text-primary sm:text-4xl sm:w-3/4">How to Choose the Right Landscaping &amp; Hardscaping Company</span>
+                    <span class="text-3xl font-extrabold text-center text-primary sm:text-4xl sm:w-3/4">Mkay, How to Choose the Right Landscaping &amp; Hardscaping Company</span>
                     <span class="block text-xl text-center text-gray-500">Nov 30, 2022</span>
                 </h1>
                 <div class="flex flex-col space-y-8 text-gray-500 text-lg text-left sm:max-w-3xl leading-8">
