@@ -32,6 +32,20 @@
   
   <script defer src='https://cdn.tailwindcss.com'></script>
   
+  <script>
+    window.deferLoadingAlpine = function (callback) {
+      let modeler = new BpmnJS({
+          container: '#canvas',
+      });
+  
+    //   axios.get('https://nanuc.io/alpine-performance/example.xml') 
+    //       .then(function (response) {
+    //           modeler.importXML(response.data);
+    //           callback();
+    //       });
+    }
+  </script>
+
   <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
