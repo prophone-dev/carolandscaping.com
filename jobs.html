@@ -855,11 +855,11 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                                     </a>
                                               
                                                     <a
-                                                        href=" gallery-bucksgallerys "
+                                                        href=" gallery-bucksgallery "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallerys</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
                                                     </a>
                                               
                                                     <a
@@ -1188,8 +1188,8 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
                                                     <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
                                                 </a>
                                             
-                                                <a href="gallery-bucksgallerys" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallerys</p>
+                                                <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
                                                 </a>
                                             
                                                 <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1324,7 +1324,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://localhost:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1624,7 +1624,7 @@ function runYourFunctionWhenJQueryIsLoaded(fn) {
     .replace(")", "")
     .replace("-", "")
     .replace(" ", "");
-  fetch("https://dev.prosite.prophone.com/sms/" + slug, {
+  fetch("http://localhost:8000/sms/" + slug, {
     method: "POST",
     body: JSON.stringify({
       sender_full_name: sender_full_name,
