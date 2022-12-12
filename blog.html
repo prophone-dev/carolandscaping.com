@@ -43,7 +43,6 @@
 
     
 
-
         <nav
     id="nav-bar"
     x-data="{ scrolledFromTop: false }"
@@ -797,7 +796,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -922,21 +921,28 @@
     <div
         class="flex justify-center m-auto w-full bg-primary bg-opacity-10"
     >
-        <div class="flex flex-col text-center justify-center items-center mx-8 mt-8 mb-16 sm:mx-auto sm:w-4/5">
-            <h1 class="text-3xl font-bold sm:text-4xl text-primary my-8">
-                <span class="block text-primary">Check out our blog</span>
+        <div class="flex flex-col items-center px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
+            <h1 class="text-3xl sm:text-4xl text-primary pb-16">
+                <span class="block text-primary font-extrabold">Check out our blog</span>
             </h1>
 
             <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
                 
                     <div class="flex flex-col bg-white rounded-lg shadow-lg p-8 items-start">
                         <div class="text-left text-sm text-gray-500">Dec 01, 2022</div>
-                        <div class="text-left text-xl text-gray-900 font-semibold mt-2">Tips to Keep Your Landscape &amp; Hardscape in Top Shape</div>
-                        <div class="text-left text-base text-gray-500 line-clamp-5 mt-4">A well-maintained landscape can be a beautiful addition to any home. Not only does it add curb appeal, but it can also increase the value of your property. However, maintaining a landscape can be …</div>
-                        <div class="text-left mt-4">
+                        <div class="text-left text-xl text-gray-900 font-semibold mt-2">
                             <a
-                                class="text-blue-600 font-semibold"
-                                href="blog/87"
+                                class="text-left text-xl text-gray-900 font-semibold"
+                                href="blog-87"
+                            >
+                                Tips to Keep Your Landscape &amp; Hardscape in Top Shape
+                            </a>
+                        </div>
+                        <div class="text-left text-base text-gray-500 line-clamp-5 mt-4">A well-maintained landscape can be a beautiful addition to any home. Not only does it add curb appeal, but it can also increase the value of your property. However, maintaining a landscape can be …</div>
+                        <div class="text-left mt-4 text-primary">
+                            <a
+                                class="text-primary font-semibold"
+                                href="blog-87"
                             >
                                 Read full post
                             </a>
@@ -945,12 +951,19 @@
                 
                     <div class="flex flex-col bg-white rounded-lg shadow-lg p-8 items-start">
                         <div class="text-left text-sm text-gray-500">Dec 01, 2022</div>
-                        <div class="text-left text-xl text-gray-900 font-semibold mt-2">Hardscaping: How to Add Curb Appeal with Paths, Walls, and More</div>
-                        <div class="text-left text-base text-gray-500 line-clamp-5 mt-4">If you&#x27;re looking to add curb appeal to your home, one of the best ways to do it is by adding features to your landscape. There are a variety of things you can add, from walls and fences to plants…</div>
-                        <div class="text-left mt-4">
+                        <div class="text-left text-xl text-gray-900 font-semibold mt-2">
                             <a
-                                class="text-blue-600 font-semibold"
-                                href="blog/88"
+                                class="text-left text-xl text-gray-900 font-semibold"
+                                href="blog-88"
+                            >
+                                Hardscaping: How to Add Curb Appeal with Paths, Walls, and More
+                            </a>
+                        </div>
+                        <div class="text-left text-base text-gray-500 line-clamp-5 mt-4">If you&#x27;re looking to add curb appeal to your home, one of the best ways to do it is by adding features to your landscape. There are a variety of things you can add, from walls and fences to plants…</div>
+                        <div class="text-left mt-4 text-primary">
+                            <a
+                                class="text-primary font-semibold"
+                                href="blog-88"
                             >
                                 Read full post
                             </a>
