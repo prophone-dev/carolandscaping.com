@@ -130,13 +130,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-NEW-SERVICE-33</loc>
-        <lastmod>2022-12-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-pp</loc>
         <lastmod>2022-12-16</lastmod>
         <changefreq>weekly</changefreq>
@@ -152,6 +145,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-devansh2345</loc>
+        <lastmod>2022-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-NEW-SERVICE-33</loc>
         <lastmod>2022-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
