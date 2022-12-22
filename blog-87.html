@@ -344,6 +344,25 @@
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                    >
+                                        Blog 
+                                    </a>
+                                
+                                
+                                
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" Thanks Giving "
                                         class=" border-secondary hover:border-gray-300  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
@@ -584,6 +603,17 @@
                                 
                             </div>
                         
+                            <div x-trap.inert="openMenu == 'navitem_7'">
+                                
+                                    <a
+                                        href=" blog "
+                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                        >Blog</a
+                                    >
+                                
+                                
+                            </div>
+                        
                             <div x-trap.inert="openMenu == 'navitem_8'">
                                 
                                     <a
@@ -785,22 +815,23 @@
 
                     
                         <section>
-    <div
-        class="flex justify-center m-auto w-full bg-primary bg-opacity-10"
-    >
-        <div class="flex flex-col items-center px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
-            <h1 class="text-3xl sm:text-4xl text-primary pb-16">
-                <span class="block text-primary font-extrabold">Check out our blog</span>
-            </h1>
-
-            <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-                
+    <div class="flex justify-center m-auto w-full bg-primary bg-opacity-10">
+        <div class="flex flex-col text-center justify-center items-center mx-8 my-16 sm:mx-auto sm:py-16 sm:w-4/5">
+            <div class="space-y-5 flex flex-col items-center">
+                <h1 class="flex flex-col items-center space-y-4 pb-8 sm:max-w-3xl">
+                    <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Blog</span>
+                    <span class="text-3xl font-extrabold text-center text-primary sm:text-4xl sm:w-3/4">Tips to Keep Your Landscape &amp; Hardscape in Top Shape</span>
+                    <span class="block text-lg text-center text-gray-500">Dec 01, 2022</span>
+                </h1>
+                <div class="flex flex-col space-y-8 text-gray-500 text-lg text-left sm:max-w-3xl leading-8">
+                    
+                        <p>A well-maintained landscape can be a beautiful addition to any home. Not only does it add curb appeal, but it can also increase the value of your property. However, maintaining a landscape can be a lot of work, especially if you don't have the right tools and equipment. That's why it's important to invest in a good landscaping maintenance service. A good landscaping maintenance service can take care of everything from mowing the lawn to trimming the bushes to weeding the garden. By investing in a landscaping maintenance service, you'll be able to save time and money in the long run. You'll also be able to relax and enjoy your well-manicured yard without having to worry about the upkeep.</p><p><strong>Invest in a good landscaping maintenance service.</strong></p><p>1. Maintaining a well-landscaped yard takes time, effort, and money. That's why it's important to invest in a good landscaping maintenance service.</p><p>2. A good landscaping maintenance service will keep your yard looking its best all year round, regardless of the weather conditions. They can do everything from mowing the lawn to trimming the bushes to weeding the garden.</p><p>3. By investing in a good landscaping maintenance service, you'll be able to save time and money in the long run. You'll also be able to relax and enjoy your well-manicured yard without having to worry about the upkeep.</p><p><strong>Regularly trim trees and shrubs.</strong></p><p>The practice of trimming trees and shrubs is a vital part of landscape maintenance. It helps to improve the overall appearance of the landscape, while also promoting healthy growth. There are a few different techniques that can be used when trimming trees and shrubs. The most common is to use hedge shears to cut the branches back to a desired length. This is a quick and easy way to maintain the shape of a plant. Another technique is to use a pruner to cut back the smaller branches. This is a more detailed process, but it can help to create a more polished look. Finally, shrubs can be trimmed with a lawn mower. This is typically used to cut the grass around the base of the shrub. It is important to regularly trim trees and shrubs to keep them looking their best.</p><p><strong>Mulch flower beds and gardens.</strong></p><p>Mulching flower beds and gardens is a great way to add organic matter to the soil, retain moisture, and suppress weed growth. In addition, mulching can give your garden a finished look. There are a variety of materials you can use for mulching, including organic materials like shredded leaves, straw, and compost, as well as inorganic materials like stone or plastic. When mulching, be sure to spread the material evenly and to the depth recommended by your local garden center.</p><p>Maintaining a landscape can be a lot of work, but it's definitely worth it for the added curb appeal and property value. By investing in a good landscaping maintenance service, you'll be able to relax and enjoy your well-manicured yard without having to worry about the upkeep.</p>
+                    
+                </div>
             </div>
-
         </div>
     </div>
 </section>
-
                         <template x-teleport="body">
     <div
             x-show="contactModalOpen"
