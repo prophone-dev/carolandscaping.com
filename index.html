@@ -407,6 +407,25 @@
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                    >
+                                        Blog 
+                                    </a>
+                                
+                                
+                                
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" Thanks Giving "
                                         class=" border-secondary hover:border-gray-300  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
@@ -642,6 +661,17 @@
                                         href=" jobs "
                                         class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                         >Jobs</a
+                                    >
+                                
+                                
+                            </div>
+                        
+                            <div x-trap.inert="openMenu == 'navitem_7'">
+                                
+                                    <a
+                                        href=" blog "
+                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                        >Blog</a
                                     >
                                 
                                 
