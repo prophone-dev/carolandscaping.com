@@ -34,7 +34,7 @@
     <script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
     <script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -1041,9 +1041,13 @@
           <div class="relative lg:-my-8">
               <!-- <div aria-hidden="true" class="absolute inset-x-0 top-0 bg-white h-1/2 lg:hidden"></div> -->
               <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-                  <div class="aspect-h-9 aspect-w-10">
+                  <div x-cloak class="aspect-h-9 aspect-w-10" x-data="{ shown: false }" x-intersect.half="shown = true">
                       <div
                           class="h-full rounded-xl bg-gray-50"
+                          x-show="shown"
+                          x-transition:enter="transition duration-1000"
+                          x-transition:enter-start="transform -translate-x-full opacity-0"
+                          x-transition:enter-end="transform translate-x-0 opacity-100"
                       >
                           <div
                               class="overflow-hidden shadow-xl h-full rounded-xl"
