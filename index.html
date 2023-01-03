@@ -30,8 +30,9 @@
     <script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
         function dynamicallyLoadJS(e){var t=document.createElement("script");t.type="application/javascript",t.src=e,document.head.appendChild(t)}function segmentScript(){window.location.href.includes("prosite.prophone.com")?segmentId="Z6dq7zq7CtZubdSRrh4EHjCsAasGDPiE":segmentId="9Ce585PETlETCGamY79KkSoBrcAdcdPc";var e=window.analytics=window.analytics||[];if(!e.initialize)if(e.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{e.invoked=!0,e.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"],e.factory=function(t){return function(){var n=Array.prototype.slice.call(arguments);return n.unshift(t),e.push(n),e}};for(var t=0;t<e.methods.length;t++){var n=e.methods[t];e[n]=e.factory(n)}e.load=function(t,n){var o=document.createElement("script");o.type="text/javascript",o.defer=!0,o.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(o,r),e._loadOptions=n},e._writeKey=segmentId,e.SNIPPET_VERSION="4.15.3",e.load(segmentId),e.page()}}function send_sms(e){const t=document.getElementById("sendButton");t.disabled=!0;document.getElementById("error-state-modal").innerHTML="",event.preventDefault();const n=e=>{const t=`${([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,(e=>(e^crypto.getRandomValues(new Uint8Array(1))[0]&15>>e/4).toString(16)))}.${(e=>e.split(",")[0].match(/:(.*?);/)[1].split("/")[1])(e)}`;return t};function o(e,t){return new Promise((function(n,o){const r=new XMLHttpRequest;console.log(t,"fileName");const a=`https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${t}&file_type=${e.type}`;console.log("newurl",a),r.open("GET",a),r.onreadystatechange=async function(){if(console.log("getSignedRequest - in onreadystatechange - xhr",r),4===r.readyState)if(200===r.status){const o=JSON.parse(r.responseText);await function(e,t,n){return new Promise((function(o,r){const a=new XMLHttpRequest;a.open("PUT",t),a.onreadystatechange=()=>{4===a.readyState&&(200===a.status?(console.log(n,"url in uploadFile"),o(e.name)):alert("Could not upload file."))},a.send(e)}))}(e,o.signedRequest,o.url);n(t)}else alert("Could not get signed URL.")},console.log("getSignedRequest -pre xhr.send"),r.send()}))}const r=e=>(e=>!!$(e).length)(e)?$(e).val():"",a=e=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var o=document.createElement("h1");o.innerHTML=e,o.className="ml-3",t.appendChild(n),t.appendChild(o),t.className="flex text-red-900 w-full p-4 rounded item-center align-center bg-red-100";document.getElementById("error-state-modal").appendChild(t)},[s,d,c]=(()=>{let e=r("#contact-full-name");if(e=e.trim(),e){const t=e.split(" ");return[e,t.shift(),t.join(" ")]}return["","",""]})();var i=r("#contact-phone-number"),l=r("#contact-email");if(!s){return a("Full Name is required"),void(t.disabled=!1)}if(!i&&!l){return a("Phone Number OR Email required"),void(t.disabled=!1)}var u=r("#contact-date"),m=r("#contact-promo-code"),p=r("#contact-address");const h=(()=>{var e=r("#contact-attachment");if(console.log(e,"ImageSrc"),e){const t=n(e);return o(function(e,t){for(var n=e.split(","),o=n[0].match(/:(.*?);/)[1],r=atob(n[1]),a=r.length,s=new Uint8Array(a);a--;)s[a]=r.charCodeAt(a);return new File([s],t,{type:o})}(e,t),t).then((e=>console.log(e))),t}return""})(),f=(()=>{const e=Array.from(document.querySelectorAll('[id^="contact-service"]'));if(e.length){const t=e.filter((e=>e.checked&&"Other"!==e.value)).map((e=>e.value)).join(","),n=r("#contact-service-other-text")||r("#contact-service-other-text2")||"";return n?t?`${t},${n}`:n:t}return""})(),g=r("#contact-concern-1"),y=r("#contact-concern-2");let v="";try{v=g?.length>0?g:y}catch(e){v=""}var w=i.replace("(","").replace(")","").replace("-","").replace(" ","");console.log(JSON.stringify({sender_full_name:s,sender_email:l,sender_promo:m,sender_fname:d,sender_lname:c,sender_number:w,sender_message:v,sender_address:p,sender_date:u,photo:h,services:f}));let _="https://prosite.prophone.com";window.location.href.includes("dev")?_="https://dev.prosite.prophone.com":window.location.href.includes("dev")?_="https://prosite.prophone.com":window.location.href.includes("8000")&&(_="http://127.0.0.1:8000"),fetch(_+"/sms/"+e,{method:"POST",body:JSON.stringify({sender_full_name:s,sender_email:l,sender_promo:m,sender_fname:d,sender_lname:c,sender_number:w,sender_message:v,sender_address:p,sender_date:u,photo:h,services:f})}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{document.getElementById("send-text-modal").style.display="none";return document.getElementById("text-thank-you").style.display="block",setTimeout((()=>{location.reload()}),3e3),e})).catch((e=>{t.disabled=!1,alert("There was a problem sending your text. Please reach out to Topline Pro.")}))}function runYourFunctionWhenJQueryIsLoaded(e){window.$?e():setTimeout((()=>runYourFunctionWhenJQueryIsLoaded(e)),5e3)}$("document").ready((function(){let e=$("#cover-button");if(void 0!==e.position()){let t=e.position().top-40;$(window).scroll((function(){$(window).scrollTop()<t?$("#side-button").hasClass("-translate-x-80")&&$("#side-button").removeClass("-translate-x-80").addClass("translate-x-64"):$("#side-button").addClass("transform -translate-x-80 ease-in duration-700")}))}else $("#side-button").addClass("transform -translate-x-80 ease-in duration-700")}));
@@ -472,7 +473,6 @@
                 </div>
             </div>
         </div>
-
         <div
             x-cloak
             x-show="mobileOpen"
@@ -483,7 +483,7 @@
             x-transition:leave="duration-100 ease-in"
             x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-95"
-            class="fixed inset-0 z-30 h-screen overflow-y-scroll transition origin-top-right transform xl:hidden"
+            class="fixed inset-0 z-30 h-screen transition origin-top-right transform xl:hidden"
         >
             <div class="flex flex-col h-full bg-white shadow-md ring-1 ring-black ring-opacity-5">
                 <div class="flex items-center justify-between px-5 pt-4">
@@ -510,213 +510,211 @@
                 </div>
                 <div class="flex flex-col overflow-y-scroll">
                     <div x-data="{ openMenu: '' }" class="flex flex-col px-2 pt-2 pb-3 space-y-1">
-                        
-                            <div x-trap.inert="openMenu == 'navitem_1'">
-                                
-                                    <a
-                                        href=" index "
-                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                        >Home</a
-                                    >
-                                
-                                
-                            </div>
-                        
-                            <div x-trap.inert="openMenu == 'navitem_2'">
-                                
-                                    <button
-                                        aria-haspopup="true"
-                                        :aria-expanded="openMenu == 'navitem_2'"
-                                        aria-controls="mobile-navitem_2"
-                                        @click="openMenu = openMenu == 'navitem_2' ? '' : 'navitem_2'"
-                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
-                                        :class="openMenu == 'navitem_2' ? 'z-30' : 'z-0'"
-                                    >
-                                        <span>Services</span>
-                                        <svg
-                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                            :class="{ '-rotate-180': openMenu == 'navitem_2' }"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clip-rule="evenodd"
-                                            />
-                                        </svg>
-                                    </button>
-                                
-                                
-                                    <div
-                                        x-cloak
-                                        x-show="openMenu == 'navitem_2'"
-                                        x-collapse
-                                        id="mobile-navitem_2"
-                                        role="menu"
-                                        class="z-20 pt-1 pb-2"
-                                        aria-orientation="vertical"
-                                    >
-                                        <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
-                                            
-                                                <a href="service-NEW-SERVICE-0" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">NEW SERVICE 0</p>
-                                                </a>
-                                            
-                                        </div>
-                                    </div>
-                                
-                            </div>
-                        
-                            <div x-trap.inert="openMenu == 'navitem_3'">
-                                
-                                    <button
-                                        aria-haspopup="true"
-                                        :aria-expanded="openMenu == 'navitem_3'"
-                                        aria-controls="mobile-navitem_3"
-                                        @click="openMenu = openMenu == 'navitem_3' ? '' : 'navitem_3'"
-                                        class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
-                                        :class="openMenu == 'navitem_3' ? 'z-30' : 'z-0'"
-                                    >
-                                        <span>Galleries</span>
-                                        <svg
-                                            class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                            :class="{ '-rotate-180': openMenu == 'navitem_3' }"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clip-rule="evenodd"
-                                            />
-                                        </svg>
-                                    </button>
-                                
-                                
-                                    <div
-                                        x-cloak
-                                        x-show="openMenu == 'navitem_3'"
-                                        x-collapse
-                                        id="mobile-navitem_3"
-                                        role="menu"
-                                        class="z-20 pt-1 pb-2"
-                                        aria-orientation="vertical"
-                                    >
-                                        <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
-                                            
-                                                <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
-                                                </a>
-                                            
-                                                <a href="gallery-New-Gallery2" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery2</p>
-                                                </a>
-                                            
-                                                <a href="gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
-                                                </a>
-                                            
-                                                <a href="gallery------------*---&#x27;" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
-                                                </a>
-                                            
-                                                <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                    <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
-                                                </a>
-                                            
-                                        </div>
-                                    </div>
-                                
-                            </div>
-                        
-                            <div x-trap.inert="openMenu == 'navitem_4'">
-                                
-                                    <a
-                                        href=" reviews "
-                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                        >Reviews</a
-                                    >
-                                
-                                
-                            </div>
-                        
-                            <div x-trap.inert="openMenu == 'navitem_5'">
-                                
-                                    <a
-                                        href=" team "
-                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                        >Team</a
-                                    >
-                                
-                                
-                            </div>
-                        
-                            <div x-trap.inert="openMenu == 'navitem_6'">
-                                
-                                    <a
-                                        href=" jobs "
-                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                        >Jobs</a
-                                    >
-                                
-                                
-                            </div>
-                        
-                            <div x-trap.inert="openMenu == 'navitem_7'">
-                                
-                                    <a
-                                        href=" blog "
-                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                        >Blog</a
-                                    >
-                                
-                                
-                            </div>
-                        
-                            <div x-trap.inert="openMenu == 'navitem_8'">
-                                
-                                    <a
-                                        href=" Thanks Giving "
-                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                        >Thanks Giving</a
-                                    >
-                                
-                                
-                            </div>
-                        
-                        
-                    </div>
-                        <div class="flex flex-col absolute bottom-0 w-full p-2 bg-primary sm:bg-gray-50">
-                            
-                            <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
-                                <a
-                                    href="https://calendly.com/caro-landscaping/15min"
-                                    class="relative block w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary hover:bg-gray-100 my-2"
-                                    >
-                                    Book Now3
-                                </a>
-                            </div>
-                            
-
-                            
-                            <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
-                                <a
-                                    target="_blank" rel="noopener noreferrer" 
-                                    href="https://calendly.com/caro-landscaping/15min"
-                                :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 sm:w-auto text-primary my-2"
-                                    >
-                                    Book Now4
-                                </a>
-                            </div>
-                             
-                        
                     
+                        <div x-trap.inert="openMenu == 'navitem_1'">
+                            
+                                <a
+                                    href=" index "
+                                    class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                    >Home</a
+                                >
+                            
+                            
+                        </div>
+                    
+                        <div x-trap.inert="openMenu == 'navitem_2'">
+                            
+                                <button
+                                    aria-haspopup="true"
+                                    :aria-expanded="openMenu == 'navitem_2'"
+                                    aria-controls="mobile-navitem_2"
+                                    @click="openMenu = openMenu == 'navitem_2' ? '' : 'navitem_2'"
+                                    class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
+                                    :class="openMenu == 'navitem_2' ? 'z-30' : 'z-0'"
+                                >
+                                    <span>Services</span>
+                                    <svg
+                                        class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                        :class="{ '-rotate-180': openMenu == 'navitem_2' }"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            
+                            
+                                <div
+                                    x-cloak
+                                    x-show="openMenu == 'navitem_2'"
+                                    x-collapse
+                                    id="mobile-navitem_2"
+                                    role="menu"
+                                    class="z-20 pt-1 pb-2"
+                                    aria-orientation="vertical"
+                                >
+                                    <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
+                                        
+                                            <a href="service-NEW-SERVICE-0" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <p class="mt-1 text-sm text-gray-500 uppercase">NEW SERVICE 0</p>
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div x-trap.inert="openMenu == 'navitem_3'">
+                            
+                                <button
+                                    aria-haspopup="true"
+                                    :aria-expanded="openMenu == 'navitem_3'"
+                                    aria-controls="mobile-navitem_3"
+                                    @click="openMenu = openMenu == 'navitem_3' ? '' : 'navitem_3'"
+                                    class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
+                                    :class="openMenu == 'navitem_3' ? 'z-30' : 'z-0'"
+                                >
+                                    <span>Galleries</span>
+                                    <svg
+                                        class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                        :class="{ '-rotate-180': openMenu == 'navitem_3' }"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            
+                            
+                                <div
+                                    x-cloak
+                                    x-show="openMenu == 'navitem_3'"
+                                    x-collapse
+                                    id="mobile-navitem_3"
+                                    role="menu"
+                                    class="z-20 pt-1 pb-2"
+                                    aria-orientation="vertical"
+                                >
+                                    <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
+                                        
+                                            <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
+                                            </a>
+                                        
+                                            <a href="gallery-New-Gallery2" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery2</p>
+                                            </a>
+                                        
+                                            <a href="gallery-2018-Forest-River-Hemisphere-GLX,-BAR-337" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <p class="mt-1 text-sm text-gray-500 uppercase">2018 Forest River Hemisphere GLX, BAR 337</p>
+                                            </a>
+                                        
+                                            <a href="gallery------------*---&#x27;" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
+                                            </a>
+                                        
+                                            <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                        <div x-trap.inert="openMenu == 'navitem_4'">
+                            
+                                <a
+                                    href=" reviews "
+                                    class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                    >Reviews</a
+                                >
+                            
+                            
+                        </div>
+                    
+                        <div x-trap.inert="openMenu == 'navitem_5'">
+                            
+                                <a
+                                    href=" team "
+                                    class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                    >Team</a
+                                >
+                            
+                            
+                        </div>
+                    
+                        <div x-trap.inert="openMenu == 'navitem_6'">
+                            
+                                <a
+                                    href=" jobs "
+                                    class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                    >Jobs</a
+                                >
+                            
+                            
+                        </div>
+                    
+                        <div x-trap.inert="openMenu == 'navitem_7'">
+                            
+                                <a
+                                    href=" blog "
+                                    class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                    >Blog</a
+                                >
+                            
+                            
+                        </div>
+                    
+                        <div x-trap.inert="openMenu == 'navitem_8'">
+                            
+                                <a
+                                    href=" Thanks Giving "
+                                    class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                    >Thanks Giving</a
+                                >
+                            
+                            
+                        </div>
+                    
+                    
+                    </div>
+                    <div class="flex flex-col absolute bottom-0 w-full p-2 bg-primary sm:bg-gray-50">
+                        
+                        <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
+                            <a
+                                href="https://calendly.com/caro-landscaping/15min"
+                                class="relative block w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary hover:bg-gray-100 my-2"
+                                >
+                                Book Now3
+                            </a>
+                        </div>
+                        
+
+                        
+                        <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
+                            <a
+                                target="_blank" rel="noopener noreferrer" 
+                                href="https://calendly.com/caro-landscaping/15min"
+                            :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
+                            class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 sm:w-auto text-primary my-2"
+                                >
+                                Book Now4
+                            </a>
+                        </div>
+                         
                         </div>
                         </div>
                     </div>
@@ -725,6 +723,7 @@
         </div>
     </div>
 </nav>
+
 
 <script>
     const navBar = document.getElementById('nav-bar')
