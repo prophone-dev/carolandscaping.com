@@ -477,17 +477,16 @@
         <div
             x-cloak
             x-show="mobileOpen"
-            x-trap.inert.noscroll="mobileOpen"
             x-transition:enter="duration-150 ease-out"
             x-transition:enter-start="opacity-0 scale-95"
             x-transition:enter-end="opacity-100 scale-100"
             x-transition:leave="duration-100 ease-in"
             x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-95"
-            class="fixed inset-0 z-30 h-screen transition origin-top-right transform xl:hidden"
+            class="fixed inset-0 z-30 h-screen transition transform xl:hidden"
         >
             <div
-                class="flex flex-col h-full bg-white shadow-md ring-1 ring-black ring-opacity-5"
+                class="block h-full bg-white shadow-md ring-1 ring-black ring-opacity-5"
                 style="height: -webkit-fill-available;"
             >
                 <div class="flex items-center justify-between px-5 pt-4">
