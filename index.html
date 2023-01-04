@@ -114,6 +114,7 @@
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32': !scrolledFromTop, 'h-16': scrolledFromTop}"
     class="fixed top-0 inset-x-0 z-20"
+    style="height: -webkit-fill-available;"
 >
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
@@ -487,7 +488,6 @@
         >
             <div
                 class="flex flex-col h-full bg-white shadow-md ring-1 ring-black ring-opacity-5"
-                style="height: -webkit-fill-available;"
             >
                 <div class="flex items-center justify-between px-5 pt-4">
                     <div>
