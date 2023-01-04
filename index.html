@@ -480,9 +480,9 @@
                 x-transition:leave="duration-100 ease-in"
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-95"
-                class="fixed inset-0 z-30 h-screen overflow-y-scroll transition origin-top-right transform xl:hidden"
+                class="fixed inset-0 z-40 overflow-y-scroll transition origin-top-right transform xl:hidden"
             >
-                <div class="flex flex-col h-full overflow-hidden bg-white shadow-md ring-1 ring-black ring-opacity-5">
+                <div class="flex flex-col w-full h-full bg-white shadow-md ring-1 ring-black ring-opacity-5">
                     <div class="flex items-center justify-between px-5 pt-4">
                         <div>
                             <a
@@ -505,8 +505,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="flex flex-col grow overflow-y-scroll">
-                        <div x-data="{ openMenu: '' }" class="flex flex-col grow px-2 pt-2 pb-3 space-y-1">
+                    <div class="flex flex-col overflow-y-scroll">
+                        <div x-data="{ openMenu: '' }" class="flex flex-col px-2 pt-2 pb-3 space-y-1">
                             
                                 <div x-trap.inert="openMenu == 'navitem_1'">
                                     
@@ -688,7 +688,7 @@
                             
                             
                         </div>
-                            <div class="flex flex-col d-none p-2 bg-primary sm:bg-gray-50">
+                            <div class="flex flex-col fixed bottom-0 w-full p-2 bg-primary sm:bg-gray-50">
                                 
                                 <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
                                     <a
