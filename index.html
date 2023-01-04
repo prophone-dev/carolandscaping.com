@@ -443,27 +443,27 @@
                     <p :class="{'translate-x-0': !scrolledFromTop, 'translate-x-12': scrolledFromTop}" class="text-gray-500 transition-transform">
                         
                     </p>
-                    <div class="flex w-full sm:w-auto">
+                    <div class="w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('link')" class="flex w-full sm:w-auto">
+                        <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
                             <a
                                 target="_blank" rel="noopener noreferrer" 
                                 href="https://calendly.com/caro-landscaping/15min"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="relative flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none hover:bg-primary-darker sm:w-auto bg-primary focus-visible:ring-2 ring-primary ring-opacity-75 ring-offset-2"
+                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none hover:bg-primary-darker sm:w-auto bg-primary focus-visible:ring-2 ring-primary ring-opacity-75 ring-offset-2"
                                 >
                                Book Now3
                             </a>
                         </div>
                         
                     </div>
-                    <div class="inline-flex flex w-full sm:w-auto">
+                    <div class="inline-flex w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('link')" class="inline-flex flex w-full sm:w-auto">
+                        <div onclick="postCtaClick('link')" class="inline-flex w-full sm:w-auto">
                             <a
                                 href="https://calendly.com/caro-landscaping/15min"
                             :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                            class="relative flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
+                            class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
                                 >
                                 Book Now4
                             </a>
@@ -485,7 +485,10 @@
             x-transition:leave-end="opacity-0 scale-95"
             class="fixed inset-0 z-30 h-screen transition origin-top-right transform xl:hidden"
         >
-            <div class="flex flex-col h-full overflow-y-scroll bg-white shadow-md ring-1 ring-black ring-opacity-5">
+            <div
+                class="flex flex-col h-full bg-white shadow-md ring-1 ring-black ring-opacity-5"
+                style="height: -webkit-fill-available;"
+            >
                 <div class="flex items-center justify-between px-5 pt-4">
                     <div>
                         <a
@@ -499,7 +502,7 @@
                         <button
                             @click="mobileOpen = false"
                             type="button"
-                            class="relative flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                         >
                             <span class="sr-only">Close menu</span>
                             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -508,9 +511,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="block h-screen overflow-y-scroll">
+                <div class="flex flex-col overflow-y-scroll">
                     <div x-data="{ openMenu: '' }" class="flex flex-col px-2 pt-2 pb-3 space-y-1">
-                        
+                    
                         <div x-trap.inert="openMenu == 'navitem_1'">
                             
                                 <a
@@ -691,12 +694,12 @@
                     
                     
                     </div>
-                    <div class="block z-50 fixed bottom-0 w-full p-2 bg-primary sm:bg-gray-50">
+                    <div class="flex flex-col absolute bottom-0 w-full p-2 bg-primary sm:bg-gray-50">
                         
-                        <div onclick="postCtaClick('link')" class="flex w-full sm:w-auto">
+                        <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
                             <a
                                 href="https://calendly.com/caro-landscaping/15min"
-                                class="relative flex items-center justify-center w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary hover:bg-gray-100 my-2"
+                                class="relative block w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white sm:text-secondary hover:bg-gray-100 my-2"
                                 >
                                 Book Now3
                             </a>
@@ -704,12 +707,12 @@
                         
 
                         
-                        <div onclick="postCtaClick('link')" class="flex w-full sm:w-auto">
+                        <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
                             <a
                                 target="_blank" rel="noopener noreferrer" 
                                 href="https://calendly.com/caro-landscaping/15min"
                             :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                            class="relative flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 sm:w-auto text-primary my-2"
+                            class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 sm:w-auto text-primary my-2"
                                 >
                                 Book Now4
                             </a>
