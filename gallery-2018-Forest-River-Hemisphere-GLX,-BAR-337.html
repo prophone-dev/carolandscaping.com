@@ -464,10 +464,7 @@
                             </button>
                         </div>
                     </div>
-                    <div
-                        class="relative block overflow-y-scroll"
-                        style="height: 280px;"
-                    >
+                    <div class="flex flex-col screen-height-minus-navbar overflow-y-scroll">
                         <div x-data="{ openMenu: '' }" class="relative block overflow-y-scroll h-full px-2 pt-2 pb-3 space-y-1">
                             
                                 <div x-trap.inert="openMenu == 'navitem_1'">
@@ -663,7 +660,7 @@
                                 </div>
                             
                         </div>
-                            <div class="flex flex-col fixed bottom-0 w-full p-2 bg-primary sm:bg-gray-50">
+                            <div class="flex flex-col w-full p-2 bg-primary sm:bg-gray-50 h-40">
                                 
                                 <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
                                     <a
@@ -731,7 +728,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
