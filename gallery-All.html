@@ -440,6 +440,7 @@
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-95"
                 class="fixed inset-0 z-40 overflow-y-scroll transition origin-top-right transform xl:hidden"
+                style="height:100vh; max-height: -webkit-fill-available;"
             >
                 <div class="block w-full h-full overflow-y-scroll bg-white shadow-md ring-1 ring-black ring-opacity-5">
                     <div class="flex sticky top-0 z-50 bg-white h-auto items-center justify-between px-5 pt-4">
@@ -660,7 +661,7 @@
                                 </div>
                             
                         </div>
-                            <div class="flex flex-col absolute bottom-0 w-full p-2 bg-primary sm:bg-gray-50">
+                            <div class="flex flex-col w-full p-2 bg-primary sm:bg-gray-50">
                                 
                                 <div onclick="postCtaClick('link')" class="w-full sm:w-auto">
                                     <a
@@ -3002,7 +3003,7 @@ runYourFunctionWhenJQueryIsLoaded(nacFunction);
             class="fixed inset-0 z-40 py-0 sm:py-8"
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
-            style="max-height: -webkit-fill-available;"
+            style="height: 100vh; max-height: -webkit-fill-available;"
     >
         <div
                 x-show="contactModalOpen"
