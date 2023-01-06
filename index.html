@@ -779,7 +779,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -904,6 +904,7 @@
                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/437c06f6-cb41-4957-9067-c65ba44eb8f7.jpeg"
                         alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
                         width="180" height="90"
+                        fetchpriority="high"
                 />
             </picture>
             
@@ -933,6 +934,7 @@
                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/d8aa9e4e-50b8-4149-8da5-d673ea54b1d1.jpeg"
                         alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
                         width="180" height="90"
+                        fetchpriority="high"
                 />
             </picture>
             
@@ -962,6 +964,7 @@
                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/E96VKP83FWPQKF9C1Y8R35B8DJY01IE79NYWQLUE.png"
                         alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
                         width="180" height="90"
+                        fetchpriority="high"
                 />
             </picture>
             
@@ -971,6 +974,84 @@
     </div>
     
 </div>
+
+<script>
+    const LCP_SUB_PARTS = [
+  'Time to first byte',
+  'Resource load delay',
+  'Resource load time',
+  'Element render delay',
+];
+
+new PerformanceObserver((list) => {
+  const lcpEntry = list.getEntries().at(-1);
+  const navEntry = performance.getEntriesByType('navigation')[0];
+  const lcpResEntry = performance
+    .getEntriesByType('resource')
+    .filter((e) => e.name === lcpEntry.url)[0];
+
+  // Ignore LCP entries that aren't images to reduce DevTools noise.
+  // Comment this line out if you want to include text entries.
+  if (!lcpEntry.url) return;
+
+  // Compute the start and end times of each LCP sub-part.
+  // WARNING! If your LCP resource is loaded cross-origin, make sure to add
+  // the `Timing-Allow-Origin` (TAO) header to get the most accurate results.
+  const ttfb = navEntry.responseStart;
+  const lcpRequestStart = Math.max(
+    ttfb,
+    // Prefer `requestStart` (if TOA is set), otherwise use `startTime`.
+    lcpResEntry ? lcpResEntry.requestStart || lcpResEntry.startTime : 0
+  );
+  const lcpResponseEnd = Math.max(
+    lcpRequestStart,
+    lcpResEntry ? lcpResEntry.responseEnd : 0
+  );
+  const lcpRenderTime = Math.max(
+    lcpResponseEnd,
+    // Prefer `renderTime` (if TOA is set), otherwise use `loadTime`.
+    lcpEntry ? lcpEntry.renderTime || lcpEntry.loadTime : 0
+  );
+
+  // Clear previous measures before making new ones.
+  // Note: due to a bug this does not work in Chrome DevTools.
+  LCP_SUB_PARTS.forEach((part) => performance.clearMeasures(part));
+
+  // Create measures for each LCP sub-part for easier
+  // visualization in the Chrome DevTools Performance panel.
+  const lcpSubPartMeasures = [
+    performance.measure(LCP_SUB_PARTS[0], {
+      start: 0,
+      end: ttfb,
+    }),
+    performance.measure(LCP_SUB_PARTS[1], {
+      start: ttfb,
+      end: lcpRequestStart,
+    }),
+    performance.measure(LCP_SUB_PARTS[2], {
+      start: lcpRequestStart,
+      end: lcpResponseEnd,
+    }),
+    performance.measure(LCP_SUB_PARTS[3], {
+      start: lcpResponseEnd,
+      end: lcpRenderTime,
+    }),
+  ];
+
+  // Log helpful debug information to the console.
+  console.log('LCP value: ', lcpRenderTime);
+  console.log('LCP element: ', lcpEntry.element, lcpEntry.url);
+  console.table(
+    lcpSubPartMeasures.map((measure) => ({
+      'LCP sub-part': measure.name,
+      'Time (ms)': measure.duration,
+      '% of LCP': `${
+        Math.round((1000 * measure.duration) / lcpRenderTime) / 10
+      }%`,
+    }))
+  );
+}).observe({type: 'largest-contentful-paint', buffered: true});
+</script>
                 
             
         
