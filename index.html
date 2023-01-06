@@ -868,24 +868,26 @@
         </div>
     </div>
 
-    <!-- 
+    <div id="non-carousel" class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2" style="display: block;">
         
-        <div
-            class="absolute inset-0"
-            id="non-carousel"
-        >
             
-                <img
-                        class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                        src="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/437c06f6-cb41-4957-9067-c65ba44eb8f7.jpeg"
-                        alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
-                        fetchpriority="high"
-                        loading="eager"
-                />
+            <div
+                class="absolute inset-0"
+            >
+                
+                    <img
+                            class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/437c06f6-cb41-4957-9067-c65ba44eb8f7.jpeg"
+                            alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
+                            fetchpriority="high"
+                            loading="eager"
+                    />
+                
+            </div>
             
-        </div>
         
-     -->
+    </div>
+
     <div id="carousel" style="display: none;">
         
         <div
@@ -1002,6 +1004,7 @@
 <script>
     function showCarousel() {
         document.getElementById('carousel').style.display = 'block'
+        document.getElementById('non-carousel').style.display = 'none'
     }
 
     setTimeout(()=>{
