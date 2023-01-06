@@ -867,110 +867,149 @@
             </main>
         </div>
     </div>
+
+    <!-- 
+        
+        <div
+            class="absolute inset-0"
+            id="non-carousel"
+        >
+            
+                <img
+                        class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                        src="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/437c06f6-cb41-4957-9067-c65ba44eb8f7.jpeg"
+                        alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
+                        fetchpriority="high"
+                        loading="eager"
+                />
+            
+        </div>
+        
+     -->
+    <div id="carousel" style="display: none;">
+        
+        <div
+                x-cloak
+                x-data="{
+                    activeImage: 1,
+                    amountOfImages: 3,
+                    loop() {
+                        setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
+                    },
+                }"
+                x-init="loop"
+                class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
+        >
+            
+            <div
+                    class="absolute inset-0"
+                    x-show="activeImage === 1"
+                    x-transition:enter="transition duration-1000"
+                    x-transition:enter-start="transform translate-x-full"
+                    x-transition:enter-end="transform translate-x-0"
+                    x-transition:leave="transition duration-1000"
+                    x-transition:leave-start="transform"
+                    x-transition:leave-end="transform -translate-x-full"
+            >
+                
+                <picture>
+                    <source class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/437c06f6-cb41-4957-9067-c65ba44eb8f7.jpeg"
+                            media="(min-width: 500px)"
+                            alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
+                            width="640" height="360"
+                    >
+                    <img
+                            class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/437c06f6-cb41-4957-9067-c65ba44eb8f7.jpeg"
+                            alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
+                            width="180" height="90"
+                            fetchpriority="high"
+                            loading="eager"
+                    />
+                </picture>
+                
     
-    <div
-            x-cloak
-            x-data="{
-                activeImage: 1,
-                amountOfImages: 3,
-                loop() {
-                    setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
-                },
-            }"
-            x-init="loop"
-            class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-    >
-        
-        <div
-                class="absolute inset-0"
-                x-show="activeImage === 1"
-                x-transition:enter="transition duration-1000"
-                x-transition:enter-start="transform translate-x-full"
-                x-transition:enter-end="transform translate-x-0"
-                x-transition:leave="transition duration-1000"
-                x-transition:leave-start="transform"
-                x-transition:leave-end="transform -translate-x-full"
-        >
+            </div>
             
-            <picture>
-                <source class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/437c06f6-cb41-4957-9067-c65ba44eb8f7.jpeg"
-                        media="(min-width: 500px)"
-                        alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
-                        width="640" height="360"
-                >
-                <img
-                        class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/437c06f6-cb41-4957-9067-c65ba44eb8f7.jpeg"
-                        alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
-                        width="180" height="90"
-                />
-            </picture>
+            <div
+                    class="absolute inset-0"
+                    x-show="activeImage === 2"
+                    x-transition:enter="transition duration-1000"
+                    x-transition:enter-start="transform translate-x-full"
+                    x-transition:enter-end="transform translate-x-0"
+                    x-transition:leave="transition duration-1000"
+                    x-transition:leave-start="transform"
+                    x-transition:leave-end="transform -translate-x-full"
+            >
+                
+                <picture>
+                    <source class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/d8aa9e4e-50b8-4149-8da5-d673ea54b1d1.jpeg"
+                            media="(min-width: 500px)"
+                            alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
+                            width="640" height="360"
+                    >
+                    <img
+                            class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/d8aa9e4e-50b8-4149-8da5-d673ea54b1d1.jpeg"
+                            alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
+                            width="180" height="90"
+                            fetchpriority="high"
+                            loading="eager"
+                    />
+                </picture>
+                
+    
+            </div>
             
-
-        </div>
-        
-        <div
-                class="absolute inset-0"
-                x-show="activeImage === 2"
-                x-transition:enter="transition duration-1000"
-                x-transition:enter-start="transform translate-x-full"
-                x-transition:enter-end="transform translate-x-0"
-                x-transition:leave="transition duration-1000"
-                x-transition:leave-start="transform"
-                x-transition:leave-end="transform -translate-x-full"
-        >
+            <div
+                    class="absolute inset-0"
+                    x-show="activeImage === 3"
+                    x-transition:enter="transition duration-1000"
+                    x-transition:enter-start="transform translate-x-full"
+                    x-transition:enter-end="transform translate-x-0"
+                    x-transition:leave="transition duration-1000"
+                    x-transition:leave-start="transform"
+                    x-transition:leave-end="transform -translate-x-full"
+            >
+                
+                <picture>
+                    <source class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/E96VKP83FWPQKF9C1Y8R35B8DJY01IE79NYWQLUE.png"
+                            media="(min-width: 500px)"
+                            alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
+                            width="640" height="360"
+                    >
+                    <img
+                            class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/E96VKP83FWPQKF9C1Y8R35B8DJY01IE79NYWQLUE.png"
+                            alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
+                            width="180" height="90"
+                            fetchpriority="high"
+                            loading="eager"
+                    />
+                </picture>
+                
+    
+            </div>
             
-            <picture>
-                <source class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/d8aa9e4e-50b8-4149-8da5-d673ea54b1d1.jpeg"
-                        media="(min-width: 500px)"
-                        alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
-                        width="640" height="360"
-                >
-                <img
-                        class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/d8aa9e4e-50b8-4149-8da5-d673ea54b1d1.jpeg"
-                        alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
-                        width="180" height="90"
-                />
-            </picture>
-            
-
-        </div>
-        
-        <div
-                class="absolute inset-0"
-                x-show="activeImage === 3"
-                x-transition:enter="transition duration-1000"
-                x-transition:enter-start="transform translate-x-full"
-                x-transition:enter-end="transform translate-x-0"
-                x-transition:leave="transition duration-1000"
-                x-transition:leave-start="transform"
-                x-transition:leave-end="transform -translate-x-full"
-        >
-            
-            <picture>
-                <source class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/E96VKP83FWPQKF9C1Y8R35B8DJY01IE79NYWQLUE.png"
-                        media="(min-width: 500px)"
-                        alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
-                        width="640" height="360"
-                >
-                <img
-                        class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/540x540/filters:format(webp)/filters:quality(90)/filters:strip_exif()/media/E96VKP83FWPQKF9C1Y8R35B8DJY01IE79NYWQLUE.png"
-                        alt="landscaping near me company caro-landscapings oy oy oy!!!!! in New York City, NY"
-                        width="180" height="90"
-                />
-            </picture>
-            
-
         </div>
         
     </div>
     
+    
 </div>
+
+<script>
+    function showCarousel() {
+        document.getElementById('carousel').style.display = 'block'
+    }
+
+    setTimeout(()=>{
+        showCarousel()
+    }, 0)
+</script>
                 
             
         
