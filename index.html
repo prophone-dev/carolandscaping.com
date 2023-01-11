@@ -791,7 +791,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -853,7 +853,7 @@
                     </div>
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         
-                        <div id="cta_text_button" onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
+                        <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
                             <button
                                     @click="contactModalOpen = true"
                                     class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-secondary-darker focus:outline-none ring-offset-2 focus:ring-2 ring-primary ring-opacity-75 sm:w-auto bg-secondary"
