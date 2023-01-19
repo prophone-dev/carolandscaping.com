@@ -109,7 +109,8 @@
                 
                 
                 
-                    <nav
+                    
+<nav
     id="nav-bar"
     x-data="{ scrolledFromTop: false }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
@@ -135,13 +136,16 @@
                         <a  href= " index "
                             class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                         >
-                            <img
-                                class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
-                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png"
-                                alt="Brand Logo"
-                                width="160" height="160"
-                                loading="lazy"
-                            />
+                            <picture>
+                                <source class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png" width="160" height="160" loading="lazy" />
+                                <img
+                                    class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png"
+                                    alt="Brand Logo"
+                                    width="160" height="160"
+                                    loading="lazy"
+                                />
+                            </picture>
                         </a>
                     
                     </div>
@@ -529,7 +533,14 @@
                                 href=" index "
                                 class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                             >
-                                <img class="h-[80px]" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png" alt="Brand Logo" />
+                                <picture>
+                                    <source class="h-[80px]" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png" />
+                                    <img
+                                        class="h-[80px]"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png"
+                                        alt="Brand Logo"
+                                    />
+                                </picture>
                             </a>
                         </div>
                         <div class="-mr-2">
@@ -812,7 +823,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -848,6 +859,8 @@
                 
                 
                     
+
+
 <div class="relative overflow-hidden bg-primary">
     <div class="mx-auto max-w-7xl mb-0">
         <div class="relative z-10 py-8 bg-primary text-white sm:py-16 md:py-20 lg:max-w-2xl lg:w-full lg:py-28 xl:py-32">
@@ -1018,7 +1031,9 @@
                 
                 
                 
-                    <section class="pt-16 bg-white lg:py-24">
+                    
+
+<section class="pt-16 bg-white lg:py-24">
   <div class="pb-16 bg-gray-50 lg:pb-0 lg:z-10 lg:relative">
       <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-8">
           <div class="relative lg:-my-8">
@@ -1268,6 +1283,8 @@
                 
                 
                     
+
+
                 
             
         
@@ -1278,7 +1295,9 @@
                 
                 
                 
-                    <!--  -->
+                    
+
+<!--  -->
 
 <section x-data="{ showMore: false }" class="overflow-hidden bg-white" id="services">
     <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
@@ -1627,7 +1646,9 @@
             <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Our Best Work</span>
         </h2>
         <div class="relative mt-12">
-            <div
+            
+
+<div
         x-data="{
         activeImage: 0,
         amountOfImages: 2,
@@ -2865,6 +2886,7 @@ observer.observe(target)
                 
                     
 
+
 <footer class="bg-primary" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-10 lg:px-8">
@@ -3311,7 +3333,9 @@ observer.observe(target)
                 
                 
                 
-                    <template x-teleport="body">
+                    
+
+<template x-teleport="body">
     <div
             x-show="contactModalOpen"
             @keydown.escape.prevent.stop="contactModalOpen = false"
