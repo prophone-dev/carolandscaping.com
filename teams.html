@@ -46,8 +46,7 @@
 
     
 
-        
-<nav
+        <nav
     id="nav-bar"
     x-data="{ scrolledFromTop: false }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
@@ -73,16 +72,13 @@
                         <a  href= " index "
                             class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                         >
-                            <picture>
-                                <source class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png" width="160" height="160" loading="lazy" />
-                                <img
-                                    class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
-                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png"
-                                    alt="Brand Logo"
-                                    width="160" height="160"
-                                    loading="lazy"
-                                />
-                            </picture>
+                            <img
+                                class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
+                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png"
+                                alt="Brand Logo"
+                                width="160" height="160"
+                                loading="lazy"
+                            />
                         </a>
                     
                     </div>
@@ -470,14 +466,7 @@
                                 href=" index "
                                 class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                             >
-                                <picture>
-                                    <source class="h-[80px]" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png" />
-                                    <img
-                                        class="h-[80px]"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png"
-                                        alt="Brand Logo"
-                                    />
-                                </picture>
+                                <img class="h-[80px]" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/3646e2cf-2e6c-41a0-9e17-08fcc2920d79.png" alt="Brand Logo" />
                             </a>
                         </div>
                         <div class="-mr-2">
@@ -760,7 +749,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -874,7 +863,6 @@
 
                     
                         
-
 <section class="bg-white">
     <div class="flex flex-col items-center px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
         <header class="text-center">
@@ -940,9 +928,7 @@
     </div>
 </section>
 
-                        
-
-<template x-teleport="body">
+                        <template x-teleport="body">
     <div
             x-show="contactModalOpen"
             @keydown.escape.prevent.stop="contactModalOpen = false"
@@ -1480,7 +1466,6 @@
              
             
         
-
 
 <footer class="bg-primary" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
