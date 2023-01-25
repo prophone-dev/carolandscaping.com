@@ -759,10 +759,21 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
         <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2  style= "color:#52ffd4" class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
             <h2  style= "color:#ee00ff" class="my-3 mb-10 text-xl font-medium  text-#111827-400  text-center">See why our customers love us</h2>
-            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/12c20a89-cd87-4474-a69f-9f8d11ffa5f4.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/de57c8a7-bc9b-49c3-8af4-0749e8045561.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c6b13ff2-7ab0-45c8-858c-119c88c157e5.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/36501176-d029-47fc-b15f-774625e7a1dc.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2637e223-9a40-49b7-a7a3-1d5c2ab4420c.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c0c2adba-5615-4e76-a255-eae1deaaa049.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/597735ab-80df-446d-903d-e7ab878b1179.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/12c20a89-cd87-4474-a69f-9f8d11ffa5f4.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/de57c8a7-bc9b-49c3-8af4-0749e8045561.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c6b13ff2-7ab0-45c8-858c-119c88c157e5.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/36501176-d029-47fc-b15f-774625e7a1dc.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2637e223-9a40-49b7-a7a3-1d5c2ab4420c.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c0c2adba-5615-4e76-a255-eae1deaaa049.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
                                     
                         
                         <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/597735ab-80df-446d-903d-e7ab878b1179.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/597735ab-80df-446d-903d-e7ab878b1179.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/12c20a89-cd87-4474-a69f-9f8d11ffa5f4.png"  alt="photo of best work"   loading="lazy" />
                                 <img
@@ -773,7 +784,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/de57c8a7-bc9b-49c3-8af4-0749e8045561.png"  alt="photo of best work"   loading="lazy" />
                                 <img
@@ -784,7 +795,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c6b13ff2-7ab0-45c8-858c-119c88c157e5.png"  alt="photo of best work"   loading="lazy" />
                                 <img
@@ -795,7 +806,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/36501176-d029-47fc-b15f-774625e7a1dc.png"  alt="photo of best work"   loading="lazy" />
                                 <img
@@ -806,7 +817,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2637e223-9a40-49b7-a7a3-1d5c2ab4420c.jpeg"  alt = "-image"   loading="lazy" />
                                 <img
@@ -817,7 +828,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c0c2adba-5615-4e76-a255-eae1deaaa049.jpeg"  alt = "-image"   loading="lazy" />
                                 <img
