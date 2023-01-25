@@ -1076,7 +1076,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 10,
+        amountOfImages: 9,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1123,27 +1123,6 @@
                         <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             <div class="aspect-w-3 aspect-h-2">
                                 
-                                    
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/media/86ed3cb1-b53a-4f8d-812c-cf5de69fba50.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
-                                    
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            <div class="aspect-w-3 aspect-h-2">
-                                
                                     <video class="rounded shadow-md object-cover w-full h-full" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/97542e69-bd9c-4405-b58c-6d067507adde.undefined#t=0.5" >
                                     </video>
                                 
@@ -1161,7 +1140,7 @@
             
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
@@ -1182,7 +1161,7 @@
             
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
@@ -1203,7 +1182,7 @@
             
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
@@ -1224,7 +1203,7 @@
             
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
@@ -1245,7 +1224,7 @@
             
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
@@ -1266,7 +1245,7 @@
             
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
@@ -1287,7 +1266,7 @@
             
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
@@ -1358,15 +1337,6 @@
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/86ed3cb1-b53a-4f8d-812c-cf5de69fba50.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 2">
                                         
                                             <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted> <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/97542e69-bd9c-4405-b58c-6d067507adde.undefined#t=0.5" >
                                             </video>
@@ -1374,7 +1344,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                    <li class="flex flex-col" x-show="activeImage === 2">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/98db1653-6d2e-415b-b324-65dbc9a26cd5.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
@@ -1383,7 +1353,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 4">
+                                    <li class="flex flex-col" x-show="activeImage === 3">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/de57c8a7-bc9b-49c3-8af4-0749e8045561.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
@@ -1392,7 +1362,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 5">
+                                    <li class="flex flex-col" x-show="activeImage === 4">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/12c20a89-cd87-4474-a69f-9f8d11ffa5f4.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
@@ -1401,7 +1371,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 6">
+                                    <li class="flex flex-col" x-show="activeImage === 5">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c6b13ff2-7ab0-45c8-858c-119c88c157e5.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
@@ -1410,7 +1380,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 7">
+                                    <li class="flex flex-col" x-show="activeImage === 6">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/36501176-d029-47fc-b15f-774625e7a1dc.png" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
@@ -1419,7 +1389,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 8">
+                                    <li class="flex flex-col" x-show="activeImage === 7">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/2637e223-9a40-49b7-a7a3-1d5c2ab4420c.jpeg" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
@@ -1428,7 +1398,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 9">
+                                    <li class="flex flex-col" x-show="activeImage === 8">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c0c2adba-5615-4e76-a255-eae1deaaa049.jpeg" alt="All Photos for caro-landscapings oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
