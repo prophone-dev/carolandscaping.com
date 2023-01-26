@@ -925,7 +925,7 @@
 
     async function postCtaClick(type) {
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1127,7 +1127,20 @@
                 >
                     <div @keydown.right="next" @keydown.left="prev" tabindex="0" role="region" aria-labelledby="carousel-label" class="relative focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2">
                         <h2 id="carousel-label" class="sr-only" hidden>Reviews Carousel</h2>
-                        
+                        <div class="absolute flex justify-between -inset-8">
+                            <button @click="prev" class="text-6xl">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m10 19-7-7m0 0 7-7m-7 7h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to previous review</span>
+                            </button>
+                            <button @click="next" class="text-6xl">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m14 5 7 7m0 0-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to next slide</span>
+                            </button>
+                        </div>
                         <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
                         <ul id="services-image-slider" x-ref="slider" tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="hide-scrollbars">
                             
