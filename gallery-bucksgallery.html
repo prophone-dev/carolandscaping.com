@@ -542,6 +542,25 @@
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" Thanks Giving "
                                         class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
                                     >
@@ -866,6 +885,17 @@
                                     
                                 </div>
                             
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
                                 <div x-trap.inert="openMenu == 'navitem_8'">
                                     
                                         <a
@@ -1045,6 +1075,1242 @@
                             
                                 
                             
+                                
+                                    <section class="overflow-hidden bg-white">
+    <div class="relative h-1/2 min-h-screen  px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
+        <h1>
+            <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary"> Our Best Work </span>
+            <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">bucksgallery</span>
+        </h1>
+        <div class="relative mt-12">
+            <div
+        x-data="{
+        activeImage: 0,
+        amountOfImages: 39,
+        next() {
+            if (this.activeImage < this.amountOfImages - 1)
+                this.activeImage ++;
+        },
+        prev() {
+            if (this.activeImage > 0)
+                this.activeImage --;
+        },
+        loop() {
+            setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
+        },
+    }"
+>
+    <!--  -->
+
+
+
+    <ul role="list" class="bg-white space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </ul>
+
+    <template x-teleport="body">
+        <div x-cloak x-show="galleryModalOpen" @keydown.escape.prevent.stop="galleryModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="galleryModalOpen">
+            <div x-show="galleryModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+            <div
+                    x-show="galleryModalOpen"
+                    x-transition:enter="ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave="ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    @click="galleryModalOpen = false"
+                    class="relative flex items-center justify-center w-full h-full"
+            >
+                <div @click.stop class="flex flex-col w-full max-h-full pb-12 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-4 sm:my-8 sm:align-middle sm:max-w-5xl">
+                    <div class="relative h-16 px-6 bg-white">
+                        <h2 class="sr-only" :id="$id('modal-title')">Modal Gallery</h2>
+
+                        <button id="close-modal-button" @click="galleryModalOpen = false; handleClick()" class="absolute p-1 z-20 transition rounded top-5 right-1 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                            <span class="sr-only">Close modal</span>
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col w-full">
+                        <div @keydown.right="next" @keydown.left="prev" tabindex="0" role="region" aria-labelledby="carousel-label" class="w-full z-10 flex space-x-6 focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 ">
+                            <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+
+                            <button :class="activeImage > 0 ? 'opacity-100' : 'opacity-0'" @click="prev" class="text-6xl transition-opacity focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m10 19-7-7m0 0 7-7m-7 7h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="sr-only">Skip to previous slide</span>
+                            </button>
+
+                            <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+
+                            <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
+                                
+                                <li class="flex flex-col" x-show="activeImage === 0">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/be16d79d-79bb-4eef-987a-b31a845adbd8.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 1">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/3bcfa2ca-9105-4feb-a85a-113b32b6dbe0.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 2">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/7cb49778-b5a0-45ed-a8f2-6f592820f561.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 3">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/92ccdc9d-887a-497f-8f23-871f8391f410.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 4">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/22284668-eb0f-4ab9-9196-0b4e1d62800c.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 5">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/41d2ee0e-6f78-4daf-8677-41c02773f35c.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 6">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/641f7396-6fb0-493f-b93a-0fc1ac27abb8.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 7">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/09861530-8103-4124-bd76-279a59949667.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 8">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/615dde4b-a467-4f77-a757-0542593105c8.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 9">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b023471b-8d4c-4188-a135-246c3a16580f.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 10">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/2f9ea22e-3bc5-407e-a49b-c0d2077df8f1.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 11">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/050f87a3-b163-4b4d-b43b-fe47a6280524.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 12">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/02ca32c0-f3f4-4aeb-a53d-b5e5e2af601b.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 13">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/64b03a66-f7f6-462d-8aca-a90b47d012e3.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 14">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/62d50388-109d-406c-8f14-3249d8b29a02.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 15">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/42998305-d9bd-4e21-98bd-38b4d2dd13dc.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 16">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/e2709dc8-9b76-422d-8190-f1fe00fb27da.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 17">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/defef1fb-821d-4541-931a-7ab6bf23805e.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 18">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/8398c184-4faf-4cff-9ea3-09abd3b90942.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 19">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/840a2d6b-bca5-4c5e-9c28-595fe4358179.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 20">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/d7e51d10-88c6-4efc-8580-ca2ff20c0268.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 21">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/8e9f8739-0d10-49d4-818a-ced091717bef.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 22">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/75888e48-9f1a-425e-ae4d-0ba48ba7dabd.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 23">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/155621a1-7f13-44dc-acb2-99623f4c7b47.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 24">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c3cd0933-2179-44e0-b153-daae88b76bff.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 25">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/4b06d868-570d-4cb2-89fd-815e47d4fc4a.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 26">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/36e0175d-aa8b-4e41-8606-258fb3b09a8c.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 27">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/2637e223-9a40-49b7-a7a3-1d5c2ab4420c.jpeg" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 28">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c0c2adba-5615-4e76-a255-eae1deaaa049.jpeg" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 29">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/3923c2f6-ca92-4dc0-aee6-a750f69c595c.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 30">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c6b13ff2-7ab0-45c8-858c-119c88c157e5.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 31">
+                                    
+                                    <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
+                                        <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/773f01f7-2245-4b5c-bf2c-76d1b7bbaa3c.mp4#t=0.5">
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 32">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/36501176-d029-47fc-b15f-774625e7a1dc.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 33">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/7ce167ec-7756-461d-8c4b-f490e83cbd4e.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 34">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/12c20a89-cd87-4474-a69f-9f8d11ffa5f4.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 35">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/de57c8a7-bc9b-49c3-8af4-0749e8045561.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 36">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/98db1653-6d2e-415b-b324-65dbc9a26cd5.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 37">
+                                    
+                                    <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
+                                        <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/97542e69-bd9c-4405-b58c-6d067507adde.undefined#t=0.5">
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 38">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/280ba487-6a4b-48ad-bebd-06f508a43ec8.png" alt="bucksgallery for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                            </ul>
+
+                            <button :class="activeImage < amountOfImages - 1 ? 'opacity-100' : 'opacity-0'" @click="next" class="text-6xl transition-opacity focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m14 5 7 7m0 0-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="sr-only">Skip to next slide</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
+<style>
+#nav-main {
+	 *zoom: 1;
+	 margin-bottom:40px;
+}
+ #nav-main:before, #nav-main:after {
+	 display: table;
+	 content: "";
+}
+ #nav-main:after {
+	 clear: both;
+}
+ #nav-main {
+	 clear: both;
+	 -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	 box-sizing: border-box;
+	 padding: 10px 10px 10px 15px;
+	 position: relative;
+	 width: 100%;
+}
+ #nav-main > ul {
+	 float: left;
+	 list-style: none;
+	 margin: 0;
+	 padding: 0;
+	 z-index: 5;
+}
+ #nav-main > ul > li {
+	 float: left;
+	 font-size: 16px;
+	 margin-bottom: 0;
+	 padding-left: 0;
+	 position: relative;
+	 text-transform: uppercase;
+	 cursor: pointer;
+
+
+}
+ #nav-main > ul > li.hidden {
+	 display: none;
+}
+ #nav-main > ul > li >div:hover {
+     background: #E5E7EB;
+     border-radius: 6px;
+}
+ #nav-main > ul > li:hover ul {
+	 display: block;
+	    z-index: 10;
+	 background-color: white;
+}
+ #nav-main div {
+	 display: block;
+	 opacity: .75;
+	 padding: 15px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4B5563;
+}
+.more {
+	 display: block;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4B5563;
+}
+[data-active="true"] {
+     background: #E5E7EB;
+     border-radius: 6px;
+}
+.selected {
+     background: #E5E7EB;
+     border-radius: 6px;
+}
+ #nav-main div:hover {
+	 opacity: 1;
+}
+ #nav-main ul ul {
+	 display: none;
+	 list-style: none;
+	 margin: 0;
+	 padding: 15px 0 0;
+	 position: absolute;
+	 top: 100%;
+	 right: 0;
+}
+ #nav-main ul div {
+	 margin-bottom: 15px;
+	 padding: 0 15px;
+	 white-space: nowrap;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+   #nav-main ul ul {
+	 left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 10rem;
+}
+.nav_full_width {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+}
+
+</style>
+<script>
+    function handleClick() {
+    const videos = document.getElementsByClassName('gallery-modal-video')
+    for (let video of videos) {
+        video.muted = true
+    }
+}
+
+function filterGalleryByDataId(filter) {
+    // get all gallery media item with data-id="gallery_media"
+    const galleryMedia = document.querySelectorAll('[data-id="gallery_media"]')
+    // if filter = all then show all gallery media mean remove hidden class from the element
+    // else hide all gallery media and show only the gallery media with data-gallery="filter"
+    if (filter === 'All Photos') {
+        galleryMedia.forEach(media => {
+            media.classList.remove('hidden')
+        })
+    } else {
+        galleryMedia.forEach(media => {
+            media.classList.add('hidden')
+            if (media.dataset.gallery === filter) {
+                media.classList.remove('hidden')
+            }
+        })
+    }
+    // set filter data-active to true
+    const filterItems = document.querySelectorAll('[data-active]')
+    filterItems.forEach(item => {
+        item.dataset.active = false
+        if (item.dataset.filter === filter) {
+            item.dataset.active = true
+        }
+    })
+    // check if .more class has li with data-active="true" then show it
+    const more = document.querySelector('.more')
+    const active = more.querySelector('[data-active="true"]')
+    if (active) {
+        more.classList.add('selected')
+    } else {
+        more.classList.remove('selected')
+    }
+    // check if '#main > li:not(.more)'  if not then update dropdown_title innerhtml with filter
+    const dropdownTitle = document.querySelector('#dropdown_title')
+    const main = document.querySelectorAll('#main > li:not(.more)')
+    if (main.length === 0) {
+        dropdownTitle.innerHTML = filter
+    }
+}
+
+function nacFunction() {
+    $(document).ready(function() {
+
+        function calcWidth() {
+            var navwidth = 0;
+            const iter = 0
+            var morewidth = $('#main .more').outerWidth(true);
+            $('#main > li:not(.more)').each(function() {
+                navwidth += $(this).outerWidth(true);
+            });
+
+            //var availablespace = $('nav').outerWidth(true) - morewidth;
+            var availablespace = $('#nav-main').width() - morewidth;
+            var lastItem = $('#main > li:not(.more)')
+            if (navwidth > availablespace) {
+                var lastItem = lastItem.last();
+                lastItem.attr('data-width', lastItem.outerWidth(true));
+                lastItem.prependTo($('#main .more ul'));
+                calcWidth();
+            } else {
+                // if there are less then 2 items in #main move them to .more
+                if (lastItem.length <= 2) {
+                    lastItem.prependTo($('#main .more ul'));
+                    // set dropdown_title inner child to filter with data-active = true
+                    const dropdownTitle = document.querySelector('#dropdown_title')
+                    const active = document.querySelector('[data-active="true"]')
+                    if (active) {
+                        dropdownTitle.innerHTML = active.innerHTML
+                        const nav = document.querySelector('#nav-main')
+                        nav.classList.add('nav_full_width')
+                    }
+
+
+
+
+                }
+                var firstMoreElement = $('#main li.more li').first();
+                if (navwidth + firstMoreElement.data('width') < availablespace) {
+                    firstMoreElement.insertBefore($('#main .more'));
+                }
+            }
+            if ($('.more li').length > 0) {
+                $('.more').css('display', 'block');
+            } else {
+                $('.more').css('display', 'none');
+            }
+        }
+
+        $(window).on('resize load', function() {
+            calcWidth();
+        });
+    });
+
+}
+runYourFunctionWhenJQueryIsLoaded(nacFunction);
+</script>
+        </div>
+    </div>
+</section>
+                                    <template x-teleport="body">
+    <div
+            x-show="contactModalOpen"
+            @keydown.escape.prevent.stop="contactModalOpen = false"
+            role="dialog"
+            aria-modal="true"
+            x-id="['modal-title']"
+            :aria-labelledby="$id('modal-title')"
+            class="fixed inset-0 z-40 overflow-y-scroll"
+            x-trap.noscroll.inert="contactModalOpen"
+            id="send-text-modal"
+    >
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                aria-hidden="true"
+                class="fixed inset-0 bg-black bg-opacity-50"
+        ></div>
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                @click="contactModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full"
+        >
+            <div
+                    @click.stop
+                    class="flex flex-col w-full sm:h-auto h-full text-left transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl sm:max-h-90vh"
+            >
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-6 text-lg font-medium text-center" :id="$id('modal-title')">Send us a text</h2>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8 bg-gradient-to-b from-white"></div>
+                    <button
+                            @click="contactModalOpen = false;"
+                            class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                    >
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="error-state-modal" class="p-2">
+                </div>
+
+                    <form class="flex flex-col overflow-y-auto screen-height-minus-navbar-mobile sm:w-full" onsubmit="send_sms('caro-landscaping')">
+
+                        <div class="flex flex-col h-full overflow-x-hidden">
+                            <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
+                                
+                                <div>
+                                    <label for="contact-full-name" class="font-medium text-base text-gray-700">Full name</label>
+                                    <input
+
+                                            type="text"
+                                            name="full-name"
+                                            id="contact-full-name"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="Jane Rodgers"
+                                    />
+                                </div>
+                                
+                                
+                                <div>
+                                    <label for="contact-phone-number" class="font-medium text-base text-gray-700">Phone number</label>
+                                    <input
+
+                                            type="tel"
+                                            name="phone-number"
+                                            id="contact-phone-number"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="(555) 555-5555"
+                                    />
+                                </div>
+                                
+                                
+                                <div>
+                                    <label for="contact-email" class="font-medium text-base text-gray-700">Email</label>
+                                    <input
+                                            type="email"
+                                            name="email"
+                                            id="contact-email"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="name@example.com"
+                                    />
+                                </div>
+                                
+
+                                
+                                <div>
+                                    <label for="contact-address" class="font-medium text-base text-gray-700">Address</label>
+                                    <input
+                                            type="text"
+                                            name="address"
+                                            id="contact-address"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="123 Main Street, Portland, Maine "
+                                    />
+                                </div>
+
+
+                                
+
+                                
+                                <div class="block sm:hidden">
+                                    <label class="font-medium text-base text-gray-700">Services</label>
+                                    <fieldset class="sm:hidden sm:mb-0 mt-1 p-6 border border-gray-300 rounded-md">
+                                        <div class="flex flex-col space-y-2">
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="145106" value="NEW SERVICE 0" id="contact-service-145106" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                NEW SERVICE 0
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="145107" value="Really GoodService" id="contact-service-145107" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                Really GoodService
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="145108" value="NEW SERVICE 20.5388381616443638" id="contact-service-145108" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                NEW SERVICE 20.5388381616443638
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="145109" value="NEW SERVICE 30.17585594101625457" id="contact-service-145109" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                NEW SERVICE 30.17585594101625457
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="145110" value="NEW SERVICE 40.6177725576174022" id="contact-service-145110" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                NEW SERVICE 40.6177725576174022
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="145111" value="NEW SERVICE 50.2177497640989392" id="contact-service-145111" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                NEW SERVICE 50.2177497640989392
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="145112" value="NEW SERVICE 60.4616252410036359" id="contact-service-145112" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                NEW SERVICE 60.4616252410036359
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="145113" value="NEW SERVICE 70.4790774708309824" id="contact-service-145113" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                NEW SERVICE 70.4790774708309824
+                                                </span>
+                                            </div>
+                                            
+                                    
+                                            <div class="flex flex-col">
+                                                <div class="flex items-center">
+                                                    <input
+                                                            id="contact-service-Other"
+                                                            name="Other"
+                                                            type="checkbox"
+                                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                            value="Other"
+                                                            onclick="toggleOtherServicesMobile()"
+                                                    />
+                                                    <label for="contact-label-service-Other" class="ml-3 text-gray-600">Other</label>
+                                                </div>
+                                                <input
+                                                    id="contact-service-other-text2"
+                                                    name="OtherServicesInputField"
+                                                    type="text"
+                                                    class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
+                                                    />
+                                            </div>
+                                        
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                
+
+                                
+                                    <div class='sm:hidden'>
+                                        <label for="contact-concern-1" class="sm:hidden font-medium text-base text-gray-700"> How can we help - TEST? </label>
+                                        <textarea
+                                            id="contact-concern-1"
+                                            name="concern"
+                                            rows="4"
+                                            class="sm:hidden block py-3.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"                                   
+                                            placeholder='How can we help - TEST?'
+                                        ></textarea>
+                                    </div>
+                                
+
+                                
+                                <div class="relative">
+                                    <label for="contact-date" class="font-medium text-base text-gray-700">Preferred Date of Service</label>
+                                    <!-- <input
+                                        type="text"
+                                        name="date"
+                                        id="contact-date"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary tracking-normal"
+                                        placeholder="mm/dd/yyyy"
+                                        onfocus="(this.type='date',this.placeholder='')"
+                                        onblur="if(this.value==''){this.type='text',this.placeholder='mm/dd/yyyy'}"
+                                    /> -->
+                                    <div class="w-4 h-4 absolute transform translate-y-4.5 left-4">
+                                        <!-- <svg width="16" height="17" viewBox="0 0 16 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.5C3.44772 0.5 3 0.947715 3 1.5V2.5H2C0.895431 2.5 0 3.39543 0 4.5V14.5C0 15.6046 0.895431 16.5 2 16.5H14C15.1046 16.5 16 15.6046 16 14.5V4.5C16 3.39543 15.1046 2.5 14 2.5H13V1.5C13 0.947715 12.5523 0.5 12 0.5C11.4477 0.5 11 0.947715 11 1.5V2.5H5V1.5C5 0.947715 4.55228 0.5 4 0.5ZM4 5.5C3.44772 5.5 3 5.94772 3 6.5C3 7.05228 3.44772 7.5 4 7.5H12C12.5523 7.5 13 7.05228 13 6.5C13 5.94772 12.5523 5.5 12 5.5H4Z" fill="#9CA3AF"/>
+                                        </svg> -->
+                                    </div>
+                                    <input type="date" id="contact-date" placeholder="mm/dd/yyyy" class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary" />
+                                </div>
+                                
+                                
+                                <div>
+                                    <label for="contact-promo-code" class="font-medium text-base text-gray-700">Promo code</label>
+                                    <input
+                                            type="text"
+                                            name="promo-code"
+                                            id="contact-promo-code"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="ABCDEFG-123"
+                                    />
+                                </div>
+                                
+                            </div>
+
+                            <div class="hidden sm:block px-6 py-4">
+                                
+                                <label class="font-medium text-base text-gray-700">Services</label>
+                                <fieldset class="sm:bg-white border border-gray-300 rounded-md mt-1 overflow-y-visible h-auto">
+                                    <div class="grid gap-4 space-y-2 grid-cols-2 p-6">
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-145106"
+                                                    name="145106"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 0"
+                                            />
+                                            <label for="contact-service-145106" class="ml-3 text-sm text-gray-600">NEW SERVICE 0</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-145107"
+                                                    name="145107"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Really GoodService"
+                                            />
+                                            <label for="contact-service-145107" class="ml-3 text-sm text-gray-600">Really GoodService</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-145108"
+                                                    name="145108"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 20.5388381616443638"
+                                            />
+                                            <label for="contact-service-145108" class="ml-3 text-sm text-gray-600">NEW SERVICE 20.5388381616443638</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-145109"
+                                                    name="145109"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 30.17585594101625457"
+                                            />
+                                            <label for="contact-service-145109" class="ml-3 text-sm text-gray-600">NEW SERVICE 30.17585594101625457</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-145110"
+                                                    name="145110"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 40.6177725576174022"
+                                            />
+                                            <label for="contact-service-145110" class="ml-3 text-sm text-gray-600">NEW SERVICE 40.6177725576174022</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-145111"
+                                                    name="145111"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 50.2177497640989392"
+                                            />
+                                            <label for="contact-service-145111" class="ml-3 text-sm text-gray-600">NEW SERVICE 50.2177497640989392</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-145112"
+                                                    name="145112"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 60.4616252410036359"
+                                            />
+                                            <label for="contact-service-145112" class="ml-3 text-sm text-gray-600">NEW SERVICE 60.4616252410036359</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-145113"
+                                                    name="145113"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="NEW SERVICE 70.4790774708309824"
+                                            />
+                                            <label for="contact-service-145113" class="ml-3 text-sm text-gray-600">NEW SERVICE 70.4790774708309824</label>
+                                        </div>
+                                    
+                                        
+                                    
+                                        <div class="flex flex-col">
+                                            <div class="flex items-center">
+                                                <input
+                                                        id="contact-service-other-checkbox"
+                                                        name="Other"
+                                                        type="checkbox"
+                                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                        value="Other"
+                                                        onclick="toggleOtherServices()"
+                                                    />
+                                                <label for="contact-label-service-Other" class="ml-3 text-sm text-gray-600">Other</label>
+                                            </div>
+                                        <input
+                                            id="contact-service-other-text"
+                                            name="OtherServicesInputField"
+                                            type="text"
+                                            class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
+                                        />
+                                        </div>
+                            
+                                    </div>
+                                </fieldset>
+                                
+                            </div>
+                            <div class="block sm:flex sm:flex-row sm:space-x-6 sm:px-6 sm:w-full pb-20">
+                                
+                                <div class="sm:flex sm:flex-col sm:w-full hidden">
+                                    <label for="contact-concern-2" class="sm:block hidden font-medium text-base text-gray-700"> How can we help - TEST? </label>
+                                    <textarea
+                                        id="contact-concern-2"
+                                        name="concern"
+                                        rows="4"
+                                        class="sm:flex sm:flex-grow hidden py-2 px-2.5 mt-1 w-full h-auto border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder='Type your message here...'
+                                    ></textarea>
+                                </div>
+                                
+
+                                
+                            </div>
+                        </div>
+                        <div class="flex fixed bottom-0 items-center justify-center w-full py-4 px-6 bg-white z-50">
+                            <button   id='sendButton'  class="
+                                        sendButton
+                                        cta_text_conversion
+                                        py-2.5 px-6
+                                        w-full
+                                        text-sm
+                                        font-medium
+                                        transition
+                                        border-2 border-transparent
+                                        rounded-md
+                                        bg-primary
+                                        text-primary-foreground
+                                        focus:outline-none
+                                        hover:bg-primary-darker
+                                        focus-visible:ring-2
+                                        ring-primary ring-opacity-75 ring-offset-2
+                                        disabled:bg-primary-darker"
+                                        
+                                        >Send
+                            </button>
+                        </div>
+                    </form>
+
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = Array.from(
+            document.querySelectorAll('input[name=email], input[name=phone-number]')
+        )
+
+        const inputListener = e => {
+            inputs
+                .filter(i => i !== e.target)
+                .forEach(i => (i.required = !e.target.value.length))
+        }
+
+        inputs.forEach(i => i.addEventListener('input', inputListener))
+    })
+    const toggleOtherServices = () => {
+        const otherServices = document.getElementById('contact-service-other-checkbox')
+        const otherServicesInput = document.getElementById('contact-service-other-text')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+    const toggleOtherServicesMobile = ()=>{
+        const otherServices = document.getElementById('contact-service-Other')
+        const otherServicesInput = document.getElementById('contact-service-other-text2')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+    var observer1 = new MutationObserver(function() {
+    var dateInput = document.getElementById("contact-date");
+    if (dateInput) {
+      var today = new Date();
+      var twoYearsLater = new Date();
+      twoYearsLater.setFullYear(today.getFullYear() + 2);
+
+      dateInput.setAttribute("min", today.toISOString().split("T")[0]);
+      dateInput.setAttribute("max", twoYearsLater.toISOString().split("T")[0]);
+
+      observer1.disconnect();
+    }
+  });
+  observer1.observe(document, { childList: true, subtree: true });
+</script>
+                                    <div
+	class="fixed inset-0 z-40 md:pt-8 md:pb-20"
+	id="text-thank-you"
+	style="display: none;"
+>
+	<div
+		class="fixed inset-0 bg-black bg-opacity-50"
+	></div>
+	<div
+		class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white"
+	>
+		<div class="mt-3 text-center">
+			<div
+				class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
+			>
+				<svg
+					class="h-6 w-6 text-green-600"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M5 13l4 4L19 7"
+					></path>
+				</svg>
+			</div>
+			<h3 class="text-lg leading-6 font-medium text-gray-900">Thank you!</h3>
+			<div class="mt-1 px-7 py-3">
+				<p class="text-sm text-gray-500">
+					Your message was sent successfully. We’ll send you a text or give you a call soon.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+                                    <template x-teleport="body">
+    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
+        <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+        <div
+            x-show="reviewModalOpen"
+            x-transition:enter="ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            @click="reviewModalOpen = false"
+            class="relative flex items-center justify-center w-full h-full"
+        >
+            <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-16 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
+                    <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="mt-2 space-y-6">
+                    <span hidden class="sr-only">Review types</span>
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJAcuMS7UWcIgRj2I2PSjovoo" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            Googles
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/109671301957021/reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            Facebook
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
                                 
                             
                                 
