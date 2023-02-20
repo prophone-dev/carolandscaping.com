@@ -542,6 +542,25 @@
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" Thanks Giving "
                                         class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
                                     >
@@ -866,6 +885,17 @@
                                     
                                 </div>
                             
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
                                 <div x-trap.inert="openMenu == 'navitem_8'">
                                     
                                         <a
@@ -1062,22 +1092,23 @@
 
                     
                         <section>
-    <div
-        class="flex justify-center m-auto w-full bg-primary bg-opacity-10"
-    >
-        <div class="flex flex-col items-center px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
-            <h1 class="text-3xl sm:text-4xl text-primary pb-16">
-                <span class="block text-primary font-extrabold">Check out our blog</span>
-            </h1>
-
-            <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-                
+    <div class="flex justify-center m-auto w-full bg-primary bg-opacity-10">
+        <div class="flex flex-col text-center justify-center items-center mx-8 my-16 sm:mx-auto sm:py-16 sm:w-4/5">
+            <div class="space-y-5 flex flex-col items-center">
+                <h1 class="flex flex-col items-center space-y-4 pb-8 sm:max-w-3xl">
+                    <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Blog</span>
+                    <span class="text-3xl font-extrabold text-center text-primary sm:text-4xl sm:w-3/4">A Beginner&#x27;s Guide to Creating Amazing Landscapes and Hardscapes</span>
+                    <span class="block text-lg text-center text-gray-500">Jan 17, 2023</span>
+                </h1>
+                <div class="flex flex-col space-y-8 text-gray-500 text-lg text-left sm:max-w-3xl leading-8 blog-headers blog-list">
+                    <p>When it comes to creating incredible landscapes and hardscapes, the possibilities are endless. From lush green gardens to creative walkways, the options are truly endless. For those just getting started in the world of landscaping and hardscaping, knowing where to begin can be daunting. Creating amazing landscaping and hardscaping doesn’t have to be difficult, however. With a few tips and tricks, anyone can create an incredible outdoor space in no time.</p><p>Before getting started, it’s important to take the time to plan out your design. It’s essential to think carefully about what you’re trying to achieve and what kind of look you’re going for. Think carefully about the overall theme, such as a modern or rustic look. Consider the existing features of your yard, such as existing plants or trees, and plan your project around those features. This will help you create a cohesive design that looks great.</p><p>Once you have a plan in place, it’s time to start choosing the right materials. Landscaping and hardscaping materials come in a wide variety of styles, colors, and textures, so take the time to explore your options. Select materials that will complement your existing plants and elements in the space. Consider material durability and maintenance when making your selections as well.</p><p>When it comes to adding plants to your design, it’s important to remember to include native plants and plants that are well-suited to the climate in your area. This will ensure that your plants will thrive and won’t require a lot of maintenance. If you’re having difficulty picking plants, consult with a local landscaper or garden center. They’ll be able to provide you with helpful suggestions.</p><p>When creating a hardscape, take the time to carefully consider the layout. Think about how the hardscaping elements will interact with the landscape and other elements in the space. Create a balanced design by incorporating curves and straight lines. Use structures to draw attention to certain areas of your yard and create visual interest.</p><p>When it comes to the installation process, be sure to take your time and install the materials properly. Follow the instructions carefully and do not cut corners. Improperly installed materials can be a safety hazard and can damage the overall look of your design. When installing hardscaping elements, make sure to use the appropriate tools and materials to ensure a professional-looking result.</p><p>Creating a stunning landscape and hardscape doesn’t have to be difficult. With the right planning and materials, you can create an amazing outdoor space that will add beauty and value to your home. From lush gardens to creative walkways, the possibilities are truly endless. So get started today and create the outdoor space of your dreams.</p><pre class="ql-syntax" spellcheck="false">&lt;img src="nonexistent.png" onerror="alert('This restaurant got voted worst in town!');"
+</pre><p><br></p><pre class="ql-syntax" spellcheck="false">&lt;img src="nonexistent.png" onerror="alert('This restaurant got voted worst in town!');"
+</pre><p><br></p>
+                </div>
             </div>
-
         </div>
     </div>
 </section>
-
                         <template x-teleport="body">
     <div
             x-show="contactModalOpen"
@@ -1197,7 +1228,7 @@
                                         <div class="flex flex-col space-y-2">
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="145086" value="NEW SERVICE 0" id="contact-service-145086" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="145106" value="NEW SERVICE 0" id="contact-service-145106" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 NEW SERVICE 0
@@ -1205,7 +1236,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="145087" value="Really GoodService" id="contact-service-145087" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="145107" value="Really GoodService" id="contact-service-145107" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Really GoodService
@@ -1213,7 +1244,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="145088" value="NEW SERVICE 20.5388381616443638" id="contact-service-145088" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="145108" value="NEW SERVICE 20.5388381616443638" id="contact-service-145108" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 NEW SERVICE 20.5388381616443638
@@ -1221,7 +1252,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="145089" value="NEW SERVICE 30.17585594101625457" id="contact-service-145089" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="145109" value="NEW SERVICE 30.17585594101625457" id="contact-service-145109" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 NEW SERVICE 30.17585594101625457
@@ -1229,7 +1260,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="145090" value="NEW SERVICE 40.6177725576174022" id="contact-service-145090" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="145110" value="NEW SERVICE 40.6177725576174022" id="contact-service-145110" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 NEW SERVICE 40.6177725576174022
@@ -1237,7 +1268,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="145091" value="NEW SERVICE 50.2177497640989392" id="contact-service-145091" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="145111" value="NEW SERVICE 50.2177497640989392" id="contact-service-145111" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 NEW SERVICE 50.2177497640989392
@@ -1245,7 +1276,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="145092" value="NEW SERVICE 60.4616252410036359" id="contact-service-145092" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="145112" value="NEW SERVICE 60.4616252410036359" id="contact-service-145112" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 NEW SERVICE 60.4616252410036359
@@ -1253,7 +1284,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="145093" value="NEW SERVICE 70.4790774708309824" id="contact-service-145093" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="145113" value="NEW SERVICE 70.4790774708309824" id="contact-service-145113" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 NEW SERVICE 70.4790774708309824
@@ -1341,97 +1372,97 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-145086"
-                                                    name="145086"
+                                                    id="contact-service-145106"
+                                                    name="145106"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="NEW SERVICE 0"
                                             />
-                                            <label for="contact-service-145086" class="ml-3 text-sm text-gray-600">NEW SERVICE 0</label>
+                                            <label for="contact-service-145106" class="ml-3 text-sm text-gray-600">NEW SERVICE 0</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-145087"
-                                                    name="145087"
+                                                    id="contact-service-145107"
+                                                    name="145107"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Really GoodService"
                                             />
-                                            <label for="contact-service-145087" class="ml-3 text-sm text-gray-600">Really GoodService</label>
+                                            <label for="contact-service-145107" class="ml-3 text-sm text-gray-600">Really GoodService</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-145088"
-                                                    name="145088"
+                                                    id="contact-service-145108"
+                                                    name="145108"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="NEW SERVICE 20.5388381616443638"
                                             />
-                                            <label for="contact-service-145088" class="ml-3 text-sm text-gray-600">NEW SERVICE 20.5388381616443638</label>
+                                            <label for="contact-service-145108" class="ml-3 text-sm text-gray-600">NEW SERVICE 20.5388381616443638</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-145089"
-                                                    name="145089"
+                                                    id="contact-service-145109"
+                                                    name="145109"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="NEW SERVICE 30.17585594101625457"
                                             />
-                                            <label for="contact-service-145089" class="ml-3 text-sm text-gray-600">NEW SERVICE 30.17585594101625457</label>
+                                            <label for="contact-service-145109" class="ml-3 text-sm text-gray-600">NEW SERVICE 30.17585594101625457</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-145090"
-                                                    name="145090"
+                                                    id="contact-service-145110"
+                                                    name="145110"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="NEW SERVICE 40.6177725576174022"
                                             />
-                                            <label for="contact-service-145090" class="ml-3 text-sm text-gray-600">NEW SERVICE 40.6177725576174022</label>
+                                            <label for="contact-service-145110" class="ml-3 text-sm text-gray-600">NEW SERVICE 40.6177725576174022</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-145091"
-                                                    name="145091"
+                                                    id="contact-service-145111"
+                                                    name="145111"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="NEW SERVICE 50.2177497640989392"
                                             />
-                                            <label for="contact-service-145091" class="ml-3 text-sm text-gray-600">NEW SERVICE 50.2177497640989392</label>
+                                            <label for="contact-service-145111" class="ml-3 text-sm text-gray-600">NEW SERVICE 50.2177497640989392</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-145092"
-                                                    name="145092"
+                                                    id="contact-service-145112"
+                                                    name="145112"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="NEW SERVICE 60.4616252410036359"
                                             />
-                                            <label for="contact-service-145092" class="ml-3 text-sm text-gray-600">NEW SERVICE 60.4616252410036359</label>
+                                            <label for="contact-service-145112" class="ml-3 text-sm text-gray-600">NEW SERVICE 60.4616252410036359</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-145093"
-                                                    name="145093"
+                                                    id="contact-service-145113"
+                                                    name="145113"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="NEW SERVICE 70.4790774708309824"
                                             />
-                                            <label for="contact-service-145093" class="ml-3 text-sm text-gray-600">NEW SERVICE 70.4790774708309824</label>
+                                            <label for="contact-service-145113" class="ml-3 text-sm text-gray-600">NEW SERVICE 70.4790774708309824</label>
                                         </div>
                                     
                                         
