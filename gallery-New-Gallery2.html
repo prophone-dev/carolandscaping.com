@@ -1084,7 +1084,7 @@
             <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 42,
+        amountOfImages: 43,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1278,7 +1278,7 @@
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                 
-                                    <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(75)/media/a782ee12-f383-42a0-af2b-e16be8bf5a9f.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
+                                    <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(75)/media/10e6a2e5-0050-453f-8a3d-567cb0b46bea.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
                                 
                                 
                             </div>
@@ -1321,6 +1321,27 @@
                                 
                                 
                                     <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(75)/media/76dcb98b-b0b6-4e15-a479-ce9faf329a9a.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
+                                
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="New Gallery2" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 39; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                
+                                    <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:quality(75)/media/a782ee12-f383-42a0-af2b-e16be8bf5a9f.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy"/>
                                 
                                 
                             </div>
@@ -1639,7 +1660,7 @@
                                 
                                 <li class="flex flex-col" x-show="activeImage === 36">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/a782ee12-f383-42a0-af2b-e16be8bf5a9f.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/10e6a2e5-0050-453f-8a3d-567cb0b46bea.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
@@ -1660,12 +1681,19 @@
                                 
                                 <li class="flex flex-col" x-show="activeImage === 39">
                                     
-                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/98db1653-6d2e-415b-b324-65dbc9a26cd5.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/a782ee12-f383-42a0-af2b-e16be8bf5a9f.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 40">
+                                    
+                                    <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/98db1653-6d2e-415b-b324-65dbc9a26cd5.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 41">
                                     
                                     <video class="gallery-modal-video rounded shadow-md object-contain w-full h-60" loading="lazy" autoplay loop controls muted>
                                         <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/97542e69-bd9c-4405-b58c-6d067507adde.undefined#t=0.5">
@@ -1674,7 +1702,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 41">
+                                <li class="flex flex-col" x-show="activeImage === 42">
                                     
                                     <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/280ba487-6a4b-48ad-bebd-06f508a43ec8.png" alt="New Gallery2 for caro-landscapingsaaaaaa oy oy oy!!!!! in Portland, Maine" loading="lazy" />
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
