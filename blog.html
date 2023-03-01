@@ -79,7 +79,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
         x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
-        class="relative transition-all duration-200 bg-white"
+        class="relative transition-all duration-200 bg-primary"
     >
         <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-full">
@@ -90,7 +90,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                     >
                     
                         <a  href= " index "
-                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md focus:ring-0 focus:ring-offset-0"
+                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-primary rounded-md focus:ring-0 focus:ring-offset-0"
                         >
                             <picture>
                                 <source
@@ -610,7 +610,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                             <button
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
                                 @click="contactModalOpen = true"
-                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-primary hover:bg-primary-darker  focus:ring-0 focus:ring-offset-0"
+                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-secondary hover:bg-secondary-darker  focus:ring-0 focus:ring-offset-0"
                                 >
                                 Book Now
                             </button>
@@ -624,7 +624,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                             <button
                                 @click="contactModalOpen = true"   
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md   text-primary border-primary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
+                                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md   text-secondary border-secondary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
                                 >
                                 Book Now
                             </button>
