@@ -61,7 +61,7 @@
         x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
-        class="relative transition-all duration-200 bg-primary"
+        class="relative transition-all duration-200 bg-white"
     >
         <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-full">
@@ -72,7 +72,7 @@
                     >
                     
                         <a  href= " index "
-                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-primary rounded-md focus:ring-0 focus:ring-offset-0"
+                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md focus:ring-0 focus:ring-offset-0"
                         >
                             <picture>
                                 <source
@@ -117,7 +117,7 @@
                                 
                                     <a
                                         href=" index "
-                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        class=" border-transparent  hover:border-gray-100 hover:text-gray-100 text-white   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
                                         Home
                                     </a>
@@ -142,9 +142,9 @@
                                         @click="desktopOpen = !desktopOpen"
                                         class="inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-700 text-gray-500 transition border-b-2 border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
                                     >
-                                        <span class="block  hover:border-gray-300 hover:text-gray-700 text-gray-500 ">Services</span>
+                                        <span class="block  text-white group-hover:text-gray-100 ">Services</span>
                                         <svg
-                                            class="w-5 h-5 ml-2 transition-transform duration-300  hover:border-gray-300 hover:text-gray-700 text-gray-500 "
+                                            class="w-5 h-5 ml-2 transition-transform duration-300  text-white group-hover:text-gray-100 "
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -389,9 +389,9 @@
                                         @click="desktopOpen = !desktopOpen"
                                         class="inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-700 text-gray-500 transition border-b-2 border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
                                     >
-                                        <span class="block  hover:border-gray-300 hover:text-gray-700 text-gray-500 ">Galleries</span>
+                                        <span class="block  text-white group-hover:text-gray-100 ">Galleries</span>
                                         <svg
-                                            class="w-5 h-5 ml-2 transition-transform duration-300  hover:border-gray-300 hover:text-gray-700 text-gray-500 "
+                                            class="w-5 h-5 ml-2 transition-transform duration-300  text-white group-hover:text-gray-100 "
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -495,7 +495,7 @@
                                 
                                     <a
                                         href=" reviews "
-                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        class=" border-transparent  hover:border-gray-100 hover:text-gray-100 text-white   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
                                         Reviews
                                     </a>
@@ -514,7 +514,7 @@
                                 
                                     <a
                                         href=" team "
-                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        class=" border-transparent  hover:border-gray-100 hover:text-gray-100 text-white   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
                                         Team
                                     </a>
@@ -533,7 +533,7 @@
                                 
                                     <a
                                         href=" jobs "
-                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        class=" border-transparent  hover:border-gray-100 hover:text-gray-100 text-white   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
                                         Jobs
                                     </a>
@@ -552,28 +552,9 @@
                                 
                                     <a
                                         href=" blog "
-                                        class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        class="  hover:border-gray-100 hover:text-gray-100 text-white  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
                                         Blog
-                                    </a>
-                                
-                                
-
-                            </div>
-                        
-                            <div
-                                class="relative flex items-center"
-                                x-trap.inert="desktopOpen"
-                                x-data="{ desktopOpen: false }"
-                                @keydown.escape.stop="desktopOpen = false"
-                                @click.away="desktopOpen = false"
-                            >
-                                
-                                    <a
-                                        href=" Thanks Giving "
-                                        class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                    >
-                                        Thanks Giving
                                     </a>
                                 
                                 
@@ -593,7 +574,7 @@
                                 target = "_blank" 
                                 href="tel:+1262957413"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-secondary hover:bg-secondary-darker  focus:ring-0 focus:ring-offset-0"
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-primary hover:bg-primary-darker  focus:ring-0 focus:ring-offset-0"
                                 >
                                 GiCaldl
                             </a>
@@ -608,7 +589,7 @@
                                 target = "_blank" 
                                 href="tel:+1262957413"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md   text-secondary border-secondary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md   text-primary border-primary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
                                 >
                                 Gitttt
                             </a>
@@ -909,17 +890,6 @@
                                     
                                 </div>
                             
-                                <div x-trap.inert="openMenu == 'navitem_8'">
-                                    
-                                        <a
-                                            href=" Thanks Giving "
-                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                            >Thanks Giving</a
-                                        >
-                                    
-                                    
-                                </div>
-                            
                             
                         </div>
                             <div class="flex flex-col fixed bottom-0 w-full p-2 bg-primary">
@@ -1089,7 +1059,7 @@
                             <section class="overflow-hidden bg-white">
 
     <div
-        class="relative flex w-full overflow-x-hidden custom_text_color text-white"
+        class="relative flex w-full overflow-x-hidden custom_text_color text-gray-900"
     >
         
             
@@ -1103,7 +1073,7 @@
                     <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
                 </video>
                 <main
-                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary bg-opacity-75"
+                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary bg-opacity-50"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1653,13 +1623,13 @@ const toggleOtherServices = () => {
                 
                     
                          
-    <section class="custom_text_color text-white">
+    <section class="custom_text_color text-gray-900">
         <div
             class="relative flex w-full overflow-hidden items-center justify-center h-[400px] sm:h-[800px]"
         >
             
             <main
-                class="flex h-[400px] sm:h-[800px] relative justify-center m-auto w-full bg-primary bg-opacity-75"
+                class="flex h-[400px] sm:h-[800px] relative justify-center m-auto w-full bg-primary bg-opacity-50"
             >
                 <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                     <h2 class="flex flex-col items-center text-3xl font-extrabold sm:text-6xl">
