@@ -11,6 +11,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-NEW-SERVICE-0</loc>
+        <lastmod>2023-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-Really-GoodService</loc>
         <lastmod>2023-03-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -40,13 +47,6 @@
 
     <url>
         <loc>https://carolandscaping.com/service-NEW-SERVICE-50.2177497640989392</loc>
-        <lastmod>2023-03-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-NEW-SERVICE-0</loc>
         <lastmod>2023-03-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -137,13 +137,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-sssss</loc>
-        <lastmod>2023-03-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-Mowings</loc>
         <lastmod>2023-03-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -152,6 +145,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-go-bucks</loc>
+        <lastmod>2023-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-sssss</loc>
         <lastmod>2023-03-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -193,6 +193,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-my-new-gallery-new-name</loc>
+        <lastmod>2023-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-bucksgallery</loc>
         <lastmod>2023-03-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -214,7 +221,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-my-new-gallery-new-name</loc>
+        <loc>https://carolandscaping.com/gallery-somettt</loc>
+        <lastmod>2023-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-ttteeeeeesssst</loc>
         <lastmod>2023-03-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
