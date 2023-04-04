@@ -11,20 +11,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Really-GoodService</loc>
-        <lastmod>2023-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-NEW-SERVICE-20.5388381616443638</loc>
-        <lastmod>2023-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-NEW-SERVICE-30.17585594101625457</loc>
         <lastmod>2023-04-04</lastmod>
         <changefreq>weekly</changefreq>
@@ -47,6 +33,20 @@
 
     <url>
         <loc>https://carolandscaping.com/service-NEW-SERVICE-0</loc>
+        <lastmod>2023-04-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Really-GoodService</loc>
+        <lastmod>2023-04-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-NEW-SERVICE-20.5388381616443638</loc>
         <lastmod>2023-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -137,14 +137,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Mowings</loc>
+        <loc>https://carolandscaping.com/service-go-bucks</loc>
         <lastmod>2023-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-go-bucks</loc>
+        <loc>https://carolandscaping.com/service-Mowings</loc>
         <lastmod>2023-04-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
