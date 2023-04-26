@@ -1406,6 +1406,14 @@
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8" style="max-height:80vh;">
                                                   
                                                     <a
+                                                        href=" gallery-hi "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">hi</p>
+                                                    </a>
+                                              
+                                                    <a
                                                         href=" gallery-bucksgallery "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
@@ -1821,6 +1829,10 @@
                                             aria-orientation="vertical"
                                         >
                                             <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
+                                                
+                                                    <a href="gallery-hi" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">hi</p>
+                                                    </a>
                                                 
                                                     <a href="gallery-bucksgallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
@@ -2502,6 +2514,8 @@
         <nav role="navigation" id="nav-main">
             <ul id="main">
                 <li><div data-active="true" data-filter="all" onclick="filterGalleryByDataId('All Photos')">All Photos</div></li>
+                    
+                        <li><div data-active="false" data-filter="hi" onclick='filterGalleryByDataId("hi")'>hi</div></li>
                     
                         <li><div data-active="false" data-filter="bucksgallery" onclick='filterGalleryByDataId("bucksgallery")'>bucksgallery</div></li>
                     
