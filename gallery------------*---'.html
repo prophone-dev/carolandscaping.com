@@ -450,10 +450,10 @@
                             >
                                 
                                     <a
-                                        href=" team "
+                                        href=" teams "
                                         class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Team 
+                                        Teams 
                                     </a>
                                 
                                 
@@ -787,9 +787,9 @@
                                 <div x-trap.inert="openMenu == 'navitem_5'">
                                     
                                         <a
-                                            href=" team "
+                                            href=" teams "
                                             class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                            >Team</a
+                                            >Teams</a
                                         >
                                     
                                     
@@ -910,7 +910,7 @@
     async function postCtaClick(type) {
         if (type === "text") history.replaceState(null, "", "contact");
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1090,8 +1090,158 @@
 
 
     
-        <div data-showcase-id="4a7c4d71-10f7-4a10-8a33-93e7c7daab70" id="companycam-showcase-root"></div>
+    <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
+        <div class="relative">
+            
+                
+                    
+                
+                    
+                
+                    
+                        
+
+<div
+    x-data="{
+        activeImage: 0,
+        amountOfImages: 0,
+        next() {
+            if (this.activeImage < this.amountOfImages - 1)
+                this.activeImage ++;
+        },
+        prev() {
+            if (this.activeImage > 0)
+                this.activeImage --;
+        },
+        loop() {
+            setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
+        },
+    }"
+>
+
+    <!--  -->
+
+
+    <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
         
+    </ul>
+
+    <template x-teleport="body">
+        <div x-cloak x-show="galleryModalOpen" @keydown.escape.prevent.stop="galleryModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="galleryModalOpen">
+            <div x-show="galleryModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+            <div
+                x-show="galleryModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                @click="galleryModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full"
+            >
+                <div @click.stop class="flex flex-col w-full max-h-full pb-16 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-4 sm:my-8 sm:align-middle sm:max-w-5xl">
+                    <div class="relative h-16 px-6 bg-white">
+                        <h2 class="sr-only" :id="$id('modal-title')">Modal Gallery</h2>
+
+                        <button id="close-modal-button" @click="galleryModalOpen = false; handleClick()" class="absolute p-1 z-20 transition rounded top-5 right-1 hover:bg-gray-100 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                            <span class="sr-only">Close modal</span>
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col w-full">
+                        <div @keydown.right="next" @keydown.left="prev" tabindex="0" role="region" aria-labelledby="carousel-label" class="z-10 flex justify-around focus:outline-none focus:ring-0 focus:ring-offset-0">
+                            <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+
+                            <button :class="activeImage > 0 ? 'opacity-100' : 'opacity-0'" @click="prev" class="text-6xl transition-opacity focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m10 19-7-7m0 0 7-7m-7 7h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to previous slide</span>
+                            </button>
+
+                            <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+
+                            <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
+                                
+                            </ul>
+
+                            <button :class="activeImage < amountOfImages - 1 ? 'opacity-100' : 'opacity-0'" @click="next" class="text-6xl transition-opacity focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m14 5 7 7m0 0-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to next slide</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
+
+<script>
+    function handleClick() {
+        const videos = document.getElementsByClassName('gallery-modal-video')
+        for (let video of videos) {
+            video.muted = true
+        }
+    }
+
+    function filterGalleryByDataId(filter) {
+        // get all gallery media item with data-id="gallery_media"
+        const galleryMedia = document.querySelectorAll('[data-id="gallery_media"]')
+        // if filter = all then show all gallery media mean remove hidden class from the element
+        // else hide all gallery media and show only the gallery media with data-gallery="filter"
+        if (filter === 'All Photos') {
+            galleryMedia.forEach(media => {
+                media.classList.remove('hidden')
+            })
+        } else {
+            galleryMedia.forEach(media => {
+                media.classList.add('hidden')
+                if (media.dataset.gallery === filter) {
+                    media.classList.remove('hidden')
+                }
+            })
+        }
+        // set filter data-active to true
+        const filterItems = document.querySelectorAll('[data-active]')
+        filterItems.forEach(item => {
+            item.dataset.active = false
+            if (item.dataset.filter === filter) {
+                item.dataset.active = true
+            }
+        })
+        // check if .more class has li with data-active="true" then show it
+        const more = document.querySelector('.more')
+        const active = more.querySelector('[data-active="true"]')
+        if (active) {
+            more.classList.add('selected')
+        } else {
+            more.classList.remove('selected')
+        }
+        // check if '#main > li:not(.more)'  if not then update dropdown_title innerhtml with filter
+        const dropdownTitle = document.querySelector('#dropdown_title')
+        const main = document.querySelectorAll('#main > li:not(.more)')
+        if (main.length === 0) {
+            dropdownTitle.innerHTML = filter
+        }
+    }
+
+</script>
+                    
+                
+                    
+                
+                    
+                
+            
+        </div>
+    </div>
     
 </section>
 
@@ -1219,7 +1369,7 @@
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="156267" value="GO BUKS" id="contact-service-156267" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="156303" value="GO BUKS" id="contact-service-156303" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 GO BUKS
@@ -1227,7 +1377,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="156268" value="high octane pipes" id="contact-service-156268" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="156304" value="high octane pipes" id="contact-service-156304" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 high octane pipes
@@ -1235,7 +1385,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="156269" value="NEW SERVICE 140.9151015595399918" id="contact-service-156269" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="156305" value="NEW SERVICE 140.9151015595399918" id="contact-service-156305" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE 140.9151015595399918
@@ -1243,7 +1393,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="156270" value="NEW SERVICE 150.32689549684114727" id="contact-service-156270" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="156306" value="NEW SERVICE 150.32689549684114727" id="contact-service-156306" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE 150.32689549684114727
@@ -1251,7 +1401,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="156271" value="NEW SERVICE 160.26952311054421596" id="contact-service-156271" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="156307" value="NEW SERVICE 160.26952311054421596" id="contact-service-156307" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE 160.26952311054421596
@@ -1259,7 +1409,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="156272" value="test" id="contact-service-156272" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="156308" value="test" id="contact-service-156308" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 test
@@ -1267,7 +1417,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="156273" value="Exterior/Interior Painting" id="contact-service-156273" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="156309" value="Exterior/Interior Painting" id="contact-service-156309" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Exterior/Interior Painting
@@ -1275,7 +1425,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="156274" value="add" id="contact-service-156274" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="156310" value="add" id="contact-service-156310" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 add
@@ -1363,97 +1513,97 @@
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-156267"
-                                        name="156267"
+                                        id="contact-service-156303"
+                                        name="156303"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="GO BUKS"
                                     />
-                                    <label for="contact-service-156267" class="ml-3 text-sm font-normal text-gray-700">GO BUKS</label>
+                                    <label for="contact-service-156303" class="ml-3 text-sm font-normal text-gray-700">GO BUKS</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-156268"
-                                        name="156268"
+                                        id="contact-service-156304"
+                                        name="156304"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="high octane pipes"
                                     />
-                                    <label for="contact-service-156268" class="ml-3 text-sm font-normal text-gray-700">high octane pipes</label>
+                                    <label for="contact-service-156304" class="ml-3 text-sm font-normal text-gray-700">high octane pipes</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-156269"
-                                        name="156269"
+                                        id="contact-service-156305"
+                                        name="156305"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE 140.9151015595399918"
                                     />
-                                    <label for="contact-service-156269" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 140.9151015595399918</label>
+                                    <label for="contact-service-156305" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 140.9151015595399918</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-156270"
-                                        name="156270"
+                                        id="contact-service-156306"
+                                        name="156306"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE 150.32689549684114727"
                                     />
-                                    <label for="contact-service-156270" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 150.32689549684114727</label>
+                                    <label for="contact-service-156306" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 150.32689549684114727</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-156271"
-                                        name="156271"
+                                        id="contact-service-156307"
+                                        name="156307"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE 160.26952311054421596"
                                     />
-                                    <label for="contact-service-156271" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 160.26952311054421596</label>
+                                    <label for="contact-service-156307" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 160.26952311054421596</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-156272"
-                                        name="156272"
+                                        id="contact-service-156308"
+                                        name="156308"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="test"
                                     />
-                                    <label for="contact-service-156272" class="ml-3 text-sm font-normal text-gray-700">test</label>
+                                    <label for="contact-service-156308" class="ml-3 text-sm font-normal text-gray-700">test</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-156273"
-                                        name="156273"
+                                        id="contact-service-156309"
+                                        name="156309"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Exterior/Interior Painting"
                                     />
-                                    <label for="contact-service-156273" class="ml-3 text-sm font-normal text-gray-700">Exterior/Interior Painting</label>
+                                    <label for="contact-service-156309" class="ml-3 text-sm font-normal text-gray-700">Exterior/Interior Painting</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-156274"
-                                        name="156274"
+                                        id="contact-service-156310"
+                                        name="156310"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="add"
                                     />
-                                    <label for="contact-service-156274" class="ml-3 text-sm font-normal text-gray-700">add</label>
+                                    <label for="contact-service-156310" class="ml-3 text-sm font-normal text-gray-700">add</label>
                                 </div>
                             
                                 
@@ -1908,9 +2058,9 @@
                           
                           <li>
                               <a
-                                  href="team"
+                                  href="teams"
                                   class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                  >Team</a
+                                  >Teams</a
                               >
                           </li>
                           
