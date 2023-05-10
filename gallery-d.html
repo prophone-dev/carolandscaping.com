@@ -94,14 +94,14 @@
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
-    class="fixed w-screen top-0 inset-x-0 z-20"
+    class="w-screen fixed top-0 inset-x-0 z-20"
 >
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
-        class="relative transition-all duration-200 bg-white h-24 xl:h-44"
+        class="relative transition-all duration-200 bg-gray-900 h-24 xl:h-44"
     >
         <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-full">
@@ -112,17 +112,16 @@
                     >
                     
                         <a  href= " index "
-                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-gray-900 rounded-md focus:ring-0 focus:ring-offset-0"
                         >
                         
                             <picture>
                                 <source
-                                    class="h-[80px] w-[160px] xl:h-[150px] scale-100 origin-left transition object-contain sm:max-h-40 logo  max-w-xs "
-                                    type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/563fd1f6-dff8-44b8-b585-ebc265e6d583.png" width="160" loading="lazy"
-
+                                    class="h-[80px] xl:h-[150px] scale-100 origin-left transition object-contain max-h-40 logo  max-w-xs "
+                                    type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/563fd1f6-dff8-44b8-b585-ebc265e6d583.png" width="160" height="160" loading="lazy"
                                 />
                                 <img
-                                    class="h-[80px] w-[160px] xl:h-[150px] scale-100 origin-left transition object-contain sm:max-h-40 logo  max-w-xs "
+                                    class="h-[80px] xl:h-[150px] scale-100 origin-left transition object-contain max-h-40 logo  max-w-xs "
                                     src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/563fd1f6-dff8-44b8-b585-ebc265e6d583.png"
                                     alt="Brand Logo"
                                     width="160"
@@ -134,7 +133,7 @@
                     
                     </div>
                 </div>
-                <div class="flex flex-row items-center text-gray-500 xl:hidden">
+                <div class="flex flex-row items-center  text-gray-500  xl:hidden">
                     <span class="uppercase">Menu</span>
                     <button @click="mobileOpen = !mobileOpen" class="p-2">
                         <span hidden class="sr-only">Open/CLose menu TODO:</span>
@@ -148,6 +147,7 @@
                         :class="{'h-16': !scrolledFromTop, 'h-16': scrolledFromTop}"
                         class="hidden transition-all duration-200 xl:flex xl:space-x-5 mr-2"
                     >
+
                     
                             <div
                                 class="relative flex items-center"
@@ -159,13 +159,13 @@
                                 
                                     <a
                                         href=" index "
-                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
-                                        Home 
+                                        Home
                                     </a>
                                 
                                 
-                                
+
                             </div>
                         
                             <div
@@ -182,11 +182,11 @@
                                         :aria-expanded="desktopOpen"
                                         aria-controls="navitem_2"
                                         @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2 uppercase"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-700 text-gray-500 transition border-b-2 border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
                                     >
-                                        <span>Services</span>
+                                        <span class="block  hover:border-gray-300 hover:text-gray-700 text-gray-500 ">Services</span>
                                         <svg
-                                            class="w-5 h-5 ml-1 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
+                                            class="w-5 h-5 ml-2 transition-transform duration-300  hover:border-gray-300 hover:text-gray-700 text-gray-500 "
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -217,125 +217,139 @@
                                         aria-orientation="vertical"
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-scroll" style="max-height:80vh;">
-                                                  
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-scroll"  style="max-height:80vh;">
+                                                
                                                     <a
                                                         href=" service-GO-BUKS "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">GO BUKS</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">GO BUKS</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> We provide professional fencing repair and installation services to help create the perfect outdoor living space for your home. </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-high-octane-pipes "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">high octane pipes</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">high octane pipes</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> high octane pipes edit </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-NEW-SERVICE-test-2 "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">NEW SERVICE test 2</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">NEW SERVICE test 2</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2">  </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-NEW-SERVICE-150.32689549684114727 "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">NEW SERVICE 150.32689549684114727</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">NEW SERVICE 150.32689549684114727</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2">  </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-NEW-SERVICE-160.26952311054421596 "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">NEW SERVICE 160.26952311054421596</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">NEW SERVICE 160.26952311054421596</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2">  </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-Shrub-Trimming "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Shrub Trimming</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Shrub Trimming</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> We provide professional lawn care and landscaping services to create beautiful outdoor spaces. Our experienced team will work with you to create a customized plan that meets your needs. </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-Exterior-Interior-Painting "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Exterior/Interior Painting</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Exterior/Interior Painting</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> We provide professional exterior and interior painting services to enhance the look of your home. We use quality materials and experienced painters for excellent results. </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-add "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">add</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">add</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> We provide landscaping services near you to help transform your outdoors into a beautiful and functional space. Our experienced team is dedicated to creating the perfect outdoor environment for you. </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-newss-ss2sqws "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">newss ss2sqws</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">newss ss2sqws</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Our news ss2sqws service provides the latest updates on landscaping near you, so homeowners can stay informed and make the best decisions for their outdoor space. </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-Gardening "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Gardening</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Gardening</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2">  </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-Fencing-Repair---Installation "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Fencing Repair &amp; Installation</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Fencing Repair &amp; Installation</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> We provide professional fencing repair and installation services to help create the perfect outdoor living space for your home. </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-Lawn-Aeration "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Lawn Aeration</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Lawn Aeration</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Our Lawn Aeration service improves soil health and water absorption for a healthier, greener lawn. Improved air circulation encourages deeper root growth to promote lush turf year-round. </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-nature "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">nature</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">nature</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2">  </p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" service-NEW-SERVICE-13 "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">NEW SERVICE 13</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">NEW SERVICE 13</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2">  </p>-->
                                                     </a>
                                             
                                             </div>
                                         </div>
                                     </div>
                                 
-                                
+
                             </div>
                         
                             <div
@@ -352,11 +366,11 @@
                                         :aria-expanded="desktopOpen"
                                         aria-controls="navitem_3"
                                         @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2 uppercase"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-700 text-gray-500 transition border-b-2 border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
                                     >
-                                        <span>Galleries</span>
+                                        <span class="block  hover:border-gray-300 hover:text-gray-700 text-gray-500 ">Galleries</span>
                                         <svg
-                                            class="w-5 h-5 ml-1 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
+                                            class="w-5 h-5 ml-2 transition-transform duration-300  hover:border-gray-300 hover:text-gray-700 text-gray-500 "
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -387,125 +401,139 @@
                                         aria-orientation="vertical"
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-scroll" style="max-height:80vh;">
-                                                  
-                                                    <a
-                                                        href=" gallery-somettt "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">somettt</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-bucksgallery "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">bucksgallery</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-Pokemon "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Pokemon</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-a "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">a</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-b "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">b</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-c "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">c</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery------------*---&#x27; "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-fhhf4bw "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">fhhf4bw</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-ttteeeeeesssst "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">ttteeeeeesssst</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-d "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">d</p>
-                                                    </a>
-                                              
-                                                    <a
-                                                        href=" gallery-e "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">e</p>
-                                                    </a>
-                                              
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-scroll"  style="max-height:80vh;">
+                                                
                                                     <a
                                                         href=" gallery-f "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">f</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">f</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
                                                     </a>
-                                              
+                                            
                                                     <a
                                                         href=" gallery-Lydia "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Lydia</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Lydia</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
                                                     </a>
-                                              
+                                            
+                                                    <a
+                                                        href=" gallery-somettt "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">somettt</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-bucksgallery "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">bucksgallery</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-Pokemon "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Pokemon</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-a "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">a</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-b "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">b</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-c "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">c</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery------------*---&#x27; "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-fhhf4bw "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">fhhf4bw</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-ttteeeeeesssst "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">ttteeeeeesssst</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-d "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">d</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-e "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">e</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
                                                     <a
                                                         href=" gallery-All "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">All Photos</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
                                                     </a>
                                             
                                             </div>
                                         </div>
                                     </div>
                                 
-                                
+
                             </div>
                         
                             <div
@@ -518,13 +546,13 @@
                                 
                                     <a
                                         href=" reviews "
-                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
-                                        Reviews 
+                                        Reviews
                                     </a>
                                 
                                 
-                                
+
                             </div>
                         
                             <div
@@ -537,13 +565,13 @@
                                 
                                     <a
                                         href=" our-team "
-                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
-                                        Our team 
+                                        Our team
                                     </a>
                                 
                                 
-                                
+
                             </div>
                         
                             <div
@@ -556,13 +584,13 @@
                                 
                                     <a
                                         href=" hire "
-                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
-                                        Hire 
+                                        Hire
                                     </a>
                                 
                                 
-                                
+
                             </div>
                         
                             <div
@@ -575,13 +603,13 @@
                                 
                                     <a
                                         href=" blog "
-                                        class=" border-secondary hover:border-gray-300  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                        class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
-                                        Blog 
+                                        Blog
                                     </a>
                                 
                                 
-                                
+
                             </div>
                         
                             <div
@@ -594,23 +622,15 @@
                                 
                                     <a
                                         href=" high-octane-pipes "
-                                        class=" border-secondary hover:border-gray-300  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                        class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
-                                        high octane pipes 
+                                        high octane pipes
                                     </a>
                                 
                                 
-                                
+
                             </div>
                         
-                        
-                        <a
-                            href="https://buy.stripe.com/test_9AQ4j21GQ19j0Ks8wx"
-                            target="_blank"
-                            class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
-                        >
-                            Pay now
-                        </a>
                         
 
                     </div>
@@ -619,26 +639,27 @@
                     </p>
                     <div class="w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('call')" class="w-full sm:w-auto">
+                        <div onclick="postCtaClick('call')" class="w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
                             <a
                                 target = "_blank" 
                                 href="tel:+12622282738"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none hover:bg-primary-darker sm:w-auto bg-primary focus-visible:ring-2 ring-primary ring-opacity-75 ring-offset-2"
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-primary hover:bg-primary-darker  focus:ring-0 focus:ring-offset-0"
                                 >
                                 bucks2
                             </a>
                         </div>
                         
                     </div>
+
                     <div class="inline-flex w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto">
+                        <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
                             <a
                                 target = "_blank" 
                                 href="tel:+12622282738"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md   text-primary border-primary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
                                 >
                                 +12629574136
                             </a>
@@ -838,6 +859,14 @@
                                         >
                                             <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                                 
+                                                    <a href="gallery-f" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">f</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-Lydia" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Lydia</p>
+                                                    </a>
+                                                
                                                     <a href="gallery-somettt" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">somettt</p>
                                                     </a>
@@ -880,14 +909,6 @@
                                                 
                                                     <a href="gallery-e" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">e</p>
-                                                    </a>
-                                                
-                                                    <a href="gallery-f" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">f</p>
-                                                    </a>
-                                                
-                                                    <a href="gallery-Lydia" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Lydia</p>
                                                     </a>
                                                 
                                                     <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -955,16 +976,6 @@
                                 </div>
                             
                             
-                                <div x-trap.inert="openMenu == ''">
-                                    <a
-                                        href="https://buy.stripe.com/test_9AQ4j21GQ19j0Ks8wx"
-                                        target="_blank"
-                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                    >
-                                        Pay Now
-                                    </a>
-                                </div>
-                            
                         </div>
                             <div class="flex flex-col fixed bottom-0 w-full p-2 bg-primary">
                                 
@@ -972,7 +983,7 @@
                                     <a
                                         target = "_blank"
                                         href="tel:+12622282738"
-                                        class="cta_call_conversion relative block w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
+                                        class="cta_call_conversion relative block w-full px-5 py-3 whitespace-nowrap font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
                                         >
                                         bucks2
                                     </a>
@@ -985,7 +996,7 @@
                                         target = "_blank"
                                         href="tel:+12622282738"
                                         :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                        class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
+                                        class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
                                         >
                                         +12629574136
                                     </a>
@@ -1007,14 +1018,7 @@
     const navBar = document.getElementById('nav-bar')
     const launchBanner = document.getElementById('launch-site-banner')
     const contactUsButton = document.getElementById('contact-us-button')
-    function detectMob() {
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-            return true
-        } else { 
-            return false
-        }
-    }
-    const isMobile = detectMob()
+    const isMobile = window.isMobile
     if (((window.location.href.includes('prosite.prophone.com')
      || window.location.href.includes('dev.prosite.prophone.com')
      || window.location.href.includes('stage.prosite.prophone.com')
@@ -1144,6 +1148,9 @@
         
             
                 
+
+                    
+                
                   
         
             
@@ -1171,10 +1178,14 @@
                                 
                             
                                 
+                            
+                                
+                            
+                                
                                     <section class="overflow-hidden bg-white">
 
     <div
-        class="relative flex w-full overflow-x-hidden custom_text_color "
+        class="relative flex w-full overflow-x-hidden custom_text_color text-white"
     >
         
             
@@ -1188,7 +1199,7 @@
                     <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
                 </video>
                 <main
-                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary bg-opacity-50"
+                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary bg-opacity-75"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1213,7 +1224,7 @@
                             
                             <div onclick="postCtaClick('email')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
                                 <a
-                                    target = "_blank" href="mailto:Sm.s@sd.co?subject=landscaping near me Job - Requesting a quote&body=Hi Dylan,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                                    target = "_blank" href="mailto:nick.dalfonso@toplinepro.com?subject=landscaping near me Job - Requesting a quote&body=Hi nick,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
                                     class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
                                     <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                                     <span class="relative">Email Us</span>
@@ -1233,6 +1244,10 @@
     <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
         <div class="relative">
             
+                
+                    
+                
+                    
                 
                     
                 
@@ -2299,10 +2314,6 @@
                 
                     
                 
-                    
-                
-                    
-                
             
         </div>
     </div>
@@ -2433,7 +2444,7 @@
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="157215" value="GO BUKS" id="contact-service-157215" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="157279" value="GO BUKS" id="contact-service-157279" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 GO BUKS
@@ -2441,7 +2452,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="157216" value="high octane pipes" id="contact-service-157216" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="157280" value="high octane pipes" id="contact-service-157280" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 high octane pipes
@@ -2449,7 +2460,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="157217" value="NEW SERVICE test 2" id="contact-service-157217" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="157281" value="NEW SERVICE test 2" id="contact-service-157281" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE test 2
@@ -2457,7 +2468,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="157218" value="NEW SERVICE 150.32689549684114727" id="contact-service-157218" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="157282" value="NEW SERVICE 150.32689549684114727" id="contact-service-157282" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE 150.32689549684114727
@@ -2465,7 +2476,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="157219" value="NEW SERVICE 160.26952311054421596" id="contact-service-157219" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="157283" value="NEW SERVICE 160.26952311054421596" id="contact-service-157283" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE 160.26952311054421596
@@ -2473,7 +2484,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="157220" value="Shrub Trimming" id="contact-service-157220" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="157284" value="Shrub Trimming" id="contact-service-157284" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Shrub Trimming
@@ -2481,7 +2492,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="157221" value="Exterior/Interior Painting" id="contact-service-157221" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="157285" value="Exterior/Interior Painting" id="contact-service-157285" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Exterior/Interior Painting
@@ -2489,7 +2500,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="157222" value="add" id="contact-service-157222" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="157286" value="add" id="contact-service-157286" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 add
@@ -2577,97 +2588,97 @@
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-157215"
-                                        name="157215"
+                                        id="contact-service-157279"
+                                        name="157279"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="GO BUKS"
                                     />
-                                    <label for="contact-service-157215" class="ml-3 text-sm font-normal text-gray-700">GO BUKS</label>
+                                    <label for="contact-service-157279" class="ml-3 text-sm font-normal text-gray-700">GO BUKS</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-157216"
-                                        name="157216"
+                                        id="contact-service-157280"
+                                        name="157280"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="high octane pipes"
                                     />
-                                    <label for="contact-service-157216" class="ml-3 text-sm font-normal text-gray-700">high octane pipes</label>
+                                    <label for="contact-service-157280" class="ml-3 text-sm font-normal text-gray-700">high octane pipes</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-157217"
-                                        name="157217"
+                                        id="contact-service-157281"
+                                        name="157281"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE test 2"
                                     />
-                                    <label for="contact-service-157217" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE test 2</label>
+                                    <label for="contact-service-157281" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE test 2</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-157218"
-                                        name="157218"
+                                        id="contact-service-157282"
+                                        name="157282"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE 150.32689549684114727"
                                     />
-                                    <label for="contact-service-157218" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 150.32689549684114727</label>
+                                    <label for="contact-service-157282" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 150.32689549684114727</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-157219"
-                                        name="157219"
+                                        id="contact-service-157283"
+                                        name="157283"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE 160.26952311054421596"
                                     />
-                                    <label for="contact-service-157219" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 160.26952311054421596</label>
+                                    <label for="contact-service-157283" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 160.26952311054421596</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-157220"
-                                        name="157220"
+                                        id="contact-service-157284"
+                                        name="157284"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Shrub Trimming"
                                     />
-                                    <label for="contact-service-157220" class="ml-3 text-sm font-normal text-gray-700">Shrub Trimming</label>
+                                    <label for="contact-service-157284" class="ml-3 text-sm font-normal text-gray-700">Shrub Trimming</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-157221"
-                                        name="157221"
+                                        id="contact-service-157285"
+                                        name="157285"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Exterior/Interior Painting"
                                     />
-                                    <label for="contact-service-157221" class="ml-3 text-sm font-normal text-gray-700">Exterior/Interior Painting</label>
+                                    <label for="contact-service-157285" class="ml-3 text-sm font-normal text-gray-700">Exterior/Interior Painting</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-157222"
-                                        name="157222"
+                                        id="contact-service-157286"
+                                        name="157286"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="add"
                                     />
-                                    <label for="contact-service-157222" class="ml-3 text-sm font-normal text-gray-700">add</label>
+                                    <label for="contact-service-157286" class="ml-3 text-sm font-normal text-gray-700">add</label>
                                 </div>
                             
                                 
@@ -2922,10 +2933,6 @@
                             
                                 
                             
-                                
-                            
-                                
-                            
                         
                     
                 
@@ -2980,8 +2987,8 @@
                 
                     
                          
-    <section class="flex final-cta-image-if-slider two-thirds-screen-height w-full bg-center bg-cover custom_text_color ">
-            <div class="flex flex-col items-center justify-center px-6 py-12 text-center sm:px-6 lg:py-16 lg:px-8 w-full bg-primary bg-opacity-50">
+    <section class="flex final-cta-image-if-slider two-thirds-screen-height w-full bg-center bg-cover custom_text_color text-white">
+            <div class="flex flex-col items-center justify-center px-6 py-12 text-center sm:px-6 lg:py-16 lg:px-8 w-full bg-primary bg-opacity-75">
             <h2 class="flex flex-col items-center text-3xl font-extrabold sm:text-6xl">
                 <span class="flex">Ready to get started?</span>
                 <span class="flex">Book an appointment today.</span>
@@ -3002,7 +3009,7 @@
                 
                 <div onclick="postCtaClick('email')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
                     <a
-                        target = "_blank" href="mailto:Sm.s@sd.co?subject=landscaping near me Job - Requesting a quote&body=Hi Dylan,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                        target = "_blank" href="mailto:nick.dalfonso@toplinepro.com?subject=landscaping near me Job - Requesting a quote&body=Hi nick,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
                         class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
                         <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                         <span class="relative">Email Us</span>
