@@ -653,7 +653,7 @@
                     <li
                         x-transition
                         style="perspective: 800px"
-                        class="group service-item "
+                        class="group service-item  lg:col-start-2 "
                     >
                         <a
                             href="service-Interior-Remodeling"
@@ -668,6 +668,38 @@
                                 <span class="hidden sm:block text-xl z-20 font-bold transition duration-500 sm:opacity-0 group-hover:opacity-100">Interior Remodeling</span>
                                 <p class="hidden sm:block text-base z-20 mt-6 line-clamp-8 sm:line-clamp-7 font-medium leading-6 text-center transition duration-500 sm:opacity-0 group-hover:opacity-100">
                                     &quot;Transform your home&#x27;s interior with our expert remodeling service, enhancing both functionality and aesthetics. From kitchen renovations to bathroom upgrades, we can bring your dream space to life.
+                                </p>
+                            </div>
+
+                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary bg-gradient-to-b from-slate-500"></div>
+                            
+                            <img
+                                class="object-cover grayscale"
+                                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=414&q=80"
+                                alt=""
+                            />
+                            
+                        </a>
+                    </li>
+                
+                    <li
+                        x-transition
+                        style="perspective: 800px"
+                        class="group service-item  lg:col-start-3 "
+                    >
+                        <a
+                            href="service-Other-Remodeling-Services"
+                            style="transform-style: preserve-3d"
+                            class="text-center relative block overflow-hidden transition duration-500 rotate-y-0 sm:rotate-y-0 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 focus:ring-0 focus:ring-offset-0"
+                            aria-label="Other Remodeling Services"
+                        >
+                            <div aria-hidden="true" class="px-4 flex inset-0 z-20 items-center justify-center text-white sm:flex sm:hover:hidden">
+                                <span class="text-2xl font-bold transition duration-500 sm:group-hover:opacity-0">Other Remodeling Services</span>
+                            </div>
+                            <div aria-hidden="true" class="absolute inset-0 z-20 flex-col items-center px-4 pb-3 text-white pt-7 sm:transition sm:duration-500">
+                                <span class="hidden sm:block text-xl z-20 font-bold transition duration-500 sm:opacity-0 group-hover:opacity-100">Other Remodeling Services</span>
+                                <p class="hidden sm:block text-base z-20 mt-6 line-clamp-8 sm:line-clamp-7 font-medium leading-6 text-center transition duration-500 sm:opacity-0 group-hover:opacity-100">
+                                    We also offer other remodeling services to transform the interior of your home, including kitchen and bathroom renovations, flooring installation, and basement finishing.
                                 </p>
                             </div>
 
@@ -1221,6 +1253,15 @@
 <!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> &quot;Transform your home&#x27;s interior with our expert remodeling service, enhancing both functionality and aesthetics. From kitchen renovations to bathroom upgrades, we can bring your dream space to life. </p>-->
                                                     </a>
                                             
+                                                    <a
+                                                        href=" service-Other-Remodeling-Services "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Other Remodeling Services</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> We also offer other remodeling services to transform the interior of your home, including kitchen and bathroom renovations, flooring installation, and basement finishing. </p>-->
+                                                    </a>
+                                            
                                             </div>
                                         </div>
                                     </div>
@@ -1653,6 +1694,10 @@
                                                 
                                                     <a href="service-Interior-Remodeling" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Interior Remodeling</p>
+                                                    </a>
+                                                
+                                                    <a href="service-Other-Remodeling-Services" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Other Remodeling Services</p>
                                                     </a>
                                                 
                                             </div>
@@ -4347,6 +4392,14 @@ observer.observe(target)
                               >
                           </li>
                           
+                          <li>
+                              <a
+                                  href="service-Other-Remodeling-Services"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Other Remodeling Services</a
+                              >
+                          </li>
+                          
                       </ul>
                   </div>
               </div>
@@ -4754,6 +4807,14 @@ observer.observe(target)
                                             </span>
                                         </div>
                                         
+                                        <div class="flex items-center">
+                                            <input type="checkbox" name="158657" value="Other Remodeling Services" id="contact-service-158657" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            />
+                                            <span class="ml-3 items-start text-gray-600">
+                                                Other Remodeling Services
+                                            </span>
+                                        </div>
+                                        
                         
                                          <div class="flex flex-col">
                                             <div class="flex items-center">
@@ -4890,6 +4951,18 @@ observer.observe(target)
                                         value="Interior Remodeling"
                                     />
                                     <label for="contact-service-158656" class="ml-3 text-sm font-normal text-gray-700">Interior Remodeling</label>
+                                </div>
+                            
+                                
+                                <div class="flex items-center">
+                                    <input
+                                        id="contact-service-158657"
+                                        name="158657"
+                                        type="checkbox"
+                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                        value="Other Remodeling Services"
+                                    />
+                                    <label for="contact-service-158657" class="ml-3 text-sm font-normal text-gray-700">Other Remodeling Services</label>
                                 </div>
                             
                                 
