@@ -520,44 +520,7 @@
             <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Our Servicesstest</span>
         </h2>
         <div class="relative mt-12">
-            <ul role="list" class="space-y-9 mx-auto sm:grid sm:space-y-0  grid-cols-1 mx-auto sm:w-1/2 md:w-1/3 lg:w-1/4 ">
-                
-                    <li
-                        x-transition
-                        style="perspective: 800px"
-                        class="group service-item "
-                    >
-                        <a
-                            href="service-GO-BUKS"
-                            style="transform-style: preserve-3d"
-                            class="text-center relative block overflow-hidden transition duration-500 rotate-y-0 sm:rotate-y-0 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 focus:ring-0 focus:ring-offset-0"
-                            aria-label="GO BUKS"
-                        >
-                            <div aria-hidden="true" class="px-4 flex inset-0 z-20 items-center justify-center text-white sm:flex sm:hover:hidden">
-                                <span class="text-2xl font-bold transition duration-500 sm:group-hover:opacity-0">GO BUKS</span>
-                            </div>
-                            <div aria-hidden="true" class="absolute inset-0 z-20 flex-col items-center px-4 pb-3 text-white pt-7 sm:transition sm:duration-500">
-                                <span class="hidden sm:block text-xl z-20 font-bold transition duration-500 sm:opacity-0 group-hover:opacity-100">GO BUKS</span>
-                                <p class="hidden sm:block text-base z-20 mt-6 line-clamp-8 sm:line-clamp-7 font-medium leading-6 text-center transition duration-500 sm:opacity-0 group-hover:opacity-100">
-                                    We provide professional fencing repair and installation services to help create the perfect outdoor living space for your home.
-                                </p>
-                            </div>
-
-                            <div aria-hidden="true" class="absolute inset-0 z-10 opacity-75 bg-secondary bg-gradient-to-b from-slate-500"></div>
-                            
-                                
-                                    <img
-                                        class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/300x300/filters:strip_exif()/media/7b9652e0-4bc1-4239-8161-af8c4df01d7c.png"
-                                        alt="We provide professional fencing repair and installation services to help create the perfect outdoor living space for your home. for Beantown Tutoring! in New York, New York"
-                                        loading="lazy"
-                                    />
-                                
-
-
-                            
-                        </a>
-                    </li>
+            <ul role="list" class="space-y-9 mx-auto sm:grid sm:space-y-0  sm:grid-cols-2 md:grid-cols-3 sm:space-y-0 lg:grid-cols-4 sm:gap-4 ">
                 
             </ul>
         </div>
@@ -1010,61 +973,13 @@
                                 @click.away="desktopOpen = false"
                             >
                                 
-                                    <button
-                                        type="button"
-                                        aria-haspopup="true"
-                                        :aria-expanded="desktopOpen"
-                                        aria-controls="navitem_2"
-                                        @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-700 text-gray-500 transition border-b-2 border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
+                                    <a
+                                        href="  "
+                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
-                                        <span class="block  hover:border-gray-300 hover:text-gray-700 text-gray-500 ">Services</span>
-                                        <svg
-                                            class="w-5 h-5 ml-2 transition-transform duration-300  hover:border-gray-300 hover:text-gray-700 text-gray-500 "
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                            :class="{ '-rotate-180': desktopOpen }"
-                                        >
-                                            <path
-                                                fill-rule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clip-rule="evenodd"
-                                            />
-                                        </svg>
-                                    </button>
+                                        Services
+                                    </a>
                                 
-                                
-                                    <div
-                                        x-cloak
-                                        x-show="desktopOpen"
-                                        x-transition:enter="transition ease-out duration-200"
-                                        x-transition:enter-start="opacity-0 translate-y-1"
-                                        x-transition:enter-end="opacity-100 translate-y-0"
-                                        x-transition:leave="transition ease-in duration-150"
-                                        x-transition:leave-start="opacity-100 translate-y-0"
-                                        x-transition:leave-end="opacity-0 translate-y-1"
-                                        id="navitem_2"
-                                        role="menu"
-                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
-                                        aria-orientation="vertical"
-                                    >
-                                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto"  style="max-height:80vh;">
-                                                
-                                                    <a
-                                                        href=" service-GO-BUKS "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">GO BUKS</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> We provide professional fencing repair and installation services to help create the perfect outdoor living space for your home. </p>-->
-                                                    </a>
-                                            
-                                            </div>
-                                        </div>
-                                    </div>
                                 
 
                             </div>
@@ -1439,49 +1354,12 @@
                             
                                 <div x-trap.inert="openMenu == 'navitem_2'">
                                     
-                                        <button
-                                            aria-haspopup="true"
-                                            :aria-expanded="openMenu == 'navitem_2'"
-                                            aria-controls="mobile-navitem_2"
-                                            @click="openMenu = openMenu == 'navitem_2' ? '' : 'navitem_2'"
-                                            class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
-                                            :class="openMenu == 'navitem_2' ? 'z-30' : 'z-0'"
+                                        <a
+                                            href="  "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Services</a
                                         >
-                                            <span>Services</span>
-                                            <svg
-                                                class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 20 20"
-                                                fill="currentColor"
-                                                aria-hidden="true"
-                                                :class="{ '-rotate-180': openMenu == 'navitem_2' }"
-                                            >
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                    clip-rule="evenodd"
-                                                />
-                                            </svg>
-                                        </button>
                                     
-                                    
-                                        <div
-                                            x-cloak
-                                            x-show="openMenu == 'navitem_2'"
-                                            x-collapse
-                                            id="mobile-navitem_2"
-                                            role="menu"
-                                            class="z-20 pt-1 pb-2"
-                                            aria-orientation="vertical"
-                                        >
-                                            <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
-                                                
-                                                    <a href="service-GO-BUKS" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">GO BUKS</p>
-                                                    </a>
-                                                
-                                            </div>
-                                        </div>
                                     
                                 </div>
                             
@@ -4132,14 +4010,6 @@ observer.observe(target)
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Services</h3>
                       <ul role="list" class="mt-4  space-y-4">
                           
-                          <li>
-                              <a
-                                  href="service-GO-BUKS"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                  >GO BUKS</a
-                              >
-                          </li>
-                          
                       </ul>
                   </div>
               </div>
@@ -4507,14 +4377,6 @@ observer.observe(target)
                                 <fieldset class="sm:hidden bg-white p-6 mt-1 rounded-md">
                                     <div class="flex flex-col space-y-2">
                                         
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="158475" value="GO BUKS" id="contact-service-158475" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                GO BUKS
-                                            </span>
-                                        </div>
-                                        
                         
                                          <div class="flex flex-col">
                                             <div class="flex items-center">
@@ -4593,18 +4455,6 @@ observer.observe(target)
                         <label class="font-medium text-base text-white">Services</label>
                         <fieldset class="sm:bg-white sm:p-6 sm:mt-1 rounded-md">
                             <div class="grid auto-cols-auto gap-4 grid-cols-2">
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-158475"
-                                        name="158475"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="GO BUKS"
-                                    />
-                                    <label for="contact-service-158475" class="ml-3 text-sm font-normal text-gray-700">GO BUKS</label>
-                                </div>
-                            
                                 
              
                                 <div class="flex flex-col">
