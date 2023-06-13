@@ -1439,7 +1439,7 @@
                                 
                                     <a
                                         href=" index "
-                                        class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  border-b-2  text-gray-500   focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        class=" border-transparent  hover:border-gray-300 hover:text-gray-700 text-gray-500   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  border-b-2  text-gray-500   focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
                                         Home
                                     </a>
@@ -1927,25 +1927,6 @@
                             >
                                 
                                     <a
-                                        href=" blog "
-                                        class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                    >
-                                        Blog
-                                    </a>
-                                
-                                
-
-                            </div>
-                        
-                            <div
-                                class="relative flex items-center"
-                                x-trap.inert="desktopOpen"
-                                x-data="{ desktopOpen: false }"
-                                @keydown.escape.stop="desktopOpen = false"
-                                @click.away="desktopOpen = false"
-                            >
-                                
-                                    <a
                                         href=" bucks-high-octane-pipes "
                                         class="  hover:border-gray-300 hover:text-gray-700 text-gray-500  border-secondary hover:border-gray-300   group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                     >
@@ -2298,17 +2279,6 @@
                                     
                                 </div>
                             
-                                <div x-trap.inert="openMenu == 'navitem_7'">
-                                    
-                                        <a
-                                            href=" blog "
-                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
-                                            >Blog</a
-                                        >
-                                    
-                                    
-                                </div>
-                            
                                 <div x-trap.inert="openMenu == 'navitem_8'">
                                     
                                         <a
@@ -2385,7 +2355,7 @@
     async function postCtaClick(type) {
         if (type === "text") history.replaceState(null, "", "contact");
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -5806,7 +5776,7 @@ observer.observe(target)
                     <li class="hidden xl:block">
                         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/107522295397786/reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             
-                                Facebook
+                                
                             
                         </a>
                     </li>
