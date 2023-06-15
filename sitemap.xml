@@ -11,13 +11,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-GO-BUKS</loc>
-        <lastmod>2023-06-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-high-octane-pipes</loc>
         <lastmod>2023-06-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -124,6 +117,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-a</loc>
+        <lastmod>2023-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-ad</loc>
         <lastmod>2023-06-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -397,6 +397,13 @@
 
     <url>
         <loc>https://carolandscaping.com/blog-8283</loc>
+        <lastmod>2023-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/blog-8285</loc>
         <lastmod>2023-06-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
