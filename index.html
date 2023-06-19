@@ -607,10 +607,274 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
         <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
             <h2 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
             <h2 class="my-3 mb-10 text-xl font-medium  text-gray-400  text-center">See why our customers love us</h2>
-            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ae817a98-aeef-4a5f-b925-968745273554.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f0a2f89a-8f48-4e41-8151-e018d9deb041.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/JSAYYV82UC12CDDF3C5SX6BFGCP2VY5L67R3BNRV.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/86Q3REQ6QNB87HACKZGVI3FVLYEN1Y8845RBSMVM.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ENZDHRXV4YIPUOZQ4XNZ7I9E2GT7C39J709FFVCP.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8JEDYKBY2U2QYS5B4Z4R7BV3EK1Y7V01B8ISPW4Y.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/SHYCNVBNXK1Y7ZGYOMKI6DO0TUDMW0M5EPO0101J.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/7NIG3LVDCMBYEVFUBTLVBYHGZXD01GE0EKZA7QY5.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/PYZZ74DLBQIZQY15NLDO36IFH40NUQ3FHNS7HQJO.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/4ZXSGU6XEQZO2YY8ZGMPFAVCPUAW3PYUCP47ACAR.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/1BAT51HID3TQGTOP78ZF9HAN1VVDYZB3SSO9I7RA.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/3BF83IAJA7ZOHE4MY0OHDV62JRMOM8O41VDFPMYV.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/33B676NNEZ6CHLDLU1NRVICMSYOHENP2ECOFEQCL.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9IBMTM3309KKUPG9OH9IL1RSFG6EV6BVG84TN1T6.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2923PMR3Z74LAU55W8ON53ZO15590II6V4VC9NO6.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/GVAYAJ0P0JKNTII9CQRRFOYSF3E67WHRMIJQT2LY.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8MG70FM6AQS7ZCFGN0X2RQ0773NU8YBEJ2ASNGIQ.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/e190250a-baee-4bc8-9781-e149588b7fa9.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c2998279-beb0-46a8-8e5b-582602c9f9e3.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c35e9383-1ae9-4e95-949a-8ee3c56bab69.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9f6a4eca-47a6-4a05-ba11-696ce83e0d1b.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/fffc4eee-79d2-4aec-a964-98049891c75a.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2861333e-672b-4b06-bdad-b8ef53320f40.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c826708c-24b5-4227-a2f6-ce09fc43171d.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/fe1fdf80-f04a-4047-b0c3-293711d7b88d.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/01336c3f-2d64-4197-8d7b-03e42fe00aa6.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/b50610b6-9fcf-49ad-9e51-df3671badcf0.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/93dc558c-59e8-4f97-983b-3d7ff8628ed1.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/a37a8a1b-b49d-4525-8509-f464bc0aaac1.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/b5e44334-afbb-45b9-acb0-4f6bdbc11267.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/eade556d-d45f-4b7a-9b4c-71d6ebe5bac6.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0db9c573-e46c-4709-92c7-e9aa06abc4a9.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f7e7936f-e6e4-4ccb-857d-928390a83cbb.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2f156171-a9f7-40d5-b695-fdf41e52c146.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0ef7368a-0a4e-4ef2-aa47-bb788f4c8231.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/92c4e9bc-2489-4777-b849-0f3b9dad639e.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/17531800-9030-47d9-9a35-3fae24fb19e5.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c3603f43-d7f6-49f7-8341-4b1a9861ed07.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/6d30c9b6-b654-4ed5-ada7-950296b76172.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f0a70f28-0629-4cde-9aa7-ddf7f9de84f4.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/801f7843-8be4-434d-a703-a476b4e2852d.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ae817a98-aeef-4a5f-b925-968745273554.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f0a2f89a-8f48-4e41-8151-e018d9deb041.png', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/JSAYYV82UC12CDDF3C5SX6BFGCP2VY5L67R3BNRV.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/86Q3REQ6QNB87HACKZGVI3FVLYEN1Y8845RBSMVM.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ENZDHRXV4YIPUOZQ4XNZ7I9E2GT7C39J709FFVCP.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8JEDYKBY2U2QYS5B4Z4R7BV3EK1Y7V01B8ISPW4Y.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/SHYCNVBNXK1Y7ZGYOMKI6DO0TUDMW0M5EPO0101J.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/7NIG3LVDCMBYEVFUBTLVBYHGZXD01GE0EKZA7QY5.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/PYZZ74DLBQIZQY15NLDO36IFH40NUQ3FHNS7HQJO.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/4ZXSGU6XEQZO2YY8ZGMPFAVCPUAW3PYUCP47ACAR.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/1BAT51HID3TQGTOP78ZF9HAN1VVDYZB3SSO9I7RA.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/3BF83IAJA7ZOHE4MY0OHDV62JRMOM8O41VDFPMYV.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/33B676NNEZ6CHLDLU1NRVICMSYOHENP2ECOFEQCL.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9IBMTM3309KKUPG9OH9IL1RSFG6EV6BVG84TN1T6.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2923PMR3Z74LAU55W8ON53ZO15590II6V4VC9NO6.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/GVAYAJ0P0JKNTII9CQRRFOYSF3E67WHRMIJQT2LY.jpeg', 'photo'],    [ 'https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8MG70FM6AQS7ZCFGN0X2RQ0773NU8YBEJ2ASNGIQ.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
                                     
                         
                         <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/e190250a-baee-4bc8-9781-e149588b7fa9.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/e190250a-baee-4bc8-9781-e149588b7fa9.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c2998279-beb0-46a8-8e5b-582602c9f9e3.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c2998279-beb0-46a8-8e5b-582602c9f9e3.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c35e9383-1ae9-4e95-949a-8ee3c56bab69.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c35e9383-1ae9-4e95-949a-8ee3c56bab69.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9f6a4eca-47a6-4a05-ba11-696ce83e0d1b.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/9f6a4eca-47a6-4a05-ba11-696ce83e0d1b.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/fffc4eee-79d2-4aec-a964-98049891c75a.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/fffc4eee-79d2-4aec-a964-98049891c75a.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2861333e-672b-4b06-bdad-b8ef53320f40.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/2861333e-672b-4b06-bdad-b8ef53320f40.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c826708c-24b5-4227-a2f6-ce09fc43171d.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c826708c-24b5-4227-a2f6-ce09fc43171d.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/fe1fdf80-f04a-4047-b0c3-293711d7b88d.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/fe1fdf80-f04a-4047-b0c3-293711d7b88d.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/01336c3f-2d64-4197-8d7b-03e42fe00aa6.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/01336c3f-2d64-4197-8d7b-03e42fe00aa6.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/b50610b6-9fcf-49ad-9e51-df3671badcf0.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b50610b6-9fcf-49ad-9e51-df3671badcf0.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/93dc558c-59e8-4f97-983b-3d7ff8628ed1.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/93dc558c-59e8-4f97-983b-3d7ff8628ed1.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/a37a8a1b-b49d-4525-8509-f464bc0aaac1.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/a37a8a1b-b49d-4525-8509-f464bc0aaac1.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 12; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/b5e44334-afbb-45b9-acb0-4f6bdbc11267.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b5e44334-afbb-45b9-acb0-4f6bdbc11267.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 13; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/eade556d-d45f-4b7a-9b4c-71d6ebe5bac6.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/eade556d-d45f-4b7a-9b4c-71d6ebe5bac6.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 14; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0db9c573-e46c-4709-92c7-e9aa06abc4a9.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/0db9c573-e46c-4709-92c7-e9aa06abc4a9.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 15; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f7e7936f-e6e4-4ccb-857d-928390a83cbb.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/f7e7936f-e6e4-4ccb-857d-928390a83cbb.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 16; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2f156171-a9f7-40d5-b695-fdf41e52c146.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/2f156171-a9f7-40d5-b695-fdf41e52c146.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 17; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/0ef7368a-0a4e-4ef2-aa47-bb788f4c8231.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/0ef7368a-0a4e-4ef2-aa47-bb788f4c8231.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 18; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/92c4e9bc-2489-4777-b849-0f3b9dad639e.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/92c4e9bc-2489-4777-b849-0f3b9dad639e.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 19; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/17531800-9030-47d9-9a35-3fae24fb19e5.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/17531800-9030-47d9-9a35-3fae24fb19e5.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 20; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/c3603f43-d7f6-49f7-8341-4b1a9861ed07.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c3603f43-d7f6-49f7-8341-4b1a9861ed07.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 21; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/6d30c9b6-b654-4ed5-ada7-950296b76172.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/6d30c9b6-b654-4ed5-ada7-950296b76172.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 22; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f0a70f28-0629-4cde-9aa7-ddf7f9de84f4.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/f0a70f28-0629-4cde-9aa7-ddf7f9de84f4.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 23; open = true; " >
+                            <picture>
+                                <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/801f7843-8be4-434d-a703-a476b4e2852d.png"  alt="photo of best work"   loading="lazy" />
+                                <img
+                                    class="rounded shadow-md object-cover w-full h-60" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/801f7843-8be4-434d-a703-a476b4e2852d.png"  alt="photo of best work"   loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    
+                                    
+                        
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 24; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ae817a98-aeef-4a5f-b925-968745273554.png"  alt="photo of best work"   loading="lazy" />
                                 <img
@@ -621,7 +885,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 25; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/f0a2f89a-8f48-4e41-8151-e018d9deb041.png"  alt="photo of best work"   loading="lazy" />
                                 <img
@@ -632,7 +896,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 26; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/JSAYYV82UC12CDDF3C5SX6BFGCP2VY5L67R3BNRV.jpeg"  alt = "Photo number 15 of Sheer Power Washing&#x27;s best work performing a Roof Cleaning job"   loading="lazy" />
                                 <img
@@ -643,7 +907,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 27; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/86Q3REQ6QNB87HACKZGVI3FVLYEN1Y8845RBSMVM.jpeg"  alt = "Photo number 14 of Sheer Power Washing&#x27;s best work performing a Roof Cleaning job"   loading="lazy" />
                                 <img
@@ -654,7 +918,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 28; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/ENZDHRXV4YIPUOZQ4XNZ7I9E2GT7C39J709FFVCP.jpeg"  alt = "Photo number 13 of Sheer Power Washing&#x27;s best work performing a Roof Cleaning job"   loading="lazy" />
                                 <img
@@ -665,7 +929,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 29; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8JEDYKBY2U2QYS5B4Z4R7BV3EK1Y7V01B8ISPW4Y.jpeg"  alt = "Photo number 12 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -676,7 +940,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 30; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/SHYCNVBNXK1Y7ZGYOMKI6DO0TUDMW0M5EPO0101J.jpeg"  alt = "Photo number 11 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -687,7 +951,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 31; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/7NIG3LVDCMBYEVFUBTLVBYHGZXD01GE0EKZA7QY5.jpeg"  alt = "Photo number 10 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -698,7 +962,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 32; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/PYZZ74DLBQIZQY15NLDO36IFH40NUQ3FHNS7HQJO.jpeg"  alt = "Photo number 9 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -709,7 +973,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 33; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/4ZXSGU6XEQZO2YY8ZGMPFAVCPUAW3PYUCP47ACAR.jpeg"  alt = "Photo number 8 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -720,7 +984,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 34; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/1BAT51HID3TQGTOP78ZF9HAN1VVDYZB3SSO9I7RA.jpeg"  alt = "Photo number 7 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -731,7 +995,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 35; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/3BF83IAJA7ZOHE4MY0OHDV62JRMOM8O41VDFPMYV.jpeg"  alt = "Photo number 6 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -742,7 +1006,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 12; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 36; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/33B676NNEZ6CHLDLU1NRVICMSYOHENP2ECOFEQCL.jpeg"  alt = "Photo number 5 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -753,7 +1017,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 13; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 37; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/9IBMTM3309KKUPG9OH9IL1RSFG6EV6BVG84TN1T6.jpeg"  alt = "Photo number 4 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -764,7 +1028,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 14; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 38; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/2923PMR3Z74LAU55W8ON53ZO15590II6V4VC9NO6.jpeg"  alt = "Photo number 3 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -775,7 +1039,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 15; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 39; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/GVAYAJ0P0JKNTII9CQRRFOYSF3E67WHRMIJQT2LY.jpeg"  alt = "Photo number 2 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
@@ -786,7 +1050,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                     
                                     
                         
-                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 16; open = true; " >
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 40; open = true; " >
                             <picture>
                                 <source class="rounded shadow-md object-cover w-full h-60" type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:format(webp)/media/8MG70FM6AQS7ZCFGN0X2RQ0773NU8YBEJ2ASNGIQ.jpeg"  alt = "Photo number 1 of Sheer Power Washing&#x27;s best work performing a null job"   loading="lazy" />
                                 <img
