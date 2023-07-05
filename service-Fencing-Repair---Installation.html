@@ -35,7 +35,7 @@
     <title>Beantown Tutoring: NYC Landscaping Services |  | Fencing Repair   Installation</title>
     <meta name="description"
         content="">
-    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/9MKZCVCORIRSPLNLYJOYDAQZK5OS46YZ17XZNF73.jpeg" type="image/x-icon">
+    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/c0f5fa8b-5d99-4f2f-843d-67b3d9c1b812.png" type="image/x-icon">
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
     <link rel="preconnect" href="https://ajax.googleapis.com"/>
@@ -85,7 +85,7 @@
 
 <body
     
-    x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: true, announcementHeight: 0 }"
+    x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0 }"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
     
 >
@@ -105,33 +105,6 @@
     :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
     class="w-screen fixed top-0 inset-x-0 z-20"
 >
-
-    <div 
-        x-ref="announcement"
-        x-init="announcementHeight = $refs.announcement.offsetHeight + 'px'"
-        x-show="showAnnouncement"
-        x-transition:leave="transition-all duration-700"
-        x-transition:leave-start="max-h-12"
-        x-transition:leave-end="max-h-0"
-        class="overflow-hidden"
-        style="background-color:#560EC4"
-    >
-        <div class="flex p-4 space-x-3 bg-green-50 text-sm font-medium text-green-500 align-center" style="background-color:transparent;backdrop-filter:brightness(220%);color:#560EC4">
-            <span class="flex items-center">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
-  <path d="M12 7.5a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" />
-  <path fill-rule="evenodd" d="M1.5 4.875C1.5 3.839 2.34 3 3.375 3h17.25c1.035 0 1.875.84 1.875 1.875v9.75c0 1.036-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 011.5 14.625v-9.75zM8.25 9.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM18.75 9a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V9.75a.75.75 0 00-.75-.75h-.008zM4.5 9.75A.75.75 0 015.25 9h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H5.25a.75.75 0 01-.75-.75V9.75z" clip-rule="evenodd" />
-  <path d="M2.25 18a.75.75 0 000 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 00-.75-.75H2.25z" />
-</svg>
-            </span>
-            <p class="text-green-800 grow" style="color:#560EC4;filter:brightness(50%)">"caro" also means "expensive" in Spanish - <a href="https://heroicons.com/" target="_blank" class="underline">choose your icon</a></p>
-            <button @click="showAnnouncement = false">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20" class="justify-self-end cursor-pointer hover:scale-125">
-  <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
-</svg>
-            </button>
-        </div>
-    </div>
 
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
@@ -156,11 +129,11 @@
                             <picture>
                                 <source
                                     class="h-[80px] xl:h-[150px] scale-100 origin-left transition object-contain max-h-40 logo  max-w-xs "
-                                    type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/9MKZCVCORIRSPLNLYJOYDAQZK5OS46YZ17XZNF73.jpeg" width="160" height="160" loading="lazy"
+                                    type="image/webp" srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/c0f5fa8b-5d99-4f2f-843d-67b3d9c1b812.png" width="160" height="160" loading="lazy"
                                 />
                                 <img
                                     class="h-[80px] xl:h-[150px] scale-100 origin-left transition object-contain max-h-40 logo  max-w-xs "
-                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/9MKZCVCORIRSPLNLYJOYDAQZK5OS46YZ17XZNF73.jpeg"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/c0f5fa8b-5d99-4f2f-843d-67b3d9c1b812.png"
                                     alt="Brand Logo"
                                     width="160"
                                     loading="lazy"
@@ -463,15 +436,6 @@
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto"  style="max-height:80vh;">
                                                 
                                                     <a
-                                                        href=" gallery-somettt "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">somettt</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
-                                                    </a>
-                                            
-                                                    <a
                                                         href=" gallery-e "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
@@ -531,6 +495,15 @@
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
                                                         <p class="mt-1 text-base font-medium text-red-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-somettt "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">somettt</p>
 <!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
                                                     </a>
                                             
@@ -745,7 +718,7 @@
                                 href=" index "
                                 class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                             >
-                                <img class="h-[80px]" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/9MKZCVCORIRSPLNLYJOYDAQZK5OS46YZ17XZNF73.jpeg" alt="Brand Logo" />
+                                <img class="h-[80px]" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/c0f5fa8b-5d99-4f2f-843d-67b3d9c1b812.png" alt="Brand Logo" />
                             </a>
                         </div>
                         <div class="-mr-2">
@@ -918,10 +891,6 @@
                                         >
                                             <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                                 
-                                                    <a href="gallery-somettt" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">somettt</p>
-                                                    </a>
-                                                
                                                     <a href="gallery-e" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">e</p>
                                                     </a>
@@ -948,6 +917,10 @@
                                                 
                                                     <a href="gallery------------*---&#x27;" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">!#$@#$%^$&amp;%*^;/&#x27;</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-somettt" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">somettt</p>
                                                     </a>
                                                 
                                                     <a href="gallery-ttteeeeeesssst" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1241,9 +1214,7 @@
 </style>
 <div
   x-data="{ buttonVisible: false }"
-  
   x-init="setTimeout(() => buttonVisible = true, 500)"
-  
   class="fixed z-40 right-7 bottom-7"
 >
   <div
@@ -3198,7 +3169,7 @@ observer.observe(target)
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="159500" value="GO BUKS" id="contact-service-159500" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="159679" value="GO BUKS" id="contact-service-159679" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 GO BUKS
@@ -3206,7 +3177,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="159501" value="high octane pipes" id="contact-service-159501" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="159680" value="high octane pipes" id="contact-service-159680" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 high octane pipes
@@ -3214,7 +3185,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="159502" value="NEW SERVICE test 2" id="contact-service-159502" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="159681" value="NEW SERVICE test 2" id="contact-service-159681" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE test 2
@@ -3222,7 +3193,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="159503" value="NEW SERVICE 150.32689549684114727" id="contact-service-159503" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="159682" value="NEW SERVICE 150.32689549684114727" id="contact-service-159682" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE 150.32689549684114727
@@ -3230,7 +3201,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="159504" value="NEW SERVICE 160.26952311054421596" id="contact-service-159504" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="159683" value="NEW SERVICE 160.26952311054421596" id="contact-service-159683" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 NEW SERVICE 160.26952311054421596
@@ -3238,7 +3209,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="159505" value="Shrub Trimming" id="contact-service-159505" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="159684" value="Shrub Trimming" id="contact-service-159684" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Shrub Trimming
@@ -3246,7 +3217,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="159506" value="Exterior/Interior Painting" id="contact-service-159506" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="159685" value="Exterior/Interior Painting" id="contact-service-159685" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Exterior/Interior Painting
@@ -3254,7 +3225,7 @@ observer.observe(target)
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="159507" value="add" id="contact-service-159507" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="159686" value="add" id="contact-service-159686" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 add
@@ -3342,97 +3313,97 @@ observer.observe(target)
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-159500"
-                                        name="159500"
+                                        id="contact-service-159679"
+                                        name="159679"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="GO BUKS"
                                     />
-                                    <label for="contact-service-159500" class="ml-3 text-sm font-normal text-gray-700">GO BUKS</label>
+                                    <label for="contact-service-159679" class="ml-3 text-sm font-normal text-gray-700">GO BUKS</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-159501"
-                                        name="159501"
+                                        id="contact-service-159680"
+                                        name="159680"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="high octane pipes"
                                     />
-                                    <label for="contact-service-159501" class="ml-3 text-sm font-normal text-gray-700">high octane pipes</label>
+                                    <label for="contact-service-159680" class="ml-3 text-sm font-normal text-gray-700">high octane pipes</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-159502"
-                                        name="159502"
+                                        id="contact-service-159681"
+                                        name="159681"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE test 2"
                                     />
-                                    <label for="contact-service-159502" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE test 2</label>
+                                    <label for="contact-service-159681" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE test 2</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-159503"
-                                        name="159503"
+                                        id="contact-service-159682"
+                                        name="159682"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE 150.32689549684114727"
                                     />
-                                    <label for="contact-service-159503" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 150.32689549684114727</label>
+                                    <label for="contact-service-159682" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 150.32689549684114727</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-159504"
-                                        name="159504"
+                                        id="contact-service-159683"
+                                        name="159683"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="NEW SERVICE 160.26952311054421596"
                                     />
-                                    <label for="contact-service-159504" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 160.26952311054421596</label>
+                                    <label for="contact-service-159683" class="ml-3 text-sm font-normal text-gray-700">NEW SERVICE 160.26952311054421596</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-159505"
-                                        name="159505"
+                                        id="contact-service-159684"
+                                        name="159684"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Shrub Trimming"
                                     />
-                                    <label for="contact-service-159505" class="ml-3 text-sm font-normal text-gray-700">Shrub Trimming</label>
+                                    <label for="contact-service-159684" class="ml-3 text-sm font-normal text-gray-700">Shrub Trimming</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-159506"
-                                        name="159506"
+                                        id="contact-service-159685"
+                                        name="159685"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Exterior/Interior Painting"
                                     />
-                                    <label for="contact-service-159506" class="ml-3 text-sm font-normal text-gray-700">Exterior/Interior Painting</label>
+                                    <label for="contact-service-159685" class="ml-3 text-sm font-normal text-gray-700">Exterior/Interior Painting</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-159507"
-                                        name="159507"
+                                        id="contact-service-159686"
+                                        name="159686"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="add"
                                     />
-                                    <label for="contact-service-159507" class="ml-3 text-sm font-normal text-gray-700">add</label>
+                                    <label for="contact-service-159686" class="ml-3 text-sm font-normal text-gray-700">add</label>
                                 </div>
                             
                                 
@@ -3832,13 +3803,13 @@ observer.observe(target)
                 <picture>
                     <source
                         class="h-[80px] w-auto"
-                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/9MKZCVCORIRSPLNLYJOYDAQZK5OS46YZ17XZNF73.jpeg"
+                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/filters:format(webp)/media/c0f5fa8b-5d99-4f2f-843d-67b3d9c1b812.png"
                         alt=""
                         loading="lazy"
                     >
                     <img
                         class="h-[80px] w-auto"
-                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/9MKZCVCORIRSPLNLYJOYDAQZK5OS46YZ17XZNF73.jpeg"
+                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/400x400/filters:strip_exif()/filters:quality(100)/media/c0f5fa8b-5d99-4f2f-843d-67b3d9c1b812.png"
                         alt=""
                         loading="lazy"
                     />
