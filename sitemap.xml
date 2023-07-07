@@ -60,6 +60,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-Gardening</loc>
+        <lastmod>2023-07-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-add</loc>
         <lastmod>2023-07-07</lastmod>
         <changefreq>weekly</changefreq>
@@ -68,13 +75,6 @@
 
     <url>
         <loc>https://carolandscaping.com/service-newss-ss2sqws</loc>
-        <lastmod>2023-07-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Gardening</loc>
         <lastmod>2023-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -144,42 +144,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery------------*---'</loc>
-        <lastmod>2023-07-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-somettt</loc>
-        <lastmod>2023-07-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-ttteeeeeesssst</loc>
-        <lastmod>2023-07-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-e</loc>
-        <lastmod>2023-07-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-fhhf4bw</loc>
-        <lastmod>2023-07-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-d</loc>
+        <loc>https://carolandscaping.com/gallery-Gallery-1234</loc>
         <lastmod>2023-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -207,7 +172,35 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery------------*---'</loc>
+        <lastmod>2023-07-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-ttteeeeeesssst</loc>
+        <lastmod>2023-07-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-Lydia</loc>
+        <lastmod>2023-07-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-e</loc>
+        <lastmod>2023-07-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-somettt</loc>
         <lastmod>2023-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -228,7 +221,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Gallery-1234</loc>
+        <loc>https://carolandscaping.com/gallery-fhhf4bw</loc>
+        <lastmod>2023-07-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-d</loc>
         <lastmod>2023-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
