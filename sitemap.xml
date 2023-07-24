@@ -172,28 +172,21 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Lydia</loc>
-        <lastmod>2023-07-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-e</loc>
-        <lastmod>2023-07-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-somettt</loc>
-        <lastmod>2023-07-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-a</loc>
+        <lastmod>2023-07-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Pokemon</loc>
+        <lastmod>2023-07-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Lydia</loc>
         <lastmod>2023-07-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -221,14 +214,21 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-b</loc>
+        <loc>https://carolandscaping.com/gallery-e</loc>
         <lastmod>2023-07-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Pokemon</loc>
+        <loc>https://carolandscaping.com/gallery-somettt</loc>
+        <lastmod>2023-07-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-b</loc>
         <lastmod>2023-07-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
