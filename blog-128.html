@@ -667,6 +667,26 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" bucks-high-octane-pipes "
                                         class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                         :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
@@ -1017,6 +1037,17 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                     
                                 </div>
                             
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
                                 <div x-trap.inert="openMenu == 'navitem_8'">
                                     
                                         <a
@@ -1276,6 +1307,258 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
             
                 
 
+                    
+                        <section>
+    <div class="flex justify-center m-auto w-full bg-primary bg-opacity-10">
+        <div class="flex flex-col text-center justify-center items-center mx-8 my-16 sm:mx-auto sm:py-16 sm:w-4/5">
+            <div class="space-y-5 flex flex-col items-center">
+                <h1 class="flex flex-col items-center space-y-4 pb-8 sm:max-w-3xl">
+                    <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Blog</span>
+                    <span class="text-3xl font-extrabold text-center text-primary sm:text-4xl sm:w-3/4">Hardscaping Ideas To Transform Your Outdoor Space</span>
+                    <span class="block text-lg text-center text-gray-500">Jan 10, 2023</span>
+                </h1>
+                <div class="flex flex-col space-y-8 text-gray-500 text-lg text-left sm:max-w-3xl leading-8 blog-headers blog-list">
+                    <p>Hardscaping is a great way to add texture, interest, and value to your outdoor space. Whether you have a small balcony or a large backyard, hardscaping can transform your outdoor area into a beautiful, inviting place for entertaining, relaxing, or just taking in the view.<p>Hardscaping is the practice of using materials such as stone, brick, or concrete to create outdoor features that mimic the natural environment and enhance the beauty of your outdoor space. Here are some great ideas to get started creating your outdoor paradise. <p>1. Create a Pathway<p>Adding a pathway to your outdoor space is a great way to add definition and to give your space a sense of direction. Whether you choose to use gravel, stepping stones, or any other kind of material, a pathway can lead you and your guests through the garden, around your backyard, or to the front door. If you have a larger outdoor space, consider adding a curved pathway to add interest and make a statement. <p>2. Add a Patio<p>Adding a patio to your outdoor space is a great way to add a comfortable spot for outdoor entertaining and relaxing. There are numerous materials to choose from, such as pavers, stone, gravel, or concrete, and a variety of shapes and colors to help you create the perfect outdoor living space. You can also add outdoor furniture and lighting to really bring your patio to life. <p>3. Build a Retaining Wall<p>Retaining walls are a great way to add character and definition to your outdoor space. They can be used to divide areas, add elevation, or just for aesthetics. Consider adding a retaining wall around your patio, garden, or firepit area to add a sense of privacy and to help prevent erosion. <p>4. Install a Fire Pit<p>Nothing sets the mood better than a cozy fire pit. A fire pit is a great way to enhance your outdoor living space and provide you and your guests with warmth and ambiance on cool nights. There are many different materials to choose from, including bricks, stones, and concrete. You can also add benches or chairs around the fire pit for seating. <p>5. Create an Outdoor Kitchen<p>Create an outdoor kitchen if you’re looking to add convenience and luxury to your outdoor space. An outdoor kitchen is a great way to entertain guests and to make it easy to prepare meals outdoors. You can choose from a variety of materials, such as stainless steel, stone, or brick, to give your outdoor kitchen a unique and stylish look. <p>6. Install a Water Feature<p>Adding a water feature to your outdoor space is a great way to bring the sights and sounds of nature to your backyard. There are many styles and sizes of water features to choose from, and they can be used to create a tranquil oasis in your outdoor space. Consider adding a pond, fountain, or waterfall to really transform your backyard into a peaceful retreat. <p>Whether you have a small balcony or a large backyard, these hardscaping ideas can help you transform your outdoor space into a beautiful, inviting place for entertaining and relaxation. From pathways and patios to fire pits and water features, hardscaping is a great way to add texture, interest, and value to your outdoor area.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                        
+                            <template x-teleport="body">
+    <div
+            x-show="contactModalOpen"
+            @keydown.escape.prevent.stop="contactModalOpen = false"
+            role="dialog"
+            aria-modal="true"
+            x-id="['modal-title']"
+            :aria-labelledby="$id('modal-title')"
+            class="fixed inset-0 z-50"
+            x-trap.noscroll.inert="contactModalOpen"
+            id="send-text-modal"
+    >
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                aria-hidden="true"
+                class="fixed inset-0 bg-black bg-opacity-50"
+        ></div>
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                onclick="handleClose('blog-128')"
+                @click="contactModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full bg-primary"
+        >
+            <div
+                @click.stop
+                class="flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full"
+            >
+                <div class="sm:hidden relative px-6">
+                    <h2 class="mt-6 text-2xl font-bold text-center text-white" :id="$id('modal-title')">Send us a text</h2>
+                    <p class="mb-3 mt-1 font-normal text-base text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                    <button
+                            onclick="handleClose('blog-128')"
+                            @click="contactModalOpen = false;"
+                            class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                    >
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden sm:relative sm:px-6 sm:flex sm:flex-col">
+                    <h2 class="mt-6 text-6xl font-extrabold text-center text-white" :id="$id('modal-title')">Send us a text</h2>
+                    <p class="my-6 text-lg text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                </div>
+                <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
+
+                
+                <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping', 'first-step')">
+                  <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
+                    <div class="h-auto p-6 gap-4 sm:gap-6 flex flex-col">
+                      <input
+                        type="text"
+                        name="full-name"
+                        id="contact-full-name"
+                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Full name"
+                      />
+
+                      <input
+                        type="tel"
+                        autocomplete="on"
+                        name="phone-number"
+                        id="contact-phone-number"
+                        class="contact-phone-number block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Phone number"
+                      />
+
+                      
+                      <input
+                        type="text"
+                        name="address"
+                        id="contact-address"
+                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Address"
+                      />
+                      
+
+                      
+                      <textarea
+                        id="contact-concern-1"
+                        name="concern"
+                        rows="4"
+                        class="block py-2.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder=' How can we help you - TEstT? '
+                      ></textarea>
+                      
+
+                      <button
+                        id='sendButton'
+                        class="flex justify-center rounded-lg py-3 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground mt-4 md:mt-0"
+                      >
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                
+
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    function handleClose(page) {
+        if (page === 'contact') {
+            history.replaceState(null, "", "index");
+        } else {
+            history.replaceState(null, "", page);
+        }
+    }
+    const toggleOtherServices = () => {
+        const otherServices = document.getElementById('contact-service-other-checkbox')
+        const otherServicesInput = document.getElementById('contact-service-other-text')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+    const toggleOtherServicesMobile = ()=>{
+        const otherServices = document.getElementById('contact-service-Other')
+        const otherServicesInput = document.getElementById('contact-service-other-text2')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+     var observer2 = new MutationObserver(function() {
+    var dateInput = document.getElementById("contact-date");
+    if (dateInput) {
+      var today = new Date();
+      var twoYearsLater = new Date();
+      twoYearsLater.setFullYear(today.getFullYear() + 2);
+
+      dateInput.setAttribute("min", today.toISOString().split("T")[0]);
+      dateInput.setAttribute("max", twoYearsLater.toISOString().split("T")[0]);
+
+      observer2.disconnect();
+    }
+  });
+  observer2.observe(document, { childList: true, subtree: true });
+</script>
+                            <template x-teleport="body">
+    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
+        <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+        <div
+            x-show="reviewModalOpen"
+            x-transition:enter="ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            @click="reviewModalOpen = false"
+            class="relative flex items-center justify-center w-full h-full"
+        >
+            <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-8 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
+                    <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="mt-2 space-y-6">
+                    <span hidden class="sr-only">Review types</span>
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJAcuMS7UWcIgRj2I2PSjovoo" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Google
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="hidden md:block">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/104865895776827/reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Facebook
+                            
+                        </a>
+                    </li>
+                    <li class="block md:hidden">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/104865895776827" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Facebook
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://yelp.com/bucks" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Popp
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+                        
                     
                 
                 
