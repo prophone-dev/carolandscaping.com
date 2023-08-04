@@ -84,13 +84,11 @@
 </head>
 
 <body
-    class="xl:pt-44 pt-24 ease-in-out"
+    
     x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
-    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    :class="{'xl:pt-44 pt-24': !scrolledFromTop, 'pt-24': scrolledFromTop}"
+    
 >
     
 
@@ -149,7 +147,7 @@
                 </div>
                 <div 
                     class="flex flex-row items-center text-white xl:hidden"
-                    :class="{ 'text-gray-700': !scrolledFromTop, 'text-white': scrolledFromTop }"
+                    :class="{  }"
                 >
                     <span class="uppercase">Menu</span>
                     <button @click="mobileOpen = !mobileOpen" class="p-2">
@@ -177,7 +175,7 @@
                                     <a
                                         href=" index "
                                         class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         Home
                                     </a>
@@ -204,7 +202,7 @@
                                     >
                                         <span 
                                             class="block  text-white group-hover:text-gray-100 "
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'text-white group-hover:text-gray-100': scrolledFromTop }"
+                                            :class="{  }"
                                         >Services</span>
                                         <svg
                                             class="w-5 h-5 ml-2 transition-transform duration-300  text-white group-hover:text-gray-100 "
@@ -401,7 +399,7 @@
                                     >
                                         <span 
                                             class="block  text-white group-hover:text-gray-100 "
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'text-white group-hover:text-gray-100': scrolledFromTop }"
+                                            :class="{  }"
                                         >Galleries</span>
                                         <svg
                                             class="w-5 h-5 ml-2 transition-transform duration-300  text-white group-hover:text-gray-100 "
@@ -591,7 +589,7 @@
                                     <a
                                         href=" reviews "
                                         class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         Reviews
                                     </a>
@@ -611,7 +609,7 @@
                                     <a
                                         href=" our-team "
                                         class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         Our team
                                     </a>
@@ -631,7 +629,7 @@
                                     <a
                                         href=" hire "
                                         class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         Hire
                                     </a>
@@ -649,9 +647,29 @@
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        :class="{  }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" bucks-high-octane-pipes "
                                         class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         bucks high octane pipes
                                     </a>
@@ -665,7 +683,7 @@
                             href="https://buy.stripe.com/test_4gw5lA48R2Yv3iU3cc"
                             target="_blank"
                             class=" border-transparent   hover:border-gray-100 hover:text-gray-100 text-white  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                            :class="{  }"
                         >
                             Pay now
                         </a>
@@ -994,6 +1012,17 @@
                                             href=" hire "
                                             class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                             >Hire</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
                                         >
                                     
                                     
