@@ -667,6 +667,26 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" bucks-high-octane-pipes "
                                         class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                         :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
@@ -1017,6 +1037,17 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                     
                                 </div>
                             
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
                                 <div x-trap.inert="openMenu == 'navitem_8'">
                                     
                                         <a
@@ -1276,6 +1307,258 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
             
                 
 
+                    
+                        <section>
+    <div class="flex justify-center m-auto w-full bg-primary bg-opacity-10">
+        <div class="flex flex-col text-center justify-center items-center mx-8 my-16 sm:mx-auto sm:py-16 sm:w-4/5">
+            <div class="space-y-5 flex flex-col items-center">
+                <h1 class="flex flex-col items-center space-y-4 pb-8 sm:max-w-3xl">
+                    <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Blog</span>
+                    <span class="text-3xl font-extrabold text-center text-primary sm:text-4xl sm:w-3/4">Transform Your Outdoor Space with the Latest Landscaping and Hardscaping Trends</span>
+                    <span class="block text-lg text-center text-gray-500">May 04, 2023</span>
+                </h1>
+                <div class="flex flex-col space-y-8 text-gray-500 text-lg text-left sm:max-w-3xl leading-8 blog-headers blog-list">
+                    <p>Transform Your Outdoor Space with the Latest Landscaping and Hardscaping Trends</p><p>Summer is here, and it’s time to make the most of your outdoor space. Whether you have a small patio or a large backyard, landscaping and hardscaping can help you create a beautiful oasis that’s perfect for relaxing or entertaining. Keep reading to learn about the latest trends in landscaping and hardscaping, and transform your outdoor space into the envy of your neighborhood.</p><p>Sustainable Landscaping</p><p>Sustainability is a top trend in landscaping. Eco-friendly landscape design reduces your environmental footprint while creating a beautiful natural space. Native plants and perennials are low-maintenance options that require less water and fertilization than exotic plants. Incorporating natural elements like rocks, pebbles, and wood can have a calming and grounding effect, while adding texture and interest to your outdoor area.</p><p>Low-maintenance Hardscaping</p><p>Hardscaping features like patios, walkways, and retaining walls add structure and functionality to your outdoor space. Low-maintenance materials like concrete, pavers, and natural stone are increasing in popularity, as they require little upkeep and are long-lasting. These materials also come in various colors, textures, and finishes, giving you endless design possibilities.</p><p>Outdoor Kitchens</p><p>Outdoor kitchens are a popular trend in hardscaping. They bring the comforts of indoor living to your outdoor space and allow you to entertain guests while you cook. Outdoor kitchens typically include a grill, sink, refrigerator, and storage, and can also feature a pizza oven, smoker, or bar. They can be created in a variety of sizes and styles, from sleek and modern to rustic and cozy.</p><p>Fire Features</p><p>Fire features like fire pits and outdoor fireplaces are becoming increasingly popular. They provide warmth and ambiance, making your outdoor space an inviting place to gather year-round. Fire features can be made from a variety of materials, including natural stone, brick, and concrete, and can be designed to complement the style of your home and landscaping.</p><p>Water Features</p><p>Water features like fountains and ponds can add a calming element to your outdoor space. They can be designed in a variety of sizes and styles, from small, simple fountains to large, elaborate ponds. Water features can also incorporate plants and wildlife, creating a natural ecosystem in your backyard.</p><p>Smart Landscaping</p><p>Smart landscaping is a trend that combines technology and sustainability. Smart irrigation systems use weather data and soil moisture sensors to water your plants only when necessary, reducing water waste. LED lighting is energy-efficient and can be programmed to turn on and off automatically, providing a beautiful ambiance while conserving energy.</p><p>Conclusion</p><p>Landscaping and hardscaping are essential components of a beautiful outdoor space. By incorporating the latest trends in sustainable landscaping, low-maintenance hardscaping, outdoor kitchens, fire features, water features, and smart landscaping, you can create a beautiful and functional outdoor oasis that’s perfect for relaxing or entertaining. So, get inspired, get creative and transform your outdoor space into the most inviting and beautiful area in the neighborhood!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                        
+                            <template x-teleport="body">
+    <div
+            x-show="contactModalOpen"
+            @keydown.escape.prevent.stop="contactModalOpen = false"
+            role="dialog"
+            aria-modal="true"
+            x-id="['modal-title']"
+            :aria-labelledby="$id('modal-title')"
+            class="fixed inset-0 z-50"
+            x-trap.noscroll.inert="contactModalOpen"
+            id="send-text-modal"
+    >
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                aria-hidden="true"
+                class="fixed inset-0 bg-black bg-opacity-50"
+        ></div>
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                onclick="handleClose('blog-8232')"
+                @click="contactModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full bg-primary"
+        >
+            <div
+                @click.stop
+                class="flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full"
+            >
+                <div class="sm:hidden relative px-6">
+                    <h2 class="mt-6 text-2xl font-bold text-center text-white" :id="$id('modal-title')">Send us a text</h2>
+                    <p class="mb-3 mt-1 font-normal text-base text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                    <button
+                            onclick="handleClose('blog-8232')"
+                            @click="contactModalOpen = false;"
+                            class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                    >
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden sm:relative sm:px-6 sm:flex sm:flex-col">
+                    <h2 class="mt-6 text-6xl font-extrabold text-center text-white" :id="$id('modal-title')">Send us a text</h2>
+                    <p class="my-6 text-lg text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                </div>
+                <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
+
+                
+                <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping', 'first-step')">
+                  <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
+                    <div class="h-auto p-6 gap-4 sm:gap-6 flex flex-col">
+                      <input
+                        type="text"
+                        name="full-name"
+                        id="contact-full-name"
+                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Full name"
+                      />
+
+                      <input
+                        type="tel"
+                        autocomplete="on"
+                        name="phone-number"
+                        id="contact-phone-number"
+                        class="contact-phone-number block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Phone number"
+                      />
+
+                      
+                      <input
+                        type="text"
+                        name="address"
+                        id="contact-address"
+                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Address"
+                      />
+                      
+
+                      
+                      <textarea
+                        id="contact-concern-1"
+                        name="concern"
+                        rows="4"
+                        class="block py-2.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder=' How can we help you - TEstT? '
+                      ></textarea>
+                      
+
+                      <button
+                        id='sendButton'
+                        class="flex justify-center rounded-lg py-3 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground mt-4 md:mt-0"
+                      >
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                
+
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    function handleClose(page) {
+        if (page === 'contact') {
+            history.replaceState(null, "", "index");
+        } else {
+            history.replaceState(null, "", page);
+        }
+    }
+    const toggleOtherServices = () => {
+        const otherServices = document.getElementById('contact-service-other-checkbox')
+        const otherServicesInput = document.getElementById('contact-service-other-text')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+    const toggleOtherServicesMobile = ()=>{
+        const otherServices = document.getElementById('contact-service-Other')
+        const otherServicesInput = document.getElementById('contact-service-other-text2')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+     var observer2 = new MutationObserver(function() {
+    var dateInput = document.getElementById("contact-date");
+    if (dateInput) {
+      var today = new Date();
+      var twoYearsLater = new Date();
+      twoYearsLater.setFullYear(today.getFullYear() + 2);
+
+      dateInput.setAttribute("min", today.toISOString().split("T")[0]);
+      dateInput.setAttribute("max", twoYearsLater.toISOString().split("T")[0]);
+
+      observer2.disconnect();
+    }
+  });
+  observer2.observe(document, { childList: true, subtree: true });
+</script>
+                            <template x-teleport="body">
+    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
+        <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+        <div
+            x-show="reviewModalOpen"
+            x-transition:enter="ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            @click="reviewModalOpen = false"
+            class="relative flex items-center justify-center w-full h-full"
+        >
+            <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-8 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
+                    <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="mt-2 space-y-6">
+                    <span hidden class="sr-only">Review types</span>
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJAcuMS7UWcIgRj2I2PSjovoo" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Google
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="hidden md:block">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/104865895776827/reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Facebook
+                            
+                        </a>
+                    </li>
+                    <li class="block md:hidden">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/104865895776827" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Facebook
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://yelp.com/bucks" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Popp
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+                        
                     
                 
                 
