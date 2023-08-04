@@ -84,13 +84,11 @@
 </head>
 
 <body
-    class="xl:pt-44 pt-24 ease-in-out"
+    
     x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
-    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    :class="{'xl:pt-44 pt-24': !scrolledFromTop, 'pt-24': scrolledFromTop}"
+    
 >
     
 
@@ -149,7 +147,7 @@
                 </div>
                 <div 
                     class="flex flex-row items-center text-white xl:hidden"
-                    :class="{ 'text-gray-700': !scrolledFromTop, 'text-white': scrolledFromTop }"
+                    :class="{  }"
                 >
                     <span class="uppercase">Menu</span>
                     <button @click="mobileOpen = !mobileOpen" class="p-2">
@@ -177,7 +175,7 @@
                                     <a
                                         href=" index "
                                         class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         Home
                                     </a>
@@ -204,7 +202,7 @@
                                     >
                                         <span 
                                             class="block  text-white group-hover:text-gray-100 "
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'text-white group-hover:text-gray-100': scrolledFromTop }"
+                                            :class="{  }"
                                         >Services</span>
                                         <svg
                                             class="w-5 h-5 ml-2 transition-transform duration-300  text-white group-hover:text-gray-100 "
@@ -401,7 +399,7 @@
                                     >
                                         <span 
                                             class="block  text-white group-hover:text-gray-100 "
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'text-white group-hover:text-gray-100': scrolledFromTop }"
+                                            :class="{  }"
                                         >Galleries</span>
                                         <svg
                                             class="w-5 h-5 ml-2 transition-transform duration-300  text-white group-hover:text-gray-100 "
@@ -591,7 +589,7 @@
                                     <a
                                         href=" reviews "
                                         class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         Reviews
                                     </a>
@@ -611,7 +609,7 @@
                                     <a
                                         href=" our-team "
                                         class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         Our team
                                     </a>
@@ -631,7 +629,7 @@
                                     <a
                                         href=" hire "
                                         class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         Hire
                                     </a>
@@ -649,9 +647,29 @@
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        :class="{  }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" bucks-high-octane-pipes "
                                         class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        :class="{  }"
                                     >
                                         bucks high octane pipes
                                     </a>
@@ -665,7 +683,7 @@
                             href="https://buy.stripe.com/test_4gw5lA48R2Yv3iU3cc"
                             target="_blank"
                             class=" border-transparent   hover:border-gray-100 hover:text-gray-100 text-white  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                            :class="{  }"
                         >
                             Pay now
                         </a>
@@ -994,6 +1012,17 @@
                                             href=" hire "
                                             class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                             >Hire</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
                                         >
                                     
                                     
@@ -1535,100 +1564,6 @@
                                         />
                                     </svg>
                                     <p lorem="1" class="relative text-lg font-medium">
-                                        Great
-                                    </p>
-                                </div>
-                                
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        
-                                            <span class="block font-medium text-primary">Nicholas D&#x27;Alfonso</span>
-                                        
-                                        <span class="block font-medium">Home Owner</span>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">Google</span>
-                                        
-                                            <svg
-                                            aria-hidden="true"
-                                            class="text-blue-900 transition-transform w-7 h-7"
-                                            viewBox="0 0 30 30"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#3cba54	"/>
-                                            <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#f4c20d"/>
-                                            <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#db3236"/>
-                                            <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#4885ed"/>
-                                            </svg>   
-                                            
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
-                    
-
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
                                         Sam!! The best!
                                     </p>
                                 </div>
@@ -1637,100 +1572,6 @@
                                     <div>
                                         
                                             <span class="block font-medium text-primary">Bob Goldman</span>
-                                        
-                                        <span class="block font-medium">Home Owner</span>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">Google</span>
-                                        
-                                            <svg
-                                            aria-hidden="true"
-                                            class="text-blue-900 transition-transform w-7 h-7"
-                                            viewBox="0 0 30 30"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#3cba54	"/>
-                                            <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#f4c20d"/>
-                                            <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#db3236"/>
-                                            <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#4885ed"/>
-                                            </svg>   
-                                            
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
-                    
-
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
-                                        amazing service
-                                    </p>
-                                </div>
-                                
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        
-                                            <span class="block font-medium text-primary">Kaia Duong</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -1851,13 +1692,9 @@
                         </li>
                     
                     
-                </ul>
-            
-                <ul class="space-y-8">
-                    
                     
 
-                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -2026,9 +1863,13 @@
                         </li>
                     
                     
+                </ul>
+            
+                <ul class="space-y-8">
+                    
                     
 
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -2121,13 +1962,9 @@
                         </li>
                     
                     
-                </ul>
-            
-                <ul class="space-y-8">
-                    
                     
 
-                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -2288,6 +2125,198 @@
                                     <div>
                                         
                                             <span class="block font-medium text-primary">Anh Duong</span>
+                                        
+                                        <span class="block font-medium">Home Owner</span>
+                                    </div>
+
+                                    <div class="flex-shrink-0">
+                                        <span class="sr-only">Google</span>
+                                        
+                                            <svg
+                                            aria-hidden="true"
+                                            class="text-blue-900 transition-transform w-7 h-7"
+                                            viewBox="0 0 30 30"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#3cba54	"/>
+                                            <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#f4c20d"/>
+                                            <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#db3236"/>
+                                            <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#4885ed"/>
+                                            </svg>   
+                                            
+                                    
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        </li>
+                    
+                    
+                </ul>
+            
+                <ul class="space-y-8">
+                    
+                    
+
+                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                            <div class="flex">
+                                <div aria-hidden="true" class="space-x-1.5 flex">
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                </div>
+                                <span class="sr-only"> out of 5 stars</span>
+                            </div>
+
+                            <blockquote class="mt-6">
+                                
+                                <div class="relative">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <p lorem="1" class="relative text-lg font-medium">
+                                        amazing service
+                                    </p>
+                                </div>
+                                
+                                <footer class="flex items-center justify-between mt-8 space-x-4">
+                                    <div>
+                                        
+                                            <span class="block font-medium text-primary">Kaia Duong</span>
+                                        
+                                        <span class="block font-medium">Home Owner</span>
+                                    </div>
+
+                                    <div class="flex-shrink-0">
+                                        <span class="sr-only">Google</span>
+                                        
+                                            <svg
+                                            aria-hidden="true"
+                                            class="text-blue-900 transition-transform w-7 h-7"
+                                            viewBox="0 0 30 30"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#3cba54	"/>
+                                            <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#f4c20d"/>
+                                            <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#db3236"/>
+                                            <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#4885ed"/>
+                                            </svg>   
+                                            
+                                    
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        </li>
+                    
+                    
+                    
+
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                            <div class="flex">
+                                <div aria-hidden="true" class="space-x-1.5 flex">
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                </div>
+                                <span class="sr-only"> out of 5 stars</span>
+                            </div>
+
+                            <blockquote class="mt-6">
+                                
+                                <div class="relative">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <p lorem="1" class="relative text-lg font-medium">
+                                        Great
+                                    </p>
+                                </div>
+                                
+                                <footer class="flex items-center justify-between mt-8 space-x-4">
+                                    <div>
+                                        
+                                            <span class="block font-medium text-primary">Nicholas D&#x27;Alfonso</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
