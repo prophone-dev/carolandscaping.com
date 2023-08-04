@@ -667,6 +667,26 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" bucks-high-octane-pipes "
                                         class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                         :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
@@ -1012,6 +1032,17 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                             href=" hire "
                                             class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                             >Hire</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
                                         >
                                     
                                     
