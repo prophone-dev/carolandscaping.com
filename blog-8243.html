@@ -667,6 +667,26 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                             >
                                 
                                     <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" bucks-high-octane-pipes "
                                         class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-white focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
                                         :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-500': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
@@ -1017,6 +1037,17 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                     
                                 </div>
                             
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
                                 <div x-trap.inert="openMenu == 'navitem_8'">
                                     
                                         <a
@@ -1276,6 +1307,258 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
             
                 
 
+                    
+                        <section>
+    <div class="flex justify-center m-auto w-full bg-primary bg-opacity-10">
+        <div class="flex flex-col text-center justify-center items-center mx-8 my-16 sm:mx-auto sm:py-16 sm:w-4/5">
+            <div class="space-y-5 flex flex-col items-center">
+                <h1 class="flex flex-col items-center space-y-4 pb-8 sm:max-w-3xl">
+                    <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Blog</span>
+                    <span class="text-3xl font-extrabold text-center text-primary sm:text-4xl sm:w-3/4">New York is greatest city ever</span>
+                    <span class="block text-lg text-center text-gray-500">May 10, 2023</span>
+                </h1>
+                <div class="flex flex-col space-y-8 text-gray-500 text-lg text-left sm:max-w-3xl leading-8 blog-headers blog-list">
+                    <p>New York City has a unique place in the hearts and minds of people all over the world. Known as the "city that never sleeps," it's a place of endless possibilities, where anything can happen and anything is possible. From Broadway productions and iconic architecture to bustling street vendors and world-famous museums, there's always something to discover in New York City. Simply put, New York is the greatest city ever.</p><p>One of the most iconic aspects of New York City is its skyline. The Empire State Building, the Chrysler Building, and the One World Trade Center are all instantly recognizable, and the view of these towering structures from the Brooklyn Bridge is undoubtedly one of the most awe-inspiring sights you'll ever see. These buildings have come to symbolize the incredible architectural achievements of the city, and they continue to draw visitors from all over the world.</p><p>But New York isn't just about the buildings. It's also a city of incredible cultural richness. From art museums like the Metropolitan Museum of Art and the Museum of Modern Art, to music venues like Carnegie Hall and Madison Square Garden, there's something for everyone in the Big Apple. And let's not forget the world-famous Broadway theaters, where some of the most iconic shows in history, including Hamilton, Wicked, and The Lion King, have taken the stage.</p><p>Food is another major draw for visitors to New York City. Whether it's pizza, hot dogs, bagels, or the countless other culinary delights available throughout the city, food in New York is unparalleled in its diversity, quality, and originality. From the Michelin-starred restaurants of Manhattan to the casual food trucks and street vendors that line the city's more humdrum avenues, every meal in New York is an adventure.</p><p>Of course, it's not just the sightseeing and the food that makes New York so great. It's also the people. New Yorkers are a diverse group, hailing from all over the world, and their energy and passion are palpable wherever you go in the city. You'll find people from all walks of life in New York, from the Wall Street executives to the artists, from the celebrities to the locals who've lived in the same apartment for decades. And yet, somehow, they all manage to come together to create a dynamic and vibrant city that is as unique as it is inspiring.</p><p>So why is New York City the greatest city ever? Simply put, it's because it offers an unparalleled combination of culture, history, architecture, and people. Whether you're a first-time visitor to the city or a lifelong resident, there's always something new to learn, see, and experience in New York. From the bright lights of Times Square to the serene beauty of Central Park, New York City is a place that will stay with you for the rest of your life. And that, in a nutshell, is why New York is the greatest city ever.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                        
+                            <template x-teleport="body">
+    <div
+            x-show="contactModalOpen"
+            @keydown.escape.prevent.stop="contactModalOpen = false"
+            role="dialog"
+            aria-modal="true"
+            x-id="['modal-title']"
+            :aria-labelledby="$id('modal-title')"
+            class="fixed inset-0 z-50"
+            x-trap.noscroll.inert="contactModalOpen"
+            id="send-text-modal"
+    >
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                aria-hidden="true"
+                class="fixed inset-0 bg-black bg-opacity-50"
+        ></div>
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                onclick="handleClose('blog-8243')"
+                @click="contactModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full bg-primary"
+        >
+            <div
+                @click.stop
+                class="flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full"
+            >
+                <div class="sm:hidden relative px-6">
+                    <h2 class="mt-6 text-2xl font-bold text-center text-white" :id="$id('modal-title')">Send us a text</h2>
+                    <p class="mb-3 mt-1 font-normal text-base text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                    <button
+                            onclick="handleClose('blog-8243')"
+                            @click="contactModalOpen = false;"
+                            class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                    >
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden sm:relative sm:px-6 sm:flex sm:flex-col">
+                    <h2 class="mt-6 text-6xl font-extrabold text-center text-white" :id="$id('modal-title')">Send us a text</h2>
+                    <p class="my-6 text-lg text-center text-white" :id="$id('modal-title')">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                </div>
+                <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
+
+                
+                <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping', 'first-step')">
+                  <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
+                    <div class="h-auto p-6 gap-4 sm:gap-6 flex flex-col">
+                      <input
+                        type="text"
+                        name="full-name"
+                        id="contact-full-name"
+                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Full name"
+                      />
+
+                      <input
+                        type="tel"
+                        autocomplete="on"
+                        name="phone-number"
+                        id="contact-phone-number"
+                        class="contact-phone-number block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Phone number"
+                      />
+
+                      
+                      <input
+                        type="text"
+                        name="address"
+                        id="contact-address"
+                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder="Address"
+                      />
+                      
+
+                      
+                      <textarea
+                        id="contact-concern-1"
+                        name="concern"
+                        rows="4"
+                        class="block py-2.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                        placeholder=' How can we help you - TEstT? '
+                      ></textarea>
+                      
+
+                      <button
+                        id='sendButton'
+                        class="flex justify-center rounded-lg py-3 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground mt-4 md:mt-0"
+                      >
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                
+
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    function handleClose(page) {
+        if (page === 'contact') {
+            history.replaceState(null, "", "index");
+        } else {
+            history.replaceState(null, "", page);
+        }
+    }
+    const toggleOtherServices = () => {
+        const otherServices = document.getElementById('contact-service-other-checkbox')
+        const otherServicesInput = document.getElementById('contact-service-other-text')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+    const toggleOtherServicesMobile = ()=>{
+        const otherServices = document.getElementById('contact-service-Other')
+        const otherServicesInput = document.getElementById('contact-service-other-text2')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+     var observer2 = new MutationObserver(function() {
+    var dateInput = document.getElementById("contact-date");
+    if (dateInput) {
+      var today = new Date();
+      var twoYearsLater = new Date();
+      twoYearsLater.setFullYear(today.getFullYear() + 2);
+
+      dateInput.setAttribute("min", today.toISOString().split("T")[0]);
+      dateInput.setAttribute("max", twoYearsLater.toISOString().split("T")[0]);
+
+      observer2.disconnect();
+    }
+  });
+  observer2.observe(document, { childList: true, subtree: true });
+</script>
+                            <template x-teleport="body">
+    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-40 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
+        <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+        <div
+            x-show="reviewModalOpen"
+            x-transition:enter="ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            @click="reviewModalOpen = false"
+            class="relative flex items-center justify-center w-full h-full"
+        >
+            <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-8 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
+                    <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="mt-2 space-y-6">
+                    <span hidden class="sr-only">Review types</span>
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJAcuMS7UWcIgRj2I2PSjovoo" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Google
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="hidden md:block">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/104865895776827/reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Facebook
+                            
+                        </a>
+                    </li>
+                    <li class="block md:hidden">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/104865895776827" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Facebook
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://yelp.com/bucks" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Popp
+                            
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+                        
                     
                 
                 
