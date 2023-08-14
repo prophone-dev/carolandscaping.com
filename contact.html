@@ -70,17 +70,31 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
           
 
     </style>
-        <style>
-            body{
-                font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-            }
-            
-            /* styles for intl-tel-input */
-            .iti { 
-                width: 100%;
-                margin-top: 0.25rem;
-            }
-        </style>
+    <style>
+        body{
+            font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+        }
+        
+        /* styles for intl-tel-input */
+        .iti { 
+            width: 100%;
+            margin-top: 0.25rem;
+        }
+    </style>
+    <style>
+        img-comparison-slider {
+            visibility: hidden;
+        }
+        img-comparison-slider [slot='second'] {
+            display: none;
+        }
+        img-comparison-slider.rendered {
+            visibility: inherit;
+        }
+        img-comparison-slider.rendered [slot='second'] {
+            display: unset;
+        }
+    </style>
         
     <script defer src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
@@ -90,9 +104,9 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/external-svg-loader@latest/dist/svg-loader.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
-
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
+    
     <script type="text/javascript">
         function dynamicallyLoadJS(e){var t=document.createElement("script");t.type="application/javascript",t.src=e,document.head.appendChild(t)}function segmentScript(){window.location.href.includes("prosite.prophone.com")?segmentId="Z6dq7zq7CtZubdSRrh4EHjCsAasGDPiE":segmentId="9Ce585PETlETCGamY79KkSoBrcAdcdPc";var e=window.analytics=window.analytics||[];if(!e.initialize)if(e.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{e.invoked=!0,e.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"],e.factory=function(t){return function(){var n=Array.prototype.slice.call(arguments);return n.unshift(t),e.push(n),e}};for(var t=0;t<e.methods.length;t++){var n=e.methods[t];e[n]=e.factory(n)}e.load=function(t,n){var o=document.createElement("script");o.type="text/javascript",o.defer=!0,o.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(o,r),e._loadOptions=n},e._writeKey=segmentId,e.SNIPPET_VERSION="4.15.3",e.load(segmentId),e.page()}}function runYourFunctionWhenJQueryIsLoaded(e){window.$?e():setTimeout((()=>runYourFunctionWhenJQueryIsLoaded(e)),5e3)}$("document").ready((function(){let e=$("#cover-button");if(void 0!==e.position()){let t=e.position().top-40;$(window).scroll((function(){$(window).scrollTop()<t?$("#side-button").hasClass("-translate-x-80")&&$("#side-button").removeClass("-translate-x-80").addClass("translate-x-64"):$("#side-button").addClass("transform -translate-x-80 ease-in duration-700")}))}else $("#side-button").addClass("transform -translate-x-80 ease-in duration-700")}));
     </script>
@@ -1029,7 +1043,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 
                                     <img
                                         class="object-cover grayscale"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/300x300/filters:strip_exif()/media/23bbe329-ab84-447e-89f6-b0c9c0765f41.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/300x300/filters:strip_exif()/media/48fa86af-08ea-4413-a2ea-360935b4884d.png"
                                         alt="We provide professional lawn care and landscaping services to create beautiful outdoor spaces. Our experienced team will work with you to create a customized plan that meets your needs. for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts"
                                         loading="lazy"
                                     />
@@ -1869,33 +1883,6 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                             <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto"  style="max-height:80vh;">
                                                 
                                                     <a
-                                                        href=" gallery-f "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">f</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
-                                                    </a>
-                                            
-                                                    <a
-                                                        href=" gallery-c "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">c</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
-                                                    </a>
-                                            
-                                                    <a
-                                                        href=" gallery-e "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">e</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
-                                                    </a>
-                                            
-                                                    <a
                                                         href=" gallery-somettt "
                                                         role="menuitem"
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
@@ -1964,6 +1951,33 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
                                                         <p class="mt-1 text-base font-medium text-red-500 uppercase">d</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-f "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">f</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-c "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">c</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                            
+                                                    <a
+                                                        href=" gallery-e "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">e</p>
 <!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
                                                     </a>
                                             
@@ -2351,18 +2365,6 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                         >
                                             <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                                 
-                                                    <a href="gallery-f" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">f</p>
-                                                    </a>
-                                                
-                                                    <a href="gallery-c" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">c</p>
-                                                    </a>
-                                                
-                                                    <a href="gallery-e" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">e</p>
-                                                    </a>
-                                                
                                                     <a href="gallery-somettt" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">somettt</p>
                                                     </a>
@@ -2393,6 +2395,18 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                                 
                                                     <a href="gallery-d" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">d</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-f" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">f</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-c" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">c</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-e" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">e</p>
                                                     </a>
                                                 
                                                     <a href="gallery-Lydia" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -2588,6 +2602,21 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                 <picture>
                     <source
                         class="h-24"
+                        srcset="https://landing-page-app-hero-images.s3.amazonaws.com/media/fc34ac5a-037b-4485-9851-cc83067fe727.png"
+                        alt=""
+                    >
+                    <img
+                        class="h-24"
+                        srcset="https://landing-page-app-hero-images.s3.amazonaws.com/media/fc34ac5a-037b-4485-9851-cc83067fe727.png"
+                        alt=""
+                    />
+                </picture>
+            </div>
+            
+            <div class="flex items-center justify-center w-1/3 md:w-1/4 lg:w-1/6">
+                <picture>
+                    <source
+                        class="h-24"
                         srcset="https://landing-page-app-hero-images.s3.amazonaws.com/media/9afef196-0cf6-4d1f-94f0-1472ead998cd.jpeg"
                         alt=""
                     >
@@ -2609,21 +2638,6 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                     <img
                         class="h-24"
                         srcset="https://landing-page-app-hero-images.s3.amazonaws.com/media/449f9322-fee7-4206-a4d8-29bff1f75c5e.png"
-                        alt=""
-                    />
-                </picture>
-            </div>
-            
-            <div class="flex items-center justify-center w-1/3 md:w-1/4 lg:w-1/6">
-                <picture>
-                    <source
-                        class="h-24"
-                        srcset="https://landing-page-app-hero-images.s3.amazonaws.com/media/fc34ac5a-037b-4485-9851-cc83067fe727.png"
-                        alt=""
-                    >
-                    <img
-                        class="h-24"
-                        srcset="https://landing-page-app-hero-images.s3.amazonaws.com/media/fc34ac5a-037b-4485-9851-cc83067fe727.png"
                         alt=""
                     />
                 </picture>
@@ -2695,7 +2709,1498 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
             <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Our Best Worktest</span>
         </h2>
         
-            <div data-showcase-id="4a7c4d71-10f7-4a10-8a33-93e7c7daab70" id="companycam-showcase-root"></div>
+            <div class="relative mt-12">
+                
+
+<div
+    x-data="{
+        activeImage: 0,
+        amountOfImages: 118,
+        next() {
+            if (this.activeImage < this.amountOfImages - 1)
+                this.activeImage ++;
+        },
+        prev() {
+            if (this.activeImage > 0)
+                this.activeImage --;
+        },
+        loop() {
+            setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
+        },
+    }"
+>
+    <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </ul>
+
+    <template x-teleport="body">
+        <div x-cloak x-show="galleryModalOpen" @keydown.escape.prevent.stop="galleryModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-50 pt-8 pb-20" x-trap.noscroll.inert="galleryModalOpen">
+            <div x-show="galleryModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+            <div
+                x-show="galleryModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                @click="galleryModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full"
+            >
+                <div @click.stop class="flex flex-col w-full max-h-full pb-16 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:px-4 sm:my-8 sm:align-middle sm:max-w-5xl">
+                    <div class="relative h-16 px-6 bg-white">
+                        <h2 class="sr-only" :id="$id('modal-title')">Modal Gallery</h2>
+
+                        <button id="close-modal-button" @click="galleryModalOpen = false; handleClick()" class="absolute p-1 z-30 transition rounded top-5 right-1 hover:bg-gray-100 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                            <span class="sr-only">Close modal</span>
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col w-full">
+                        <div @keydown.right="next" @keydown.left="prev" tabindex="0" role="region" aria-labelledby="carousel-label" class="z-20 flex justify-around focus:outline-none focus:ring-0 focus:ring-offset-0">
+                            <h2 id="carousel-label" class="sr-only" hidden>Carousel</h2>
+
+                            <button :class="activeImage > 0 ? 'opacity-100' : 'opacity-0'" @click="prev" class="text-6xl transition-opacity focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m10 19-7-7m0 0 7-7m-7 7h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to previous slide</span>
+                            </button>
+
+                            <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
+
+                            <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c73b7e70-dbe7-463c-9145-9764c3b35d8f.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 1">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/855368d6-d8bf-41de-aaa3-fd06464d23e7.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 2">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/bd6d0b35-322c-4c4c-828c-18094ba80dc1.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/1ed5c059-ebf8-46da-9c17-47be4db29605.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 4">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/4ce220fb-7550-4d86-a2b1-60ec08f30b86.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 5">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b7d7b0c5-28ae-4bd8-8686-72a8b55398d5.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 6">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/e93abef0-7ce9-460a-8295-df97574aa9e0.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 7">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/3dfad2b0-4bae-4ff4-a19d-4fb44b9b3ab2.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 8">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b74e4c95-76e8-4770-b8e3-1f97644a403b.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 9">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/9a32ff7c-0195-4c80-b2d2-8c2c68b825c4.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 10">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/18a8c5bb-5997-4411-b8eb-b79f950d289b.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 11">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/cc087285-4f5b-4bab-ad3f-e59acf5b4d50.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 12">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/e503fffe-55a6-4e16-8818-8f51a3033420.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 13">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/061f3724-1206-4992-b449-085fa0841698.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 14">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b306e98c-2576-4afc-8771-8ac7dd6e330d.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 15">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/1ac5bf46-8669-4ca9-97b9-74c4c4915cf6.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 16">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/5f503741-2e95-405d-b3bf-299194706cbf.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 17">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/4a6195e3-3b04-40ae-a073-57b9b526410e.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 18">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/e4adf428-6f2a-4c6a-8d2a-1b70030ba05b.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 19">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/cbed81d3-a318-47d5-b3d8-4e979960d959.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 20">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/55064d40-a812-4846-917e-b164b7f48216.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 21">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/17decac1-6920-4cdd-8ff7-56872f57d5ac.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 22">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b7f9b5fc-0f97-4cac-aae1-fcf6c4a28e4e.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 23">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/cb53237a-d3cc-430a-a7dc-c7bdc72fb421.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 24">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/d04c75e8-a750-4a6d-a3cb-3506df55bbbf.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 25">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/6a599722-2e24-4c93-8c88-61549324223a.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 26">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/0606fc19-f2ee-41f9-b491-91a203b31160.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 27">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/ae41b9fa-715d-40a4-b490-c97c94f2576d.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 28">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/601806e8-e026-4fb8-9037-7bc1fbd6a122.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 29">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/78f421ce-0cc0-4789-abdf-7d6cfff98327.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 30">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/530b483e-ab9b-41db-ac92-18756ac34281.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 31">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/350e277a-b30e-4cf1-a13b-bd29ba70397d.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 32">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/ef77bd16-78fd-4731-b84f-b03b1a2c074f.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 33">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/7aafc2fc-0221-419b-9dd9-b3690bcad39f.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 34">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/d36d34f1-3ce9-4930-a384-8eedf798ef93.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 35">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/2657b01d-cfbd-422d-8d16-c3e5707929d6.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 36">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/9f115a58-17f4-4483-9fa0-ef28699e2fe5.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 37">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/3ad540c0-a536-452d-a266-e7080c0f5db0.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 38">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/9a352f22-2e67-41a6-8d48-4c99ece4ff51.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 39">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/70f25b1a-c20e-4610-bd5d-1198410e03d0.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 40">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/cd2c4a40-6c74-4f30-8566-ba8d8ef6ab05.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 41">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/66a060fd-55c8-47e3-ad2e-b80a22434f0b.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 42">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/8d327eae-767b-48ff-bffb-67c84306aa59.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 43">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/713a633a-edc5-4d63-9192-3d7214e2ee0a.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 44">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/05ab3c83-868b-456c-ac29-f65aa96307c1.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 45">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/ede72068-5ccb-404d-b968-1fc7a4aafa93.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 46">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/55effdb1-0fb8-437a-9fc6-e106626f46a4.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 47">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/a41487b3-f380-4be1-bcdf-bab78411a10e.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 48">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/e19d8a92-fb1d-4bef-9b0a-bb5de8b768d9.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 49">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/09f264b6-535f-4aa8-a6f0-bceb3c97c414.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 50">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/e821a86e-9b14-4e54-acb9-cb6fa4ddd185.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 51">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/add6a9a4-7dc6-40f9-9eac-6cd35e5e0222.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 52">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/6ef48fa5-934b-4e3c-8b4a-e26038f20c07.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 53">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/dfa9e7f0-4473-492c-80b4-1881f886fb16.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 54">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/1963dd5a-a135-49a6-a264-9bba9d9940f7.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 55">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/41f39c30-375b-44c5-8e5a-99e31f29d9cb.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 56">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/e1597269-2ac0-4ceb-ac5a-00756e8f695f.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 57">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/20cadd96-16c8-41cf-9458-52ffd6773895.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 58">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c8473c5a-9fc0-4fb0-af2d-7145b2f84546.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 59">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/1f05b178-d843-404f-9df0-aefe7e6ae45d.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 60">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/35c3e1a4-106d-4cbc-b23e-d9ef85738319.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 61">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/4222d26a-ac03-4995-90ae-d020dec20288.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 62">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/6334d5b3-fa50-4a23-9f53-661dfae20db6.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 63">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b216eb71-08b3-443e-b6c1-fe33558e6834.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 64">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/097b8f38-bf50-4317-8e50-456ffce32bef.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 65">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/660513c0-9366-424c-a2cc-ec9ab6b871b2.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 66">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/04efaf7b-22c3-4ff6-8bc5-8dff3381575c.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 67">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/07985a19-9ea6-4388-b4ab-df42bfcc8cd7.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 68">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c493efa3-27d1-47f8-89ae-283ad26b3e62.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 69">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/179c8d52-a976-40e5-96b8-469070187905.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 70">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/6b0ab527-1579-46c7-b782-15ffc0dbf1ed.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 71">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/8fe753ad-b14b-4dd2-83de-91a38951f721.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 72">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/88c47c07-c387-4f97-a9b2-374aaa9eb048.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 73">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/a2a97b21-868f-4379-9124-34c998e5b125.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 74">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/3100731b-5952-4fa2-8a3a-45946290d721.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 75">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/0d3244fc-0cd8-4e77-a36f-f112683ce723.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 76">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/fb31ff11-7f6a-4bd1-9cb2-bba9cbbb9ace.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 77">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/2e9d5e79-abc2-46cd-bfd4-615d4db31992.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 78">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/6f74902f-f754-4810-9e77-5bc25a2ce63c.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 79">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/787ce3ce-3db0-4bac-bbcf-f97ee28427d7.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 80">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/df17f38f-8c3f-455f-86ef-7d67b272b1d5.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 81">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/95f0331d-90d3-4e00-ab0d-0c64116bd4c9.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 82">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/1ff36aad-38b6-4602-ba94-1b5bbcf6f37b.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 83">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/bc7317f8-d79d-4dce-90e0-ca7e486e191f.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 84">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/6c481393-02f5-43d8-8b40-b2e5857742bc.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 85">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/53769077-05ee-4338-8ba3-d64105a4622d.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 86">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/4053a50b-b326-4366-8f48-740ba75adb62.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 87">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/3ed47f9f-81f0-41f6-8fc3-6e13f2b0b180.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 88">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/77e71187-c8b3-471a-af73-56ac29f8313d.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 89">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/81e73d2c-dc54-4ec6-9cd8-6cd3a656b080.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 90">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/b53ca47d-d798-4030-be9d-c89794397014.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 91">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/d13ee2c9-55e7-44b7-b7c7-ac3c96ac26e3.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 92">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/49759a26-c669-4320-bf2e-63cd155de267.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 93">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/a3f078fe-e285-49e7-921f-4458305a533b.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 94">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/c52e6e34-8967-449c-9ee0-42b4696314f0.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 95">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/d3c8e2c5-4546-4376-ab16-4126568be6e6.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 96">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/8831bcec-2558-45a7-aa94-dbd842a3fd5e.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 97">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/38ecc2dc-7d5a-48e2-88fd-701cad96e3f8.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 98">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/7b25604f-5673-40fd-9768-71af2963ac55.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 99">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/8fb47aaf-50e0-4754-a4dc-d59047d307b9.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 100">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/bfd3caff-3718-44ca-8d6e-8b8742a9c5ee.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 101">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/a1d3633e-3814-47b1-8e20-45d6f67aac24.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 102">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/1447fe1d-e8be-4404-b78f-7a410e9a35a6.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 103">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/f9be4c8e-0ecb-4dac-b3aa-452a803a20d9.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 104">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/60eccc37-000b-443b-862e-318c57643468.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 105">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/bb7aaac2-7fca-4b45-9ebd-9b33d844333d.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 106">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/7e2bf941-3c7c-427a-88e6-d661b91cb24c.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 107">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/eaa954d8-7aa7-4cc4-80e2-465682d41c27.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 108">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/bd33ba1d-a038-45d2-b209-8c77ce7bb143.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 109">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/cd1ae861-964b-4496-b2ed-6b0058594eae.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 110">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/8db5f4f3-e7e9-4733-ae1f-9bfada4e1f1b.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 111">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/2a8a8e23-85ef-4795-b652-2ffc241073c3.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 112">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/954ca921-5b01-4e03-a276-f0c89fa43118.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 113">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/5d5aee3b-bf0a-40e9-977e-f8f6dfce0624.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 114">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/84f924f4-eb34-47bd-9fef-b7537890f734.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 115">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/614aeaf7-4db4-4662-9214-b5b9eb95d3a1.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 116">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/4b638803-5621-4da7-90b5-80c148e41d38.png" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 117">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/media/90449d9e-1315-47c3-9a54-a706542d1f1c.jpeg" alt="GO BUKSssss for Beantown Tutoring!!!!!!!!!!!!!!! in Boston, Massachusetts" loading="lazy"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                            </ul>
+
+                            <button :class="activeImage < amountOfImages - 1 ? 'opacity-100' : 'opacity-0'" @click="next" class="text-6xl transition-opacity focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m14 5 7 7m0 0-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to next slide</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
+
+<script>
+    function resizeSliders() {
+        const sliders = document.querySelectorAll('img-comparison-slider');
+        sliders.forEach(function(slider) {
+            if (slider.id !== 'modal-slider') {
+                const height = slider.offsetHeight + 'px';
+                const images = slider.querySelectorAll('img');
+                images.forEach(function(image) {
+                    image.style.height = height;
+                });
+            } else {
+                let height
+                if (window.innerWidth <= 768) {
+                    height = '250px'
+                } else {
+                    height = '500px'
+                }
+                const images = slider.querySelectorAll('img');
+                images.forEach(function(image) {
+                    image.style.height = height;
+                });
+            }
+        });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        resizeSliders();
+        const sliders = document.querySelectorAll('img-comparison-slider');
+        const observer = new ResizeObserver(resizeSliders);
+        sliders.forEach(slider => observer.observe(slider));
+        window.addEventListener('resize', resizeSliders);
+    });
+</script>
+<script>
+    function preventOpenModal() {
+        const buttons = document.querySelectorAll('.photo-tile');
+        buttons.forEach(function(button) {
+            let isSliding = false;
+        
+            button.addEventListener('mousedown', function() {
+                isSliding = false;
+            });
+            button.addEventListener('mousemove', function() {
+                isSliding = true;
+            });
+            button.addEventListener('click', function(event) {
+                console.log('2')
+                if (isSliding) {
+                    console.log('1')
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                isSliding = false;
+            });
+            button.addEventListener('mouseup', function(event) {
+                button.dataset.isSliding = isSliding.toString();
+            });
+        })
+    }
+
+    document.addEventListener('DOMContentLoaded', preventOpenModal);
+</script>
+
+<script>
+    function handleClick() {
+        const videos = document.getElementsByClassName('gallery-modal-video')
+        for (let video of videos) {
+            video.muted = true
+        }
+    }
+
+    function filterGalleryByDataId(filter) {
+        // get all gallery media item with data-id="gallery_media"
+        const galleryMedia = document.querySelectorAll('[data-id="gallery_media"]')
+        // if filter = all then show all gallery media mean remove hidden class from the element
+        // else hide all gallery media and show only the gallery media with data-gallery="filter"
+        if (filter === 'All Photos') {
+            galleryMedia.forEach(media => {
+                media.classList.remove('hidden')
+            })
+        } else {
+            galleryMedia.forEach(media => {
+                media.classList.add('hidden')
+                if (media.dataset.gallery === filter) {
+                    media.classList.remove('hidden')
+                }
+            })
+        }
+        // set filter data-active to true
+        const filterItems = document.querySelectorAll('[data-active]')
+        filterItems.forEach(item => {
+            item.dataset.active = false
+            if (item.dataset.filter === filter) {
+                item.dataset.active = true
+            }
+        })
+        // check if .more class has li with data-active="true" then show it
+        const more = document.querySelector('.more')
+        const active = more.querySelector('[data-active="true"]')
+        if (active) {
+            more.classList.add('selected')
+        } else {
+            more.classList.remove('selected')
+        }
+        // check if '#main > li:not(.more)'  if not then update dropdown_title innerhtml with filter
+        const dropdownTitle = document.querySelector('#dropdown_title')
+        const main = document.querySelectorAll('#main > li:not(.more)')
+        if (main.length === 0) {
+            dropdownTitle.innerHTML = filter
+        }
+    }
+
+</script>
+            </div>
         
         
         <div class="flex justify-center -m-1">
@@ -3168,27 +4673,10 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
 
                             <blockquote class="mt-6">
                                 
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
-                                        I never review anything, but I was just so blown away with this service. Sam was fantastic with my niece! I could see her starting to like school more and understand social studies.
-                                    </p>
-                                </div>
-                                
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         
-                                            <span class="block font-medium text-primary">Jon Bruss</span>
+                                            <span class="block font-medium text-primary">Rob Pawlow</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -3262,10 +4750,27 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
 
                             <blockquote class="mt-6">
                                 
+                                <div class="relative">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <p lorem="1" class="relative text-lg font-medium">
+                                        I never review anything, but I was just so blown away with this service. Sam was fantastic with my niece! I could see her starting to like school more and understand social studies.
+                                    </p>
+                                </div>
+                                
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         
-                                            <span class="block font-medium text-primary">Rob Pawlow</span>
+                                            <span class="block font-medium text-primary">Jon Bruss</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -3640,100 +5145,6 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                         />
                                     </svg>
                                     <p lorem="1" class="relative text-lg font-medium">
-                                        Great
-                                    </p>
-                                </div>
-                                
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        
-                                            <span class="block font-medium text-primary">Nicholas D&#x27;Alfonso</span>
-                                        
-                                        <span class="block font-medium">Home Owner</span>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">Google</span>
-                                        
-                                            <svg
-                                            aria-hidden="true"
-                                            class="text-blue-900 transition-transform w-7 h-7"
-                                            viewBox="0 0 30 30"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#3cba54	"/>
-                                            <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#f4c20d"/>
-                                            <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#db3236"/>
-                                            <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#4885ed"/>
-                                            </svg>   
-                                            
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
-                    
-
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="star-pulse" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
                                         Sam realized after doing the accounting for his moving company that was he really good with numbers!  He helped tutor my baby girl.  He started at week 16 with addition and subtraction and is now sharing how to do complex calculus at 37 weeks. We can’t wait to see her test results when she is in high school so she can get into a great Beantown school!
                                     </p>
                                 </div>
@@ -3768,13 +5179,9 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                         </li>
                     
                     
-                </ul>
-            
-                <ul class="space-y-8">
-                    
                     
 
-                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -3866,9 +5273,13 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                         </li>
                     
                     
+                </ul>
+            
+                <ul class="space-y-8">
+                    
                     
 
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -4054,6 +5465,100 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                         </li>
                     
                     
+                    
+
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                            <div class="flex">
+                                <div aria-hidden="true" class="space-x-1.5 flex">
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="star-pulse" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                </div>
+                                <span class="sr-only"> out of 5 stars</span>
+                            </div>
+
+                            <blockquote class="mt-6">
+                                
+                                <div class="relative">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <p lorem="1" class="relative text-lg font-medium">
+                                        Great
+                                    </p>
+                                </div>
+                                
+                                <footer class="flex items-center justify-between mt-8 space-x-4">
+                                    <div>
+                                        
+                                            <span class="block font-medium text-primary">Nicholas D&#x27;Alfonso</span>
+                                        
+                                        <span class="block font-medium">Home Owner</span>
+                                    </div>
+
+                                    <div class="flex-shrink-0">
+                                        <span class="sr-only">Google</span>
+                                        
+                                            <svg
+                                            aria-hidden="true"
+                                            class="text-blue-900 transition-transform w-7 h-7"
+                                            viewBox="0 0 30 30"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#3cba54	"/>
+                                            <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#f4c20d"/>
+                                            <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#db3236"/>
+                                            <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#4885ed"/>
+                                            </svg>   
+                                            
+                                    
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        </li>
+                    
+                    
                 </ul>
             
         </div>
@@ -4104,10 +5609,10 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="46978"
+                                aria-controls="47067"
                                 :aria-expanded="expanded"
                             >
-                            <span class="font-medium text-black quill"><p>What is our business <strong>hours?﻿</strong></p></span>
+                            <span class="font-medium text-black quill"> What services do you provide?</span>
                             <span class="flex items-center ml-6 h-7 text-gray-500">
                                     <svg
                                         class="w-6 h-6 transition-transform duration-200 transform"
@@ -4123,9 +5628,9 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="46978">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47067">
                             <div aria-hidden="true" class="invisible h-2"></div>
-                            <p class="mt-2 text-base text-gray-500 quill"><p>We are open every (414) 840-2721 weekday from<strong> 9-5﻿</strong></p></p>
+                            <p class="mt-2 text-base text-gray-500 quill"> Beantown Tutoring provides a wide range of personalized landscaping services tailored to meet the needs of our clients. These include lawn mowing, tree and shrub maintenance, mulching, flower bed installation, irrigation system installation and repair, seasonal clean-ups, and much more. Whether you need regular lawn care or a complete landscape makeover, our team of skilled professionals is here to beautify your outdoor space.</p>
                         </dd>
                     </div>
                 
@@ -4135,38 +5640,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="46979"
-                                :aria-expanded="expanded"
-                            >
-                            <span class="font-medium text-black quill">What types of landscaping services do you offer ?</span>
-                            <span class="flex items-center ml-6 h-7 text-gray-500">
-                                    <svg
-                                        class="w-6 h-6 transition-transform duration-200 transform"
-                                        :class="expanded ? 'scale-[-1]' : 'scale-100'"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </span>
-                            </button>
-                        </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="46979">
-                            <div aria-hidden="true" class="invisible h-2"></div>
-                            <p class="mt-2 text-base text-gray-500 quill">some (414) 840-2721</p>
-                        </dd>
-                    </div>
-                
-                    <div x-data="{ expanded: false }" class="pt-6">
-                        <dt class="text-lg">
-                            <button
-                                type="button"
-                                @click="expanded = !expanded"
-                                class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="46980"
+                                aria-controls="47068"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-black quill"><p>What type of landscaping services do you offer</p></span>
@@ -4185,7 +5659,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="46980">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47068">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-500 quill"><p>We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p></p>
                         </dd>
@@ -4197,7 +5671,69 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="46981"
+                                aria-controls="47066"
+                                :aria-expanded="expanded"
+                            >
+                            <span class="font-medium text-black quill">What types of landscaping services do you offer ?</span>
+                            <span class="flex items-center ml-6 h-7 text-gray-500">
+                                    <svg
+                                        class="w-6 h-6 transition-transform duration-200 transform"
+                                        :class="expanded ? 'scale-[-1]' : 'scale-100'"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47066">
+                            <div aria-hidden="true" class="invisible h-2"></div>
+                            <p class="mt-2 text-base text-gray-500 quill">some (414) 840-2721</p>
+                        </dd>
+                    </div>
+                
+                    <div x-data="{ expanded: false }" class="pt-6">
+                        <dt class="text-lg">
+                            <button
+                                type="button"
+                                @click="expanded = !expanded"
+                                class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
+                                aria-controls="47069"
+                                :aria-expanded="expanded"
+                            >
+                            <span class="font-medium text-black quill"> What landscaping services do you provide?452345</span>
+                            <span class="flex items-center ml-6 h-7 text-gray-500">
+                                    <svg
+                                        class="w-6 h-6 transition-transform duration-200 transform"
+                                        :class="expanded ? 'scale-[-1]' : 'scale-100'"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47069">
+                            <div aria-hidden="true" class="invisible h-2"></div>
+                            <p class="mt-2 text-base text-gray-500 quill"> At Beantown Tutoring, we offer a wide range of landscaping services to meet all of your outdoor needs. Some of our services include lawn maintenance, tree and shrub trimming, flower bed design and installation, mulching, and seasonal clean-up. We also offer hardscape services such as patio and walkway installation, as well as irrigation system installation and maintenance. Whatever your landscaping needs may be, our experienced team is dedicated to providing top-quality service and exceptional results.</p>
+                        </dd>
+                    </div>
+                
+                    <div x-data="{ expanded: false }" class="pt-6">
+                        <dt class="text-lg">
+                            <button
+                                type="button"
+                                @click="expanded = !expanded"
+                                class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
+                                aria-controls="47070"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-black quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
@@ -4216,7 +5752,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="46981">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47070">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-500 quill">(414) 840-2721 some</p>
                         </dd>
@@ -4228,7 +5764,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="46982"
+                                aria-controls="47071"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-black quill"><p>What is your pricing</p></span>
@@ -4247,9 +5783,40 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="46982">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47071">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-500 quill"><p>We offer competitive pricing and free estimates.</p></p>
+                        </dd>
+                    </div>
+                
+                    <div x-data="{ expanded: false }" class="pt-6">
+                        <dt class="text-lg">
+                            <button
+                                type="button"
+                                @click="expanded = !expanded"
+                                class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
+                                aria-controls="47072"
+                                :aria-expanded="expanded"
+                            >
+                            <span class="font-medium text-black quill"><p>What is our business <strong>hours?﻿</strong></p></span>
+                            <span class="flex items-center ml-6 h-7 text-gray-500">
+                                    <svg
+                                        class="w-6 h-6 transition-transform duration-200 transform"
+                                        :class="expanded ? 'scale-[-1]' : 'scale-100'"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47072">
+                            <div aria-hidden="true" class="invisible h-2"></div>
+                            <p class="mt-2 text-base text-gray-500 quill"><p>We are open every (414) 840-2721 weekday from<strong> 9-5﻿</strong></p></p>
                         </dd>
                     </div>
                 
