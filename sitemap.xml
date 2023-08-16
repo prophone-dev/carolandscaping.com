@@ -46,13 +46,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Gardening</loc>
-        <lastmod>2023-08-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-Exterior-Interior-Painting</loc>
         <lastmod>2023-08-16</lastmod>
         <changefreq>weekly</changefreq>
@@ -68,6 +61,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-newss-ss2sqws</loc>
+        <lastmod>2023-08-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Gardening</loc>
         <lastmod>2023-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -144,6 +144,34 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-e</loc>
+        <lastmod>2023-08-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Lydia</loc>
+        <lastmod>2023-08-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Gallery-1234</loc>
+        <lastmod>2023-08-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-a</loc>
+        <lastmod>2023-08-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-somettt</loc>
         <lastmod>2023-08-16</lastmod>
         <changefreq>weekly</changefreq>
@@ -208,34 +236,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-c</loc>
-        <lastmod>2023-08-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-e</loc>
-        <lastmod>2023-08-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Lydia</loc>
-        <lastmod>2023-08-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Gallery-1234</loc>
-        <lastmod>2023-08-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-a</loc>
         <lastmod>2023-08-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
