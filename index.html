@@ -8710,6 +8710,37 @@
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
+                                aria-controls="47072"
+                                :aria-expanded="expanded"
+                            >
+                            <span class="font-medium text-black quill"><p>What is our business <strong>hours?﻿</strong></p></span>
+                            <span class="flex items-center ml-6 h-7 text-gray-500">
+                                    <svg
+                                        class="w-6 h-6 transition-transform duration-200 transform"
+                                        :class="expanded ? 'scale-[-1]' : 'scale-100'"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47072">
+                            <div aria-hidden="true" class="invisible h-2"></div>
+                            <p class="mt-2 text-base text-gray-500 quill"><p>We are open every (414) 840-2721 weekday from<strong> 9-5﻿</strong></p></p>
+                        </dd>
+                    </div>
+                
+                    <div x-data="{ expanded: false }" class="pt-6">
+                        <dt class="text-lg">
+                            <button
+                                type="button"
+                                @click="expanded = !expanded"
+                                class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
                                 aria-controls="47069"
                                 :aria-expanded="expanded"
                             >
@@ -8794,37 +8825,6 @@
                         <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47070">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-500 quill">(414) 840-2721 some</p>
-                        </dd>
-                    </div>
-                
-                    <div x-data="{ expanded: false }" class="pt-6">
-                        <dt class="text-lg">
-                            <button
-                                type="button"
-                                @click="expanded = !expanded"
-                                class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="47072"
-                                :aria-expanded="expanded"
-                            >
-                            <span class="font-medium text-black quill"><p>What is our business <strong>hours?﻿</strong></p></span>
-                            <span class="flex items-center ml-6 h-7 text-gray-500">
-                                    <svg
-                                        class="w-6 h-6 transition-transform duration-200 transform"
-                                        :class="expanded ? 'scale-[-1]' : 'scale-100'"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </span>
-                            </button>
-                        </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47072">
-                            <div aria-hidden="true" class="invisible h-2"></div>
-                            <p class="mt-2 text-base text-gray-500 quill"><p>We are open every (414) 840-2721 weekday from<strong> 9-5﻿</strong></p></p>
                         </dd>
                     </div>
                 
