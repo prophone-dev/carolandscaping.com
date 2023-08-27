@@ -35,6 +35,8 @@
     <title>Beantown Tutoring: NYC Landscaping Services |  | Our-team</title>
     <meta name="description"
         content="&lt;p&gt;&lt;u&gt;Missionssion &lt;/u&gt;&lt;/p&gt; &lt;p&gt;&lt;u&gt;Visionsionsion&lt;/u&gt;&lt;/p&gt;">
+    
+    <link rel="preconnect" href="https://d3p2r6ofnvoe67.cloudfront.net">
     <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:format(webp)/media/a56ae5d3-0b94-477f-87a9-2bdc100dfb2f.png" type="image/x-icon">
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
@@ -111,8 +113,6 @@
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'xl:pt-44 pt-24': !scrolledFromTop, 'pt-24': scrolledFromTop}"
 >
-    
-
     
 
         
@@ -1174,7 +1174,7 @@
     async function postCtaClick(type) {
         if (type === "text") history.replaceState(null, "", "contact");
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
