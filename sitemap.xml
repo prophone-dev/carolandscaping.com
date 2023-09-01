@@ -67,6 +67,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-Empty</loc>
+        <lastmod>2023-09-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-test</loc>
         <lastmod>2023-09-01</lastmod>
         <changefreq>weekly</changefreq>
