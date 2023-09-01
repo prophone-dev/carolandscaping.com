@@ -965,33 +965,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 0; galleryModalOpen = true }"
-                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
-                        >
-                            
-                                <div class="aspect-w-3 aspect-h-2">
-                                    
-                                        
-                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:quality(100)/media/469c08b1-18d1-4c47-a442-8db72ea85f2b.png" alt="New Gallery for Beantowne Tutoringg!!!!!!!!!!!!!!! in New York, New York" loading="lazy" decoding="async"/>
-                                        
-                                        
-                                </div>
-
-                                <div class="space-y-1 text-lg font-medium leading-6">
-                                    <p class="line-clamp-3"></p>
-                                    <h3 class="text-primary"></h3>
-                                </div>
-                            
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 1; galleryModalOpen = true }"
+                            @click="activeImage = 0; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1017,7 +991,33 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 2; galleryModalOpen = true }"
+                            @click="activeImage = 1; galleryModalOpen = true"
+                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                        >
+                            
+                                <div class="aspect-w-3 aspect-h-2">
+                                    
+                                        
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:quality(100)/media/469c08b1-18d1-4c47-a442-8db72ea85f2b.png" alt="New Gallery for Beantowne Tutoringg!!!!!!!!!!!!!!! in New York, New York" loading="lazy" decoding="async"/>
+                                        
+                                        
+                                </div>
+
+                                <div class="space-y-1 text-lg font-medium leading-6">
+                                    <p class="line-clamp-3"></p>
+                                    <h3 class="text-primary"></h3>
+                                </div>
+                            
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button
+                            @click="activeImage = 2; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1043,7 +1043,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 3; galleryModalOpen = true }"
+                            @click="activeImage = 3; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1069,7 +1069,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 4; galleryModalOpen = true }"
+                            @click="activeImage = 4; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1095,7 +1095,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 5; galleryModalOpen = true }"
+                            @click="activeImage = 5; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1121,7 +1121,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 6; galleryModalOpen = true }"
+                            @click="activeImage = 6; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1147,7 +1147,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 7; galleryModalOpen = true }"
+                            @click="activeImage = 7; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1173,7 +1173,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 8; galleryModalOpen = true }"
+                            @click="activeImage = 8; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1199,7 +1199,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 9; galleryModalOpen = true }"
+                            @click="activeImage = 9; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1225,7 +1225,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 10; galleryModalOpen = true }"
+                            @click="activeImage = 10; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1251,7 +1251,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 11; galleryModalOpen = true }"
+                            @click="activeImage = 11; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1277,7 +1277,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 12; galleryModalOpen = true }"
+                            @click="activeImage = 12; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1303,7 +1303,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 13; galleryModalOpen = true }"
+                            @click="activeImage = 13; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1329,7 +1329,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 14; galleryModalOpen = true }"
+                            @click="activeImage = 14; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1355,7 +1355,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 15; galleryModalOpen = true }"
+                            @click="activeImage = 15; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1381,7 +1381,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 16; galleryModalOpen = true }"
+                            @click="activeImage = 16; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1407,7 +1407,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 17; galleryModalOpen = true }"
+                            @click="activeImage = 17; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1433,7 +1433,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 18; galleryModalOpen = true }"
+                            @click="activeImage = 18; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1459,7 +1459,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 19; galleryModalOpen = true }"
+                            @click="activeImage = 19; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1485,7 +1485,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 20; galleryModalOpen = true }"
+                            @click="activeImage = 20; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1511,7 +1511,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 21; galleryModalOpen = true }"
+                            @click="activeImage = 21; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1537,7 +1537,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 22; galleryModalOpen = true }"
+                            @click="activeImage = 22; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1563,7 +1563,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 23; galleryModalOpen = true }"
+                            @click="activeImage = 23; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1589,7 +1589,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 24; galleryModalOpen = true }"
+                            @click="activeImage = 24; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1615,7 +1615,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 25; galleryModalOpen = true }"
+                            @click="activeImage = 25; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1641,7 +1641,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 26; galleryModalOpen = true }"
+                            @click="activeImage = 26; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1667,7 +1667,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 27; galleryModalOpen = true }"
+                            @click="activeImage = 27; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1693,7 +1693,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 28; galleryModalOpen = true }"
+                            @click="activeImage = 28; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1719,7 +1719,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 29; galleryModalOpen = true }"
+                            @click="activeImage = 29; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1745,7 +1745,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 30; galleryModalOpen = true }"
+                            @click="activeImage = 30; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1771,7 +1771,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 31; galleryModalOpen = true }"
+                            @click="activeImage = 31; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1797,7 +1797,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 32; galleryModalOpen = true }"
+                            @click="activeImage = 32; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1823,7 +1823,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 33; galleryModalOpen = true }"
+                            @click="activeImage = 33; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1849,7 +1849,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 34; galleryModalOpen = true }"
+                            @click="activeImage = 34; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1875,7 +1875,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 35; galleryModalOpen = true }"
+                            @click="activeImage = 35; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1901,7 +1901,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 36; galleryModalOpen = true }"
+                            @click="activeImage = 36; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1927,7 +1927,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 37; galleryModalOpen = true }"
+                            @click="activeImage = 37; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1953,7 +1953,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 38; galleryModalOpen = true }"
+                            @click="activeImage = 38; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1979,7 +1979,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 39; galleryModalOpen = true }"
+                            @click="activeImage = 39; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2005,7 +2005,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 40; galleryModalOpen = true }"
+                            @click="activeImage = 40; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2031,7 +2031,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 41; galleryModalOpen = true }"
+                            @click="activeImage = 41; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2057,7 +2057,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 42; galleryModalOpen = true }"
+                            @click="activeImage = 42; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2083,7 +2083,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 43; galleryModalOpen = true }"
+                            @click="activeImage = 43; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2109,7 +2109,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 44; galleryModalOpen = true }"
+                            @click="activeImage = 44; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2135,7 +2135,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 45; galleryModalOpen = true }"
+                            @click="activeImage = 45; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2161,7 +2161,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 46; galleryModalOpen = true }"
+                            @click="activeImage = 46; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2187,7 +2187,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 47; galleryModalOpen = true }"
+                            @click="activeImage = 47; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2213,7 +2213,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 48; galleryModalOpen = true }"
+                            @click="activeImage = 48; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2239,7 +2239,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 49; galleryModalOpen = true }"
+                            @click="activeImage = 49; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2265,7 +2265,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 50; galleryModalOpen = true }"
+                            @click="activeImage = 50; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2291,7 +2291,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 51; galleryModalOpen = true }"
+                            @click="activeImage = 51; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2317,7 +2317,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 52; galleryModalOpen = true }"
+                            @click="activeImage = 52; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2343,7 +2343,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 53; galleryModalOpen = true }"
+                            @click="activeImage = 53; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2369,7 +2369,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 54; galleryModalOpen = true }"
+                            @click="activeImage = 54; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2395,7 +2395,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 55; galleryModalOpen = true }"
+                            @click="activeImage = 55; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2421,7 +2421,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 56; galleryModalOpen = true }"
+                            @click="activeImage = 56; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2447,7 +2447,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 57; galleryModalOpen = true }"
+                            @click="activeImage = 57; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2473,7 +2473,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 58; galleryModalOpen = true }"
+                            @click="activeImage = 58; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2499,7 +2499,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 59; galleryModalOpen = true }"
+                            @click="activeImage = 59; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2525,7 +2525,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 60; galleryModalOpen = true }"
+                            @click="activeImage = 60; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2551,7 +2551,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 61; galleryModalOpen = true }"
+                            @click="activeImage = 61; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2577,7 +2577,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 62; galleryModalOpen = true }"
+                            @click="activeImage = 62; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2603,7 +2603,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 63; galleryModalOpen = true }"
+                            @click="activeImage = 63; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2629,7 +2629,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 64; galleryModalOpen = true }"
+                            @click="activeImage = 64; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2655,7 +2655,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 65; galleryModalOpen = true }"
+                            @click="activeImage = 65; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2681,7 +2681,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 66; galleryModalOpen = true }"
+                            @click="activeImage = 66; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2707,7 +2707,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 67; galleryModalOpen = true }"
+                            @click="activeImage = 67; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2733,7 +2733,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 68; galleryModalOpen = true }"
+                            @click="activeImage = 68; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2759,7 +2759,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 69; galleryModalOpen = true }"
+                            @click="activeImage = 69; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2785,7 +2785,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 70; galleryModalOpen = true }"
+                            @click="activeImage = 70; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2811,7 +2811,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 71; galleryModalOpen = true }"
+                            @click="activeImage = 71; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2837,7 +2837,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 72; galleryModalOpen = true }"
+                            @click="activeImage = 72; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2863,7 +2863,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 73; galleryModalOpen = true }"
+                            @click="activeImage = 73; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2889,7 +2889,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 74; galleryModalOpen = true }"
+                            @click="activeImage = 74; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2915,7 +2915,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 75; galleryModalOpen = true }"
+                            @click="activeImage = 75; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2941,7 +2941,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 76; galleryModalOpen = true }"
+                            @click="activeImage = 76; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2967,7 +2967,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 77; galleryModalOpen = true }"
+                            @click="activeImage = 77; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2993,7 +2993,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 78; galleryModalOpen = true }"
+                            @click="activeImage = 78; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3019,7 +3019,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 79; galleryModalOpen = true }"
+                            @click="activeImage = 79; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3045,7 +3045,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 80; galleryModalOpen = true }"
+                            @click="activeImage = 80; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3071,7 +3071,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 81; galleryModalOpen = true }"
+                            @click="activeImage = 81; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3097,7 +3097,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 82; galleryModalOpen = true }"
+                            @click="activeImage = 82; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3123,7 +3123,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 83; galleryModalOpen = true }"
+                            @click="activeImage = 83; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3149,7 +3149,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 84; galleryModalOpen = true }"
+                            @click="activeImage = 84; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3175,7 +3175,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 85; galleryModalOpen = true }"
+                            @click="activeImage = 85; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3201,7 +3201,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 86; galleryModalOpen = true }"
+                            @click="activeImage = 86; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3227,7 +3227,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 87; galleryModalOpen = true }"
+                            @click="activeImage = 87; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3253,7 +3253,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 88; galleryModalOpen = true }"
+                            @click="activeImage = 88; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3279,7 +3279,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 89; galleryModalOpen = true }"
+                            @click="activeImage = 89; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3305,7 +3305,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 90; galleryModalOpen = true }"
+                            @click="activeImage = 90; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3331,7 +3331,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 91; galleryModalOpen = true }"
+                            @click="activeImage = 91; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3357,7 +3357,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 92; galleryModalOpen = true }"
+                            @click="activeImage = 92; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3383,7 +3383,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 93; galleryModalOpen = true }"
+                            @click="activeImage = 93; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3409,7 +3409,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 94; galleryModalOpen = true }"
+                            @click="activeImage = 94; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3435,7 +3435,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 95; galleryModalOpen = true }"
+                            @click="activeImage = 95; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3461,7 +3461,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 96; galleryModalOpen = true }"
+                            @click="activeImage = 96; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3487,7 +3487,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 97; galleryModalOpen = true }"
+                            @click="activeImage = 97; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3513,7 +3513,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 98; galleryModalOpen = true }"
+                            @click="activeImage = 98; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3539,7 +3539,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 99; galleryModalOpen = true }"
+                            @click="activeImage = 99; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3565,7 +3565,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 100; galleryModalOpen = true }"
+                            @click="activeImage = 100; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3591,7 +3591,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 101; galleryModalOpen = true }"
+                            @click="activeImage = 101; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3617,7 +3617,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 102; galleryModalOpen = true }"
+                            @click="activeImage = 102; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3643,7 +3643,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 103; galleryModalOpen = true }"
+                            @click="activeImage = 103; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3669,7 +3669,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 104; galleryModalOpen = true }"
+                            @click="activeImage = 104; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3695,7 +3695,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 105; galleryModalOpen = true }"
+                            @click="activeImage = 105; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3721,7 +3721,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 106; galleryModalOpen = true }"
+                            @click="activeImage = 106; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3747,7 +3747,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 107; galleryModalOpen = true }"
+                            @click="activeImage = 107; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3773,7 +3773,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 108; galleryModalOpen = true }"
+                            @click="activeImage = 108; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3799,7 +3799,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 109; galleryModalOpen = true }"
+                            @click="activeImage = 109; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3825,7 +3825,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 110; galleryModalOpen = true }"
+                            @click="activeImage = 110; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3851,7 +3851,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 111; galleryModalOpen = true }"
+                            @click="activeImage = 111; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3877,7 +3877,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 112; galleryModalOpen = true }"
+                            @click="activeImage = 112; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3903,7 +3903,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 113; galleryModalOpen = true }"
+                            @click="activeImage = 113; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3929,7 +3929,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 114; galleryModalOpen = true }"
+                            @click="activeImage = 114; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3955,7 +3955,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 115; galleryModalOpen = true }"
+                            @click="activeImage = 115; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -3981,7 +3981,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 116; galleryModalOpen = true }"
+                            @click="activeImage = 116; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4007,7 +4007,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 117; galleryModalOpen = true }"
+                            @click="activeImage = 117; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4033,7 +4033,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 118; galleryModalOpen = true }"
+                            @click="activeImage = 118; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4059,7 +4059,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 119; galleryModalOpen = true }"
+                            @click="activeImage = 119; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4085,7 +4085,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 120; galleryModalOpen = true }"
+                            @click="activeImage = 120; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4111,7 +4111,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 121; galleryModalOpen = true }"
+                            @click="activeImage = 121; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4137,7 +4137,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 122; galleryModalOpen = true }"
+                            @click="activeImage = 122; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4163,7 +4163,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 123; galleryModalOpen = true }"
+                            @click="activeImage = 123; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4189,7 +4189,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 124; galleryModalOpen = true }"
+                            @click="activeImage = 124; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4215,7 +4215,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 125; galleryModalOpen = true }"
+                            @click="activeImage = 125; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4241,7 +4241,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 126; galleryModalOpen = true }"
+                            @click="activeImage = 126; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4267,7 +4267,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 127; galleryModalOpen = true }"
+                            @click="activeImage = 127; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4293,7 +4293,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 128; galleryModalOpen = true }"
+                            @click="activeImage = 128; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4319,7 +4319,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 129; galleryModalOpen = true }"
+                            @click="activeImage = 129; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4345,7 +4345,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 130; galleryModalOpen = true }"
+                            @click="activeImage = 130; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4371,7 +4371,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 131; galleryModalOpen = true }"
+                            @click="activeImage = 131; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4397,7 +4397,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 132; galleryModalOpen = true }"
+                            @click="activeImage = 132; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4423,7 +4423,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 133; galleryModalOpen = true }"
+                            @click="activeImage = 133; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4449,7 +4449,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 134; galleryModalOpen = true }"
+                            @click="activeImage = 134; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4475,7 +4475,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 135; galleryModalOpen = true }"
+                            @click="activeImage = 135; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4501,7 +4501,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 136; galleryModalOpen = true }"
+                            @click="activeImage = 136; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4527,7 +4527,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 137; galleryModalOpen = true }"
+                            @click="activeImage = 137; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4553,7 +4553,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 138; galleryModalOpen = true }"
+                            @click="activeImage = 138; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4579,7 +4579,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 139; galleryModalOpen = true }"
+                            @click="activeImage = 139; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4605,7 +4605,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 140; galleryModalOpen = true }"
+                            @click="activeImage = 140; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4631,7 +4631,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 141; galleryModalOpen = true }"
+                            @click="activeImage = 141; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4657,7 +4657,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 142; galleryModalOpen = true }"
+                            @click="activeImage = 142; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4683,7 +4683,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 143; galleryModalOpen = true }"
+                            @click="activeImage = 143; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4709,7 +4709,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 144; galleryModalOpen = true }"
+                            @click="activeImage = 144; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4735,7 +4735,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 145; galleryModalOpen = true }"
+                            @click="activeImage = 145; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4761,7 +4761,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 146; galleryModalOpen = true }"
+                            @click="activeImage = 146; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4787,7 +4787,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 147; galleryModalOpen = true }"
+                            @click="activeImage = 147; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4813,7 +4813,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 148; galleryModalOpen = true }"
+                            @click="activeImage = 148; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4839,7 +4839,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 149; galleryModalOpen = true }"
+                            @click="activeImage = 149; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4865,7 +4865,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 150; galleryModalOpen = true }"
+                            @click="activeImage = 150; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4891,7 +4891,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 151; galleryModalOpen = true }"
+                            @click="activeImage = 151; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4917,7 +4917,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 152; galleryModalOpen = true }"
+                            @click="activeImage = 152; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4943,7 +4943,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 153; galleryModalOpen = true }"
+                            @click="activeImage = 153; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4969,7 +4969,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 154; galleryModalOpen = true }"
+                            @click="activeImage = 154; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -4995,7 +4995,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 155; galleryModalOpen = true }"
+                            @click="activeImage = 155; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5021,7 +5021,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 156; galleryModalOpen = true }"
+                            @click="activeImage = 156; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5047,7 +5047,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 157; galleryModalOpen = true }"
+                            @click="activeImage = 157; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5073,7 +5073,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 158; galleryModalOpen = true }"
+                            @click="activeImage = 158; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5099,7 +5099,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 159; galleryModalOpen = true }"
+                            @click="activeImage = 159; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5125,7 +5125,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 160; galleryModalOpen = true }"
+                            @click="activeImage = 160; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5151,7 +5151,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 161; galleryModalOpen = true }"
+                            @click="activeImage = 161; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5177,7 +5177,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 162; galleryModalOpen = true }"
+                            @click="activeImage = 162; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5203,7 +5203,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 163; galleryModalOpen = true }"
+                            @click="activeImage = 163; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5229,7 +5229,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 164; galleryModalOpen = true }"
+                            @click="activeImage = 164; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5255,7 +5255,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 165; galleryModalOpen = true }"
+                            @click="activeImage = 165; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5281,7 +5281,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 166; galleryModalOpen = true }"
+                            @click="activeImage = 166; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5307,7 +5307,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 167; galleryModalOpen = true }"
+                            @click="activeImage = 167; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5333,7 +5333,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 168; galleryModalOpen = true }"
+                            @click="activeImage = 168; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5359,7 +5359,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 169; galleryModalOpen = true }"
+                            @click="activeImage = 169; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5385,7 +5385,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 170; galleryModalOpen = true }"
+                            @click="activeImage = 170; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5411,7 +5411,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 171; galleryModalOpen = true }"
+                            @click="activeImage = 171; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5437,7 +5437,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 172; galleryModalOpen = true }"
+                            @click="activeImage = 172; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5463,7 +5463,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 173; galleryModalOpen = true }"
+                            @click="activeImage = 173; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5489,7 +5489,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 174; galleryModalOpen = true }"
+                            @click="activeImage = 174; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5515,7 +5515,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 175; galleryModalOpen = true }"
+                            @click="activeImage = 175; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5541,7 +5541,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 176; galleryModalOpen = true }"
+                            @click="activeImage = 176; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5567,7 +5567,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 177; galleryModalOpen = true }"
+                            @click="activeImage = 177; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5593,7 +5593,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 178; galleryModalOpen = true }"
+                            @click="activeImage = 178; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5619,7 +5619,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="if (!$el.dataset.isSliding || $el.dataset.isSliding === 'false') { activeImage = 179; galleryModalOpen = true }"
+                            @click="activeImage = 179; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -5687,7 +5687,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/media/469c08b1-18d1-4c47-a442-8db72ea85f2b.png" alt="New Gallery for Beantowne Tutoringg!!!!!!!!!!!!!!! in New York, New York" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/media/c2280906-2510-4b78-bfc5-826109aa037a.png" alt="New Gallery for Beantowne Tutoringg!!!!!!!!!!!!!!! in New York, New York" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5696,7 +5696,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/media/c2280906-2510-4b78-bfc5-826109aa037a.png" alt="New Gallery for Beantowne Tutoringg!!!!!!!!!!!!!!! in New York, New York" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/media/469c08b1-18d1-4c47-a442-8db72ea85f2b.png" alt="New Gallery for Beantowne Tutoringg!!!!!!!!!!!!!!! in New York, New York" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -7352,35 +7352,6 @@
         window.addEventListener('resize', resizeSliders);
     });
 </script>
-<script>
-    function preventOpenModal() {
-        const buttons = document.querySelectorAll('.photo-tile');
-        buttons.forEach(function(button) {
-            let isSliding = false;
-        
-            button.addEventListener('mousedown', function() {
-                isSliding = false;
-            });
-            button.addEventListener('mousemove', function() {
-                isSliding = true;
-            });
-            button.addEventListener('click', function(event) {
-                console.log('2')
-                if (isSliding) {
-                    console.log('1')
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                isSliding = false;
-            });
-            button.addEventListener('mouseup', function(event) {
-                button.dataset.isSliding = isSliding.toString();
-            });
-        })
-    }
-
-    document.addEventListener('DOMContentLoaded', preventOpenModal);
-</script>
 
 <style>
 #nav-main {
@@ -7982,8 +7953,8 @@ runYourFunctionWhenJQueryIsLoaded(nacFunction);
                   
                       oansfdoijwedf, Brooklyn, NY, 11239 <br/>
                   
-                  12629574136 <br/>
-                  max@toplinepro.com
+                  19142003591 <br/>
+                  devansh@toplinepro.com
               </p>
               <div class="flex flex-wrap align-middle items-center">
                   
