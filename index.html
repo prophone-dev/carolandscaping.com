@@ -863,7 +863,7 @@
     async function postCtaClick(type) {
         if (type === "text") history.replaceState(null, "", "contact");
         try {
-            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -1163,11 +1163,28 @@
     }
 </style>
 
-
-<section class="bg-white">
-    <div class="w-screen pt-10 pb-16 mx-auto text-center max-w-7xl sm:px-6">
+<section x-data="{ showEmbeddedForm: false, styles: {top: '-200px'} }" class="bg-white embedded-form">
+    <div x-show="!showEmbeddedForm" style="height: 100vh;" class="bg-white"></div>
+    <div
+        x-cloak
+        x-show="showEmbeddedForm"
+        x-init="window.pageYOffset >= 100 ? showEmbeddedForm = true : showEmbeddedForm = false"
+        @scroll.window="window.pageYOffset >= 100 ? showEmbeddedForm = true : showEmbeddedForm = false"
+        x-transition:enter="transition duration-500"
+        x-transition:enter-start="transform translate-y-20 opacity-0"
+        x-transition:enter-end="transform translate-y-0 opacity-100"
+        x-transition:leave="transition-all duration-200"
+        x-transition:leave-start="transform translate-y-0 opacity-100"
+        x-transition:leave-end="transform translate-y-20 opacity-0"
+        
+        style="z-index: 45; position: relative; top: -200px;"
+        class="flex flex-col md:flex-row py-12 mx-auto text-center justify-center items-center"
+    >
         <h2 class="sr-only">TODO: Our properties</h2>
-        <div class="max-w-full flex flex-col flex-wrap items-center sm:flex-row sm:justify-center -m-4">
+        <div
+            class="flex flex-row flex-wrap justify-center order-2 md:order-1 self-start md:self-center md:grid lg:grid-cols-2 mt-6 badges-grid"
+        >
+        
             
             
             <div class="flex mb-3 sm:mb-5 items-center px-4 m-4 space-x-3 font-medium text-primary">
@@ -1181,7 +1198,7 @@
                     />
                 </svg>
                 </div>
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Bonded</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Bonded</div>
             </div>
             
             
@@ -1196,7 +1213,7 @@
                     />
                 </svg>
                 </div>
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Veteran Owned</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Veteran Owned</div>
             </div>
             
             
@@ -1211,7 +1228,7 @@
                     />
                 </svg>
                 </div>
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Family Owned</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Family Owned</div>
             </div>
             
             
@@ -1230,7 +1247,7 @@
                     </svg>
                 </div>
                     
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Black Owned</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Black Owned</div>
             </div>
             
             
@@ -1240,7 +1257,7 @@
                     <path fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" d="M20.1215 0.511044C21.1206 0.825973 21.8 1.75249 21.8 2.80002V14.8L31.4 14.8C32.2949 14.8 33.1154 15.2979 33.5287 16.0917C33.942 16.8854 33.8793 17.8432 33.3661 18.5763L16.5661 42.5763C15.9654 43.4345 14.8775 43.8039 13.8784 43.489C12.8794 43.1741 12.2 42.2475 12.2 41.2L12.2 29.2H2.59996C1.70506 29.2 0.884484 28.7021 0.471209 27.9084C0.0579347 27.1146 0.120609 26.1568 0.633802 25.4237L17.4338 1.42371C18.0345 0.565537 19.1224 0.196116 20.1215 0.511044Z"/>
                 </svg>
                 </div>
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Emergency Services</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Emergency Services</div>
             </div>
             
             
@@ -1250,7 +1267,7 @@
                     <path d="M21.6971 1.50293C20.7598 0.565673 19.2402 0.565673 18.303 1.50293L1.50299 18.3029C0.565734 19.2402 0.565734 20.7598 1.50299 21.697C2.44025 22.6343 3.95985 22.6343 4.8971 21.697L5.60005 20.9941V36.8C5.60005 38.1255 6.67457 39.2 8.00005 39.2H12.8C14.1255 39.2 15.2 38.1255 15.2 36.8V32C15.2 30.6745 16.2746 29.6 17.6 29.6H22.4C23.7255 29.6 24.8 30.6745 24.8 32V36.8C24.8 38.1255 25.8746 39.2 27.2 39.2H32C33.3255 39.2 34.4 38.1255 34.4 36.8V20.9941L35.103 21.697C36.0402 22.6343 37.5598 22.6343 38.4971 21.697C39.4344 20.7598 39.4344 19.2402 38.4971 18.3029L21.6971 1.50293Z" fill="currentColor"/>
                 </svg>
                 </div>
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Locally Owned</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Locally Owned</div>
             </div>
             
 
@@ -1281,7 +1298,7 @@
                     </svg>
                     </div>
                     
-                    <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Native Owned</div>
+                    <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Native Owned</div>
             </div>
             
 
@@ -1307,7 +1324,7 @@
                     <path d="M92.2005 21.0983C94.4671 18.6983 96.0671 15.765 96.0671 13.6317C96.0671 1.76501 82.6005 -4.50166 74.8671 3.76501C63.8005 15.6317 80.7338 32.565 92.2005 21.0983Z" fill="currentColor"/>
                 </svg>
                 </div>
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Woman Owned</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Woman Owned</div>
             </div>
             
 
@@ -1320,7 +1337,7 @@
                     <path d="M53.9 32.8345C49.7 35.2483 48.5 39.2069 48.5 49.9241V59H59.5C70.3 59 70.5 59 74 56.0069L77.5 53.0138V42.0069V31H67.3C58.9 31 56.4 31.3862 53.9 32.8345Z" fill="currentColor"/>
                 </svg>
                 </div>
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Latino Owned</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Latino Owned</div>
             </div>
             
 
@@ -1339,7 +1356,7 @@
                             stroke="currentColor"
                         ></svg>
                     </div>
-                    <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">deers</div>
+                    <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">deers</div>
                 </div>
                 
             
@@ -1358,12 +1375,192 @@
                     />
                 </svg>
                 </div>
-                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start">Insured</div>
+                <div class="text-xl w-2/3 sm:w-4/5 flex justify-start text-start">Insured</div>
             </div>
             
             
         </div>
+        <form
+            onsubmit="send_sms('caro-landscaping', 'embedded')"
+            class="py-6 px-4 md:p-6 bg-secondary bg-opacity-80 rounded-lg gap-4 md:gap-6 flex flex-col sm:grid sm:grid-cols-2 shadow-xl order-1 md:order-2 mx-6 self-stretch md:self-start"
+        >
+            <h3 style="line-height: 3.75rem;" class="text-4xl font-extrabold text-center text-white sm:col-span-2">Send us a text</h3>
+            <div id="error-state-modal-embedded" style="grid-column:span 2/span 2;" class="hidden"></div>
+                
+                    <input
+                        type="text"
+                        name="full-name"
+                        id="contact-full-name-embedded"
+                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                        placeholder="Full name"
+                    />
+                
+                
+                    <input
+                        type="tel"
+                        autocomplete="on"
+                        name="phone-number"
+                        id="contact-phone-number-embedded"
+                        class="contact-phone-number block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                        placeholder="Phone number"
+                    />
+                
+                
+                    <input
+                        type="email"
+                        name="email"
+                        id="contact-email-embedded"
+                        class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                        placeholder="Email"
+                    />
+                
+  
+                
+  
+                
+                <div x-data="{ date: '' }" class="relative">
+                    <div x-show="!date" style="left: 0.75rem; max-width: calc(100% - 45px)" class="h-6 bg-white absolute transform translate-y-4 cursor-text truncate">
+                        <label for="contact-date-embedded" class="text-gray-500 bg-white">Preferred date of service</label>
+                    </div>
+                    <input
+                        id="contact-date-embedded"
+                        type="date"
+                        x-model="date"
+                        class="block text-left z-50 w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                    >
+                </div>
+                
+  
+                
+  
+                
+                <div class="sm:col-span-2">
+                    <fieldset class="bg-white py-2.5 px-3 rounded-md">
+                        <p class="text-gray-500 text-left">Select Service(s)</p>
+                        <div class="flex flex-col sm:grid auto-cols-auto gap-2 grid-cols-2 mt-2.5">
+                            
+                            <div class="flex items-center">
+                                <input
+                                    id="contact-service-embedded-161695"
+                                    name="161695"
+                                    type="checkbox"
+                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                    value="GO BUKS"
+                                />
+                                <label for="contact-service-embedded-161695" class="ml-3 text-sm sm:text-base font-normal text-gray-700">GO BUKS</label>
+                            </div>
+                        
+                            
+                            <div class="flex items-center">
+                                <input
+                                    id="contact-service-embedded-161696"
+                                    name="161696"
+                                    type="checkbox"
+                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                    value="test"
+                                />
+                                <label for="contact-service-embedded-161696" class="ml-3 text-sm sm:text-base font-normal text-gray-700">test</label>
+                            </div>
+                        
+                            
+                            <div class="flex items-center">
+                                <input
+                                    id="contact-service-embedded-161697"
+                                    name="161697"
+                                    type="checkbox"
+                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                    value="Cookin Some Chilli"
+                                />
+                                <label for="contact-service-embedded-161697" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cookin Some Chilli</label>
+                            </div>
+                        
+                            
+                            <div class="flex items-center">
+                                <input
+                                    id="contact-service-embedded-161698"
+                                    name="161698"
+                                    type="checkbox"
+                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                    value="Fencing Repair & Installation"
+                                />
+                                <label for="contact-service-embedded-161698" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fencing Repair & Installation</label>
+                            </div>
+                        
+                            
+         
+                            <div class="flex flex-col">
+                                    <div class="flex items-center">
+                                         <input
+                                                id="contact-service-embedded-other-checkbox"
+                                                name="Other"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                value="Other"
+                                                onclick="toggleOtherServicesEmbedded()"
+                                            />
+                                        <label for="contact-service-embedded-other-checkbox" class="ml-3 text-sm sm:text-base text-gray-600">Other</label>
+                                    </div>
+                                <input
+                                    id="contact-service-other-text-embedded"
+                                    name="OtherServicesInputField"
+                                    type="text"
+                                    class="ml-4 block border-gray-300 py-2.5 mt-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
+                                />
+                                </div>
+                        </div>
+                    </fieldset>
+                </div>
+                
+  
+                
+                    <textarea
+                        id="contact-concern-1-embedded"
+                        name="concern"
+                        rows="4"
+                        class="sm:col-span-2 col-start-1 block py-2.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                        placeholder=' How can we help? Go bucks '
+                    ></textarea>
+                
+
+                
+  
+                <button
+                    id='sendButton-embedded'
+                    class="flex justify-center sm:col-span-2 rounded-lg py-3 bg-primary hover:bg-primary-darker w-full text-primary-foreground mt-4 md:mt-0"
+                >
+                    Send
+                </button>
+            </form>
+        </div>
     </div>
+    <script>
+        const toggleOtherServicesEmbedded = () => {
+            const otherServices = document.getElementById('contact-service-embedded-other-checkbox')
+            const otherServicesInput = document.getElementById('contact-service-other-text-embedded')
+            if (otherServices.checked) {
+                otherServicesInput.classList.remove('hidden')
+                otherServicesInput.classList.add('block')
+            } else {
+                otherServicesInput.classList.remove('block')
+                otherServicesInput.classList.add('hidden')
+            }
+        }
+    
+        var observer2 = new MutationObserver(function() {
+            var dateInput = document.getElementById("contact-date-embedded");
+            if (dateInput) {
+            var today = new Date();
+            var twoYearsLater = new Date();
+            twoYearsLater.setFullYear(today.getFullYear() + 2);
+    
+            dateInput.setAttribute("min", today.toISOString().split("T")[0]);
+            dateInput.setAttribute("max", twoYearsLater.toISOString().split("T")[0]);
+    
+            observer2.disconnect();
+            }
+        });
+        observer2.observe(document, { childList: true, subtree: true });
+    </script>
 </section>
 
 
@@ -2228,6 +2425,100 @@ Highly recommended. In fact, already have to kne friend who asked.
                                     <div>
                                         
                                             <span class="block font-medium text-primary">R Bloom</span>
+                                        
+                                        <span class="block font-medium">Home Owner</span>
+                                    </div>
+
+                                    <div class="flex-shrink-0">
+                                        <span class="sr-only">Google</span>
+                                        
+                                            <svg
+                                            aria-hidden="true"
+                                            class="text-blue-900 transition-transform w-7 h-7"
+                                            viewBox="0 0 20 20"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#3cba54	"/>
+                                            <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#f4c20d"/>
+                                            <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#db3236"/>
+                                            <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#4885ed"/>
+                                            </svg>   
+                                        
+                                    
+                                    </div>
+                                </footer>
+                            </blockquote>
+                        </li>
+                    
+                    
+                    
+
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                            <div class="flex">
+                                <div aria-hidden="true" class="space-x-1.5 flex">
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
+                                            <path
+                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    
+                                </div>
+                                <span class="sr-only"> out of 5 stars</span>
+                            </div>
+
+                            <blockquote class="mt-6">
+                                
+                                <div class="relative">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <p lorem="1" class="relative text-lg font-medium">
+                                        Sam is absolutely samtacular! He can move, he can tutor, and he can move while tutoring!
+                                    </p>
+                                </div>
+                                
+                                <footer class="flex items-center justify-between mt-8 space-x-4">
+                                    <div>
+                                        
+                                            <span class="block font-medium text-primary">A Google User</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -5129,9 +5420,13 @@ Highly recommended. In fact, already have to kne friend who asked.
                         </li>
                     
                     
+                </ul>
+            
+                <ul class="space-y-8">
+                    
                     
 
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -5223,13 +5518,9 @@ Highly recommended. In fact, already have to kne friend who asked.
                         </li>
                     
                     
-                </ul>
-            
-                <ul class="space-y-8">
-                    
                     
 
-                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -8093,9 +8384,13 @@ What more can you ask for?
                         </li>
                     
                     
+                </ul>
+            
+                <ul class="space-y-8">
+                    
                     
 
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -8187,13 +8482,9 @@ What more can you ask for?
                         </li>
                     
                     
-                </ul>
-            
-                <ul class="space-y-8">
-                    
                     
 
-                        <li class=" block  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
+                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
                             <div class="flex">
                                 <div aria-hidden="true" class="space-x-1.5 flex">
                                     
@@ -10416,14 +10707,14 @@ Charlie &amp; Marilyn Hartman
                                         />
                                     </svg>
                                     <p lorem="1" class="relative text-lg font-medium">
-                                        Sam is absolutely samtacular! He can move, he can tutor, and he can move while tutoring!
+                                        Professional company, quick to respond to inquires for free estimates and all work explained fully. House and fence looked amazing after completion and workers very friendly and considerate of property. Certain stains were unable to come clean, but this was explained before cleaning. I appreciated the honesty when receiving quote and would recommend InstaGators-very reputable company
                                     </p>
                                 </div>
                                 
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         
-                                            <span class="block font-medium text-primary">A Google User</span>
+                                            <span class="block font-medium text-primary">Sue Gehlich</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -11063,100 +11354,6 @@ Kevin Wigley
 
                             <blockquote class="mt-6">
                                 
-                                <div class="relative">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="absolute top-0 left-0 w-8 h-8 text-gray-200 -translate-x-3 -translate-y-2"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4Zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4Z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                    <p lorem="1" class="relative text-lg font-medium">
-                                        Professional company, quick to respond to inquires for free estimates and all work explained fully. House and fence looked amazing after completion and workers very friendly and considerate of property. Certain stains were unable to come clean, but this was explained before cleaning. I appreciated the honesty when receiving quote and would recommend InstaGators-very reputable company
-                                    </p>
-                                </div>
-                                
-                                <footer class="flex items-center justify-between mt-8 space-x-4">
-                                    <div>
-                                        
-                                            <span class="block font-medium text-primary">Sue Gehlich</span>
-                                        
-                                        <span class="block font-medium">Home Owner</span>
-                                    </div>
-
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">Google</span>
-                                        
-                                            <svg
-                                            aria-hidden="true"
-                                            class="text-blue-900 transition-transform w-7 h-7"
-                                            viewBox="0 0 20 20"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20 10.2222C20 9.40001 19.9319 8.80001 19.7846 8.1778H10.2041V11.8889H15.8276C15.7143 12.8111 15.1021 14.2 13.7415 15.1333L13.7224 15.2575L16.7516 17.5573L16.9615 17.5778C18.8889 15.8333 20 13.2667 20 10.2222Z" fill="#3cba54	"/>
-                                            <path d="M10.2041 20C12.9591 20 15.272 19.1111 16.9614 17.5778L13.7414 15.1333C12.8798 15.7222 11.7233 16.1333 10.2041 16.1333C7.50566 16.1333 5.21542 14.3889 4.39902 11.9778L4.27935 11.9877L1.12957 14.3766L1.08838 14.4889C2.76637 17.7555 6.21309 20 10.2041 20Z" fill="#f4c20d"/>
-                                            <path d="M4.39905 11.9778C4.18363 11.3556 4.05897 10.6889 4.05897 10C4.05897 9.3111 4.18363 8.64446 4.38772 8.02225L4.38201 7.88973L1.19276 5.46246L1.08841 5.5111C0.39683 6.86668 0 8.38893 0 10C0 11.6111 0.39683 13.1333 1.08841 14.4889L4.39905 11.9778Z" fill="#db3236"/>
-                                            <path d="M10.2041 3.86664C12.1201 3.86664 13.4126 4.67775 14.1496 5.35557L17.0294 2.6C15.2608 0.988893 12.9591 0 10.2041 0C6.21309 0 2.76637 2.24443 1.08838 5.51107L4.38769 8.02221C5.21542 5.61111 7.50566 3.86664 10.2041 3.86664Z" fill="#4885ed"/>
-                                            </svg>   
-                                        
-                                    
-                                    </div>
-                                </footer>
-                            </blockquote>
-                        </li>
-                    
-                    
-                    
-
-                        <li class=" hidden  px-6 py-8 rounded-lg shadow md:px-8 xl:pl-16 xl:pr-6 bg-gray-50">
-                            <div class="flex">
-                                <div aria-hidden="true" class="space-x-1.5 flex">
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                        <svg class="text-yellow-300" width="30" height="30" fill="none">
-                                            <path
-                                                d="M14.049 2.927c.3-.921 1.603-.921 1.902 0l2.192 6.747a1 1 0 0 0 .951.69h7.094c.969 0 1.372 1.24.588 1.81l-5.74 4.17a1 1 0 0 0-.362 1.117l2.192 6.747c.3.922-.755 1.688-1.54 1.118l-5.738-4.17a1 1 0 0 0-1.176 0l-5.739 4.17c-.784.57-1.838-.197-1.539-1.118l2.192-6.746a1 1 0 0 0-.363-1.119l-5.739-4.17c-.784-.569-.38-1.808.588-1.808h7.094a1 1 0 0 0 .95-.691l2.193-6.747Z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    
-                                </div>
-                                <span class="sr-only"> out of 5 stars</span>
-                            </div>
-
-                            <blockquote class="mt-6">
-                                
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         
@@ -11240,7 +11437,7 @@ Kevin Wigley
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="47344"
+                                aria-controls="47403"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What is our business <strong>hours?﻿</strong></p></span>
@@ -11259,7 +11456,7 @@ Kevin Wigley
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47344">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47403">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill"><p>We are open every (262) 957-4136 weekday from<strong> 9-5﻿</strong></p></p>
                         </dd>
@@ -11271,7 +11468,7 @@ Kevin Wigley
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="47345"
+                                aria-controls="47404"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill">What types of landscaping services do you offer ?</span>
@@ -11290,7 +11487,7 @@ Kevin Wigley
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47345">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47404">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill">some (262) 957-4136</p>
                         </dd>
@@ -11302,7 +11499,7 @@ Kevin Wigley
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="47346"
+                                aria-controls="47405"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
@@ -11321,7 +11518,7 @@ Kevin Wigley
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47346">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47405">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill">(262) 957-4136 some</p>
                         </dd>
@@ -11333,7 +11530,7 @@ Kevin Wigley
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="47347"
+                                aria-controls="47406"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What type of landscaping services do you offer</p></span>
@@ -11352,7 +11549,7 @@ Kevin Wigley
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47347">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47406">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill"><p>We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p></p>
                         </dd>
@@ -11364,7 +11561,7 @@ Kevin Wigley
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="47348"
+                                aria-controls="47407"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What is your pricing</p></span>
@@ -11383,7 +11580,7 @@ Kevin Wigley
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47348">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="47407">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill"><p>We offer competitive pricing and free estimates.</p></p>
                         </dd>
