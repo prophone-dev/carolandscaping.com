@@ -125,15 +125,15 @@
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
-    class="w-screen fixed top-0 inset-x-0 z-50"
+    class="fixed w-screen top-0 inset-x-0 z-50"
 >
 
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-        :class="{ 'bg-transparent translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'bg-white h-24 shadow-magical': scrolledFromTop }"
-        class="relative transition-all duration-200  h-24 xl:h-44"
+        :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
+        class="relative transition-all duration-200 bg-white h-24 xl:h-44"
     >
         <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-full">
@@ -144,24 +144,24 @@
                     >
                     
                         <a  href= " index "
-                            class="flex items-center justify-center flex-shrink-0 pr-5  rounded-md focus:ring-0 focus:ring-offset-0"
-                            :class="{'bg-transparent': !scrolledFromTop, 'bg-white': scrolledFromTop}"
+                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                         >
                         
                             <picture>
                                 <source
-                                    class="h-[80px] xl:h-[150px] scale-100 origin-left transition object-contain max-h-40 logo  max-w-xs "
+                                    class="h-[80px] w-[160px] xl:h-[150px] scale-100 origin-left transition object-contain sm:max-h-40 logo  max-w-xs "
                                     type="image/webp" 
                                     srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:format(webp)/media/a56ae5d3-0b94-477f-87a9-2bdc100dfb2f.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/320x320/filters:strip_exif()/filters:format(webp)/media/a56ae5d3-0b94-477f-87a9-2bdc100dfb2f.png 2x"
                                     width="160"
                                     height="160"
                                 >
                                 <img
-                                    class="h-[80px] xl:h-[150px] scale-100 origin-left transition object-contain max-h-40 logo  max-w-xs "
+                                    class="h-[80px] w-[160px] xl:h-[150px] scale-100 origin-left transition object-contain sm:max-h-40 logo  max-w-xs "
                                     
                                     src="https://landing-page-app-hero-images.s3.amazonaws.com/media/1a116363-f163-429b-9764-4d9e623f15cf.jpeg"
                                     alt="Brand Logo"
                                     width="160"
+                                    height="160"
                                     loading="auto"
                                     fetchpriority="high"
                                     decoding="auto"
@@ -172,10 +172,7 @@
                     
                     </div>
                 </div>
-                <div 
-                    class="flex flex-row items-center xl:hidden"
-                    :class="{ 'text-gray-900': true }"
-                >
+                <div class="flex flex-row items-center text-gray-500 xl:hidden">
                     <span class="uppercase">Menu</span>
                     <button @click="mobileOpen = !mobileOpen" class="p-2">
                         <span hidden class="sr-only">Open/CLose menu TODO:</span>
@@ -189,7 +186,6 @@
                         :class="{'h-16': !scrolledFromTop, 'h-16': scrolledFromTop}"
                         class="hidden transition-all duration-200 xl:flex xl:space-x-5 mr-2"
                     >
-
                     
                             <div
                                 class="relative flex items-center"
@@ -201,14 +197,13 @@
                                 
                                     <a
                                         href=" index "
-                                        class=" border-transparent   hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'text-gray-900': true }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Home
+                                        Home 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -225,19 +220,16 @@
                                         :aria-expanded="desktopOpen"
                                         aria-controls="navitem_2"
                                         @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-6 pb-5 text-sm font-medium transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                        :class="{  'hover:border-gray-300 hover:text-gray-700 text-gray-900': true }"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        <span 
-                                            class="block pt-5 pb-5 "
-                                        >Services</span>
+                                        <span>Services</span>
                                         <svg
-                                            class="w-5 h-5 ml-2 transition-transform duration-300"
-                                            :class="{ '-rotate-180': desktopOpen }"
+                                            class="w-5 h-5 ml-1 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
                                             aria-hidden="true"
+                                            :class="{ '-rotate-180': desktopOpen }"
                                         >
                                             <path
                                                 fill-rule="evenodd"
@@ -259,62 +251,57 @@
                                         x-transition:leave-end="opacity-0 translate-y-1"
                                         id="navitem_2"
                                         role="menu"
-                                        class="absolute z-20 w-screen max-w-xs px-2 mt-6 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
                                         aria-orientation="vertical"
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto"  style="max-height:80vh;">
-                                                
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto" style="max-height:80vh;">
+                                                  
                                                     <a
                                                         href=" service-GO-BUKS "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">GO BUKS</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> a  </p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">GO BUKS</p>
                                                     </a>
-                                            
+                                              
                                                     <a
                                                         href=" service-test "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">test</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2">  </p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">test</p>
                                                     </a>
-                                            
+                                              
                                                     <a
                                                         href=" service-Cookin-Some-Chilli "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Cookin Some Chilli</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Our Cookin Some Chilli service adds a unique touch to your outdoor gatherings by offering professional chili cooking and catering services for homeowners hosting events in their outdoor spaces. </p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Cookin Some Chilli</p>
                                                     </a>
-                                            
+                                              
                                                     <a
                                                         href=" service-Fencing-Repair---Installation "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Fencing Repair &amp; Installation</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Our Fencing Repair &amp; Installation service offers professional solutions to address your fencing needs, ensuring quality materials and expert craftsmanship for a secure and aesthetically pleasing outdoor space. </p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Fencing Repair &amp; Installation</p>
                                                     </a>
-                                            
+                                              
                                                     <a
                                                         href=" service-Driveway-Design---Build "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Driveway Design &amp; Build</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Our Driveway Design &amp; Build service offers homeowners the opportunity to enhance their property with a customized and professionally crafted driveway, adding beauty and functionality to their outdoor space. </p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Driveway Design &amp; Build</p>
                                                     </a>
                                             
                                             </div>
                                         </div>
                                     </div>
                                 
-
+                                
                             </div>
                         
                             <div
@@ -331,19 +318,16 @@
                                         :aria-expanded="desktopOpen"
                                         aria-controls="navitem_3"
                                         @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-6 pb-5 text-sm font-medium transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                        :class="{  'hover:border-gray-300 hover:text-gray-700 text-gray-900': true }"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        <span 
-                                            class="block pt-5 pb-5 border-b-2 border-secondary hover:border-gray-300"
-                                        >Galleries</span>
+                                        <span>Galleries</span>
                                         <svg
-                                            class="w-5 h-5 ml-2 transition-transform duration-300"
-                                            :class="{ '-rotate-180': desktopOpen }"
+                                            class="w-5 h-5 ml-1 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
                                             aria-hidden="true"
+                                            :class="{ '-rotate-180': desktopOpen }"
                                         >
                                             <path
                                                 fill-rule="evenodd"
@@ -365,71 +349,65 @@
                                         x-transition:leave-end="opacity-0 translate-y-1"
                                         id="navitem_3"
                                         role="menu"
-                                        class="absolute z-20 w-screen max-w-xs px-2 mt-6 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
                                         aria-orientation="vertical"
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto"  style="max-height:80vh;">
-                                                
-                                                    <a
-                                                        href=" gallery-test "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">test</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
-                                                    </a>
-                                            
-                                                    <a
-                                                        href=" gallery-New-Gallery "
-                                                        role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
-                                                    >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">New Gallery</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
-                                                    </a>
-                                            
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto" style="max-height:80vh;">
+                                                  
                                                     <a
                                                         href=" gallery-test2 "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">test2</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">test2</p>
                                                     </a>
-                                            
+                                              
                                                     <a
                                                         href=" gallery-bla "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">bla</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">bla</p>
                                                     </a>
-                                            
+                                              
                                                     <a
                                                         href=" gallery-Empty "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">Empty</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Empty</p>
                                                     </a>
-                                            
+                                              
+                                                    <a
+                                                        href=" gallery-test "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">test</p>
+                                                    </a>
+                                              
+                                                    <a
+                                                        href=" gallery-New-Gallery "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery</p>
+                                                    </a>
+                                              
                                                     <a
                                                         href=" gallery-All "
                                                         role="menuitem"
-                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 hover:bg-gray-50"
                                                     >
-                                                        <p class="mt-1 text-base font-medium text-red-500 uppercase">All Photos</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
                                                     </a>
                                             
                                             </div>
                                         </div>
                                     </div>
                                 
-
+                                
                             </div>
                         
                             <div
@@ -442,14 +420,13 @@
                                 
                                     <a
                                         href=" reviews "
-                                        class=" border-transparent   hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'text-gray-900': true }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Reviews
+                                        Reviews 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -462,14 +439,13 @@
                                 
                                     <a
                                         href=" our-team "
-                                        class=" border-transparent   hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'text-gray-900': true }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Our team
+                                        Our team 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -482,14 +458,13 @@
                                 
                                     <a
                                         href=" hire "
-                                        class=" border-transparent   hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'text-gray-900': true }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Hire
+                                        Hire 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -502,14 +477,13 @@
                                 
                                     <a
                                         href=" bucks-high-octane-pipes "
-                                        class=" border-secondary hover:border-gray-300    hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase mix-blend-difference"
-                                        :class="{ 'text-gray-900': true }"
+                                        class=" border-secondary hover:border-gray-300  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        bucks high octane pipes
+                                        bucks high octane pipes 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                         
@@ -520,27 +494,26 @@
                     </p>
                     <div class="w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('call')" class="w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
+                        <div onclick="postCtaClick('call')" class="w-full sm:w-auto">
                             <a
                                 target = "_blank" 
                                 href="tel:+12622282738"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-primary hover:bg-primary-darker  focus:ring-0 focus:ring-offset-0"
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none hover:bg-primary-darker sm:w-auto bg-primary focus-visible:ring-2 ring-primary ring-opacity-75 ring-offset-2"
                                 >
                                 bucks2
                             </a>
                         </div>
                         
                     </div>
-
                     <div class="inline-flex w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
+                        <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto">
                             <a
                                 target = "_blank" 
                                 href="tel:+12622282738"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md   text-primary border-primary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
                                 >
                                 +12629574136
                             </a>
@@ -717,14 +690,6 @@
                                         >
                                             <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                                 
-                                                    <a href="gallery-test" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">test</p>
-                                                    </a>
-                                                
-                                                    <a href="gallery-New-Gallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery</p>
-                                                    </a>
-                                                
                                                     <a href="gallery-test2" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">test2</p>
                                                     </a>
@@ -735,6 +700,14 @@
                                                 
                                                     <a href="gallery-Empty" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Empty</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-test" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">test</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-New-Gallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery</p>
                                                     </a>
                                                 
                                                     <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -798,7 +771,7 @@
                                     <a
                                         target = "_blank"
                                         href="tel:+12622282738"
-                                        class="cta_call_conversion relative block w-full px-5 py-3 whitespace-nowrap font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
+                                        class="cta_call_conversion relative block w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
                                         >
                                         bucks2
                                     </a>
@@ -811,7 +784,7 @@
                                         target = "_blank"
                                         href="tel:+12622282738"
                                         :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                        class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
+                                        class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
                                         >
                                         +12629574136
                                     </a>
@@ -833,7 +806,14 @@
     const navBar = document.getElementById('nav-bar')
     const launchBanner = document.getElementById('launch-site-banner')
     const contactUsButton = document.getElementById('contact-us-button')
-    const isMobile = window.isMobile
+    function detectMob() {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            return true
+        } else { 
+            return false
+        }
+    }
+    const isMobile = detectMob()
     if (((window.location.href.includes('prosite.prophone.com')
      || window.location.href.includes('dev.prosite.prophone.com')
      || window.location.href.includes('stage.prosite.prophone.com')
@@ -995,10 +975,6 @@
                         
                             
                                 
-                            
-                                
-                            
-                                
                                     <section class="overflow-hidden bg-white">
     <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
         <h1>
@@ -1008,10 +984,6 @@
         
         <div class="relative mt-12">
             
-                
-                    
-                
-                    
                 
                     
                         <div
@@ -1353,6 +1325,10 @@ runYourFunctionWhenJQueryIsLoaded(nacFunction);
                 
                     
                 
+                    
+                
+                    
+                
             
         </div>
         
@@ -1599,6 +1575,10 @@ runYourFunctionWhenJQueryIsLoaded(nacFunction);
 </template>
 
                                     
+                                
+                            
+                                
+                            
                                 
                             
                                 
