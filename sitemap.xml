@@ -74,20 +74,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-test</loc>
-        <lastmod>2023-09-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
-        <lastmod>2023-09-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-test2</loc>
         <lastmod>2023-09-13</lastmod>
         <changefreq>weekly</changefreq>
@@ -103,6 +89,20 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Empty</loc>
+        <lastmod>2023-09-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-test</loc>
+        <lastmod>2023-09-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
         <lastmod>2023-09-13</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
