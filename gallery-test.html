@@ -82,7 +82,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
-    <script defer src="https://www.google.com/recaptcha/api.js?render=6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR"></script>
 
     <script type="text/javascript">
         
@@ -1680,6 +1679,15 @@
         </script>
     
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var script = document.createElement("script");
+                script.src = "https://www.google.com/recaptcha/api.js?render=6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR";
+                document.body.appendChild(script);
+            }, 1000);
+        });
+    </script>
 </body>
 
 </html>
