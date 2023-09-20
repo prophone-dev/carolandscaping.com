@@ -74,14 +74,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-bla</loc>
+        <loc>https://carolandscaping.com/gallery-test2</loc>
         <lastmod>2023-09-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-test2</loc>
+        <loc>https://carolandscaping.com/gallery-bla</loc>
         <lastmod>2023-09-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
