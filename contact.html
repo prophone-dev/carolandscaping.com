@@ -41,7 +41,6 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
     <link rel="preconnect" href="https://ajax.googleapis.com"/>
     <link rel="dns-prefetch" href="https://ajax.googleapis.com"/>
-    <script defer src="https://www.google.com/recaptcha/api.js?render=6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR"></script>
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <style>
@@ -1973,7 +1972,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
     async function postCtaClick(type) {
         if (type === "text") history.replaceState(null, "", "contact");
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://127.0.0.1:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
@@ -13387,6 +13386,15 @@ observer.observe(target)
 
     
 
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                const script = document.createElement("script");
+                script.src = "https://www.google.com/recaptcha/api.js?render=6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR";
+                document.body.appendChild(script);
+            }, 5000);
+        });      
+    </script>
 </body>
 
 </html>
