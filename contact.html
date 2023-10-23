@@ -145,20 +145,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                 
                     
 <style>
-    .fade-in {
-        animation: 1s fadeIn;
-        animation-fill-mode: forwards;
-        /* visibility: hidden; */
-    }
-    @keyframes fadeIn {
-        0% {
-            opacity: 0.5;
-        }
-        100% {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
+    
 
     .wave {
         height: 50px;
@@ -178,6 +165,30 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
             line-height: 3.75rem;
         }
     }
+
+    .slide-enter,
+    .slide-leave {
+        transition: all 1s ease;
+    }
+    
+    .slide-enter-start {
+        transform: translateX(100%);
+    }
+    .slide-leave-end {
+        transform: translateX(-100%);
+    }
+
+    .fade-enter {
+        transition: all 3s ease;
+    }
+    .fade-leave {
+        transition: all 2s ease;
+    }
+
+    .fade-enter-start,
+    .fade-leave-end {
+        opacity: 0;
+    }
 </style>
 
 <div class="relative overflow-hidden w-full custom-hero-font  min-h-screen  bg-black">
@@ -187,157 +198,96 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
             
             <div
                 class="relative bg-black flex  min-h-screen  w-full bg-center bg-cover bg-scroll"
-                
             >
-                <div
-                    x-cloak
-                    x-data="{
-                        activeImage: 1,
-                        amountOfImages: 5,
-                        loop() {
-                            setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
-                        },
-                    }"
-                    x-init="loop"
-                    class="absolute  h-screen  top-0 left-0 w-full object-cover bg-black"
-                >
-                
-                    <div
-                        class="absolute  h-screen  top-0 left-0 w-full object-cover bg-black h-full"
-                        x-show="activeImage === 1"
-                        
-                            x-transition:enter="transition duration-1000"
-                            x-transition:enter-start="transform translate-x-full"
-                            x-transition:enter-end="transform translate-x-0"
-                            x-transition:leave="transition duration-1000"
-                            x-transition:leave-start="transform"
-                            x-transition:leave-end="transform -translate-x-full"
-                        
+                <div id="slider">
+                    <picture
+                        aria-hidden="true"
+                        class="absolute  h-screen  top-0 left-0 w-full object-cover"
                     >
+                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a2b1a339-4c90-44f7-973e-0a37f939287d.png" type="image/webp">
+                        <img
+                            aria-hidden="true"
+                            class="slider-image object-cover w-full h-full"
+                            src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a2b1a339-4c90-44f7-973e-0a37f939287d.png"
+                            alt="cover-photo"
+                            fetchpriority="high"
+                            loading="auto"
+                            decoding="sync"
+                        />
+                    </picture>
                     
-                        <picture>
-                            <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a2b1a339-4c90-44f7-973e-0a37f939287d.png" type="image/webp">
-                            <img
-                                class="absolute object-cover w-full h-full"
-                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a2b1a339-4c90-44f7-973e-0a37f939287d.png"
-                                alt="landscaping near me company Beantown Tutoring &amp; Cheese Making in New York, New York"
-                                width="425"
-                                height="288"
-                                fetchpriority="high"
-                            />
-                        </picture>
-                    
-                </div>
-                
-                    <div
-                        class="absolute  h-screen  top-0 left-0 w-full object-cover bg-black h-full"
-                        x-show="activeImage === 2"
                         
-                            x-transition:enter="transition duration-1000"
-                            x-transition:enter-start="transform translate-x-full"
-                            x-transition:enter-end="transform translate-x-0"
-                            x-transition:leave="transition duration-1000"
-                            x-transition:leave-start="transform"
-                            x-transition:leave-end="transform -translate-x-full"
-                        
-                    >
                     
-                        <picture>
+                        
+                        <picture
+                            aria-hidden="true"
+                            class="absolute  h-screen  top-0 left-0 w-full object-cover"
+                        >
                             <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/96221f35-8af3-4695-b0ac-5130e3616733.png" type="image/webp">
                             <img
-                                class="absolute object-cover w-full h-full"
-                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/96221f35-8af3-4695-b0ac-5130e3616733.png"
-                                alt="landscaping near me company Beantown Tutoring &amp; Cheese Making in New York, New York"
-                                width="425"
-                                height="288"
+                                aria-hidden="true"
+                                class="slider-image object-cover w-full h-full hidden"
+                                data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/96221f35-8af3-4695-b0ac-5130e3616733.png"
+                                alt="cover-photo"
                                 fetchpriority="high"
+                                loading="lazy"
                             />
                         </picture>
-                    
-                </div>
-                
-                    <div
-                        class="absolute  h-screen  top-0 left-0 w-full object-cover bg-black h-full"
-                        x-show="activeImage === 3"
                         
-                            x-transition:enter="transition duration-1000"
-                            x-transition:enter-start="transform translate-x-full"
-                            x-transition:enter-end="transform translate-x-0"
-                            x-transition:leave="transition duration-1000"
-                            x-transition:leave-start="transform"
-                            x-transition:leave-end="transform -translate-x-full"
-                        
-                    >
                     
-                        <picture>
+                        
+                        <picture
+                            aria-hidden="true"
+                            class="absolute  h-screen  top-0 left-0 w-full object-cover"
+                        >
                             <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f5c936b2-501e-4f66-b687-7bf755220326.png" type="image/webp">
                             <img
-                                class="absolute object-cover w-full h-full"
-                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/f5c936b2-501e-4f66-b687-7bf755220326.png"
-                                alt="landscaping near me company Beantown Tutoring &amp; Cheese Making in New York, New York"
-                                width="425"
-                                height="288"
+                                aria-hidden="true"
+                                class="slider-image object-cover w-full h-full hidden"
+                                data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/f5c936b2-501e-4f66-b687-7bf755220326.png"
+                                alt="cover-photo"
                                 fetchpriority="high"
+                                loading="lazy"
                             />
                         </picture>
-                    
-                </div>
-                
-                    <div
-                        class="absolute  h-screen  top-0 left-0 w-full object-cover bg-black h-full"
-                        x-show="activeImage === 4"
                         
-                            x-transition:enter="transition duration-1000"
-                            x-transition:enter-start="transform translate-x-full"
-                            x-transition:enter-end="transform translate-x-0"
-                            x-transition:leave="transition duration-1000"
-                            x-transition:leave-start="transform"
-                            x-transition:leave-end="transform -translate-x-full"
-                        
-                    >
                     
-                        <picture>
+                        
+                        <picture
+                            aria-hidden="true"
+                            class="absolute  h-screen  top-0 left-0 w-full object-cover"
+                        >
                             <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/083d269b-9d76-492c-85fb-eea4bd1289ec.png" type="image/webp">
                             <img
-                                class="absolute object-cover w-full h-full"
-                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/083d269b-9d76-492c-85fb-eea4bd1289ec.png"
-                                alt="landscaping near me company Beantown Tutoring &amp; Cheese Making in New York, New York"
-                                width="425"
-                                height="288"
+                                aria-hidden="true"
+                                class="slider-image object-cover w-full h-full hidden"
+                                data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/083d269b-9d76-492c-85fb-eea4bd1289ec.png"
+                                alt="cover-photo"
                                 fetchpriority="high"
+                                loading="lazy"
                             />
                         </picture>
-                    
-                </div>
-                
-                    <div
-                        class="absolute  h-screen  top-0 left-0 w-full object-cover bg-black h-full"
-                        x-show="activeImage === 5"
                         
-                            x-transition:enter="transition duration-1000"
-                            x-transition:enter-start="transform translate-x-full"
-                            x-transition:enter-end="transform translate-x-0"
-                            x-transition:leave="transition duration-1000"
-                            x-transition:leave-start="transform"
-                            x-transition:leave-end="transform -translate-x-full"
-                        
-                    >
                     
-                        <picture>
+                        
+                        <picture
+                            aria-hidden="true"
+                            class="absolute  h-screen  top-0 left-0 w-full object-cover"
+                        >
                             <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/62af5a62-7ded-407e-b26c-ca7567022823.png" type="image/webp">
                             <img
-                                class="absolute object-cover w-full h-full"
-                                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/62af5a62-7ded-407e-b26c-ca7567022823.png"
-                                alt="landscaping near me company Beantown Tutoring &amp; Cheese Making in New York, New York"
-                                width="425"
-                                height="288"
+                                aria-hidden="true"
+                                class="slider-image object-cover w-full h-full hidden"
+                                data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/62af5a62-7ded-407e-b26c-ca7567022823.png"
+                                alt="cover-photo"
                                 fetchpriority="high"
+                                loading="lazy"
                             />
                         </picture>
+                        
                     
                 </div>
                 
-                </div>
                 <main style="--tw-bg-opacity:75%;" class="flex  min-h-screen  relative justify-center m-auto w-full text-primary bg-black">
                     
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2 relative z-15">
@@ -376,7 +326,7 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                     </div>
                     
                 </main>
-            </div>
+            </div> 
             
 
     </div>
@@ -385,6 +335,13 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
     
     
 </div>
+
+
+
+<script>
+    async function enter(e,t){e.classList.remove("hidden"),e.classList.add(`${t}-enter`),e.classList.add(`${t}-enter-start`),await nextFrame(),e.classList.remove(`${t}-enter-start`),e.classList.add(`${t}-enter-end`),await afterTransition(e),e.classList.remove(`${t}-enter-end`),e.classList.remove(`${t}-enter`)}async function leave(e,t){e.classList.add(`${t}-leave`),e.classList.add(`${t}-leave-start`),await nextFrame(),e.classList.remove(`${t}-leave-start`),e.classList.add(`${t}-leave-end`),await afterTransition(e),e.classList.remove(`${t}-leave-end`),e.classList.remove(`${t}-leave`),e.classList.add("hidden")}function nextFrame(){return new Promise((e=>{requestAnimationFrame((()=>{requestAnimationFrame(e)}))}))}function afterTransition(e){return new Promise((t=>{const a=1e3*Number(getComputedStyle(e).transitionDuration.replace("s",""));setTimeout((()=>{t()}),a)}))}function runSlider(e){let t=e.length,a=1;setInterval((()=>{let s=a;a=a===t?1:a+1,enter(e[a-1],"slide"),leave(e[s-1],"slide")}),5e3)}window.addEventListener("load",(function(){const e=Array.from(document.querySelectorAll(".slider-image"));Promise.all(e.map(((e,t)=>e.complete?Promise.resolve(0!==e.naturalHeight?e:null):new Promise((t=>{e.addEventListener("load",(()=>t(e))),e.addEventListener("error",(()=>t(null)))}))))).then((e=>{e.some((e=>!e))&&console.log("some images failed to load, all finished loading"),runSlider(e)})),setTimeout((()=>{e.forEach((e=>{e.loading="auto"}))}),3e3)}));
+</script>
+
 
 
 
@@ -703,97 +660,97 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
                             
                             <div class="flex items-center">
                                 <input
-                                    id="contact-service-embedded-163117"
-                                    name="163117"
+                                    id="contact-service-embedded-163125"
+                                    name="163125"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                     value="GO BUKS"
                                 />
-                                <label for="contact-service-embedded-163117" class="ml-3 text-sm sm:text-base font-normal text-gray-700">GO BUKS</label>
+                                <label for="contact-service-embedded-163125" class="ml-3 text-sm sm:text-base font-normal text-gray-700">GO BUKS</label>
                             </div>
                         
                             
                             <div class="flex items-center">
                                 <input
-                                    id="contact-service-embedded-163118"
-                                    name="163118"
+                                    id="contact-service-embedded-163126"
+                                    name="163126"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                     value="Nature walks with us"
                                 />
-                                <label for="contact-service-embedded-163118" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Nature walks with us</label>
+                                <label for="contact-service-embedded-163126" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Nature walks with us</label>
                             </div>
                         
                             
                             <div class="flex items-center">
                                 <input
-                                    id="contact-service-embedded-163119"
-                                    name="163119"
+                                    id="contact-service-embedded-163127"
+                                    name="163127"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                     value="Cookin Some Chilli"
                                 />
-                                <label for="contact-service-embedded-163119" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cookin Some Chilli</label>
+                                <label for="contact-service-embedded-163127" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cookin Some Chilli</label>
                             </div>
                         
                             
                             <div class="flex items-center">
                                 <input
-                                    id="contact-service-embedded-163120"
-                                    name="163120"
+                                    id="contact-service-embedded-163128"
+                                    name="163128"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                     value="Fencing Repair & Installation"
                                 />
-                                <label for="contact-service-embedded-163120" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fencing Repair & Installation</label>
+                                <label for="contact-service-embedded-163128" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fencing Repair & Installation</label>
                             </div>
                         
                             
                             <div class="flex items-center">
                                 <input
-                                    id="contact-service-embedded-163121"
-                                    name="163121"
+                                    id="contact-service-embedded-163129"
+                                    name="163129"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                     value="Driveway Design & Build"
                                 />
-                                <label for="contact-service-embedded-163121" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Driveway Design & Build</label>
+                                <label for="contact-service-embedded-163129" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Driveway Design & Build</label>
                             </div>
                         
                             
                             <div class="flex items-center">
                                 <input
-                                    id="contact-service-embedded-163122"
-                                    name="163122"
+                                    id="contact-service-embedded-163130"
+                                    name="163130"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                     value="Fall and Spring Clean Up"
                                 />
-                                <label for="contact-service-embedded-163122" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fall and Spring Clean Up</label>
+                                <label for="contact-service-embedded-163130" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fall and Spring Clean Up</label>
                             </div>
                         
                             
                             <div class="flex items-center">
                                 <input
-                                    id="contact-service-embedded-163123"
-                                    name="163123"
+                                    id="contact-service-embedded-163131"
+                                    name="163131"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                     value="Cheese Making"
                                 />
-                                <label for="contact-service-embedded-163123" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cheese Making</label>
+                                <label for="contact-service-embedded-163131" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cheese Making</label>
                             </div>
                         
                             
                             <div class="flex items-center">
                                 <input
-                                    id="contact-service-embedded-163124"
-                                    name="163124"
+                                    id="contact-service-embedded-163132"
+                                    name="163132"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                     value="new service name"
                                 />
-                                <label for="contact-service-embedded-163124" class="ml-3 text-sm sm:text-base font-normal text-gray-700">new service name</label>
+                                <label for="contact-service-embedded-163132" class="ml-3 text-sm sm:text-base font-normal text-gray-700">new service name</label>
                             </div>
                         
                             
@@ -12496,7 +12453,7 @@ Charlie &amp; Marilyn Hartman
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="48462"
+                                aria-controls="48467"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What is our business <strong>hours?﻿</strong></p></span>
@@ -12515,7 +12472,7 @@ Charlie &amp; Marilyn Hartman
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48462">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48467">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill"><p>We are open every (262) 957-4136 weekday from<strong> 9-5﻿</strong></p></p>
                         </dd>
@@ -12527,7 +12484,7 @@ Charlie &amp; Marilyn Hartman
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="48463"
+                                aria-controls="48468"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill">What types of landscaping services do you offer ?</span>
@@ -12546,7 +12503,7 @@ Charlie &amp; Marilyn Hartman
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48463">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48468">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill">some (262) 957-4136</p>
                         </dd>
@@ -12558,38 +12515,7 @@ Charlie &amp; Marilyn Hartman
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="48465"
-                                :aria-expanded="expanded"
-                            >
-                            <span class="font-medium text-white quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
-                            <span class="flex items-center ml-6 h-7">
-                                    <svg
-                                        class="w-6 h-6 transition-transform duration-200 transform"
-                                        :class="expanded ? 'scale-[-1]' : 'scale-100'"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </span>
-                            </button>
-                        </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48465">
-                            <div aria-hidden="true" class="invisible h-2"></div>
-                            <p class="mt-2 text-base text-gray-100 quill">(262) 957-4136 some</p>
-                        </dd>
-                    </div>
-                
-                    <div x-data="{ expanded: false }" class="pt-6">
-                        <dt class="text-lg">
-                            <button
-                                type="button"
-                                @click="expanded = !expanded"
-                                class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="48464"
+                                aria-controls="48469"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What type of landscaping services do you offer</p></span>
@@ -12608,7 +12534,7 @@ Charlie &amp; Marilyn Hartman
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48464">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48469">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill"><p>We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p></p>
                         </dd>
@@ -12620,7 +12546,38 @@ Charlie &amp; Marilyn Hartman
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="48466"
+                                aria-controls="48470"
+                                :aria-expanded="expanded"
+                            >
+                            <span class="font-medium text-white quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
+                            <span class="flex items-center ml-6 h-7">
+                                    <svg
+                                        class="w-6 h-6 transition-transform duration-200 transform"
+                                        :class="expanded ? 'scale-[-1]' : 'scale-100'"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48470">
+                            <div aria-hidden="true" class="invisible h-2"></div>
+                            <p class="mt-2 text-base text-gray-100 quill">(262) 957-4136 some</p>
+                        </dd>
+                    </div>
+                
+                    <div x-data="{ expanded: false }" class="pt-6">
+                        <dt class="text-lg">
+                            <button
+                                type="button"
+                                @click="expanded = !expanded"
+                                class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
+                                aria-controls="48471"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What is your pricing</p></span>
@@ -12639,7 +12596,7 @@ Charlie &amp; Marilyn Hartman
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48466">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="48471">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill"><p>We offer competitive pricing and free estimates.</p></p>
                         </dd>
