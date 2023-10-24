@@ -102,7 +102,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
+        <loc>https://carolandscaping.com/gallery-New-Gallery-12345</loc>
         <lastmod>2023-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -138,6 +138,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Test-4</loc>
+        <lastmod>2023-10-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Example-Gallery</loc>
         <lastmod>2023-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
