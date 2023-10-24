@@ -95,13 +95,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Test-4</loc>
-        <lastmod>2023-10-24</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-Cheesegirl</loc>
         <lastmod>2023-10-24</lastmod>
         <changefreq>weekly</changefreq>
@@ -138,6 +131,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-test</loc>
+        <lastmod>2023-10-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Test-4</loc>
         <lastmod>2023-10-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
