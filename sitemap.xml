@@ -11,13 +11,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Nature-walks-with-us</loc>
-        <lastmod>2023-10-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-Driveway-Design---Build</loc>
         <lastmod>2023-10-26</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,6 +32,34 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
+        <lastmod>2023-10-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-new-service-name</loc>
+        <lastmod>2023-10-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-NEW-SERVICE-8</loc>
+        <lastmod>2023-10-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Nature-walks-with-us</loc>
+        <lastmod>2023-10-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-Cookin-Some-Chilli</loc>
         <lastmod>2023-10-26</lastmod>
         <changefreq>weekly</changefreq>
@@ -53,14 +74,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
+        <loc>https://carolandscaping.com/service-Stone-Wall-Installation</loc>
         <lastmod>2023-10-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-new-service-name</loc>
+        <loc>https://carolandscaping.com/service-Adding-a-new-service</loc>
         <lastmod>2023-10-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -138,6 +159,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Test-4</loc>
+        <lastmod>2023-10-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Dogs</loc>
         <lastmod>2023-10-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
