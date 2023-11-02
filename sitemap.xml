@@ -11,7 +11,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Beach-Clean-up</loc>
+        <loc>https://carolandscaping.com/service-GO-BUKS</loc>
         <lastmod>2023-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -19,13 +19,6 @@
 
     <url>
         <loc>https://carolandscaping.com/service-Nature-walks-with-us</loc>
-        <lastmod>2023-11-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-GO-BUKS</loc>
         <lastmod>2023-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -88,13 +81,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Lawn-Aeration</loc>
-        <lastmod>2023-11-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/hire</loc>
         <lastmod>2023-11-02</lastmod>
         <changefreq>weekly</changefreq>
@@ -123,6 +109,27 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-Empty</loc>
+        <lastmod>2023-11-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Test-4</loc>
+        <lastmod>2023-11-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Dogs</loc>
+        <lastmod>2023-11-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-Go-bucks</loc>
         <lastmod>2023-11-02</lastmod>
         <changefreq>weekly</changefreq>
@@ -144,7 +151,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Beaches</loc>
+        <loc>https://carolandscaping.com/gallery-test2</loc>
+        <lastmod>2023-11-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-bla</loc>
         <lastmod>2023-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -152,20 +166,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-test</loc>
-        <lastmod>2023-11-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Test-4</loc>
-        <lastmod>2023-11-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Dogs</loc>
         <lastmod>2023-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
