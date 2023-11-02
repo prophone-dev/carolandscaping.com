@@ -123,6 +123,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-My-new-testing-library</loc>
+        <lastmod>2023-11-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
         <lastmod>2023-11-02</lastmod>
         <changefreq>weekly</changefreq>
