@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Beantown Tutoring: NYC Landscaping Services | Service | Lawn Aeration</title>
     <meta name="description"
-        content="Our Lawn Aeration service helps improve the health and appearance of your lawn by allowing air, water, and nutrients to reach the roots more efficiently.">
+        content="">
     <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/44e70b4c-662d-462e-a015-41ff337e5a80.jpeg" type="image/x-icon">
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
@@ -357,7 +357,7 @@
                                                         class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
                                                     >
                                                         <p class="mt-1 text-base font-medium text-red-500 uppercase">Lawn Aeration</p>
-<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Our Lawn Aeration service helps improve the health and appearance of your lawn by allowing air, water, and nutrients to reach the roots more efficiently. </p>-->
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Our Lawn Aeration service helps improve the health and appearance of your lawn by loosening compacted soil, allowing air, water, and nutrients to reach the roots more effectively. </p>-->
                                                     </a>
                                             
                                             </div>
@@ -1241,7 +1241,7 @@
                     <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Services</span>
                     <span class="block mt-2 text-3xl font-extrabold leading-8 tracking-tight text-center text-primary sm:text-4xl">Lawn Aeration</span>
                 </h1>
-                <div class="max-w-3xl break-words text-xl text-center text-gray-500 quill m-auto">Our Lawn Aeration service helps improve the health and appearance of your lawn by allowing air, water, and nutrients to reach the roots more efficiently.</div>
+                <div class="max-w-3xl break-words text-xl text-center text-gray-500 quill m-auto">Our Lawn Aeration service helps improve the health and appearance of your lawn by loosening compacted soil, allowing air, water, and nutrients to reach the roots more effectively.</div>
             </div>
             <div class="flex justify-center w-full mt-8">
                      
@@ -1299,8 +1299,82 @@
                     <div @keydown.right="next" @keydown.left="prev" tabindex="0" role="region" aria-labelledby="carousel-label" class="relative focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2">
                         <h2 id="carousel-label" class="sr-only" hidden>Reviews Carousel</h2>
                         
+                        <div class="absolute flex justify-between -inset-8">
+                            <button @click="prev" class="text-6xl">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m10 19-7-7m0 0 7-7m-7 7h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to previous review</span>
+                            </button>
+                            <button @click="next" class="text-6xl">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none">
+                                    <path d="m14 5 7 7m0 0-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="sr-only">Skip to next slide</span>
+                            </button>
+                        </div>
+                        
                         <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
                         <ul id="services-image-slider" x-ref="slider" tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="hide-scrollbars">
+                            
+                                <li class="translate-z-0" role="option">
+                                    <div class="flex flex-col items-center justify-center h-full w-full p-10">
+                                        <div class="h-[229px] sm:h-[481px]">
+                                           
+                                            
+                                                <img
+                                                    class="block sm:hidden object-contain w-full h-full rounded-lg" 
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/1628dd52-2439-40f4-bc44-fa54dcdc3df8.png"
+                                                    alt="Lawn Aeration for Beantown Tutoring &amp; Cheese Making in New York, New York"
+                                                    loadin="lazy"
+                                                />
+                                                <img
+                                                    class="hidden sm:block object-contain w-full h-full rounded-lg" 
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1200x1200/filters:strip_exif()/filters:no_upscale()/media/1628dd52-2439-40f4-bc44-fa54dcdc3df8.png"
+                                                    alt="Lawn Aeration for Beantown Tutoring &amp; Cheese Making in New York, New York"
+                                                    loading="lazy"
+                                                />
+
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                            
+                                <li class="translate-z-0" role="option">
+                                    <div class="flex flex-col items-center justify-center h-full w-full p-10">
+                                        <div class="h-[229px] sm:h-[481px]">
+                                           
+                                           
+                                                <video class="object-contain lazy w-full h-full rounded-lg rounded-lg" preload="none" controls  autoplay loop playsinline muted>
+                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a15ab379-7507-4ab5-8588-c065f274976f.mp4#t=0.5" >
+                                                </video>
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                            
+                                <li class="translate-z-0" role="option">
+                                    <div class="flex flex-col items-center justify-center h-full w-full p-10">
+                                        <div class="h-[229px] sm:h-[481px]">
+                                           
+                                            
+                                                <img
+                                                    class="block sm:hidden object-contain w-full h-full rounded-lg" 
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/07d0ea16-a905-4ce9-9699-3f1f21993759.png"
+                                                    alt="Lawn Aeration for Beantown Tutoring &amp; Cheese Making in New York, New York"
+                                                    loadin="lazy"
+                                                />
+                                                <img
+                                                    class="hidden sm:block object-contain w-full h-full rounded-lg" 
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1200x1200/filters:strip_exif()/filters:no_upscale()/media/07d0ea16-a905-4ce9-9699-3f1f21993759.png"
+                                                    alt="Lawn Aeration for Beantown Tutoring &amp; Cheese Making in New York, New York"
+                                                    loading="lazy"
+                                                />
+
+                                            
+                                        </div>
+                                    </div>
+                                </li>
                             
                         </ul>
                     </div>
@@ -1367,7 +1441,7 @@
         </div>
         <div class="relative">
             <content>
-                <p class="quill mt-0">Are you frustrated with the patchy and uneven appearance of your lawn? Have you noticed water pooling on the surface instead of properly penetrating into the soil? If so, it may be time to consider booking a professional lawn aeration service. <br><br>Lawn aeration is a crucial step in maintaining a healthy and vibrant lawn, yet it often goes overlooked. By creating small holes throughout the turf, this process allows air, water, and nutrients to reach deep into the roots of your grass. This encourages root growth and improves overall grass health.<br><br>Aerating your lawn can also alleviate compaction issues caused by heavy foot traffic or machinery use. Compacted soil restricts root development and makes it challenging for grassroots to absorb essential elements needed for growth.<br><br>Additionally, aerated lawns are more resilient against drought conditions as we retain water better due to improved drainage capabilities. Say goodbye to waterlogged areas during heavy rainfalls!<br><br>In conclusion, booking a professional lawn aeration service could bring numerous benefits for your yard's overall health. It helps combat common issues such as compacted soil and poor nutrient absorption, resulting in lush green grass that impresses all who visit.</p>
+                <p class="quill mt-0">When was the last time you gave any thought to your lawn's health? As homeowners, we often focus on watering our lawns, however, many of us overlook an essential step in maintaining a lush and healthy landscape – lawn aeration.<br><br>Lawn aeration is the process of creating small holes within your soil to allow oxygen, water, and nutrients to penetrate deep into its root system. This simple yet effective technique brings multiple benefits to your lawn's overall well-being.<br><br>Firstly, aeration improves soil compaction. Over time, foot traffic and machinery can cause the soil beneath your grass to become compacted. This makes it difficult for vital elements like air and water to reach the roots properly. By aerating your lawn regularly, you alleviate this issue and promote better nutrient absorption.<br><br>Additionally, this service helps prevent thatch buildup. Thatch refers to the layer of dead grass stems and roots that accumulates near the surface of your lawn over time. If not addressed promptly, it can suffocate your grass by obstructing sunlight and impeding proper moisture distribution.<br><br>Lastly, by allowing more oxygen into the ground through aeration, you encourage earthworm activity—a positive sign for any gardener! These wriggly creatures improve soil structure by breaking down organic matter and circulating nutrients throughout.<br><br>Therefore if you're seeking an effective way to boost your lawn's health without mentioning years of experience (!), don't hesitate—book a professional Lawn Aeration service today! Your vibrant turf will thank you for it.</p>
             </content>
         </div>
     </div>
