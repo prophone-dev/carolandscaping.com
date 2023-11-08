@@ -122,6 +122,8 @@
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
     class="w-screen fixed top-0 inset-x-0 z-50"
+    data-heap-component-name="navigation"
+    data-heap-version="v2.1"
 >
 
     <div
@@ -1147,7 +1149,10 @@
                                 
                             
                                 
-                                    <section class="overflow-hidden bg-white">
+                                    <section class="overflow-hidden bg-white"
+         data-heap-component-name="gallery-page"
+         data-heap-version="v2"
+>
     <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
         <h1>
             <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary"> Our Best Work </span>
@@ -1182,6 +1187,8 @@
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
     }"
+        data-heap-component-name="gallery-with-modal"
+        data-heap-version="v2"
 >
     <ul role="list" class="bg-white space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
         
@@ -1543,6 +1550,8 @@ function filterGalleryByDataId(filter) {
             class="fixed inset-0 z-50 overflow-y-scroll"
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
+            data-heap-component-name="send-text-modal"
+	        data-heap-version="v2"
     >
         <div
                 x-show="contactModalOpen"
@@ -1695,7 +1704,10 @@ function filterGalleryByDataId(filter) {
   observer1.observe(document, { childList: true, subtree: true });
 </script>
                                         <template x-teleport="body">
-    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-50 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
+    <div
+            data-heap-component-name="leave_a_review"
+            data-heap-version="v2"
+            x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-50 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
         <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
         <div
             x-show="reviewModalOpen"
@@ -1846,7 +1858,12 @@ function filterGalleryByDataId(filter) {
              
                 
                     
-                         <section class="bg-white z-50" style="min-height:300px;min-width:auto" id="ctaContainer">
+                         <section
+        class="bg-white z-50" style="min-height:300px;min-width:auto"
+        id="ctaContainer"
+        data-heap-component-name="final-cta"
+        data-heap-version="v2"
+>
     <div class="px-4 py-12 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
         <h2 class="text-3xl font-extrabold sm:text-4xl">
             <span class="block">Ready to get started?</span>
@@ -1887,7 +1904,12 @@ function filterGalleryByDataId(filter) {
             
 
 
-<footer class="bg-primary" aria-labelledby="footer-heading">
+<footer
+        class="bg-primary"
+        aria-labelledby="footer-heading"
+        data-heap-component-name="footer"
+        data-heap-version="v2"
+>
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-10 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
