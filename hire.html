@@ -140,6 +140,8 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
     class="w-screen fixed top-0 inset-x-0 z-50"
+    data-heap-component-name="navigation"
+    data-heap-version="v2.1"
 >
 
     <div
@@ -1171,7 +1173,10 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
 
                     
                         <section class="bg-white">
-    <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-20 lg:pb-0 lg:px-8">
+    <div class="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-20 lg:pb-0 lg:px-8"
+         data-heap-component-name="jobs-page"
+         data-heap-version="v2"
+    >
         <header class="relative z-10 flex flex-col items-center">
             <div class="space-y-5">
                 <h1>
@@ -1242,6 +1247,8 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
         class="fixed inset-0 z-50 pt-8 pb-20"
         x-trap.noscroll.inert="applyModalOpen"
         id="apply-job-modal"
+        data-heap-component-name="apply-job-modal"
+        data-heap-version="v2"
     >
         <div
             x-show="applyModalOpen"
@@ -1371,6 +1378,8 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
 	class="fixed inset-0 z-40 md:pt-8 md:pb-20"
 	id="text-thank-you"
 	style="display: none;"
+	data-heap-component-name="text_thank_you"
+	data-heap-version="v2"
 >
 	<div
 		class="fixed inset-0 bg-black bg-opacity-50"
@@ -1470,6 +1479,8 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
             class="fixed inset-0 z-50 overflow-y-scroll"
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
+            data-heap-component-name="send-text-modal"
+	        data-heap-version="v2"
     >
         <div
                 x-show="contactModalOpen"
@@ -1622,7 +1633,10 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
   observer1.observe(document, { childList: true, subtree: true });
 </script>
                             <template x-teleport="body">
-    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-50 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
+    <div
+            data-heap-component-name="leave_a_review"
+            data-heap-version="v2"
+            x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-50 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
         <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
         <div
             x-show="reviewModalOpen"
@@ -1747,7 +1761,12 @@ src=&quot;https://www.facebook.com/tr?id=330029272553636&amp;ev=PageView&amp;nos
             
 
 
-<footer class="bg-primary" aria-labelledby="footer-heading">
+<footer
+        class="bg-primary"
+        aria-labelledby="footer-heading"
+        data-heap-component-name="footer"
+        data-heap-version="v2"
+>
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-10 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
