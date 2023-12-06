@@ -18,6 +18,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-GO-BUKS</loc>
+        <lastmod>2023-12-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-Cookin-Some-Chilli</loc>
         <lastmod>2023-12-06</lastmod>
         <changefreq>weekly</changefreq>
@@ -82,13 +89,6 @@
 
     <url>
         <loc>https://carolandscaping.com/service-Test-Service-12-6</loc>
-        <lastmod>2023-12-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Lawn-Aeration</loc>
         <lastmod>2023-12-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -173,6 +173,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Go-bucks</loc>
+        <lastmod>2023-12-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Test-12-06</loc>
         <lastmod>2023-12-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
