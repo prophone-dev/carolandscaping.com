@@ -64,19 +64,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/6f5c9477-497a-43c1-bd18-ddce5005a143.png");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/74128fb9-dc9a-4d85-87a9-b8fa0388ab9a.png");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/d3b98c34-38e7-4678-93cd-e92d59f6d3e9.png");
       background-size: cover;
   }
   
@@ -88,13 +88,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/848c51b5-d865-480a-859a-353759370bc7.png");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/bdb577cf-df21-4b24-85ea-f7e7c1761a9b.png");
       background-size: cover;
   }
 </style>
@@ -1169,33 +1169,32 @@
                         <section class="bg-white">
     
     <div
-        class="relative  h-screen  flex w-full overflow-hidden items-center justify-center"
+        class="flex  h-screen  w-full bg-center bg-cover bg-scroll custom_text_color text-white"
+        style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/6f5c9477-497a-43c1-bd18-ddce5005a143.png')"
+        data-heap-component-name="review-page"
+        data-heap-version="v2.1"
     >
-        <video
-            id="hero-video"
-            class="absolute  h-screen  top-0 left-0 w-full object-cover" autoplay loop playsinline muted
-        >
-            <source src="" type = "" >
-        </video>
         <main
             style="--tw-bg-opacity:50%;"
-            class="flex  h-screen  relative justify-center m-auto w-full bg-primary"
+            class="flex  h-screen  justify-center m-auto w-full bg-primary"
         >
-            <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto custom_text_color text-white">
+            <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto">
                 <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-                    <span class="block custom_text_color text-white">
+                    <span class="block custom_text_color text-white ">
                         
                             Reviews
                         
                     </span>
                 </h1>
-                <p class="mt-3 text-base font-light  sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                
+                <p class="mt-3 text-base font-light sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                     
                         Check out what your neighbors are saying about us
                     
                 </p>
                 
-                    <button @click="reviewModalOpen = true;" class="inline-flex items-center justify-center px-5 py-3 mt-8 text-base font-medium transition border-2 border-transparent rounded-md sm:py-4 sm:px-10 hover:bg-secondary-darker focus:outline-none focus-visible:ring-2 ring-secondary ring-offset-2 ring-opacity-75 bg-secondary">
+                
+                    <button @click="reviewModalOpen = true;" class="inline-flex items-center justify-center px-5 py-3 mt-8 text-base font-medium text-white transition border-2 border-transparent rounded-md sm:py-4 sm:px-10 hover:bg-secondary-darker focus:outline-none focus-visible:ring-2 ring-secondary ring-offset-2 ring-opacity-75 bg-secondary">
                         Leave a Review
                     </button>
                 
@@ -11196,46 +11195,36 @@ Rich R
         <section
                 data-heap-component-name="final-cta"
                 data-heap-version="v2.1"
-                class="custom_text_color text-white">
-            <div
-                class="relative flex w-full overflow-hidden items-center justify-center h-[400px] sm:h-[800px]"
-            >
-                
-                <main
-                    style="--tw-bg-opacity:50%;"
-                    class="flex h-[400px] sm:h-[800px] relative justify-center m-auto w-full bg-primary"
-                >
-                    <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
-                        <h2 class="flex flex-col items-center text-3xl font-extrabold sm:text-6xl">
-                            <span class="flex">Ready to get started?</span>
-                            <span class="flex">Book an appointment today.</span>
-                        </h2>
-                        <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
-                            
-                            <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
-                                <button 
-                                    @click="contactModalOpen = true"
-                                    class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
-                                >
-                                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                    <span class="relative">Get a Free Quote</span>
-                                </button>
-                            </div> 
-                            
-                                
-                            
-                            <div onclick="postCtaClick('email')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
-                                <a
-                                    target = "_blank" href="mailto:bucks@bucks.com?subject=landscaping near me Job - Requesting a quote&body=Hi Caro,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
-                                    class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
-                                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                    <span class="relative">Email Us</span>
-                                </a>
-                            </div>
-                            
-                        </div>
+                class="flex final-cta-image-if-slider two-thirds-screen-height w-full bg-center bg-cover custom_text_color text-white">
+                <div style="--tw-bg-opacity:50%;" class="flex flex-col items-center justify-center px-6 py-12 text-center sm:px-6 lg:py-16 lg:px-8 w-full bg-primary">
+                <h2 class="flex flex-col items-center text-3xl font-extrabold sm:text-6xl">
+                    <span class="flex">Ready to get started?</span>
+                    <span class="flex">Book an appointment today.</span>
+                </h2>
+                <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
+                    
+                    <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
+                        <button 
+                            @click="contactModalOpen = true"
+                            class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
+                        >
+                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                            <span class="relative">Get a Free Quote</span>
+                        </button>
+                    </div> 
+                    
+                        
+                    
+                    <div onclick="postCtaClick('email')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
+                        <a
+                            target = "_blank" href="mailto:bucks@bucks.com?subject=landscaping near me Job - Requesting a quote&body=Hi Caro,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                            class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
+                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                            <span class="relative">Email Us</span>
+                        </a>
                     </div>
-                </main>
+                    
+                </div>
             </div>
         </section>
     
