@@ -82,7 +82,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/adb110a1-0533-4d48-b620-507ffa442bdd.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/90f47c64-3f17-4c82-8387-5826be84b178.png");
       background-size: cover;
   }
   
@@ -1607,7 +1607,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 6,
+        amountOfImages: 8,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1718,7 +1718,7 @@
             
          
             
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block  lg:col-start-2 ">
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
@@ -1741,7 +1741,7 @@
             
          
             
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block  lg:col-start-3 ">
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
@@ -1749,6 +1749,52 @@
                                 
                                     
                                         <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/c8e47b86-cea8-41ca-9158-fedab930d72a.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async" />
+                                    
+                                
+                            </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+         
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                            <div class="aspect-w-3 aspect-h-3">
+                                
+                                    
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/5c473008-2af2-404d-b239-043dd29294de.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async" />
+                                    
+                                
+                            </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+         
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                            <div class="aspect-w-3 aspect-h-3">
+                                
+                                    
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/90f47c64-3f17-4c82-8387-5826be84b178.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async" />
                                     
                                 
                             </div>
@@ -1855,6 +1901,24 @@
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c8e47b86-cea8-41ca-9158-fedab930d72a.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 6">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/5c473008-2af2-404d-b239-043dd29294de.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 7">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/90f47c64-3f17-4c82-8387-5826be84b178.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
