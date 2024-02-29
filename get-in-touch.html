@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/6ebb74d1-7f4f-4f84-9266-41ca5650661e.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/a4cd9b0b-ea20-48b2-9aa0-a6842420c304.png");
       background-size: cover;
   }
   
@@ -15100,80 +15100,71 @@ Charlie &amp; Marilyn Hartman
             <div class="relative h-[500px] w-full rounded-2xl shadow-xl overflow-hidden">
                 <div class="w-full h-full bg-gray-400">
                     <div style="height:500px; width:100%;" id="map"></div>
-                    <script >
-                        async function coordinate(url) {
-    const res = await fetch(url)
-    const coordinates = await res.json()
-    return [
-        coordinates.results[0].geometry.location.lat,
-        coordinates.results[0].geometry.location.lng,
-    ]
-}
-async function initMap() {
-    let radius = document.querySelector('#radius').innerText
-    let city = document.querySelector('#city').innerText
-    let state = document.querySelector('#state').innerText
-    let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}+${state}&key=AIzaSyDuL9weltDy_kOcISLRucx5-JSFsezZpVE`
-
-    let coordinates = await coordinate(url)
-
-    const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: {
-            lat: coordinates[0],
-            lng: coordinates[1],
-        },
-        mapTypeId: 'terrain',
-    })
-
-    const cityCircle = new google.maps.Circle({
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#FF0000',
-        fillOpacity: 0.35,
-        map,
-        animation: google.maps.Animation.DROP,
-        center: {
-            lat: coordinates[0],
-            lng: coordinates[1],
-        },
-        radius: radius * 1638,
-    })
-}
-
-const target = document.querySelector('#map')
-
-const handleIntersection = (entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            const script = document.createElement('script')
-            script.type = 'text/javascript'
-            script.src =
-                'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSw3qRocbSgfTrtxZbCsTjSHZaaJuUXF4&callback=initMap&libraries=&v=weekly'
-            document.body.appendChild(script)
-            observer.unobserve(entry.target)
-        }
-    })
-}
-const observer = new IntersectionObserver(handleIntersection)
-observer.observe(target)
-                
-                    </script>
-<!--                    <script-->
-<!--                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSw3qRocbSgfTrtxZbCsTjSHZaaJuUXF4&callback=initMap&libraries=&v=weekly"-->
-<!--                    async-->
-<!--                    defer-->
-<!--                  ></script> -->
-              
-                <span class="sr-only" id="city">New York</span>
-                <span class="sr-only" id="state">New York</span>
-                <span class="sr-only" id="radius">51</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    async function coordinate(url) {
+        const res = await fetch(url)
+        const coordinates = await res.json()
+        return [
+            coordinates.results[0].geometry.location.lat,
+            coordinates.results[0].geometry.location.lng,
+        ]
+    }
+    async function initMap() {
+        let city = "New York"
+        let state = "New York"
+        let radius = "51"
+        let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}+${state}&key=AIzaSyDuL9weltDy_kOcISLRucx5-JSFsezZpVE`
+
+        let coordinates = await coordinate(url)
+
+        const map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: {
+                lat: coordinates[0],
+                lng: coordinates[1],
+            },
+            mapTypeId: 'terrain',
+        })
+
+        const cityCircle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map,
+            animation: google.maps.Animation.DROP,
+            center: {
+                lat: coordinates[0],
+                lng: coordinates[1],
+            },
+            radius: radius * 1638,
+        })
+    }
+
+    const target = document.querySelector('#map')
+
+    const handleIntersection = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const script = document.createElement('script')
+                script.type = 'text/javascript'
+                script.src =
+                    'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSw3qRocbSgfTrtxZbCsTjSHZaaJuUXF4&callback=initMap&libraries=&v=weekly'
+                document.body.appendChild(script)
+                observer.unobserve(entry.target)
+            }
+        })
+    }
+    const observer = new IntersectionObserver(handleIntersection)
+    observer.observe(target)
+</script>
     
     
         <section
