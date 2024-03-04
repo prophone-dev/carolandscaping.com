@@ -525,11 +525,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gal "
+                                                                href=" gallery-New-Gal-YYY "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                New Gal
+                                                                New Gal YYY
                                                             </a>
                                                             
                                                         
@@ -988,11 +988,11 @@
                                                     </a>
                                                 
                                                     <a
-                                                        href="gallery-New-Gal"
+                                                        href="gallery-New-Gal-YYY"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
                                                     >
-                                                        New Gal
+                                                        New Gal YYY
                                                     </a>
                                                 
                                                     <a
@@ -1384,7 +1384,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 4,
+        amountOfImages: 3,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1438,32 +1438,6 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a468cbc3-0646-42c1-a8e7-a0874c6f61ce.png" alt="Hi world for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async"/>
-                                        
-                                    
-                                </div>
-
-                                <div class="space-y-1 text-lg font-medium leading-6">
-                                    <p class="line-clamp-3"></p>
-                                    <h3 class="text-primary"></h3>
-                                </div>
-                            
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button
-                            @click="activeImage = 2; galleryModalOpen = true"
-                            class="photo-tile block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0"
-                        >
-                            
-                                <div class="aspect-w-3 aspect-h-2">
-                                    
                                         <video class="lazy rounded shadow-md object-cover w-full h-full" preload="none" autoplay loop playsinline controls muted>
                                             <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e28e2a75-2af2-4b09-8740-85784d390094.mp4#t=0.5">
                                             Your browser does not support the video tag.
@@ -1485,7 +1459,7 @@
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 3; galleryModalOpen = true"
+                            @click="activeImage = 2; galleryModalOpen = true"
                             class="photo-tile block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0"
                         >
                             
@@ -1561,15 +1535,6 @@
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                         
-                                            
-                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a468cbc3-0646-42c1-a8e7-a0874c6f61ce.png" alt="Hi world for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async"/>
-                                                <p lorem="1" class="mt-3 text-gray-500"></p>
-                                            
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 2">
-                                        
                                             <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                 <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e28e2a75-2af2-4b09-8740-85784d390094.mp4#t=0.5" >
                                                 Your browser does not support the video tag.
@@ -1578,7 +1543,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                    <li class="flex flex-col" x-show="activeImage === 2">
                                         
                                             
                                                 <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/0477b9b6-0cc0-4123-95fb-be17b5006561.png" alt="Hi world for Beantown Tutoring &amp; Cheese Making in New York, New York" loading="lazy" decoding="async"/>
