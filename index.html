@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
       background-size: cover;
   }
   
@@ -1010,7 +1010,7 @@
                 >
                     
 
-                    Joe, you’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
+                    Max, you’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
 
                     
                     bucks
@@ -2426,7 +2426,7 @@
     <div
         x-data="{
             activeImage: 0,
-            amountOfImages: 0,
+            amountOfImages: 1,
             next() {
                 if (this.activeImage < this.amountOfImages - 1)
                     this.activeImage ++;
@@ -2472,14 +2472,12 @@
                     @click="activeImage = 0; galleryModalOpen = true"
                 >
                     
-                        <video
+                        <img
                             style="width: 300px; height: 185px;"
-                            class="lazy rounded-sm object-cover w-full h-full"
-                            preload="none" autoplay loop playsinline controls muted
-                        >
-                            <source data-src="#t=0.5">
-                            Your browser does not support the video tag.
-                        </video>
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png"
+                            alt=" for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"
+                        />
                     
                 </div>
                 <div
@@ -2611,14 +2609,12 @@
                     @click="activeImage = 0; galleryModalOpen = true"
                 >
                     
-                        <video
+                        <img
                             style="width: 100%; height: 118px;"
-                            class="lazy rounded-sm object-cover w-full h-full"
-                            preload="none" autoplay loop playsinline controls muted
-                        >
-                            <source data-src="#t=0.5">
-                            Your browser does not support the video tag.
-                        </video>
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png"
+                            alt=" for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"
+                        />
                     
                 </div>
                 <div
@@ -2801,6 +2797,19 @@
                                 <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
     
                                 <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 0">
+                                            
+                                                
+                                                    <img
+                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png"
+                                                        alt=" for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"
+                                                    />
+                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                
+                                            
+                                        </li>
                                     
                                 </ul>
 
@@ -3103,7 +3112,7 @@
                                                                     <div class="relative pt-2">
                                                                         
                                                                             <span class="review-body relative text-lg font-medium line-clamp-7">
-                                                                                The best customer experience ever. I would definitely recommend these guys to all my friends and family.
+                                                                                Great
                                                                             </span>
                                                                             <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
                                                                             <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
@@ -3112,9 +3121,9 @@
                                                                     <footer class="flex items-center justify-between mt-8 space-x-4">
                                                                         <div>
                                                                             
-                                                                                <span class="block font-medium uppercase text-gray-900">Darina Kulaha</span>
+                                                                                <span class="block font-medium uppercase text-gray-900">Nicholas D&#x27;Alfonso</span>
                                                                             
-                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">Cookin Some Chilli</div>
+                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">add</div>
                                                                         </div>
                                                                     </footer>
                                                                 </blockquote>
@@ -3198,6 +3207,102 @@
                                                                 <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
                                                                     <div class="relative pt-2">
                                                                         
+                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
+                                                                                One of the best service you can get around town. Highly recommend this company to everyone!
+                                                                            </span>
+                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
+                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
+                                                                        
+                                                                    </div>
+                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
+                                                                        <div>
+                                                                            
+                                                                                <span class="block font-medium uppercase text-gray-900">Anh Duong</span>
+                                                                            
+                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">Lawn Aeration</div>
+                                                                        </div>
+                                                                    </footer>
+                                                                </blockquote>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                
+                                                <ul class="space-y-8">
+                                                        
+                                                            <li
+                                                                style="min-height: 460px;"
+                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                            >
+                                                                <div class="flex w-full justify-between">
+                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                    </div>
+                                                                    <span class="sr-only"> out of 5 stars</span>
+                                                                    <div>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#030f35"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#030f35"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
+                                                                    <div class="relative pt-2">
+                                                                        
                                                                     </div>
                                                                     <footer class="flex items-center justify-between mt-8 space-x-4">
                                                                         <div>
@@ -3205,6 +3310,102 @@
                                                                                 <span class="block font-medium uppercase text-gray-900">Rob Pawlow</span>
                                                                             
                                                                             <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">GO BUKS</div>
+                                                                        </div>
+                                                                    </footer>
+                                                                </blockquote>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                
+                                                <ul class="space-y-8">
+                                                        
+                                                            <li
+                                                                style="min-height: 460px;"
+                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                            >
+                                                                <div class="flex w-full justify-between">
+                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                    </div>
+                                                                    <span class="sr-only"> out of 5 stars</span>
+                                                                    <div>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#030f35"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#030f35"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
+                                                                    <div class="relative pt-2">
+                                                                        
+                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
+                                                                                The best customer experience ever. I would definitely recommend these guys to all my friends and family.
+                                                                            </span>
+                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
+                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
+                                                                        
+                                                                    </div>
+                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
+                                                                        <div>
+                                                                            
+                                                                                <span class="block font-medium uppercase text-gray-900">Darina Kulaha</span>
+                                                                            
+                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">Cookin Some Chilli</div>
                                                                         </div>
                                                                     </footer>
                                                                 </blockquote>
@@ -6173,11 +6374,18 @@ Highly recommended. In fact, already have to kne friend who asked.
                                                         
                                                     </ul>
                                                 
+                                        </div>
+                                </li>
+                        
+                                <li class="translate-z-0" role="option">
+                                        <!-- Reviews grid -->
+                                        <div class="grid grid-cols-1 gap-x-4 md:grid-cols-2 lg:grid-cols-3">
+                                            
                                                 <ul class="space-y-8">
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50 "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -6273,7 +6481,7 @@ Highly recommended. In fact, already have to kne friend who asked.
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50  hidden sm:flex "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -6367,18 +6575,11 @@ Rich R
                                                         
                                                     </ul>
                                                 
-                                        </div>
-                                </li>
-                        
-                                <li class="translate-z-0" role="option">
-                                        <!-- Reviews grid -->
-                                        <div class="grid grid-cols-1 gap-x-4 md:grid-cols-2 lg:grid-cols-3">
-                                            
                                                 <ul class="space-y-8">
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50  hidden sm:flex "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -6474,7 +6675,7 @@ Rich R
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50  hidden sm:flex "
+                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -6570,7 +6771,7 @@ Rich R
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50  hidden sm:flex "
+                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -9632,11 +9833,18 @@ Charlie &amp; Marilyn Hartman
                                                         
                                                     </ul>
                                                 
+                                        </div>
+                                </li>
+                        
+                                <li class="translate-z-0" role="option">
+                                        <!-- Reviews grid -->
+                                        <div class="grid grid-cols-1 gap-x-4 md:grid-cols-2 lg:grid-cols-3">
+                                            
                                                 <ul class="space-y-8">
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50 "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -9732,7 +9940,7 @@ Charlie &amp; Marilyn Hartman
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50  hidden sm:flex "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -9817,109 +10025,6 @@ Charlie &amp; Marilyn Hartman
                                                                                 <span class="block font-medium uppercase text-gray-900">Bob Goldman</span>
                                                                             
                                                                             <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">NEW SERVICE 130.5590477949648114</div>
-                                                                        </div>
-                                                                    </footer>
-                                                                </blockquote>
-                                                            </li>
-                                                        
-                                                    </ul>
-                                                
-                                        </div>
-                                </li>
-                        
-                                <li class="translate-z-0" role="option">
-                                        <!-- Reviews grid -->
-                                        <div class="grid grid-cols-1 gap-x-4 md:grid-cols-2 lg:grid-cols-3">
-                                            
-                                                <ul class="space-y-8">
-                                                        
-                                                            <li
-                                                                style="min-height: 460px;"
-                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50 "
-                                                            >
-                                                                <div class="flex w-full justify-between">
-                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                    </div>
-                                                                    <span class="sr-only"> out of 5 stars</span>
-                                                                    <div>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#030f35"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#030f35"/>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
-                                                                    <div class="relative pt-2">
-                                                                        
-                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
-                                                                                Great
-                                                                            </span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
-                                                                        
-                                                                    </div>
-                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
-                                                                        <div>
-                                                                            
-                                                                                <span class="block font-medium uppercase text-gray-900">Nicholas D&#x27;Alfonso</span>
-                                                                            
-                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">add</div>
                                                                         </div>
                                                                     </footer>
                                                                 </blockquote>
@@ -10021,7 +10126,7 @@ Charlie &amp; Marilyn Hartman
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50  hidden sm:flex "
+                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -11636,102 +11741,6 @@ Charlie &amp; Marilyn Hartman
                                                                                 <span class="block font-medium uppercase text-gray-900">Jefferson Burgess</span>
                                                                             
                                                                             <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">GO BUKS</div>
-                                                                        </div>
-                                                                    </footer>
-                                                                </blockquote>
-                                                            </li>
-                                                        
-                                                    </ul>
-                                                
-                                                <ul class="space-y-8">
-                                                        
-                                                            <li
-                                                                style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
-                                                            >
-                                                                <div class="flex w-full justify-between">
-                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                    </div>
-                                                                    <span class="sr-only"> out of 5 stars</span>
-                                                                    <div>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#030f35"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#030f35"/>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
-                                                                    <div class="relative pt-2">
-                                                                        
-                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
-                                                                                One of the best service you can get around town. Highly recommend this company to everyone!
-                                                                            </span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
-                                                                        
-                                                                    </div>
-                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
-                                                                        <div>
-                                                                            
-                                                                                <span class="block font-medium uppercase text-gray-900">Anh Duong</span>
-                                                                            
-                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">Lawn Aeration</div>
                                                                         </div>
                                                                     </footer>
                                                                 </blockquote>
@@ -14263,6 +14272,16 @@ Charlie &amp; Marilyn Hartman
                                     >Home</a
                                 >
                             </li>
+                            
+                                
+                                <li>
+                                    <a
+                                        href="gallery-All"
+                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                        >Galleries</a
+                                    >
+                                </li>
+                                
                             
                             
                             <li>
