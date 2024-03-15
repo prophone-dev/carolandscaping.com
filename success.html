@@ -57,8 +57,8 @@
       --color-primary-l: 28%;
       --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
       --color-secondary-h: 38;
-      --color-secondary-s: 59%;
-      --color-secondary-l: 61%;
+      --color-secondary-s: 61%;
+      --color-secondary-l: 75%;
       --color-secondary-darker: hsl(var(--color-secondary-h), var(--color-secondary-s), calc(var(--color-secondary-l) - 7.5%));
       --switch: calc((var(--color-primary-l) - var(--contrastThreshold)) * -100);
       --color-primary-foreground: hsl(0, 0%, var(--switch));
@@ -66,13 +66,13 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0f53e87e-052c-438b-bd5d-7b2c9d536869.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
       background-size: cover;
   }
   
@@ -90,13 +90,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
       background-size: cover;
   }
 </style>
@@ -151,13 +151,11 @@
 </head>
 
 <body
-    class="xl:pt-44 pt-24 ease-in-out"
+    
     x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
-    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    :class="{'xl:pt-44 pt-24': !scrolledFromTop, 'pt-24': scrolledFromTop}"
+    
 >
     
 
@@ -176,11 +174,11 @@
                     aria-hidden="true"
                     class="absolute inset-0 object-cover"
             >
-                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png" type="image/webp">
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg" type="image/webp">
                     <img
                             aria-hidden="true"
                             class="object-cover w-full h-full"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg"
                             alt="cover-photo"
                             fetchpriority="high"
                             loading="auto"

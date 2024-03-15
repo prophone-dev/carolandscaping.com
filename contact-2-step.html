@@ -57,8 +57,8 @@
       --color-primary-l: 28%;
       --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
       --color-secondary-h: 38;
-      --color-secondary-s: 59%;
-      --color-secondary-l: 61%;
+      --color-secondary-s: 61%;
+      --color-secondary-l: 75%;
       --color-secondary-darker: hsl(var(--color-secondary-h), var(--color-secondary-s), calc(var(--color-secondary-l) - 7.5%));
       --switch: calc((var(--color-primary-l) - var(--contrastThreshold)) * -100);
       --color-primary-foreground: hsl(0, 0%, var(--switch));
@@ -66,13 +66,13 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0f53e87e-052c-438b-bd5d-7b2c9d536869.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
       background-size: cover;
   }
   
@@ -90,13 +90,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
       background-size: cover;
   }
 </style>
@@ -151,13 +151,11 @@
 </head>
 
 <body
-    class="xl:pt-44 pt-24 ease-in-out"
+    
     x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
-    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    :class="{'xl:pt-44 pt-24': !scrolledFromTop, 'pt-24': scrolledFromTop}"
+    
 >
     
 
@@ -204,11 +202,11 @@
                     aria-hidden="true"
                     class="absolute inset-0 object-cover"
                 >
-                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png" type="image/webp">
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg" type="image/webp">
                     <img
                         aria-hidden="true"
                         class="object-cover w-full h-full"
-                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png"
+                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg"
                         alt="cover-photo"
                         fetchpriority="high"
                         loading="auto"
@@ -309,90 +307,90 @@
                             
                                 <div class="flex items-center">
                                 <input
-                                    id="contact-service-second-step-166841"
-                                    name="166841"
+                                    id="contact-service-second-step-166969"
+                                    name="166969"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
                                     value="GO BUKS"
                                 />
-                                <label for="contact-service-second-step-166841" class="ml-3 text-sm sm:text-base font-normal text-gray-700">GO BUKS</label>
+                                <label for="contact-service-second-step-166969" class="ml-3 text-sm sm:text-base font-normal text-gray-700">GO BUKS</label>
                                 </div>
                             
                                 <div class="flex items-center">
                                 <input
-                                    id="contact-service-second-step-166842"
-                                    name="166842"
+                                    id="contact-service-second-step-166970"
+                                    name="166970"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
                                     value="Cookin Some Chilli"
                                 />
-                                <label for="contact-service-second-step-166842" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cookin Some Chilli</label>
+                                <label for="contact-service-second-step-166970" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cookin Some Chilli</label>
                                 </div>
                             
                                 <div class="flex items-center">
                                 <input
-                                    id="contact-service-second-step-166843"
-                                    name="166843"
+                                    id="contact-service-second-step-166971"
+                                    name="166971"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
                                     value="Driveway Design & Build"
                                 />
-                                <label for="contact-service-second-step-166843" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Driveway Design & Build</label>
+                                <label for="contact-service-second-step-166971" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Driveway Design & Build</label>
                                 </div>
                             
                                 <div class="flex items-center">
                                 <input
-                                    id="contact-service-second-step-166844"
-                                    name="166844"
+                                    id="contact-service-second-step-166972"
+                                    name="166972"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
                                     value="Fall and Spring Clean Up"
                                 />
-                                <label for="contact-service-second-step-166844" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fall and Spring Clean Up</label>
+                                <label for="contact-service-second-step-166972" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fall and Spring Clean Up</label>
                                 </div>
                             
                                 <div class="flex items-center">
                                 <input
-                                    id="contact-service-second-step-166845"
-                                    name="166845"
+                                    id="contact-service-second-step-166973"
+                                    name="166973"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
                                     value="Cheese Making"
                                 />
-                                <label for="contact-service-second-step-166845" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cheese Making</label>
+                                <label for="contact-service-second-step-166973" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cheese Making</label>
                                 </div>
                             
                                 <div class="flex items-center">
                                 <input
-                                    id="contact-service-second-step-166846"
-                                    name="166846"
+                                    id="contact-service-second-step-166974"
+                                    name="166974"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
                                     value="Stone Wall Installation"
                                 />
-                                <label for="contact-service-second-step-166846" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Stone Wall Installation</label>
+                                <label for="contact-service-second-step-166974" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Stone Wall Installation</label>
                                 </div>
                             
                                 <div class="flex items-center">
                                 <input
-                                    id="contact-service-second-step-166847"
-                                    name="166847"
+                                    id="contact-service-second-step-166975"
+                                    name="166975"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
                                     value="Professional Fertilization"
                                 />
-                                <label for="contact-service-second-step-166847" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Professional Fertilization</label>
+                                <label for="contact-service-second-step-166975" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Professional Fertilization</label>
                                 </div>
                             
                                 <div class="flex items-center">
                                 <input
-                                    id="contact-service-second-step-166848"
-                                    name="166848"
+                                    id="contact-service-second-step-166976"
+                                    name="166976"
                                     type="checkbox"
                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
                                     value="Vanilla Icecream"
                                 />
-                                <label for="contact-service-second-step-166848" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Vanilla Icecream</label>
+                                <label for="contact-service-second-step-166976" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Vanilla Icecream</label>
                                 </div>
                             
                 

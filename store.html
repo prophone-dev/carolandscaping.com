@@ -57,8 +57,8 @@
       --color-primary-l: 28%;
       --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
       --color-secondary-h: 38;
-      --color-secondary-s: 59%;
-      --color-secondary-l: 61%;
+      --color-secondary-s: 61%;
+      --color-secondary-l: 75%;
       --color-secondary-darker: hsl(var(--color-secondary-h), var(--color-secondary-s), calc(var(--color-secondary-l) - 7.5%));
       --switch: calc((var(--color-primary-l) - var(--contrastThreshold)) * -100);
       --color-primary-foreground: hsl(0, 0%, var(--switch));
@@ -66,13 +66,13 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0f53e87e-052c-438b-bd5d-7b2c9d536869.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
       background-size: cover;
   }
   
@@ -90,13 +90,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
       background-size: cover;
   }
 </style>
@@ -151,13 +151,11 @@
 </head>
 
 <body
-    class="xl:pt-44 pt-24 ease-in-out"
+    
     x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
-    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    :class="{'xl:pt-44 pt-24': !scrolledFromTop, 'pt-24': scrolledFromTop}"
+    
 >
     
 
@@ -216,7 +214,7 @@
                 
                     <div
                         class="flex flex-row items-center xl:hidden"
-                        :class="{ 'text-gray-700': !scrolledFromTop, 'text-white': scrolledFromTop }"
+                        :class="{ 'text-white': true }"
                     >
                         <span class="uppercase">MENU</span>
                         <button @click="mobileOpen = !mobileOpen" class="p-2" aria-label="mobile menu button">
@@ -244,7 +242,7 @@
                                         <a
                                             href=" ./ "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                            :class="{ 'text-white': true }"
                                         >
                                             Home
                                         </a>
@@ -268,7 +266,7 @@
                                             aria-controls="navitem_2"
                                             @click="desktopOpen = !desktopOpen"
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                            :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
+                                            :class="{  'text-white hover:text-gray-100': true  }"
                                         >
                                             <span class="block py-3.5 ">Services</span>
                                             <svg
@@ -393,7 +391,7 @@
                                             aria-controls="navitem_3"
                                             @click="desktopOpen = !desktopOpen"
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                            :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
+                                            :class="{  'text-white hover:text-gray-100': true  }"
                                         >
                                             <span class="block py-3.5 ">Galleries</span>
                                             <svg
@@ -431,6 +429,16 @@
                                                 
                                                 <div class="relative flex p-4 bg-white overflow-y-auto" style="max-height: 80vh;">
                                                     <div class="flex-1">
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-Test-4 "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                Test 4
+                                                            </a>
+                                                            
                                                         
                                                             
                                                             <a
@@ -474,21 +482,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gallery-21 "
+                                                                href=" gallery-hanna-test "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                New Gallery 21
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Hi-world "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Hi world
+                                                                hanna test
                                                             </a>
                                                             
                                                         
@@ -519,6 +517,26 @@
                                                         
                                                             
                                                             <a
+                                                                href=" gallery-New-Gallery-21 "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                New Gallery 21
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-Hi-world "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                Hi world
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
                                                                 href=" gallery-instagram "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
@@ -534,26 +552,6 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 Empty
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Test-4 "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Test 4
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Dogs "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Dogs
                                                             </a>
                                                             
                                                         
@@ -587,7 +585,7 @@
                                         <a
                                             href=" reviews "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                            :class="{ 'text-white': true }"
                                         >
                                             Reviews
                                         </a>
@@ -607,7 +605,7 @@
                                         <a
                                             href=" our-team "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                            :class="{ 'text-white': true }"
                                         >
                                             Our team
                                         </a>
@@ -627,7 +625,7 @@
                                         <a
                                             href=" jobs "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                            :class="{ 'text-white': true }"
                                         >
                                             Jobs
                                         </a>
@@ -647,7 +645,7 @@
                                         <a
                                             href=" blog "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                            :class="{ 'text-white': true }"
                                         >
                                             Blog
                                         </a>
@@ -667,7 +665,7 @@
                                         <a
                                             href=" give-away "
                                             class="text-center  border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                            :class="{ 'text-white': true }"
                                         >
                                             GIVE AWAY
                                         </a>
@@ -681,7 +679,7 @@
                                     href="https://buy.stripe.com/test_28o9AG2Em6EhfIscMM"
                                     target="_blank"
                                     class=" border-transparent  py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                    :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    :class="{  'hover:border-gray-100 hover:text-gray-100 text-white': true  }"
                                 >
                                     Pay now
                                 </a>
@@ -930,6 +928,14 @@
                                             <div class="flex flex-col">
                                                 
                                                     <a
+                                                        href="gallery-Test-4"
+                                                        role="menuitem"
+                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                    >
+                                                        Test 4
+                                                    </a>
+                                                
+                                                    <a
                                                         href="gallery-Go-bucks"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
@@ -962,6 +968,14 @@
                                                     </a>
                                                 
                                                     <a
+                                                        href="gallery-hanna-test"
+                                                        role="menuitem"
+                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                    >
+                                                        hanna test
+                                                    </a>
+                                                
+                                                    <a
                                                         href="gallery-New-Gallery-21"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
@@ -991,22 +1005,6 @@
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
                                                     >
                                                         Empty
-                                                    </a>
-                                                
-                                                    <a
-                                                        href="gallery-Test-4"
-                                                        role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
-                                                    >
-                                                        Test 4
-                                                    </a>
-                                                
-                                                    <a
-                                                        href="gallery-Dogs"
-                                                        role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
-                                                    >
-                                                        Dogs
                                                     </a>
                                                 
                                                     <a
@@ -1361,7 +1359,7 @@
             <img
                 aria-hidden="true"
                 class="absolute inset-0 w-full h-full object-cover"
-                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cb5e07d7-4fc2-457f-98e7-5ce62d619846.jpeg"
+                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg"
                 alt="cover-photo"
                 loading="lazy"
             />
