@@ -95,20 +95,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Test-4</loc>
-        <lastmod>2024-03-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Dogs</loc>
-        <lastmod>2024-03-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-Go-bucks</loc>
         <lastmod>2024-03-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -159,6 +145,20 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Empty</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Test-4</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Dogs</loc>
         <lastmod>2024-03-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
