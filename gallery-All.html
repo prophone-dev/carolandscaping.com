@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c2bfcfde-b8bf-48cd-9885-f71da04ba3c2.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/30a3d929-be70-488e-a876-631cf4cb9208.jpeg");
       background-size: cover;
   }
   
@@ -574,11 +574,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-Test-mobile- "
+                                                                href=" gallery-Test-mobile-edited "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                Test mobile 
+                                                                Test mobile edited
                                                             </a>
                                                             
                                                         
@@ -1043,11 +1043,11 @@
                                                     </a>
                                                 
                                                     <a
-                                                        href="gallery-Test-mobile-"
+                                                        href="gallery-Test-mobile-edited"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
                                                     >
-                                                        Test mobile 
+                                                        Test mobile edited
                                                     </a>
                                                 
                                                     <a
@@ -1404,7 +1404,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 7,
+        amountOfImages: 8,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1430,7 +1430,7 @@
                             
                                 <div>                                    
                                     
-                                        <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/c2bfcfde-b8bf-48cd-9885-f71da04ba3c2.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" />
+                                        <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/30a3d929-be70-488e-a876-631cf4cb9208.jpeg" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" />
                                     
                                 </div>
 
@@ -1449,6 +1449,28 @@
                     <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
                         <button @click="activeImage = 1; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div>                                    
+                                    
+                                        <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/c2bfcfde-b8bf-48cd-9885-f71da04ba3c2.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" />
+                                    
+                                </div>
+
+                                <div class="space-y-1 text-lg font-medium leading-6">
+                                    <p class="line-clamp-3"></p>
+                                    <h3 class="text-primary"></h3>
+                                </div>
+                            
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
+                    <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
+                        <button @click="activeImage = 2; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div>                                    
                                     
@@ -1473,7 +1495,7 @@
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                     <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                        <button @click="activeImage = 2; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 3; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div>                                    
                                     
@@ -1495,7 +1517,7 @@
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                     <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                        <button @click="activeImage = 3; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 4; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div>                                    
                                     
@@ -1517,7 +1539,7 @@
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                     <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                        <button @click="activeImage = 4; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 5; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div>                                    
                                     
@@ -1539,7 +1561,7 @@
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                     <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                        <button @click="activeImage = 5; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 6; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div>                                    
                                     
@@ -1561,7 +1583,7 @@
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                     <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                        <button @click="activeImage = 6; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 7; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div>                                    
                                     
@@ -1627,13 +1649,22 @@
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                         
                                             
-                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c2bfcfde-b8bf-48cd-9885-f71da04ba3c2.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/30a3d929-be70-488e-a876-631cf4cb9208.jpeg" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
                                                 <p lorem="1" class="mt-3 text-gray-500"></p>
                                             
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
+                                        
+                                            
+                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c2bfcfde-b8bf-48cd-9885-f71da04ba3c2.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 2">
                                         
                                             <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                 <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e1f9c772-7db4-4c9d-ae6f-a4a2b1d19057.mp4#t=0.5" >
@@ -1643,7 +1674,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 2">
+                                    <li class="flex flex-col" x-show="activeImage === 3">
                                         
                                             
                                                 <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/243a715c-c4fb-411d-bf92-d31dca82d308.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
@@ -1652,7 +1683,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                    <li class="flex flex-col" x-show="activeImage === 4">
                                         
                                             
                                                 <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7553130c-6080-47f4-ac93-a647802da677.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
@@ -1661,7 +1692,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 4">
+                                    <li class="flex flex-col" x-show="activeImage === 5">
                                         
                                             
                                                 <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3e6c3fc8-3ae2-4aa2-8d4e-91bfe87e99ed.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
@@ -1670,7 +1701,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 5">
+                                    <li class="flex flex-col" x-show="activeImage === 6">
                                         
                                             
                                                 <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
@@ -1679,7 +1710,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 6">
+                                    <li class="flex flex-col" x-show="activeImage === 7">
                                         
                                             
                                                 <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a1bc4061-f5e3-430b-9c68-6ebbe5ae5661.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
