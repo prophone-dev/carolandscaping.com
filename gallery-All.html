@@ -641,21 +641,21 @@
                                                     
                                                         
                                                         <a
-                                                            href=" gallery-hanna-test "
-                                                            role="menuitem"
-                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
-                                                        >
-                                                            <p class="mt-1 text-base font-medium uppercase">hanna test</p>
-                                                        </a>
-                                                        
-                                                    
-                                                        
-                                                        <a
                                                             href=" gallery-New-Gallery-21 "
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
                                                             <p class="mt-1 text-base font-medium uppercase">New Gallery 21</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-Hanna-test-mobile-03-27 "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Hanna test mobile 03/27</p>
                                                         </a>
                                                         
                                                     
@@ -1059,12 +1059,12 @@
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">test2</p>
                                                     </a>
                                                 
-                                                    <a href="gallery-hanna-test" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">hanna test</p>
-                                                    </a>
-                                                
                                                     <a href="gallery-New-Gallery-21" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery 21</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-Hanna-test-mobile-03-27" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Hanna test mobile 03/27</p>
                                                     </a>
                                                 
                                                     <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1408,7 +1408,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 12,
+        amountOfImages: 11,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1713,32 +1713,6 @@
                 </li>
             
         
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button
-                            @click="activeImage = 11; galleryModalOpen = true"
-                            class="photo-tile block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0"
-                        >
-                            
-                                <div class="aspect-w-3 aspect-h-2">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a1bc4061-f5e3-430b-9c68-6ebbe5ae5661.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
-                                        
-                                    
-                                </div>
-
-                                <div class="space-y-1 text-lg font-medium leading-6">
-                                    <p class="line-clamp-3"></p>
-                                    <h3 class="text-primary"></h3>
-                                </div>
-                            
-                        </button>
-                    </div>
-                </li>
-            
-        
     </ul>
 
     <template x-teleport="body">
@@ -1877,15 +1851,6 @@
                                         
                                             
                                                 <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
-                                                <p lorem="1" class="mt-3 text-gray-500"></p>
-                                            
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 11">
-                                        
-                                            
-                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a1bc4061-f5e3-430b-9c68-6ebbe5ae5661.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
                                                 <p lorem="1" class="mt-3 text-gray-500"></p>
                                             
                                         
