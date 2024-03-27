@@ -66,37 +66,37 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg");
+      background-image: url("");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b9877a33-6b7d-4467-900f-db4cc27ffa55.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/9e928f4f-36bb-4275-a58e-f322d374d743.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/0cda229c-821c-4940-88ee-390d46a21080.png");
       background-size: cover;
   }
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/86618462-7b7d-4e23-91fd-9e37b16ae34e.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b9877a33-6b7d-4467-900f-db4cc27ffa55.png");
+      background-image: url("");
       background-size: cover;
   }
 </style>
@@ -154,55 +154,35 @@
 </head>
 
 <body
-    
+    class="xl:pt-44 pt-24 ease-in-out"
     x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
-    
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{'xl:pt-44 pt-24': !scrolledFromTop, 'pt-24': scrolledFromTop}"
 >
     
 
     
-        
-
-<div
-	class="fixed inset-0 z-50 flex justify-center items-center"
+        <div
+	class="fixed inset-0 z-40"
 	id="text-thank-you"
 	data-heap-component-name="text_thank_you"
-	data-heap-version="v3"
+	data-heap-version="v2.1"
 >
-    
-        
-            <picture
-                    aria-hidden="true"
-                    class="absolute inset-0 object-cover"
-            >
-                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png" type="image/webp">
-                    <img
-                            aria-hidden="true"
-                            class="object-cover w-full h-full"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png"
-                            alt="cover-photo"
-                            fetchpriority="high"
-                            loading="auto"
-                            decoding="sync"
-                    />
-            </picture>
-        
-
-        
-        <div class="absolute inset-0 bg-black opacity-75"></div>
-    
-
 	<div
-		class="fixed inset-0 sm:relative sm:inset-auto rounded-sm bg-primary sm:border border-secondary w-full max-w-3xl overflow-hidden"
+		class="fixed inset-0 bg-black bg-opacity-50"
+	></div>
+	<div
+		class="fixed flex h-screen w-screen inset-x-0 z-50 mx-auto justify-center items-center p-4 shadow-lg rounded-md bg-primary"
 	>
-		<div class="h-full sm:h-auto flex flex-col justify-center items-center gap-6 sm:gap-9 text-center pt-6 pb-8 px-4 sm:py-12 sm:px-8">
+		<div class="flex flex-col mt-3 text-center">
 			<div
-				class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-400"
+				class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
 			>
 				<svg
-					class="h-6 w-6 text-blue-900"
+					class="h-6 w-6 text-green-600"
 					fill="none"
 					stroke="currentColor"
 					viewBox="0 0 24 24"
@@ -216,12 +196,12 @@
 					></path>
 				</svg>
 			</div>
-            <div class="text-white flex flex-col gap-2 sm:gap-4">
-                <h3 class="text-lg sm:text-6xl leading-6 font-black uppercase">Message sent!</h3>
-                <p class="text-base sm:text-lg">
-                    We usually respond within a few minutes via SMS.
-                </p>
-            </div>
+			<h3 class="sm:text-6xl text-4xl font-extrabold text-white sm:my-6 my-2">Message sent</h3>
+			<div class="p-2">
+				<p class="sm:text-xl text-sm text-gray-200">
+					We usually respond within a few minutes via SMS.
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -235,9 +215,10 @@
     } else {
         window.location.replace('./')
     }
-	}
+}
 	window.onload = function() {
 		setTimeout(() => {
+
 			globalRedirect();
 		}, 3000)
 	}

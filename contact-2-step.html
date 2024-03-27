@@ -66,37 +66,37 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a4235395-ce21-421f-8d55-f75fdd1aa4b1.jpeg");
+      background-image: url("");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b9877a33-6b7d-4467-900f-db4cc27ffa55.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/9e928f4f-36bb-4275-a58e-f322d374d743.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/0cda229c-821c-4940-88ee-390d46a21080.png");
       background-size: cover;
   }
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/86618462-7b7d-4e23-91fd-9e37b16ae34e.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b9877a33-6b7d-4467-900f-db4cc27ffa55.png");
+      background-image: url("");
       background-size: cover;
   }
 </style>
@@ -154,18 +154,18 @@
 </head>
 
 <body
-    
+    class="xl:pt-44 pt-24 ease-in-out"
     x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
-    
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{'xl:pt-44 pt-24': !scrolledFromTop, 'pt-24': scrolledFromTop}"
 >
     
 
     
-        
-
-<style>
+        <style>
   .fade-in-success {
     animation: 1s fadeIn;
     animation-fill-mode: forwards;
@@ -194,356 +194,334 @@
 <div
 	class="fixed inset-0"
     data-heap-component-name="contact-2-step"
-    data-heap-version="v3"
+    data-heap-version="v2.1"
 >
 	<div
-		class="fixed flex flex-col h-screen w-screen inset-x-0 z-50 mx-auto justify-center items-center p-6"
+		class="fixed flex flex-col h-screen w-screen inset-x-0 z-50 mx-auto justify-center items-center p-6 bg-primary"
 	>
-        
-            
-                <picture
-                    aria-hidden="true"
-                    class="absolute inset-0 object-cover"
-                >
-                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png" type="image/webp">
-                    <img
-                        aria-hidden="true"
-                        class="object-cover w-full h-full"
-                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/684deb62-77ac-448f-af33-13d394f3bab8.png"
-                        alt="cover-photo"
-                        fetchpriority="high"
-                        loading="auto"
-                        decoding="sync"
-                    />
-                </picture>
-            
-
-            
-            <div class="absolute inset-0 bg-black opacity-75"></div>
-        
-        <button
-            onclick="handleCloseSecondStep()"
-            class="absolute z-10 p-1 transition rounded top-5 right-5 text-white hover:bg-gray-100 hover:text-gray-900 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 fade-in-close"
+    <div>
+      <button
+        onclick="handleCloseSecondStep()"
+        class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 hover:text-gray-900 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 fade-in-close"
+      >
+        <span class="sr-only">Close modal</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+		<div class="flex flex-col mt-3 text-center fade-in-success">
+			<div class="flex gap-2 justify-center items-center">
+        <div
+          class="flex items-center justify-center h-6 w-6 rounded-full bg-green-100"
         >
-            <span class="sr-only">Close modal</span>
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-        </button>
-        <div class="fixed inset-0 md:inset-auto md:relative bg-primary rounded-sm border-secondary md:border flex flex-col w-full max-w-3xl">
-            <div class="flex flex-col mt-3 text-center fade-in-success px-6 sm:p-0">
-                <div class="flex gap-2 justify-center items-center mt-4 sm:mt-0">
-                <div
-                    class="flex items-center justify-center h-6 w-6 rounded-full bg-green-100"
-                >
-                    <svg
-                    class="h-4 w-4 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                    ></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-white">Message sent</h3>
-                </div>
-                <p class="mt-2 text-white">
-                We usually respond within a few minutes via SMS.
-                </p>
-            </div>
-            <div
-                class="flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full fade-in-form"
-            >
-                <h2 style="font-size: 2rem;line-height: 2rem;" class="mt-6 font-extrabold text-center text-white">Want to add any additional info?</h2>
-                <div id="error-state-modal-second-step"></div>
-                <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping', 'second-step')">
-                <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
-                    <div class="h-auto p-6 gap-4 sm:gap-6 flex flex-col">
-
-                    
-                        <input
-                        type="email"
-                        name="email"
-                        id="contact-email-second-step"
-                        class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                        placeholder="Email"
-                        />
-                    
-            
-                    
-            
-                    
-                        <div x-data="{ date: '' }" class="relative">
-                        <div x-show="!date" style="left: 0.75rem; max-width: calc(100% - 45px)" class="h-6 bg-white absolute transform translate-y-4 cursor-text truncate">
-                            <label for="contact-date-second-step" class="text-gray-500 bg-white">Preferred date of service</label>
-                        </div>
-                        <input
-                            id="contact-date-second-step"
-                            type="date"
-                            x-model="date"
-                            class="block text-left z-50 w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                        >
-                        </div>
-                    
-            
-                    
-                        <input
-                        type="text"
-                        name="promo-code"
-                        id="contact-promo-code-second-step"
-                        class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                        placeholder="Promo code"
-                        />
-                    
-            
-                    
-                        <div class="sm:col-span-2">
-                        <fieldset class="bg-white py-2.5 px-3 rounded-sm">
-                            <p class="text-gray-500 text-left">Select Service(s)</p>
-                            <div class="flex flex-col sm:grid auto-cols-auto gap-2 grid-cols-2 mt-2.5">
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167299"
-                                    name="167299"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="GO BUKS"
-                                />
-                                <label for="contact-service-second-step-167299" class="ml-3 text-sm sm:text-base font-normal text-gray-700">GO BUKS</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167300"
-                                    name="167300"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Cookin Some Chilli"
-                                />
-                                <label for="contact-service-second-step-167300" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cookin Some Chilli</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167301"
-                                    name="167301"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Driveway Design & Build"
-                                />
-                                <label for="contact-service-second-step-167301" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Driveway Design & Build</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167302"
-                                    name="167302"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Fall and Spring Clean Up"
-                                />
-                                <label for="contact-service-second-step-167302" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fall and Spring Clean Up</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167303"
-                                    name="167303"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Cheese Making"
-                                />
-                                <label for="contact-service-second-step-167303" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cheese Making</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167304"
-                                    name="167304"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Stone Wall Installation"
-                                />
-                                <label for="contact-service-second-step-167304" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Stone Wall Installation</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167305"
-                                    name="167305"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Professional Fertilization"
-                                />
-                                <label for="contact-service-second-step-167305" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Professional Fertilization</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167306"
-                                    name="167306"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Test service mobile2"
-                                />
-                                <label for="contact-service-second-step-167306" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Test service mobile2</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167307"
-                                    name="167307"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Mowing"
-                                />
-                                <label for="contact-service-second-step-167307" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Mowing</label>
-                                </div>
-                            
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-167309"
-                                    name="167309"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="test service 26/03 edit"
-                                />
-                                <label for="contact-service-second-step-167309" class="ml-3 text-sm sm:text-base font-normal text-gray-700">test service 26/03 edit</label>
-                                </div>
-                            
-                
-                            <div class="flex flex-col">
-                                <div class="flex items-center">
-                                <input
-                                    id="contact-service-second-step-other-checkbox"
-                                    name="Other"
-                                    type="checkbox"
-                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                    value="Other"
-                                    onclick="toggleOtherServicesSecondStep()"
-                                />
-                                <label for="contact-service-second-step-other-checkbox" class="ml-3 text-sm sm:text-base text-gray-600">Other</label>
-                                </div>
-                                <input
-                                id="contact-service-other-text-second-step"
-                                name="OtherServicesInputField"
-                                type="text"
-                                class="ml-4 block border-gray-500 py-2.5 mt-2.5 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
-                                />
-                            </div>
-                            </div>
-                        </fieldset>
-                        </div>
-                    
-            
-                    
-
-                    
-                        <div class="block sm:flex sm:flex-col sm:w-full">
-                        <div class='bg-white p-3 mt-1 rounded-sm border border-gray-500'>
-                            <div
-                            x-data="{
-                                imageUrl: '',
-                                fileTooLarge: false,
-                                fileChosen(event) {
-                                if (this.isProperlySized(event)) {
-                                    this.fileToDataUrl(event, (src) => (this.imageUrl = src));
-                                    this.fileTooLarge = false;
-                                }
-                                else
-                                    this.fileTooLarge = true;
-                                },
-                                fileToDataUrl(event, callback) {
-                                if (!event.target.files.length) return;
-                                let file = event.target.files[0],
-                                    reader = new FileReader();
-                                reader.readAsDataURL(file);
-                                reader.onload = (e) => callback(e.target.result);
-                                },
-                                isProperlySized(event) {
-                                const files = event.currentTarget.files;
-                                for (const file in files) {
-                                    const filesize = ((files[file].size/1024)/1024).toFixed(4);
-                                    if (filesize > 2)
-                                    return false;
-                                }
-                                return true;
-                                },
-                            }"
-                            >
-                            <div x-show="imageUrl !== ''" x-collapse>
-                                <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
-                                <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment-second-step"/>
-                                <button
-                                    @click="imageUrl = ''; $refs.fileInput.value = '';"
-                                    type="button"
-                                    class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-500 rounded-sm shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                >
-                                    Change
-                                </button>
-                                </div>
-                            </div>
-                            <label
-                                for="file-upload-second-step"
-                                class="relative font-medium rounded-sm cursor-pointer text-primary"
-                            >
-                                <div x-show="imageUrl === ''" x-collapse>
-                                <div
-                                    x-on:dragenter.prevent.stop
-                                    x-on:dragleave.prevent.stop
-                                    class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-sm"
-                                >
-                                    <div class="space-y-1 text-center">
-                                    <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                        <path
-                                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                    <div class="flex justify-center text-sm text-gray-600">
-                                        <span class="text-primary">Upload a photo</span>
-                                        <input
-                                        x-ref="fileInput"
-                                        id="file-upload-second-step"
-                                        name="file-upload"
-                                        type="file"
-                                        class="sr-only"
-                                        @change="fileChosen"
-                                        />
-                                    </div>
-                                    <p class="text-xs text-gray-500">PNG, JPG, GIF up to 2MB</p>
-                                    </div>
-                                </div>
-                                </div>
-                            </label>
-                            <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
-                                The selected file is too large. Please reduce the size or choose another file.
-                            </p>
-                            </div>
-                        </div>
-                        </div>
-                    
-
-                    <button
-                        id='sendButton-second-step'
-                        class="font-black text-white text-lg leading-6 flex justify-center rounded-sm py-3 bg-secondary w-full mt-4 md:mt-0 hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase"
-                    >
-                        Send
-                    </button>
-                    </div>
-                </div>     
-                </form>
-            </div>
+          <svg
+            class="h-4 w-4 text-green-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            ></path>
+          </svg>
         </div>
+        <h3 class="text-2xl font-semibold text-white">Message sent</h3>
+      </div>
+			<p class="mt-2 text-white">
+				We usually respond within a few minutes via SMS.
+			</p>
+		</div>
+    <div
+      class="flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full fade-in-form"
+    >
+      <h2 style="font-size: 2rem;line-height: 2rem;" class="mt-6 font-extrabold text-center text-white">Want to add any additional info?</h2>
+      <div id="error-state-modal-second-step"></div>
+      <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping', 'second-step')">
+        <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
+          <div class="h-auto p-6 gap-4 sm:gap-6 flex flex-col">
+
+            
+              <input
+                type="email"
+                name="email"
+                id="contact-email-second-step"
+                class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                placeholder="Email"
+              />
+            
+  
+            
+  
+            
+              <div x-data="{ date: '' }" class="relative">
+                <div x-show="!date" style="left: 0.75rem; max-width: calc(100% - 45px)" class="h-6 bg-white absolute transform translate-y-4 cursor-text truncate">
+                  <label for="contact-date-second-step" class="text-gray-500 bg-white">Preferred date of service</label>
+                </div>
+                <input
+                  id="contact-date-second-step"
+                  type="date"
+                  x-model="date"
+                  class="block text-left z-50 w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                >
+              </div>
+            
+  
+            
+              <input
+                type="text"
+                name="promo-code"
+                id="contact-promo-code-second-step"
+                class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                placeholder="Promo code"
+              />
+            
+  
+            
+              <div class="sm:col-span-2">
+                <fieldset class="bg-white py-2.5 px-3 rounded-md">
+                  <p class="text-gray-500 text-left">Select Service(s)</p>
+                  <div class="flex flex-col sm:grid auto-cols-auto gap-2 grid-cols-2 mt-2.5">
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167429"
+                          name="167429"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="GO BUKS"
+                        />
+                        <label for="contact-service-second-step-167429" class="ml-3 text-sm sm:text-base font-normal text-gray-700">GO BUKS</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167430"
+                          name="167430"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Cookin Some Chilli"
+                        />
+                        <label for="contact-service-second-step-167430" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cookin Some Chilli</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167431"
+                          name="167431"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Driveway Design & Build"
+                        />
+                        <label for="contact-service-second-step-167431" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Driveway Design & Build</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167432"
+                          name="167432"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Fall and Spring Clean Up"
+                        />
+                        <label for="contact-service-second-step-167432" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Fall and Spring Clean Up</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167433"
+                          name="167433"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Cheese Making"
+                        />
+                        <label for="contact-service-second-step-167433" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Cheese Making</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167434"
+                          name="167434"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Stone Wall Installation"
+                        />
+                        <label for="contact-service-second-step-167434" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Stone Wall Installation</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167435"
+                          name="167435"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Professional Fertilization"
+                        />
+                        <label for="contact-service-second-step-167435" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Professional Fertilization</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167436"
+                          name="167436"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Test service mobile2"
+                        />
+                        <label for="contact-service-second-step-167436" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Test service mobile2</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167437"
+                          name="167437"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Mowing"
+                        />
+                        <label for="contact-service-second-step-167437" class="ml-3 text-sm sm:text-base font-normal text-gray-700">Mowing</label>
+                      </div>
+                    
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-167438"
+                          name="167438"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="test service 3/26"
+                        />
+                        <label for="contact-service-second-step-167438" class="ml-3 text-sm sm:text-base font-normal text-gray-700">test service 3/26</label>
+                      </div>
+                    
+         
+                    <div class="flex flex-col">
+                      <div class="flex items-center">
+                        <input
+                          id="contact-service-second-step-other-checkbox"
+                          name="Other"
+                          type="checkbox"
+                          class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                          value="Other"
+                          onclick="toggleOtherServicesSecondStep()"
+                        />
+                        <label for="contact-service-second-step-other-checkbox" class="ml-3 text-sm sm:text-base text-gray-600">Other</label>
+                      </div>
+                      <input
+                        id="contact-service-other-text-second-step"
+                        name="OtherServicesInputField"
+                        type="text"
+                        class="ml-4 block border-gray-300 py-2.5 mt-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            
+  
+            
+
+            
+              <div class="block sm:flex sm:flex-col sm:w-full">
+                <div class='bg-white p-3 mt-1 rounded-md border border-gray-300'>
+                  <div
+                    x-data="{
+                      imageUrl: '',
+                      fileTooLarge: false,
+                      fileChosen(event) {
+                        if (this.isProperlySized(event)) {
+                          this.fileToDataUrl(event, (src) => (this.imageUrl = src));
+                          this.fileTooLarge = false;
+                        }
+                        else
+                          this.fileTooLarge = true;
+                      },
+                      fileToDataUrl(event, callback) {
+                        if (!event.target.files.length) return;
+                        let file = event.target.files[0],
+                          reader = new FileReader();
+                        reader.readAsDataURL(file);
+                        reader.onload = (e) => callback(e.target.result);
+                      },
+                      isProperlySized(event) {
+                        const files = event.currentTarget.files;
+                        for (const file in files) {
+                          const filesize = ((files[file].size/1024)/1024).toFixed(4);
+                          if (filesize > 2)
+                            return false;
+                        }
+                        return true;
+                      },
+                    }"
+                  >
+                    <div x-show="imageUrl !== ''" x-collapse>
+                      <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
+                        <img :src="imageUrl" class="object-cover rounded-md w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment-second-step"/>
+                        <button
+                          @click="imageUrl = ''; $refs.fileInput.value = '';"
+                          type="button"
+                          class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-300 rounded-md shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        >
+                          Change
+                        </button>
+                      </div>
+                    </div>
+                    <label
+                      for="file-upload-second-step"
+                      class="relative font-medium rounded-md cursor-pointer text-primary"
+                    >
+                      <div x-show="imageUrl === ''" x-collapse>
+                        <div
+                          x-on:dragenter.prevent.stop
+                          x-on:dragleave.prevent.stop
+                          class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-md"
+                        >
+                          <div class="space-y-1 text-center">
+                            <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                              <path
+                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                            <div class="flex justify-center text-sm text-gray-600">
+                              <span class="text-primary">Upload a photo</span>
+                              <input
+                                x-ref="fileInput"
+                                id="file-upload-second-step"
+                                name="file-upload"
+                                type="file"
+                                class="sr-only"
+                                @change="fileChosen"
+                              />
+                            </div>
+                            <p class="text-xs text-gray-500">PNG, JPG, GIF up to 2MB</p>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
+                      The selected file is too large. Please reduce the size or choose another file.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            
+
+            <button
+              id='sendButton-second-step'
+              class="flex justify-center rounded-lg py-3 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground mt-4 md:mt-0"
+            >
+              Send
+            </button>
+          </div>
+        </div>     
+      </form>
+    </div>
 	</div>
 </div>
 
