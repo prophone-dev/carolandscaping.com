@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/5aba2b3c-d8cc-49eb-8543-32d2c37461da.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/11f63d45-384c-4ecf-b791-a801f8eadf4c.png");
       background-size: cover;
   }
   
@@ -1376,14 +1376,19 @@
         data-heap-version="v2.1"
     >
         
-              
+            
             <div
-                class="flex gallery-hero-image  h-screen  w-full bg-center bg-cover bg-fixed"
-                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/5aba2b3c-d8cc-49eb-8543-32d2c37461da.jpeg')"
+                class="relative  h-screen  flex w-full overflow-hidden items-center justify-center"
             >
+                <video
+                    id="hero-gallery-video"
+                    class="absolute  h-screen  top-0 left-0 w-full object-cover" autoplay loop playsinline muted
+                >
+                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
+                </video>
                 <main
                     style="--tw-bg-opacity:75%;"
-                    class="flex  h-screen  justify-center m-auto w-full bg-primary"
+                    class="flex  h-screen  relative justify-center m-auto w-full bg-primary"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1457,7 +1462,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 1,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1474,32 +1479,6 @@
     data-heap-version="v2.1"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button
-                            @click="activeImage = 0; galleryModalOpen = true"
-                            class="photo-tile block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0"
-                        >
-                            
-                                <div class="aspect-w-3 aspect-h-2">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/5aba2b3c-d8cc-49eb-8543-32d2c37461da.jpeg" alt="Hanna test mobile 03/27 for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
-                                        
-                                    
-                                </div>
-
-                                <div class="space-y-1 text-lg font-medium leading-6">
-                                    <p class="line-clamp-3"></p>
-                                    <h3 class="text-primary"></h3>
-                                </div>
-                            
-                        </button>
-                    </div>
-                </li>
-            
         
     </ul>
 
@@ -1543,15 +1522,6 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 0">
-                                        
-                                            
-                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/5aba2b3c-d8cc-49eb-8543-32d2c37461da.jpeg" alt="Hanna test mobile 03/27 for Beantown Tutoring &amp; Cheese Making in Buffalo, NY" loading="lazy" decoding="async"/>
-                                                <p lorem="1" class="mt-3 text-gray-500"></p>
-                                            
-                                        
-                                    </li>
                                 
                             </ul>
 
