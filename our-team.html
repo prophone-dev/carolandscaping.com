@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/11f63d45-384c-4ecf-b791-a801f8eadf4c.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/0cda229c-821c-4940-88ee-390d46a21080.png");
       background-size: cover;
   }
   
@@ -176,17 +176,17 @@
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
-    class="w-screen fixed top-0 inset-x-0 z-50"
+    class="fixed w-screen top-0 inset-x-0 z-50"
     data-heap-component-name="navigation"
-    data-heap-version="v2.1"
+    data-heap-version="v2"
 >
 
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-        :class="{ 'bg-transparent translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'bg-primary h-24 shadow-magical': scrolledFromTop }"
-        class="relative transition-all duration-200  h-24 xl:h-44"
+        :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
+        class="relative transition-all duration-200 bg-white h-24 xl:h-44"
     >
         <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-full">
@@ -198,8 +198,7 @@
                     
                         <a
                             href=" ./"
-                            class="flex items-center justify-center flex-shrink-0 pr-5  rounded-md focus:ring-0 focus:ring-offset-0"
-                            :class="{'bg-transparent': !scrolledFromTop, 'bg-primary': scrolledFromTop}"
+                            class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                         >
                         
                             <picture>
@@ -212,6 +211,7 @@
                                     src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/184x184/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/4da4ad14-8a04-4425-818b-c8ebfe974888.webp"
                                     alt="Brand Logo"
                                     width="184"
+                                    height="160"
                                     loading="auto"
                                     fetchpriority="high"
                                     decoding="auto"
@@ -222,16 +222,7 @@
                     
                     </div>
                 </div>
-
-
-                <div >
-                
-                     </div>
-                
-                <div
-                    class="flex flex-row items-center xl:hidden"
-                    :class="{ 'text-gray-700': !scrolledFromTop, 'text-white': scrolledFromTop }"
-                >
+                <div class="flex flex-row items-center text-gray-500 xl:hidden">
                     <span class="uppercase">Menu</span>
                     <button @click="mobileOpen = !mobileOpen" class="p-2" aria-label="mobile menu button">
                         <span hidden class="sr-only">Open/CLose menu TODO:</span>
@@ -240,13 +231,11 @@
                         </svg>
                     </button>
                 </div>
-
                 <div class="items-center hidden space-x-3 xl:flex">
                     <div
                         :class="{'h-16': !scrolledFromTop, 'h-16': scrolledFromTop}"
                         class="hidden transition-all duration-200 xl:flex xl:space-x-5 mr-2"
                     >
-
                     
                             <div
                                 class="relative flex items-center"
@@ -258,14 +247,13 @@
                                 
                                     <a
                                         href=" ./ "
-                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Home
+                                        Home 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -282,19 +270,16 @@
                                         :aria-expanded="desktopOpen"
                                         aria-controls="navitem_2"
                                         @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-6 pb-5 text-sm font-medium transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                        :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        <span 
-                                            class="block py-5 "
-                                        >Services</span>
+                                        <span>Services</span>
                                         <svg
-                                            class="w-5 h-5 ml-2 transition-transform duration-300"
-                                            :class="{ '-rotate-180': desktopOpen }"
+                                            class="w-5 h-5 ml-1 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
                                             aria-hidden="true"
+                                            :class="{ '-rotate-180': desktopOpen }"
                                         >
                                             <path
                                                 fill-rule="evenodd"
@@ -316,7 +301,7 @@
                                         x-transition:leave-end="opacity-0 translate-y-1"
                                         id="navitem_2"
                                         role="menu"
-                                        class="absolute z-20  px-2 mt-6 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        class="absolute z-20  px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
                                         aria-orientation="vertical"
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
@@ -439,11 +424,11 @@
                                                     
                                                         
                                                         <a
-                                                            href=" service-Test-mobile-service "
+                                                            href=" service-test-service-3-26 "
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
-                                                            <p class="mt-1 text-base font-medium uppercase">Test mobile service</p>
+                                                            <p class="mt-1 text-base font-medium uppercase">test service 3/26</p>
                                                         </a>
                                                         
                                                     
@@ -453,7 +438,7 @@
                                         </div>
                                     </div>
                                 
-
+                                
                             </div>
                         
                             <div
@@ -470,19 +455,16 @@
                                         :aria-expanded="desktopOpen"
                                         aria-controls="navitem_3"
                                         @click="desktopOpen = !desktopOpen"
-                                        class="inline-flex items-center px-1 pt-6 pb-5 text-sm font-medium transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                        :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
+                                        class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 transition border-b-2 border-transparent  focus-visible:ring-2 focus:outline-none ring-primary group hover:text-gray-900 ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        <span 
-                                            class="block py-5 "
-                                        >Galleries</span>
+                                        <span>Galleries</span>
                                         <svg
-                                            class="w-5 h-5 ml-2 transition-transform duration-300"
-                                            :class="{ '-rotate-180': desktopOpen }"
+                                            class="w-5 h-5 ml-1 text-gray-400 transition-transform duration-300 group-hover:text-gray-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
                                             aria-hidden="true"
+                                            :class="{ '-rotate-180': desktopOpen }"
                                         >
                                             <path
                                                 fill-rule="evenodd"
@@ -504,13 +486,33 @@
                                         x-transition:leave-end="opacity-0 translate-y-1"
                                         id="navitem_3"
                                         role="menu"
-                                        class="absolute z-20  px-2 mt-6 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        class="absolute z-20  px-2 mt-3 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
                                         aria-orientation="vertical"
                                     >
                                         <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                             
                                             <div class="relative flex gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto" style="max-height: 80vh;">
                                                 <div class="flex-1">
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-hanna-test "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">hanna test</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-New-Gallery-21 "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">New Gallery 21</p>
+                                                        </a>
+                                                        
                                                     
                                                         
                                                         <a
@@ -534,6 +536,16 @@
                                                     
                                                         
                                                         <a
+                                                            href=" gallery-Test-mobile-edited "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Test mobile edited</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
                                                             href=" gallery-test-gallery-26-3 "
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
@@ -550,6 +562,37 @@
                                                         >
                                                             <p class="mt-1 text-base font-medium uppercase">Empty</p>
                                                         </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                                <div class="flex-1">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
                                                         
                                                     
                                                         
@@ -580,35 +623,6 @@
                                                         >
                                                             <p class="mt-1 text-base font-medium uppercase">Go bucks</p>
                                                         </a>
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                </div>
-                                                <div class="flex-1">
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
-                                                        
-                                                    
                                                         
                                                     
                                                         
@@ -643,26 +657,6 @@
                                                     
                                                         
                                                         <a
-                                                            href=" gallery-New-Gallery-21 "
-                                                            role="menuitem"
-                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
-                                                        >
-                                                            <p class="mt-1 text-base font-medium uppercase">New Gallery 21</p>
-                                                        </a>
-                                                        
-                                                    
-                                                        
-                                                        <a
-                                                            href=" gallery-Hanna-test-mobile-03-27 "
-                                                            role="menuitem"
-                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
-                                                        >
-                                                            <p class="mt-1 text-base font-medium uppercase">Hanna test mobile 03/27</p>
-                                                        </a>
-                                                        
-                                                    
-                                                        
-                                                        <a
                                                             href=" gallery-All "
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
@@ -677,7 +671,7 @@
                                         </div>
                                     </div>
                                 
-
+                                
                             </div>
                         
                             <div
@@ -690,14 +684,13 @@
                                 
                                     <a
                                         href=" reviews "
-                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Reviews
+                                        Reviews 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -710,14 +703,13 @@
                                 
                                     <a
                                         href=" our-team "
-                                        class=" border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  border-b-2  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        class=" border-secondary hover:border-gray-300  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  border-b-2 text-gray-900  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Our team
+                                        Our team 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -730,14 +722,13 @@
                                 
                                     <a
                                         href=" jobs "
-                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Jobs
+                                        Jobs 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -750,14 +741,13 @@
                                 
                                     <a
                                         href=" blog "
-                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        Blog
+                                        Blog 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                             <div
@@ -770,22 +760,20 @@
                                 
                                     <a
                                         href=" give-away "
-                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
-                                        GIVE AWAY
+                                        GIVE AWAY 
                                     </a>
                                 
                                 
-
+                                
                             </div>
                         
                         
                         <a
                             href="https://buy.stripe.com/test_7sIbLV3phg4M9Mc288"
                             target="_blank"
-                            class=" border-transparent  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                            class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                         >
                             Pay now
                         </a>
@@ -797,27 +785,26 @@
                     </p>
                     <div class="w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('call')" class="w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
+                        <div onclick="postCtaClick('call')" class="w-full sm:w-auto">
                             <a
                                 target = "_blank" 
                                 href="tel:+12622282738"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-secondary hover:bg-secondary-darker  focus:ring-0 focus:ring-offset-0"
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none hover:bg-primary-darker sm:w-auto bg-primary focus-visible:ring-2 ring-primary ring-opacity-75 ring-offset-2"
                                 >
                                 bucks2
                             </a>
                         </div>
                         
                     </div>
-
                     <div class="inline-flex w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
+                        <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto">
                             <a
                                 target = "_blank" 
                                 href="tel:+12622282738"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md   text-secondary border-secondary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md  hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-opacity-75 ring-offset-2 sm:w-auto text-primary border-primary"
                                 >
                                 +12629574136
                             </a>
@@ -825,7 +812,6 @@
                         
                     </div>
                 </div>
-                
             </div>
         </div>
 
@@ -973,8 +959,8 @@
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Mowing</p>
                                                     </a>
                                                 
-                                                    <a href="service-Test-mobile-service" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Test mobile service</p>
+                                                    <a href="service-test-service-3-26" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">test service 3/26</p>
                                                     </a>
                                                 
                                             </div>
@@ -1021,12 +1007,24 @@
                                         >
                                             <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                                 
+                                                    <a href="gallery-hanna-test" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">hanna test</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-New-Gallery-21" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery 21</p>
+                                                    </a>
+                                                
                                                     <a href="gallery-Hi-world" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Hi world</p>
                                                     </a>
                                                 
                                                     <a href="gallery-instagram" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">instagram</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-Test-mobile-edited" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Test mobile edited</p>
                                                     </a>
                                                 
                                                     <a href="gallery-test-gallery-26-3" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1059,14 +1057,6 @@
                                                 
                                                     <a href="gallery-test2" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">test2</p>
-                                                    </a>
-                                                
-                                                    <a href="gallery-New-Gallery-21" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery 21</p>
-                                                    </a>
-                                                
-                                                    <a href="gallery-Hanna-test-mobile-03-27" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Hanna test mobile 03/27</p>
                                                     </a>
                                                 
                                                     <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1151,7 +1141,7 @@
                                     <a
                                         target = "_blank"
                                         href="tel:+12622282738"
-                                        class="cta_call_conversion relative block w-full px-5 py-3 whitespace-nowrap font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
+                                        class="cta_call_conversion relative block w-full px-5 py-3 font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
                                         >
                                         bucks2
                                     </a>
@@ -1164,7 +1154,7 @@
                                         target = "_blank"
                                         href="tel:+12622282738"
                                         :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                        class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
+                                        class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
                                         >
                                         +12629574136
                                     </a>
@@ -1186,7 +1176,14 @@
     const navBar = document.getElementById('nav-bar')
     const launchBanner = document.getElementById('launch-site-banner')
     const contactUsButton = document.getElementById('contact-us-button')
-    const isMobile = window.isMobile
+    function detectMob() {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            return true
+        } else { 
+            return false
+        }
+    }
+    const isMobile = detectMob()
     if (((window.location.href.includes('prosite.prophone.com')
      || window.location.href.includes('dev.prosite.prophone.com')
      || window.location.href.includes('stage.prosite.prophone.com')
@@ -1221,10 +1218,10 @@
 <style>
 
     @media (max-width: 500px) {
-        .logo{
-            max-width: 160px;
-        }
+    .logo{
+      max-width: 160px;
     }
+}
 
 </style>
         
@@ -1370,9 +1367,10 @@
 
                     
                         
+
 <section class="bg-white"
          data-heap-component-name="team-page"
-         data-heap-version="v2.1"
+         data-heap-version="v2"
 >
     <div class="flex flex-col items-center px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
         <header class="text-center">
@@ -1403,13 +1401,13 @@
 
         
 
+
         
             <div class="mt-24">
-                <h2 class="sr-only">Team Member</h2>
-                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">        
+                <h2 class="sr-only">Team Members</h2>
+                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">
                     <li class="w-40 xl:w-56">
                         <div class="space-y-6">
-                            
                             
                             <div class="space-y-1 text-lg font-medium leading-6 text-center">
                                 <h3>test</h3>
@@ -1422,11 +1420,10 @@
             </div>
         
             <div class="mt-24">
-                <h2 class="sr-only">Team Member</h2>
-                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">        
+                <h2 class="sr-only">Team Members</h2>
+                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">
                     <li class="w-40 xl:w-56">
                         <div class="space-y-6">
-                            
                             
                             <div class="space-y-1 text-lg font-medium leading-6 text-center">
                                 <h3>test</h3>
@@ -1439,11 +1436,10 @@
             </div>
         
             <div class="mt-24">
-                <h2 class="sr-only">Team Member</h2>
-                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">        
+                <h2 class="sr-only">Team Members</h2>
+                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">
                     <li class="w-40 xl:w-56">
                         <div class="space-y-6">
-                            
                             
                             <div class="space-y-1 text-lg font-medium leading-6 text-center">
                                 <h3>dfasfasf</h3>
@@ -1456,11 +1452,10 @@
             </div>
         
             <div class="mt-24">
-                <h2 class="sr-only">Team Member</h2>
-                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">        
+                <h2 class="sr-only">Team Members</h2>
+                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">
                     <li class="w-40 xl:w-56">
                         <div class="space-y-6">
-                            
                             
                             <div class="space-y-1 text-lg font-medium leading-6 text-center">
                                 <h3>test</h3>
@@ -1473,11 +1468,10 @@
             </div>
         
             <div class="mt-24">
-                <h2 class="sr-only">Team Member</h2>
-                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">        
+                <h2 class="sr-only">Team Members</h2>
+                <ul role="list" class="mx-auto flex flex-col justify-center flex-wrap sm:flex-row gap-16 lg:max-w-5xl">
                     <li class="w-40 xl:w-56">
                         <div class="space-y-6">
-                            
                             
                             <div class="space-y-1 text-lg font-medium leading-6 text-center">
                                 <h3>sdfasdfasdf</h3>
@@ -1501,11 +1495,11 @@
             aria-modal="true"
             x-id="['modal-title']"
             :aria-labelledby="$id('modal-title')"
-            class="fixed inset-0 z-50"
+            class="fixed inset-0 z-50 overflow-y-scroll"
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
             data-heap-component-name="send-text-modal"
-	        data-heap-version="v2.1"
+	        data-heap-version="v2"
     >
         <div
                 x-show="contactModalOpen"
@@ -1528,423 +1522,422 @@
                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 onclick="handleClose('our-team')"
                 @click="contactModalOpen = false"
-                class="relative flex items-center justify-center w-full h-full bg-primary"
+                class="relative flex items-center justify-center w-full h-full"
         >
             <div
-                @click.stop
-                class="flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full"
+                    @click.stop
+                    class="flex flex-col w-full sm:h-auto h-full text-left transition-all transform bg-white rounded-lg shadow-xl sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl sm:max-h-90vh overflow-auto "
             >
-                <div class="sm:hidden relative px-6">
-                    <h2 class="mt-6 text-2xl font-bold text-center text-white" id="mobile-screen-send-us-a-text-header">Send us a text</h2>
-                    <p class="mb-3 mt-1 font-normal text-base text-center text-white" id="mobile-screen-send-us-a-text-subheader">We usually respond via text within a few minutes.</p>
-                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                
+                <div class="relative px-6 pb-1">
+                    <h2 class="mt-6 text-lg font-medium text-center " :id="$id('modal-title')">Send us a text</h2>
                     <button
                             onclick="handleClose('our-team')"
                             @click="contactModalOpen = false;"
                             class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                     >
                         <span class="sr-only">Close modal</span>
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </button>
                 </div>
-                <div class="hidden sm:relative sm:px-6 sm:flex sm:flex-col">
-                    <h2 class="mt-6 text-6xl font-extrabold text-center text-white" id="send-us-a-text-header">Send us a text</h2>
-                    <p class="my-6 text-lg text-center text-white" id="send-us-a-text-subheader">We usually respond via text within a few minutes.</p>
-                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
-                </div>
                 <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
+                <div class="relative px-6">
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8 bg-gradient-to-b from-white z-20"></div>
+                </div>
 
-                
-                <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping')">
-                    <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
-                        <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
-                            
-                            <div>
-                                <label for="contact-full-name" class="font-medium text-base text-white">Full name</label>
-                                <input
-                                    type="text"
-                                    name="full-name"
-                                    id="contact-full-name"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="Jane Rodgers"
-                                />
-                            </div>
-                            
-                            
-                            <div>
-                                <label for="contact-phone-number" class="font-medium text-base text-white">Phone number</label>
-                                <input
-                                    type="tel"
-                                    name="phone-number"
-                                    autocomplete="on"
-                                    id="contact-phone-number"
-                                    class="contact-phone-number block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    
-                                />
-                            </div>
-                            
-                            
-                            <div>
-                                <label for="contact-email" class="font-medium text-base text-white">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="contact-email"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="name@example.com"
-                                />
-                            </div>
-                            
+                    
 
-                            
-                            <div>
-                                <label for="contact-address" class="font-medium text-base text-white">
-                                    Address <span>*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="address"
-                                    id="contact-address"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="123 Main Street, Buffalo, NY "
-                                />
-                            </div>
+                    <form class="flex flex-col overflow-y-auto screen-height-minus-navbar-mobile sm:w-full" onsubmit="send_sms('caro-landscaping')">
+
+                        <div class="flex flex-col h-full overflow-x-hidden pt-6">
+                            <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
+                                
+                                <div>
+                                    <label for="contact-full-name" class="font-medium text-base text-gray-700">Full name</label>
+                                    <input
+
+                                            type="text"
+                                            name="full-name"
+                                            id="contact-full-name"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="Jane Rodgers"
+                                    />
+                                </div>
+                                
+                                
+                                <div>
+                                    <label for="contact-phone-number" class="font-medium text-base text-gray-700">Phone number</label>
+                                    <input
+
+                                            type="tel"
+                                            name="phone-number"
+                                            autocomplete="on"
+                                            id="contact-phone-number"
+                                            class="contact-phone-number block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            
+                                    />
+                                </div>
+                                
+                                
+                                <div>
+                                    <label for="contact-email" class="font-medium text-base text-gray-700">Email</label>
+                                    <input
+                                            type="email"
+                                            name="email"
+                                            id="contact-email"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="name@example.com"
+                                    />
+                                </div>
+                                
+
+                                
+                                <div>
+                                    <label for="contact-address" class="font-medium text-base text-gray-700">
+                                        Address <span>*</span>
+                                    </label>
+                                    <input
+                                            type="text"
+                                            name="address"
+                                            id="contact-address"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="123 Main Street, Buffalo, NY "
+                                    />
+                                </div>
 
 
-                            
+                                
 
-                            
-                            <div class="block sm:hidden">
-                                <label class="font-medium text-base text-white">Services</label>
-                                <fieldset class="sm:hidden bg-white p-6 mt-1 rounded-md">
-                                    <div class="flex flex-col space-y-2">
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167429" value="GO BUKS" id="mobile-contact-service-167429" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                
+                                <div class="block sm:hidden">
+                                    <label class="font-medium text-base text-gray-700">Services</label>
+                                    <fieldset class="sm:hidden sm:mb-0 mt-1 p-6 border border-gray-300 rounded-md">
+                                        <div class="flex flex-col space-y-2">
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167483" value="GO BUKS" id="contact-service-167483" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 GO BUKS
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167430" value="Cookin Some Chilli" id="mobile-contact-service-167430" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167484" value="Cookin Some Chilli" id="contact-service-167484" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 Cookin Some Chilli
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167431" value="Driveway Design & Build" id="mobile-contact-service-167431" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167485" value="Driveway Design & Build" id="contact-service-167485" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 Driveway Design & Build
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167432" value="Fall and Spring Clean Up" id="mobile-contact-service-167432" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167486" value="Fall and Spring Clean Up" id="contact-service-167486" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 Fall and Spring Clean Up
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167433" value="Cheese Making" id="mobile-contact-service-167433" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167487" value="Cheese Making" id="contact-service-167487" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 Cheese Making
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167434" value="Stone Wall Installation" id="mobile-contact-service-167434" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167488" value="Stone Wall Installation" id="contact-service-167488" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 Stone Wall Installation
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167435" value="Professional Fertilization" id="mobile-contact-service-167435" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167489" value="Professional Fertilization" id="contact-service-167489" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 Professional Fertilization
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167436" value="Test service mobile2" id="mobile-contact-service-167436" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167490" value="Test service mobile2" id="contact-service-167490" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 Test service mobile2
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="167437" value="Mowing" id="mobile-contact-service-167437" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167491" value="Mowing" id="contact-service-167491" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
                                                 Mowing
-                                            </span>
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="flex items-center">
+                                                <input type="checkbox" name="167492" value="test service 3/26" id="contact-service-167492" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                />
+                                                <span class="ml-3 items-start">
+                                                test service 3/26
+                                                </span>
+                                            </div>
+                                            
+                                    
+                                            <div class="flex flex-col">
+                                                <div class="flex items-center">
+                                                    <input
+                                                            id="contact-service-Other"
+                                                            name="Other"
+                                                            type="checkbox"
+                                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                            value="Other"
+                                                            onclick="toggleOtherServicesMobile()"
+                                                    />
+                                                    <label for="contact-label-service-Other" class="ml-3 text-gray-600">Other</label>
+                                                </div>
+                                                <input
+                                                    id="contact-service-other-text2"
+                                                    name="OtherServicesInputField"
+                                                    type="text"
+                                                    class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
+                                                    />
+                                            </div>
+                                        
                                         </div>
+                                    </fieldset>
+                                </div>
+                                
+
+                                
+                                    <div class='sm:hidden'>
+                                        <label for="contact-concern-1" class="sm:hidden font-medium text-base text-gray-700"> How can we help - TEST? </label>
+                                        <textarea
+                                            id="contact-concern-1"
+                                            name="concern"
+                                            rows="4"
+                                            class="sm:hidden block py-3.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"                                   
+                                            placeholder='Type your message here...'
+                                        ></textarea>
+                                    </div>
+                                
+
+                                
+                                <div class="relative">
+                                    <label for="contact-date" class="font-medium text-base text-gray-700">Preferred Date of Service</label>
+                                    <!-- <input
+                                        type="text"
+                                        name="date"
+                                        id="contact-date"
+                                        class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary tracking-normal"
+                                        placeholder="mm/dd/yyyy"
+                                        onfocus="(this.type='date',this.placeholder='')"
+                                        onblur="if(this.value==''){this.type='text',this.placeholder='mm/dd/yyyy'}"
+                                    /> -->
+                                    <div class="w-4 h-4 absolute transform translate-y-4.5 left-4">
+                                        <!-- <svg width="16" height="17" viewBox="0 0 16 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.5C3.44772 0.5 3 0.947715 3 1.5V2.5H2C0.895431 2.5 0 3.39543 0 4.5V14.5C0 15.6046 0.895431 16.5 2 16.5H14C15.1046 16.5 16 15.6046 16 14.5V4.5C16 3.39543 15.1046 2.5 14 2.5H13V1.5C13 0.947715 12.5523 0.5 12 0.5C11.4477 0.5 11 0.947715 11 1.5V2.5H5V1.5C5 0.947715 4.55228 0.5 4 0.5ZM4 5.5C3.44772 5.5 3 5.94772 3 6.5C3 7.05228 3.44772 7.5 4 7.5H12C12.5523 7.5 13 7.05228 13 6.5C13 5.94772 12.5523 5.5 12 5.5H4Z" fill="#9CA3AF"/>
+                                        </svg> -->
+                                    </div>
+                                    <input type="date" id="contact-date" placeholder="mm/dd/yyyy" class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary" />
+                                </div>
+                                
+                                
+                                <div>
+                                    <label for="contact-promo-code" class="font-medium text-base text-gray-700">Promo code</label>
+                                    <input
+                                            type="text"
+                                            name="promo-code"
+                                            id="contact-promo-code"
+                                            class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                            placeholder="ABCDEFG-123"
+                                    />
+                                </div>
+                                
+                            </div>
+
+                            <div class="hidden sm:block px-6 py-4">
+                                
+                                <label class="font-medium text-base text-gray-700">Services</label>
+                                <fieldset class="sm:bg-white border border-gray-300 rounded-md mt-1 overflow-y-visible h-auto">
+                                    <div class="grid gap-4 space-y-2 grid-cols-2 p-6">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="167439" value="Test mobile service" id="mobile-contact-service-167439" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input
+                                                    id="contact-service-167483"
+                                                    name="167483"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="GO BUKS"
                                             />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Test mobile service
-                                            </span>
+                                            <label for="contact-service-167483" class="ml-3 text-sm text-gray-600">GO BUKS</label>
                                         </div>
+                                    
                                         
-                        
-                                         <div class="flex flex-col">
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167484"
+                                                    name="167484"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Cookin Some Chilli"
+                                            />
+                                            <label for="contact-service-167484" class="ml-3 text-sm text-gray-600">Cookin Some Chilli</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167485"
+                                                    name="167485"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Driveway Design & Build"
+                                            />
+                                            <label for="contact-service-167485" class="ml-3 text-sm text-gray-600">Driveway Design & Build</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167486"
+                                                    name="167486"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fall and Spring Clean Up"
+                                            />
+                                            <label for="contact-service-167486" class="ml-3 text-sm text-gray-600">Fall and Spring Clean Up</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167487"
+                                                    name="167487"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Cheese Making"
+                                            />
+                                            <label for="contact-service-167487" class="ml-3 text-sm text-gray-600">Cheese Making</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167488"
+                                                    name="167488"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Stone Wall Installation"
+                                            />
+                                            <label for="contact-service-167488" class="ml-3 text-sm text-gray-600">Stone Wall Installation</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167489"
+                                                    name="167489"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Professional Fertilization"
+                                            />
+                                            <label for="contact-service-167489" class="ml-3 text-sm text-gray-600">Professional Fertilization</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167490"
+                                                    name="167490"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Test service mobile2"
+                                            />
+                                            <label for="contact-service-167490" class="ml-3 text-sm text-gray-600">Test service mobile2</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167491"
+                                                    name="167491"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Mowing"
+                                            />
+                                            <label for="contact-service-167491" class="ml-3 text-sm text-gray-600">Mowing</label>
+                                        </div>
+                                    
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                    id="contact-service-167492"
+                                                    name="167492"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="test service 3/26"
+                                            />
+                                            <label for="contact-service-167492" class="ml-3 text-sm text-gray-600">test service 3/26</label>
+                                        </div>
+                                    
+                                        
+                                    
+                                        <div class="flex flex-col">
                                             <div class="flex items-center">
                                                 <input
-                                                        id="contact-service-Other"
+                                                        id="contact-service-other-checkbox"
                                                         name="Other"
                                                         type="checkbox"
                                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                         value="Other"
-                                                        onclick="toggleOtherServicesMobile()"
-                                                />
-                                                <label for="contact-label-service-Other" class="ml-3 text-gray-600">Other</label>
+                                                        onclick="toggleOtherServices()"
+                                                    />
+                                                <label for="contact-label-service-Other" class="ml-3 text-sm text-gray-600">Other</label>
                                             </div>
-                                            <input
-                                                id="contact-service-other-text2"
-                                                name="OtherServicesInputField"
-                                                type="text"
-                                                class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
-                                                />
+                                        <input
+                                            id="contact-service-other-text"
+                                            name="OtherServicesInputField"
+                                            type="text"
+                                            class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
+                                        />
                                         </div>
-                                 
+                            
                                     </div>
                                 </fieldset>
+                                
                             </div>
-                            
+                            <div class="block sm:flex sm:flex-row sm:space-x-6 sm:px-6 sm:w-full pb-1">
+                                
+                                <div class="sm:flex sm:flex-col sm:w-full hidden">
+                                    <label for="contact-concern-2" class="sm:block hidden font-medium text-base text-gray-700"> How can we help - TEST? </label>
+                                    <textarea
+                                        id="contact-concern-2"
+                                        name="concern"
+                                        rows="4"
+                                        class="sm:flex sm:flex-grow hidden py-2 px-2.5 mt-1 w-full h-auto border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder='Type your message here...'
+                                    ></textarea>
+                                </div>
+                                
 
-                            
-                            <div class="sm:hidden">
-                                <label for="contact-concern-1" class="sm:hidden font-medium text-base text-white"> How can we help - TEST? </label>
-                                <textarea
-                                    id="contact-concern-1"
-                                    name="concern"
-                                    rows="4"
-                                    class="sm:hidden block py-2.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder='Type your message here...'
-                                ></textarea>
-                            </div>
-                            
-
-                            
-                            <div class="relative">
-                                <label for="contact-date" class="font-medium text-base text-white">Preferred date of service</label>
-                                <!-- <input
-                                    type="text"
-                                    name="date"
-                                    id="contact-date"
-                                    class="block w-full border-gray-300 py-2 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="Preferred date of service"
-                                    onfocus="(this.type='date')"
-                                /> -->
-                                <div class="w-4 h-4 absolute transform translate-y-4.5 left-4">
-                                    <!-- <svg width="16" height="17" viewBox="0 0 16 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.5C3.44772 0.5 3 0.947715 3 1.5V2.5H2C0.895431 2.5 0 3.39543 0 4.5V14.5C0 15.6046 0.895431 16.5 2 16.5H14C15.1046 16.5 16 15.6046 16 14.5V4.5C16 3.39543 15.1046 2.5 14 2.5H13V1.5C13 0.947715 12.5523 0.5 12 0.5C11.4477 0.5 11 0.947715 11 1.5V2.5H5V1.5C5 0.947715 4.55228 0.5 4 0.5ZM4 5.5C3.44772 5.5 3 5.94772 3 6.5C3 7.05228 3.44772 7.5 4 7.5H12C12.5523 7.5 13 7.05228 13 6.5C13 5.94772 12.5523 5.5 12 5.5H4Z" fill="#9CA3AF"/>
-                                    </svg> -->
-                                </div>
-                                <input id="contact-date" type="date" class="block text-left z-50 w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary">
-                            </div>
-                            
-                            
-                            <div>
-                                <label for="contact-promo-code" class="font-medium text-base text-white">Promo code</label>
-                                <input
-                                    type="text"
-                                    name="promo-code"
-                                    id="contact-promo-code"
-                                    class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="ABCDEFG-123"
-                                />
-                            </div>
-                            
-
-                    </div>
-
-                    <div class="hidden sm:block px-6 py-4">
-                        
-                        <label class="font-medium text-base text-white">Services</label>
-                        <fieldset class="sm:bg-white sm:p-6 sm:mt-1 rounded-md">
-                            <div class="grid auto-cols-auto gap-4 grid-cols-2">
                                 
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167429"
-                                        name="167429"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="GO BUKS"
-                                    />
-                                    <label for="contact-service-167429" class="ml-3 text-sm font-normal text-gray-700">GO BUKS</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167430"
-                                        name="167430"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Cookin Some Chilli"
-                                    />
-                                    <label for="contact-service-167430" class="ml-3 text-sm font-normal text-gray-700">Cookin Some Chilli</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167431"
-                                        name="167431"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Driveway Design & Build"
-                                    />
-                                    <label for="contact-service-167431" class="ml-3 text-sm font-normal text-gray-700">Driveway Design & Build</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167432"
-                                        name="167432"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Fall and Spring Clean Up"
-                                    />
-                                    <label for="contact-service-167432" class="ml-3 text-sm font-normal text-gray-700">Fall and Spring Clean Up</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167433"
-                                        name="167433"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Cheese Making"
-                                    />
-                                    <label for="contact-service-167433" class="ml-3 text-sm font-normal text-gray-700">Cheese Making</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167434"
-                                        name="167434"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Stone Wall Installation"
-                                    />
-                                    <label for="contact-service-167434" class="ml-3 text-sm font-normal text-gray-700">Stone Wall Installation</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167435"
-                                        name="167435"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Professional Fertilization"
-                                    />
-                                    <label for="contact-service-167435" class="ml-3 text-sm font-normal text-gray-700">Professional Fertilization</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167436"
-                                        name="167436"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Test service mobile2"
-                                    />
-                                    <label for="contact-service-167436" class="ml-3 text-sm font-normal text-gray-700">Test service mobile2</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167437"
-                                        name="167437"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Mowing"
-                                    />
-                                    <label for="contact-service-167437" class="ml-3 text-sm font-normal text-gray-700">Mowing</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-167439"
-                                        name="167439"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                        value="Test mobile service"
-                                    />
-                                    <label for="contact-service-167439" class="ml-3 text-sm font-normal text-gray-700">Test mobile service</label>
-                                </div>
-                            
-                                
-             
-                                <div class="flex flex-col">
-                                        <div class="flex items-center">
-                                             <input
-                                                    id="contact-service-other-checkbox"
-                                                    name="Other"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
-                                                    value="Other"
-                                                    onclick="toggleOtherServices()"
-                                                />
-                                            <label for="contact-label-service-Other" class="ml-3 text-sm text-gray-600">Other</label>
-                                        </div>
-                                    <input
-                                        id="contact-service-other-text"
-                                        name="OtherServicesInputField"
-                                        type="text"
-                                        class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
-                                    />
-                                    </div>
-                           
-                            </div>
-                        </fieldset>
-                        
-                    </div>
-
-                    <div class="block sm:flex sm:space-x-6 px-6">
-                        
-                        <div class="sm:flex sm:flex-col sm:w-full hidden">
-                            <label for="contact-concern-2" class="sm:block hidden font-medium text-base text-white"> How can we help - TEST? </label>
-                            <textarea
-                                id="contact-concern-2"
-                                name="concern"
-                                rows="4"
-                                class="sm:flex sm:grow hidden py-2.5 px-2.5 mt-1 w-full h-auto border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                placeholder='Type your message here...'
-                            ></textarea>
-                        </div>
-                        
-    
-                        
-                        <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
-                            <label class="font-medium text-base text-white">Upload a photo</label>
-                            <div class='bg-white p-3 mt-1 rounded-md border border-gray-300'>
-                                <div
+                                <div class="block px-6 sm:px-0 sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
+                                    <label class="font-medium text-base text-gray-700">Upload a photo</label>
+                                    <div
                                         x-data="{
                                             imageUrl: '',
                                             fileTooLarge: false,
@@ -1973,77 +1966,92 @@
                                                 return true;
                                             },
                                         }"
-                                >
-                                    <div x-show="imageUrl !== ''" x-collapse>
-                                        <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
-                                            <img :src="imageUrl" class="object-cover rounded-md w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
-                                            <button
-                                                    @click="imageUrl = ''; $refs.fileInput.value = '';"
-                                                    type="button"
-                                                    class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-300 rounded-md shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                            >
-                                                Change
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <label
-                                        for="file-upload"
-                                        class="relative font-medium rounded-md cursor-pointer text-primary"
                                     >
-                                        <div x-show="imageUrl === ''" x-collapse>
-                                            <div
-                                                x-on:dragenter.prevent.stop
-                                                x-on:dragleave.prevent.stop
-                                                class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-md"
-                                            >
-                                                <div class="space-y-1 text-center">
-                                                    <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                                        <path
-                                                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                        />
-                                                    </svg>
-                                                    <div class="flex justify-center text-sm text-gray-600">
-                                                        <span class="text-primary">Upload a photo</span>
-                                                        <input
-                                                            x-ref="fileInput"
-                                                            id="file-upload"
-                                                            name="file-upload"
-                                                            type="file"
-                                                            class="sr-only"
-                                                            @change="fileChosen"
-                                                        />
-                                                    </div>
-                                                    <p class="text-xs text-gray-500">PNG, JPG, GIF up to 2MB</p>
-                                                </div>
+                                        <div x-show="imageUrl !== ''" x-collapse>
+                                            <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
+                                                <img :src="imageUrl" class="object-cover rounded-md w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
+                                                
+                                                <button
+                                                        @click="imageUrl = ''; $refs.fileInput.value = '';"
+                                                        type="button"
+                                                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                >
+                                                    Change
+                                                </button>
                                             </div>
                                         </div>
-                                    </label>
-                                    <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
-                                        The selected file is too large. Please reduce the size or choose another file.
-                                    </p>
+                                        <label
+                                                for="file-upload"
+                                                class="relative font-medium bg-white rounded-md cursor-pointer text-primary"
+                                        >
+                                            <div x-show="imageUrl === ''" x-collapse>
+                                                <div
+                                                        x-on:dragenter.prevent.stop
+                                                        x-on:dragleave.prevent.stop
+                                                        class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 mt-1 border-2 border-dashed rounded-md"
+                                                >
+                                                    <div class="space-y-1 text-center">
+                                                        <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                            <path
+                                                                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                        <div class="flex justify-center text-sm text-gray-600">
+                                                            <span class="text-primary">Upload a photo</span>
+                                                            <input
+                                                                x-ref="fileInput"
+                                                                id="file-upload"
+                                                                name="file-upload"
+                                                                type="file"
+                                                                class="sr-only"
+                                                                @change="fileChosen"
+                                                            />
+                                                        </div>
+                                                        <p class="text-xs text-gray-500">PNG, JPG, GIF up to 2MB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
+                                            The selected file is too large. Please reduce the size or choose another file.
+                                        </p>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                         
-                    </div>
-                    <div class="z-50 flex-col px-6 pb-4 bg-primary flex w-full align-middle items-center justify-center">
-                        
-                            <div class="text-gray-500 text-sm font-normal mt-1.5">
+                            <div class="text-gray-500 text-sm font-normal mx-6 sm:mt-0.5 mt-1.5">
                                 By providing your phone number, you agree to receive text messages (SMS) from Beantown Tutoring &amp; Cheese Making. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.
                             </div>
                         
-                        <button
-                            id='sendButton'
-                            class="cta_text_conversion flex justify-center relative rounded-lg mx-4 py-2.5 mt-6 sm:mt-4 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground"
-                        >
-                            Send
-                        </button>
-                    </div>
-                </form>
-                
+                        <div class="flex items-center justify-center w-full py-4 px-6 bg-white z-50">
+                            <button   id='sendButton'  class="
+                                        sendButton
+                                        cta_text_conversion
+                                        py-2.5 px-6
+                                        w-full
+                                        text-sm
+                                        font-medium
+                                        transition
+                                        border-2 border-transparent
+                                        rounded-md
+                                        bg-primary
+                                        text-primary-foreground
+                                        focus:outline-none
+                                        hover:bg-primary-darker
+                                        focus-visible:ring-2
+                                        ring-primary ring-opacity-75 ring-offset-2
+                                        disabled:bg-primary-darker"
+                                        
+                                        >Send
+                            </button>
+                        </div>
+                    </form>
+                    
 
 
             </div>
@@ -2081,7 +2089,7 @@
             otherServicesInput.classList.add('hidden')
         }
     }
-     var observer2 = new MutationObserver(function() {
+    var observer1 = new MutationObserver(function() {
     var dateInput = document.getElementById("contact-date");
     if (dateInput) {
       var today = new Date();
@@ -2091,16 +2099,16 @@
       dateInput.setAttribute("min", today.toISOString().split("T")[0]);
       dateInput.setAttribute("max", twoYearsLater.toISOString().split("T")[0]);
 
-      observer2.disconnect();
+      observer1.disconnect();
     }
   });
-  observer2.observe(document, { childList: true, subtree: true });
+  observer1.observe(document, { childList: true, subtree: true });
 </script>
                             <template x-teleport="body">
-    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-50 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen"
-         data-heap-component-name="leave_a_review"
-         data-heap-version="v2.1"
-    >
+    <div
+            data-heap-component-name="leave_a_review"
+            data-heap-version="v2"
+            x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-50 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen">
         <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
         <div
             x-show="reviewModalOpen"
@@ -2115,7 +2123,7 @@
         >
             <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
                 <div class="relative px-6 bg-white">
-                    <h2 class="mt-8 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
+                    <h2 class="mt-16 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
                     <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
                         <span class="sr-only">Close modal</span>
                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -2143,7 +2151,7 @@
                             
                         </a>
                     </li>
-                    <li class="block md:hidden">
+                   <li class="block md:hidden">
                         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/107522295397786" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             
                                 Facebook
@@ -2216,55 +2224,43 @@
              
                 
                     
-                         
-    
-        <section
-                data-heap-component-name="final-cta"
-                data-heap-version="v2.1"
-                class="custom_text_color text-white">
-            <div
-                class="relative flex w-full overflow-hidden items-center justify-center h-[400px] sm:h-[800px]"
-            >
+                         <section
+        class="bg-white z-50" style="min-height:300px;min-width:auto"
+        id="ctaContainer"
+        data-heap-component-name="final-cta"
+        data-heap-version="v2"
+>
+    <div class="px-4 py-12 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+        <h2 class="text-3xl font-extrabold sm:text-4xl">
+            <span class="block">Ready to get started?</span>
+            <span class="block">Book an appointment today.</span>
+        </h2>
+        <div class="flex justify-center mt-8">
+            
+            
+            <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
+                <button
+                    @click="contactModalOpen = true"
+                    class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white transition border-2 border-transparent rounded-md  sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto bg-primary"
+                    >
+                    Get a Free Quote
+                </button>
+            </div> 
+            
                 
-                <main
-                    style="--tw-bg-opacity:75%;"
-                    class="flex h-[400px] sm:h-[800px] relative justify-center m-auto w-full bg-primary"
+            
+            <div onclick="postCtaClick('email')" class="inline-flex w-full ml-3 sm:w-auto">
+                <a
+                target = "_blank" href="mailto:bucks@bucks.com?subject=landscaping near me Job - Requesting a quote&body=Hi Caro,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium transition bg-white border-2 rounded-md  sm:py-4 sm:px-10 hover:bg-primary hover:bg-opacity-10 focus:outline-none focus:ring-2 ring-primary ring-offset-2 ring-opacity-75 sm:w-auto text-primary border-primary"
                 >
-                    <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
-                        <h2 class="flex flex-col items-center text-3xl font-extrabold sm:text-6xl">
-                            <span class="flex">Ready to get started?</span>
-                            <span class="flex">Book an appointment today.</span>
-                        </h2>
-                        <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
-                            
-                            <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
-                                <button 
-                                    @click="contactModalOpen = true"
-                                    class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
-                                >
-                                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                    <span class="relative">Get a Free Quote</span>
-                                </button>
-                            </div> 
-                            
-                                
-                            
-                            <div onclick="postCtaClick('email')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
-                                <a
-                                    target = "_blank" href="mailto:bucks@bucks.com?subject=landscaping near me Job - Requesting a quote&body=Hi Caro,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
-                                    class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
-                                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                    <span class="relative">Email Us</span>
-                                </a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </main>
+                    Email Us
+                </a>
             </div>
-        </section>
-    
-
+            
+        </div>
+    </div>
+</section>
 
                     
                 
@@ -2278,7 +2274,7 @@
         class="bg-primary"
         aria-labelledby="footer-heading"
         data-heap-component-name="footer"
-        data-heap-version="v2.1"
+        data-heap-version="v2"
         id="footer"
 >
   <h2 id="footer-heading" class="sr-only">Footer</h2>
@@ -2286,37 +2282,34 @@
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 xl:col-span-1">
               
-              
-                <picture>
-                    <source
-                        type="image/webp"
-                        class="h-[80px] w-auto"
-                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/184x184/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/4da4ad14-8a04-4425-818b-c8ebfe974888.webp, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/368x368/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/4da4ad14-8a04-4425-818b-c8ebfe974888.webp 2x" 
-                        alt="Footer logo"
-                    >
-                    <img
-                        class="h-[80px] w-auto"
-                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/184x184/filters:strip_exif()/filters:no_upscale()/media/4da4ad14-8a04-4425-818b-c8ebfe974888.webp"
-                        width="80" 
-                        height="80"
-                        alt="Footer logo"
-                        loading="lazy"
-                    />
-                </picture>
-              
+              <picture>
+                <source 
+                    class="h-[80px] w-auto"
+                    type="image/webp" 
+                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/184x184/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/4da4ad14-8a04-4425-818b-c8ebfe974888.webp" 
+                    alt="Footer logo"
+                />
+                <img
+                    class="h-[80px] w-auto" 
+                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/184x184/filters:strip_exif()/filters:no_upscale()/media/4da4ad14-8a04-4425-818b-c8ebfe974888.webp"
+                    width="80" 
+                    height="80"
+                    alt="Footer logo"
+                    loading="lazy"
+                />
+              </picture>
               
               <p class="text-base text-gray-100">
                   Beantown Tutoring &amp; Cheese Making<br/>
                   
-                    oansfdoijwedf, Brooklyn, NY, 11239 <br/>
+                      oansfdoijwedf, Brooklyn, NY, 11239 <br/>
                   
-                  19142003591 <br/>
-                  ann.kolivanova@gmail.com<br/>
+                  9087525050 <br/>
+                  ann.kolivanova@gmail.com
               </p>
-              <p class="text-base text-gray-100">ⓒ All Rights Reserved</p>
               <div class="flex flex-wrap align-middle items-center">
                   
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/107522295397786" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/107522295397786" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
                     <span class="sr-only">Facebook</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
@@ -2332,7 +2325,7 @@
                   
                   
                   
-                  <a target="_blank" rel="noopener noreferrer" href="https://maps.google.com/maps?cid=9997683482332390031" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                  <a target="_blank" rel="noopener noreferrer" href="https://maps.google.com/maps?cid=9997683482332390031" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
                     <span class="sr-only">Google</span>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" class="w-6 h-6" fill="currentColor">
                         <path d="M 15.003906 3 C 8.375 3 3 8.371094 3 15 C 3 21.628906 8.375 27 15.003906 27 C 25.015625 27 27.269531 17.707031 26.328125 13 L 15 13 L 15 17 L 22.738281 17 C 21.847656 20.449219 18.726562 23 15 23 C 10.582031 23 7 19.417969 7 15 C 7 10.582031 10.582031 7 15 7 C 17.007812 7 18.839844 7.746094 20.246094 8.96875 L 23.085938 6.128906 C 20.953125 4.183594 18.117188 3 15.003906 3 Z M 15.003906 3 "/>
@@ -2343,7 +2336,7 @@
                   
                   
                   
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.nextdoor.co" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.nextdoor.co" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
                     <span class="sr-only">Nextdoor</span>
                     <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                         <path d="M31.99 13.089l-15.99-9.792-5.495 3.365v-3.365h-5.005v6.427l-5.495 3.365 2.615 4.271 2.88-1.755v13.099h21v-13.099l2.875 1.755 2.615-4.271z"/>
@@ -2351,10 +2344,10 @@
                   </a>
                   
                   
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.nextdoor.com" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.nextdoor.com" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-2 ring-white ring-opacity-75">
                     <span class="sr-only">Etsy</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M6.13246 2.0375C6.13246 1.76667 6.15996 1.60417 6.62412 1.60417H12.845C13.9283 1.60417 14.5283 2.52917 14.9616 4.265L15.3116 5.65333H16.37C16.5616 1.71333 16.7283 0 16.7283 0C16.7283 0 14.065 0.3 12.4866 0.3H4.52912L0.267456 0.163333V1.305L1.70496 1.57667C2.71329 1.77667 2.95496 1.99 3.03829 2.915C3.03829 2.915 3.12996 5.64 3.12996 10.115C3.12996 14.6025 3.05496 17.29 3.05496 17.29C3.05496 18.1008 2.72996 18.4008 1.72996 18.6008L0.294956 18.8758V20L4.56996 19.8625H11.695C13.3075 19.8625 17.02 20 17.02 20C17.1075 19.025 17.645 14.6 17.7325 14.1133H16.7325L15.6625 16.5383C14.825 18.4383 13.5991 18.5758 12.2375 18.5758H8.14912C6.79079 18.5758 6.13662 18.0425 6.13662 16.8675V10.6667C6.13662 10.6667 9.15329 10.6667 10.1283 10.7467C10.8883 10.8 11.3475 11.0175 11.595 12.0783L11.92 13.4908H13.095L13.02 9.92583L13.18 6.33833H12.0208L11.6458 7.91333C11.41 8.95 11.2458 9.13833 10.1841 9.24667C8.79579 9.38833 6.17162 9.36333 6.17162 9.36333V2.04167H6.12996L6.13246 2.0375Z" fill="#9CA3AF"/>
+                        <path d="M6.13246 2.0375C6.13246 1.76667 6.15996 1.60417 6.62412 1.60417H12.845C13.9283 1.60417 14.5283 2.52917 14.9616 4.265L15.3116 5.65333H16.37C16.5616 1.71333 16.7283 0 16.7283 0C16.7283 0 14.065 0.3 12.4866 0.3H4.52912L0.267456 0.163333V1.305L1.70496 1.57667C2.71329 1.77667 2.95496 1.99 3.03829 2.915C3.03829 2.915 3.12996 5.64 3.12996 10.115C3.12996 14.6025 3.05496 17.29 3.05496 17.29C3.05496 18.1008 2.72996 18.4008 1.72996 18.6008L0.294956 18.8758V20L4.56996 19.8625H11.695C13.3075 19.8625 17.02 20 17.02 20C17.1075 19.025 17.645 14.6 17.7325 14.1133H16.7325L15.6625 16.5383C14.825 18.4383 13.5991 18.5758 12.2375 18.5758H8.14912C6.79079 18.5758 6.13662 18.0425 6.13662 16.8675V10.6667C6.13662 10.6667 9.15329 10.6667 10.1283 10.7467C10.8883 10.8 11.3475 11.0175 11.595 12.0783L11.92 13.4908H13.095L13.02 9.92583L13.18 6.33833H12.0208L11.6458 7.91333C11.41 8.95 11.2458 9.13833 10.1841 9.24667C8.79579 9.38833 6.17162 9.36333 6.17162 9.36333V2.04167H6.12996L6.13246 2.0375Z" fill="currentColor"/>
                     </svg>
                   </a>
                   
@@ -2367,11 +2360,11 @@
               <div class="md:grid md:grid-cols-2 md:gap-8">
                   <div>
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Company</h3>
-                      <ul role="list" class="mt-4  space-y-4">
+                      <ul role="list" class="mt-4 -mx-1 space-y-4">
                           <li>
                               <a
                                   href="./"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Home</a
                               >
                           </li>
@@ -2380,7 +2373,7 @@
                               <li>
                                   <a
                                       href="gallery-All"
-                                      class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                      class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                       >Galleries</a
                                   >
                               </li>
@@ -2390,7 +2383,7 @@
                           <li>
                               <a
                                   href="reviews"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Reviews</a
                               >
                           </li>
@@ -2399,7 +2392,7 @@
                           <li>
                               <a
                                   href="our-team"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Our team</a
                               >
                           </li>
@@ -2408,7 +2401,7 @@
                           <li>
                               <a
                                   href="jobs"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Jobs</a
                               >
                           </li>
@@ -2417,7 +2410,7 @@
                           <li>
                               <a
                                   href='sitemap.xml'
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Sitemap</a
                               >
                           </li>
@@ -2425,7 +2418,7 @@
                           <li>
                               <a
                                   href='https://app.toplinepro.com/'
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
                                   >Login</a
                               >
                           </li>
@@ -2433,12 +2426,12 @@
                   </div>
                   <div class="mt-12 md:mt-0">
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Services</h3>
-                      <ul role="list" class="mt-4  space-y-4">
+                      <ul role="list" class="mt-4 -mx-1 space-y-4">
                           
                           <li>
                               <a
                                   href="service-GO-BUKS"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >GO BUKS</a
                               >
                           </li>
@@ -2446,7 +2439,7 @@
                           <li>
                               <a
                                   href="service-Cookin-Some-Chilli"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Cookin Some Chilli</a
                               >
                           </li>
@@ -2454,7 +2447,7 @@
                           <li>
                               <a
                                   href="service-Driveway-Design---Build"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Driveway Design &amp; Build</a
                               >
                           </li>
@@ -2462,7 +2455,7 @@
                           <li>
                               <a
                                   href="service-Fall-and-Spring-Clean-Up"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Fall and Spring Clean Up</a
                               >
                           </li>
@@ -2470,7 +2463,7 @@
                           <li>
                               <a
                                   href="service-Cheese-Making"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Cheese Making</a
                               >
                           </li>
@@ -2478,7 +2471,7 @@
                           <li>
                               <a
                                   href="service-Stone-Wall-Installation"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Stone Wall Installation</a
                               >
                           </li>
@@ -2486,7 +2479,7 @@
                           <li>
                               <a
                                   href="service-Professional-Fertilization"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Professional Fertilization</a
                               >
                           </li>
@@ -2494,7 +2487,7 @@
                           <li>
                               <a
                                   href="service-Test-service-mobile2"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Test service mobile2</a
                               >
                           </li>
@@ -2502,16 +2495,16 @@
                           <li>
                               <a
                                   href="service-Mowing"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Mowing</a
                               >
                           </li>
                           
                           <li>
                               <a
-                                  href="service-Test-mobile-service"
-                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                  >Test mobile service</a
+                                  href="service-test-service-3-26"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >test service 3/26</a
                               >
                           </li>
                           
@@ -2521,11 +2514,11 @@
               <div class="md:grid md:grid-cols-2 md:gap-8">
                   <div>
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Service Areas</h3>
-                      <ul role="list" class="mt-4  space-y-4">
+                      <ul role="list" class="mt-4 -mx-1 space-y-4">
                           
                           <li>
                               
-                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
                                     Buffalo, NY
                                 </span>
                           </li>
@@ -2534,33 +2527,33 @@
                   </div>
                   <div class="mt-12 md:mt-0">
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Hours</h3>
-                      <ul role="list" class="mt-4  space-y-4">
+                      <ul role="list" class="mt-4 -mx-1 space-y-4">
                         
-                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                            <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
                                 Sun: <br class="sm:hidden" /> Closed 
                             </li>
                         
-                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                Mon: <br class="sm:hidden" /> Closed 
+                            <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
+                                Mon: <br class="sm:hidden" /> 8:00am - 7:00pm 
                             </li>
                         
-                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                            <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
                                 Tue: <br class="sm:hidden" /> 10:00am - 4:00pm 
                             </li>
                         
-                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                            <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
                                 Wed: <br class="sm:hidden" /> 12:00am - 6:00pm 
                             </li>
                         
-                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                            <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
                                 Thu: <br class="sm:hidden" /> 7:00am - 7:00pm 
                             </li>
                         
-                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                            <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
                                 Fri: <br class="sm:hidden" /> 11:00am - 11:11pm 
                             </li>
                         
-                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                            <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
                                 Sat: <br class="sm:hidden" /> 5:00am - 6:00pm 
                             </li>
                         
@@ -2569,8 +2562,8 @@
               </div>
           </div>
       </div>
-      <div class="pt-10 mt-12 text-center border-t-2 border-primary-lighter">
-      <div class="flex justify-center">
+      <div class="pt-10 mt-12 text-center border-t-2 border-primary-darker">
+        <div class="flex justify-center">
             <a class="flex" href="https://www.toplinepro.com" target="_blank">
                 <div class="text-white">
                     Designed by
@@ -2598,12 +2591,12 @@
                         </defs>
                         </svg>
                 </div>
+
             </a>
         </div>
       </div>
   </div>
 </footer>
-
 
         
     
