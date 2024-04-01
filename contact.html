@@ -66,7 +66,7 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png");
       background-size: cover;
   }
   
@@ -78,7 +78,7 @@
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png");
       background-size: cover;
   }
   
@@ -90,13 +90,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png");
       background-size: cover;
   }
 </style>
@@ -645,6 +645,16 @@
                                                         
                                                     
                                                         
+                                                        <a
+                                                            href=" gallery-test2 "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">test2</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -675,14 +685,6 @@
                                                     
                                                         
                                                     
-                                                        
-                                                        <a
-                                                            href=" gallery-test2 "
-                                                            role="menuitem"
-                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
-                                                        >
-                                                            <p class="mt-1 text-base font-medium uppercase">test2</p>
-                                                        </a>
                                                         
                                                     
                                                         
@@ -732,6 +734,16 @@
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
                                                             <p class="mt-1 text-base font-medium uppercase">Test mobile edited</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-test-4 "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">test 4</p>
                                                         </a>
                                                         
                                                     
@@ -1143,6 +1155,10 @@
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Test mobile edited</p>
                                                     </a>
                                                 
+                                                    <a href="gallery-test-4" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">test 4</p>
+                                                    </a>
+                                                
                                                     <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
                                                     </a>
@@ -1395,16 +1411,18 @@
     </div>
     
     <div
+            x-cloak
             x-data="{
-        activeImage: 1,
-        amountOfImages: 1,
-        loop() {
-            setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
-        },
-        }"
+                activeImage: 1,
+                amountOfImages: 1,
+                loop() {
+                    setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
+                },
+            }"
             x-init="loop"
             class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
     >
+        
         <div
                 class="absolute inset-0"
                 x-show="activeImage === 1"
@@ -1415,21 +1433,24 @@
                 x-transition:leave-start="transform"
                 x-transition:leave-end="transform -translate-x-full"
         >
-        
-                
-                <img
-                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/7fd9741f-680d-4f0b-8080-afc51d8d7f01.png"
-                    alt=""
-                    width="640" height="360"
-                    fetchpriority="high"
-                    loading="eager"
-                    decoding="sync"
-                />
-                
-        
+            
+                <picture>
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png" type="image/webp">
+                    <img
+                        class="object-cover w-full h-full"
+                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png"
+                        alt="landscaping near me company Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY"
+                        width="425"
+                        height="288"
+                        fetchpriority="high"
+                        loading="eager"
+                        decoding="sync"
+                    />
+                </picture>
+            
 
         </div>
+        
     </div>
     
 </div>
