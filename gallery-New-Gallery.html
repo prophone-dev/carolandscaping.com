@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/a44218cf-7879-4438-9e9b-48a8fe8a439d.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/3b6156ae-e538-41ae-9a61-ca9b880a9d63.png");
       background-size: cover;
   }
   
@@ -1362,7 +1362,7 @@
                         <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 7,
+        amountOfImages: 8,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1469,7 +1469,7 @@
                                 <div class="aspect-w-3 aspect-h-2">
                                     
                                         
-                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a1c6c93f-2d9b-4a03-8a1b-c376e4e9b7bd.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b6156ae-e538-41ae-9a61-ca9b880a9d63.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
                                         
                                         
                                 </div>
@@ -1495,7 +1495,7 @@
                                 <div class="aspect-w-3 aspect-h-2">
                                     
                                         
-                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/2fdeccfa-2f24-40be-8aa7-c081b1a3a411.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a1c6c93f-2d9b-4a03-8a1b-c376e4e9b7bd.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
                                         
                                         
                                 </div>
@@ -1521,7 +1521,7 @@
                                 <div class="aspect-w-3 aspect-h-2">
                                     
                                         
-                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0cda229c-821c-4940-88ee-390d46a21080.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/2fdeccfa-2f24-40be-8aa7-c081b1a3a411.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
                                         
                                         
                                 </div>
@@ -1541,6 +1541,32 @@
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
                             @click="activeImage = 6; galleryModalOpen = true"
+                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                        >
+                            
+                                <div class="aspect-w-3 aspect-h-2">
+                                    
+                                        
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0cda229c-821c-4940-88ee-390d46a21080.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
+                                        
+                                        
+                                </div>
+
+                                <div class="space-y-1 text-lg font-medium leading-6">
+                                    <p class="line-clamp-3"></p>
+                                    <h3 class="text-primary"></h3>
+                                </div>
+                            
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button
+                            @click="activeImage = 7; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1635,7 +1661,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 3">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a1c6c93f-2d9b-4a03-8a1b-c376e4e9b7bd.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b6156ae-e538-41ae-9a61-ca9b880a9d63.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1644,7 +1670,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 4">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/2fdeccfa-2f24-40be-8aa7-c081b1a3a411.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a1c6c93f-2d9b-4a03-8a1b-c376e4e9b7bd.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1653,13 +1679,22 @@
                                 <li class="flex flex-col" x-show="activeImage === 5">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0cda229c-821c-4940-88ee-390d46a21080.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/2fdeccfa-2f24-40be-8aa7-c081b1a3a411.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 6">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0cda229c-821c-4940-88ee-390d46a21080.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 7">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3e6c3fc8-3ae2-4aa2-8d4e-91bfe87e99ed.png" alt="New Gallery for Beantown Tutoring &amp; Cheese Making LLC in Buffalo, NY" loading="lazy" decoding="async"/>
