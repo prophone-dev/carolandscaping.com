@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/cc8f243e-7df8-4417-9eb8-067568d7a8f8.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/dd0a989d-a7fd-4912-b5e2-bb41abe52fa3.mp4");
       background-size: cover;
   }
   
@@ -1360,7 +1360,7 @@
                         <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 8,
+        amountOfImages: 9,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1573,6 +1573,33 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
+                                        <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
+                                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/dd0a989d-a7fd-4912-b5e2-bb41abe52fa3.mp4#t=0.5">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    
+                                </div>
+
+                                <div class="space-y-1 text-lg font-medium leading-6">
+                                    <p class="line-clamp-3"></p>
+                                    <h3 class="text-primary"></h3>
+                                </div>
+                            
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button
+                            @click="activeImage = 8; galleryModalOpen = true"
+                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                        >
+                            
+                                <div class="aspect-w-3 aspect-h-2">
+                                    
                                         
                                             <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png" alt="instagram for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                         
@@ -1699,6 +1726,16 @@
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 7">
+                                    
+                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/dd0a989d-a7fd-4912-b5e2-bb41abe52fa3.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 8">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png" alt="instagram for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
