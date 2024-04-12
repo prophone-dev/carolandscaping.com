@@ -74,7 +74,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-April</loc>
+        <loc>https://carolandscaping.com/service-Gardening-new</loc>
         <lastmod>2024-04-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -103,6 +103,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-All</loc>
+        <lastmod>2024-04-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Go-bucks</loc>
         <lastmod>2024-04-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -144,14 +151,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Test-4</loc>
-        <lastmod>2024-04-12</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Go-bucks</loc>
+        <loc>https://carolandscaping.com/gallery-april-gallery</loc>
         <lastmod>2024-04-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
