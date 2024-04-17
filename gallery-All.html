@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/4e6dc41e-fa7c-4673-be35-ef23b5a34bc5.png");
       background-size: cover;
   }
   
@@ -1260,7 +1260,7 @@
                 <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 23,
+        amountOfImages: 24,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1279,10 +1279,36 @@
     <ul role="list" class="bg-white space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
         
             
-                <li data-id="gallery_media" data-gallery="Test gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
                             @click="activeImage = 0; galleryModalOpen = true"
+                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                        >
+                            
+                                <div class="aspect-w-3 aspect-h-2">
+                                    
+                                        
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/4e6dc41e-fa7c-4673-be35-ef23b5a34bc5.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                        
+                                        
+                                </div>
+
+                                <div class="space-y-1 text-lg font-medium leading-6">
+                                    <p class="line-clamp-3"></p>
+                                    <h3 class="text-primary"></h3>
+                                </div>
+                            
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="Test gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button
+                            @click="activeImage = 1; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1308,7 +1334,7 @@
                 <li data-id="gallery_media" data-gallery="april gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 1; galleryModalOpen = true"
+                            @click="activeImage = 2; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1334,7 +1360,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 2; galleryModalOpen = true"
+                            @click="activeImage = 3; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1360,7 +1386,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 3; galleryModalOpen = true"
+                            @click="activeImage = 4; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1386,7 +1412,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 4; galleryModalOpen = true"
+                            @click="activeImage = 5; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1412,7 +1438,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 5; galleryModalOpen = true"
+                            @click="activeImage = 6; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1438,7 +1464,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 6; galleryModalOpen = true"
+                            @click="activeImage = 7; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1464,7 +1490,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 7; galleryModalOpen = true"
+                            @click="activeImage = 8; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1490,7 +1516,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 8; galleryModalOpen = true"
+                            @click="activeImage = 9; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1516,7 +1542,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 9; galleryModalOpen = true"
+                            @click="activeImage = 10; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1542,7 +1568,7 @@
                 <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 10; galleryModalOpen = true"
+                            @click="activeImage = 11; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1569,7 +1595,7 @@
                 <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 11; galleryModalOpen = true"
+                            @click="activeImage = 12; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1595,7 +1621,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 12; galleryModalOpen = true"
+                            @click="activeImage = 13; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1621,7 +1647,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 13; galleryModalOpen = true"
+                            @click="activeImage = 14; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1647,7 +1673,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 14; galleryModalOpen = true"
+                            @click="activeImage = 15; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1673,7 +1699,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 15; galleryModalOpen = true"
+                            @click="activeImage = 16; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1699,7 +1725,7 @@
                 <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 16; galleryModalOpen = true"
+                            @click="activeImage = 17; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1725,7 +1751,7 @@
                 <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 17; galleryModalOpen = true"
+                            @click="activeImage = 18; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1751,7 +1777,7 @@
                 <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 18; galleryModalOpen = true"
+                            @click="activeImage = 19; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1778,7 +1804,7 @@
                 <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 19; galleryModalOpen = true"
+                            @click="activeImage = 20; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1804,7 +1830,7 @@
                 <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 20; galleryModalOpen = true"
+                            @click="activeImage = 21; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1830,7 +1856,7 @@
                 <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 21; galleryModalOpen = true"
+                            @click="activeImage = 22; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1856,7 +1882,7 @@
                 <li data-id="gallery_media" data-gallery="hanna test" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 22; galleryModalOpen = true"
+                            @click="activeImage = 23; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -1924,7 +1950,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/4e6dc41e-fa7c-4673-be35-ef23b5a34bc5.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1933,7 +1959,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/41040109-8080-4cf9-b07a-e1ecd601e69e.jpeg" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1942,7 +1968,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 2">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f51841fc-d5cb-48a7-8c28-92df4baa67ba.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/41040109-8080-4cf9-b07a-e1ecd601e69e.jpeg" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1951,7 +1977,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 3">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/6f0ef246-7ed8-48ef-b750-70094f47c28c.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f51841fc-d5cb-48a7-8c28-92df4baa67ba.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1960,7 +1986,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 4">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0a8f0df4-2c6f-4d42-84b2-03d24d127661.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/6f0ef246-7ed8-48ef-b750-70094f47c28c.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1969,7 +1995,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 5">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/8d5a86b9-1bd0-483d-85f7-2f1bfd783cc8.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0a8f0df4-2c6f-4d42-84b2-03d24d127661.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1978,7 +2004,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 6">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/55159d58-31af-41a5-af8c-518be6b3554b.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/8d5a86b9-1bd0-483d-85f7-2f1bfd783cc8.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1987,7 +2013,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 7">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b6156ae-e538-41ae-9a61-ca9b880a9d63.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/55159d58-31af-41a5-af8c-518be6b3554b.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1996,7 +2022,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 8">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9110db13-7fa8-4213-94f8-b253159571dc.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b6156ae-e538-41ae-9a61-ca9b880a9d63.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2005,13 +2031,22 @@
                                 <li class="flex flex-col" x-show="activeImage === 9">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/23ea1f93-3711-492d-bb69-d0654d79d787.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9110db13-7fa8-4213-94f8-b253159571dc.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 10">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/23ea1f93-3711-492d-bb69-d0654d79d787.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 11">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9f0dfda6-8c0d-4294-8eab-db7a7f92df3c.mp4#t=0.5">
@@ -2021,7 +2056,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 11">
+                                <li class="flex flex-col" x-show="activeImage === 12">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2030,7 +2065,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 12">
+                                <li class="flex flex-col" x-show="activeImage === 13">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0cda229c-821c-4940-88ee-390d46a21080.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2039,7 +2074,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 13">
+                                <li class="flex flex-col" x-show="activeImage === 14">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/2fdeccfa-2f24-40be-8aa7-c081b1a3a411.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2048,7 +2083,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 14">
+                                <li class="flex flex-col" x-show="activeImage === 15">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a1c6c93f-2d9b-4a03-8a1b-c376e4e9b7bd.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2057,7 +2092,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 15">
+                                <li class="flex flex-col" x-show="activeImage === 16">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/6acaf156-ee48-4fd7-84b4-c387bbbb0639.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2066,7 +2101,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 16">
+                                <li class="flex flex-col" x-show="activeImage === 17">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/eacb30ab-c7c4-4509-9aff-aa2161dd795e.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2075,7 +2110,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 17">
+                                <li class="flex flex-col" x-show="activeImage === 18">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/c2bfcfde-b8bf-48cd-9885-f71da04ba3c2.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2084,7 +2119,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 18">
+                                <li class="flex flex-col" x-show="activeImage === 19">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e1f9c772-7db4-4c9d-ae6f-a4a2b1d19057.mp4#t=0.5">
@@ -2094,7 +2129,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 19">
+                                <li class="flex flex-col" x-show="activeImage === 20">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7553130c-6080-47f4-ac93-a647802da677.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2103,7 +2138,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 20">
+                                <li class="flex flex-col" x-show="activeImage === 21">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3e6c3fc8-3ae2-4aa2-8d4e-91bfe87e99ed.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2112,7 +2147,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 21">
+                                <li class="flex flex-col" x-show="activeImage === 22">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -2121,7 +2156,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 22">
+                                <li class="flex flex-col" x-show="activeImage === 23">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a1bc4061-f5e3-430b-9c68-6ebbe5ae5661.png" alt="All Photos for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
