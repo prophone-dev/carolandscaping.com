@@ -72,13 +72,13 @@
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b5360f7f-a59f-4b90-891a-93ef2726fe07.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg");
       background-size: cover;
   }
   
@@ -90,7 +90,7 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b5360f7f-a59f-4b90-891a-93ef2726fe07.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg");
       background-size: cover;
   }
   
@@ -1284,7 +1284,7 @@
             x-cloak
             x-data="{
                 activeImage: 1,
-                amountOfImages: 1,
+                amountOfImages: 2,
                 loop() {
                     setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
                 },
@@ -1315,6 +1315,34 @@
                         fetchpriority="high"
                         loading="eager"
                         decoding="sync"
+                    />
+                </picture>
+            
+
+        </div>
+        
+        <div
+                class="absolute inset-0"
+                x-show="activeImage === 2"
+                x-transition:enter="transition duration-1000"
+                x-transition:enter-start="transform translate-x-full"
+                x-transition:enter-end="transform translate-x-0"
+                x-transition:leave="transition duration-1000"
+                x-transition:leave-start="transform"
+                x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <picture>
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg" type="image/webp">
+                    <img
+                        class="object-cover w-full h-full"
+                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg"
+                        alt="landscaping near me company Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                        width="425"
+                        height="288"
+                        fetchpriority="high"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </picture>
             

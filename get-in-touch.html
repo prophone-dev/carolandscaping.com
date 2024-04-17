@@ -72,13 +72,13 @@
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b5360f7f-a59f-4b90-891a-93ef2726fe07.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg");
       background-size: cover;
   }
   
@@ -90,7 +90,7 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b5360f7f-a59f-4b90-891a-93ef2726fe07.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg");
       background-size: cover;
   }
   
@@ -435,62 +435,86 @@
     <div
         class="relative flex w-full overflow-x-hidden"
     >
-             
-                <div
-                    class="relative  min-h-screen  flex w-full overflow-hidden items-center justify-center custom_text_color text-white"
-                >
+            
+            <div
+                class="relative bg-black flex  min-h-screen  w-full bg-center bg-cover bg-scroll"
+            >
+                <div id="slider">
                     
-                    <picture
-                        aria-hidden="true"
-                        class="absolute  h-screen  top-0 left-0 w-full object-cover"
-                    >
-                        
-                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b5360f7f-a59f-4b90-891a-93ef2726fe07.jpeg" type="image/webp">
-                        <img
-                            aria-hidden="true"
-                            class="object-cover w-full h-full"
-                            src="https://landing-page-app-hero-images.s3.amazonaws.com/media/b5360f7f-a59f-4b90-891a-93ef2726fe07.jpeg"
-                            alt="cover-photo"
-                            fetchpriority="high"
-                            loading="auto"
-                            decoding="sync"
-                        />
-                    </picture>
+<picture
+    aria-hidden="true"
+    class="absolute  h-screen  top-0 left-0 w-full object-cover"
+>
+    
+    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b5360f7f-a59f-4b90-891a-93ef2726fe07.jpeg" type="image/webp">
+    
+    <img
+        aria-hidden="true"
+        class="slider-media object-cover w-full h-full"
+        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/b5360f7f-a59f-4b90-891a-93ef2726fe07.jpeg"
+        alt="cover-photo"
+        fetchpriority="high"
+        loading="auto"
+        decoding="sync"
+    />
+</picture>
                     
-                    <main
-                        style="--tw-bg-opacity:75%;"
-                        class="flex  min-h-screen  relative justify-center m-auto w-full bg-black"
-                    >
+                    
                         
-                        <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2 relative z-15">
-                            <h1 class="text-3xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-                                <span class="block custom_text_color text-white">Beantown Tutoring &amp; Cheese Making LLC</span>
-                            </h1>
-                            <div class="quill">
-                                <p class="mt-3 text-base font-light text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 quill">
-                                Expert tutoring services for all ages in NY, NJ and beyond!!!
-                                </p>
-                            </div>
+                    
+                        
                             
-                            <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
+                            <picture
+                                aria-hidden="true"
+                                class="absolute  h-screen  top-0 left-0 w-full object-cover"
+                            >
+                                
+                                <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg" type="image/webp">
+                                <img
+                                    aria-hidden="true"
+                                    class="slider-media object-cover w-full h-full hidden"
+                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg"
+                                    alt="cover-photo"
+                                    fetchpriority="high"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            
+                        
+                    
+                </div>
+                <main style="--tw-bg-opacity:75%;" class="flex  min-h-screen  relative justify-center m-auto w-full text-primary bg-black">
+                    
+                    <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2 relative z-15">
+                        <h1 class="text-3xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+                            <span class="block custom_text_color text-white">Beantown Tutoring &amp; Cheese Making LLC</span>
+                        </h1>
+                        <div class="quill">
+                            <p class="mt-3 text-base font-light text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 quill">
+                            Expert tutoring services for all ages in NY, NJ and beyond!!!
+                            </p>
+                        </div>
+                        
 
-                                
-                                <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
-                                    <button
-                                        @click="contactModalOpen = true"
-                                        class="flex justify-center w-full relative rounded px-5 py-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
-                                    >
-                                        <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                                        <span class="relative">Get a Free Quote</span>
-                                    </button>
-                                </div>
-                                
+                        <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
+
+                            
+                            <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
+                                <button
+                                    @click="contactModalOpen = true"
+                                    class="flex justify-center w-full relative rounded px-5 py-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
+                                >
+                                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                                    <span class="relative">Get a Free Quote</span>
+                                </button>
                             </div>
                             
                         </div>
                         
-                    </main>
-                </div>
+                    </div>
+                    
+                </main>
+            </div> 
             
 
     </div>
@@ -506,6 +530,13 @@
 
 
 
+
+<script>
+    var heroSliderType = "slide" // django variable
+</script>
+<script>
+    async function transform(e,t,a){"enter"===a&&e.classList.remove("hidden"),e.classList.add(`${t}-${a}`),e.classList.add(`${t}-${a}-start`),await nextFrame(),e.classList.remove(`${t}-${a}-start`),e.classList.add(`${t}-${a}-end`),await afterTransition(e),e.classList.remove(`${t}-${a}-end`),e.classList.remove(`${t}-${a}`),"leave"===a&&e.classList.add("hidden")}function nextFrame(){return new Promise((e=>{requestAnimationFrame((()=>{requestAnimationFrame(e)}))}))}function afterTransition(e){return new Promise((t=>{const a=1e3*Number(getComputedStyle(e).transitionDuration.replace("s",""));setTimeout((()=>{t()}),a)}))}function runSlider(e){let t=e.length,a=1;setInterval((()=>{let r=a;a=a===t?1:a+1,transform(e[a-1],heroSliderType,"enter"),transform(e[r-1],heroSliderType,"leave")}),5e3)}window.addEventListener("load",(function(){const e=Array.from(document.querySelectorAll(".slider-media"));Promise.all(e.map(((e,t)=>e instanceof HTMLMediaElement&&"video"===e.tagName.toLowerCase()?Promise.resolve(e):e.complete?Promise.resolve(0!==e.naturalHeight?e:null):new Promise((t=>{e.addEventListener("load",(()=>t(e))),e.addEventListener("error",(()=>t(null)))}))))).then((e=>{e.some((e=>!e))&&console.log("some images failed to load, all finished loading",e),runSlider(e)})),setTimeout((()=>{e.forEach((e=>{e instanceof HTMLMediaElement&&"video"===e.tagName.toLowerCase()?e.src=e.children[0].dataset.src:e.loading="auto"}))}),3e3)}));
+</script>
 
 
 <style>
