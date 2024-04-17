@@ -158,7 +158,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Test-gallery</loc>
+        <loc>https://carolandscaping.com/gallery-Mobile-gallery</loc>
+        <lastmod>2024-04-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-New-mobile-gallery-</loc>
         <lastmod>2024-04-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
