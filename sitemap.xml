@@ -67,7 +67,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Gardening-service</loc>
+        <loc>https://carolandscaping.com/service-Gardening-service-edit</loc>
+        <lastmod>2024-04-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Moving-april</loc>
         <lastmod>2024-04-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
