@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/786c7fc1-723a-4eee-a281-060336c3a581.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/d9b960b5-be64-4ece-a3b0-cbe0b1b34f09.jpeg");
       background-size: cover;
   }
   
@@ -655,11 +655,11 @@
                                                     
                                                         
                                                         <a
-                                                            href=" gallery-new-gallery-123 "
+                                                            href=" gallery-Landscaping-gallery "
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
-                                                            <p class="mt-1 text-base font-medium uppercase">new gallery 123</p>
+                                                            <p class="mt-1 text-base font-medium uppercase">Landscaping gallery</p>
                                                         </a>
                                                         
                                                     
@@ -1035,8 +1035,8 @@
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">New mobile gallery </p>
                                                     </a>
                                                 
-                                                    <a href="gallery-new-gallery-123" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">new gallery 123</p>
+                                                    <a href="gallery-Landscaping-gallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Landscaping gallery</p>
                                                     </a>
                                                 
                                                     <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -2451,10 +2451,62 @@
     <ul role="list" class="bg-white space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
         
             
-                <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <li data-id="gallery_media" data-gallery="Landscaping gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
                             @click="activeImage = 0; galleryModalOpen = true"
+                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                        >
+                            
+                                <div class="aspect-w-3 aspect-h-2">
+                                    
+                                        
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/d9b960b5-be64-4ece-a3b0-cbe0b1b34f09.jpeg" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                        
+                                        
+                                </div>
+
+                                <div class="space-y-1 text-lg font-medium leading-6">
+                                    <p class="line-clamp-3"></p>
+                                    <h3 class="text-primary"></h3>
+                                </div>
+                            
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="Landscaping gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button
+                            @click="activeImage = 1; galleryModalOpen = true"
+                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                        >
+                            
+                                <div class="aspect-w-3 aspect-h-2">
+                                    
+                                        
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/fa721f64-8f04-4aa9-9ce1-32160b8da555.jpeg" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                        
+                                        
+                                </div>
+
+                                <div class="space-y-1 text-lg font-medium leading-6">
+                                    <p class="line-clamp-3"></p>
+                                    <h3 class="text-primary"></h3>
+                                </div>
+                            
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button
+                            @click="activeImage = 2; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
                             
@@ -2481,58 +2533,6 @@
                 <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button
-                            @click="activeImage = 1; galleryModalOpen = true"
-                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
-                        >
-                            
-                                <div class="aspect-w-3 aspect-h-2">
-                                    
-                                        
-                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/99a3204d-01e0-469d-914d-9169cda5dbfb.png" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                        
-                                        
-                                </div>
-
-                                <div class="space-y-1 text-lg font-medium leading-6">
-                                    <p class="line-clamp-3"></p>
-                                    <h3 class="text-primary"></h3>
-                                </div>
-                            
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="new gallery 123" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button
-                            @click="activeImage = 2; galleryModalOpen = true"
-                            class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
-                        >
-                            
-                                <div class="aspect-w-3 aspect-h-2">
-                                    
-                                        
-                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/295e15da-4c0e-4211-8079-fe0174b7808b.jpeg" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                        
-                                        
-                                </div>
-
-                                <div class="space-y-1 text-lg font-medium leading-6">
-                                    <p class="line-clamp-3"></p>
-                                    <h3 class="text-primary"></h3>
-                                </div>
-                            
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="new gallery 123" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button
                             @click="activeImage = 3; galleryModalOpen = true"
                             class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                         >
@@ -2540,7 +2540,7 @@
                                 <div class="aspect-w-3 aspect-h-2">
                                     
                                         
-                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cd76049b-3665-463b-94d9-742378621535.jpeg" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/99a3204d-01e0-469d-914d-9169cda5dbfb.png" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                         
                                         
                                 </div>
@@ -3200,6 +3200,24 @@
                                 
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/d9b960b5-be64-4ece-a3b0-cbe0b1b34f09.jpeg" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 1">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/fa721f64-8f04-4aa9-9ce1-32160b8da555.jpeg" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 2">
+                                    
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/786c7fc1-723a-4eee-a281-060336c3a581.mp4#t=0.5">
                                         Your browser does not support the video tag.
@@ -3208,28 +3226,10 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 1">
-                                    
-                                        
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/99a3204d-01e0-469d-914d-9169cda5dbfb.png" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    
-                                </li>
-                                
-                                <li class="flex flex-col" x-show="activeImage === 2">
-                                    
-                                        
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/295e15da-4c0e-4211-8079-fe0174b7808b.jpeg" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    
-                                </li>
-                                
                                 <li class="flex flex-col" x-show="activeImage === 3">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cd76049b-3665-463b-94d9-742378621535.jpeg" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/99a3204d-01e0-469d-914d-9169cda5dbfb.png" alt="GO BUKS for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
