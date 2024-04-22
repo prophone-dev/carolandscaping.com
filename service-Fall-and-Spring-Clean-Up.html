@@ -2584,14 +2584,14 @@
                                         />
                                     </svg>
                                     <p lorem="1" class="relative text-lg font-medium">
-                                        amazing service
+                                        The best
                                     </p>
                                 </div>
                                 
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         
-                                            <span class="block font-medium text-primary">Kaia Duong</span>
+                                            <span class="block font-medium text-primary">Rubin Brenner</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -2682,14 +2682,14 @@
                                         />
                                     </svg>
                                     <p lorem="1" class="relative text-lg font-medium">
-                                        Sam realized after doing the accounting for his moving company that was he really good with numbers!  He helped tutor my baby girl.  He started at week 16 with addition and subtraction and is now sharing how to do complex calculus at 37 weeks. We can’t wait to see her test results when she is in high school so she can get into a great Beantown school!
+                                        Test review
                                     </p>
                                 </div>
                                 
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         
-                                            <span class="block font-medium text-primary">Matt Liffmann</span>
+                                            <span class="block font-medium text-primary">Rachel Godsey</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -2870,14 +2870,14 @@
                                         />
                                     </svg>
                                     <p lorem="1" class="relative text-lg font-medium">
-                                        The best
+                                        amazing service
                                     </p>
                                 </div>
                                 
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         
-                                            <span class="block font-medium text-primary">Rubin Brenner</span>
+                                            <span class="block font-medium text-primary">Kaia Duong</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -2964,14 +2964,14 @@
                                         />
                                     </svg>
                                     <p lorem="1" class="relative text-lg font-medium">
-                                        Test review
+                                        Sam realized after doing the accounting for his moving company that was he really good with numbers!  He helped tutor my baby girl.  He started at week 16 with addition and subtraction and is now sharing how to do complex calculus at 37 weeks. We can’t wait to see her test results when she is in high school so she can get into a great Beantown school!
                                     </p>
                                 </div>
                                 
                                 <footer class="flex items-center justify-between mt-8 space-x-4">
                                     <div>
                                         
-                                            <span class="block font-medium text-primary">Rachel Godsey</span>
+                                            <span class="block font-medium text-primary">Matt Liffmann</span>
                                         
                                         <span class="block font-medium">Home Owner</span>
                                     </div>
@@ -3039,7 +3039,7 @@
         <div class="z-10 row-start-1 space-y-4 lg:col-start-4">
             <h2 class="text-3xl font-extrabold text-primary lg:text-4xl">Service Areastest</h2>
             <p id="proudLocation" class="text-xl text-gray-500">
-                Proudly Serving 
+                Proudly Serving   Brooklyn,    New York,    Borough of Queens,    Manhattan,    Staten Island,    Newark,    Jersey City,    Jamaica,    East Flatbush,    East New York & Surrounding Areas  
             </p>
         </div>
         <div class="relative col-span-3 row-start-1 mt-6 lg:mt-0 lg:col-start-1">
@@ -3088,11 +3088,11 @@
     let googleMapsApiKey = "AIzaSyAmRfrd-TIN9w3e8kCV0SBK4zAY4KKOyHk"
 
     async function initMap() {
-        let radius = ""
+        let radius = "50"
 
         const coordinates = [];
 
-        let serviceAreas = "[]";
+        let serviceAreas = "[{'city': 'Brooklyn', 'state': 'NY', 'radius': 50, 'order': 1, 'latitude': 40.6501, 'longitude': -73.94958}, {'city': 'New York', 'state': 'NY', 'radius': 50, 'order': 2, 'latitude': 40.71427, 'longitude': -74.00597}, {'city': 'Borough of Queens', 'state': 'NY', 'radius': 50, 'order': 3, 'latitude': 40.68149, 'longitude': -73.83652}, {'city': 'Manhattan', 'state': 'NY', 'radius': 50, 'order': 4, 'latitude': 40.71427, 'longitude': -74.00597}, {'city': 'Staten Island', 'state': 'NY', 'radius': 50, 'order': 5, 'latitude': 40.56233, 'longitude': -74.13986}, {'city': 'Newark', 'state': 'NJ', 'radius': 50, 'order': 6, 'latitude': 40.73566, 'longitude': -74.17237}, {'city': 'Jersey City', 'state': 'NJ', 'radius': 50, 'order': 7, 'latitude': 40.72816, 'longitude': -74.07764}, {'city': 'Jamaica', 'state': 'NY', 'radius': 50, 'order': 8, 'latitude': 40.69149, 'longitude': -73.80569}, {'city': 'East Flatbush', 'state': 'NY', 'radius': 50, 'order': 9, 'latitude': 40.65205, 'longitude': -73.95903}, {'city': 'East New York', 'state': 'NY', 'radius': 50, 'order': 10, 'latitude': 40.71427, 'longitude': -74.00597}]";
         serviceAreas = serviceAreas.replace(/'/g, '"');
         serviceAreas = JSON.parse(serviceAreas);
 
@@ -3265,7 +3265,7 @@
                                             name="address"
                                             id="contact-address"
                                             class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                                            placeholder="123 Main Street, Brooklyn, NY 14201"
+                                            placeholder="123 Main Street, Brooklyn, NY "
                                     />
                                 </div>
 
@@ -3279,7 +3279,7 @@
                                         <div class="flex flex-col space-y-2">
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168011" value="GO BUKS" id="contact-service-168011" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168029" value="GO BUKS" id="contact-service-168029" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 GO BUKS
@@ -3287,7 +3287,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168012" value="Cookin Some Chilli" id="contact-service-168012" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168030" value="Cookin Some Chilli" id="contact-service-168030" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Cookin Some Chilli
@@ -3295,7 +3295,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168013" value="Driveway Design & Build" id="contact-service-168013" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168031" value="Driveway Design & Build" id="contact-service-168031" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Driveway Design & Build
@@ -3303,7 +3303,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168014" value="Fall and Spring Clean Up" id="contact-service-168014" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168032" value="Fall and Spring Clean Up" id="contact-service-168032" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Fall and Spring Clean Up
@@ -3311,7 +3311,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168015" value="Cheese Making" id="contact-service-168015" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168033" value="Cheese Making" id="contact-service-168033" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Cheese Making
@@ -3319,7 +3319,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168016" value="Stone Wall Installation" id="contact-service-168016" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168034" value="Stone Wall Installation" id="contact-service-168034" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Stone Wall Installation
@@ -3327,7 +3327,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168017" value="Professional Fertilization" id="contact-service-168017" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168035" value="Professional Fertilization" id="contact-service-168035" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Professional Fertilization
@@ -3335,7 +3335,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168018" value="Mowing" id="contact-service-168018" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168036" value="Mowing" id="contact-service-168036" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Mowing
@@ -3343,7 +3343,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168019" value="Gardening service edit" id="contact-service-168019" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168037" value="Gardening service edit" id="contact-service-168037" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Gardening service edit
@@ -3351,7 +3351,7 @@
                                             </div>
                                             
                                             <div class="flex items-center">
-                                                <input type="checkbox" name="168021" value="Moving april" id="contact-service-168021" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                <input type="checkbox" name="168038" value="Moving april" id="contact-service-168038" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                 />
                                                 <span class="ml-3 items-start">
                                                 Moving april
@@ -3439,121 +3439,121 @@
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168011"
-                                                    name="168011"
+                                                    id="contact-service-168029"
+                                                    name="168029"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="GO BUKS"
                                             />
-                                            <label for="contact-service-168011" class="ml-3 text-sm text-gray-600">GO BUKS</label>
+                                            <label for="contact-service-168029" class="ml-3 text-sm text-gray-600">GO BUKS</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168012"
-                                                    name="168012"
+                                                    id="contact-service-168030"
+                                                    name="168030"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Cookin Some Chilli"
                                             />
-                                            <label for="contact-service-168012" class="ml-3 text-sm text-gray-600">Cookin Some Chilli</label>
+                                            <label for="contact-service-168030" class="ml-3 text-sm text-gray-600">Cookin Some Chilli</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168013"
-                                                    name="168013"
+                                                    id="contact-service-168031"
+                                                    name="168031"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Driveway Design & Build"
                                             />
-                                            <label for="contact-service-168013" class="ml-3 text-sm text-gray-600">Driveway Design & Build</label>
+                                            <label for="contact-service-168031" class="ml-3 text-sm text-gray-600">Driveway Design & Build</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168014"
-                                                    name="168014"
+                                                    id="contact-service-168032"
+                                                    name="168032"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Fall and Spring Clean Up"
                                             />
-                                            <label for="contact-service-168014" class="ml-3 text-sm text-gray-600">Fall and Spring Clean Up</label>
+                                            <label for="contact-service-168032" class="ml-3 text-sm text-gray-600">Fall and Spring Clean Up</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168015"
-                                                    name="168015"
+                                                    id="contact-service-168033"
+                                                    name="168033"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Cheese Making"
                                             />
-                                            <label for="contact-service-168015" class="ml-3 text-sm text-gray-600">Cheese Making</label>
+                                            <label for="contact-service-168033" class="ml-3 text-sm text-gray-600">Cheese Making</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168016"
-                                                    name="168016"
+                                                    id="contact-service-168034"
+                                                    name="168034"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Stone Wall Installation"
                                             />
-                                            <label for="contact-service-168016" class="ml-3 text-sm text-gray-600">Stone Wall Installation</label>
+                                            <label for="contact-service-168034" class="ml-3 text-sm text-gray-600">Stone Wall Installation</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168017"
-                                                    name="168017"
+                                                    id="contact-service-168035"
+                                                    name="168035"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Professional Fertilization"
                                             />
-                                            <label for="contact-service-168017" class="ml-3 text-sm text-gray-600">Professional Fertilization</label>
+                                            <label for="contact-service-168035" class="ml-3 text-sm text-gray-600">Professional Fertilization</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168018"
-                                                    name="168018"
+                                                    id="contact-service-168036"
+                                                    name="168036"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mowing"
                                             />
-                                            <label for="contact-service-168018" class="ml-3 text-sm text-gray-600">Mowing</label>
+                                            <label for="contact-service-168036" class="ml-3 text-sm text-gray-600">Mowing</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168019"
-                                                    name="168019"
+                                                    id="contact-service-168037"
+                                                    name="168037"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Gardening service edit"
                                             />
-                                            <label for="contact-service-168019" class="ml-3 text-sm text-gray-600">Gardening service edit</label>
+                                            <label for="contact-service-168037" class="ml-3 text-sm text-gray-600">Gardening service edit</label>
                                         </div>
                                     
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-168021"
-                                                    name="168021"
+                                                    id="contact-service-168038"
+                                                    name="168038"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Moving april"
                                             />
-                                            <label for="contact-service-168021" class="ml-3 text-sm text-gray-600">Moving april</label>
+                                            <label for="contact-service-168038" class="ml-3 text-sm text-gray-600">Moving april</label>
                                         </div>
                                     
                                         
@@ -4225,6 +4225,76 @@
                   <div>
                       <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Service Areas</h3>
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    Brooklyn, NY
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    New York, NY
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    Borough of Queens, NY
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    Manhattan, NY
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    Staten Island, NY
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    Newark, NJ
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    Jersey City, NJ
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    Jamaica, NY
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    East Flatbush, NY
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75">
+                                    East New York, NY
+                                </span>
+                          </li>
                           
                       </ul>
                   </div>
