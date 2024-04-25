@@ -113,9 +113,9 @@
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmRfrd-TIN9w3e8kCV0SBK4zAY4KKOyHk&callback=afterGoogleMapsLoaded&libraries=places" defer></script>
     <script>
-        function afterGoogleMapsLoaded() {
+        async function afterGoogleMapsLoaded() {
             initAutocomplete && initAutocomplete()
-            initMap && initMap()
+            initMap && await initMap()
         }
         let autocomplete;
         let address1Field;
@@ -155,7 +155,7 @@
 
 <body
     class="xl:pt-44 pt-24 ease-in-out"
-    x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
+    x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen: false, showcasesModalOpen: false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
@@ -635,6 +635,25 @@
                             >
                                 
                                     <a
+                                        href=" showcases "
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                    >
+                                        Showcases 
+                                    </a>
+                                
+                                
+                                
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" reviews "
                                         class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
@@ -996,6 +1015,17 @@
                                     
                                 </div>
                             
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" showcases "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Showcases</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
                                 <div x-trap.inert="openMenu == 'navitem_4'">
                                     
                                         <a
@@ -1250,39 +1280,7 @@
         
             
                 
-
-                    
                 
-                
-            
-        
-            
-                
-
-                    
-                
-                
-            
-        
-            
-                
-
-                    
-                
-                
-            
-        
-            
-                
-
-                    
-                
-                
-            
-        
-            
-                
-
                     
                 
                 
@@ -1291,11 +1289,43 @@
             
                 
                 
+                    
+                
+                
             
         
             
                 
-
+                
+                    
+                
+                
+            
+        
+            
+                
+                
+                    
+                
+                
+            
+        
+            
+                
+                
+                    
+                
+                
+            
+        
+            
+                
+                
+            
+        
+            
+                
+                
                     
                         <section>
     <div
@@ -2014,6 +2044,14 @@
             
         
             
+                
+                
+            
+        
+            
+                
+                
+                    
                 
                 
             

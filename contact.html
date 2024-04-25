@@ -113,9 +113,9 @@
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmRfrd-TIN9w3e8kCV0SBK4zAY4KKOyHk&callback=afterGoogleMapsLoaded&libraries=places" defer></script>
     <script>
-        function afterGoogleMapsLoaded() {
+        async function afterGoogleMapsLoaded() {
             initAutocomplete && initAutocomplete()
-            initMap && initMap()
+            initMap && await initMap()
         }
         let autocomplete;
         let address1Field;
@@ -155,7 +155,7 @@
 
 <body
     class="xl:pt-44 pt-24 ease-in-out"
-    x-data="{ contactModalOpen: true, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
+    x-data="{ contactModalOpen: true, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen: false, showcasesModalOpen: false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
@@ -703,6 +703,25 @@
                             >
                                 
                                     <a
+                                        href=" showcases "
+                                        class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
+                                    >
+                                        Showcases 
+                                    </a>
+                                
+                                
+                                
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
                                         href=" reviews "
                                         class=" border-transparent hover:border-gray-300 hover:text-gray-700 text-gray-500  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  text-gray-500  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 uppercase"
                                     >
@@ -1061,6 +1080,17 @@
                                                 
                                             </div>
                                         </div>
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" showcases "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Showcases</a
+                                        >
+                                    
                                     
                                 </div>
                             
@@ -4836,6 +4866,8 @@ function filterGalleryByDataId(filter) {
     </div>
 </section>
 
+<script id="serviceAreas" type="application/json">[{"city": "Newark", "state": "NJ", "radius": 50, "order": 6, "latitude": 40.73566, "longitude": -74.17237}]</script>
+
 <script>
     async function coordinate(url) {
         const res = await fetch(url)
@@ -4853,9 +4885,7 @@ function filterGalleryByDataId(filter) {
 
         const coordinates = [];
 
-        let serviceAreas = "[{'city': 'Newark', 'state': 'NJ', 'radius': 50, 'order': 6, 'latitude': 40.73566, 'longitude': -74.17237}]";
-        serviceAreas = serviceAreas.replace(/'/g, '"');
-        serviceAreas = JSON.parse(serviceAreas);
+        let serviceAreas = JSON.parse(document.getElementById('serviceAreas').textContent);
 
         for (const service_area of serviceAreas || []) {
             if (service_area?.latitude && service_area?.longitude) {
@@ -6120,6 +6150,16 @@ function filterGalleryByDataId(filter) {
     </div>
 </template>
 
+                
+            
+        
+            
+
+
+                
+
+                
+                
                 
             
         

@@ -113,9 +113,9 @@
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmRfrd-TIN9w3e8kCV0SBK4zAY4KKOyHk&callback=afterGoogleMapsLoaded&libraries=places" defer></script>
     <script>
-        function afterGoogleMapsLoaded() {
+        async function afterGoogleMapsLoaded() {
             initAutocomplete && initAutocomplete()
-            initMap && initMap()
+            initMap && await initMap()
         }
         let autocomplete;
         let address1Field;
@@ -155,7 +155,7 @@
 
 <body
     
-    x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen:false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
+    x-data="{ contactModalOpen: false, applyModalOpen: false, reviewModalOpen: false, textModalOpen: false, galleryModalOpen: false, showcasesModalOpen: false, scrolledFromTop: false, contactChatOpen: false, active: 0, showAnnouncement: false, announcementHeight: 0, showMessage: false }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ marginTop: showAnnouncement ? announcementHeight : 0, transition: showAnnouncement ? 'margin 0ms' : 'margin 700ms' }"
     
@@ -6433,6 +6433,8 @@
     </div>
 </section>
 
+<script id="serviceAreas" type="application/json">[{"city": "Newark", "state": "NJ", "radius": 50, "order": 6, "latitude": 40.73566, "longitude": -74.17237}]</script>
+
 <script>
     async function coordinate(url) {
         const res = await fetch(url)
@@ -6450,9 +6452,7 @@
 
         const coordinates = [];
 
-        let serviceAreas = "[{'city': 'Newark', 'state': 'NJ', 'radius': 50, 'order': 6, 'latitude': 40.73566, 'longitude': -74.17237}]";
-        serviceAreas = serviceAreas.replace(/'/g, '"');
-        serviceAreas = JSON.parse(serviceAreas);
+        let serviceAreas = JSON.parse(document.getElementById('serviceAreas').textContent);
 
         for (const service_area of serviceAreas || []) {
             if (service_area?.latitude && service_area?.longitude) {
