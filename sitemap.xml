@@ -109,20 +109,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
-        <lastmod>2024-04-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-New-gallery-April-</loc>
-        <lastmod>2024-04-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-Cheesegirl</loc>
         <lastmod>2024-04-30</lastmod>
         <changefreq>weekly</changefreq>
@@ -166,6 +152,20 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-internal-gallery</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-gallery-desktop</loc>
         <lastmod>2024-04-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
