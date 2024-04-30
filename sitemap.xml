@@ -74,6 +74,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-Mowing</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/jobs</loc>
         <lastmod>2024-04-30</lastmod>
         <changefreq>weekly</changefreq>
@@ -96,6 +103,20 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-All</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
+        <lastmod>2024-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-New-gallery-April-</loc>
         <lastmod>2024-04-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -145,20 +166,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-internal-gallery</loc>
-        <lastmod>2024-04-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
-        <lastmod>2024-04-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-New-gallery-April-</loc>
         <lastmod>2024-04-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
