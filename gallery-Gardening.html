@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/f98174fc-7509-41aa-b34c-e646de0836b6.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/276dc3b5-7440-4662-a4cb-46fdd8699457.jpeg");
       background-size: cover;
   }
   
@@ -1342,7 +1342,7 @@
                         <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 4,
+        amountOfImages: 5,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1370,7 +1370,7 @@
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
-                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f98174fc-7509-41aa-b34c-e646de0836b6.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/276dc3b5-7440-4662-a4cb-46fdd8699457.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                     
                                 
                             </div>
@@ -1394,7 +1394,7 @@
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
-                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/67d044b1-04e2-499a-9062-6e57566da9e8.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f98174fc-7509-41aa-b34c-e646de0836b6.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                     
                                 
                             </div>
@@ -1418,7 +1418,7 @@
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     
-                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/17936a5b-f629-4cc2-b4e5-50fffd104a39.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/67d044b1-04e2-499a-9062-6e57566da9e8.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                     
                                 
                             </div>
@@ -1436,6 +1436,30 @@
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
                         @click="activeImage = 3; galleryModalOpen = true"
+                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                    >
+                        
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                    
+                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/17936a5b-f629-4cc2-b4e5-50fffd104a39.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                    
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li data-id="gallery_media" data-gallery="Gardening" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button
+                        @click="activeImage = 4; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -1502,7 +1526,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f98174fc-7509-41aa-b34c-e646de0836b6.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/276dc3b5-7440-4662-a4cb-46fdd8699457.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1511,7 +1535,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/67d044b1-04e2-499a-9062-6e57566da9e8.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f98174fc-7509-41aa-b34c-e646de0836b6.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1520,13 +1544,22 @@
                                 <li class="flex flex-col" x-show="activeImage === 2">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/17936a5b-f629-4cc2-b4e5-50fffd104a39.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/67d044b1-04e2-499a-9062-6e57566da9e8.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 3">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/17936a5b-f629-4cc2-b4e5-50fffd104a39.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 4">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/75eff9ca-fd6a-40c6-8ecc-94b090fff3c4.jpeg" alt="Gardening for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
