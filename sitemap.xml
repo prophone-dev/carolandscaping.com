@@ -53,14 +53,21 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Gardening-mobile</loc>
+        <loc>https://carolandscaping.com/service-Snow-Removal</loc>
         <lastmod>2024-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Snow-Removal</loc>
+        <loc>https://carolandscaping.com/service-Landscaping</loc>
+        <lastmod>2024-05-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Mulching</loc>
         <lastmod>2024-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -187,6 +194,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
+        <lastmod>2024-05-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Test-Google</loc>
         <lastmod>2024-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
