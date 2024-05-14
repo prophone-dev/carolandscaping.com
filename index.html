@@ -459,6 +459,8 @@
                                                     
                                                         
                                                     
+                                                        
+                                                    
                                                 </div>
                                                 <div class="flex-1">
                                                     
@@ -523,6 +525,16 @@
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
                                                             <p class="mt-1 text-base font-medium uppercase">Testing service creation</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-snow-removal "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Snow Removal</p>
                                                         </a>
                                                         
                                                     
@@ -691,7 +703,7 @@
                                                     
                                                         
                                                         <a
-                                                            href=" gallery- "
+                                                            href=" gallery-New-Gallery "
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
@@ -1026,6 +1038,10 @@
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Testing service creation</p>
                                                     </a>
                                                 
+                                                    <a href="service-snow-removal" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Snow Removal</p>
+                                                    </a>
+                                                
                                                     <a href="service-gardening" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Gardening mobile</p>
                                                     </a>
@@ -1102,7 +1118,7 @@
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">May</p>
                                                     </a>
                                                 
-                                                    <a href="gallery-" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                    <a href="gallery-New-Gallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery</p>
                                                     </a>
                                                 
@@ -1719,7 +1735,7 @@
                         <li class="list-decimal list-inside">test</li>
                       </ol> -->
                       <p class="mt-6 text-xl quill">
-                        At Beantown Tutoring & Cheese making, we pride ourselves on providing top-notch landscaping services in Brooklyn and the surrounding areas. With a team of skilled professionals, we design and maintain beautiful outdoor spaces that enhance the beauty and functionality of your property. Trust us to transform your space into a lush oasis.
+                        At Beantown Tutoring & Cheese making, we pride ourselves on providing top-notch landscaping services in Brooklyn and the surrounding areas. With a team of skilled professionals, we design and maintain beautiful outdoor spaces that enhance the beauty and functionality of your property. Trust us to transform your space into a lush oasis. test
                       </p>
                   </div>
                   <footer class="mt-6">
@@ -2426,6 +2442,45 @@
                                 decoding="async"
                                 width="250" height="250"
                             />
+                            
+                        </a>
+                    </li>
+                
+                    <li
+                        x-transition
+                        style="perspective: 800px"
+                        class="group service-item "
+                    >
+                        <a
+                            href="service-snow-removal"
+                            style="transform-style: preserve-3d"
+                            class="text-center relative block overflow-hidden transition duration-500  rotate-y-0 sm:rotate-y-0 sm:group-hover:rotate-y-180 aspect-w-16 aspect-h-9 sm:aspect-w-1 sm:aspect-h-1 rounded-2xl focus:ring-2 focus:outline-none ring-primary ring-offset-2"
+                            aria-label="Snow Removal"
+                        >
+                            <div aria-hidden="true" class="absolute px-4 inset-0 z-20 items-center justify-center hidden text-white sm:flex">
+                                <span class="text-2xl font-medium transition duration-500 group-hover:opacity-0">Snow Removal</span>
+                            </div>
+                            <div aria-hidden="true" class="absolute inset-0 z-20 flex flex-col items-center px-4 pb-3 text-white pt-7 sm:group-hover:rotate-y-180 sm:transition sm:duration-500">
+                                <span class="text-2xl z-20 font-medium transition duration-500 sm:opacity-0 group-hover:opacity-100">Snow Removal</span>
+                                <p class="text-lg z-20 block mt-1.5 line-clamp-8 sm:line-clamp-7 font-medium leading-6 text-center transition duration-500 sm:opacity-0 group-hover:opacity-100" style="display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;">
+                                    Ensure your home stays safe and accessible during winter with our expert snow removal service. Our team will swiftly clear your driveway and walkways, leaving you worry-free all season long.
+                                </p>
+                            </div>
+
+                            <div style="opacity:0%;" aria-hidden="true" class="absolute inset-0 z-10 bg-secondary"></div>
+                            
+                                
+                                <img
+                                    class="object-cover "
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/300x300/filters:strip_exif()/filters:no_upscale()/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png"
+                                    alt="Ensure your home stays safe and accessible during winter with our expert snow removal service. Our team will swiftly clear your driveway and walkways, leaving you worry-free all season long. for Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="250" height="250"
+                                />
+                                
+
+
                             
                         </a>
                     </li>
@@ -5825,7 +5880,7 @@ function filterGalleryByDataId(filter) {
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="51642"
+                                aria-controls="51656"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What is our business <strong>hours?﻿</strong></p></span>
@@ -5844,7 +5899,7 @@ function filterGalleryByDataId(filter) {
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51642">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51656">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill">We are open every (262) 957-4136 weekday from<strong> 9-5﻿</strong></p>
                         </dd>
@@ -5856,7 +5911,7 @@ function filterGalleryByDataId(filter) {
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="51643"
+                                aria-controls="51657"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill">What types of landscaping services do you offer ?</span>
@@ -5875,7 +5930,7 @@ function filterGalleryByDataId(filter) {
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51643">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51657">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill">some (262) 957-4136</p>
                         </dd>
@@ -5887,7 +5942,7 @@ function filterGalleryByDataId(filter) {
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="51644"
+                                aria-controls="51658"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
@@ -5906,7 +5961,7 @@ function filterGalleryByDataId(filter) {
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51644">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51658">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill">(262) 957-4136 some</p>
                         </dd>
@@ -5918,7 +5973,7 @@ function filterGalleryByDataId(filter) {
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="51645"
+                                aria-controls="51659"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What type of landscaping services do you offer</p></span>
@@ -5937,7 +5992,7 @@ function filterGalleryByDataId(filter) {
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51645">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51659">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill">We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p>
                         </dd>
@@ -5949,7 +6004,7 @@ function filterGalleryByDataId(filter) {
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="51646"
+                                aria-controls="51660"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white quill"><p>What is your pricing</p></span>
@@ -5968,7 +6023,7 @@ function filterGalleryByDataId(filter) {
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51646">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12 quill" id="51660">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100 quill">We offer competitive pricing and free estimates.</p>
                         </dd>
@@ -6437,6 +6492,14 @@ function filterGalleryByDataId(filter) {
                           
                           <li>
                               <a
+                                  href="service-snow-removal"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Snow Removal</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
                                   href="service-gardening"
                                   class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Gardening mobile</a
@@ -6486,7 +6549,7 @@ function filterGalleryByDataId(filter) {
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
                         
                             <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
-                                Sun: <br class="sm:hidden" /> Closed 
+                                Sun: <br class="sm:hidden" /> 10:02am - 10:03pm 
                             </li>
                         
                             <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
@@ -6510,7 +6573,7 @@ function filterGalleryByDataId(filter) {
                             </li>
                         
                             <li class="p-1 text-sm sm:text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75" style="white-space: nowrap">
-                                Sat: <br class="sm:hidden" /> Closed 
+                                Sat: <br class="sm:hidden" /> 5:00am - 6:00pm 
                             </li>
                         
                       </ul>
