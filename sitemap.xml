@@ -221,6 +221,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-1111</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-test-name-123</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>weekly</changefreq>
