@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/032f3d7a-b06e-4df1-adca-061105617ba6.mp4");
       background-size: cover;
   }
   
@@ -2930,7 +2930,7 @@
                 <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 78,
+        amountOfImages: 81,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -2958,7 +2958,7 @@
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
-                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4#t=0.5">
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/032f3d7a-b06e-4df1-adca-061105617ba6.mp4#t=0.5">
                                         Your browser does not support the video tag.
                                     </video>
                                 
@@ -2983,6 +2983,81 @@
                             <div class="aspect-w-3 aspect-h-2">
                                 
                                     <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d4f0fd20-51fd-46f7-ade8-1159c4f29194.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button
+                        @click="activeImage = 2; galleryModalOpen = true"
+                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                    >
+                        
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                    <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/fa222428-b1b5-4f66-acda-ee19050d08e6.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button
+                        @click="activeImage = 3; galleryModalOpen = true"
+                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                    >
+                        
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                    <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button
+                        @click="activeImage = 4; galleryModalOpen = true"
+                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                    >
+                        
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                    <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e642a67f-fc1d-4731-9f39-638fa8a56898.mp4#t=0.5">
                                         Your browser does not support the video tag.
                                     </video>
@@ -3001,7 +3076,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 2; galleryModalOpen = true"
+                        @click="activeImage = 5; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3025,7 +3100,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 3; galleryModalOpen = true"
+                        @click="activeImage = 6; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3049,7 +3124,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 4; galleryModalOpen = true"
+                        @click="activeImage = 7; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3073,7 +3148,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 5; galleryModalOpen = true"
+                        @click="activeImage = 8; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3097,7 +3172,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 6; galleryModalOpen = true"
+                        @click="activeImage = 9; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3121,7 +3196,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 7; galleryModalOpen = true"
+                        @click="activeImage = 10; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3145,7 +3220,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 8; galleryModalOpen = true"
+                        @click="activeImage = 11; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3169,7 +3244,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 9; galleryModalOpen = true"
+                        @click="activeImage = 12; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3193,7 +3268,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 10; galleryModalOpen = true"
+                        @click="activeImage = 13; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3217,7 +3292,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 11; galleryModalOpen = true"
+                        @click="activeImage = 14; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3241,7 +3316,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 12; galleryModalOpen = true"
+                        @click="activeImage = 15; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3265,7 +3340,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 13; galleryModalOpen = true"
+                        @click="activeImage = 16; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3289,7 +3364,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 14; galleryModalOpen = true"
+                        @click="activeImage = 17; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3313,7 +3388,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 15; galleryModalOpen = true"
+                        @click="activeImage = 18; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3337,7 +3412,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 16; galleryModalOpen = true"
+                        @click="activeImage = 19; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3361,7 +3436,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 17; galleryModalOpen = true"
+                        @click="activeImage = 20; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3385,7 +3460,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 18; galleryModalOpen = true"
+                        @click="activeImage = 21; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3409,7 +3484,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 19; galleryModalOpen = true"
+                        @click="activeImage = 22; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3433,7 +3508,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 20; galleryModalOpen = true"
+                        @click="activeImage = 23; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3457,7 +3532,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 21; galleryModalOpen = true"
+                        @click="activeImage = 24; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3481,7 +3556,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 22; galleryModalOpen = true"
+                        @click="activeImage = 25; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3505,7 +3580,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 23; galleryModalOpen = true"
+                        @click="activeImage = 26; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3529,7 +3604,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 24; galleryModalOpen = true"
+                        @click="activeImage = 27; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3554,7 +3629,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 25; galleryModalOpen = true"
+                        @click="activeImage = 28; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3578,7 +3653,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 26; galleryModalOpen = true"
+                        @click="activeImage = 29; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3602,7 +3677,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 27; galleryModalOpen = true"
+                        @click="activeImage = 30; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3627,7 +3702,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 28; galleryModalOpen = true"
+                        @click="activeImage = 31; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3651,7 +3726,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 29; galleryModalOpen = true"
+                        @click="activeImage = 32; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3675,7 +3750,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 30; galleryModalOpen = true"
+                        @click="activeImage = 33; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3700,7 +3775,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 31; galleryModalOpen = true"
+                        @click="activeImage = 34; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3724,7 +3799,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 32; galleryModalOpen = true"
+                        @click="activeImage = 35; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3748,7 +3823,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 33; galleryModalOpen = true"
+                        @click="activeImage = 36; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3772,7 +3847,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 34; galleryModalOpen = true"
+                        @click="activeImage = 37; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3796,7 +3871,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 35; galleryModalOpen = true"
+                        @click="activeImage = 38; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3821,7 +3896,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 36; galleryModalOpen = true"
+                        @click="activeImage = 39; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3845,7 +3920,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 37; galleryModalOpen = true"
+                        @click="activeImage = 40; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3870,7 +3945,7 @@
             <li data-id="gallery_media" data-gallery="Gardening" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 38; galleryModalOpen = true"
+                        @click="activeImage = 41; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3894,7 +3969,7 @@
             <li data-id="gallery_media" data-gallery="Gardening" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 39; galleryModalOpen = true"
+                        @click="activeImage = 42; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3918,7 +3993,7 @@
             <li data-id="gallery_media" data-gallery="Gardening" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 40; galleryModalOpen = true"
+                        @click="activeImage = 43; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3942,7 +4017,7 @@
             <li data-id="gallery_media" data-gallery="Gardening" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 41; galleryModalOpen = true"
+                        @click="activeImage = 44; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3966,7 +4041,7 @@
             <li data-id="gallery_media" data-gallery="Gardening" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 42; galleryModalOpen = true"
+                        @click="activeImage = 45; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -3990,7 +4065,7 @@
             <li data-id="gallery_media" data-gallery="Empty" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 43; galleryModalOpen = true"
+                        @click="activeImage = 46; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4014,7 +4089,7 @@
             <li data-id="gallery_media" data-gallery="gallery desktop" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 44; galleryModalOpen = true"
+                        @click="activeImage = 47; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4038,7 +4113,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 45; galleryModalOpen = true"
+                        @click="activeImage = 48; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4062,7 +4137,7 @@
             <li data-id="gallery_media" data-gallery="gallery mobile" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 46; galleryModalOpen = true"
+                        @click="activeImage = 49; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4086,7 +4161,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 47; galleryModalOpen = true"
+                        @click="activeImage = 50; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4111,7 +4186,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 48; galleryModalOpen = true"
+                        @click="activeImage = 51; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4135,7 +4210,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 49; galleryModalOpen = true"
+                        @click="activeImage = 52; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4159,7 +4234,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 50; galleryModalOpen = true"
+                        @click="activeImage = 53; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4183,7 +4258,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 51; galleryModalOpen = true"
+                        @click="activeImage = 54; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4208,7 +4283,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 52; galleryModalOpen = true"
+                        @click="activeImage = 55; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4232,7 +4307,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 53; galleryModalOpen = true"
+                        @click="activeImage = 56; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4256,7 +4331,7 @@
             <li data-id="gallery_media" data-gallery="internal gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 54; galleryModalOpen = true"
+                        @click="activeImage = 57; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4280,7 +4355,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 55; galleryModalOpen = true"
+                        @click="activeImage = 58; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4304,7 +4379,7 @@
             <li data-id="gallery_media" data-gallery="gallery mobile" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 56; galleryModalOpen = true"
+                        @click="activeImage = 59; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4328,7 +4403,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 57; galleryModalOpen = true"
+                        @click="activeImage = 60; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4352,7 +4427,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 58; galleryModalOpen = true"
+                        @click="activeImage = 61; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4376,7 +4451,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 59; galleryModalOpen = true"
+                        @click="activeImage = 62; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4400,7 +4475,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 60; galleryModalOpen = true"
+                        @click="activeImage = 63; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4424,7 +4499,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 61; galleryModalOpen = true"
+                        @click="activeImage = 64; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4448,7 +4523,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 62; galleryModalOpen = true"
+                        @click="activeImage = 65; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4472,7 +4547,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 63; galleryModalOpen = true"
+                        @click="activeImage = 66; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4496,7 +4571,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 64; galleryModalOpen = true"
+                        @click="activeImage = 67; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4520,7 +4595,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 65; galleryModalOpen = true"
+                        @click="activeImage = 68; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4545,7 +4620,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 66; galleryModalOpen = true"
+                        @click="activeImage = 69; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4569,7 +4644,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 67; galleryModalOpen = true"
+                        @click="activeImage = 70; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4593,7 +4668,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 68; galleryModalOpen = true"
+                        @click="activeImage = 71; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4617,7 +4692,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 69; galleryModalOpen = true"
+                        @click="activeImage = 72; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4641,7 +4716,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 70; galleryModalOpen = true"
+                        @click="activeImage = 73; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4665,7 +4740,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 71; galleryModalOpen = true"
+                        @click="activeImage = 74; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4689,7 +4764,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 72; galleryModalOpen = true"
+                        @click="activeImage = 75; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4713,7 +4788,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 73; galleryModalOpen = true"
+                        @click="activeImage = 76; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4738,7 +4813,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 74; galleryModalOpen = true"
+                        @click="activeImage = 77; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4762,7 +4837,7 @@
             <li data-id="gallery_media" data-gallery="" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 75; galleryModalOpen = true"
+                        @click="activeImage = 78; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4786,7 +4861,7 @@
             <li data-id="gallery_media" data-gallery="instagram" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 76; galleryModalOpen = true"
+                        @click="activeImage = 79; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4810,7 +4885,7 @@
             <li data-id="gallery_media" data-gallery="hanna test" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
-                        @click="activeImage = 77; galleryModalOpen = true"
+                        @click="activeImage = 80; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -4877,7 +4952,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
-                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4#t=0.5">
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/032f3d7a-b06e-4df1-adca-061105617ba6.mp4#t=0.5">
                                         Your browser does not support the video tag.
                                     </video>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4887,7 +4962,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
-                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e642a67f-fc1d-4731-9f39-638fa8a56898.mp4#t=0.5">
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d4f0fd20-51fd-46f7-ade8-1159c4f29194.mp4#t=0.5">
                                         Your browser does not support the video tag.
                                     </video>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4896,35 +4971,38 @@
                                 
                                 <li class="flex flex-col" x-show="activeImage === 2">
                                     
-                                        
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a89e263a-ed50-4516-a5b3-147fdb323f57.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
+                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/fa222428-b1b5-4f66-acda-ee19050d08e6.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 3">
                                     
-                                        
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/accc878d-42bb-4cc1-9ee5-c6cc314624e2.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
+                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 4">
                                     
-                                        
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/81d1bb95-38ff-4df9-b4e0-c5e212fcf4ad.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
+                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e642a67f-fc1d-4731-9f39-638fa8a56898.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 5">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/4313731f-b564-4557-af94-efecde05c749.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a89e263a-ed50-4516-a5b3-147fdb323f57.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -4933,7 +5011,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 6">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/08564818-b263-4701-b2df-fb8221ff8670.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/accc878d-42bb-4cc1-9ee5-c6cc314624e2.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -4942,7 +5020,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 7">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e4e66f65-7659-46c9-89bc-3b13570a0c33.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/81d1bb95-38ff-4df9-b4e0-c5e212fcf4ad.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -4951,7 +5029,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 8">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/de7f409a-8b45-44da-983e-542c37e8c1d0.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/4313731f-b564-4557-af94-efecde05c749.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -4960,7 +5038,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 9">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/07b440ef-877d-412a-8c21-0b3b6a7ee996.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/08564818-b263-4701-b2df-fb8221ff8670.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -4969,7 +5047,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 10">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e5a69952-28a1-43c8-b7a5-b27ff57d13eb.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e4e66f65-7659-46c9-89bc-3b13570a0c33.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -4978,7 +5056,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 11">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/d5f3e1d5-38df-45fb-98ad-3f060d2fcd6d.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/de7f409a-8b45-44da-983e-542c37e8c1d0.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -4987,7 +5065,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 12">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/1df8f291-3730-4d3c-a596-525fc2d17996.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/07b440ef-877d-412a-8c21-0b3b6a7ee996.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -4996,7 +5074,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 13">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/93430fae-0e05-4049-bc97-800cf2b0943f.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e5a69952-28a1-43c8-b7a5-b27ff57d13eb.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5005,7 +5083,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 14">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/967850f3-9102-4b95-8756-3be39b7fea47.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/d5f3e1d5-38df-45fb-98ad-3f060d2fcd6d.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5014,7 +5092,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 15">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/36c52583-a566-4a52-ad17-18e50ad28587.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/1df8f291-3730-4d3c-a596-525fc2d17996.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5023,7 +5101,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 16">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/525ad99f-1b6b-49ec-8267-941bac2b81d2.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/93430fae-0e05-4049-bc97-800cf2b0943f.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5032,7 +5110,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 17">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/aa151742-f691-45c8-8974-b9f3a874a37d.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/967850f3-9102-4b95-8756-3be39b7fea47.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5041,7 +5119,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 18">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/87ea8669-6003-4519-ae6c-98b18ea18a94.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/36c52583-a566-4a52-ad17-18e50ad28587.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5050,7 +5128,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 19">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/674f1ffd-2a30-4a83-b7b8-a595c903c60f.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/525ad99f-1b6b-49ec-8267-941bac2b81d2.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5059,7 +5137,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 20">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/249ea7ee-e347-422a-b5de-447c37a55889.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/aa151742-f691-45c8-8974-b9f3a874a37d.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5068,7 +5146,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 21">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/300e2b6e-d31e-45af-adc1-7a387841c773.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/87ea8669-6003-4519-ae6c-98b18ea18a94.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5077,7 +5155,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 22">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/98d435a6-2e4d-4128-9b16-0133a26b82fa.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/674f1ffd-2a30-4a83-b7b8-a595c903c60f.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -5086,13 +5164,40 @@
                                 <li class="flex flex-col" x-show="activeImage === 23">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f97cf6fa-cb39-444a-a460-e5526c47440f.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/249ea7ee-e347-422a-b5de-447c37a55889.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 24">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/300e2b6e-d31e-45af-adc1-7a387841c773.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 25">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/98d435a6-2e4d-4128-9b16-0133a26b82fa.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 26">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f97cf6fa-cb39-444a-a460-e5526c47440f.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 27">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d6cfb207-f466-4bf6-a794-8b5e01df135d.mp4#t=0.5">
@@ -5102,7 +5207,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 25">
+                                <li class="flex flex-col" x-show="activeImage === 28">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/11fece32-8706-41b4-83c6-b652119b489d.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5111,7 +5216,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 26">
+                                <li class="flex flex-col" x-show="activeImage === 29">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a3ecbb28-33e6-4d7f-845f-407852cd314a.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5120,7 +5225,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 27">
+                                <li class="flex flex-col" x-show="activeImage === 30">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a6fb34a1-1bc6-4dc9-b6d6-63fafb307e0d.mp4#t=0.5">
@@ -5130,7 +5235,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 28">
+                                <li class="flex flex-col" x-show="activeImage === 31">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/c9ccb592-ecbc-45b6-92e6-58bb53a86749.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5139,7 +5244,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 29">
+                                <li class="flex flex-col" x-show="activeImage === 32">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3a8a98e3-3339-4c79-bab6-200b682b3287.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5148,7 +5253,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 30">
+                                <li class="flex flex-col" x-show="activeImage === 33">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3ba2e15e-3024-4d20-85d2-192f0c52e192.mp4#t=0.5">
@@ -5158,7 +5263,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 31">
+                                <li class="flex flex-col" x-show="activeImage === 34">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/c9c1dbc0-99c8-45f8-8fb7-0fe599ca4134.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5167,7 +5272,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 32">
+                                <li class="flex flex-col" x-show="activeImage === 35">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/2c49f6f3-1988-4590-828e-da7926b8ed0e.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5176,7 +5281,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 33">
+                                <li class="flex flex-col" x-show="activeImage === 36">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/122b0fcf-f150-4c8e-b998-992c2669ce7d.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5185,7 +5290,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 34">
+                                <li class="flex flex-col" x-show="activeImage === 37">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/127676f6-a4bd-4cb6-9ca7-33302e6679a1.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5194,7 +5299,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 35">
+                                <li class="flex flex-col" x-show="activeImage === 38">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/cb36fabb-83c6-430c-807f-0551cd878563.mp4#t=0.5">
@@ -5204,7 +5309,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 36">
+                                <li class="flex flex-col" x-show="activeImage === 39">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a10ee200-08d2-465b-9392-faf9efec686d.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5213,7 +5318,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 37">
+                                <li class="flex flex-col" x-show="activeImage === 40">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a4bd8da4-f79e-41b8-a1df-17a9a13bbe9e.mp4#t=0.5">
@@ -5223,7 +5328,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 38">
+                                <li class="flex flex-col" x-show="activeImage === 41">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/276dc3b5-7440-4662-a4cb-46fdd8699457.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5232,7 +5337,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 39">
+                                <li class="flex flex-col" x-show="activeImage === 42">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f98174fc-7509-41aa-b34c-e646de0836b6.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5241,7 +5346,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 40">
+                                <li class="flex flex-col" x-show="activeImage === 43">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/67d044b1-04e2-499a-9062-6e57566da9e8.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5250,7 +5355,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 41">
+                                <li class="flex flex-col" x-show="activeImage === 44">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/17936a5b-f629-4cc2-b4e5-50fffd104a39.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5259,7 +5364,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 42">
+                                <li class="flex flex-col" x-show="activeImage === 45">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/75eff9ca-fd6a-40c6-8ecc-94b090fff3c4.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5268,7 +5373,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 43">
+                                <li class="flex flex-col" x-show="activeImage === 46">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/6c9bd282-9342-4f04-acc6-dbeb9ebbd5a5.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5277,7 +5382,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 44">
+                                <li class="flex flex-col" x-show="activeImage === 47">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/15715932-2123-44a2-ad87-471d1f58c4d0.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5286,7 +5391,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 45">
+                                <li class="flex flex-col" x-show="activeImage === 48">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7afce4eb-c2b3-41de-b6ca-19b06180ef63.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5295,7 +5400,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 46">
+                                <li class="flex flex-col" x-show="activeImage === 49">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ce404d42-1e75-4ab9-912b-ec3c2ed991d2.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5304,7 +5409,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 47">
+                                <li class="flex flex-col" x-show="activeImage === 50">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/98c6e571-7e3f-4c6e-b1bd-ac42c7627ba7.mp4#t=0.5">
@@ -5314,7 +5419,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 48">
+                                <li class="flex flex-col" x-show="activeImage === 51">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/85b6d319-ad6c-4dfa-bd57-12b3043d6f2c.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5323,7 +5428,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 49">
+                                <li class="flex flex-col" x-show="activeImage === 52">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/388155b9-2615-4e19-8307-e3cd0dff4d90.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5332,7 +5437,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 50">
+                                <li class="flex flex-col" x-show="activeImage === 53">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/fe254e5b-c2f8-4652-a764-ac0f9ee63c43.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5341,7 +5446,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 51">
+                                <li class="flex flex-col" x-show="activeImage === 54">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/786c7fc1-723a-4eee-a281-060336c3a581.mp4#t=0.5">
@@ -5351,7 +5456,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 52">
+                                <li class="flex flex-col" x-show="activeImage === 55">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/99a3204d-01e0-469d-914d-9169cda5dbfb.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5360,7 +5465,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 53">
+                                <li class="flex flex-col" x-show="activeImage === 56">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/295e15da-4c0e-4211-8079-fe0174b7808b.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5369,7 +5474,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 54">
+                                <li class="flex flex-col" x-show="activeImage === 57">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cd76049b-3665-463b-94d9-742378621535.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5378,7 +5483,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 55">
+                                <li class="flex flex-col" x-show="activeImage === 58">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/56303293-3bd2-4df4-ba92-67ddb0200b1a.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5387,7 +5492,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 56">
+                                <li class="flex flex-col" x-show="activeImage === 59">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cbeba86b-e041-41de-9f61-ea0b11dc61d1.jpeg" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5396,7 +5501,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 57">
+                                <li class="flex flex-col" x-show="activeImage === 60">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f51841fc-d5cb-48a7-8c28-92df4baa67ba.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5405,7 +5510,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 58">
+                                <li class="flex flex-col" x-show="activeImage === 61">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/6f0ef246-7ed8-48ef-b750-70094f47c28c.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5414,7 +5519,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 59">
+                                <li class="flex flex-col" x-show="activeImage === 62">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0a8f0df4-2c6f-4d42-84b2-03d24d127661.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5423,7 +5528,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 60">
+                                <li class="flex flex-col" x-show="activeImage === 63">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/8d5a86b9-1bd0-483d-85f7-2f1bfd783cc8.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5432,7 +5537,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 61">
+                                <li class="flex flex-col" x-show="activeImage === 64">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/55159d58-31af-41a5-af8c-518be6b3554b.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5441,7 +5546,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 62">
+                                <li class="flex flex-col" x-show="activeImage === 65">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b6156ae-e538-41ae-9a61-ca9b880a9d63.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5450,7 +5555,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 63">
+                                <li class="flex flex-col" x-show="activeImage === 66">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9110db13-7fa8-4213-94f8-b253159571dc.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5459,7 +5564,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 64">
+                                <li class="flex flex-col" x-show="activeImage === 67">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/23ea1f93-3711-492d-bb69-d0654d79d787.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5468,7 +5573,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 65">
+                                <li class="flex flex-col" x-show="activeImage === 68">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9f0dfda6-8c0d-4294-8eab-db7a7f92df3c.mp4#t=0.5">
@@ -5478,7 +5583,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 66">
+                                <li class="flex flex-col" x-show="activeImage === 69">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5487,7 +5592,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 67">
+                                <li class="flex flex-col" x-show="activeImage === 70">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0cda229c-821c-4940-88ee-390d46a21080.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5496,7 +5601,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 68">
+                                <li class="flex flex-col" x-show="activeImage === 71">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/2fdeccfa-2f24-40be-8aa7-c081b1a3a411.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5505,7 +5610,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 69">
+                                <li class="flex flex-col" x-show="activeImage === 72">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a1c6c93f-2d9b-4a03-8a1b-c376e4e9b7bd.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5514,7 +5619,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 70">
+                                <li class="flex flex-col" x-show="activeImage === 73">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/6acaf156-ee48-4fd7-84b4-c387bbbb0639.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5523,7 +5628,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 71">
+                                <li class="flex flex-col" x-show="activeImage === 74">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/eacb30ab-c7c4-4509-9aff-aa2161dd795e.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5532,7 +5637,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 72">
+                                <li class="flex flex-col" x-show="activeImage === 75">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/c2bfcfde-b8bf-48cd-9885-f71da04ba3c2.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5541,7 +5646,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 73">
+                                <li class="flex flex-col" x-show="activeImage === 76">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e1f9c772-7db4-4c9d-ae6f-a4a2b1d19057.mp4#t=0.5">
@@ -5551,7 +5656,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 74">
+                                <li class="flex flex-col" x-show="activeImage === 77">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7553130c-6080-47f4-ac93-a647802da677.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5560,7 +5665,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 75">
+                                <li class="flex flex-col" x-show="activeImage === 78">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3e6c3fc8-3ae2-4aa2-8d4e-91bfe87e99ed.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5569,7 +5674,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 76">
+                                <li class="flex flex-col" x-show="activeImage === 79">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
@@ -5578,7 +5683,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 77">
+                                <li class="flex flex-col" x-show="activeImage === 80">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a1bc4061-f5e3-430b-9c68-6ebbe5ae5661.png" alt="GO BUKS for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>

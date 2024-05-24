@@ -84,7 +84,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/032f3d7a-b06e-4df1-adca-061105617ba6.mp4");
       background-size: cover;
   }
   
@@ -1454,7 +1454,7 @@
                         <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 2,
+        amountOfImages: 5,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1508,6 +1508,81 @@
                                 
                                     <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button
+                        @click="activeImage = 2; galleryModalOpen = true"
+                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                    >
+                        
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                    <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/fa222428-b1b5-4f66-acda-ee19050d08e6.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button
+                        @click="activeImage = 3; galleryModalOpen = true"
+                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                    >
+                        
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                    <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d4f0fd20-51fd-46f7-ade8-1159c4f29194.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li data-id="gallery_media" data-gallery="New Gallery" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button
+                        @click="activeImage = 4; galleryModalOpen = true"
+                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                    >
+                        
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                    <video class="object-cover lazy" preload="none" autoplay loop playsinline controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/032f3d7a-b06e-4df1-adca-061105617ba6.mp4#t=0.5">
                                         Your browser does not support the video tag.
                                     </video>
                                 
@@ -1579,6 +1654,36 @@
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 2">
+                                    
+                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/fa222428-b1b5-4f66-acda-ee19050d08e6.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 3">
+                                    
+                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d4f0fd20-51fd-46f7-ade8-1159c4f29194.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 4">
+                                    
+                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/032f3d7a-b06e-4df1-adca-061105617ba6.mp4#t=0.5">
                                         Your browser does not support the video tag.
                                     </video>
                                     <p lorem="1" class="mt-3 text-gray-500"></p>
