@@ -18,7 +18,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-gardening</loc>
+        <loc>https://carolandscaping.com/service-gardening-test</loc>
+        <lastmod>2024-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Driveway-Design---Build</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -32,7 +39,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-landscaping-test</loc>
+        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
+        <lastmod>2024-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-snow-removal</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -67,28 +81,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-snow-removal</loc>
-        <lastmod>2024-05-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-hardscaping</loc>
-        <lastmod>2024-05-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Driveway-Design---Build</loc>
-        <lastmod>2024-05-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
