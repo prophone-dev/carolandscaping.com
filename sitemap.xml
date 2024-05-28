@@ -25,6 +25,20 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-Professional-Fertilization</loc>
+        <lastmod>2024-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-landscaping-test</loc>
+        <lastmod>2024-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-GO-BUKS</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
@@ -60,13 +74,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-landscaping-test</loc>
-        <lastmod>2024-05-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-hardscaping</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
@@ -96,13 +103,6 @@
 
     <url>
         <loc>https://carolandscaping.com/service-Cookin-Some-Chilli</loc>
-        <lastmod>2024-05-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Professional-Fertilization</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -151,7 +151,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-</loc>
+        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -166,13 +166,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Cheesegirl</loc>
-        <lastmod>2024-05-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-hanna-test</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -215,6 +208,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Gardening</loc>
+        <lastmod>2024-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-test-gallery</loc>
         <lastmod>2024-05-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
