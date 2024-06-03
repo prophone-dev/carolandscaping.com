@@ -91,13 +91,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a89e263a-ed50-4516-a5b3-147fdb323f57.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/89ef0cf4-6262-4b4c-a7b7-f1c5ae7f47cd.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ebbcae45-eea6-4eb9-875f-fb0ad61de778.webp");
       background-size: cover;
   }
 </style>
@@ -1427,7 +1427,7 @@
             x-cloak
             x-data="{
                 activeImage: 1,
-                amountOfImages: 3,
+                amountOfImages: 5,
                 loop() {
                     setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
                 },
@@ -1508,6 +1508,62 @@
                     <img
                         class="object-cover w-full h-full"
                         src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a89e263a-ed50-4516-a5b3-147fdb323f57.png"
+                        alt="landscaping near me company ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                        width="425"
+                        height="288"
+                        fetchpriority="high"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </picture>
+            
+
+        </div>
+        
+        <div
+                class="absolute inset-0"
+                x-show="activeImage === 4"
+                x-transition:enter="transition duration-1000"
+                x-transition:enter-start="transform translate-x-full"
+                x-transition:enter-end="transform translate-x-0"
+                x-transition:leave="transition duration-1000"
+                x-transition:leave-start="transform"
+                x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <picture>
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ebbcae45-eea6-4eb9-875f-fb0ad61de778.webp" type="image/webp">
+                    <img
+                        class="object-cover w-full h-full"
+                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ebbcae45-eea6-4eb9-875f-fb0ad61de778.webp"
+                        alt="landscaping near me company ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                        width="425"
+                        height="288"
+                        fetchpriority="high"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </picture>
+            
+
+        </div>
+        
+        <div
+                class="absolute inset-0"
+                x-show="activeImage === 5"
+                x-transition:enter="transition duration-1000"
+                x-transition:enter-start="transform translate-x-full"
+                x-transition:enter-end="transform translate-x-0"
+                x-transition:leave="transition duration-1000"
+                x-transition:leave-start="transform"
+                x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <picture>
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp" type="image/webp">
+                    <img
+                        class="object-cover w-full h-full"
+                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp"
                         alt="landscaping near me company ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
                         width="425"
                         height="288"
