@@ -221,13 +221,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-moving</loc>
-        <lastmod>2024-06-10</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
         <lastmod>2024-06-10</lastmod>
         <changefreq>weekly</changefreq>
@@ -242,14 +235,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-test1111</loc>
-        <lastmod>2024-06-10</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Mobile-gallery-</loc>
+        <loc>https://carolandscaping.com/gallery-Mobile-gallery-test</loc>
         <lastmod>2024-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
