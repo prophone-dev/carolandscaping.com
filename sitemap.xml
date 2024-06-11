@@ -67,7 +67,21 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-exterior-painting</loc>
+        <lastmod>2024-06-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-pressure-washing</loc>
+        <lastmod>2024-06-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-furnace-installation</loc>
         <lastmod>2024-06-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
