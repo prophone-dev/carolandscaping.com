@@ -2452,7 +2452,7 @@
                                 
                                 <img
                                     class="object-cover "
-                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/300x300/filters:strip_exif()/filters:no_upscale()/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/300x300/filters:strip_exif()/filters:no_upscale()/media/f5ccd37a-73a4-4e43-b89c-70a2f5d4a522.jpeg"
                                     alt="Our Fall and Spring Clean Up service ensures that your outdoor space remains pristine throughout the year, removing leaves, debris, and preparing your landscape for each season&#x27;s unique demands. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
                                     loading="lazy"
                                     decoding="async"
@@ -9078,35 +9078,48 @@ function filterGalleryByDataId(filter) {
                     
                         <style>
     .gm-ui-hover-effect {
-        top: 8px !important;
-        right: 8px !important;
-        width: 20px !important;
-        height: 20px !important;
-        border-radius: 50% !important;
-        background-color: lightgray !important;
-        opacity: 1 !important;
-    }
-
-    .gm-ui-hover-effect span {
-        width: 20px !important;
-        height: 20px !important;
-        margin: 0px !important;
-    }
-
-    .gm-style-iw-d {
-        padding: 0px !important;
-        overflow: auto !important;
-        max-height: none !important;
-    }
-
-    .gm-style-iw-c {
-        padding: 0px !important;
-        max-height: none !important;
-    }
-
-    .gm-style-iw-tc {
-        display: none !important;
-    }
+    top: 8px !important;
+    right: 8px !important;
+    width: 20px !important;
+    height: 0px !important;
+    border-radius: 50% !important;
+    background-color: lightgray !important;
+    opacity: 1 !important;
+      z-index: 2 !important;
+  }
+  .gm-ui-hover-effect span {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0px !important;
+  }
+  .gm-style-iw-d {
+    padding: 0px !important;
+    overflow: auto !important;
+    max-height: none !important;
+      z-index: 1 !important;
+  }
+  .gm-style-iw-c {
+    padding: 0px !important;
+    max-height: none !important;
+  }
+  .gm-style-iw-tc {
+    display: none !important;
+  }
+  .gm-style-iw-ch {
+      padding: 0px !important;
+      height: 0px !important;
+  }
+  .circular-bg {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #c6c2c2;
+      top: 7px;
+    right: 8px;
+    opacity: 1;
+    z-index: 1;
+  }
 
     @media screen and (max-width: 800px) {
         .map-outer-container {
@@ -10236,6 +10249,7 @@ function filterGalleryByDataId(filter) {
           <div id="line-clamp-description" class="text-xs font-normal text-gray-600 line-clamp-1 pt-2">${showcase.detailed_description}</div>
           ${showcase.review_id && reviewSection}
         </div>
+        <div class="circular-bg"></div>
       </div>`;
 
         return modalHtml;
