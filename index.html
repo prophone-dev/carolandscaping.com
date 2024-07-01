@@ -71,19 +71,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/79efe44c-aeac-427e-a01d-e49090fb2717.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/bf5eebad-c3ac-4a1f-9ace-fc56a4d6a356.png");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ebbcae45-eea6-4eb9-875f-fb0ad61de778.webp");
       background-size: cover;
   }
   
@@ -95,13 +95,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/79efe44c-aeac-427e-a01d-e49090fb2717.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ebbcae45-eea6-4eb9-875f-fb0ad61de778.webp");
       background-size: cover;
   }
 </style>
@@ -753,6 +753,16 @@
                                                     
                                                         
                                                         <a
+                                                            href=" gallery-Sun "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Sun</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
                                                             href=" gallery-New-Gallery "
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
@@ -825,6 +835,8 @@
                                                     
                                                 </div>
                                                 <div class="flex-1">
+                                                    
+                                                        
                                                     
                                                         
                                                     
@@ -1311,6 +1323,10 @@
                                         >
                                             <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                                 
+                                                    <a href="gallery-Sun" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Sun</p>
+                                                    </a>
+                                                
                                                     <a href="gallery-New-Gallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery</p>
                                                     </a>
@@ -1615,7 +1631,7 @@
             x-cloak
             x-data="{
                 activeImage: 1,
-                amountOfImages: 2,
+                amountOfImages: 4,
                 loop() {
                     setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
                 },
@@ -1636,10 +1652,10 @@
         >
             
                 <picture>
-                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/79efe44c-aeac-427e-a01d-e49090fb2717.png" type="image/webp">
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg" type="image/webp">
                     <img
                         class="object-cover w-full h-full"
-                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/79efe44c-aeac-427e-a01d-e49090fb2717.png"
+                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg"
                         alt="landscaping near me company ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
                         width="425"
                         height="288"
@@ -1664,10 +1680,66 @@
         >
             
                 <picture>
-                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png" type="image/webp">
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/bf5eebad-c3ac-4a1f-9ace-fc56a4d6a356.png" type="image/webp">
                     <img
                         class="object-cover w-full h-full"
-                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png"
+                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/bf5eebad-c3ac-4a1f-9ace-fc56a4d6a356.png"
+                        alt="landscaping near me company ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                        width="425"
+                        height="288"
+                        fetchpriority="high"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </picture>
+            
+
+        </div>
+        
+        <div
+                class="absolute inset-0"
+                x-show="activeImage === 3"
+                x-transition:enter="transition duration-1000"
+                x-transition:enter-start="transform translate-x-full"
+                x-transition:enter-end="transform translate-x-0"
+                x-transition:leave="transition duration-1000"
+                x-transition:leave-start="transform"
+                x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <picture>
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ebbcae45-eea6-4eb9-875f-fb0ad61de778.webp" type="image/webp">
+                    <img
+                        class="object-cover w-full h-full"
+                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ebbcae45-eea6-4eb9-875f-fb0ad61de778.webp"
+                        alt="landscaping near me company ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                        width="425"
+                        height="288"
+                        fetchpriority="high"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </picture>
+            
+
+        </div>
+        
+        <div
+                class="absolute inset-0"
+                x-show="activeImage === 4"
+                x-transition:enter="transition duration-1000"
+                x-transition:enter-start="transform translate-x-full"
+                x-transition:enter-end="transform translate-x-0"
+                x-transition:leave="transition duration-1000"
+                x-transition:leave-start="transform"
+                x-transition:leave-end="transform -translate-x-full"
+        >
+            
+                <picture>
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/2000x2000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp" type="image/webp">
+                    <img
+                        class="object-cover w-full h-full"
+                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp"
                         alt="landscaping near me company ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
                         width="425"
                         height="288"
