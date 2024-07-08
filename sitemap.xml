@@ -81,20 +81,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Driveway-Design---Build</loc>
-        <lastmod>2024-07-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
-        <lastmod>2024-07-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-mowing</loc>
         <lastmod>2024-07-08</lastmod>
         <changefreq>weekly</changefreq>
@@ -130,13 +116,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Fall-and-Spring-Clean-Up</loc>
-        <lastmod>2024-07-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-gardening-mob</loc>
         <lastmod>2024-07-08</lastmod>
         <changefreq>weekly</changefreq>
@@ -145,6 +124,27 @@
 
     <url>
         <loc>https://carolandscaping.com/service-mulch-installation</loc>
+        <lastmod>2024-07-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Fall-and-Spring-Clean-Up</loc>
+        <lastmod>2024-07-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Driveway-Design---Build</loc>
+        <lastmod>2024-07-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
         <lastmod>2024-07-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -284,14 +284,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-July</loc>
-        <lastmod>2024-07-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-sun-12</loc>
+        <loc>https://carolandscaping.com/gallery-new-gallery-July</loc>
         <lastmod>2024-07-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
