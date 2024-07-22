@@ -71,37 +71,37 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg");
+      background-image: url("");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/bf5eebad-c3ac-4a1f-9ace-fc56a4d6a356.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/54958342-7b11-4098-9aaa-f1a31816670f.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/");
       background-size: cover;
   }
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ebbcae45-eea6-4eb9-875f-fb0ad61de778.webp");
+      background-image: url("");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/54958342-7b11-4098-9aaa-f1a31816670f.png");
+      background-image: url("");
       background-size: cover;
   }
 </style>
@@ -421,7 +421,17 @@
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
-                                                            <p class="mt-1 text-base font-medium uppercase">Snow Removal</p>
+                                                            <p class="mt-1 text-base font-medium uppercase">Snow Removal test</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-hardscaping "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Hardscape</p>
                                                         </a>
                                                         
                                                     
@@ -472,14 +482,6 @@
                                                     
                                                         
                                                     
-                                                        
-                                                        <a
-                                                            href=" service-hardscaping "
-                                                            role="menuitem"
-                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
-                                                        >
-                                                            <p class="mt-1 text-base font-medium uppercase">Hardscape</p>
-                                                        </a>
                                                         
                                                     
                                                         
@@ -579,6 +581,16 @@
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
                                                             <p class="mt-1 text-base font-medium uppercase">Furnace installation</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-mulch-installation "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Mulch Installation</p>
                                                         </a>
                                                         
                                                     
@@ -1113,7 +1125,7 @@
                                                     </a>
                                                 
                                                     <a href="service-snow-removal" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Snow Removal</p>
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Snow Removal test</p>
                                                     </a>
                                                 
                                                     <a href="service-hardscaping" role="menuitem" class="block p-3 -m-3 transition rounded-md">
@@ -1158,6 +1170,10 @@
                                                 
                                                     <a href="service-furnace-installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Furnace installation</p>
+                                                    </a>
+                                                
+                                                    <a href="service-mulch-installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Mulch Installation</p>
                                                     </a>
                                                 
                                             </div>
@@ -1584,7 +1600,7 @@
                         <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 1,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1601,30 +1617,6 @@
         data-heap-version="v2"
 >
     <ul role="list" class="bg-white space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-        
-            <li data-id="gallery_media" data-gallery="Moving gallery " x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button
-                        @click="activeImage = 0; galleryModalOpen = true"
-                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
-                    >
-                        
-                            <div class="aspect-w-3 aspect-h-2">
-                                
-                                    
-                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/521bf8dd-8b46-40c3-8d05-1304f67fa13e.jpeg" alt="Moving gallery  for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                    
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        
-                    </button>
-                </div>
-            </li>
         
     </ul>
 
@@ -1668,15 +1660,6 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
-                                
-                                <li class="flex flex-col" x-show="activeImage === 0">
-                                    
-                                        
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/521bf8dd-8b46-40c3-8d05-1304f67fa13e.jpeg" alt="Moving gallery  for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    
-                                </li>
                                 
                             </ul>
 
@@ -2826,16 +2809,6 @@ function filterGalleryByDataId(filter) {
                               >
                           </li>
                           
-                              
-                              <li>
-                                  <a
-                                      href="gallery-All"
-                                      class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                      >Galleries</a
-                                  >
-                              </li>
-                              
-                          
                           
                           <li>
                               <a
@@ -2969,7 +2942,7 @@ function filterGalleryByDataId(filter) {
                               <a
                                   href="service-snow-removal"
                                   class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Snow Removal</a
+                                  >Snow Removal test</a
                               >
                           </li>
                           
@@ -3058,6 +3031,14 @@ function filterGalleryByDataId(filter) {
                                   href="service-furnace-installation"
                                   class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Furnace installation</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-mulch-installation"
+                                  class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Mulch Installation</a
                               >
                           </li>
                           
