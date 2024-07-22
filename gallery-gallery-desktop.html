@@ -89,7 +89,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/1d4dc78a-eccc-4299-818b-d8297deaccdf.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/220c686c-8a19-4d00-a32f-583d3b94b9bb.png");
       background-size: cover;
   }
   
@@ -1604,7 +1604,7 @@
                         <div
         x-data="{
         activeImage: 0,
-        amountOfImages: 1,
+        amountOfImages: 2,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1626,6 +1626,30 @@
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button
                         @click="activeImage = 0; galleryModalOpen = true"
+                        class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
+                    >
+                        
+                            <div class="aspect-w-3 aspect-h-2">
+                                
+                                    
+                                        <img  class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/220c686c-8a19-4d00-a32f-583d3b94b9bb.png" alt="gallery desktop for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                    
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li data-id="gallery_media" data-gallery="gallery desktop" x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button
+                        @click="activeImage = 1; galleryModalOpen = true"
                         class="photo-tile block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75"
                     >
                         
@@ -1690,6 +1714,15 @@
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
                                 
                                 <li class="flex flex-col" x-show="activeImage === 0">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/220c686c-8a19-4d00-a32f-583d3b94b9bb.png" alt="gallery desktop for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/15715932-2123-44a2-ad87-471d1f58c4d0.jpeg" alt="gallery desktop for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
