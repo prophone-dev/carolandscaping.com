@@ -25,13 +25,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-furnace-installation</loc>
-        <lastmod>2024-07-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-gardening</loc>
         <lastmod>2024-07-29</lastmod>
         <changefreq>weekly</changefreq>
@@ -61,6 +54,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-Stone-Wall-Installation</loc>
+        <lastmod>2024-07-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-furnace-installation</loc>
         <lastmod>2024-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -270,7 +270,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-test</loc>
+        <loc>https://carolandscaping.com/gallery-july</loc>
         <lastmod>2024-07-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
