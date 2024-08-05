@@ -263,7 +263,6 @@
     x-data="{ scrolledFromTop: false, customNavTransparent:  true  }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false;"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-    :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
     class="fixed w-screen top-0 inset-x-0 z-50"
     data-heap-component-name="navigation"
     data-heap-version="v2"
@@ -284,7 +283,7 @@
         observer.observe($refs.navbar);
         "
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-        :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
+        :class="{'translate-y-0 xl:h-44': !scrolledFromTop, 'shadow-magical': scrolledFromTop}"
         class="relative transition-all duration-200 bg-white h-24 xl:h-44"
     >
         <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
