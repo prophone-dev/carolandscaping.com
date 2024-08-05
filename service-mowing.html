@@ -190,17 +190,7 @@
     id="nav-bar"
     x-ref="navbar"
     x-data="{ scrolledFromTop: false, customNavTransparent:  true  }"
-    x-init="
-    window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false;
-    navbarHeight = $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px';
-    const root = document.querySelector(':root');
-    
-    const observer = new ResizeObserver(() => {
-        navbarHeight = $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px';
-        root.style.setProperty('--navbarHeight', navbarHeight);
-    });
-    observer.observe($refs.navbar);
-    "
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false;"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
     class="fixed w-screen top-0 inset-x-0 z-50"
@@ -211,7 +201,17 @@
     <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-ref="nav_menu"
-        x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+        x-init="
+        window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false
+
+        const root = document.querySelector(':root');
+
+        const observer = new ResizeObserver(() => {
+            navbarHeight = $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px';
+            root.style.setProperty('--navbarHeight', navbarHeight);
+        });
+        observer.observe($refs.navbar);
+        "
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
         :class="{'translate-y-0 h-24 xl:h-44': !scrolledFromTop, 'h-24 shadow-magical': scrolledFromTop}"
         class="relative transition-all duration-200 bg-white h-24 xl:h-44"
@@ -596,11 +596,11 @@
                                                     
                                                         
                                                         <a
-                                                            href=" service-mulch-installation "
+                                                            href=" service-lawn-aeration "
                                                             role="menuitem"
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
-                                                            <p class="mt-1 text-base font-medium uppercase">Mulch Installation</p>
+                                                            <p class="mt-1 text-base font-medium uppercase">Lawn Aeration</p>
                                                         </a>
                                                         
                                                     
@@ -1166,8 +1166,8 @@
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Exterior Painting test</p>
                                                     </a>
                                                 
-                                                    <a href="service-mulch-installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
-                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Mulch Installation</p>
+                                                    <a href="service-lawn-aeration" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Lawn Aeration</p>
                                                     </a>
                                                 
                                             </div>
@@ -4399,9 +4399,9 @@
                           
                           <li>
                               <a
-                                  href="service-mulch-installation"
+                                  href="service-lawn-aeration"
                                   class="p-1 text-sm sm:text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
-                                  >Mulch Installation</a
+                                  >Lawn Aeration</a
                               >
                           </li>
                           
