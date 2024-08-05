@@ -70,19 +70,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/bf5eebad-c3ac-4a1f-9ace-fc56a4d6a356.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/521bf8dd-8b46-40c3-8d05-1304f67fa13e.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/bf5eebad-c3ac-4a1f-9ace-fc56a4d6a356.png");
       background-size: cover;
   }
   
@@ -94,13 +94,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/521bf8dd-8b46-40c3-8d05-1304f67fa13e.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/7f6c6efc-1330-4ba0-8482-b8ccd50ecb3e.png");
       background-size: cover;
   }
 </style>
@@ -171,7 +171,7 @@
         contactChatOpen: false,
         active: 0,
         showAnnouncement: false,
-        customNavTransparent: false,
+        customNavTransparent:  true ,
         showMessage: false,
         navbarHeight: ''
     }"
@@ -188,7 +188,7 @@
 <nav
     id="nav-bar"
     x-ref="navbar"
-    x-data="{ scrolledFromTop: false }"
+    x-data="{ scrolledFromTop: false, customNavTransparent:  true  }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false;"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     :class="{'h-32 w-screen': !scrolledFromTop, 'h-16 w-screen': scrolledFromTop}"
@@ -476,12 +476,12 @@
     class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover"
 >
     
-    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg" type="image/webp">
+    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg" type="image/webp">
     
     <img
         aria-hidden="true"
         class="slider-media object-cover w-full h-full"
-        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg"
+        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
         alt="cover-photo"
         fetchpriority="high"
         loading="auto"
@@ -490,6 +490,26 @@
 </picture>
                     
                     
+                        
+                    
+                        
+                            
+                            <picture
+                                aria-hidden="true"
+                                class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover"
+                            >
+                                
+                                <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg" type="image/webp">
+                                <img
+                                    aria-hidden="true"
+                                    class="slider-media object-cover w-full h-full hidden"
+                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg"
+                                    alt="cover-photo"
+                                    fetchpriority="high"
+                                    loading="lazy"
+                                />
+                            </picture>
+                            
                         
                     
                         
@@ -519,11 +539,11 @@
                                 class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover"
                             >
                                 
-                                <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/521bf8dd-8b46-40c3-8d05-1304f67fa13e.jpeg" type="image/webp">
+                                <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/7f6c6efc-1330-4ba0-8482-b8ccd50ecb3e.png" type="image/webp">
                                 <img
                                     aria-hidden="true"
                                     class="slider-media object-cover w-full h-full hidden"
-                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/521bf8dd-8b46-40c3-8d05-1304f67fa13e.jpeg"
+                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/7f6c6efc-1330-4ba0-8482-b8ccd50ecb3e.png"
                                     alt="cover-photo"
                                     fetchpriority="high"
                                     loading="lazy"
@@ -539,11 +559,11 @@
                                 class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover"
                             >
                                 
-                                <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp" type="image/webp">
+                                <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg" type="image/webp">
                                 <img
                                     aria-hidden="true"
                                     class="slider-media object-cover w-full h-full hidden"
-                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/8f14f2ea-26ed-486f-8eed-fa4fce55d730.webp"
+                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg"
                                     alt="cover-photo"
                                     fetchpriority="high"
                                     loading="lazy"
