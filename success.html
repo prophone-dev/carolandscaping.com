@@ -173,7 +173,8 @@
         showAnnouncement: false,
         customNavTransparent:  true ,
         showMessage: false,
-        navbarHeight: ''
+        navbarHeight: '',
+        calculateTopMargin: true,
     }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ paddingTop: navbarHeight }"
@@ -181,24 +182,46 @@
     
 
     
-        <div
-	class="fixed inset-0 z-40"
+        
+
+<div
+	class="fixed inset-0 z-50 flex justify-center items-center"
 	id="text-thank-you"
 	data-heap-component-name="text_thank_you"
-	data-heap-version="v2.1"
+	data-heap-version="v3"
 >
+    
+        
+            <picture
+                    aria-hidden="true"
+                    class="absolute inset-0 object-cover"
+            >
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg" type="image/webp">
+                    <img
+                            aria-hidden="true"
+                            class="object-cover w-full h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
+                            alt="cover-photo"
+                            fetchpriority="high"
+                            loading="auto"
+                            decoding="sync"
+                    />
+            </picture>
+        
+
+        
+        <div class="absolute inset-0 bg-black opacity-75"></div>
+    
+
 	<div
-		class="fixed inset-0 bg-black bg-opacity-50"
-	></div>
-	<div
-		class="fixed flex h-screen w-screen inset-x-0 z-50 mx-auto justify-center items-center p-4 shadow-lg rounded-md bg-primary"
+		class="fixed inset-0 sm:relative sm:inset-auto rounded-sm bg-primary sm:border border-secondary w-full max-w-3xl overflow-hidden"
 	>
-		<div class="flex flex-col mt-3 text-center">
+		<div class="h-full sm:h-auto flex flex-col justify-center items-center gap-6 sm:gap-9 text-center pt-6 pb-8 px-4 sm:py-12 sm:px-8">
 			<div
-				class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
+				class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-400"
 			>
 				<svg
-					class="h-6 w-6 text-green-600"
+					class="h-6 w-6 text-blue-900"
 					fill="none"
 					stroke="currentColor"
 					viewBox="0 0 24 24"
@@ -212,12 +235,12 @@
 					></path>
 				</svg>
 			</div>
-			<h3 class="sm:text-6xl text-4xl font-extrabold text-white sm:my-6 my-2">Message sent</h3>
-			<div class="p-2">
-				<p class="sm:text-xl text-sm text-gray-200">
-					We usually respond within a few minutes via SMS.
-				</p>
-			</div>
+            <div class="text-white flex flex-col gap-2 sm:gap-4">
+                <h3 class="text-lg sm:text-6xl leading-6 font-black uppercase">Message sent!</h3>
+                <p class="text-base sm:text-lg">
+                    We usually respond within a few minutes via SMS.
+                </p>
+            </div>
 		</div>
 	</div>
 </div>
@@ -231,15 +254,13 @@
     } else {
         window.location.replace('./')
     }
-}
+	}
 	window.onload = function() {
 		setTimeout(() => {
-
 			globalRedirect();
 		}, 3000)
 	}
 </script>
-
 
     
 

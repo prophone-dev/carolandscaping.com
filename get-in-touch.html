@@ -173,7 +173,8 @@
         showAnnouncement: false,
         customNavTransparent:  true ,
         showMessage: false,
-        navbarHeight: ''
+        navbarHeight: '',
+        calculateTopMargin: false,
     }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ paddingTop: navbarHeight }"
@@ -205,7 +206,10 @@
         const root = document.querySelector(':root');
 
         const observer = new ResizeObserver(() => {
-            navbarHeight = $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px';
+            navbarHeight = calculateTopMargin ?
+                $refs.navbar.offsetHeight + 'px' :
+                $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px'
+
             root.style.setProperty('--navbarHeight', navbarHeight);
         });
         observer.observe($refs.navbar);
