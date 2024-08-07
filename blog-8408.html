@@ -151,7 +151,8 @@
         };
 
         
-         document.addEventListener("DOMContentLoaded",function(e){document.querySelectorAll(".contact-phone-number").forEach(e=>{let t=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function n(){t.setNumber(t.getNumber())}e.addEventListener("change",n),e.addEventListener("keyup",n)})});const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,t="contact"){let n="contact"===t||"first-step"===t,r="first-step"===t,o="second-step"===t,a="";o&&sessionStorage.getItem("message_id")&&(a=sessionStorage.getItem("message_id"));let s=document.getElementById(m("sendButton",n,t));s.disabled=!0;let l=document.getElementById(m("error-state-modal",n,t));l.innerHTML="",event.preventDefault();let i=e=>e.split(",")[0].match(/:(.*?);/)[1].split("/")[1],c=e=>`${"10000000-1000-4000-8000-100000000000".replace(/[018]/g,e=>(e^crypto.getRandomValues(new Uint8Array(1))[0]&15>>e/4).toString(16))}.${i(e)}`,d=e=>!!document.querySelector(e),p=e=>d(e)?document.querySelector(e).value:"",u=(e,t)=>{var n=document.createElement("div"),r=document.createElement("h1");r.innerHTML="❌";var o=document.createElement("h1");o.innerHTML=e,o.className="ml-3",n.appendChild(r),n.appendChild(o),n.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",t.className="",t.appendChild(n)};function m(e,t,n){return t?e:e+"-"+n}function g(e,t){let n=e.nextElementSibling;n&&n.classList.contains("error-message")||((n=document.createElement("div")).classList.add("border","border-red-500","text-red-500","text-sm","rounded-md","p-1","mt-1","error-message"),e.classList.add("input-error","border-red-500"),e.parentNode.insertBefore(n,e.nextSibling)),n.textContent=t}function h(e){let t=e.nextElementSibling;t&&t.classList.contains("error-message")&&(e.classList.remove("input-error"),t.remove())}let[$,f,v]=(()=>{let e=p(m("#contact-full-name",n,t));if(!(e=e.trim()))return["","",""];{let r=e.split(" "),o;return[e,r.shift(),r.join(" ")]}})();var b,_="";if(!o){let y=(b=m("#contact-phone-number",n,t),window.intlTelInputGlobals.getInstance(document.querySelector(b)));if(_=!o&&y.getNumber(),!$||!_){u("Full name and phone number are required",l),s.disabled=!1;return}if(!y.isValidNumber()){let L=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],S=y.getValidationError();u(L[S]?L[S]:"Not a valid phone number",l),s.disabled=!1;return}}if(!function e(t,n){let r=!0;for(let[o,a]of Object.entries(fieldRequirements)){let s=variableTOFieldMapper[o],i=`${fieldToLabelMapper[o]} is required`,c=p(m(`#${s}`,t,n));if(a&&(!c||!c.trim())){u(i,l),r=!1;break}}return r}(n,t)){s.disabled=!1;return}var x=p(m("#contact-email",n,t)),E=p(m("#contact-date",n,t)),I=p(m("#contact-promo-code",n,t)),T=p(m("#contact-address",n,t));let w=(()=>{var e,r,o=p(m("#contact-attachment",n,t));if(o){let a=c(o);return(e=function e(t,n){for(var r=t.split(","),o=r[0].match(/:(.*?);/)[1],a=atob(r[1]),s=a.length,l=new Uint8Array(s);s--;)l[s]=a.charCodeAt(s);return new File([l],n,{type:o})}(o,a),r=a,new Promise(function(t,n){let o=new XMLHttpRequest;console.log(r,"fileName");let a=`https://programmable-voice-server-node.herokuapp.com/sign_s3?file_name=${r}&file_type=${e.type}`;console.log("newurl",a),o.open("GET",a),o.onreadystatechange=async function(){if(console.log("getSignedRequest - in onreadystatechange - xhr",o),4===o.readyState){if(200===o.status){var n,a,s;let l=JSON.parse(o.responseText);await (n=e,a=l.signedRequest,s=l.url,new Promise(function(e,t){let r=new XMLHttpRequest;r.open("PUT",a),r.onreadystatechange=()=>{4===r.readyState&&(200===r.status?(console.log(s,"url in uploadFile"),e(n.name)):alert("Could not upload file."))},r.send(n)})),t(r)}else alert("Could not get signed URL.")}},console.log("getSignedRequest -pre xhr.send"),o.send()})).then(e=>console.log(e)),a}return""})(),A=(()=>{m("contact-service",n,t);let e=Array.from(document.querySelectorAll('[id^="contact-service"]'));if(!e.length)return"";{let r=e.filter(e=>e.checked&&"Other"!==e.value).map(e=>e.value).join(", "),o=p(m("#contact-service-other-text",n,t))||p(m("#contact-service-other-text2",n,t))||"";return o?r?`${r}, ${o}`:o:r}})(),q=p(m("#contact-concern-1",n,t)),C=p(m("#contact-concern-2",n,t)),M="";try{M=q?.length>0?q:C}catch(N){M=""}var j=_.replace("(","").replace(")","").replace("-","").replace(" ","");let P="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?P="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?P="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(P="http://127.0.0.1:8000"),grecaptcha.ready(function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then(function(t){fetch(P+"/sms/"+e,{method:"POST",body:JSON.stringify({sender_full_name:$,sender_email:x,sender_promo:I,sender_fname:f,sender_lname:v,sender_number:j,sender_message:M,sender_address:T,sender_date:E,photo:w,services:A,first_step:r,second_step:o,message_id:a,ct:t})}).then(e=>{if(!e.ok)throw e;return e.json()}).then(e=>{if(r&&e?.message_id){sessionStorage.setItem("message_id",e.message_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(t){console.log("no gtag_report_conversion")}return e}if(o)return sessionStorage.removeItem("message_id"),window.location.replace("./"),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(n){console.log("no gtag_report_conversion")}return window.location.replace("success"),e}).catch(e=>{s.disabled=!1,alert("There was a problem sending your text. Please reach out to ProPhone.")})})})}
+         document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const n=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){n.setNumber(n.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,n="contact-modal"){const t="contact-embedded"===n,o=document.getElementById("sendButton");o.disabled=!0;const r=document.getElementById("error-state-modal");r.innerHTML="",event.preventDefault();const c=(e,n)=>{var t=document.createElement("div"),o=document.createElement("h1");o.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(o),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",n.className="",n.appendChild(t)};const d=(s="#contact-phone-number",window.intlTelInputGlobals.getInstance(document.querySelector(s)));var s;if(!d.getNumber()){return c("Phone number is required",r),void(o.disabled=!1)}if(!d.isValidNumber()){const e=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],n=d.getValidationError();return c(e[n]?e[n]:"Not a valid phone number",r),void(o.disabled=!1)}let a="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?a="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?a="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(a="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(n){const r=(()=>{let e;e=t?document.forms.embeddedForm:document.forms.contactModal;const n=new FormData(e),o={};for(const e of n.entries())o[e[0]]=e[1];return o["phone-number"]=o["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),o})();fetch(a+"/sms/"+e,{method:"POST",body:JSON.stringify({fields:r,ct:n})}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o.disabled=!1,alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
+         
     </script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded",(function(){var e=[].slice.call(document.querySelectorAll("video.lazy"));if("IntersectionObserver"in window){var t=new IntersectionObserver((function(e,r){e.forEach((function(e){if(e.isIntersecting){for(var r in e.target.children){var n=e.target.children[r];"string"==typeof n.tagName&&"SOURCE"===n.tagName&&(n.src=n.dataset.src)}e.target.load(),e.target.classList.remove("lazy"),t.unobserve(e.target)}}))}));e.forEach((function(e){t.observe(e)}))}}));
@@ -1855,22 +1856,31 @@
                     <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
                 </div>
                 <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
-
-                
-                <form class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping')">
+                <form id="contactModal" class="overflow-y-auto sm:w-full" onsubmit="send_sms('caro-landscaping')">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                             
+                            
                             <div>
-                                <label for="contact-full-name" class="font-medium text-base text-white">Full name</label>
+                                <label for="contact-short-answer-48b52596-98d9-41b3-b134-a6fcf857f226" class="font-medium text-base text-white">Full name</label>
                                 <input
                                     type="text"
-                                    name="full-name"
-                                    id="contact-full-name"
+                                    name="short-answer-48b52596-98d9-41b3-b134-a6fcf857f226"
+                                    id="contact-short-answer-48b52596-98d9-41b3-b134-a6fcf857f226"
                                     class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="Jane Rodgers"
+                                    required
                                 />
                             </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             <div>
@@ -1881,333 +1891,236 @@
                                     autocomplete="on"
                                     id="contact-phone-number"
                                     class="contact-phone-number block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                    required
+                                />
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div>
+                                    <label for="contact-address" class="font-medium text-base text-white">
+                                        Address
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="address"
+                                        id="contact-address"
+                                        class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                        required
+                                    />
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div>
+                                <label for="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0" class="font-medium text-base text-white">Email</label>
+                                <input
+                                    type="text"
+                                    name="short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0"
+                                    id="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0"
+                                    class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
                                     
                                 />
                             </div>
                             
                             
-                            <div>
-                                <label for="contact-email" class="font-medium text-base text-white">Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="contact-email"
-                                    class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="name@example.com"
-                                />
-                            </div>
                             
-
                             
-                            <div>
-                                <label for="contact-address" class="font-medium text-base text-white">
-                                    Address <span>*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="address"
-                                    id="contact-address"
-                                    class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="123 Main Street, Brooklyn, NY 11201"
-                                />
-                            </div>
-
-
                             
-
                             
-                            <div class="block sm:hidden">
-                                <label class="font-medium text-base text-white">Services</label>
-                                <fieldset class="sm:hidden bg-white p-6 mt-1 rounded-sm">
-                                    <div class="flex flex-col space-y-2">
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="168398" value="Cookin Some Chilli" id="mobile-contact-service-168398" class="mt-0.5 items-center w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Cookin Some Chilli
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="168399" value="Caro's Special Service" id="mobile-contact-service-168399" class="mt-0.5 items-center w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Caro's Special Service
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="168400" value="Driveway Design & Build" id="mobile-contact-service-168400" class="mt-0.5 items-center w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Driveway Design & Build
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="168401" value="Fall and Spring Clean Up" id="mobile-contact-service-168401" class="mt-0.5 items-center w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Fall and Spring Clean Up
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="168403" value="Cheese Making" id="mobile-contact-service-168403" class="mt-0.5 items-center w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Cheese Making
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="168404" value="Stone Wall Installation" id="mobile-contact-service-168404" class="mt-0.5 items-center w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Stone Wall Installation
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="168405" value="Professional Fertilization" id="mobile-contact-service-168405" class="mt-0.5 items-center w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Professional Fertilization
-                                            </span>
-                                        </div>
-                                        
-                                        <div class="flex items-center">
-                                            <input type="checkbox" name="168406" value="Moving mobile" id="mobile-contact-service-168406" class="mt-0.5 items-center w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                            />
-                                            <span class="ml-3 items-start text-gray-600">
-                                                Moving mobile
-                                            </span>
-                                        </div>
-                                        
-                        
-                                         <div class="flex flex-col">
-                                            <div class="flex items-center">
-                                                <input
-                                                        id="contact-service-Other"
-                                                        name="Other"
-                                                        type="checkbox"
-                                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                        value="Other"
-                                                        onclick="toggleOtherServicesMobile()"
-                                                />
-                                                <label for="contact-label-service-Other" class="ml-3 text-gray-600">Other</label>
-                                            </div>
-                                            <input
-                                                id="contact-service-other-text2"
-                                                name="OtherServicesInputField"
-                                                type="text"
-                                                class="ml-4 block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
-                                                />
-                                        </div>
-                                 
-                                    </div>
-                                </fieldset>
-                            </div>
                             
-
                             
-                            <div class="sm:hidden">
-                                <label for="contact-concern-1" class="sm:hidden font-medium text-base text-white"> How can we help? </label>
-                                <textarea
-                                    id="contact-concern-1"
-                                    name="concern"
-                                    rows="4"
-                                    class="sm:hidden block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder='Type your message here...'
-                                ></textarea>
-                            </div>
                             
-
+                            
+                            
+                            
+                            
+                            
                             
                             <div class="relative">
-                                <label for="contact-date" class="font-medium text-base text-white">Preferred date of service</label>
-                                <!-- <input
-                                    type="text"
-                                    name="date"
-                                    id="contact-date"
-                                    class="block w-full border-gray-500 py-2 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="Preferred date of service"
-                                    onfocus="(this.type='date')"
-                                /> -->
-                                <div class="w-4 h-4 absolute transform translate-y-4.5 left-4">
-                                    <!-- <svg width="16" height="17" viewBox="0 0 16 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0.5C3.44772 0.5 3 0.947715 3 1.5V2.5H2C0.895431 2.5 0 3.39543 0 4.5V14.5C0 15.6046 0.895431 16.5 2 16.5H14C15.1046 16.5 16 15.6046 16 14.5V4.5C16 3.39543 15.1046 2.5 14 2.5H13V1.5C13 0.947715 12.5523 0.5 12 0.5C11.4477 0.5 11 0.947715 11 1.5V2.5H5V1.5C5 0.947715 4.55228 0.5 4 0.5ZM4 5.5C3.44772 5.5 3 5.94772 3 6.5C3 7.05228 3.44772 7.5 4 7.5H12C12.5523 7.5 13 7.05228 13 6.5C13 5.94772 12.5523 5.5 12 5.5H4Z" fill="#9CA3AF"/>
-                                    </svg> -->
-                                </div>
-                                <input id="contact-date" type="date" class="block text-left z-50 w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary">
+                                <label for="contact-date" class="font-medium text-base text-white">Preferred Date of Service</label>
+                                <div class="w-4 h-4 absolute transform translate-y-4.5 left-4"></div>
+                                <input id="contact-date" name="date" type="date" class="block text-left z-50 w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary" >
                             </div>
                             
                             
-
-                    </div>
-
-                    <div class="hidden sm:block px-6 py-4">
-                        
-                        <label class="font-medium text-base text-white">Services</label>
-                        <fieldset class="sm:bg-white sm:p-6 sm:mt-1 rounded-sm">
-                            <div class="grid auto-cols-auto gap-4 grid-cols-2">
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-168398"
-                                        name="168398"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                        value="Cookin Some Chilli"
-                                    />
-                                    <label for="contact-service-168398" class="ml-3 text-sm font-normal text-gray-700">Cookin Some Chilli</label>
-                                </div>
                             
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-168399"
-                                        name="168399"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                        value="Caro's Special Service"
-                                    />
-                                    <label for="contact-service-168399" class="ml-3 text-sm font-normal text-gray-700">Caro's Special Service</label>
-                                </div>
                             
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-168400"
-                                        name="168400"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                        value="Driveway Design & Build"
-                                    />
-                                    <label for="contact-service-168400" class="ml-3 text-sm font-normal text-gray-700">Driveway Design & Build</label>
-                                </div>
                             
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-168401"
-                                        name="168401"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                        value="Fall and Spring Clean Up"
-                                    />
-                                    <label for="contact-service-168401" class="ml-3 text-sm font-normal text-gray-700">Fall and Spring Clean Up</label>
-                                </div>
                             
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-168403"
-                                        name="168403"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                        value="Cheese Making"
-                                    />
-                                    <label for="contact-service-168403" class="ml-3 text-sm font-normal text-gray-700">Cheese Making</label>
-                                </div>
                             
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-168404"
-                                        name="168404"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                        value="Stone Wall Installation"
-                                    />
-                                    <label for="contact-service-168404" class="ml-3 text-sm font-normal text-gray-700">Stone Wall Installation</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-168405"
-                                        name="168405"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                        value="Professional Fertilization"
-                                    />
-                                    <label for="contact-service-168405" class="ml-3 text-sm font-normal text-gray-700">Professional Fertilization</label>
-                                </div>
-                            
-                                
-                                <div class="flex items-center">
-                                    <input
-                                        id="contact-service-168406"
-                                        name="168406"
-                                        type="checkbox"
-                                        class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                        value="Moving mobile"
-                                    />
-                                    <label for="contact-service-168406" class="ml-3 text-sm font-normal text-gray-700">Moving mobile</label>
-                                </div>
-                            
-                                
-             
-                                <div class="flex flex-col">
-                                        <div class="flex items-center">
-                                             <input
-                                                    id="contact-service-other-checkbox"
-                                                    name="Other"
+                                <div class="block sm:grid sm:col-span-2">
+                                    <label class="font-medium text-base text-white">Services</label>
+                                    <fieldset class="sm:bg-white sm:p-6 sm:mt-1 rounded-sm" >
+                                        <div class="grid auto-cols-auto gap-4 grid-cols-2">
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-168398"
+                                                    name="service-168398"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Other"
-                                                    onclick="toggleOtherServices()"
+                                                    value="Cookin Some Chilli"
                                                 />
-                                            <label for="contact-label-service-Other" class="ml-3 text-sm text-gray-600">Other</label>
-                                        </div>
-                                    <input
-                                        id="contact-service-other-text"
-                                        name="OtherServicesInputField"
-                                        type="text"
-                                        class="ml-4 block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
-                                    />
-                                    </div>
-                           
-                            </div>
-                        </fieldset>
-                        
-                    </div>
+                                                <label for="contact-service-168398" class="ml-3 text-sm font-normal text-gray-700">Cookin Some Chilli</label>
+                                            </div>
 
-                    <div class="block sm:flex sm:space-x-6 px-6">
-                        
-                        <div class="sm:flex sm:flex-col sm:w-full hidden">
-                            <label for="contact-concern-2" class="sm:block hidden font-medium text-base text-white"> How can we help? </label>
-                            <textarea
-                                id="contact-concern-2"
-                                name="concern"
-                                rows="4"
-                                class="sm:flex sm:grow hidden py-2.5 px-2.5 mt-1 w-full h-auto border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                placeholder='Type your message here...'
-                            ></textarea>
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-168399"
+                                                    name="service-168399"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                    value="Caro's Special Service"
+                                                />
+                                                <label for="contact-service-168399" class="ml-3 text-sm font-normal text-gray-700">Caro's Special Service</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-168400"
+                                                    name="service-168400"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                    value="Driveway Design & Build"
+                                                />
+                                                <label for="contact-service-168400" class="ml-3 text-sm font-normal text-gray-700">Driveway Design & Build</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-168401"
+                                                    name="service-168401"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                    value="Fall and Spring Clean Up"
+                                                />
+                                                <label for="contact-service-168401" class="ml-3 text-sm font-normal text-gray-700">Fall and Spring Clean Up</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-168403"
+                                                    name="service-168403"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                    value="Cheese Making"
+                                                />
+                                                <label for="contact-service-168403" class="ml-3 text-sm font-normal text-gray-700">Cheese Making</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-168404"
+                                                    name="service-168404"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                    value="Stone Wall Installation"
+                                                />
+                                                <label for="contact-service-168404" class="ml-3 text-sm font-normal text-gray-700">Stone Wall Installation</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-168405"
+                                                    name="service-168405"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                    value="Professional Fertilization"
+                                                />
+                                                <label for="contact-service-168405" class="ml-3 text-sm font-normal text-gray-700">Professional Fertilization</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-168406"
+                                                    name="service-168406"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                    value="Moving mobile"
+                                                />
+                                                <label for="contact-service-168406" class="ml-3 text-sm font-normal text-gray-700">Moving mobile</label>
+                                            </div>
+
+                                            
+
+                                            <div class="flex flex-col">
+                                                    <div class="flex items-center">
+                                                         <input
+                                                                id="contact-service-other-checkbox"
+                                                                name="service-other"
+                                                                type="checkbox"
+                                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                                value="Other"
+                                                                onclick="toggleOtherServices()"
+                                                            />
+                                                        <label for="contact-label-service-other-checkbox" class="ml-3 text-sm text-gray-600">Other</label>
+                                                    </div>
+                                                <input
+                                                    id="contact-service-other-text"
+                                                    name="service-other-text"
+                                                    type="text"
+                                                    class="ml-4 block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
+                                                />
+                                                </div>
+
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                                <label for="contact-paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b" class="sm:hidden font-medium text-base text-white">How can we help?</label>
+                                <textarea
+                                    id="contact-paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b"
+                                    name="paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b"
+                                    rows="4"
+                                    class="sm:hidden block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                    
+                                ></textarea>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                         </div>
                         
-    
-                        
-                    </div>
-                    <div class="z-50 flex-col px-6 pb-4 bg-primary flex w-full align-middle items-center justify-center">
-                        
-                            <div class="text-gray-500 text-sm font-normal mt-1.5">
-                                By providing your phone number, you agree to receive text messages (SMS) from Beantown Tutoring &amp; Cheese Making. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.
-                            </div>
-                        
-                        <button
-                            id='sendButton'
-                            class="cta_text_conversion flex justify-center relative rounded-sm mx-4 py-2.5 mt-6 sm:mt-4 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase"
-                        >
-                            Send
-                        </button>
+                        <div class="z-50 flex-col px-6 pb-4 bg-primary flex w-full align-middle items-center justify-center">
+                            
+                                <div class="text-gray-300 text-sm font-normal mt-1.5">
+                                    By providing your phone number, you agree to receive text messages (SMS) from Beantown Tutoring &amp; Cheese Making. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.
+                                </div>
+                            
+                            <button
+                                id='sendButton'
+                                class="cta_text_conversion flex justify-center relative rounded-sm mx-4 py-2.5 mt-6 sm:mt-4 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase"
+                            >
+                                Send
+                            </button>
+                        </div>
                     </div>
                 </form>
-                
-
-
             </div>
         </div>
     </div>
