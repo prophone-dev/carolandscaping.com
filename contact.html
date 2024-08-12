@@ -88,7 +88,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png");
       background-size: cover;
   }
   
@@ -151,8 +151,7 @@
         };
 
         
-         document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const n=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){n.setNumber(n.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,n="contact-modal"){const t="contact-embedded"===n,o=document.getElementById("sendButton");o.disabled=!0;const r=document.getElementById("error-state-modal");r.innerHTML="",event.preventDefault();const c=(e,n)=>{var t=document.createElement("div"),o=document.createElement("h1");o.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(o),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",n.className="",n.appendChild(t)};const d=(s="#contact-phone-number",window.intlTelInputGlobals.getInstance(document.querySelector(s)));var s;if(!d.getNumber()){return c("Phone number is required",r),void(o.disabled=!1)}if(!d.isValidNumber()){const e=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],n=d.getValidationError();return c(e[n]?e[n]:"Not a valid phone number",r),void(o.disabled=!1)}let a="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?a="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?a="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(a="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(n){const r=(()=>{let e;e=t?document.forms.embeddedForm:document.forms.contactModal;const n=new FormData(e),o={};for(const e of n.entries())o[e[0]]=e[1];return o["phone-number"]=o["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),o})();fetch(a+"/sms/"+e,{method:"POST",body:JSON.stringify({fields:r,ct:n})}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o.disabled=!1,alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
-         
+        document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const n=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){n.setNumber(n.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,n="contact-modal"){let t;t="contact-embedded"===n?document.forms.embeddedForm:document.forms.contactModal;const o=document.getElementById("sendButton");o.disabled=!0;const r=t.querySelector("#error-state-modal");r.innerHTML="",event.preventDefault();const c=(e,n)=>{var t=document.createElement("div"),o=document.createElement("h1");o.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(o),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",n.className="",n.appendChild(t)};const d=(s=t,a="#contact-phone-number",window.intlTelInputGlobals.getInstance(s.querySelector(a)));var s,a;if(!d.getNumber()){return c("Phone number is required",r),void(o.disabled=!1)}if(!d.isValidNumber()){const e=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],n=d.getValidationError();return c(e[n]?e[n]:"Not a valid phone number",r),void(o.disabled=!1)}let i="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?i="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?i="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(i="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(n){const r=(()=>{const e=new FormData(t),n={};for(const t of e.entries())n[t[0]]=t[1];return n["phone-number"]=n["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),n})();fetch(i+"/sms/"+e,{method:"POST",body:JSON.stringify({fields:r,ct:n})}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o.disabled=!1,alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
     </script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded",(function(){var e=[].slice.call(document.querySelectorAll("video.lazy"));if("IntersectionObserver"in window){var t=new IntersectionObserver((function(e,r){e.forEach((function(e){if(e.isIntersecting){for(var r in e.target.children){var n=e.target.children[r];"string"==typeof n.tagName&&"SOURCE"===n.tagName&&(n.src=n.dataset.src)}e.target.load(),e.target.classList.remove("lazy"),t.unobserve(e.target)}}))}));e.forEach((function(e){t.observe(e)}))}}));
@@ -256,7 +255,7 @@
                                 <span class="block custom_text_color text-white">ZZZ Beantown Tutoring &amp; Cheese Making LLC</span>
                             </h1>
                             <p class="mt-3 text-sm font-medium leading-5 text-white sm:mt-5 sm:text-lg sm:leading-6 sm:max-w-xl">
-                                Expert tutoring services for all ages in NY, NJ, MA and beyond!!! 
+                                Expert tutoring services for all ages in NY, NJ, MA and beyond!!!
                             </p>
 
                             
@@ -3415,7 +3414,7 @@
                 <div class="flex-1 flex flex-col border-t border-b h-[291px] border-box border-white border-t-4 border-b-4 pt-[22px] pb-[21px]">
                     <div class="pl-5 py-3 flex flex-col justify-center gap-4 bg-secondary h-full">
                         <span class="uppercase font-black test-tertiary text-3xl text-center">
-                            Send us a text
+                            Send us a texttest
                         </span>
                         <button
                             @click="contactModalOpen = true"
@@ -3439,7 +3438,7 @@
                 <div class="flex-1 flex flex-col border-t border-b h-[243px] border-box border-secondary border-t-4 border-b-4 py-[21.5px]">
                     <div class="pl-5 py-3 flex flex-col justify-center gap-4 bg-white h-full">
                         <span class="uppercase text-gray-900 font-black test-tertiary text-3xl text-center">
-                            Chat on The phone
+                            Chat on the phonetest
                         </span>
                     </div>
                 </div>
@@ -3457,7 +3456,7 @@
                 <div class="flex-1 flex flex-col border-t border-b h-[243px] border-box border-secondary border-t-4 border-b-4 py-[21.5px]">
                     <div class="pl-5 py-3 flex flex-col justify-center gap-4 bg-white h-full">
                         <span class="uppercase text-gray-900 font-black test-tertiary text-3xl text-center">
-                            RECEIVE A QUOTE
+                            Receive a quotetest
                         </span>
                     </div>
                 </div>
@@ -3475,7 +3474,7 @@
                     style="transform: translateX(-50%); top: 20%; left: 50%;"
                     class="absolute text-2xl font-black text-white text-center uppercase"
                 >
-                    Send us a text
+                    Send us a texttest
                 </div>
                 <div
                     onclick="postCtaClick('text')"
@@ -3512,7 +3511,7 @@
                     class="absolute text-2xl font-black text-primary text-center uppercase"
                     style="top: 40%; left: 50%; transform: translate(-50%, -50%); max-width: 300px;"
                 >
-                    Chat on the phone
+                    Chat on the phonetest
                 </div>
 
                 <svg width="243" height="31" viewBox="0 0 243 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3537,7 +3536,7 @@
                     class="absolute text-2xl font-black text-primary text-center uppercase"
                     style="top: 40%; left: 50%; transform: translate(-50%, -50%); max-width: 300px;"
                 >
-                    Receive a quote
+                    Receive a quotetest
                 </div>
 
                 <svg width="243" height="31" viewBox="0 0 243 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3582,7 +3581,7 @@
     <div
         x-data="{
             activeImage: 0,
-            amountOfImages: 115,
+            amountOfImages: 118,
             next() {
                 if (this.activeImage < this.amountOfImages - 1)
                     this.activeImage ++;
@@ -3631,7 +3630,7 @@
                         <img
                             style="width: 300px; height: 185px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3644,7 +3643,7 @@
                         <img
                             style="width: 300px; height: 185px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/19f6d7d3-8143-449d-bf8c-77334faed071.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3657,7 +3656,7 @@
                         <img
                             style="width: 300px; height: 320px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3673,7 +3672,7 @@
                         <img
                             style="width: 300px; height: 185px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3686,7 +3685,7 @@
                         <img
                             style="width: 300px; height: 415px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3698,14 +3697,12 @@
                     @click="activeImage = 5; galleryModalOpen = true"
                 >
                     
-                        <video
-                            style="width: 300px; height: 415px;"
-                            class="lazy rounded-sm object-cover w-full h-full"
-                            preload="none" autoplay loop playsinline controls muted
-                        >
-                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/68e2e365-418c-4134-ae5b-99dda0f6d68d.mp4#t=0.5">
-                            Your browser does not support the video tag.
-                        </video>
+                        <img
+                        style="width: 300px; height: 415px;"
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg"
+                            alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
+                        />
                     
                 </div>
                 <div
@@ -3716,7 +3713,7 @@
                         <img
                             style="width: 300px; height: 320px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3732,7 +3729,7 @@
                         <img
                             style="width: 300px; height: 320px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/79efe44c-aeac-427e-a01d-e49090fb2717.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3742,12 +3739,14 @@
                     class="pt-8"
                 >
                     
-                        <img
+                        <video
                             style="width: 300px; height: 320px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg"
-                            alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
-                        />
+                            class="lazy rounded-sm object-cover w-full h-full"
+                            preload="none" autoplay loop playsinline controls muted
+                        >
+                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/68e2e365-418c-4134-ae5b-99dda0f6d68d.mp4#t=0.5">
+                            Your browser does not support the video tag.
+                        </video>
                     
                 </div>
             </div>
@@ -3762,7 +3761,7 @@
                         <img
                             style="width: 100%; height: 118px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3775,7 +3774,7 @@
                         <img
                             style="width: 100%; height: 118px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/19f6d7d3-8143-449d-bf8c-77334faed071.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3788,7 +3787,7 @@
                         <img
                             style="width: 100%; height: 208px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3801,7 +3800,7 @@
                         <img
                             style="width: 100%; height: 118px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3814,7 +3813,7 @@
                         <img
                             style="width: 100%; height: 208px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3826,14 +3825,12 @@
                     @click="activeImage = 5; galleryModalOpen = true"
                 >
                     
-                        <video
+                        <img
                             style="width: 100%; height: 208px;"
-                            class="lazy rounded-sm object-cover w-full h-full"
-                            preload="none" autoplay loop playsinline controls muted
-                        >
-                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/68e2e365-418c-4134-ae5b-99dda0f6d68d.mp4#t=0.5">
-                            Your browser does not support the video tag.
-                        </video>
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg"
+                            alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
+                        />
                     
                 </div>
                 <div
@@ -3844,7 +3841,7 @@
                         <img
                             style="width: 100%; height: 172px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3857,7 +3854,7 @@
                         <img
                             style="width: 100%; height: 172px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/79efe44c-aeac-427e-a01d-e49090fb2717.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png"
                             alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                         />
                     
@@ -3867,12 +3864,14 @@
                     class="pt-4"
                 >
                     
-                        <img
+                        <video
                             style="width: 100%; height: 118px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/be94090f-4027-4fe1-b2e6-0c36eb2e0f0b.jpeg"
-                            alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
-                        />
+                            class="lazy rounded-sm object-cover w-full h-full"
+                            preload="none" autoplay loop playsinline controls muted
+                        >
+                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/68e2e365-418c-4134-ae5b-99dda0f6d68d.mp4#t=0.5">
+                            Your browser does not support the video tag.
+                        </video>
                     
                 </div>
             </div>
@@ -3947,7 +3946,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png"
                                                         alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3960,7 +3959,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/19f6d7d3-8143-449d-bf8c-77334faed071.png"
                                                         alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3973,7 +3972,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
                                                         alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3986,7 +3985,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg"
                                                         alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3999,7 +3998,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
                                                         alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4009,6 +4008,45 @@
                                     
                                         <li class="flex flex-col" x-show="activeImage === 5">
                                             
+                                                
+                                                    <img
+                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg"
+                                                        alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
+                                                    />
+                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 6">
+                                            
+                                                
+                                                    <img
+                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png"
+                                                        alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
+                                                    />
+                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 7">
+                                            
+                                                
+                                                    <img
+                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png"
+                                                        alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"
+                                                    />
+                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 8">
+                                            
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/68e2e365-418c-4134-ae5b-99dda0f6d68d.mp4#t=0.5" >
                                                     Your browser does not support the video tag.
@@ -4017,7 +4055,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 6">
+                                        <li class="flex flex-col" x-show="activeImage === 9">
                                             
                                                 
                                                     <div class="m-auto">
@@ -4031,7 +4069,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 7">
+                                        <li class="flex flex-col" x-show="activeImage === 10">
                                             
                                                 
                                                     <div class="m-auto">
@@ -4045,7 +4083,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 8">
+                                        <li class="flex flex-col" x-show="activeImage === 11">
                                             
                                                 
                                                     <img
@@ -4058,7 +4096,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 9">
+                                        <li class="flex flex-col" x-show="activeImage === 12">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e3447bf6-2187-4156-9753-53b203a460ec.mp4#t=0.5" >
@@ -4068,7 +4106,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 10">
+                                        <li class="flex flex-col" x-show="activeImage === 13">
                                             
                                                 
                                                     <img
@@ -4081,7 +4119,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 11">
+                                        <li class="flex flex-col" x-show="activeImage === 14">
                                             
                                                 
                                                     <img
@@ -4094,7 +4132,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 12">
+                                        <li class="flex flex-col" x-show="activeImage === 15">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/57b62039-d225-4b3e-b4b6-701ac77dc824.mp4#t=0.5" >
@@ -4104,7 +4142,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 13">
+                                        <li class="flex flex-col" x-show="activeImage === 16">
                                             
                                                 
                                                     <img
@@ -4117,7 +4155,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 14">
+                                        <li class="flex flex-col" x-show="activeImage === 17">
                                             
                                                 
                                                     <img
@@ -4130,7 +4168,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 15">
+                                        <li class="flex flex-col" x-show="activeImage === 18">
                                             
                                                 
                                                     <img
@@ -4143,7 +4181,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 16">
+                                        <li class="flex flex-col" x-show="activeImage === 19">
                                             
                                                 
                                                     <img
@@ -4156,7 +4194,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 17">
+                                        <li class="flex flex-col" x-show="activeImage === 20">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4#t=0.5" >
@@ -4166,7 +4204,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 18">
+                                        <li class="flex flex-col" x-show="activeImage === 21">
                                             
                                                 
                                                     <img
@@ -4179,7 +4217,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 19">
+                                        <li class="flex flex-col" x-show="activeImage === 22">
                                             
                                                 
                                                     <img
@@ -4192,7 +4230,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 20">
+                                        <li class="flex flex-col" x-show="activeImage === 23">
                                             
                                                 
                                                     <img
@@ -4205,7 +4243,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 21">
+                                        <li class="flex flex-col" x-show="activeImage === 24">
                                             
                                                 
                                                     <img
@@ -4218,7 +4256,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 22">
+                                        <li class="flex flex-col" x-show="activeImage === 25">
                                             
                                                 
                                                     <img
@@ -4231,7 +4269,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 23">
+                                        <li class="flex flex-col" x-show="activeImage === 26">
                                             
                                                 
                                                     <img
@@ -4244,7 +4282,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 24">
+                                        <li class="flex flex-col" x-show="activeImage === 27">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/fafd4c66-b291-48bd-873a-d1cf8f7b74cc.mp4#t=0.5" >
@@ -4254,7 +4292,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 25">
+                                        <li class="flex flex-col" x-show="activeImage === 28">
                                             
                                                 
                                                     <img
@@ -4267,7 +4305,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 26">
+                                        <li class="flex flex-col" x-show="activeImage === 29">
                                             
                                                 
                                                     <img
@@ -4280,7 +4318,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 27">
+                                        <li class="flex flex-col" x-show="activeImage === 30">
                                             
                                                 
                                                     <img
@@ -4293,7 +4331,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 28">
+                                        <li class="flex flex-col" x-show="activeImage === 31">
                                             
                                                 
                                                     <img
@@ -4306,7 +4344,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 29">
+                                        <li class="flex flex-col" x-show="activeImage === 32">
                                             
                                                 
                                                     <img
@@ -4319,7 +4357,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 30">
+                                        <li class="flex flex-col" x-show="activeImage === 33">
                                             
                                                 
                                                     <img
@@ -4332,7 +4370,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 31">
+                                        <li class="flex flex-col" x-show="activeImage === 34">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a655d47e-dd6d-484b-9303-7b5cf260586d.avif#t=0.5" >
@@ -4342,7 +4380,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 32">
+                                        <li class="flex flex-col" x-show="activeImage === 35">
                                             
                                                 
                                                     <img
@@ -4355,7 +4393,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 33">
+                                        <li class="flex flex-col" x-show="activeImage === 36">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/4346bbfa-05ab-448b-ac42-043e4f17c42e.mp4#t=0.5" >
@@ -4365,7 +4403,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 34">
+                                        <li class="flex flex-col" x-show="activeImage === 37">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/032f3d7a-b06e-4df1-adca-061105617ba6.mp4#t=0.5" >
@@ -4375,7 +4413,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 35">
+                                        <li class="flex flex-col" x-show="activeImage === 38">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d4f0fd20-51fd-46f7-ade8-1159c4f29194.mp4#t=0.5" >
@@ -4385,7 +4423,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 36">
+                                        <li class="flex flex-col" x-show="activeImage === 39">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/fa222428-b1b5-4f66-acda-ee19050d08e6.mp4#t=0.5" >
@@ -4395,7 +4433,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 37">
+                                        <li class="flex flex-col" x-show="activeImage === 40">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4#t=0.5" >
@@ -4405,7 +4443,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 38">
+                                        <li class="flex flex-col" x-show="activeImage === 41">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e642a67f-fc1d-4731-9f39-638fa8a56898.mp4#t=0.5" >
@@ -4415,7 +4453,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 39">
+                                        <li class="flex flex-col" x-show="activeImage === 42">
                                             
                                                 
                                                     <img
@@ -4428,7 +4466,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 40">
+                                        <li class="flex flex-col" x-show="activeImage === 43">
                                             
                                                 
                                                     <img
@@ -4441,7 +4479,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 41">
+                                        <li class="flex flex-col" x-show="activeImage === 44">
                                             
                                                 
                                                     <img
@@ -4454,7 +4492,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 42">
+                                        <li class="flex flex-col" x-show="activeImage === 45">
                                             
                                                 
                                                     <img
@@ -4467,7 +4505,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 43">
+                                        <li class="flex flex-col" x-show="activeImage === 46">
                                             
                                                 
                                                     <img
@@ -4480,7 +4518,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 44">
+                                        <li class="flex flex-col" x-show="activeImage === 47">
                                             
                                                 
                                                     <img
@@ -4493,7 +4531,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 45">
+                                        <li class="flex flex-col" x-show="activeImage === 48">
                                             
                                                 
                                                     <img
@@ -4506,7 +4544,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 46">
+                                        <li class="flex flex-col" x-show="activeImage === 49">
                                             
                                                 
                                                     <img
@@ -4519,7 +4557,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 47">
+                                        <li class="flex flex-col" x-show="activeImage === 50">
                                             
                                                 
                                                     <img
@@ -4532,7 +4570,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 48">
+                                        <li class="flex flex-col" x-show="activeImage === 51">
                                             
                                                 
                                                     <img
@@ -4545,7 +4583,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 49">
+                                        <li class="flex flex-col" x-show="activeImage === 52">
                                             
                                                 
                                                     <img
@@ -4558,7 +4596,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 50">
+                                        <li class="flex flex-col" x-show="activeImage === 53">
                                             
                                                 
                                                     <img
@@ -4571,7 +4609,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 51">
+                                        <li class="flex flex-col" x-show="activeImage === 54">
                                             
                                                 
                                                     <img
@@ -4584,7 +4622,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 52">
+                                        <li class="flex flex-col" x-show="activeImage === 55">
                                             
                                                 
                                                     <img
@@ -4597,7 +4635,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 53">
+                                        <li class="flex flex-col" x-show="activeImage === 56">
                                             
                                                 
                                                     <img
@@ -4610,7 +4648,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 54">
+                                        <li class="flex flex-col" x-show="activeImage === 57">
                                             
                                                 
                                                     <img
@@ -4623,7 +4661,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 55">
+                                        <li class="flex flex-col" x-show="activeImage === 58">
                                             
                                                 
                                                     <img
@@ -4636,7 +4674,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 56">
+                                        <li class="flex flex-col" x-show="activeImage === 59">
                                             
                                                 
                                                     <img
@@ -4649,7 +4687,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 57">
+                                        <li class="flex flex-col" x-show="activeImage === 60">
                                             
                                                 
                                                     <img
@@ -4662,7 +4700,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 58">
+                                        <li class="flex flex-col" x-show="activeImage === 61">
                                             
                                                 
                                                     <img
@@ -4675,7 +4713,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 59">
+                                        <li class="flex flex-col" x-show="activeImage === 62">
                                             
                                                 
                                                     <img
@@ -4688,7 +4726,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 60">
+                                        <li class="flex flex-col" x-show="activeImage === 63">
                                             
                                                 
                                                     <img
@@ -4701,7 +4739,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 61">
+                                        <li class="flex flex-col" x-show="activeImage === 64">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d6cfb207-f466-4bf6-a794-8b5e01df135d.mp4#t=0.5" >
@@ -4711,7 +4749,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 62">
+                                        <li class="flex flex-col" x-show="activeImage === 65">
                                             
                                                 
                                                     <img
@@ -4724,7 +4762,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 63">
+                                        <li class="flex flex-col" x-show="activeImage === 66">
                                             
                                                 
                                                     <img
@@ -4737,7 +4775,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 64">
+                                        <li class="flex flex-col" x-show="activeImage === 67">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a6fb34a1-1bc6-4dc9-b6d6-63fafb307e0d.mp4#t=0.5" >
@@ -4747,7 +4785,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 65">
+                                        <li class="flex flex-col" x-show="activeImage === 68">
                                             
                                                 
                                                     <img
@@ -4760,7 +4798,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 66">
+                                        <li class="flex flex-col" x-show="activeImage === 69">
                                             
                                                 
                                                     <img
@@ -4773,7 +4811,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 67">
+                                        <li class="flex flex-col" x-show="activeImage === 70">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3ba2e15e-3024-4d20-85d2-192f0c52e192.mp4#t=0.5" >
@@ -4783,7 +4821,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 68">
+                                        <li class="flex flex-col" x-show="activeImage === 71">
                                             
                                                 
                                                     <img
@@ -4796,7 +4834,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 69">
+                                        <li class="flex flex-col" x-show="activeImage === 72">
                                             
                                                 
                                                     <img
@@ -4809,7 +4847,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 70">
+                                        <li class="flex flex-col" x-show="activeImage === 73">
                                             
                                                 
                                                     <img
@@ -4822,7 +4860,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 71">
+                                        <li class="flex flex-col" x-show="activeImage === 74">
                                             
                                                 
                                                     <img
@@ -4835,7 +4873,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 72">
+                                        <li class="flex flex-col" x-show="activeImage === 75">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/cb36fabb-83c6-430c-807f-0551cd878563.mp4#t=0.5" >
@@ -4845,7 +4883,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 73">
+                                        <li class="flex flex-col" x-show="activeImage === 76">
                                             
                                                 
                                                     <img
@@ -4858,7 +4896,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 74">
+                                        <li class="flex flex-col" x-show="activeImage === 77">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a4bd8da4-f79e-41b8-a1df-17a9a13bbe9e.mp4#t=0.5" >
@@ -4868,7 +4906,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 75">
+                                        <li class="flex flex-col" x-show="activeImage === 78">
                                             
                                                 
                                                     <img
@@ -4881,7 +4919,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 76">
+                                        <li class="flex flex-col" x-show="activeImage === 79">
                                             
                                                 
                                                     <img
@@ -4894,7 +4932,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 77">
+                                        <li class="flex flex-col" x-show="activeImage === 80">
                                             
                                                 
                                                     <img
@@ -4907,7 +4945,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 78">
+                                        <li class="flex flex-col" x-show="activeImage === 81">
                                             
                                                 
                                                     <img
@@ -4920,7 +4958,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 79">
+                                        <li class="flex flex-col" x-show="activeImage === 82">
                                             
                                                 
                                                     <img
@@ -4933,7 +4971,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 80">
+                                        <li class="flex flex-col" x-show="activeImage === 83">
                                             
                                                 
                                                     <img
@@ -4946,7 +4984,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 81">
+                                        <li class="flex flex-col" x-show="activeImage === 84">
                                             
                                                 
                                                     <img
@@ -4959,7 +4997,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 82">
+                                        <li class="flex flex-col" x-show="activeImage === 85">
                                             
                                                 
                                                     <img
@@ -4972,7 +5010,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 83">
+                                        <li class="flex flex-col" x-show="activeImage === 86">
                                             
                                                 
                                                     <img
@@ -4985,7 +5023,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 84">
+                                        <li class="flex flex-col" x-show="activeImage === 87">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/98c6e571-7e3f-4c6e-b1bd-ac42c7627ba7.mp4#t=0.5" >
@@ -4995,7 +5033,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 85">
+                                        <li class="flex flex-col" x-show="activeImage === 88">
                                             
                                                 
                                                     <img
@@ -5008,7 +5046,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 86">
+                                        <li class="flex flex-col" x-show="activeImage === 89">
                                             
                                                 
                                                     <img
@@ -5021,7 +5059,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 87">
+                                        <li class="flex flex-col" x-show="activeImage === 90">
                                             
                                                 
                                                     <img
@@ -5034,7 +5072,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 88">
+                                        <li class="flex flex-col" x-show="activeImage === 91">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/786c7fc1-723a-4eee-a281-060336c3a581.mp4#t=0.5" >
@@ -5044,7 +5082,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 89">
+                                        <li class="flex flex-col" x-show="activeImage === 92">
                                             
                                                 
                                                     <img
@@ -5057,7 +5095,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 90">
+                                        <li class="flex flex-col" x-show="activeImage === 93">
                                             
                                                 
                                                     <img
@@ -5070,7 +5108,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 91">
+                                        <li class="flex flex-col" x-show="activeImage === 94">
                                             
                                                 
                                                     <img
@@ -5083,7 +5121,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 92">
+                                        <li class="flex flex-col" x-show="activeImage === 95">
                                             
                                                 
                                                     <img
@@ -5096,7 +5134,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 93">
+                                        <li class="flex flex-col" x-show="activeImage === 96">
                                             
                                                 
                                                     <img
@@ -5109,7 +5147,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 94">
+                                        <li class="flex flex-col" x-show="activeImage === 97">
                                             
                                                 
                                                     <img
@@ -5122,7 +5160,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 95">
+                                        <li class="flex flex-col" x-show="activeImage === 98">
                                             
                                                 
                                                     <img
@@ -5135,7 +5173,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 96">
+                                        <li class="flex flex-col" x-show="activeImage === 99">
                                             
                                                 
                                                     <img
@@ -5148,7 +5186,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 97">
+                                        <li class="flex flex-col" x-show="activeImage === 100">
                                             
                                                 
                                                     <img
@@ -5161,7 +5199,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 98">
+                                        <li class="flex flex-col" x-show="activeImage === 101">
                                             
                                                 
                                                     <img
@@ -5174,7 +5212,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 99">
+                                        <li class="flex flex-col" x-show="activeImage === 102">
                                             
                                                 
                                                     <img
@@ -5187,7 +5225,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 100">
+                                        <li class="flex flex-col" x-show="activeImage === 103">
                                             
                                                 
                                                     <img
@@ -5200,7 +5238,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 101">
+                                        <li class="flex flex-col" x-show="activeImage === 104">
                                             
                                                 
                                                     <img
@@ -5213,7 +5251,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 102">
+                                        <li class="flex flex-col" x-show="activeImage === 105">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9f0dfda6-8c0d-4294-8eab-db7a7f92df3c.mp4#t=0.5" >
@@ -5223,7 +5261,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 103">
+                                        <li class="flex flex-col" x-show="activeImage === 106">
                                             
                                                 
                                                     <img
@@ -5236,7 +5274,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 104">
+                                        <li class="flex flex-col" x-show="activeImage === 107">
                                             
                                                 
                                                     <img
@@ -5249,7 +5287,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 105">
+                                        <li class="flex flex-col" x-show="activeImage === 108">
                                             
                                                 
                                                     <img
@@ -5262,7 +5300,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 106">
+                                        <li class="flex flex-col" x-show="activeImage === 109">
                                             
                                                 
                                                     <img
@@ -5275,7 +5313,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 107">
+                                        <li class="flex flex-col" x-show="activeImage === 110">
                                             
                                                 
                                                     <img
@@ -5288,7 +5326,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 108">
+                                        <li class="flex flex-col" x-show="activeImage === 111">
                                             
                                                 
                                                     <img
@@ -5301,7 +5339,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 109">
+                                        <li class="flex flex-col" x-show="activeImage === 112">
                                             
                                                 
                                                     <img
@@ -5314,7 +5352,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 110">
+                                        <li class="flex flex-col" x-show="activeImage === 113">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e1f9c772-7db4-4c9d-ae6f-a4a2b1d19057.mp4#t=0.5" >
@@ -5324,7 +5362,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 111">
+                                        <li class="flex flex-col" x-show="activeImage === 114">
                                             
                                                 
                                                     <img
@@ -5337,7 +5375,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 112">
+                                        <li class="flex flex-col" x-show="activeImage === 115">
                                             
                                                 
                                                     <img
@@ -5350,7 +5388,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 113">
+                                        <li class="flex flex-col" x-show="activeImage === 116">
                                             
                                                 
                                                     <img
@@ -5363,7 +5401,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 114">
+                                        <li class="flex flex-col" x-show="activeImage === 117">
                                             
                                                 
                                                     <img
@@ -7353,35 +7391,25 @@
         <div class="self-stretch text-gray-900 text-xl font-medium leading-7">
             
                 
+            
+                
+                    New York, 
                 
             
                 
-                    New York
-                
-                ,
+                    Newark, 
                 
             
                 
-                    Newark
-                
-                ,
+                    Hoboken, 
                 
             
                 
-                    Hoboken
-                
-                ,
-                
-            
-                
-                    Asbury Park
-                
-                ,
+                    Asbury Park, 
                 
             
                 
                     Boston
-                
                 
             
         </div>
@@ -7391,39 +7419,29 @@
             <div class="flex flex-col gap-4">
                 <div class="text-primary text-2xl font-extrabold leading-10">Proudly serving Brooklyn, NY and surrounding areas</div>
                 <div class="w-96 text-gray-900 text-xl font-medium leading-7">
-                    
-                        
-                        
-                    
-                        
-                            New York
-                        
-                        ,
-                        
-                    
-                        
-                            Newark
-                        
-                        ,
-                        
-                    
-                        
-                            Hoboken
-                        
-                        ,
-                        
-                    
-                        
-                            Asbury Park
-                        
-                        ,
-                        
-                    
-                        
-                            Boston
-                        
-                        
-                    
+                  
+                      
+                  
+                      
+                          New York, 
+                      
+                  
+                      
+                          Newark, 
+                      
+                  
+                      
+                          Hoboken, 
+                      
+                  
+                      
+                          Asbury Park, 
+                      
+                  
+                      
+                          Boston
+                      
+                  
                 </div>
             </div>
 
@@ -10253,14 +10271,17 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                             
                             
+                            
+                            
                             <div>
-                                <label for="contact-short-answer-48b52596-98d9-41b3-b134-a6fcf857f226" class="font-medium text-base text-white">Full name</label>
+                                <label for="contact-short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d" class="font-medium text-base text-white">Short answer</label>
                                 <input
                                     type="text"
-                                    name="short-answer-48b52596-98d9-41b3-b134-a6fcf857f226"
-                                    id="contact-short-answer-48b52596-98d9-41b3-b134-a6fcf857f226"
+                                    name="short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d"
+                                    id="contact-short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d"
                                     class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    required
+                                    placeholder="Type your response here..."
+                                    
                                 />
                             </div>
                             
@@ -10275,8 +10296,107 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             
                             
                             
+                            
+                            
+                            
+                            
+                                <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
+                                    <label class="font-medium text-base text-white">Photo upload</label>
+                                    <div class='bg-white p-3 mt-1 rounded-sm border border-gray-500'>
+                                        <div
+                                                x-data="{
+                                                    imageUrl: '',
+                                                    fileTooLarge: false,
+                                                    fileChosen(event) {
+                                                        if (this.isProperlySized(event)) {
+                                                            this.fileToDataUrl(event, (src) => (this.imageUrl = src));
+                                                            this.fileTooLarge = false;
+                                                        }
+                                                        else
+                                                            this.fileTooLarge = true;
+                                                    },
+                                                    fileToDataUrl(event, callback) {
+                                                        if (!event.target.files.length) return;
+                                                        let file = event.target.files[0],
+                                                            reader = new FileReader();
+                                                        reader.readAsDataURL(file);
+                                                        reader.onload = (e) => callback(e.target.result);
+                                                    },
+                                                    isProperlySized(event) {
+                                                        const files = event.currentTarget.files;
+                                                        for (const file in files) {
+                                                            const filesize = ((files[file].size/1024)/1024).toFixed(4);
+                                                            if (filesize > 2)
+                                                                return false;
+                                                        }
+                                                        return true;
+                                                    },
+                                                }"
+                                        >
+                                            <div x-show="imageUrl !== ''" x-collapse>
+                                                <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
+                                                    <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
+                                                    <button
+                                                            @click="imageUrl = ''; $refs.fileInput.value = '';"
+                                                            type="button"
+                                                            class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-500 rounded-sm shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                    >
+                                                        Change
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <label
+                                                for="file-upload"
+                                                class="relative font-medium rounded-sm cursor-pointer text-primary"
+                                            >
+                                                <div x-show="imageUrl === ''" x-collapse>
+                                                    <div
+                                                        x-on:dragenter.prevent.stop
+                                                        x-on:dragleave.prevent.stop
+                                                        class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-sm"
+                                                    >
+                                                        <div class="space-y-1 text-center">
+                                                            <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                                <path
+                                                                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                                        stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                            <div class="flex justify-center text-sm text-gray-600">
+                                                                <span class="text-primary">Upload a photo</span>
+                                                                <input
+                                                                    x-ref="fileInput"
+                                                                    id="file-upload"
+                                                                    name="file-upload"
+                                                                    type="file"
+                                                                    class="sr-only"
+                                                                    @change="fileChosen"
+                                                                />
+                                                            </div>
+                                                            <p class="text-xs text-gray-500">PNG, JPG, GIF up to 2MB</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
+                                                The selected file is too large. Please reduce the size or choose another file.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             <div>
-                                <label for="contact-phone-number" class="font-medium text-base text-white">Phone number</label>
+                                <label for="contact-phone-number" class="font-medium text-base text-white">Photo number *</label>
                                 <input
                                     type="tel"
                                     name="phone-number"
@@ -10294,15 +10414,18 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             
                             
                             
+                            
+                            
                                 <div>
                                     <label for="contact-address" class="font-medium text-base text-white">
-                                        Address
+                                        Address<span> *</span>
                                     </label>
                                     <input
                                         type="text"
                                         name="address"
                                         id="contact-address"
                                         class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="123 Main Street, Boston, MA 02212"
                                         required
                                     />
                                 </div>
@@ -10313,16 +10436,21 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             
                             
                             
+                            
+                            
                             <div>
-                                <label for="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0" class="font-medium text-base text-white">Email</label>
+                                <label for="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0" class="font-medium text-base text-white">Email<span> *</span></label>
                                 <input
                                     type="text"
                                     name="short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0"
                                     id="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0"
                                     class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    
+                                    placeholder="Type your response here..."
+                                    required
                                 />
                             </div>
+                            
+                            
                             
                             
                             
@@ -10345,160 +10473,9 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </div>
                             
                             
-                            
-                            
-                            
-                            
-                            
-                                <div class="block sm:grid sm:col-span-2">
-                                    <label class="font-medium text-base text-white">Services</label>
-                                    <fieldset class="sm:bg-white sm:p-6 sm:mt-1 rounded-sm" >
-                                        <div class="grid auto-cols-auto gap-4 grid-cols-2">
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168398"
-                                                    name="service-168398"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Cookin Some Chilli"
-                                                />
-                                                <label for="contact-service-168398" class="ml-3 text-sm font-normal text-gray-700">Cookin Some Chilli</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168399"
-                                                    name="service-168399"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Caro's Special Service"
-                                                />
-                                                <label for="contact-service-168399" class="ml-3 text-sm font-normal text-gray-700">Caro's Special Service</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168400"
-                                                    name="service-168400"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Driveway Design & Build"
-                                                />
-                                                <label for="contact-service-168400" class="ml-3 text-sm font-normal text-gray-700">Driveway Design & Build</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168401"
-                                                    name="service-168401"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Fall and Spring Clean Up"
-                                                />
-                                                <label for="contact-service-168401" class="ml-3 text-sm font-normal text-gray-700">Fall and Spring Clean Up</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168403"
-                                                    name="service-168403"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Cheese Making"
-                                                />
-                                                <label for="contact-service-168403" class="ml-3 text-sm font-normal text-gray-700">Cheese Making</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168404"
-                                                    name="service-168404"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Stone Wall Installation"
-                                                />
-                                                <label for="contact-service-168404" class="ml-3 text-sm font-normal text-gray-700">Stone Wall Installation</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168405"
-                                                    name="service-168405"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Professional Fertilization"
-                                                />
-                                                <label for="contact-service-168405" class="ml-3 text-sm font-normal text-gray-700">Professional Fertilization</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168406"
-                                                    name="service-168406"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Moving mobile"
-                                                />
-                                                <label for="contact-service-168406" class="ml-3 text-sm font-normal text-gray-700">Moving mobile</label>
-                                            </div>
-
-                                            
-
-                                            <div class="flex flex-col">
-                                                    <div class="flex items-center">
-                                                         <input
-                                                                id="contact-service-other-checkbox"
-                                                                name="service-other"
-                                                                type="checkbox"
-                                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                                value="Other"
-                                                                onclick="toggleOtherServices()"
-                                                            />
-                                                        <label for="contact-label-service-other-checkbox" class="ml-3 text-sm text-gray-600">Other</label>
-                                                    </div>
-                                                <input
-                                                    id="contact-service-other-text"
-                                                    name="service-other-text"
-                                                    type="text"
-                                                    class="ml-4 block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
-                                                />
-                                                </div>
-
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                                <label for="contact-paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b" class="sm:hidden font-medium text-base text-white">How can we help?</label>
-                                <textarea
-                                    id="contact-paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b"
-                                    name="paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b"
-                                    rows="4"
-                                    class="sm:hidden block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    
-                                ></textarea>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                         </div>
                         
-                        <div class="z-50 flex-col px-6 pb-4 bg-primary flex w-full align-middle items-center justify-center">
+                        <div class="z-50 flex-col px-6 pt-3 pb-4 bg-primary flex w-full align-middle items-center justify-center">
                             
                                 <div class="text-gray-300 text-sm font-normal mt-1.5">
                                     By providing your phone number, you agree to receive text messages (SMS) from Beantown Tutoring &amp; Cheese Making. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.

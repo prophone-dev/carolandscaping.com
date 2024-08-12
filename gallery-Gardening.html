@@ -88,7 +88,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png");
       background-size: cover;
   }
   
@@ -151,8 +151,7 @@
         };
 
         
-         document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const n=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){n.setNumber(n.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,n="contact-modal"){const t="contact-embedded"===n,o=document.getElementById("sendButton");o.disabled=!0;const r=document.getElementById("error-state-modal");r.innerHTML="",event.preventDefault();const c=(e,n)=>{var t=document.createElement("div"),o=document.createElement("h1");o.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(o),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",n.className="",n.appendChild(t)};const d=(s="#contact-phone-number",window.intlTelInputGlobals.getInstance(document.querySelector(s)));var s;if(!d.getNumber()){return c("Phone number is required",r),void(o.disabled=!1)}if(!d.isValidNumber()){const e=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],n=d.getValidationError();return c(e[n]?e[n]:"Not a valid phone number",r),void(o.disabled=!1)}let a="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?a="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?a="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(a="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(n){const r=(()=>{let e;e=t?document.forms.embeddedForm:document.forms.contactModal;const n=new FormData(e),o={};for(const e of n.entries())o[e[0]]=e[1];return o["phone-number"]=o["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),o})();fetch(a+"/sms/"+e,{method:"POST",body:JSON.stringify({fields:r,ct:n})}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o.disabled=!1,alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
-         
+        document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const n=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){n.setNumber(n.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,n="contact-modal"){let t;t="contact-embedded"===n?document.forms.embeddedForm:document.forms.contactModal;const o=document.getElementById("sendButton");o.disabled=!0;const r=t.querySelector("#error-state-modal");r.innerHTML="",event.preventDefault();const c=(e,n)=>{var t=document.createElement("div"),o=document.createElement("h1");o.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(o),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",n.className="",n.appendChild(t)};const d=(s=t,a="#contact-phone-number",window.intlTelInputGlobals.getInstance(s.querySelector(a)));var s,a;if(!d.getNumber()){return c("Phone number is required",r),void(o.disabled=!1)}if(!d.isValidNumber()){const e=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],n=d.getValidationError();return c(e[n]?e[n]:"Not a valid phone number",r),void(o.disabled=!1)}let i="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?i="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?i="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(i="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(n){const r=(()=>{const e=new FormData(t),n={};for(const t of e.entries())n[t[0]]=t[1];return n["phone-number"]=n["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),n})();fetch(i+"/sms/"+e,{method:"POST",body:JSON.stringify({fields:r,ct:n})}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o.disabled=!1,alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
     </script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded",(function(){var e=[].slice.call(document.querySelectorAll("video.lazy"));if("IntersectionObserver"in window){var t=new IntersectionObserver((function(e,r){e.forEach((function(e){if(e.isIntersecting){for(var r in e.target.children){var n=e.target.children[r];"string"==typeof n.tagName&&"SOURCE"===n.tagName&&(n.src=n.dataset.src)}e.target.load(),e.target.classList.remove("lazy"),t.unobserve(e.target)}}))}));e.forEach((function(e){t.observe(e)}))}}));
@@ -2087,14 +2086,17 @@
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                             
                             
+                            
+                            
                             <div>
-                                <label for="contact-short-answer-48b52596-98d9-41b3-b134-a6fcf857f226" class="font-medium text-base text-white">Full name</label>
+                                <label for="contact-short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d" class="font-medium text-base text-white">Short answer</label>
                                 <input
                                     type="text"
-                                    name="short-answer-48b52596-98d9-41b3-b134-a6fcf857f226"
-                                    id="contact-short-answer-48b52596-98d9-41b3-b134-a6fcf857f226"
+                                    name="short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d"
+                                    id="contact-short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d"
                                     class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    required
+                                    placeholder="Type your response here..."
+                                    
                                 />
                             </div>
                             
@@ -2109,8 +2111,107 @@
                             
                             
                             
+                            
+                            
+                            
+                            
+                                <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
+                                    <label class="font-medium text-base text-white">Photo upload</label>
+                                    <div class='bg-white p-3 mt-1 rounded-sm border border-gray-500'>
+                                        <div
+                                                x-data="{
+                                                    imageUrl: '',
+                                                    fileTooLarge: false,
+                                                    fileChosen(event) {
+                                                        if (this.isProperlySized(event)) {
+                                                            this.fileToDataUrl(event, (src) => (this.imageUrl = src));
+                                                            this.fileTooLarge = false;
+                                                        }
+                                                        else
+                                                            this.fileTooLarge = true;
+                                                    },
+                                                    fileToDataUrl(event, callback) {
+                                                        if (!event.target.files.length) return;
+                                                        let file = event.target.files[0],
+                                                            reader = new FileReader();
+                                                        reader.readAsDataURL(file);
+                                                        reader.onload = (e) => callback(e.target.result);
+                                                    },
+                                                    isProperlySized(event) {
+                                                        const files = event.currentTarget.files;
+                                                        for (const file in files) {
+                                                            const filesize = ((files[file].size/1024)/1024).toFixed(4);
+                                                            if (filesize > 2)
+                                                                return false;
+                                                        }
+                                                        return true;
+                                                    },
+                                                }"
+                                        >
+                                            <div x-show="imageUrl !== ''" x-collapse>
+                                                <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
+                                                    <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
+                                                    <button
+                                                            @click="imageUrl = ''; $refs.fileInput.value = '';"
+                                                            type="button"
+                                                            class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-500 rounded-sm shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                    >
+                                                        Change
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <label
+                                                for="file-upload"
+                                                class="relative font-medium rounded-sm cursor-pointer text-primary"
+                                            >
+                                                <div x-show="imageUrl === ''" x-collapse>
+                                                    <div
+                                                        x-on:dragenter.prevent.stop
+                                                        x-on:dragleave.prevent.stop
+                                                        class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-sm"
+                                                    >
+                                                        <div class="space-y-1 text-center">
+                                                            <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                                <path
+                                                                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                                        stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                            <div class="flex justify-center text-sm text-gray-600">
+                                                                <span class="text-primary">Upload a photo</span>
+                                                                <input
+                                                                    x-ref="fileInput"
+                                                                    id="file-upload"
+                                                                    name="file-upload"
+                                                                    type="file"
+                                                                    class="sr-only"
+                                                                    @change="fileChosen"
+                                                                />
+                                                            </div>
+                                                            <p class="text-xs text-gray-500">PNG, JPG, GIF up to 2MB</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
+                                                The selected file is too large. Please reduce the size or choose another file.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             <div>
-                                <label for="contact-phone-number" class="font-medium text-base text-white">Phone number</label>
+                                <label for="contact-phone-number" class="font-medium text-base text-white">Photo number *</label>
                                 <input
                                     type="tel"
                                     name="phone-number"
@@ -2128,15 +2229,18 @@
                             
                             
                             
+                            
+                            
                                 <div>
                                     <label for="contact-address" class="font-medium text-base text-white">
-                                        Address
+                                        Address<span> *</span>
                                     </label>
                                     <input
                                         type="text"
                                         name="address"
                                         id="contact-address"
                                         class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="123 Main Street, Boston, MA 02212"
                                         required
                                     />
                                 </div>
@@ -2147,16 +2251,21 @@
                             
                             
                             
+                            
+                            
                             <div>
-                                <label for="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0" class="font-medium text-base text-white">Email</label>
+                                <label for="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0" class="font-medium text-base text-white">Email<span> *</span></label>
                                 <input
                                     type="text"
                                     name="short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0"
                                     id="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0"
                                     class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    
+                                    placeholder="Type your response here..."
+                                    required
                                 />
                             </div>
+                            
+                            
                             
                             
                             
@@ -2179,160 +2288,9 @@
                             </div>
                             
                             
-                            
-                            
-                            
-                            
-                            
-                                <div class="block sm:grid sm:col-span-2">
-                                    <label class="font-medium text-base text-white">Services</label>
-                                    <fieldset class="sm:bg-white sm:p-6 sm:mt-1 rounded-sm" >
-                                        <div class="grid auto-cols-auto gap-4 grid-cols-2">
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168398"
-                                                    name="service-168398"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Cookin Some Chilli"
-                                                />
-                                                <label for="contact-service-168398" class="ml-3 text-sm font-normal text-gray-700">Cookin Some Chilli</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168399"
-                                                    name="service-168399"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Caro's Special Service"
-                                                />
-                                                <label for="contact-service-168399" class="ml-3 text-sm font-normal text-gray-700">Caro's Special Service</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168400"
-                                                    name="service-168400"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Driveway Design & Build"
-                                                />
-                                                <label for="contact-service-168400" class="ml-3 text-sm font-normal text-gray-700">Driveway Design & Build</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168401"
-                                                    name="service-168401"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Fall and Spring Clean Up"
-                                                />
-                                                <label for="contact-service-168401" class="ml-3 text-sm font-normal text-gray-700">Fall and Spring Clean Up</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168403"
-                                                    name="service-168403"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Cheese Making"
-                                                />
-                                                <label for="contact-service-168403" class="ml-3 text-sm font-normal text-gray-700">Cheese Making</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168404"
-                                                    name="service-168404"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Stone Wall Installation"
-                                                />
-                                                <label for="contact-service-168404" class="ml-3 text-sm font-normal text-gray-700">Stone Wall Installation</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168405"
-                                                    name="service-168405"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Professional Fertilization"
-                                                />
-                                                <label for="contact-service-168405" class="ml-3 text-sm font-normal text-gray-700">Professional Fertilization</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168406"
-                                                    name="service-168406"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Moving mobile"
-                                                />
-                                                <label for="contact-service-168406" class="ml-3 text-sm font-normal text-gray-700">Moving mobile</label>
-                                            </div>
-
-                                            
-
-                                            <div class="flex flex-col">
-                                                    <div class="flex items-center">
-                                                         <input
-                                                                id="contact-service-other-checkbox"
-                                                                name="service-other"
-                                                                type="checkbox"
-                                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                                value="Other"
-                                                                onclick="toggleOtherServices()"
-                                                            />
-                                                        <label for="contact-label-service-other-checkbox" class="ml-3 text-sm text-gray-600">Other</label>
-                                                    </div>
-                                                <input
-                                                    id="contact-service-other-text"
-                                                    name="service-other-text"
-                                                    type="text"
-                                                    class="ml-4 block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
-                                                />
-                                                </div>
-
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                                <label for="contact-paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b" class="sm:hidden font-medium text-base text-white">How can we help?</label>
-                                <textarea
-                                    id="contact-paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b"
-                                    name="paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b"
-                                    rows="4"
-                                    class="sm:hidden block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    
-                                ></textarea>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                         </div>
                         
-                        <div class="z-50 flex-col px-6 pb-4 bg-primary flex w-full align-middle items-center justify-center">
+                        <div class="z-50 flex-col px-6 pt-3 pb-4 bg-primary flex w-full align-middle items-center justify-center">
                             
                                 <div class="text-gray-300 text-sm font-normal mt-1.5">
                                     By providing your phone number, you agree to receive text messages (SMS) from Beantown Tutoring &amp; Cheese Making. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.

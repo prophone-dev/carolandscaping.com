@@ -88,7 +88,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png");
       background-size: cover;
   }
   
@@ -151,8 +151,7 @@
         };
 
         
-         document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const n=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){n.setNumber(n.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,n="contact-modal"){const t="contact-embedded"===n,o=document.getElementById("sendButton");o.disabled=!0;const r=document.getElementById("error-state-modal");r.innerHTML="",event.preventDefault();const c=(e,n)=>{var t=document.createElement("div"),o=document.createElement("h1");o.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(o),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",n.className="",n.appendChild(t)};const d=(s="#contact-phone-number",window.intlTelInputGlobals.getInstance(document.querySelector(s)));var s;if(!d.getNumber()){return c("Phone number is required",r),void(o.disabled=!1)}if(!d.isValidNumber()){const e=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],n=d.getValidationError();return c(e[n]?e[n]:"Not a valid phone number",r),void(o.disabled=!1)}let a="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?a="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?a="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(a="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(n){const r=(()=>{let e;e=t?document.forms.embeddedForm:document.forms.contactModal;const n=new FormData(e),o={};for(const e of n.entries())o[e[0]]=e[1];return o["phone-number"]=o["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),o})();fetch(a+"/sms/"+e,{method:"POST",body:JSON.stringify({fields:r,ct:n})}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o.disabled=!1,alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
-         
+        document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const n=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){n.setNumber(n.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,n="contact-modal"){let t;t="contact-embedded"===n?document.forms.embeddedForm:document.forms.contactModal;const o=document.getElementById("sendButton");o.disabled=!0;const r=t.querySelector("#error-state-modal");r.innerHTML="",event.preventDefault();const c=(e,n)=>{var t=document.createElement("div"),o=document.createElement("h1");o.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(o),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",n.className="",n.appendChild(t)};const d=(s=t,a="#contact-phone-number",window.intlTelInputGlobals.getInstance(s.querySelector(a)));var s,a;if(!d.getNumber()){return c("Phone number is required",r),void(o.disabled=!1)}if(!d.isValidNumber()){const e=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],n=d.getValidationError();return c(e[n]?e[n]:"Not a valid phone number",r),void(o.disabled=!1)}let i="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?i="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?i="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(i="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(n){const r=(()=>{const e=new FormData(t),n={};for(const t of e.entries())n[t[0]]=t[1];return n["phone-number"]=n["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),n})();fetch(i+"/sms/"+e,{method:"POST",body:JSON.stringify({fields:r,ct:n})}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o.disabled=!1,alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
     </script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded",(function(){var e=[].slice.call(document.querySelectorAll("video.lazy"));if("IntersectionObserver"in window){var t=new IntersectionObserver((function(e,r){e.forEach((function(e){if(e.isIntersecting){for(var r in e.target.children){var n=e.target.children[r];"string"==typeof n.tagName&&"SOURCE"===n.tagName&&(n.src=n.dataset.src)}e.target.load(),e.target.classList.remove("lazy"),t.unobserve(e.target)}}))}));e.forEach((function(e){t.observe(e)}))}}));
@@ -2704,102 +2703,6 @@
                                                                     <div class="relative pt-2">
                                                                         
                                                                             <span class="review-body relative text-lg font-medium line-clamp-7">
-                                                                                This Cypress service is phenomenal!! Like legit, couldn&#x27;t have asked for a better cypress. Hands down, #1.
-                                                                            </span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
-                                                                        
-                                                                    </div>
-                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
-                                                                        <div>
-                                                                            
-                                                                                <span class="block font-medium uppercase text-gray-900">Samuel Charles</span>
-                                                                            
-                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">GO BUKS</div>
-                                                                        </div>
-                                                                    </footer>
-                                                                </blockquote>
-                                                            </li>
-                                                        
-                                                    </ul>
-                                                
-                                                <ul class="space-y-8">
-                                                        
-                                                            <li
-                                                                style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
-                                                            >
-                                                                <div class="flex w-full justify-between">
-                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                    </div>
-                                                                    <span class="sr-only"> out of 5 stars</span>
-                                                                    <div>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
-                                                                    <div class="relative pt-2">
-                                                                        
-                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
                                                                                 Good service, fair price!
                                                                             </span>
                                                                             <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
@@ -3981,14 +3884,17 @@
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                             
                             
+                            
+                            
                             <div>
-                                <label for="contact-short-answer-48b52596-98d9-41b3-b134-a6fcf857f226" class="font-medium text-base text-white">Full name</label>
+                                <label for="contact-short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d" class="font-medium text-base text-white">Short answer</label>
                                 <input
                                     type="text"
-                                    name="short-answer-48b52596-98d9-41b3-b134-a6fcf857f226"
-                                    id="contact-short-answer-48b52596-98d9-41b3-b134-a6fcf857f226"
+                                    name="short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d"
+                                    id="contact-short-answer-d1bbfee5-1c38-492c-9d54-1a062dd7696d"
                                     class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    required
+                                    placeholder="Type your response here..."
+                                    
                                 />
                             </div>
                             
@@ -4003,8 +3909,107 @@
                             
                             
                             
+                            
+                            
+                            
+                            
+                                <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
+                                    <label class="font-medium text-base text-white">Photo upload</label>
+                                    <div class='bg-white p-3 mt-1 rounded-sm border border-gray-500'>
+                                        <div
+                                                x-data="{
+                                                    imageUrl: '',
+                                                    fileTooLarge: false,
+                                                    fileChosen(event) {
+                                                        if (this.isProperlySized(event)) {
+                                                            this.fileToDataUrl(event, (src) => (this.imageUrl = src));
+                                                            this.fileTooLarge = false;
+                                                        }
+                                                        else
+                                                            this.fileTooLarge = true;
+                                                    },
+                                                    fileToDataUrl(event, callback) {
+                                                        if (!event.target.files.length) return;
+                                                        let file = event.target.files[0],
+                                                            reader = new FileReader();
+                                                        reader.readAsDataURL(file);
+                                                        reader.onload = (e) => callback(e.target.result);
+                                                    },
+                                                    isProperlySized(event) {
+                                                        const files = event.currentTarget.files;
+                                                        for (const file in files) {
+                                                            const filesize = ((files[file].size/1024)/1024).toFixed(4);
+                                                            if (filesize > 2)
+                                                                return false;
+                                                        }
+                                                        return true;
+                                                    },
+                                                }"
+                                        >
+                                            <div x-show="imageUrl !== ''" x-collapse>
+                                                <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
+                                                    <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
+                                                    <button
+                                                            @click="imageUrl = ''; $refs.fileInput.value = '';"
+                                                            type="button"
+                                                            class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-500 rounded-sm shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                    >
+                                                        Change
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <label
+                                                for="file-upload"
+                                                class="relative font-medium rounded-sm cursor-pointer text-primary"
+                                            >
+                                                <div x-show="imageUrl === ''" x-collapse>
+                                                    <div
+                                                        x-on:dragenter.prevent.stop
+                                                        x-on:dragleave.prevent.stop
+                                                        class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-sm"
+                                                    >
+                                                        <div class="space-y-1 text-center">
+                                                            <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                                <path
+                                                                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                                        stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                            <div class="flex justify-center text-sm text-gray-600">
+                                                                <span class="text-primary">Upload a photo</span>
+                                                                <input
+                                                                    x-ref="fileInput"
+                                                                    id="file-upload"
+                                                                    name="file-upload"
+                                                                    type="file"
+                                                                    class="sr-only"
+                                                                    @change="fileChosen"
+                                                                />
+                                                            </div>
+                                                            <p class="text-xs text-gray-500">PNG, JPG, GIF up to 2MB</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
+                                                The selected file is too large. Please reduce the size or choose another file.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             <div>
-                                <label for="contact-phone-number" class="font-medium text-base text-white">Phone number</label>
+                                <label for="contact-phone-number" class="font-medium text-base text-white">Photo number *</label>
                                 <input
                                     type="tel"
                                     name="phone-number"
@@ -4022,15 +4027,18 @@
                             
                             
                             
+                            
+                            
                                 <div>
                                     <label for="contact-address" class="font-medium text-base text-white">
-                                        Address
+                                        Address<span> *</span>
                                     </label>
                                     <input
                                         type="text"
                                         name="address"
                                         id="contact-address"
                                         class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="123 Main Street, Boston, MA 02212"
                                         required
                                     />
                                 </div>
@@ -4041,16 +4049,21 @@
                             
                             
                             
+                            
+                            
                             <div>
-                                <label for="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0" class="font-medium text-base text-white">Email</label>
+                                <label for="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0" class="font-medium text-base text-white">Email<span> *</span></label>
                                 <input
                                     type="text"
                                     name="short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0"
                                     id="contact-short-answer-f04af3e4-1314-4204-bf02-9e1834c22bf0"
                                     class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    
+                                    placeholder="Type your response here..."
+                                    required
                                 />
                             </div>
+                            
+                            
                             
                             
                             
@@ -4073,160 +4086,9 @@
                             </div>
                             
                             
-                            
-                            
-                            
-                            
-                            
-                                <div class="block sm:grid sm:col-span-2">
-                                    <label class="font-medium text-base text-white">Services</label>
-                                    <fieldset class="sm:bg-white sm:p-6 sm:mt-1 rounded-sm" >
-                                        <div class="grid auto-cols-auto gap-4 grid-cols-2">
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168398"
-                                                    name="service-168398"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Cookin Some Chilli"
-                                                />
-                                                <label for="contact-service-168398" class="ml-3 text-sm font-normal text-gray-700">Cookin Some Chilli</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168399"
-                                                    name="service-168399"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Caro's Special Service"
-                                                />
-                                                <label for="contact-service-168399" class="ml-3 text-sm font-normal text-gray-700">Caro's Special Service</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168400"
-                                                    name="service-168400"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Driveway Design & Build"
-                                                />
-                                                <label for="contact-service-168400" class="ml-3 text-sm font-normal text-gray-700">Driveway Design & Build</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168401"
-                                                    name="service-168401"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Fall and Spring Clean Up"
-                                                />
-                                                <label for="contact-service-168401" class="ml-3 text-sm font-normal text-gray-700">Fall and Spring Clean Up</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168403"
-                                                    name="service-168403"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Cheese Making"
-                                                />
-                                                <label for="contact-service-168403" class="ml-3 text-sm font-normal text-gray-700">Cheese Making</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168404"
-                                                    name="service-168404"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Stone Wall Installation"
-                                                />
-                                                <label for="contact-service-168404" class="ml-3 text-sm font-normal text-gray-700">Stone Wall Installation</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168405"
-                                                    name="service-168405"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Professional Fertilization"
-                                                />
-                                                <label for="contact-service-168405" class="ml-3 text-sm font-normal text-gray-700">Professional Fertilization</label>
-                                            </div>
-
-                                            
-                                            <div class="flex items-center">
-                                                <input
-                                                    id="contact-service-168406"
-                                                    name="service-168406"
-                                                    type="checkbox"
-                                                    class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                    value="Moving mobile"
-                                                />
-                                                <label for="contact-service-168406" class="ml-3 text-sm font-normal text-gray-700">Moving mobile</label>
-                                            </div>
-
-                                            
-
-                                            <div class="flex flex-col">
-                                                    <div class="flex items-center">
-                                                         <input
-                                                                id="contact-service-other-checkbox"
-                                                                name="service-other"
-                                                                type="checkbox"
-                                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                                value="Other"
-                                                                onclick="toggleOtherServices()"
-                                                            />
-                                                        <label for="contact-label-service-other-checkbox" class="ml-3 text-sm text-gray-600">Other</label>
-                                                    </div>
-                                                <input
-                                                    id="contact-service-other-text"
-                                                    name="service-other-text"
-                                                    type="text"
-                                                    class="ml-4 block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
-                                                />
-                                                </div>
-
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                                <label for="contact-paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b" class="sm:hidden font-medium text-base text-white">How can we help?</label>
-                                <textarea
-                                    id="contact-paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b"
-                                    name="paragraph-c338b029-b2c0-4925-9be6-37d59a486b0b"
-                                    rows="4"
-                                    class="sm:hidden block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    
-                                ></textarea>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                         </div>
                         
-                        <div class="z-50 flex-col px-6 pb-4 bg-primary flex w-full align-middle items-center justify-center">
+                        <div class="z-50 flex-col px-6 pt-3 pb-4 bg-primary flex w-full align-middle items-center justify-center">
                             
                                 <div class="text-gray-300 text-sm font-normal mt-1.5">
                                     By providing your phone number, you agree to receive text messages (SMS) from Beantown Tutoring &amp; Cheese Making. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.
