@@ -151,8 +151,7 @@
         };
 
         
-        document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const t=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function o(){t.setNumber(t.getNumber())}e.addEventListener("change",o),e.addEventListener("keyup",o)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,t="contact-modal"){const o="scheduler"===t;let n,r;"contact-embedded"===t?(n=document.forms.embeddedForm,r="#error-state-modal-embedded"):(n=document.forms.contactModal,r="#error-state-modal");const s=document.querySelector(r);if(s.innerHTML="",!o){document.getElementById("sendButton").disabled=!0,event.preventDefault()}const i=(e,t)=>{var o=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",o.appendChild(n),o.appendChild(r),o.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",t.className="",t.appendChild(o)};if(!o){const e=(a=n,d="#contact-phone-number",window.intlTelInputGlobals.getInstance(a.querySelector(d)));if(!e.getNumber()){return i("Phone number is required",s),void(sendButton.disabled=!1)}if(!e.isValidNumber()){const t=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],o=e.getValidationError();return i(t[o]?t[o]:"Not a valid phone number",s),void(sendButton.disabled=!1)}}var a,d;let c="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?c="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?c="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(c="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(t){const r={ct:t};if(o)r.nylas_booking_id=sessionStorage.getItem("booking_id"),r.message_id=sessionStorage.getItem("message_id"),r.start_time=sessionStorage.getItem("start_time"),r.end_time=sessionStorage.getItem("end_time");else{const e=(()=>{const e=new FormData(n),t={};for(const o of e.entries())t[o[0]]=o[1];return t["phone-number"]=t["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),t})();sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),r.fields=e}fetch(c+"/sms/"+e,{method:"POST",body:JSON.stringify(r)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{if(e?.message_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(o)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),sessionStorage.removeItem("start_time"),sessionStorage.removeItem("end_time"),setTimeout((()=>{window.location.replace("./")}),2500),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o||(sendButton.disabled=!1),alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
-        
+        document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const t=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function o(){t.setNumber(t.getNumber())}e.addEventListener("change",o),e.addEventListener("keyup",o)}))}));const variableTOFieldMapper={sender_address:"contact-address"},fieldToLabelMapper={sender_address:"Address"};function send_sms(e,t="contact-modal"){const o="scheduler"===t;let n,r;"contact-embedded"===t?(n=document.forms.embeddedForm,r="#error-state-modal-embedded"):(n=document.forms.contactModal,r="#error-state-modal");const s=document.querySelector(r);if(s.innerHTML="",!o){document.getElementById("sendButton").disabled=!0,event.preventDefault()}const i=(e,t)=>{var o=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",o.appendChild(n),o.appendChild(r),o.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",t.className="",t.appendChild(o)};if(!o){const e=(a=n,d="#contact-phone-number",window.intlTelInputGlobals.getInstance(a.querySelector(d)));if(!e.getNumber()){return i("Phone number is required",s),void(sendButton.disabled=!1)}if(!e.isValidNumber()){const t=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],o=e.getValidationError();return i(t[o]?t[o]:"Not a valid phone number",s),void(sendButton.disabled=!1)}}var a,d;let c="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?c="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?c="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(c="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(t){const r={ct:t};if(o)r.nylas_booking_id=sessionStorage.getItem("booking_id"),r.message_id=sessionStorage.getItem("message_id"),r.start_time=sessionStorage.getItem("start_time"),r.end_time=sessionStorage.getItem("end_time");else{const e=(()=>{const e=new FormData(n),t={};for(const o of e.entries())t[o[0]]=o[1];return t["phone-number"]=t["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),t})();sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),r.fields=e}fetch(c+"/sms/"+e,{method:"POST",body:JSON.stringify(r)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{if(e?.message_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(o)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),sessionStorage.removeItem("start_time"),sessionStorage.removeItem("end_time"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{o||(sendButton.disabled=!1),alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}
     </script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded",(function(){var e=[].slice.call(document.querySelectorAll("video.lazy"));if("IntersectionObserver"in window){var t=new IntersectionObserver((function(e,r){e.forEach((function(e){if(e.isIntersecting){for(var r in e.target.children){var n=e.target.children[r];"string"==typeof n.tagName&&"SOURCE"===n.tagName&&(n.src=n.dataset.src)}e.target.load(),e.target.classList.remove("lazy"),t.unobserve(e.target)}}))}));e.forEach((function(e){t.observe(e)}))}}));
@@ -4012,68 +4011,6 @@
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                             
                             
-                            
-                            
-                            
-                            
-                            
-                            <div>
-                                <label for="contact-phone-number" class="font-medium text-base text-white">Photo number *</label>
-                                <input
-                                    type="tel"
-                                    name="phone-number"
-                                    autocomplete="on"
-                                    id="contact-phone-number"
-                                    class="contact-phone-number block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    required
-                                />
-                            </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                                <div>
-                                    <label for="contact-address" class="font-medium text-base text-white">
-                                        Address<span> *</span>
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name="address"
-                                        id="contact-address"
-                                        class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                        placeholder="123 Main Street, Boston, MA 02212"
-                                        required
-                                    />
-                                </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            <div class="relative">
-                                <label for="contact-date" class="font-medium text-base text-white">Preferred Date of Service</label>
-                                <div class="w-4 h-4 absolute transform translate-y-4.5 left-4"></div>
-                                <input id="contact-date" name="date" type="date" class="block text-left z-50 w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary" >
-                            </div>
-                            
-                            
-                            
                             <div>
                                 <label for="contact-full-name" class="font-medium text-base text-white">Full name *</label>
                                 <input
@@ -4110,6 +4047,112 @@
                             </div>
                             
                             
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div>
+                                <label for="contact-phone-number" class="font-medium text-base text-white">Photo number *</label>
+                                <input
+                                    type="tel"
+                                    name="phone-number"
+                                    autocomplete="on"
+                                    id="contact-phone-number"
+                                    class="contact-phone-number block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                    required
+                                />
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div>
+                                    <label for="contact-address" class="font-medium text-base text-white">
+                                        Address
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="address"
+                                        id="contact-address"
+                                        class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="123 Main Street, Boston, MA 02212"
+                                        
+                                    />
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="relative">
+                                <label for="contact-date" class="font-medium text-base text-white">Preferred Date of Service</label>
+                                <div class="w-4 h-4 absolute transform translate-y-4.5 left-4"></div>
+                                <input id="contact-date" name="date" type="date" class="block text-left z-50 w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary" >
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div class="block sm:grid sm:col-span-2">
+                                    <label for="contact-paragraph-72feebbf-c3e8-4883-befd-b820743134fa" class="font-medium text-base text-white">How can we help?</label>
+                                    <textarea
+                                        id="contact-paragraph-72feebbf-c3e8-4883-befd-b820743134fa"
+                                        name="paragraph-72feebbf-c3e8-4883-befd-b820743134fa"
+                                        rows="4"
+                                        class="block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="Type your response here..."
+                                        
+                                    ></textarea>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div class="block sm:grid sm:col-span-2">
+                                    <label for="contact-paragraph-3c2b9845-efc8-4c9b-9c8e-6ce46dd2b920" class="font-medium text-base text-white">How can we help?</label>
+                                    <textarea
+                                        id="contact-paragraph-3c2b9845-efc8-4c9b-9c8e-6ce46dd2b920"
+                                        name="paragraph-3c2b9845-efc8-4c9b-9c8e-6ce46dd2b920"
+                                        rows="4"
+                                        class="block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                        placeholder="Type your response here..."
+                                        
+                                    ></textarea>
+                                </div>
                             
                             
                             
