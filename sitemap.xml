@@ -46,13 +46,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-gardening</loc>
-        <lastmod>2024-08-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-interior-painting</loc>
         <lastmod>2024-08-19</lastmod>
         <changefreq>weekly</changefreq>
@@ -131,6 +124,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-hardscaping</loc>
+        <lastmod>2024-08-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-gardening</loc>
         <lastmod>2024-08-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -270,7 +270,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-test-gallery</loc>
+        <loc>https://carolandscaping.com/gallery-car</loc>
         <lastmod>2024-08-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
