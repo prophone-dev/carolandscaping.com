@@ -88,7 +88,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/d50cd817-dc35-4fd3-b4f3-25382419172b.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/ae31c3b1-6415-411e-8b1e-e6b0f4ded6ab.jpeg");
       background-size: cover;
   }
   
@@ -1773,7 +1773,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 1,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1790,6 +1790,26 @@
     data-heap-version="v3"
 >
     <ul role="list" class="responsive-columns">
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
+                <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
+                    <button @click="activeImage = 0; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            <div>                                    
+                                
+                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ae31c3b1-6415-411e-8b1e-e6b0f4ded6ab.jpeg"  alt="Moving gallery  for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
         
     </ul>
 
@@ -1835,6 +1855,15 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
+                                
+                                <li class="flex flex-col" x-show="activeImage === 0">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ae31c3b1-6415-411e-8b1e-e6b0f4ded6ab.jpeg" alt="Moving gallery  for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
                                 
                             </ul>
 
