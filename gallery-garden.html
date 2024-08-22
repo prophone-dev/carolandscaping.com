@@ -17,13 +17,13 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Garden | Gallery</title>
+    <title>Beantown Tutoring: NYC Landscaping Services Near Me Testing updates</title>
 
     
         <link rel="canonical" href="https://carolandscaping.com/gallery-garden" />
     
 
-    <meta name="description" content="A collection of garden photos to showcase our best work as a landscaping near me company. See what ZZZ Beantown Tutoring &amp; Cheese Making LLC can do for you!" />
+    <meta name="description" content="Find reliable and professional landscaping services near you in New York City. Enhance your outdoor space with Beantown Tutoring! Test!" />
     
     
     <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
@@ -283,7 +283,7 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                            class="text-center  border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
                                             :class="{ 'text-white': true }"
                                         >
                                             Home
@@ -652,7 +652,7 @@
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
                                             :class="{  'text-white hover:text-gray-100': true  }"
                                         >
-                                            <span class="block py-3.5 border-b-2 border-secondary hover:border-gray-300">Galleries</span>
+                                            <span class="block py-3.5 ">Galleries</span>
                                             <svg
                                                 class="w-5 h-5 ml-2 transition-transform duration-300"
                                                 :class="{ '-rotate-180': desktopOpen }"
@@ -1058,7 +1058,7 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="text-secondary block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
                                         >
                                             Home
                                         </a>
@@ -1538,7 +1538,7 @@
     async function postCtaClick(type) {
         if (type === "text") history.replaceState(null, "", "contact");
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://localhost:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {

@@ -17,7 +17,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Contact</title>
+    <title>Beantown Tutoring: NYC Landscaping Services Near Me Testing updates</title>
 
     
         <link rel="canonical" href="https://carolandscaping.com/contact" />
@@ -1915,7 +1915,7 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                            class="text-center  border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
                                             :class="{ 'text-white': true }"
                                         >
                                             Home
@@ -2690,7 +2690,7 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="text-secondary block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
                                         >
                                             Home
                                         </a>
@@ -3170,7 +3170,7 @@
     async function postCtaClick(type) {
         if (type === "text") history.replaceState(null, "", "contact");
         try {
-            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("http://localhost:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
