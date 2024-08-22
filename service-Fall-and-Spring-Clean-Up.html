@@ -17,13 +17,13 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Beantown Tutoring: NYC Landscaping Services Near Me Testing updates</title>
+    <title>Fall And Spring Clean Up | Service</title>
 
     
         <link rel="canonical" href="https://carolandscaping.com/service-Fall-and-Spring-Clean-Up" />
     
 
-    <meta name="description" content="Find reliable and professional landscaping services near you in New York City. Enhance your outdoor space with Beantown Tutoring! Test!" />
+    <meta name="description" content="Our Fall and Spring Clean Up service ensures that your outdoor space remains pristine throughout the year, removing leaves, debris, and preparing your land" />
     
     
     <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
@@ -159,7 +159,7 @@
 </head>
 
 <body
-    
+    class="xl:pt-44 pt-24 ease-in-out"
     x-data="{ 
         contactModalOpen: false,
         applyModalOpen: false,
@@ -174,7 +174,7 @@
         customNavTransparent:  true ,
         showMessage: false,
         navbarHeight: '',
-        calculateTopMargin: false,
+        calculateTopMargin: true,
     }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ paddingTop: navbarHeight }"
@@ -221,7 +221,7 @@
         observer.observe($refs.navbar);
         "
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-        :class="{ 'bg-transparent translate-y-0 h-16 xl:h-[84px]': !scrolledFromTop, 'bg-primary h-16 xl:h-[84px] shadow-magical': scrolledFromTop }"
+        :class="{ 'bg-transparent translate-y-0 h-16 xl:h-44': !scrolledFromTop, 'bg-primary h-16 xl:h-[84px] shadow-magical': scrolledFromTop }"
         class="relative transition-all duration-200 "
     >
         <div
@@ -240,7 +240,7 @@
                             <img
                                 src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                 class="object-contain max-h-full  max-w-xs sm:max-w-sm "
-                                :class="{ 'sm:h-full sm:max-h-full': scrolledFromTop, 'sm:h-auto sm:max-h-none': !scrolledFromTop,  }"
+                                :class="{ 'sm:h-full sm:max-h-full': scrolledFromTop, '': !scrolledFromTop,  }"
                                 alt="Brand Logo"
                                 
                                 loading="auto"
@@ -257,7 +257,7 @@
                 
                     <div
                         class="flex flex-row items-center xl:hidden"
-                        :class="{ 'text-white': true }"
+                        :class="{ 'text-gray-700': !scrolledFromTop, 'text-white': scrolledFromTop }"
                     >
                         <span class="uppercase">MENU</span>
                         <button @click="mobileOpen = !mobileOpen" class="p-2" aria-label="mobile menu button">
@@ -283,8 +283,8 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-center  border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Home
                                         </a>
@@ -308,9 +308,9 @@
                                             aria-controls="navitem_2"
                                             @click="desktopOpen = !desktopOpen"
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                            :class="{  'text-white hover:text-gray-100': true  }"
+                                            :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
                                         >
-                                            <span class="block py-3.5 ">Services</span>
+                                            <span class="block py-3.5 border-b-2 border-secondary hover:border-gray-300">Services</span>
                                             <svg
                                                 class="w-5 h-5 ml-2 transition-transform duration-300"
                                                 :class="{ '-rotate-180': desktopOpen }"
@@ -650,7 +650,7 @@
                                             aria-controls="navitem_3"
                                             @click="desktopOpen = !desktopOpen"
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                            :class="{  'text-white hover:text-gray-100': true  }"
+                                            :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
                                         >
                                             <span class="block py-3.5 ">Galleries</span>
                                             <svg
@@ -844,7 +844,7 @@
                                         <a
                                             href=" showcases "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Showcases
                                         </a>
@@ -864,7 +864,7 @@
                                         <a
                                             href=" reviews "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Reviews
                                         </a>
@@ -884,7 +884,7 @@
                                         <a
                                             href=" our-team "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Our team
                                         </a>
@@ -904,7 +904,7 @@
                                         <a
                                             href=" jobs "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Jobs
                                         </a>
@@ -924,7 +924,7 @@
                                         <a
                                             href=" blog "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Blog
                                         </a>
@@ -944,7 +944,7 @@
                                         <a
                                             href=" give-away "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             GIVE AWAY
                                         </a>
@@ -1058,7 +1058,7 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-secondary block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
                                         >
                                             Home
                                         </a>
@@ -1538,7 +1538,7 @@
     async function postCtaClick(type) {
         if (type === "text") history.replaceState(null, "", "contact");
         try {
-            await fetch("http://localhost:8000/api/post-cta-click/" + 'caro-landscaping/' + type, {
+            await fetch("https://dev.prosite.prophone.com/api/post-cta-click/" + 'caro-landscaping/' + type, {
                 method: 'GET',
             })
         } catch (e) {
