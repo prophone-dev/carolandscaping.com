@@ -151,7 +151,7 @@
         };
 
         
-        async function create_appointment(e,o,t,n){const r={booking_id:o,start_time:t,end_time:n};let s="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?s="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?s="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(s="http://127.0.0.1:8000");return await fetch(s+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(r)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((e=>(alert("There was a problem creating your appointment request."),"")))}function send_sms(e,o="contact-modal"){const t="scheduler"===o;let n,r;"contact-embedded"===o?(n=document.forms.embeddedForm,r="#error-state-modal-embedded"):(n=document.forms.contactModal,r="#error-state-modal");const s=document.querySelector(r);if(s.innerHTML="",!t){document.getElementById("sendButton").disabled=!0,event.preventDefault()}const i=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};if(!t){const e=(a=n,c="#contact-phone-number",window.intlTelInputGlobals.getInstance(a.querySelector(c)));if(!e.getNumber()){return i("Phone number is required",s),void(sendButton.disabled=!1)}if(!e.isValidNumber()){const o=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],t=e.getValidationError();return i(o[t]?o[t]:"Not a valid phone number",s),void(sendButton.disabled=!1)}}var a,c;let d="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?d="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?d="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(d="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(o){const r={ct:o};if(t)r.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),r.message_id=sessionStorage.getItem("message_id"),r.start_time=sessionStorage.getItem("start_time"),r.end_time=sessionStorage.getItem("end_time");else{const e=(()=>{const e=new FormData(n),o={};for(const t of e.entries())o[t[0]]=t[1];return o["phone-number"]=o["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),o})();sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),r.fields=e}fetch(d+"/sms/"+e,{method:"POST",body:JSON.stringify(r)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(t)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((e=>{t||(sendButton.disabled=!1),alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
+        async function report_booking_submission_error(e,o){const t={slug:e,error:o};let n="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?n="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?n="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(n="http://127.0.0.1:8000"),await fetch(n+"/report-submission-error",{method:"POST",body:JSON.stringify(t)}).then((e=>{console.log("Submission error reported")})).catch((e=>{console.log("Failed to report submission error")}))}async function create_appointment(e,o,t,n){const r={booking_id:o,start_time:t,end_time:n};let s="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?s="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?s="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(s="http://127.0.0.1:8000");return await fetch(s+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(r)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((o=>(alert("There was a problem creating your appointment request."),report_booking_submission_error(e,o),"")))}function send_sms(e,o="contact-modal"){try{const r="scheduler"===o;let s,i,a;"contact-embedded"===o?(s=document.forms.embeddedForm,a=document.getElementById("sendButton-embedded"),i="#error-state-modal-embedded"):(s=document.forms.contactModal,a=document.getElementById("sendButton"),i="#error-state-modal");const c=document.querySelector(i);c.innerHTML="",r||(a.disabled=!0,event.preventDefault());const d=()=>{const e=new FormData(s),o={};for(const t of e.entries())o[t[0]]=t[1];return o["phone-number"]=o["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),o},p=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};if(!r){const e=(t=s,n="#contact-phone-number",window.intlTelInputGlobals.getInstance(t.querySelector(n)));if(!e.getNumber()){return p("Phone number is required",c),void(a.disabled=!1)}if(!e.isValidNumber()){const o=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],t=e.getValidationError();return p(o[t]?o[t]:"Not a valid phone number",c),void(a.disabled=!1)}}let l="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?l="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?l="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(l="http://127.0.0.1:8000"),grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(o){try{const t={ct:o};if(r)t.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),t.message_id=sessionStorage.getItem("message_id"),t.start_time=sessionStorage.getItem("start_time"),t.end_time=sessionStorage.getItem("end_time");else{const e=d();sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),t.fields=e}fetch(l+"/sms/"+e,{method:"POST",body:JSON.stringify(t)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(r)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((o=>{r||(a.disabled=!1),report_booking_submission_error(e,o),alert("There was a problem sending your text. Please reach out to ProPhone.")}))}catch(o){report_booking_submission_error(e,o),alert("There was a problem sending your text. Please reach out to ProPhone.")}})).catch((o=>{report_booking_submission_error(e,o),alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}catch(o){report_booking_submission_error(e,o),alert("There was a problem sending your text. Please reach out to ProPhone.")}var t,n}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
     </script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded",(function(){var e=[].slice.call(document.querySelectorAll("video.lazy"));if("IntersectionObserver"in window){var t=new IntersectionObserver((function(e,r){e.forEach((function(e){if(e.isIntersecting){for(var r in e.target.children){var n=e.target.children[r];"string"==typeof n.tagName&&"SOURCE"===n.tagName&&(n.src=n.dataset.src)}e.target.load(),e.target.classList.remove("lazy"),t.unobserve(e.target)}}))}));e.forEach((function(e){t.observe(e)}))}}));
@@ -571,12 +571,12 @@
                             <picture class="h-2/3 w-1/2 self-end">
                                 <source
                                     srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
-                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                 >
                                 <img
                                     class="object-cover h-full w-full border border-gray-900 rounded-sm"
                                     src="https://landing-page-app-hero-images.s3.amazonaws.com/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
-                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                     loading="lazy"
                                 >
                             </picture>
@@ -589,12 +589,12 @@
                         <picture class="h-4/5 w-4/5 self-start">
                             <source
                                 srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/17665cc7-978b-43ca-a441-5ab0c40d216c.png"
-                                alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                             >
                             <img
                                 class="object-cover h-full w-full rounded-sm border border-gray-900"
                                 src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/17665cc7-978b-43ca-a441-5ab0c40d216c.png"
-                                alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                 loading="lazy"
                             />
                         </picture>
@@ -636,7 +636,7 @@
                                 <a
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://www.facebook.com/104865895776827"
+                                    href="https://www.facebook.com/1525870660844445"
                                 >
                                     <span class="sr-only">Facebook</span>
                                     <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -712,12 +712,12 @@
                             <picture class="rounded-sm w-2/5 border border-gray-900 hidden lg:block">
                                 <source
                                     srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
-                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                 >
                                 <img
                                     class="w-full"
                                     src="https://landing-page-app-hero-images.s3.amazonaws.com/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
-                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                     loading="lazy"
                                 >
                             </picture>
@@ -736,12 +736,12 @@
                     <picture>
                         <source
                             srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/17665cc7-978b-43ca-a441-5ab0c40d216c.png"
-                            alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                            alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                         >
                         <img
                             class="w-full rounded-sm border border-gray-900"
                             src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/17665cc7-978b-43ca-a441-5ab0c40d216c.png"
-                            alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                            alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                             loading="lazy"
                         />
                     </picture>
@@ -804,7 +804,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f410f395-e2b2-4cb7-902f-45dd394a8ddd.jpeg" 
-                                        alt="Our Cookin Some Chilli service adds a unique touch to your outdoor gatherings by offering professional chili cooking and catering services for homeowners hosting events in their outdoor spaces. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our Cookin Some Chilli service adds a unique touch to your outdoor gatherings by offering professional chili cooking and catering services for homeowners hosting events in their outdoor spaces. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -878,7 +878,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/443355a6-6395-4be9-96f2-a9900528c55e.png" 
-                                        alt="Our Driveway Design &amp; Build service offers homeowners the opportunity to enhance their property with a customized and professionally crafted driveway, adding beauty and functionality to their outdoor space. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our Driveway Design &amp; Build service offers homeowners the opportunity to enhance their property with a customized and professionally crafted driveway, adding beauty and functionality to their outdoor space. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -920,7 +920,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f5ccd37a-73a4-4e43-b89c-70a2f5d4a522.jpeg" 
-                                        alt="Our Fall and Spring Clean Up service ensures that your outdoor space remains pristine throughout the year, removing leaves, debris, and preparing your landscape for each season&#x27;s unique demands. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our Fall and Spring Clean Up service ensures that your outdoor space remains pristine throughout the year, removing leaves, debris, and preparing your landscape for each season&#x27;s unique demands. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -962,7 +962,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/70a3231b-ee12-4e55-9fd9-5dae24ff4f19.jpeg" 
-                                        alt="We offer an additional Cheese Making service that allows homeowners to explore their culinary skills and create delicious homemade cheeses from the comfort of their kitchen. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="We offer an additional Cheese Making service that allows homeowners to explore their culinary skills and create delicious homemade cheeses from the comfort of their kitchen. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1004,7 +1004,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f4220d03-9e67-40ad-af2b-46606b291cbd.png" 
-                                        alt="Our Stone Wall Installation service offers homeowners a sturdy and visually appealing solution to enhance their landscape by adding functional retaining walls or decorative stone structures. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our Stone Wall Installation service offers homeowners a sturdy and visually appealing solution to enhance their landscape by adding functional retaining walls or decorative stone structures. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1046,7 +1046,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ac4ac3b2-7bdb-4500-94b2-b1f4bbab4508.jpeg" 
-                                        alt="Our Professional Fertilization service offers homeowners the expertise and resources to ensure their landscape thrives, providing targeted nutrients for healthy growth and a lush, vibrant appearance. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our Professional Fertilization service offers homeowners the expertise and resources to ensure their landscape thrives, providing targeted nutrients for healthy growth and a lush, vibrant appearance. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1088,7 +1088,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/12121bb9-2edf-42ad-a09a-761ea091874a.jpeg" 
-                                        alt="Did you know we also offer moving services? Our experienced team can help transport your belongings to your new home safely and efficiently, ensuring an stress-free moving experience. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Did you know we also offer moving services? Our experienced team can help transport your belongings to your new home safely and efficiently, ensuring an stress-free moving experience. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1130,7 +1130,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/8d5a86b9-1bd0-483d-85f7-2f1bfd783cc8.png" 
-                                        alt="Our retaining wall construction service is designed to provide structural support and prevent soil erosion on your property. Enhance the functionality and beauty of your outdoor space with our professional expertise. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our retaining wall construction service is designed to provide structural support and prevent soil erosion on your property. Enhance the functionality and beauty of your outdoor space with our professional expertise. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1172,7 +1172,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/684deb62-77ac-448f-af33-13d394f3bab8.png" 
-                                        alt="Enhance the curb appeal of your home with our professional Pressure Washing service. Remove dirt, grime, and debris from exterior surfaces to restore the beauty of your property. Schedule a consultation today! for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Enhance the curb appeal of your home with our professional Pressure Washing service. Remove dirt, grime, and debris from exterior surfaces to restore the beauty of your property. Schedule a consultation today! for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1214,7 +1214,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3f1105b4-e5f8-44be-859e-53a715fee2e2.png" 
-                                        alt=" Test Ensure your home stays safe and accessible during winter with our expert snow removal service. Our team will swiftly clear your driveway and walkways, leaving you worry-free all season long. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt=" Test Ensure your home stays safe and accessible during winter with our expert snow removal service. Our team will swiftly clear your driveway and walkways, leaving you worry-free all season long. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1256,7 +1256,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/07b440ef-877d-412a-8c21-0b3b6a7ee996.png" 
-                                        alt="Our Hardscaping service enhances your outdoor living areas with beautifully crafted natural stone hardscape features, providing both functionality and aesthetic appeal to your home&#x27;s exterior design. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our Hardscaping service enhances your outdoor living areas with beautifully crafted natural stone hardscape features, providing both functionality and aesthetic appeal to your home&#x27;s exterior design. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1298,7 +1298,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/accc878d-42bb-4cc1-9ee5-c6cc314624e2.jpeg" 
-                                        alt="Our professional gardening service will transform your outdoor space into a lush and vibrant paradise, providing expert planting, pruning, weeding, and maintenance to keep your garden flourishing year-round. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our professional gardening service will transform your outdoor space into a lush and vibrant paradise, providing expert planting, pruning, weeding, and maintenance to keep your garden flourishing year-round. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1340,7 +1340,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/796159a5-c6b1-4e17-bb57-29383421f9db.png" 
-                                        alt="In addition to our exceptional landscaping and hardscaping services, we also offer top-rated mowing services to keep your lawn looking pristine all year round. Contact us for a quote today! for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="In addition to our exceptional landscaping and hardscaping services, we also offer top-rated mowing services to keep your lawn looking pristine all year round. Contact us for a quote today! for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1408,7 +1408,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/c9c1dbc0-99c8-45f8-8fb7-0fe599ca4134.jpeg" 
-                                        alt="Mobile Transform your outdoor space with our expert patio design and construction services. From concept to completion, we will create a beautiful and functional patio that enhances your home&#x27;s aesthetic appeal. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Mobile Transform your outdoor space with our expert patio design and construction services. From concept to completion, we will create a beautiful and functional patio that enhances your home&#x27;s aesthetic appeal. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1610,7 +1610,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/d534eb46-8bf6-4d00-a56b-bb182c843c88.jpeg" 
-                                        alt="test Enhance your landscape with our professional mulch installation service. We expertly lay down high-quality mulch to improve soil health, retain moisture, suppress weeds, and enhance the overall aesthetics of your yard. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="test Enhance your landscape with our professional mulch installation service. We expertly lay down high-quality mulch to improve soil health, retain moisture, suppress weeds, and enhance the overall aesthetics of your yard. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1652,7 +1652,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ee8c583b-2ac5-449b-bff4-ed0c43e9a281.png" 
-                                        alt="Our snow removal service is essential for homeowners in snowy climates, ensuring safe and clear driveways and walkways during winter months. Trust us to keep your property accessible and safe. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt="Our snow removal service is essential for homeowners in snowy climates, ensuring safe and clear driveways and walkways during winter months. Trust us to keep your property accessible and safe. for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -1694,7 +1694,7 @@
                                     <img
                                         class="absolute inset-0 block w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 "
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/79efe44c-aeac-427e-a01d-e49090fb2717.png" 
-                                        alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"
+                                        alt=" for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"
                                         loading="lazy"
                                         decoding="async"
                                     />
@@ -3405,12 +3405,12 @@
                                 <picture class="rounded-sm border border-primary w-40 h-28 ml-12 sm:w-52 sm:h-40 sm:ml-0 self-end">
                                     <source
                                         srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png"
-                                        alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                        alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                     >
                                     <img
                                         class="w-full h-full object-cover"
                                         src="https://landing-page-app-hero-images.s3.amazonaws.com/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png"
-                                        alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                        alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                         loading="lazy"
                                     >
                                 </picture>
@@ -3422,12 +3422,12 @@
                                 <picture class="rounded-sm border border-primary w-52 h-40 sm:w-72 sm:h-52">
                                     <source
                                         srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/19f6d7d3-8143-449d-bf8c-77334faed071.png"
-                                        alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                        alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                     >
                                     <img
                                         class="w-full h-full object-cover"
                                         src="https://landing-page-app-hero-images.s3.amazonaws.com/media/19f6d7d3-8143-449d-bf8c-77334faed071.png"
-                                        alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                        alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                         loading="lazy"
                                     >
                                 </picture>
@@ -3440,12 +3440,12 @@
                             <picture class="rounded-sm border border-primary min-w-52 max-w-52 h-40 sm:min-w-72 sm:min-h-52 mt-10 sm:mt-0 sm:self-center">
                                 <source
                                     srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
-                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                 >
                                 <img
                                     class="w-full h-full object-cover"
                                     src="https://landing-page-app-hero-images.s3.amazonaws.com/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
-                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Brooklyn, NY - people or person"
+                                    alt="ZZZ Beantown Tutoring &amp; Cheese Making LLC team in Milton, MA - people or person"
                                     loading="lazy"
                                 >
                             </picture>
@@ -3711,7 +3711,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b85fdc14-50b9-4e04-8cb4-d129f289fa4b.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b85fdc14-50b9-4e04-8cb4-d129f289fa4b.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3731,7 +3731,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/d50cd817-dc35-4fd3-b4f3-25382419172b.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/d50cd817-dc35-4fd3-b4f3-25382419172b.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3751,7 +3751,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ee8c583b-2ac5-449b-bff4-ed0c43e9a281.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ee8c583b-2ac5-449b-bff4-ed0c43e9a281.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3771,7 +3771,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e22de999-7e8c-49f7-9994-13274733d620.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e22de999-7e8c-49f7-9994-13274733d620.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3791,7 +3791,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0a473d2f-4cd4-4282-9ca7-c81ace08cd48.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0a473d2f-4cd4-4282-9ca7-c81ace08cd48.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3811,7 +3811,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3831,7 +3831,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/19f6d7d3-8143-449d-bf8c-77334faed071.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/19f6d7d3-8143-449d-bf8c-77334faed071.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3851,7 +3851,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3871,7 +3871,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3891,7 +3891,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3911,7 +3911,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3931,7 +3931,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -3951,357 +3951,7 @@
                         <div>
                             <div class="mr-8">
                                 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-                                    <video class="object-contain lazy video-animation" preload="none" autoplay loop controls muted>
-                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/68e2e365-418c-4134-ae5b-99dda0f6d68d.mp4#t=0.5">
-                                    </video>
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/79efe44c-aeac-427e-a01d-e49090fb2717.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY"  width="350" height="200" />
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b85fdc14-50b9-4e04-8cb4-d129f289fa4b.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/d50cd817-dc35-4fd3-b4f3-25382419172b.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ee8c583b-2ac5-449b-bff4-ed0c43e9a281.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e22de999-7e8c-49f7-9994-13274733d620.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0a473d2f-4cd4-4282-9ca7-c81ace08cd48.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/19f6d7d3-8143-449d-bf8c-77334faed071.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            
-        
-            
-                <li data-id="gallery_media" data-gallery="">
-
-                    <div>
-                        <div>
-                            <div class="mr-8">
-                                
-
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
-
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
                                 
                             </div>
 
@@ -4343,8 +3993,50 @@
                         <div>
                             <div class="mr-8">
                                 
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
+                                
+                            </div>
 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/79efe44c-aeac-427e-a01d-e49090fb2717.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA"  width="350" height="200" />
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/b85fdc14-50b9-4e04-8cb4-d129f289fa4b.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
 
                                 
                             </div>
@@ -4366,7 +4058,315 @@
                             <div class="mr-8">
                                 
 
-                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/79efe44c-aeac-427e-a01d-e49090fb2717.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Brooklyn, NY" width="350" height="200" />
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/d50cd817-dc35-4fd3-b4f3-25382419172b.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/ee8c583b-2ac5-449b-bff4-ed0c43e9a281.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e22de999-7e8c-49f7-9994-13274733d620.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0a473d2f-4cd4-4282-9ca7-c81ace08cd48.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/19f6d7d3-8143-449d-bf8c-77334faed071.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+                                    <video class="object-contain lazy video-animation" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/68e2e365-418c-4134-ae5b-99dda0f6d68d.mp4#t=0.5">
+                                    </video>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/8321dbd9-29ee-4c3c-9313-3a3328d1140b.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
+
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+        
+            
+                <li data-id="gallery_media" data-gallery="">
+
+                    <div>
+                        <div>
+                            <div class="mr-8">
+                                
+
+                                    <img loading="lazy" class="object-cover" src="https://d3p2r6ofnvoe67.cloudfront.net/350x200/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/79efe44c-aeac-427e-a01d-e49090fb2717.png" alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" width="350" height="200" />
 
                                 
                             </div>
@@ -6041,7 +6041,7 @@ window.addEventListener('load', calcWidth);
                             <li class="review-tile w-full">
                                 <a
                                     target="_blank" rel="noopener noreferrer"
-                                    href="https://www.facebook.com/104865895776827/reviews"
+                                    href="https://www.facebook.com/1525870660844445/reviews"
                                     class="flex w-full text-sm font-medium rounded-sm bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2"
                                 >
                                     <div style="width: 54px; height: 54px;" class="flex flex-shrink-0 justify-center items-center bg-white rounded-l-sm">
@@ -6368,29 +6368,9 @@ window.addEventListener('load', calcWidth);
 <div class="flex flex-col showcases-container">
     
     <div class=" sm:hidden w-full  p-4 bg-white shadow flex-col justify-start items-start gap-3 inline-flex">
-        <div class="self-stretch text-primary text-2xl font-extrabold leading-loose">Proudly serving Brooklyn, NY and surrounding areas</div>
+        <div class="self-stretch text-primary text-2xl font-extrabold leading-loose">Proudly serving Milton, MA and surrounding areas</div>
         <div class="self-stretch text-gray-900 text-xl font-medium leading-7">
             
-                
-            
-                
-                    New York, 
-                
-            
-                
-                    Newark, 
-                
-            
-                
-                    Hoboken, 
-                
-            
-                
-                    Asbury Park, 
-                
-            
-                
-                    Boston
                 
             
         </div>
@@ -6398,29 +6378,9 @@ window.addEventListener('load', calcWidth);
     <div class="map-outer-container flex">
         <div id="showcases-list" class="hidden sm:flex sm:w-96 sm:flex-shrink-0 flex-col px-8 gap-8 py-12 border-t border-b overflow-auto">
             <div class="flex flex-col gap-4">
-                <div class="text-primary text-2xl font-extrabold leading-10">Proudly serving Brooklyn, NY and surrounding areas</div>
+                <div class="text-primary text-2xl font-extrabold leading-10">Proudly serving Milton, MA and surrounding areas</div>
                 <div class="w-96 text-gray-900 text-xl font-medium leading-7">
                   
-                      
-                  
-                      
-                          New York, 
-                      
-                  
-                      
-                          Newark, 
-                      
-                  
-                      
-                          Hoboken, 
-                      
-                  
-                      
-                          Asbury Park, 
-                      
-                  
-                      
-                          Boston
                       
                   
                 </div>
@@ -8523,7 +8483,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                         <div>
                             <div class="text-base leading-6 font-black uppercase break-word">ZZZ Beantown Tutoring &amp; Cheese Making LLC</div>
                             <div class="text-base leading-6 break-word">United States, US</div>
-                            <div class="text-base leading-6 break-all">7046898072</div>
+                            
                             <div class="text-base leading-6 break-all">ann.kolivanova@gmail.com</div>
                         </div>
                     </div>
@@ -8574,7 +8534,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                     <a
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href="https://www.facebook.com/104865895776827"
+                                        href="https://www.facebook.com/1525870660844445"
                                     >
                                         <span class="sr-only">Facebook</span>
                                         <svg style="width: 40px; height: 40px;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8914,42 +8874,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             <li>
                                 
                                     <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        Brooklyn, NY
-                                    </span>
-                            </li>
-                            
-                            <li>
-                                
-                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        New York, NY
-                                    </span>
-                            </li>
-                            
-                            <li>
-                                
-                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        Newark, NJ
-                                    </span>
-                            </li>
-                            
-                            <li>
-                                
-                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        Hoboken, NJ
-                                    </span>
-                            </li>
-                            
-                            <li>
-                                
-                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        Asbury Park, NJ
-                                    </span>
-                            </li>
-                            
-                            <li>
-                                
-                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        Boston, MA
+                                        Milton, MA
                                     </span>
                             </li>
                             
@@ -9623,7 +9548,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                         <li class="review-tile w-full">
                             <a
                                 target="_blank" rel="noopener noreferrer"
-                                href="https://www.facebook.com/104865895776827/reviews"
+                                href="https://www.facebook.com/1525870660844445/reviews"
                                 class="flex w-full text-sm font-medium rounded-sm bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2"
                             >
                                 <div style="width: 54px; height: 54px;" class="flex flex-shrink-0 justify-center items-center bg-white rounded-l-sm">
