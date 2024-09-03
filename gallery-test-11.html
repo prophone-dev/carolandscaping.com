@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    
       <!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=AW-11395765117"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'AW-11395765117');</script><!-- Event snippet for caro-landscaping Submit Form Conversion b9abd533-4328-43dd-9704-ed7fb8d23773 conversion pageIn your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --><script>function gtag_report_conversion(url) {  var callback = function () {    if (typeof(url) != 'undefined') {      window.location = url;    }  };  gtag('event', 'conversion', {      'send_to': 'AW-11395765117/ETe7CMH5xPIYEP2m9rkq',      'event_callback': callback  });  return false;}</script><script>  gtag('config', 'AW-11395765117/iL9iCOH-xPIYEP2m9rkq', {    'phone_conversion_number': '+12622282738'  });</script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=AW-11411266692"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'AW-11411266692');</script><!-- Event snippet for caro-landscaping Submit Form Conversion 020016fb-b288-4fb1-bebf-b4c241d01782 conversion pageIn your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --><script>function gtag_report_conversion(url) {  var callback = function () {    if (typeof(url) != 'undefined') {      window.location = url;    }  };  gtag('event', 'conversion', {      'send_to': 'AW-11411266692/oeD2CJThwvYYEIS5qMEq',      'event_callback': callback  });  return false;}</script><script>  gtag('config', 'AW-11411266692/5-EkCIPWwvYYEIS5qMEq', {    'phone_conversion_number': '+12622282738'  });</script>
 
 <meta property="og:image" content="https://landing-page-app-hero-images.s3.amazonaws.com/media/452106a9-89e6-4a76-94fc-eb8a7bcc14d5.png" />  
@@ -1761,14 +1762,19 @@
         data-heap-version="v3"
     >
         
-              
+            
             <div
-                class="flex gallery-hero-image screen-height-minus-navbar w-full bg-center bg-cover bg-fixed"
-                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/640d6d53-dada-44ad-b7da-82bdd40168a8.jpeg')"
+                class="relative screen-height-minus-navbar flex w-full overflow-hidden items-center justify-center"
             >
+                <video
+                    id="hero-gallery-video"
+                    class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted
+                >
+                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
+                </video>
                 <main
                     style="--tw-bg-opacity:75%;"
-                    class="flex screen-height-minus-navbar justify-center m-auto w-full bg-primary"
+                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1840,7 +1846,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 1,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1857,29 +1863,6 @@
     data-heap-version="v2.3"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4 sm:space-y-0 lg:grid-cols-4 lg:gap-x-4">
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/640d6d53-dada-44ad-b7da-82bdd40168a8.jpeg" alt="test 11 for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
         
     </ul>
 
@@ -1923,15 +1906,6 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 0">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/640d6d53-dada-44ad-b7da-82bdd40168a8.jpeg" alt="test 11 for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Milton, MA" loading="lazy" decoding="async"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
                                 
                             </ul>
 
@@ -2753,7 +2727,7 @@
         
                         <div>
                             <div class="text-base leading-6 font-black uppercase break-word">ZZZ Beantown Tutoring &amp; Cheese Making LLC</div>
-                            <div class="text-base leading-6 break-word">United States, US</div>
+                            <div class="text-base leading-6 break-word">Fairfield Heights, United States, IN, 46112, US</div>
                             
                             <div class="text-base leading-6 break-all">ann.kolivanova@gmail.com</div>
                         </div>
@@ -3145,7 +3119,70 @@
                             <li>
                                 
                                     <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        Milton, MA
+                                        Indianapolis, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Carmel, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Fishers, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Greenwood, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Lawrence, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Plainfield, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Zionsville, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Brownsburg, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Fairfield Heights, IN
+                                    </span>
+                            </li>
+                            
+                            <li>
+                                
+                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                        Broad Ripple, IN
                                     </span>
                             </li>
                             
