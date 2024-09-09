@@ -71,19 +71,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png");
       background-size: cover;
   }
   
@@ -95,13 +95,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/640d6d53-dada-44ad-b7da-82bdd40168a8.jpeg");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png");
       background-size: cover;
   }
 </style>
@@ -1774,31 +1774,26 @@
 >
     
         <div
-            class="relative screen-height-minus-navbar flex w-full overflow-hidden items-center justify-center"
+            class="flex screen-height-minus-navbar w-full bg-center bg-cover bg-scroll custom_text_color text-white"
+            style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg')"
         >
-            <video
-                id="hero-video"
-                class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted
-            >
-                <source src="" type = "" >
-            </video>
             <main
                 style="--tw-bg-opacity:75%;"
-                class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-black"
+                class="flex screen-height-minus-navbar justify-center m-auto w-full bg-black"
             >
-                <div class="max-w-4xl flex flex-col text-center justify-center items-center mx-4 sm:mx-auto custom_text_color text-white">
+                <div class="max-w-4xl flex flex-col text-center justify-center items-center mx-4 sm:mx-auto">
                     <h1 class="max-w-4xl text-3xl font-black sm:text-5xl text-white uppercase">high octane pipes</h1>
                     <span class="max-w-3xl mt-4 sm:mt-6 text-base sm:text-lg text-white">Cooltest</span>
                     
                         <div class="flex justify-center my-8 sm:my-10 gap-4 sm:gap-5 px-2 flex-wrap">
                             
-                            <a
-                                href="https://facebook.comtest"
-                                class="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-black text-white transition border-2 border-transparent rounded-md sm:py-4 sm:px-10 hover:bg-primary-darker focus:outline-none focus-visible:ring-2 ring-primary ring-offset-2 sm:w-auto ring-opacity-75 bg-primary uppercase"
-                                target="_blank"
-                            >
-                                Clicktest
-                            </a>
+                                <a
+                                    href="https://facebook.comtest"
+                                    class="flex justify-center w-full sm:w-auto text-lg rounded-sm py-3 px-6 sm:px-10 sm:py-4 overflow-hidden bg-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase whitespace-nowrap font-black border border-secondary"
+                                    target="_blank"
+                                >
+                                    Clicktest
+                                </a>
                             
                             
                         </div>
@@ -1865,6 +1860,27 @@
                 @click="contactModalOpen = false"
                 class="relative flex items-center justify-center w-full h-full bg-primary"
         >
+            
+                
+                    <picture
+                        aria-hidden="true"
+                        class="absolute inset-0 object-cover"
+                    >
+                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg" type="image/webp">
+                        <img
+                            aria-hidden="true"
+                            class="object-cover w-full h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"
+                            alt="cover-photo"
+                            fetchpriority="high"
+                            loading="auto"
+                            decoding="sync"
+                        />
+                    </picture>
+                
+
+                
+                <div class="absolute inset-0 bg-black opacity-75"></div>
             
 
             <button
@@ -2385,6 +2401,16 @@
     class="relative overflow-hidden flex w-full bg-center bg-cover custom_text_color text-white"
     style="min-height: 550px;"
 >
+    
+        
+            <img
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover"
+                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/640d6d53-dada-44ad-b7da-82bdd40168a8.jpeg"
+                alt="cover-photo"
+                loading="lazy"
+            />
+        
     
 
     <div 
