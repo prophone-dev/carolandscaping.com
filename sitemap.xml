@@ -39,13 +39,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Driveway-Design---Build</loc>
-        <lastmod>2024-09-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-Caro's-Special-Service</loc>
         <lastmod>2024-09-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,7 +60,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Retaining-Wall-Construction</loc>
+        <loc>https://carolandscaping.com/service-Driveway-Design---Build</loc>
         <lastmod>2024-09-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -82,6 +75,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-shrub-trimming</loc>
+        <lastmod>2024-09-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Retaining-Wall-Construction</loc>
         <lastmod>2024-09-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -193,6 +193,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-work</loc>
+        <lastmod>2024-09-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
         <lastmod>2024-09-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -250,20 +257,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Gardening</loc>
-        <lastmod>2024-09-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-test-photo</loc>
-        <lastmod>2024-09-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-test-11</loc>
         <lastmod>2024-09-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
