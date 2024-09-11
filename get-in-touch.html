@@ -89,7 +89,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/0a814e51-8c53-4db1-8e63-a2fb88faee9b.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c43b1e2d-0795-4a44-b9ae-414c83dee566.mp4");
       background-size: cover;
   }
   
@@ -155,7 +155,7 @@
        function detect_safari(){const e=navigator.userAgent;return!(!e.includes("Safari")||e.includes("Chrome"))}async function report_booking_submission_error(e,o,t){const n={slug:e,error:o,message:t,userAgent:navigator.userAgent};let r="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?r="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?r="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(r="http://127.0.0.1:8000"),await fetch(r+"/report-submission-error",{method:"POST",body:JSON.stringify(n)}).then((e=>{console.log("Submission error reported")})).catch((e=>{console.log("Failed to report submission error")}))}async function create_appointment(e,o,t,n){const r={booking_id:o,start_time:t,end_time:n};let s="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?s="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?s="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(s="http://127.0.0.1:8000");return await fetch(s+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(r)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((o=>(alert("There was a problem creating your appointment request."),report_booking_submission_error(e,o,"Error creating Nylas appointment"),"")))}function send_sms(e,o="contact-modal"){try{const s="scheduler"===o;let i,a,c;"contact-embedded"===o?(i=document.forms.embeddedForm,c=document.getElementById("sendButton-embedded"),a="#error-state-modal-embedded"):(i=document.forms.contactModal,c=document.getElementById("sendButton"),a="#error-state-modal");const d=document.querySelector(a);d.innerHTML="",s||(c.disabled=!0,event.preventDefault());const l=()=>{const e=new FormData(i),o={};for(const t of e.entries())o[t[0]]=t[1];return o["phone-number"]=o["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),o},p=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};function t(o){try{const t={ct:o};if(s)t.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),t.message_id=sessionStorage.getItem("message_id"),t.start_time=sessionStorage.getItem("start_time"),t.end_time=sessionStorage.getItem("end_time");else{const e=l();sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),t.fields=e}fetch(m+"/sms/"+e,{method:"POST",body:JSON.stringify(t)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(s)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((o=>{s||(c.disabled=!1),report_booking_submission_error(e,o,"Error calling send_sms backend").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}catch(o){report_booking_submission_error(e,o,"Error assembling submission body").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}}if(!s){const u=(n=i,r="#contact-phone-number",window.intlTelInputGlobals.getInstance(n.querySelector(r)));if(u){if(!u.getNumber()){return p("Phone number is required",d),void(c.disabled=!1)}if(!u.isValidNumber()){const h=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],g=u.getValidationError();return p(h[g]?h[g]:"Not a valid phone number",d),void(c.disabled=!1)}}}let m="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?m="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?m="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(m="http://127.0.0.1:8000"),detect_safari()?t("safari"):grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(e){t(e)})).catch((o=>{report_booking_submission_error(e,o,"Error executing captcha and/or submitting form").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}catch(_){report_booking_submission_error(e,_,"General error in send_sms").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}var n,r}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
     </script>
     <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded",(function(){var e=[].slice.call(document.querySelectorAll("video.lazy"));if("IntersectionObserver"in window){var t=new IntersectionObserver((function(e,r){e.forEach((function(e){if(e.isIntersecting){for(var r in e.target.children){var n=e.target.children[r];"string"==typeof n.tagName&&"SOURCE"===n.tagName&&(n.src=n.dataset.src)}e.target.load(),e.target.classList.remove("lazy"),t.unobserve(e.target)}}))}));e.forEach((function(e){t.observe(e)}))}}));
+        document.addEventListener("DOMContentLoaded",(function(){const t=document.querySelectorAll("img[data-src], source[data-src]"),e=new IntersectionObserver(((t,e)=>{t.forEach((t=>{if(t.isIntersecting){const r=t.target,c=r.getAttribute("data-src");!r.getAttribute("src")&&c&&(r.src=c,r.removeAttribute("data-src")),e.unobserve(r)}}))}));t.forEach((t=>{e.observe(t)}))}));
     </script>
 </head>
 
@@ -2127,7 +2127,10 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0a814e51-8c53-4db1-8e63-a2fb88faee9b.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <video class="lazy rounded shadow-md object-cover w-full h-full object-cover lazy" preload="none" autoplay loop playsinline controls muted>
+                                            <source  src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c43b1e2d-0795-4a44-b9ae-414c83dee566.mp4#t=0.5" >
+                                            Your browser does not support the video tag.
+                                        </video>
                                     
                                 </div>
 
@@ -2151,7 +2154,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0a814e51-8c53-4db1-8e63-a2fb88faee9b.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2175,7 +2178,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b210798-0fb4-4ace-9413-b4e1229aa00a.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2199,7 +2202,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b210798-0fb4-4ace-9413-b4e1229aa00a.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2223,7 +2226,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2247,7 +2250,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2271,7 +2274,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2295,7 +2298,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2319,7 +2322,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2343,7 +2346,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2367,7 +2370,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/02845fba-b30f-4758-8493-d78b77690a89.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2391,7 +2394,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/16673996-f09b-47ce-b837-4647f1fcbc26.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/02845fba-b30f-4758-8493-d78b77690a89.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2415,7 +2418,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/38fa1cc4-f22e-416a-8649-6e15891bf148.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/16673996-f09b-47ce-b837-4647f1fcbc26.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2439,7 +2442,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/8ce1f240-3338-43b3-8a46-0c952f7f42eb.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/38fa1cc4-f22e-416a-8649-6e15891bf148.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2463,7 +2466,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f456f2c4-bb1b-4e44-b857-bae5f99f819d.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/8ce1f240-3338-43b3-8a46-0c952f7f42eb.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2487,7 +2490,7 @@
                             
                                 <div class="aspect-w-3 aspect-h-2">
                                     
-                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/fad09439-663e-43b2-9906-bb123997c4e7.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f456f2c4-bb1b-4e44-b857-bae5f99f819d.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 </div>
 
@@ -2546,17 +2549,18 @@
                                 
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
-                                        
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0a814e51-8c53-4db1-8e63-a2fb88faee9b.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
+                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c43b1e2d-0795-4a44-b9ae-414c83dee566.mp4#t=0.5">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p lorem="1" class="mt-3 text-gray-500"></p>
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0a814e51-8c53-4db1-8e63-a2fb88faee9b.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2565,7 +2569,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 2">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b210798-0fb4-4ace-9413-b4e1229aa00a.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2574,7 +2578,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 3">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3b210798-0fb4-4ace-9413-b4e1229aa00a.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2583,7 +2587,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 4">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2592,7 +2596,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 5">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2601,7 +2605,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 6">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2610,7 +2614,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 7">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2619,7 +2623,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 8">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2628,7 +2632,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 9">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2637,7 +2641,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 10">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/02845fba-b30f-4758-8493-d78b77690a89.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2646,7 +2650,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 11">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/16673996-f09b-47ce-b837-4647f1fcbc26.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/02845fba-b30f-4758-8493-d78b77690a89.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2655,7 +2659,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 12">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/38fa1cc4-f22e-416a-8649-6e15891bf148.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/16673996-f09b-47ce-b837-4647f1fcbc26.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2664,7 +2668,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 13">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/8ce1f240-3338-43b3-8a46-0c952f7f42eb.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/38fa1cc4-f22e-416a-8649-6e15891bf148.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2673,7 +2677,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 14">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f456f2c4-bb1b-4e44-b857-bae5f99f819d.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/8ce1f240-3338-43b3-8a46-0c952f7f42eb.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2682,7 +2686,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 15">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/fad09439-663e-43b2-9906-bb123997c4e7.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f456f2c4-bb1b-4e44-b857-bae5f99f819d.png"  alt="Cookin Some Chilli for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -2734,30 +2738,6 @@
         const observer = new ResizeObserver(resizeSliders);
         sliders.forEach(slider => observer.observe(slider));
         window.addEventListener('resize', resizeSliders);
-    });
-
-    // sets img src to img data-src -- but only when the img is in view
-    document.addEventListener("DOMContentLoaded", function() {
-        const lazyImages = document.querySelectorAll('img[data-src], source[data-src]');
-        
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    const dataSrc = img.getAttribute('data-src');
-                    const src = img.getAttribute('src');
-                    if (!src && dataSrc) {
-                      img.src = dataSrc
-                      img.removeAttribute('data-src');
-                    }
-                    observer.unobserve(img);
-                }
-            });
-        });
-        
-        lazyImages.forEach(image => {
-            imageObserver.observe(image);
-        });
     });
 </script>
 
