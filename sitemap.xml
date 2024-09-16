@@ -46,13 +46,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-snow-removal</loc>
-        <lastmod>2024-09-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-shrub-trimming</loc>
         <lastmod>2024-09-16</lastmod>
         <changefreq>weekly</changefreq>
@@ -68,13 +61,6 @@
 
     <url>
         <loc>https://carolandscaping.com/service-exterior-painting</loc>
-        <lastmod>2024-09-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-patio-design-construction</loc>
         <lastmod>2024-09-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -102,7 +88,21 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-patio-design-construction</loc>
+        <lastmod>2024-09-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-Cheese-Making</loc>
+        <lastmod>2024-09-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-snow-removal</loc>
         <lastmod>2024-09-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
