@@ -27,7 +27,7 @@
     <meta name="description" content="Find reliable and professional landscaping services near you in New York City. Enhance your outdoor space with Beantown Tutoring! Test!" />
     
     
-    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
+    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/294x294/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
@@ -57,13 +57,13 @@
     <style>
   :root {
       --contrastThreshold: 60%;
-      --color-primary-h: 109;
-      --color-primary-s: 35%;
-      --color-primary-l: 28%;
+      --color-primary-h: 223;
+      --color-primary-s: 78%;
+      --color-primary-l: 23%;
       --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
-      --color-secondary-h: 257;
-      --color-secondary-s: 29%;
-      --color-secondary-l: 59%;
+      --color-secondary-h: 21;
+      --color-secondary-s: 90%;
+      --color-secondary-l: 48%;
       --color-secondary-darker: hsl(var(--color-secondary-h), var(--color-secondary-s), calc(var(--color-secondary-l) - 7.5%));
       --switch: calc((var(--color-primary-l) - var(--contrastThreshold)) * -100);
       --color-primary-foreground: hsl(0, 0%, var(--switch));
@@ -152,10 +152,10 @@
         };
 
         
-       function detect_safari(){const e=navigator.userAgent;return!(!e.includes("Safari")||e.includes("Chrome"))}async function report_booking_submission_error(e,o,t){const n={slug:e,error:o,message:t,userAgent:navigator.userAgent};let r="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?r="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?r="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(r="http://127.0.0.1:8000"),await fetch(r+"/report-submission-error",{method:"POST",body:JSON.stringify(n)}).then((e=>{console.log("Submission error reported")})).catch((e=>{console.log("Failed to report submission error")}))}async function create_appointment(e,o,t,n){const r={booking_id:o,start_time:t,end_time:n};let s="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?s="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?s="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(s="http://127.0.0.1:8000");return await fetch(s+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(r)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((o=>(alert("There was a problem creating your appointment request."),report_booking_submission_error(e,o,"Error creating Nylas appointment"),"")))}function send_sms(e,o="contact-modal"){try{const s="scheduler"===o;let i,a,c;"contact-embedded"===o?(i=document.forms.embeddedForm,c=document.getElementById("sendButton-embedded"),a="#error-state-modal-embedded"):(i=document.forms.contactModal,c=document.getElementById("sendButton"),a="#error-state-modal");const d=document.querySelector(a);d.innerHTML="",s||(c.disabled=!0,event.preventDefault());const l=()=>{const e=new FormData(i),o={};for(const t of e.entries())o[t[0]]=t[1];return o["phone-number"]=o["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),o},p=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};function t(o){try{const t={ct:o};if(s)t.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),t.message_id=sessionStorage.getItem("message_id"),t.start_time=sessionStorage.getItem("start_time"),t.end_time=sessionStorage.getItem("end_time");else{const e=l();sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),t.fields=e}fetch(m+"/sms/"+e,{method:"POST",body:JSON.stringify(t)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(s)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((o=>{s||(c.disabled=!1),report_booking_submission_error(e,o,"Error calling send_sms backend").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}catch(o){report_booking_submission_error(e,o,"Error assembling submission body").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}}if(!s){const u=(n=i,r="#contact-phone-number",window.intlTelInputGlobals.getInstance(n.querySelector(r)));if(u){if(!u.getNumber()){return p("Phone number is required",d),void(c.disabled=!1)}if(!u.isValidNumber()){const h=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],g=u.getValidationError();return p(h[g]?h[g]:"Not a valid phone number",d),void(c.disabled=!1)}}}let m="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?m="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?m="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(m="http://127.0.0.1:8000"),detect_safari()?t("safari"):grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(e){t(e)})).catch((o=>{report_booking_submission_error(e,o,"Error executing captcha and/or submitting form").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}catch(_){report_booking_submission_error(e,_,"General error in send_sms").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}var n,r}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
+       function detect_safari(){const e=navigator.userAgent;return!(!e.includes("Safari")||e.includes("Chrome"))}async function report_booking_submission_error(e,o,t){const n={slug:e,error:o,message:t,userAgent:navigator.userAgent};let r="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?r="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?r="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(r="http://127.0.0.1:8000"),await fetch(r+"/report-submission-error",{method:"POST",body:JSON.stringify(n)}).then((e=>{console.log("Submission error reported")})).catch((e=>{console.log("Failed to report submission error")}))}async function create_appointment(e,o,t,n){const r={booking_id:o,start_time:t,end_time:n};let s="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?s="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?s="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(s="http://127.0.0.1:8000");return await fetch(s+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(r)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((o=>(alert("There was a problem creating your appointment request."),report_booking_submission_error(e,o,"Error creating Nylas appointment"),"")))}function send_sms(e,o="contact-modal"){try{const s="scheduler"===o;let i,a,c;"contact-embedded"===o?(i=document.forms.embeddedForm,c=document.getElementById("sendButton-embedded"),a="#error-state-modal-embedded"):(i=document.forms.contactModal,c=document.getElementById("sendButton"),a="#error-state-modal");const d=document.querySelector(a);d.innerHTML="",s||(c.disabled=!0,event.preventDefault());const l=(e="")=>{const o=new FormData(i),t={};for(const e of o.entries())t[e[0]]=e[1];return e&&(t["phone-number"]=e),t["phone-number"]=t["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),t},p=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};function t(o,t=""){try{const n={ct:o};if(s)n.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),n.message_id=sessionStorage.getItem("message_id"),n.start_time=sessionStorage.getItem("start_time"),n.end_time=sessionStorage.getItem("end_time");else{const e=l(t);sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),n.fields=e}fetch(u+"/sms/"+e,{method:"POST",body:JSON.stringify(n)}).then((e=>{if(!e.ok)throw e;return e.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(s)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((o=>{s||(c.disabled=!1),report_booking_submission_error(e,o,"Error calling send_sms backend").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}catch(o){report_booking_submission_error(e,o,"Error assembling submission body").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}}let m;if(!s){const h=(n=i,r="#contact-phone-number",window.intlTelInputGlobals.getInstance(n.querySelector(r)));if(h){if(m=h.getNumber(),!m){return p("Phone number is required",d),void(c.disabled=!1)}if(!h.isValidNumber()){const g=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],_=h.getValidationError();return p(g[_]?g[_]:"Not a valid phone number",d),void(c.disabled=!1)}}}let u="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?u="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?u="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(u="http://127.0.0.1:8000"),detect_safari()?t("safari",m):grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(e){t(e,m)})).catch((o=>{report_booking_submission_error(e,o,"Error executing captcha and/or submitting form").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}))}))}catch(b){report_booking_submission_error(e,b,"General error in send_sms").then((()=>{alert("There was a problem sending your text. Please reach out to ProPhone.")}))}var n,r}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
     </script>
     <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded",(function(){const t=document.querySelectorAll("img[data-src], source[data-src]"),e=new IntersectionObserver(((t,e)=>{t.forEach((t=>{if(t.isIntersecting){const r=t.target,c=r.getAttribute("data-src");!r.getAttribute("src")&&c&&(r.src=c,r.removeAttribute("data-src")),e.unobserve(r)}}))}));t.forEach((t=>{e.observe(t)}))}));
+        document.addEventListener("DOMContentLoaded",(function(){const t=document.querySelectorAll("video.lazy"),e=new IntersectionObserver(((t,e)=>{t.forEach((t=>{if(t.isIntersecting){const r=t.target.children;for(let n=0;n<r.length;n++){const o=r[n];if("string"==typeof o.tagName&&"SOURCE"===o.tagName){const r=o.getAttribute("data-src");!o.getAttribute("src")&&r&&(o.src=r,o.removeAttribute("data-src")),t.target.load(),e.unobserve(t.target)}}}}))}));t.forEach((t=>{e.observe(t)}))}));
     </script>
 </head>
 
@@ -1915,7 +1915,7 @@
                     >
                         
                             <img
-                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/294x294/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                 class="object-contain max-h-full  max-w-xs sm:max-w-sm "
                                 :class="{ 'sm:h-full sm:max-h-full': scrolledFromTop, 'sm:h-auto sm:max-h-none': !scrolledFromTop,  }"
                                 alt="Brand Logo"
@@ -2713,11 +2713,11 @@
                                 <picture>
                                     <source
                                         type="image/webp"
-                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" loading="auto"
+                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/294x294/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" loading="auto"
                                     >
                                     <img
                                         class="h-[76px] w-auto object-contain"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/294x294/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                         alt="Brand Logo"
                                         width="76"
                                         height="76"
@@ -3597,19 +3597,19 @@
                 </div>
 
                 <svg width="291" height="35" viewBox="0 0 291 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M262.41 3.5736e-07C263.964 1.03753e-05 265 1.00001 265 2.50001V35H25L25 2.50001C25 1.00001 26.0403 -2.36498e-09 27.5944 0L262.41 3.5736e-07Z" fill="#8a79b5"/>
+                    <path d="M262.41 3.5736e-07C263.964 1.03753e-05 265 1.00001 265 2.50001V35H25L25 2.50001C25 1.00001 26.0403 -2.36498e-09 27.5944 0L262.41 3.5736e-07Z" fill="#ea580c"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M286.15 0.0930346C288.643 -0.4495 291 1.44983 291 4.00158V35H287V4.00158L146.35 34.6052C145.79 34.7272 145.21 34.7272 144.65 34.6052L4 4.00157L4 35H0L1.35499e-06 4.00157C1.46653e-06 1.44982 2.35706 -0.449512 4.85047 0.0930223L145.5 30.6967L286.15 0.0930346Z" fill="white"/>
                 </svg>    
             
                 <svg style="margin-top: -1px;" width="291" height="188" viewBox="0 0 291 188" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M291 1.04789e-05V188H287V1.0304e-05L291 1.04789e-05Z" fill="white"/>
                     <path d="M4.00001 4.52129e-06L4 188H0L8.21774e-06 0L4.00001 4.52129e-06Z" fill="white"/>
-                    <path d="M265 9.9774e-06V188H25V9.9774e-06H265Z" fill="#8a79b5"/>
+                    <path d="M265 9.9774e-06V188H25V9.9774e-06H265Z" fill="#ea580c"/>
                 </svg>       
             
                 <svg style="margin-top: -1px;" width="291" height="60" viewBox="0 0 291 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M291 1.272e-05V2.00001C291 3.81946 289.727 5.39098 287.948 5.76924L146.332 35.8679C145.783 35.9845 145.217 35.9845 144.668 35.8679L3.05231 5.76923C1.27261 5.39098 -7.9531e-08 3.81946 0 2L8.74224e-08 0L4 1.74845e-07V1.8813L145.5 31.9553L287 1.88131V1.25452e-05L291 1.272e-05Z" fill="white"/>
-                    <path d="M265 26.9487V0H25L25 26.9488C25 28.9451 26.9174 29.318 27.5 29.4442L143 59.0511C144 59.3007 144.5 59.5003 145 59.5003C145.5 59.5003 145.97 59.3007 147 59.0511L262.528 29.4441C263.111 29.3178 265 28.426 265 26.9487Z" fill="#8a79b5"/>
+                    <path d="M265 26.9487V0H25L25 26.9488C25 28.9451 26.9174 29.318 27.5 29.4442L143 59.0511C144 59.3007 144.5 59.5003 145 59.5003C145.5 59.5003 145.97 59.3007 147 59.0511L262.528 29.4441C263.111 29.3178 265 28.426 265 26.9487Z" fill="#ea580c"/>
                 </svg>                    
             </div>
     
@@ -3623,17 +3623,17 @@
 
                 <svg width="243" height="31" viewBox="0 0 243 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M215.056 0.00600535C216.023 0.0060054 217.557 1.11098 217.557 2.47403L217.557 31L25.4427 31L25.4427 2.47017C25.4427 1.10713 26.9764 0.00215271 27.9442 0.00215275L215.056 0.00600535Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M238.132 0.0948879C240.631 -0.451072 243 1.42819 243 3.95326L243 31L238.998 31L238.998 3.95343L122.438 30.2074C121.868 30.332 121.277 30.332 120.707 30.2074L4.00237 3.95311L4.00237 31L-1.42496e-05 31L-1.30674e-05 3.95311C-1.2957e-05 1.42804 2.36898 -0.447711 4.86775 0.0982494L121.572 26.3526L238.132 0.0948879Z" fill="#8a79b5"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M238.132 0.0948879C240.631 -0.451072 243 1.42819 243 3.95326L243 31L238.998 31L238.998 3.95343L122.438 30.2074C121.868 30.332 121.277 30.332 120.707 30.2074L4.00237 3.95311L4.00237 31L-1.42496e-05 31L-1.30674e-05 3.95311C-1.2957e-05 1.42804 2.36898 -0.447711 4.86775 0.0982494L121.572 26.3526L238.132 0.0948879Z" fill="#ea580c"/>
                 </svg>
 
                 <svg style="margin-top: -1px;" width="243" height="155" viewBox="0 0 243 155" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M243 1.06219e-05V155H239L239 1.0447e-05L243 1.06219e-05Z" fill="#8a79b5"/>
-                    <path d="M4.00001 3.7802e-06L4 155H0L6.77527e-06 0L4.00001 3.7802e-06Z" fill="#8a79b5"/>
+                    <path d="M243 1.06219e-05V155H239L239 1.0447e-05L243 1.06219e-05Z" fill="#ea580c"/>
+                    <path d="M4.00001 3.7802e-06L4 155H0L6.77527e-06 0L4.00001 3.7802e-06Z" fill="#ea580c"/>
                     <path d="M217.5 9.50723e-06V155L25.5 155L25.5 1.11464e-06L217.5 9.50723e-06Z" fill="white"/>
                 </svg>
                     
                 <svg style="margin-top: -1px;" width="243" height="43" viewBox="0 0 243 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M243 1.04904e-05V2.00309C243 3.70985 241.817 5.18801 240.154 5.56L122.372 31.9037C121.798 32.0321 121.202 32.0321 120.628 31.9037L2.84581 5.55999C1.18265 5.188 -7.46047e-08 3.70984 0 2.00308L8.7558e-08 0H4V1.71329L121.5 27.9938L239 1.7133V1.04904e-05H243Z" fill="#8a79b5"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M243 1.04904e-05V2.00309C243 3.70985 241.817 5.18801 240.154 5.56L122.372 31.9037C121.798 32.0321 121.202 32.0321 120.628 31.9037L2.84581 5.55999C1.18265 5.188 -7.46047e-08 3.70984 0 2.00308L8.7558e-08 0H4V1.71329L121.5 27.9938L239 1.7133V1.04904e-05H243Z" fill="#ea580c"/>
                     <path d="M217.445 15.9487V4.77458e-07L25.4448 2.3904e-07L25.4448 15.9488C25.4448 17.9451 27.3622 18.318 27.9448 18.4442L119.945 42.0508C120.945 42.3004 121.445 42.5 121.945 42.5C122.445 42.5 122.915 42.3004 123.945 42.0508L214.973 18.4441C215.555 18.3179 217.445 17.426 217.445 15.9487Z" fill="white"/>
                 </svg>
             </div>
@@ -3648,17 +3648,17 @@
 
                 <svg width="243" height="31" viewBox="0 0 243 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M215.056 0.00600535C216.023 0.0060054 217.557 1.11098 217.557 2.47403L217.557 31L25.4427 31L25.4427 2.47017C25.4427 1.10713 26.9764 0.00215271 27.9442 0.00215275L215.056 0.00600535Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M238.132 0.0948879C240.631 -0.451072 243 1.42819 243 3.95326L243 31L238.998 31L238.998 3.95343L122.438 30.2074C121.868 30.332 121.277 30.332 120.707 30.2074L4.00237 3.95311L4.00237 31L-1.42496e-05 31L-1.30674e-05 3.95311C-1.2957e-05 1.42804 2.36898 -0.447711 4.86775 0.0982494L121.572 26.3526L238.132 0.0948879Z" fill="#8a79b5"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M238.132 0.0948879C240.631 -0.451072 243 1.42819 243 3.95326L243 31L238.998 31L238.998 3.95343L122.438 30.2074C121.868 30.332 121.277 30.332 120.707 30.2074L4.00237 3.95311L4.00237 31L-1.42496e-05 31L-1.30674e-05 3.95311C-1.2957e-05 1.42804 2.36898 -0.447711 4.86775 0.0982494L121.572 26.3526L238.132 0.0948879Z" fill="#ea580c"/>
                 </svg>
 
                 <svg style="margin-top: -1px;" width="243" height="155" viewBox="0 0 243 155" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M243 1.06219e-05V155H239L239 1.0447e-05L243 1.06219e-05Z" fill="#8a79b5"/>
-                    <path d="M4.00001 3.7802e-06L4 155H0L6.77527e-06 0L4.00001 3.7802e-06Z" fill="#8a79b5"/>
+                    <path d="M243 1.06219e-05V155H239L239 1.0447e-05L243 1.06219e-05Z" fill="#ea580c"/>
+                    <path d="M4.00001 3.7802e-06L4 155H0L6.77527e-06 0L4.00001 3.7802e-06Z" fill="#ea580c"/>
                     <path d="M217.5 9.50723e-06V155L25.5 155L25.5 1.11464e-06L217.5 9.50723e-06Z" fill="white"/>
                 </svg>
                     
                 <svg style="margin-top: -1px;" width="243" height="43" viewBox="0 0 243 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M243 1.04904e-05V2.00309C243 3.70985 241.817 5.18801 240.154 5.56L122.372 31.9037C121.798 32.0321 121.202 32.0321 120.628 31.9037L2.84581 5.55999C1.18265 5.188 -7.46047e-08 3.70984 0 2.00308L8.7558e-08 0H4V1.71329L121.5 27.9938L239 1.7133V1.04904e-05H243Z" fill="#8a79b5"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M243 1.04904e-05V2.00309C243 3.70985 241.817 5.18801 240.154 5.56L122.372 31.9037C121.798 32.0321 121.202 32.0321 120.628 31.9037L2.84581 5.55999C1.18265 5.188 -7.46047e-08 3.70984 0 2.00308L8.7558e-08 0H4V1.71329L121.5 27.9938L239 1.7133V1.04904e-05H243Z" fill="#ea580c"/>
                     <path d="M217.445 15.9487V4.77458e-07L25.4448 2.3904e-07L25.4448 15.9488C25.4448 17.9451 27.3622 18.318 27.9448 18.4442L119.945 42.0508C120.945 42.3004 121.445 42.5 121.945 42.5C122.445 42.5 122.915 42.3004 123.945 42.0508L214.973 18.4441C215.555 18.3179 217.445 17.426 217.445 15.9487Z" fill="white"/>
                 </svg>
             </div>
@@ -3729,39 +3729,7 @@
         
             
         
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
 
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
         
             
         
@@ -3785,8 +3753,40 @@
 
     <ul role="list" class=" flex flex-row overflow-hidden photobanner2 second h-50 bor">
         
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
 
           
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
 
 
     </ul>
@@ -3810,24 +3810,24 @@
 
 .photobanner1 {
 	height: 200px;
-	width: 11456px;
+	width: 5728px;
 	margin-bottom: 30px;
 	border: 5px solid white;
 }
 
 .photobanner2 {
 	height: 200px;
-	width: 0px;
+	width: 5728px;
 	margin-bottom: 30px;
 	border: 5px solid white;
 }
 
 .first {
-    animation: slideshow 96s linear infinite reverse;
+    animation: slideshow 48s linear infinite reverse;
   }
 
 .second {
-    animation: slideshow 0s linear infinite;
+    animation: slideshow 48s linear infinite;
   }
 
 @keyframes slideshow {
@@ -3989,7 +3989,7 @@ window.addEventListener('load', calcWidth);
                 <a class="flex items-center flex-shrink-0" href="reviews">
                     <span class="relative uppercase font-black pr-2">See all reviews</span>
                     <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.6667 1.1665L16.5 6.99984M16.5 6.99984L10.6667 12.8332M16.5 6.99984L1.5 6.99984" stroke="#37602e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.6667 1.1665L16.5 6.99984M16.5 6.99984L10.6667 12.8332M16.5 6.99984L1.5 6.99984" stroke="#0d276a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
             </button>
@@ -4104,104 +4104,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
-                                                                    <div class="relative pt-2">
-                                                                        
-                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
-                                                                                This Cypress service is phenomenal!! Like legit, couldn&#x27;t have asked for a better cypress. Hands down, #1.
-                                                                            </span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
-                                                                        
-                                                                    </div>
-                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
-                                                                        <div>
-                                                                            
-                                                                                <span class="block font-medium uppercase text-gray-900">Samuel Charles</span>
-                                                                            
-                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">GO BUKS</div>
-                                                                        </div>
-                                                                    </footer>
-                                                                </blockquote>
-                                                            </li>
-                                                        
-                                                    </ul>
-                                                
-                                                <ul class="space-y-8">
-                                                        
-                                                            <li
-                                                                style="min-height: 460px;"
-                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50  hidden sm:flex "
-                                                            >
-                                                                <div class="flex w-full justify-between">
-                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                    </div>
-                                                                    <span class="sr-only"> out of 5 stars</span>
-                                                                    <div>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -4296,8 +4200,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -4328,7 +4232,7 @@ window.addEventListener('load', calcWidth);
                                                         
                                                             <li
                                                                 style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                                class=" flex flex-col  px-6 py-8 border border-primary shadow bg-gray-50  hidden sm:flex "
                                                             >
                                                                 <div class="flex w-full justify-between">
                                                                     <div aria-hidden="true" class="space-x-1.5 flex">
@@ -4392,8 +4296,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -4488,8 +4392,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -4584,8 +4488,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -4680,8 +4584,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -4783,8 +4687,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -4879,8 +4783,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -4969,8 +4873,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5065,8 +4969,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5161,8 +5065,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5257,8 +5161,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5360,8 +5264,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5456,8 +5360,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5552,8 +5456,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5648,8 +5552,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5744,8 +5648,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -5840,8 +5744,8 @@ window.addEventListener('load', calcWidth);
                                                                     <span class="sr-only"> out of 5 stars</span>
                                                                     <div>
                                                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#0d276a"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#0d276a"/>
                                                                         </svg>
                                                                     </div>
                                                                 </div>
@@ -7065,7 +6969,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                         <div class="flex items-center">
                             <div onclick="copyShareLink()" class="cursor-pointer flex items-center pr-5">
                                 <svg class="mr-2" width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.125 2.75C12.125 1.36929 13.2443 0.25 14.625 0.25C16.0057 0.25 17.125 1.36929 17.125 2.75C17.125 4.13071 16.0057 5.25 14.625 5.25C13.9111 5.25 13.2676 4.95062 12.8126 4.47186L5.79494 8.37057C5.84721 8.57195 5.875 8.78296 5.875 9C5.875 9.21704 5.84721 9.42805 5.79494 9.62944L12.8126 13.5281C13.2676 13.0494 13.9111 12.75 14.625 12.75C16.0057 12.75 17.125 13.8693 17.125 15.25C17.125 16.6307 16.0057 17.75 14.625 17.75C13.2443 17.75 12.125 16.6307 12.125 15.25C12.125 15.033 12.1528 14.8219 12.2051 14.6206L5.1874 10.7219C4.73237 11.2006 4.08889 11.5 3.375 11.5C1.99429 11.5 0.875 10.3807 0.875 9C0.875 7.61929 1.99429 6.5 3.375 6.5C4.08889 6.5 4.73237 6.79938 5.1874 7.27814L12.2051 3.37943C12.1528 3.17805 12.125 2.96704 12.125 2.75Z" fill="#37602e"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.125 2.75C12.125 1.36929 13.2443 0.25 14.625 0.25C16.0057 0.25 17.125 1.36929 17.125 2.75C17.125 4.13071 16.0057 5.25 14.625 5.25C13.9111 5.25 13.2676 4.95062 12.8126 4.47186L5.79494 8.37057C5.84721 8.57195 5.875 8.78296 5.875 9C5.875 9.21704 5.84721 9.42805 5.79494 9.62944L12.8126 13.5281C13.2676 13.0494 13.9111 12.75 14.625 12.75C16.0057 12.75 17.125 13.8693 17.125 15.25C17.125 16.6307 16.0057 17.75 14.625 17.75C13.2443 17.75 12.125 16.6307 12.125 15.25C12.125 15.033 12.1528 14.8219 12.2051 14.6206L5.1874 10.7219C4.73237 11.2006 4.08889 11.5 3.375 11.5C1.99429 11.5 0.875 10.3807 0.875 9C0.875 7.61929 1.99429 6.5 3.375 6.5C4.08889 6.5 4.73237 6.79938 5.1874 7.27814L12.2051 3.37943C12.1528 3.17805 12.125 2.96704 12.125 2.75Z" fill="#0d276a"/>
                                 </svg>
                                 <div class="copy-share-link font-semibold text-primary">
                                     Copy share link
@@ -7082,7 +6986,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                     <div class="flex justify-end items-center absolute top-6 right-8">
                         <div onclick="copyShareLink()" class="cursor-pointer flex items-center">
                             <svg class="mr-2" width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.125 2.75C12.125 1.36929 13.2443 0.25 14.625 0.25C16.0057 0.25 17.125 1.36929 17.125 2.75C17.125 4.13071 16.0057 5.25 14.625 5.25C13.9111 5.25 13.2676 4.95062 12.8126 4.47186L5.79494 8.37057C5.84721 8.57195 5.875 8.78296 5.875 9C5.875 9.21704 5.84721 9.42805 5.79494 9.62944L12.8126 13.5281C13.2676 13.0494 13.9111 12.75 14.625 12.75C16.0057 12.75 17.125 13.8693 17.125 15.25C17.125 16.6307 16.0057 17.75 14.625 17.75C13.2443 17.75 12.125 16.6307 12.125 15.25C12.125 15.033 12.1528 14.8219 12.2051 14.6206L5.1874 10.7219C4.73237 11.2006 4.08889 11.5 3.375 11.5C1.99429 11.5 0.875 10.3807 0.875 9C0.875 7.61929 1.99429 6.5 3.375 6.5C4.08889 6.5 4.73237 6.79938 5.1874 7.27814L12.2051 3.37943C12.1528 3.17805 12.125 2.96704 12.125 2.75Z" fill="#37602e"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.125 2.75C12.125 1.36929 13.2443 0.25 14.625 0.25C16.0057 0.25 17.125 1.36929 17.125 2.75C17.125 4.13071 16.0057 5.25 14.625 5.25C13.9111 5.25 13.2676 4.95062 12.8126 4.47186L5.79494 8.37057C5.84721 8.57195 5.875 8.78296 5.875 9C5.875 9.21704 5.84721 9.42805 5.79494 9.62944L12.8126 13.5281C13.2676 13.0494 13.9111 12.75 14.625 12.75C16.0057 12.75 17.125 13.8693 17.125 15.25C17.125 16.6307 16.0057 17.75 14.625 17.75C13.2443 17.75 12.125 16.6307 12.125 15.25C12.125 15.033 12.1528 14.8219 12.2051 14.6206L5.1874 10.7219C4.73237 11.2006 4.08889 11.5 3.375 11.5C1.99429 11.5 0.875 10.3807 0.875 9C0.875 7.61929 1.99429 6.5 3.375 6.5C4.08889 6.5 4.73237 6.79938 5.1874 7.27814L12.2051 3.37943C12.1528 3.17805 12.125 2.96704 12.125 2.75Z" fill="#0d276a"/>
                             </svg>
                             <div class="copy-share-link text-lg font-semibold text-primary pr-8">
                                 Copy share link
@@ -7331,18 +7235,18 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
         <div id="marker-${index}" class="advanced-marker" style="transform: translate(0px, 40px);">
           <div
             class="cursor-pointer overflow-hidden"
-            style="background-color: white; border: 2px solid #37602e; border-radius: 5px;"
-            onmouseover="this.style.borderColor='#8a79b5'; document.querySelector('#marker-${index} svg path').setAttribute('fill', '#8a79b5');"
-            onmouseout="this.style.borderColor='#37602e'; document.querySelector('#marker-${index} svg path').setAttribute('fill', '#37602e');"
+            style="background-color: white; border: 2px solid #0d276a; border-radius: 5px;"
+            onmouseover="this.style.borderColor='#ea580c'; document.querySelector('#marker-${index} svg path').setAttribute('fill', '#ea580c');"
+            onmouseout="this.style.borderColor='#0d276a'; document.querySelector('#marker-${index} svg path').setAttribute('fill', '#0d276a');"
           >
             ${featuredPhoto ? (
             imgHtml
         ) : (
-            `<div style="background-color: #37602e;"></div>`
+            `<div style="background-color: #0d276a;"></div>`
         )}
           </div>
           <svg style="bottom: -10px; left: ${isMobile ? "12px" : "29.5px"}; position: absolute;" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#37602e"/>
+            <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#0d276a"/>
           </svg>
         </div>`
 
@@ -7434,7 +7338,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
       <div @click="showcasesModalOpen = true;" onclick="setActiveShowcase('${showcase.url_slug}')" id="${modalId}" class="info-modal cursor-pointer border border-white rounded-lg overflow-hidden bg-white">
         ${featuredPhoto ? (
             imgHtml
-        ) : `<div style="height: 40px; width: 100%; background-color: #37602e;"></div>`}
+        ) : `<div style="height: 40px; width: 100%; background-color: #0d276a;"></div>`}
         <div class="p-4">
           <div class="text-xs font-medium text-gray-900 flex w-full justify-between">
             <div class="flex items-center">
@@ -7904,10 +7808,10 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
       <div class="advanced-marker cursor-pointer overflow-hidden" style="background-color: white; border: 2px solid black; border-radius: 5px; transform: translate(0px, 40px);">
         ${featuredPhoto ? (
             `${imgHtml}`
-        ) : `<div style="background-color: #37602e;"></div>`}
+        ) : `<div style="background-color: #0d276a;"></div>`}
       </div>
       <svg style="bottom: -50px; left: 29.5px; position: absolute;" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#37602e"/>
+        <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#0d276a"/>
       </svg>
     </div>`
 
@@ -8152,7 +8056,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="53898"
+                                aria-controls="53996"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is our business <strong>hours?﻿</strong></p></span>
@@ -8173,7 +8077,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53898">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53996">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We are open every (262) 957-4136 weekday from<strong> 9-5﻿</strong></p>
                         </dd>
@@ -8185,7 +8089,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="53899"
+                                aria-controls="53997"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What types of landscaping services do you offer ?</span>
@@ -8206,7 +8110,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53899">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53997">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">some (262) 957-4136</p>
                         </dd>
@@ -8218,7 +8122,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="53900"
+                                aria-controls="53998"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
@@ -8239,7 +8143,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53900">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53998">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">(262) 957-4136 some</p>
                         </dd>
@@ -8251,7 +8155,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="53901"
+                                aria-controls="53999"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What type of landscaping services do you offer</p></span>
@@ -8272,7 +8176,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53901">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53999">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p>
                         </dd>
@@ -8284,7 +8188,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="53902"
+                                aria-controls="54000"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is your pricing</p></span>
@@ -8305,7 +8209,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="53902">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54000">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer competitive pricing and free estimates.</p>
                         </dd>
@@ -8441,12 +8345,12 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             <picture class="flex pr-6">
                                 <source
                                     type="image/webp"
-                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/530x530/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png 2x" 
+                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/294x294/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/588x588/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png 2x" 
                                     alt="Footer logo"
                                 >
                                 <img
                                     class="h-max-[80px] w-auto flex object-contain"
-                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/294x294/filters:strip_exif()/filters:no_upscale()/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                     width="80" 
                                     height="80"
                                     alt="Footer logo"
