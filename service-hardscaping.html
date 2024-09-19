@@ -18,13 +18,13 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Beantown Tutoring: NYC Landscaping Services Near Me Testing updates</title>
+    <title>Hardscaping | Service</title>
 
     
         <link rel="canonical" href="https://carolandscaping.com/service-hardscaping" />
     
 
-    <meta name="description" content="Find reliable and professional landscaping services near you in New York City. Enhance your outdoor space with Beantown Tutoring! Test!" />
+    <meta name="description" content="" />
     
     
     <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
@@ -71,19 +71,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f8097560-1901-4350-94df-622f71557ebe.png");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png");
       background-size: cover;
   }
   
@@ -95,13 +95,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png");
       background-size: cover;
   }
 </style>
@@ -160,7 +160,7 @@
 </head>
 
 <body
-    
+    class="xl:pt-44 pt-24 ease-in-out"
     x-data="{ 
         contactModalOpen: false,
         applyModalOpen: false,
@@ -175,7 +175,7 @@
         customNavTransparent:  true ,
         showMessage: false,
         navbarHeight: '',
-        calculateTopMargin: false,
+        calculateTopMargin: true,
     }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ paddingTop: navbarHeight }"
@@ -222,7 +222,7 @@
         observer.observe($refs.navbar);
         "
         @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-        :class="{ 'bg-transparent translate-y-0 h-16 xl:h-[84px]': !scrolledFromTop, 'bg-primary h-16 xl:h-[84px] shadow-magical': scrolledFromTop }"
+        :class="{ 'bg-transparent translate-y-0 h-16 xl:h-44': !scrolledFromTop, 'bg-primary h-16 xl:h-[84px] shadow-magical': scrolledFromTop }"
         class="relative transition-all duration-200 "
     >
         <div
@@ -241,7 +241,7 @@
                             <img
                                 src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                 class="object-contain max-h-full  max-w-xs sm:max-w-sm "
-                                :class="{ 'sm:h-full sm:max-h-full': scrolledFromTop, 'sm:h-auto sm:max-h-none': !scrolledFromTop,  }"
+                                :class="{ 'sm:h-full sm:max-h-full': scrolledFromTop, '': !scrolledFromTop,  }"
                                 alt="Brand Logo"
                                 
                                 loading="auto"
@@ -258,7 +258,7 @@
                 
                     <div
                         class="flex flex-row items-center xl:hidden"
-                        :class="{ 'text-white': true }"
+                        :class="{ 'text-gray-700': !scrolledFromTop, 'text-white': scrolledFromTop }"
                     >
                         <span class="uppercase">MENU</span>
                         <button @click="mobileOpen = !mobileOpen" class="p-2" aria-label="mobile menu button">
@@ -284,8 +284,8 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-center  border-secondary hover:border-gray-300    hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Home
                                         </a>
@@ -309,9 +309,9 @@
                                             aria-controls="navitem_2"
                                             @click="desktopOpen = !desktopOpen"
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                            :class="{  'text-white hover:text-gray-100': true  }"
+                                            :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
                                         >
-                                            <span class="block py-3.5 ">Services</span>
+                                            <span class="block py-3.5 border-b-2 border-secondary hover:border-gray-300">Services</span>
                                             <svg
                                                 class="w-5 h-5 ml-2 transition-transform duration-300"
                                                 :class="{ '-rotate-180': desktopOpen }"
@@ -579,7 +579,7 @@
                                             aria-controls="navitem_3"
                                             @click="desktopOpen = !desktopOpen"
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                            :class="{  'text-white hover:text-gray-100': true  }"
+                                            :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
                                         >
                                             <span class="block py-3.5 ">Galleries</span>
                                             <svg
@@ -773,7 +773,7 @@
                                         <a
                                             href=" showcases "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Showcases
                                         </a>
@@ -793,7 +793,7 @@
                                         <a
                                             href=" reviews "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Reviews
                                         </a>
@@ -813,7 +813,7 @@
                                         <a
                                             href=" our-team "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Our team
                                         </a>
@@ -833,7 +833,7 @@
                                         <a
                                             href=" jobs "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Jobs
                                         </a>
@@ -853,7 +853,7 @@
                                         <a
                                             href=" blog "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             Blog
                                         </a>
@@ -873,7 +873,7 @@
                                         <a
                                             href=" give-away "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'text-white': true }"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
                                         >
                                             GIVE AWAY
                                         </a>
@@ -987,7 +987,7 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-secondary block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
                                         >
                                             Home
                                         </a>
@@ -1750,6 +1750,17 @@
     data-heap-version="v3"
     class="relative bg-primary"
 >
+    
+        
+            <img
+                id="reviews-image"
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover"
+                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                alt="cover-photo"
+                loading="lazy"
+            />
+        
     
     <!-- This empty div is as a background overlay for the image -->
     <div style="--tw-bg-opacity: 75%;" class="absolute inset-0 w-full h-full object-cover bg-black"></div>
@@ -4223,6 +4234,27 @@
                 class="relative flex items-center justify-center w-full h-full bg-primary"
         >
             
+                
+                    <picture
+                        aria-hidden="true"
+                        class="absolute inset-0 object-cover"
+                    >
+                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg" type="image/webp">
+                        <img
+                            aria-hidden="true"
+                            class="object-cover w-full h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"
+                            alt="cover-photo"
+                            fetchpriority="high"
+                            loading="auto"
+                            decoding="sync"
+                        />
+                    </picture>
+                
+
+                
+                <div class="absolute inset-0 bg-black opacity-75"></div>
+            
 
             <button
                 onclick="handleClose('service-hardscaping')"
@@ -4803,6 +4835,16 @@
     class="relative overflow-hidden flex w-full bg-center bg-cover custom_text_color text-white"
     style="min-height: 550px;"
 >
+    
+        
+            <img
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover"
+                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"
+                alt="cover-photo"
+                loading="lazy"
+            />
+        
     
 
     <div 
