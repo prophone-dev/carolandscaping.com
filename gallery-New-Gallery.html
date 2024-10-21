@@ -89,7 +89,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png");
       background-size: cover;
   }
   
@@ -815,6 +815,26 @@
                                 >
                                     
                                         <a
+                                            href=" blog "
+                                            class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                        >
+                                            Blog
+                                        </a>
+                                    
+                                    
+
+                                </div>
+                            
+                                <div
+                                    class="relative"
+                                    x-trap.inert="desktopOpen"
+                                    x-data="{ desktopOpen: false }"
+                                    @keydown.escape.stop="desktopOpen = false"
+                                    @click.away="desktopOpen = false"
+                                >
+                                    
+                                        <a
                                             href=" give-away "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
                                             :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
@@ -1255,6 +1275,18 @@
                                     
                                 </div>
                             
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                        >
+                                            Blog
+                                        </a>
+                                    
+                                    
+                                </div>
+                            
                                 <div x-trap.inert="openMenu == 'navitem_8'">
                                     
                                         <a
@@ -1561,7 +1593,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 5,
+        amountOfImages: 6,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1609,9 +1641,9 @@
                             
                                 <div class="aspect-w-3 aspect-h-3">
                                     
-                                        <video class="lazy rounded shadow-md object-cover w-full h-full" preload="none" autoplay loop controls muted>
-                                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5" >
-                                        </video>
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png" alt="New Gallery for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async" />
+                                        
                                     
                                 </div>
                             
@@ -1632,9 +1664,9 @@
                             
                                 <div class="aspect-w-3 aspect-h-3">
                                     
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png" alt="New Gallery for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async" />
-                                        
+                                        <video class="lazy rounded shadow-md object-cover w-full h-full" preload="none" autoplay loop controls muted>
+                                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5" >
+                                        </video>
                                     
                                 </div>
                             
@@ -1656,6 +1688,29 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png" alt="New Gallery for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" lg:col-start-2 ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
                                             <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png" alt="New Gallery for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
@@ -1672,9 +1727,9 @@
             
         
             
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" lg:col-start-3 ">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div class="aspect-w-3 aspect-h-3">
                                     
@@ -1747,6 +1802,15 @@
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png" alt="New Gallery for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 2">
                                         
                                             <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                 <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5" >
@@ -1755,7 +1819,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 2">
+                                    <li class="flex flex-col" x-show="activeImage === 3">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png" alt="New Gallery for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
@@ -1764,7 +1828,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                    <li class="flex flex-col" x-show="activeImage === 4">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png" alt="New Gallery for ZZZ Beantown Tutoring &amp; Cheese Making LLC in Boston, MA" loading="lazy" decoding="async"/>
@@ -1773,7 +1837,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 4">
+                                    <li class="flex flex-col" x-show="activeImage === 5">
                                         
                                             <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                 <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5" >

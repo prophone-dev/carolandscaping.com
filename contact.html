@@ -89,7 +89,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png");
       background-size: cover;
   }
   
@@ -2089,6 +2089,26 @@
                                 >
                                     
                                         <a
+                                            href=" blog "
+                                            class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                            :class="{ 'text-white': true }"
+                                        >
+                                            Blog
+                                        </a>
+                                    
+                                    
+
+                                </div>
+                            
+                                <div
+                                    class="relative"
+                                    x-trap.inert="desktopOpen"
+                                    x-data="{ desktopOpen: false }"
+                                    @keydown.escape.stop="desktopOpen = false"
+                                    @click.away="desktopOpen = false"
+                                >
+                                    
+                                        <a
                                             href=" give-away "
                                             class="text-center  border-transparent   hover:border-gray-100 hover:text-gray-100  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
                                             :class="{ 'text-white': true }"
@@ -2524,6 +2544,18 @@
                                             class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
                                         >
                                             Jobs
+                                        </a>
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                        >
+                                            Blog
                                         </a>
                                     
                                     
