@@ -83,13 +83,13 @@
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
       background-size: cover;
   }
   
@@ -101,13 +101,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
       background-size: cover;
   }
 </style>
@@ -6753,13 +6753,16 @@
 >
     
         
-            <img
-                aria-hidden="true"
-                class="absolute inset-0 w-full h-full object-cover"
-                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg"
-                alt="cover-photo"
-                loading="lazy"
-            />
+            <video
+                class="lazy absolute inset-0 w-full h-full object-cover"
+                autoplay
+                loop
+                playsinline
+                muted
+            >
+                <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4">
+                Your browser does not support the video tag.
+            </video>
         
     
 
