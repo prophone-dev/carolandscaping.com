@@ -77,19 +77,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4");
       background-size: cover;
   }
   
@@ -101,13 +101,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4");
       background-size: cover;
   }
 </style>
@@ -1556,23 +1556,25 @@
                                     <section class="bg-primary">
     
         <div
-            class="flex screen-height-minus-navbar w-full bg-center bg-cover bg-scroll custom_text_color text-white"
-            style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/300e2b6e-d31e-45af-adc1-7a387841c773.png')"
-            data-heap-component-name="gallery-page"
-            data-heap-version="v3"
+            class="relative screen-height-minus-navbar flex w-full overflow-hidden items-center justify-center"
         >
+            <video
+                id="hero-video"
+                class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted
+            >
+                <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4" type = "" >
+            </video>
             <main
                 style="--tw-bg-opacity:75%;"
-                class="flex screen-height-minus-navbar justify-center m-auto w-full bg-black"
+                class="flex items-center screen-height-minus-navbar relative justify-center m-auto w-full bg-black"
             >
                 <div class="flex flex-col text-center justify-center items-center custom_text_color text-white">
-
+                    
                     <h1 class="text-3xl font-black tracking-tight sm:text-5xl md:text-5xl uppercase">
-                        <span class="block mt-2.5 custom_text_color text-white ">
-                            <span class="block"> New Gallery </span>
+                        <span class="block mt-2.5 custom_text_color text-white">
+                             New Gallery 
                         </span>
                     </h1>
-                    
                     <p class="mt-4 text-base font-light  sm:mt-6 sm:text-lg sm:max-w-xl md:mt-6 md:text-xl lg:mx-0 text-white">
                         See for yourself why our customers love us
                     </p>
@@ -2089,21 +2091,12 @@
         >
             
                 
-                    <picture
-                        aria-hidden="true"
-                        class="absolute inset-0 object-cover"
+                    <video
+                        class="lazy absolute inset-0 object-cover" autoplay loop playsinline muted
                     >
-                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png" type="image/webp">
-                        <img
-                            aria-hidden="true"
-                            class="object-cover w-full h-full"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
-                            alt="cover-photo"
-                            fetchpriority="high"
-                            loading="auto"
-                            decoding="sync"
-                        />
-                    </picture>
+                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 
 
                 
@@ -2700,7 +2693,7 @@
             <img
                 aria-hidden="true"
                 class="absolute inset-0 w-full h-full object-cover"
-                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
+                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg"
                 alt="cover-photo"
                 loading="lazy"
             />

@@ -77,19 +77,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4");
       background-size: cover;
   }
   
@@ -101,13 +101,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png");
+      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4");
       background-size: cover;
   }
 </style>
@@ -238,22 +238,14 @@
                 <div class="h-[60px] absolute bg-primary w-full z-20 bottom-0 shadow-innerCustom"></div>
 
                 
-                    <picture
-                        aria-hidden="true"
-                        class="top-0 left-0 w-full h-full object-cover"
+                    <video
+                        id="hero-video"
+                        class="-skew-y-[4deg] min-h-[690px] lg:min-h-[720px] xl:min-h-[720px] xl:h-[1060px]" autoplay loop playsinline muted
                     >
-                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png" type="image/webp">
-                        <img
-                            aria-hidden="true"
-                            class="-skew-y-[4deg] w-full min-h-[700px] xl:max-h-[1100px] object-cover "
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
-                            alt="cover-photo"
-                            fetchpriority="high"
-                            loading="lazy"
-                            decoding="sync"
-                        />
-                    </picture>
-                    
+                        <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                
                 <div class="absolute w-1/2  left-0 inset-y-0 bg-gradient-to-r from-transparent to-primary-darker opacity-60"></div>
                 <div class="absolute w-1/2 right-0 inset-y-0 bg-primary-darker opacity-60"></div>
             </div>
@@ -263,6 +255,19 @@
             <div class="relative px-12 py-16">
                 
                 <div id="mini-tile" class="relative w-full max-w-xl">
+                    
+                        
+                            <div class="absolute w-5/6 h-5/6 -bottom-8 -right-7 bg-secondary/80"></div>
+                            <div class="absolute w-5/6 h-5/6 -top-8 -left-7 bg-secondary/80"></div>
+                            
+                                <img class="relative mini-tile-media object-cover"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/800x800/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png"
+                                    alt="hero-photo mini tile"
+                                    fetchpriority="high"
+                                    loading="lazy"
+                                />
+                                
+                        
                     
                 </div>
             </div>
@@ -543,21 +548,22 @@
             <div class="absolute w-full max-h-[532px] -skew-y-[4deg] overflow-hidden">
                 
                     
-                            
-                            <picture class="w-full max-h-[532px] ">
+                        
+
+                            <picture class="w-full max-h-[532px]">
                                 <source
-                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/"
+                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png"
                                     alt="Caro Landscaping team in Boston, MA - people or person"
                                 >
                                 <img
                                     class="w-full max-h-[532px] grayscale object-cover skew-y-[4deg] scale-125"
-                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
+                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a0d78739-6337-4eac-981e-fbe032127213.png"
                                     alt="Caro Landscaping team in Boston, MA - people or person"
                                     loading="lazy"
                                 >
                             </picture>
                             
-                    
+                            
                 
                 <div class="absolute inset-0 bg-gradient-to-r from-transparent to-primary opacity-70"></div>
             </div>
@@ -2832,13 +2838,16 @@
 >
     
         
-            <img
-                aria-hidden="true"
-                class="absolute inset-0 w-full h-full object-cover"
-                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
-                alt="cover-photo"
-                loading="lazy"
-            />
+            <video
+                class="lazy absolute inset-0 w-full h-full object-cover"
+                autoplay
+                loop
+                playsinline
+                muted
+            >
+                <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4">
+                Your browser does not support the video tag.
+            </video>
         
     
 
@@ -2894,24 +2903,38 @@
                     <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 w-auto">
                         
                             
-                                <picture class="rounded-sm border border-primary w-40 h-28 ml-12 sm:w-52 sm:h-40 sm:ml-0 self-end">
-                                    <source
-                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
-                                        alt="Caro Landscaping team in Boston, MA - people or person"
-                                    >
-                                    <img
-                                        class="w-full h-full object-cover"
-                                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
-                                        alt="Caro Landscaping team in Boston, MA - people or person"
-                                        loading="lazy"
-                                    >
-                                </picture>
+                                <video class="lazy rounded-sm border border-primary w-40 h-28 ml-12 sm:w-52 sm:h-40 sm:ml-0 self-end object-cover" autoplay loop playsinline muted>
+                                    <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             
                         
 
                         
+                            
+                                <video class="lazy rounded-sm border border-primary w-52 h-40 sm:w-72 sm:h-52 object-cover" autoplay loop playsinline muted>
+                                    <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            
+                        
                     </div>
                     
+                    
+                        
+                            <picture class="rounded-sm border border-primary min-w-52 max-w-52 h-40 sm:min-w-72 sm:min-h-52 mt-10 sm:mt-0 sm:self-center">
+                                <source
+                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png"
+                                    alt="Caro Landscaping team in Boston, MA - people or person"
+                                >
+                                <img
+                                    class="w-full h-full object-cover"
+                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a0d78739-6337-4eac-981e-fbe032127213.png"
+                                    alt="Caro Landscaping team in Boston, MA - people or person"
+                                    loading="lazy"
+                                >
+                            </picture>
+                        
                     
 
                 </div>
@@ -3768,6 +3791,17 @@
     data-heap-version="v3"
     class="relative bg-primary"
 >
+    
+        
+            <img
+                id="reviews-image"
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover"
+                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png"
+                alt="cover-photo"
+                loading="lazy"
+            />
+        
     
     <!-- This empty div is as a background overlay for the image -->
     <div style="--tw-bg-opacity: 75%;" class="absolute inset-0 w-full h-full object-cover bg-black"></div>
@@ -8155,7 +8189,9 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
 
         <div class="hidden sm:flex sm:w-1/3 sm:h-full">
             
-                <img class="object-cover" style="width: auto; min-height: 500px;" alt="FAQ image" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/300e2b6e-d31e-45af-adc1-7a387841c773.png" />
+                <video class="object-cover" style="width: auto; min-height: 500px;" alt="FAQ video" autoplay loop muted playsinline>
+                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4">
+                </video>
             
         </div>
     </div>
@@ -8187,7 +8223,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
             <img
                 aria-hidden="true"
                 class="absolute inset-0 w-full h-full object-cover"
-                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
+                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/40f037a0-dbcf-4870-9706-1e84937a359c.jpeg"
                 alt="cover-photo"
                 loading="lazy"
             />
@@ -8874,21 +8910,12 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
         >
             
                 
-                    <picture
-                        aria-hidden="true"
-                        class="absolute inset-0 object-cover"
+                    <video
+                        class="lazy absolute inset-0 object-cover" autoplay loop playsinline muted
                     >
-                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png" type="image/webp">
-                        <img
-                            aria-hidden="true"
-                            class="object-cover w-full h-full"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/300e2b6e-d31e-45af-adc1-7a387841c773.png"
-                            alt="cover-photo"
-                            fetchpriority="high"
-                            loading="auto"
-                            decoding="sync"
-                        />
-                    </picture>
+                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 
 
                 
