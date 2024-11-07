@@ -77,19 +77,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png");
       background-size: cover;
   }
   
@@ -101,13 +101,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/a0d78739-6337-4eac-981e-fbe032127213.png");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg");
       background-size: cover;
   }
 </style>
@@ -203,12 +203,21 @@
 >
     
         
-            <video
-                    class="lazy absolute inset-0 object-cover" autoplay loop playsinline muted
+            <picture
+                    aria-hidden="true"
+                    class="absolute inset-0 object-cover"
             >
-                    <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4">
-                    Your browser does not support the video tag.
-            </video>
+                    <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg" type="image/webp">
+                    <img
+                            aria-hidden="true"
+                            class="object-cover w-full h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"
+                            alt="cover-photo"
+                            fetchpriority="high"
+                            loading="auto"
+                            decoding="sync"
+                    />
+            </picture>
         
 
         
