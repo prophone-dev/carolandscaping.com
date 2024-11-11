@@ -27,7 +27,7 @@
     <meta name="description" content="Find reliable and professional landscaping services near you in New York City. Enhance your outdoor space with Beantown Tutoring! Test!" />
     
     
-    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
+    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
@@ -95,7 +95,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/cfa3f62e-d5a1-4723-b1b5-9b9e71a26f49.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg");
       background-size: cover;
   }
   
@@ -243,13 +243,13 @@
                             <picture>
                                 <source
                                     type="image/webp" 
-                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/530x530/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png 2x"
+                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/392x392/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png 2x"
                                 >
                                 <img
                                     class="h-[80px] xl:h-[150px] object-contain logo  max-w-xs sm:max-w-sm "
-                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                     alt="Brand Logo"
-                                    width="265"
+                                    width="196"
                                     loading="auto"
                                     fetchpriority="high"
                                     decoding="auto"
@@ -270,7 +270,7 @@
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
                                 class="inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md   text-secondary border-secondary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
                                 >
-                                bucks2
+                                Text us
                             </button>
                         </div>
                 
@@ -304,11 +304,11 @@
                                 <picture>
                                     <source
                                         type="image/webp" 
-                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" loading="auto"
+                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" loading="auto"
                                     >
                                     <img
                                         class="h-[80px] object-contain"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                         alt="Brand Logo"
                                         width="80"
                                         height="80"
@@ -341,26 +341,25 @@
                         </div>
                             <div class="flex flex-col fixed bottom-0 w-full p-2 bg-primary">
                                 
-                                <div onclick="postCtaClick('call')" class="w-full sm:w-auto">
-                                    <a
-                                        target = "_blank"
-                                        href="tel:+19083889616"
-                                        class="cta_call_conversion relative block w-full px-5 py-3 whitespace-nowrap font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
-                                        >
-                                        bucks2
-                                    </a>
+                                <div onclick="postCtaClick('text')" class="w-full sm:w-auto">
+                                    <button
+                                    @click="contactModalOpen = true"
+                                    class="relative block w-full px-5 py-3 whitespace-nowrap font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
+                                    >
+                                        Text us
+                                    </button>
                                 </div>
                                 
 
                                 
-                                <div onclick="postCtaClick('call')" class="w-full">
+                                <div onclick="postCtaClick('link')" class="w-full">
                                     <a
-                                        target = "_blank"
-                                        href="tel:+19083889616"
-                                        :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
-                                        class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
+                                        target="_blank" rel="noopener noreferrer"
+                                        href="https://calendly.com/caro-landscaping/15min"
+                                    :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
+                                    class="inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
                                         >
-                                        +12629574136
+                                        Book Now
                                     </a>
                                 </div>
                                  

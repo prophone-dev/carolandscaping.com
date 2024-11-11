@@ -27,7 +27,7 @@
     <meta name="description" content="Find reliable and professional landscaping services near you in New York City. Enhance your outdoor space with Beantown Tutoring! Test!" />
     
     
-    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
+    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" type="image/x-icon">
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
@@ -95,7 +95,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/cfa3f62e-d5a1-4723-b1b5-9b9e71a26f49.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg");
       background-size: cover;
   }
   
@@ -303,25 +303,25 @@
                             
 
                             
+
+                            
                             <div class="relative w-full sm:w-auto">
                                 <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -top-2 -right-[10px]"></div>
                                 <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -bottom-2 -left-[10px]"></div>
                                 <div
-                                    onclick="postCtaClick('call')"
+                                    onclick="postCtaClick('text')"
                                     class="relative w-full  sm:w-auto cta_text_button text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
                                 >
-                                    <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="tel:+19083889616"
-                                        class="cta_call_conversion flex justify-center items-center w-full  py-4 px-6  overflow-hidden  uppercase text-base xl:text-lg font-bold"
+
+                                    <button
+                                        @click="contactModalOpen = true"
+                                        class="flex justify-center items-center w-full  py-4 px-6  overflow-hidden  uppercase text-base xl:text-lg font-bold"
+
                                     >
-                                        bucks2
-                                    </a>
+                                        Text us
+                                    </button>
                                 </div>
                             </div>
-                            
-
                             
 
 
@@ -329,21 +329,21 @@
 
 
                             
-                            
-                            
                                 <div
-                                    onclick="postCtaClick('call')"
+                                    onclick="postCtaClick('link')"
                                     class="w-full sm:w-auto cta_text_button rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300 border-2 border-primary hover:border-white box-border"
                                 >
                                     <a
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href="tel:+19083889616"
+                                        href="https://calendly.com/caro-landscaping/15min"
                                         class="flex justify-center w-full  px-6 py-4 overflow-hidden bg-white text-black text-base font-bold xl:text-lg  uppercase"
                                     >
-                                        +12629574136
+                                        Book Now
                                     </a>
                                 </div>
+                            
+                            
                             
                             
                     
@@ -736,7 +736,7 @@
                         >
                             
                                 <img
-                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                     class="object-cover max-h-full  max-w-xs sm:max-w-sm "
                                     alt="Brand Logo"
                                     
@@ -1462,7 +1462,7 @@
                     >
                         
                             <img
-                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                 class="object-contain max-h-full  max-w-xs sm:max-w-sm "
                                 :class="{ 'sm:h-full sm:max-h-full': scrolledFromTop, 'sm:h-auto sm:max-h-none': !scrolledFromTop,  }"
                                 alt="Brand Logo"
@@ -2055,34 +2055,32 @@
                             
                             
                             
-                            <div onclick="postCtaClick('call')" class="w-full sm:w-auto cta_text_button">
-                                <a
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href="tel:+19083889616"
-                                    class="cta_call_conversion flex justify-center w-full rounded-sm px-6 py-[13px] overflow-hidden bg-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 text-sm uppercase tracking-tight font-black text-tertiary"
+                            
+                            <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
+                                <button
+                                    @click="contactModalOpen = true"
+                                    class="flex justify-center w-full rounded-sm px-6 py-[13px] overflow-hidden bg-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 text-sm uppercase tracking-tight font-black text-tertiary"
                                 >
-                                    bucks2
-                                </a>
+                                    Text us
+                                </button>
                             </div>
                             
-                            
 
 
                             
                             
-                            
-                            
-                                <div onclick="postCtaClick('call')" class="w-full sm:w-auto cta_text_button">
+                                <div onclick="postCtaClick('link')" class="w-full sm:w-auto cta_text_button">
                                     <a
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href="tel:+19083889616"
-                                        class="cta_call_conversion flex justify-center rounded-sm px-6 py-[13px] overflow-hidden bg-tertiary text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border border-secondary hover:border-tertiary box-border text-sm uppercase tracking-tight font-black"
+                                        href="https://calendly.com/caro-landscaping/15min"
+                                        class="flex justify-center rounded-sm px-6 py-[13px] overflow-hidden bg-tertiary text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border border-secondary hover:border-tertiary box-border text-sm uppercase tracking-tight font-black"
                                     >
-                                        +12629574136
+                                        Book Now
                                     </a>
                                 </div>
+                            
+                            
                             
                             
                         </div>
@@ -2116,11 +2114,11 @@
                                 <picture>
                                     <source
                                         type="image/webp"
-                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" loading="auto"
+                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png" loading="auto"
                                     >
                                     <img
                                         class="h-[76px] w-auto object-contain"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                         alt="Brand Logo"
                                         width="76"
                                         height="76"
@@ -2486,25 +2484,24 @@
                         </div>
                         <div class="flex flex-col gap-4 w-full py-6 px-4 bg-primary flex-initial fixed bottom-0">
                             
-                                <div onclick="postCtaClick('call')">
-                                    <a
-                                        target = "_blank"
-                                        href="tel:+19083889616"
-                                        class="cta_call_conversion  block w-full px-8 py-[13px] whitespace-nowrap font-bold text-center rounded-sm bg-secondary text-white hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 text-lg leading-6 font-black tracking-tight uppercase"
-                                        >
-                                        bucks2
-                                    </a>
+                                <div onclick="postCtaClick('text')">
+                                    <button
+                                    @click="contactModalOpen = true"
+                                    class="block w-full px-8 py-[13px] whitespace-nowrap font-bold text-center rounded-sm bg-secondary text-white hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 text-lg leading-6 font-black tracking-tight uppercase"
+                                    >
+                                        Text us
+                                    </button>
                                 </div>
                             
 
                             
-                                <div onclick="postCtaClick('call')">
+                                <div onclick="postCtaClick('link')">
                                     <a
-                                        target = "_blank"
-                                        href="tel:+19083889616"
-                                        class="cta_call_conversion flex items-center justify-center w-full px-8 py-[13px] whitespace-nowrap transition bg-white text-secondary rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border border-secondary hover:border-tertiary box-border text-lg leading-6 font-black tracking-tight uppercase"
-                                        >
-                                        +12629574136
+                                        target="_blank" rel="noopener noreferrer"
+                                        href="https://calendly.com/caro-landscaping/15min"
+                                        class="flex items-center justify-center w-full px-8 py-[13px] whitespace-nowrap transition bg-white text-secondary rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border border-secondary hover:border-tertiary box-border text-lg leading-6 font-black tracking-tight uppercase"
+                                    >
+                                        Book Now
                                     </a>
                                 </div>
                             
@@ -2980,7 +2977,7 @@
     <div
         x-data="{
             activeImage: 0,
-            amountOfImages: 150,
+            amountOfImages: 148,
             next() {
                 if (this.activeImage < this.amountOfImages - 1)
                     this.activeImage ++;
@@ -3029,7 +3026,7 @@
                         <img
                             style="width: 300px; height: 185px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/cfa3f62e-d5a1-4723-b1b5-9b9e71a26f49.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3042,7 +3039,7 @@
                         <img
                             style="width: 300px; height: 185px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/30ef9b6c-6d1b-44de-bddf-2165db11cad9.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3055,7 +3052,7 @@
                         <img
                             style="width: 300px; height: 320px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3071,7 +3068,7 @@
                         <img
                             style="width: 300px; height: 185px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3084,7 +3081,7 @@
                         <img
                             style="width: 300px; height: 415px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3096,37 +3093,8 @@
                     @click="activeImage = 5; galleryModalOpen = true"
                 >
                     
-                        <img
-                        style="width: 300px; height: 415px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
-                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                        />
-                    
-                </div>
-                <div
-                    @click="activeImage = 6; galleryModalOpen = true"
-                    class="pt-8"
-                >
-                    
-                        <img
-                            style="width: 300px; height: 320px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
-                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                        />
-                    
-                </div>
-            </div>
-
-            <div class="flex flex-col">
-                <div 
-                    @click="activeImage = 7; galleryModalOpen = true"
-                    class="sm:pt-16"
-                >
-                    
                         <video
-                            style="width: 300px; height: 320px;"
+                            style="width: 300px; height: 415px;"
                             class="lazy rounded-sm object-cover w-full h-full"
                             preload="none" autoplay loop playsinline controls muted
                         >
@@ -3136,7 +3104,7 @@
                     
                 </div>
                 <div
-                    @click="activeImage = 8; galleryModalOpen = true"
+                    @click="activeImage = 6; galleryModalOpen = true"
                     class="pt-8"
                 >
                     
@@ -3148,6 +3116,35 @@
                             <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5">
                             Your browser does not support the video tag.
                         </video>
+                    
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div 
+                    @click="activeImage = 7; galleryModalOpen = true"
+                    class="sm:pt-16"
+                >
+                    
+                        <img
+                            style="width: 300px; height: 320px;"
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/b38219bd-c9e2-4b08-b268-0ff13c440686.png"
+                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                        />
+                    
+                </div>
+                <div
+                    @click="activeImage = 8; galleryModalOpen = true"
+                    class="pt-8"
+                >
+                    
+                        <img
+                            style="width: 300px; height: 320px;"
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/0a814e51-8c53-4db1-8e63-a2fb88faee9b.png"
+                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                        />
                     
                 </div>
             </div>
@@ -3162,7 +3159,7 @@
                         <img
                             style="width: 100%; height: 118px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/cfa3f62e-d5a1-4723-b1b5-9b9e71a26f49.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3175,7 +3172,7 @@
                         <img
                             style="width: 100%; height: 118px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/30ef9b6c-6d1b-44de-bddf-2165db11cad9.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3188,7 +3185,7 @@
                         <img
                             style="width: 100%; height: 208px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3201,7 +3198,7 @@
                         <img
                             style="width: 100%; height: 118px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3214,7 +3211,7 @@
                         <img
                             style="width: 100%; height: 208px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3226,34 +3223,8 @@
                     @click="activeImage = 5; galleryModalOpen = true"
                 >
                     
-                        <img
-                            style="width: 100%; height: 208px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
-                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                        />
-                    
-                </div>
-                <div
-                    @click="activeImage = 6; galleryModalOpen = true"
-                    class="pt-4"
-                >
-                    
-                        <img
-                            style="width: 100%; height: 172px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
-                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                        />
-                    
-                </div>
-                <div 
-                    @click="activeImage = 7; galleryModalOpen = true"
-                    class="pt-4"
-                >
-                    
                         <video
-                            style="width: 100%; height: 172px;"
+                            style="width: 100%; height: 208px;"
                             class="lazy rounded-sm object-cover w-full h-full"
                             preload="none" autoplay loop playsinline controls muted
                         >
@@ -3263,18 +3234,44 @@
                     
                 </div>
                 <div
-                    @click="activeImage = 8; galleryModalOpen = true"
+                    @click="activeImage = 6; galleryModalOpen = true"
                     class="pt-4"
                 >
                     
                         <video
-                            style="width: 100%; height: 118px;"
+                            style="width: 100%; height: 172px;"
                             class="lazy rounded-sm object-cover w-full h-full"
                             preload="none" autoplay loop playsinline controls muted
                         >
                             <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5">
                             Your browser does not support the video tag.
                         </video>
+                    
+                </div>
+                <div 
+                    @click="activeImage = 7; galleryModalOpen = true"
+                    class="pt-4"
+                >
+                    
+                        <img
+                            style="width: 100%; height: 172px;"
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/b38219bd-c9e2-4b08-b268-0ff13c440686.png"
+                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                        />
+                    
+                </div>
+                <div
+                    @click="activeImage = 8; galleryModalOpen = true"
+                    class="pt-4"
+                >
+                    
+                        <img
+                            style="width: 100%; height: 118px;"
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/0a814e51-8c53-4db1-8e63-a2fb88faee9b.png"
+                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                        />
                     
                 </div>
             </div>
@@ -3349,7 +3346,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cfa3f62e-d5a1-4723-b1b5-9b9e71a26f49.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3362,7 +3359,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/30ef9b6c-6d1b-44de-bddf-2165db11cad9.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3375,7 +3372,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3388,7 +3385,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3401,7 +3398,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3411,32 +3408,6 @@
                                     
                                         <li class="flex flex-col" x-show="activeImage === 5">
                                             
-                                                
-                                                    <img
-                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
-                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                                                    />
-                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
-                                                
-                                            
-                                        </li>
-                                    
-                                        <li class="flex flex-col" x-show="activeImage === 6">
-                                            
-                                                
-                                                    <img
-                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
-                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                                                    />
-                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
-                                                
-                                            
-                                        </li>
-                                    
-                                        <li class="flex flex-col" x-show="activeImage === 7">
-                                            
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5" >
                                                     Your browser does not support the video tag.
@@ -3445,7 +3416,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 8">
+                                        <li class="flex flex-col" x-show="activeImage === 6">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5" >
@@ -3455,7 +3426,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 9">
+                                        <li class="flex flex-col" x-show="activeImage === 7">
                                             
                                                 
                                                     <img
@@ -3468,7 +3439,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 10">
+                                        <li class="flex flex-col" x-show="activeImage === 8">
                                             
                                                 
                                                     <img
@@ -3481,7 +3452,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 11">
+                                        <li class="flex flex-col" x-show="activeImage === 9">
                                             
                                                 
                                                     <img
@@ -3494,7 +3465,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 12">
+                                        <li class="flex flex-col" x-show="activeImage === 10">
                                             
                                                 
                                                     <img
@@ -3507,7 +3478,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 13">
+                                        <li class="flex flex-col" x-show="activeImage === 11">
                                             
                                                 
                                                     <img
@@ -3520,7 +3491,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 14">
+                                        <li class="flex flex-col" x-show="activeImage === 12">
                                             
                                                 
                                                     <img
@@ -3533,12 +3504,38 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 15">
+                                        <li class="flex flex-col" x-show="activeImage === 13">
                                             
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
                                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"
+                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                    />
+                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 14">
+                                            
+                                                
+                                                    <img
+                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                    />
+                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 15">
+                                            
+                                                
+                                                    <img
+                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4165,102 +4162,6 @@
                                                                                 <span class="block font-medium uppercase text-gray-900">Kaia Anh Duong</span>
                                                                             
                                                                             <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">Caro&#x27;s Special Service</div>
-                                                                        </div>
-                                                                    </footer>
-                                                                </blockquote>
-                                                            </li>
-                                                        
-                                                    </ul>
-                                                
-                                                <ul class="space-y-8">
-                                                        
-                                                            <li
-                                                                style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
-                                                            >
-                                                                <div class="flex w-full justify-between">
-                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                    </div>
-                                                                    <span class="sr-only"> out of 5 stars</span>
-                                                                    <div>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
-                                                                    <div class="relative pt-2">
-                                                                        
-                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
-                                                                                This Cypress service is phenomenal!! Like legit, couldn&#x27;t have asked for a better cypress. Hands down, #1.
-                                                                            </span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
-                                                                        
-                                                                    </div>
-                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
-                                                                        <div>
-                                                                            
-                                                                                <span class="block font-medium uppercase text-gray-900">Samuel Charles</span>
-                                                                            
-                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">GO BUKS</div>
                                                                         </div>
                                                                     </footer>
                                                                 </blockquote>
@@ -7914,7 +7815,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54801"
+                                aria-controls="54816"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is our business <strong>hours?﻿</strong></p></span>
@@ -7935,7 +7836,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54801">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54816">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We are open every (262) 957-4136 weekday from<strong> 9-5﻿</strong></p>
                         </dd>
@@ -7947,7 +7848,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54802"
+                                aria-controls="54817"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What types of landscaping services do you offer ?</span>
@@ -7968,7 +7869,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54802">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54817">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">some (262) 957-4136</p>
                         </dd>
@@ -7980,7 +7881,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54803"
+                                aria-controls="54818"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
@@ -8001,7 +7902,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54803">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54818">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">(262) 957-4136 some</p>
                         </dd>
@@ -8013,7 +7914,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54804"
+                                aria-controls="54819"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What type of landscaping services do you offer</p></span>
@@ -8034,7 +7935,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54804">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54819">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p>
                         </dd>
@@ -8046,7 +7947,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54805"
+                                aria-controls="54820"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is your pricing</p></span>
@@ -8067,7 +7968,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54805">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54820">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer competitive pricing and free estimates.</p>
                         </dd>
@@ -8203,12 +8104,12 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             <picture class="flex pr-6">
                                 <source
                                     type="image/webp"
-                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/530x530/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png 2x" 
+                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/392x392/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png 2x" 
                                     alt="Footer logo"
                                 >
                                 <img
                                     class="h-max-[80px] w-auto flex object-contain"
-                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/196x196/filters:strip_exif()/filters:no_upscale()/media/49d6c683-7521-487f-ade1-2a6353e8f8ed.png"
                                     width="80" 
                                     height="80"
                                     alt="Footer logo"
