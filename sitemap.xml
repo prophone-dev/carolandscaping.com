@@ -46,13 +46,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-mowing</loc>
-        <lastmod>2024-11-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-Driveway-Design---Build</loc>
         <lastmod>2024-11-11</lastmod>
         <changefreq>weekly</changefreq>
@@ -123,6 +116,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-november-gallery</loc>
+        <lastmod>2024-11-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/gallery-new-october</loc>
         <lastmod>2024-11-11</lastmod>
         <changefreq>weekly</changefreq>
@@ -180,13 +180,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-instagram</loc>
-        <lastmod>2024-11-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-internal-gallery-test</loc>
         <lastmod>2024-11-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
