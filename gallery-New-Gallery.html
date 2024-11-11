@@ -95,7 +95,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/8e75251e-4ac5-4fc8-ac35-d3a60d4be35b.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/f9b1228b-afbf-4ec6-b9b7-6b176cc5238e.png");
       background-size: cover;
   }
   
@@ -1585,7 +1585,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 7,
+        amountOfImages: 8,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1610,7 +1610,7 @@
                         
                             <div>                                    
                                 
-                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"  alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f9b1228b-afbf-4ec6-b9b7-6b176cc5238e.png"  alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                 
                             </div>
 
@@ -1630,7 +1630,7 @@
                         
                             <div>                                    
                                 
-                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png"  alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"  alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                 
                             </div>
 
@@ -1647,6 +1647,26 @@
                 <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
                     <button @click="activeImage = 2; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            <div>                                    
+                                
+                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png"  alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
+                <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
+                    <button @click="activeImage = 3; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                         
                             <div>                                    
                                 
@@ -1669,7 +1689,7 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                 <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 3; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                    <button @click="activeImage = 4; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                         
                             <div>                                    
                                 
@@ -1689,7 +1709,7 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                 <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 4; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                    <button @click="activeImage = 5; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                         
                             <div>                                    
                                 
@@ -1709,7 +1729,7 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                 <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 5; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                    <button @click="activeImage = 6; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                         
                             <div>                                    
                                 
@@ -1732,7 +1752,7 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                 <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 6; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                    <button @click="activeImage = 7; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                         
                             <div>                                    
                                 
@@ -1797,7 +1817,7 @@
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f9b1228b-afbf-4ec6-b9b7-6b176cc5238e.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
@@ -1806,13 +1826,22 @@
                                 <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                         
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     
                                 </li>
                                 
                                 <li class="flex flex-col" x-show="activeImage === 2">
+                                    
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7b874ced-0ccf-486b-94b2-3b5bb18319a6.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 3">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5">
@@ -1822,7 +1851,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 3">
+                                <li class="flex flex-col" x-show="activeImage === 4">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
@@ -1831,7 +1860,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 4">
+                                <li class="flex flex-col" x-show="activeImage === 5">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
@@ -1840,7 +1869,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 5">
+                                <li class="flex flex-col" x-show="activeImage === 6">
                                     
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5">
@@ -1850,7 +1879,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 6">
+                                <li class="flex flex-col" x-show="activeImage === 7">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/b38219bd-c9e2-4b08-b268-0ff13c440686.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
