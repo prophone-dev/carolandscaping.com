@@ -7920,7 +7920,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54844"
+                                aria-controls="54864"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is our business <strong>hours?﻿</strong></p></span>
@@ -7941,7 +7941,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54844">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54864">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We are open every (262) 957-4136 weekday from<strong> 9-5﻿</strong></p>
                         </dd>
@@ -7953,7 +7953,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54845"
+                                aria-controls="54865"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What types of landscaping services do you offer ?</span>
@@ -7974,7 +7974,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54845">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54865">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">some (262) 957-4136</p>
                         </dd>
@@ -7986,7 +7986,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54846"
+                                aria-controls="54866"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
@@ -8007,7 +8007,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54846">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54866">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">(262) 957-4136 some</p>
                         </dd>
@@ -8019,7 +8019,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54847"
+                                aria-controls="54867"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What type of landscaping services do you offer</p></span>
@@ -8040,7 +8040,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54847">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54867">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p>
                         </dd>
@@ -8052,7 +8052,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54848"
+                                aria-controls="54868"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is your pricing</p></span>
@@ -8073,7 +8073,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54848">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54868">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer competitive pricing and free estimates.</p>
                         </dd>
@@ -8982,6 +8982,103 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                         
                         
                         
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
+                                <label class="font-medium text-base text-white">Photo upload</label>
+                                <div class='bg-white p-3 mt-1 rounded-sm border border-gray-500'>
+                                    <div
+                                            x-data="{
+                                                imageUrl: '',
+                                                fileTooLarge: false,
+                                                fileChosen(event) {
+                                                    if (this.isProperlySized(event)) {
+                                                        this.fileToDataUrl(event, (src) => (this.imageUrl = src));
+                                                        this.fileTooLarge = false;
+                                                    }
+                                                    else
+                                                        this.fileTooLarge = true;
+                                                },
+                                                fileToDataUrl(event, callback) {
+                                                    if (!event.target.files.length) return;
+                                                    let file = event.target.files[0],
+                                                        reader = new FileReader();
+                                                    reader.readAsDataURL(file);
+                                                    reader.onload = (e) => callback(e.target.result);
+                                                },
+                                                isProperlySized(event) {
+                                                    const files = event.currentTarget.files;
+                                                    for (const file in files) {
+                                                        const filesize = ((files[file].size/1024)/1024).toFixed(4);
+                                                        if (filesize > 10)
+                                                            return false;
+                                                    }
+                                                    return true;
+                                                },
+                                            }"
+                                    >
+                                        <div x-show="imageUrl !== ''" x-collapse>
+                                            <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
+                                                <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
+                                                <button
+                                                        @click="imageUrl = ''; $refs.fileInput.value = '';"
+                                                        type="button"
+                                                        class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-500 rounded-sm shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                >
+                                                    Change
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <label
+                                            for="file-upload"
+                                            class="relative font-medium rounded-sm cursor-pointer text-primary"
+                                        >
+                                            <div x-show="imageUrl === ''" x-collapse>
+                                                <div
+                                                    x-on:dragenter.prevent.stop
+                                                    x-on:dragleave.prevent.stop
+                                                    class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-sm"
+                                                >
+                                                    <div class="space-y-1 text-center">
+                                                        <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                            <path
+                                                                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                        <div class="flex justify-center text-sm text-gray-600">
+                                                            <span class="text-primary">Upload a photo</span>
+                                                            <input
+                                                                x-ref="fileInput"
+                                                                id="file-upload"
+                                                                name="file-upload"
+                                                                type="file"
+                                                                class="sr-only"
+                                                                @change="fileChosen"
+                                                            />
+                                                        </div>
+                                                        <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
+                                            The selected file is too large. Please reduce the size or choose another file.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         
                         
                         
