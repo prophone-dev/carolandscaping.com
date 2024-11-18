@@ -1789,11 +1789,21 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-november-gallery "
+                                                                href=" gallery-november-gallery-test "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                november gallery
+                                                                november gallery test
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-moving-showcases "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                moving showcases
                                                             </a>
                                                             
                                                         
@@ -1829,6 +1839,8 @@
                                                         
                                                     </div>
                                                     <div class="flex-1">
+                                                        
+                                                            
                                                         
                                                             
                                                         
@@ -2292,11 +2304,19 @@
                                                     </a>
                                                 
                                                     <a
-                                                        href="gallery-november-gallery"
+                                                        href="gallery-november-gallery-test"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
                                                     >
-                                                        november gallery
+                                                        november gallery test
+                                                    </a>
+                                                
+                                                    <a
+                                                        href="gallery-moving-showcases"
+                                                        role="menuitem"
+                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                    >
+                                                        moving showcases
                                                     </a>
                                                 
                                                     <a
@@ -2930,7 +2950,7 @@
     <div
         x-data="{
             activeImage: 0,
-            amountOfImages: 151,
+            amountOfImages: 150,
             next() {
                 if (this.activeImage < this.amountOfImages - 1)
                     this.activeImage ++;
@@ -3062,7 +3082,7 @@
                         <img
                             style="width: 300px; height: 320px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3075,12 +3095,14 @@
                     class="sm:pt-16"
                 >
                     
-                        <img
+                        <video
                             style="width: 300px; height: 320px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
-                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                        />
+                            class="lazy rounded-sm object-cover w-full h-full"
+                            preload="none" autoplay loop playsinline controls muted
+                        >
+                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5">
+                            Your browser does not support the video tag.
+                        </video>
                     
                 </div>
                 <div
@@ -3093,7 +3115,7 @@
                             class="lazy rounded-sm object-cover w-full h-full"
                             preload="none" autoplay loop playsinline controls muted
                         >
-                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5">
+                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5">
                             Your browser does not support the video tag.
                         </video>
                     
@@ -3190,7 +3212,7 @@
                         <img
                             style="width: 100%; height: 172px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3200,12 +3222,14 @@
                     class="pt-4"
                 >
                     
-                        <img
+                        <video
                             style="width: 100%; height: 172px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
-                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                        />
+                            class="lazy rounded-sm object-cover w-full h-full"
+                            preload="none" autoplay loop playsinline controls muted
+                        >
+                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5">
+                            Your browser does not support the video tag.
+                        </video>
                     
                 </div>
                 <div
@@ -3218,7 +3242,7 @@
                             class="lazy rounded-sm object-cover w-full h-full"
                             preload="none" autoplay loop playsinline controls muted
                         >
-                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5">
+                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5">
                             Your browser does not support the video tag.
                         </video>
                     
@@ -3373,7 +3397,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7bb3e963-332f-406a-8330-2b4dde7ef8fd.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -3383,19 +3407,6 @@
                                     
                                         <li class="flex flex-col" x-show="activeImage === 7">
                                             
-                                                
-                                                    <img
-                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/244e6fd6-145e-430b-b8fa-6f2f34804c76.png"
-                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                                                    />
-                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
-                                                
-                                            
-                                        </li>
-                                    
-                                        <li class="flex flex-col" x-show="activeImage === 8">
-                                            
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5" >
                                                     Your browser does not support the video tag.
@@ -3404,7 +3415,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 9">
+                                        <li class="flex flex-col" x-show="activeImage === 8">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/67623659-cc9b-4473-862a-2af902394fd9.mp4#t=0.5" >
@@ -3414,7 +3425,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 10">
+                                        <li class="flex flex-col" x-show="activeImage === 9">
                                             
                                                 
                                                     <img
@@ -3427,7 +3438,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 11">
+                                        <li class="flex flex-col" x-show="activeImage === 10">
                                             
                                                 
                                                     <img
@@ -3440,7 +3451,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 12">
+                                        <li class="flex flex-col" x-show="activeImage === 11">
                                             
                                                 
                                                     <img
@@ -3453,7 +3464,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 13">
+                                        <li class="flex flex-col" x-show="activeImage === 12">
                                             
                                                 
                                                     <img
@@ -3466,7 +3477,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 14">
+                                        <li class="flex flex-col" x-show="activeImage === 13">
                                             
                                                 
                                                     <img
@@ -3479,12 +3490,25 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 15">
+                                        <li class="flex flex-col" x-show="activeImage === 14">
                                             
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
                                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png"
+                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                    />
+                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 15">
+                                            
+                                                
+                                                    <img
+                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -7860,7 +7884,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54890"
+                                aria-controls="54900"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is our business <strong>hours?﻿</strong></p></span>
@@ -7881,7 +7905,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54890">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54900">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We are open every (262) 957-4136 weekday from<strong> 9-5﻿</strong></p>
                         </dd>
@@ -7893,7 +7917,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54891"
+                                aria-controls="54901"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What types of landscaping services do you offer ?</span>
@@ -7914,7 +7938,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54891">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54901">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">some (262) 957-4136</p>
                         </dd>
@@ -7926,7 +7950,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54892"
+                                aria-controls="54902"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
@@ -7947,7 +7971,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54892">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54902">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">(262) 957-4136 some</p>
                         </dd>
@@ -7959,7 +7983,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54893"
+                                aria-controls="54903"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What type of landscaping services do you offer</p></span>
@@ -7980,7 +8004,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54893">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54903">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p>
                         </dd>
@@ -7992,7 +8016,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="54894"
+                                aria-controls="54904"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is your pricing</p></span>
@@ -8013,7 +8037,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54894">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="54904">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer competitive pricing and free estimates.</p>
                         </dd>
