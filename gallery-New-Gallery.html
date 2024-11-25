@@ -95,7 +95,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/a1c1b587-1ee8-4965-821a-e655e8cf3ff9.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/f476973f-0714-43b4-8661-c73860f2d9ec.png");
       background-size: cover;
   }
   
@@ -1561,7 +1561,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 15,
+        amountOfImages: 16,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1849,6 +1849,26 @@
                         
                             <div>                                    
                                 
+                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f476973f-0714-43b4-8661-c73860f2d9ec.png"  alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            </div>
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </button>
+                </div>
+            </li>
+        
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
+                <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
+                    <button @click="activeImage = 14; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            <div>                                    
+                                
                                     <video class="border border-gray-900 rounded-sm shadow-md object-cover w-full h-full lazy" preload="none" autoplay loop playsinline controls muted>
                                         <source  src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5" >
                                         Your browser does not support the video tag.
@@ -1868,7 +1888,7 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                 <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 14; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                    <button @click="activeImage = 15; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                         
                             <div>                                    
                                 
@@ -2050,6 +2070,15 @@
                                 
                                 <li class="flex flex-col" x-show="activeImage === 13">
                                     
+                                        
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f476973f-0714-43b4-8661-c73860f2d9ec.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    
+                                </li>
+                                
+                                <li class="flex flex-col" x-show="activeImage === 14">
+                                    
                                     <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                         <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c2fdcd2a-8cfb-4200-8ef3-6e4bb407cc01.mp4#t=0.5">
                                         Your browser does not support the video tag.
@@ -2058,7 +2087,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 14">
+                                <li class="flex flex-col" x-show="activeImage === 15">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/b38219bd-c9e2-4b08-b268-0ff13c440686.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
