@@ -95,7 +95,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/6c87c014-61eb-4028-bf6d-729520c9d266.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/36e9396e-7ca3-4959-80c3-b50bad750ecb.png");
       background-size: cover;
   }
   
@@ -881,7 +881,7 @@
                 x-transition:leave-end="opacity-0 scale-95"
                 class="fixed inset-0 z-50 transition transform xl:hidden"
             >
-                <div class="w-full h-full bg-tertiary ring-1 ring-black ring-opacity-5">
+                <div class="w-full h-full bg-tertiary ring-1 ring-black ring-opacity-5 flex flex-col">
                     <div class="flex bg-tertiary items-center justify-between flex-initial">
                         
                             <a
@@ -919,7 +919,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="mobile-navbar-content-height flex flex-col">
+                    <div class="mobile-navbar-content-height flex flex-col mt-auto">
                         <div x-data="{ openMenu: '' }" class="overflow-y-auto pt-2 pb-3 space-y-1 flex-auto">
                             
                                 <div x-trap.inert="openMenu == 'navitem_1'">
@@ -1252,7 +1252,7 @@
                             
                             
                         </div>
-                        <div class="flex flex-col gap-4 w-full py-6 px-4 bg-primary flex-initial fixed bottom-0">
+                        <div class="flex flex-col gap-4 w-full py-6 px-4 bg-primary flex-initial">
                             
                                 <div onclick="postCtaClick('call')">
                                     <a
