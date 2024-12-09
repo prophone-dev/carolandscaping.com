@@ -25,13 +25,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Professional-Fertilization</loc>
-        <lastmod>2024-12-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-pressure-washing</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -40,6 +33,20 @@
 
     <url>
         <loc>https://carolandscaping.com/service-Cookin-Some-Chilli</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Professional-Fertilization</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -74,13 +81,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
-        <lastmod>2024-12-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/jobs</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -109,7 +109,14 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-December-gallery</loc>
+        <loc>https://carolandscaping.com/gallery-December-gallery-test</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-internal-gallery-november</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -117,13 +124,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-work</loc>
-        <lastmod>2024-12-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-november-gallery-test</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -144,7 +144,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-internal-gallery-november</loc>
+        <loc>https://carolandscaping.com/gallery-new-mood</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
