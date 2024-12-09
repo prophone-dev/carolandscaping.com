@@ -32,13 +32,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
-        <lastmod>2024-12-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-Professional-Fertilization</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -54,6 +47,13 @@
 
     <url>
         <loc>https://carolandscaping.com/service-pressure-washing</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -109,13 +109,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-December-gallery-test</loc>
-        <lastmod>2024-12-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-internal-gallery-november</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -137,14 +130,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-november</loc>
-        <lastmod>2024-12-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-new-mood</loc>
+        <loc>https://carolandscaping.com/gallery-December-gallery-test</loc>
         <lastmod>2024-12-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
