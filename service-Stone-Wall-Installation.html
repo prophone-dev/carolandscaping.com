@@ -95,7 +95,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c4eb6c02-df6c-4766-a0fc-3ac794e01866.quicktime");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/98fb6a23-1809-455a-951b-f8064bfe6481.mp4");
       background-size: cover;
   }
   
@@ -1493,13 +1493,14 @@
             </div>
             <div class="w-full sm:flex sm:justify-center font-black uppercase px-4">
                 
-                    <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
-                        <button 
-                            @click="contactModalOpen = true"
+                    <div onclick="postCtaClick('link')" class="w-full sm:w-auto mr-4 cta_text_button">
+                        <a
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://calendly.com/caro-landscaping/15min"
                             class="flex justify-center w-full rounded-sm px-5 py-3 sm:px-10 sm:py-4 overflow-hidden bg-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase"
                         >
-                            <span>Get a Free Quote</span>
-                        </button>
+                            <span>Book Now</span>
+                        </a>
                     </div>
                 
 
@@ -4914,17 +4915,19 @@
                 
                 <div class="flex flex-col sm:flex-row flex-grow w-full justify-center items-center gap-3 sm:gap-4 text-base sm:text-lg uppercase tracking-tight font-black pt-12">
                     
-                    
-                    
-                    
-                    <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
-                        <button
-                            @click="contactModalOpen = true"
+                    <div onclick="postCtaClick('link')" class="w-full sm:w-auto cta_text_button">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            href="https://calendly.com/caro-landscaping/15min"
                             class="flex justify-center w-full rounded-sm p-3 sm:px-10 sm:py-4 overflow-hidden bg-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase whitespace-nowrap"
                         >
-                            Get a Free Quote
-                        </button>
+                            Book Now
+                        </a>
                     </div>
+                    
+                    
+                    
                     
 
                     

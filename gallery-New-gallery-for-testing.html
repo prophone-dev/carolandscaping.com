@@ -95,7 +95,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c4eb6c02-df6c-4766-a0fc-3ac794e01866.quicktime");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/98fb6a23-1809-455a-951b-f8064bfe6481.mp4");
       background-size: cover;
   }
   
@@ -1489,17 +1489,19 @@
 
                     <div class="flex flex-col w-full sm:flex-row pt-8 justify-center items-center gap-3 sm:gap-4 text-base sm:text-lg uppercase tracking-tight font-black">
                         
-                        
-                        
-                        
-                        <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
-                            <button
-                                @click="contactModalOpen = true"
+                        <div onclick="postCtaClick('link')" class="w-full sm:w-auto cta_text_button">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer" 
+                                href="https://calendly.com/caro-landscaping/15min"
                                 class="flex justify-center w-full rounded-sm p-3 sm:px-10 sm:py-4 overflow-hidden bg-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase whitespace-nowrap"
                             >
-                                Get a Free Quote
-                            </button>
+                                Book Now
+                            </a>
                         </div>
+                        
+                        
+                        
                         
     
                         
@@ -1557,7 +1559,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 6,
+        amountOfImages: 4,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1582,10 +1584,7 @@
                         
                             <div>                                    
                                 
-                                    <video class="border border-gray-900 rounded-sm shadow-md object-cover w-full h-full lazy" preload="none" autoplay loop playsinline controls muted>
-                                        <source  src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a7a0582f-7a63-4040-9f2f-5443bf86144c.quicktime#t=0.5" >
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7d8c7fe9-f2d8-43d2-8a0c-d4b6c0affde3.jpeg"  alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                 
                             </div>
 
@@ -1605,10 +1604,7 @@
                         
                             <div>                                    
                                 
-                                    <video class="border border-gray-900 rounded-sm shadow-md object-cover w-full h-full lazy" preload="none" autoplay loop playsinline controls muted>
-                                        <source  src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5c231efe-6c7c-4fab-b1e5-485a507c5a95.quicktime#t=0.5" >
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e8237e83-70d4-4fd5-9c0e-2f48643a7889.jpeg"  alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                 
                             </div>
 
@@ -1628,46 +1624,6 @@
                         
                             <div>                                    
                                 
-                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7d8c7fe9-f2d8-43d2-8a0c-d4b6c0affde3.jpeg"  alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        
-                    </button>
-                </div>
-            </li>
-        
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
-                <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 3; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                        
-                            <div>                                    
-                                
-                                    <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e8237e83-70d4-4fd5-9c0e-2f48643a7889.jpeg"  alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        
-                    </button>
-                </div>
-            </li>
-        
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
-                <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 4; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                        
-                            <div>                                    
-                                
                                     <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e20bb2ca-a0c3-4341-b277-629241d7aefd.png"  alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                 
                             </div>
@@ -1684,7 +1640,7 @@
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
                 <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 5; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                    <button @click="activeImage = 3; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                         
                             <div>                                    
                                 
@@ -1748,26 +1704,6 @@
                                 
                                 <li class="flex flex-col" x-show="activeImage === 0">
                                     
-                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
-                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a7a0582f-7a63-4040-9f2f-5443bf86144c.quicktime#t=0.5">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    
-                                </li>
-                                
-                                <li class="flex flex-col" x-show="activeImage === 1">
-                                    
-                                    <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
-                                        <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5c231efe-6c7c-4fab-b1e5-485a507c5a95.quicktime#t=0.5">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    
-                                </li>
-                                
-                                <li class="flex flex-col" x-show="activeImage === 2">
-                                    
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/7d8c7fe9-f2d8-43d2-8a0c-d4b6c0affde3.jpeg" alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -1775,7 +1711,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 3">
+                                <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e8237e83-70d4-4fd5-9c0e-2f48643a7889.jpeg" alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
@@ -1784,7 +1720,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 4">
+                                <li class="flex flex-col" x-show="activeImage === 2">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e20bb2ca-a0c3-4341-b277-629241d7aefd.png" alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
@@ -1793,7 +1729,7 @@
                                     
                                 </li>
                                 
-                                <li class="flex flex-col" x-show="activeImage === 5">
+                                <li class="flex flex-col" x-show="activeImage === 3">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/66039256-7d0e-4644-b158-bd1932a102de.jpeg" alt="New gallery for testing for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
@@ -2720,17 +2656,19 @@
                 
                 <div class="flex flex-col sm:flex-row flex-grow w-full justify-center items-center gap-3 sm:gap-4 text-base sm:text-lg uppercase tracking-tight font-black pt-12">
                     
-                    
-                    
-                    
-                    <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
-                        <button
-                            @click="contactModalOpen = true"
+                    <div onclick="postCtaClick('link')" class="w-full sm:w-auto cta_text_button">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            href="https://calendly.com/caro-landscaping/15min"
                             class="flex justify-center w-full rounded-sm p-3 sm:px-10 sm:py-4 overflow-hidden bg-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase whitespace-nowrap"
                         >
-                            Get a Free Quote
-                        </button>
+                            Book Now
+                        </a>
                     </div>
+                    
+                    
+                    
                     
 
                     
