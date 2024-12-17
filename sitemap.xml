@@ -32,28 +32,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-Professional-Fertilization</loc>
-        <lastmod>2024-12-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-patio-design-construction</loc>
-        <lastmod>2024-12-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-pressure-washing</loc>
-        <lastmod>2024-12-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
         <lastmod>2024-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -75,6 +54,20 @@
 
     <url>
         <loc>https://carolandscaping.com/service-shrub-trimming</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
+        <lastmod>2024-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Professional-Fertilization</loc>
         <lastmod>2024-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
