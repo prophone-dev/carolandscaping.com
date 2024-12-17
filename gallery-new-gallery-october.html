@@ -550,6 +550,16 @@
                                                         
                                                             
                                                             <a
+                                                                href=" gallery-new-gallery-december "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                new gallery december
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
                                                                 href=" gallery-internal-gallery-november "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
@@ -599,16 +609,6 @@
                                                             
                                                         
                                                             
-                                                            <a
-                                                                href=" gallery-New-Gallery "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                New Gallery
-                                                            </a>
-                                                            
-                                                        
-                                                            
                                                         
                                                             
                                                         
@@ -631,6 +631,16 @@
                                                         
                                                             
                                                         
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-New-Gallery "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                New Gallery
+                                                            </a>
                                                             
                                                         
                                                             
@@ -660,16 +670,6 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 instagram
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-New-gallery-for-testing "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                New gallery for testing
                                                             </a>
                                                             
                                                         
@@ -1069,6 +1069,14 @@
                                             <div class="flex flex-col">
                                                 
                                                     <a
+                                                        href="gallery-new-gallery-december"
+                                                        role="menuitem"
+                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                    >
+                                                        new gallery december
+                                                    </a>
+                                                
+                                                    <a
                                                         href="gallery-internal-gallery-november"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
@@ -1138,14 +1146,6 @@
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
                                                     >
                                                         instagram
-                                                    </a>
-                                                
-                                                    <a
-                                                        href="gallery-New-gallery-for-testing"
-                                                        role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
-                                                    >
-                                                        New gallery for testing
                                                     </a>
                                                 
                                                     <a
@@ -1456,6 +1456,8 @@
                                 
                             
                                 
+                            
+                                
                                     <section class="bg-primary">
     
         <div
@@ -1537,12 +1539,14 @@
                     
                 
                     
+                
+                    
                         
 
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 2,
+        amountOfImages: 1,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1568,29 +1572,7 @@
                             <div>
                                 
                                     
-                                        <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy" style="aspect-ratio: 1/1;"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"  alt="new gallery october for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                                    
-                                
-                            </div>
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        
-                    </button>
-                </div>
-            </li>
-        
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" style="break-inside: avoid;" class="mb-1 md:mb-6">
-                <div x-show="!shown" class="animate-pulse flex space-x-4 w-150"></div>
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20 opacity-0" x-transition:enter-end="transform translate-y-0 opacity-100">
-                    <button @click="activeImage = 1; galleryModalOpen = true" class="photo-tile block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                        
-                            <div>
-                                
-                                    
-                                        <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy" style="aspect-ratio: 2/3;"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"  alt="new gallery october for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                        <img class="border border-gray-900 rounded-sm w-full h-full object-cover shadow-lg hover:scale-110 lazy" style="aspect-ratio: 1/1;"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"  alt="new gallery october for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
                                     
                                 
                             </div>
@@ -1650,15 +1632,6 @@
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
                                 
                                 <li class="flex flex-col" x-show="activeImage === 0">
-                                    
-                                        
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg" alt="new gallery october for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    
-                                </li>
-                                
-                                <li class="flex flex-col" x-show="activeImage === 1">
                                     
                                         
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy" data-src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png" alt="new gallery october for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
@@ -1782,8 +1755,6 @@
         }
     }
 </style>
-                    
-                
                     
                 
                     
@@ -2480,8 +2451,6 @@
 </template>
 
                                     
-                                
-                            
                                 
                             
                                 
