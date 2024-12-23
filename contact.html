@@ -185,7 +185,7 @@
         scrolledFromTop: false,
         contactChatOpen: false,
         active: 0,
-        showAnnouncement: false,
+        showAnnouncement: true,
         customNavTransparent:  true ,
         showMessage: false,
         navbarHeight: '',
@@ -592,7 +592,7 @@
 
                     <div class="" >
                         <p class="text-lg font-medium text-gray-600">
-                        Test Incredible quality landscaping near me services, look no further than Caro Landscaping. We offer a wide range of services for both residential and commercial properties, and we're dedicated to providing our clients with the best possible cheese. Contact us today for a free consultation! Test111
+                        Test Incredible quality landscaping near me services, look no further than Caro Landscaping. We offer a wide range of services for both residential and commercial properties, and we're dedicated to providing our clients with the best possible cheese. Contact us today for a free consultation! Test
                         </p>
                     </div>
 
@@ -1444,6 +1444,33 @@
 >
 
     <div
+        x-ref="announcement"
+        x-show="showAnnouncement"
+        x-transition:leave="transition-all duration-700"
+        x-transition:leave-start="max-h-12"
+        x-transition:leave-end="max-h-0"
+        class="overflow-hidden"
+    >
+        <div style="background-color:#a5559a" class="flex p-4 space-x-3 bg-green-50 text-sm font-medium text-green-500 align-center">
+            
+                <span style="color:#1310bc;" class="flex items-center">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
+  <path d="M12 7.5a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" />
+  <path fill-rule="evenodd" d="M1.5 4.875C1.5 3.839 2.34 3 3.375 3h17.25c1.035 0 1.875.84 1.875 1.875v9.75c0 1.036-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 011.5 14.625v-9.75zM8.25 9.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM18.75 9a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V9.75a.75.75 0 00-.75-.75h-.008zM4.5 9.75A.75.75 0 015.25 9h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H5.25a.75.75 0 01-.75-.75V9.75z" clip-rule="evenodd" />
+  <path d="M2.25 18a.75.75 0 000 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 00-.75-.75H2.25z" />
+</svg>
+                </span>
+            
+            <p class="text-green-800 grow" style="color:#604c06;">"caro" also means "expensive" in Spanish - <a href="https://heroicons.com/" target="_blank" class="underline">choose your icon</a></p>
+            <button @click="showAnnouncement = false" style="color:#1310bc;">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20" class="justify-self-end cursor-pointer hover:scale-125">
+  <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+</svg>
+            </button>
+        </div>
+    </div>
+
+    <div
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-ref="nav_menu"
         x-init="
@@ -1775,16 +1802,6 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-new-gallery-december "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                new gallery december
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
                                                                 href=" gallery-internal-gallery-november "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
@@ -1805,6 +1822,16 @@
                                                         
                                                             
                                                             <a
+                                                                href=" gallery-moving-showcases "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                moving showcases
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
                                                                 href=" gallery-December-gallery-test "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
@@ -1815,11 +1842,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-moving-showcases "
+                                                                href=" gallery-New-gallery-for-testing "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                moving showcases
+                                                                New gallery for testing
                                                             </a>
                                                             
                                                         
@@ -1831,8 +1858,6 @@
                                                             >
                                                                 new gallery october
                                                             </a>
-                                                            
-                                                        
                                                             
                                                         
                                                             
@@ -1897,16 +1922,6 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 instagram
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-december "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                december
                                                             </a>
                                                             
                                                         
@@ -2306,14 +2321,6 @@
                                             <div class="flex flex-col">
                                                 
                                                     <a
-                                                        href="gallery-new-gallery-december"
-                                                        role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
-                                                    >
-                                                        new gallery december
-                                                    </a>
-                                                
-                                                    <a
                                                         href="gallery-internal-gallery-november"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
@@ -2330,6 +2337,14 @@
                                                     </a>
                                                 
                                                     <a
+                                                        href="gallery-moving-showcases"
+                                                        role="menuitem"
+                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                    >
+                                                        moving showcases
+                                                    </a>
+                                                
+                                                    <a
                                                         href="gallery-December-gallery-test"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
@@ -2338,11 +2353,11 @@
                                                     </a>
                                                 
                                                     <a
-                                                        href="gallery-moving-showcases"
+                                                        href="gallery-New-gallery-for-testing"
                                                         role="menuitem"
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
                                                     >
-                                                        moving showcases
+                                                        New gallery for testing
                                                     </a>
                                                 
                                                     <a
@@ -2383,14 +2398,6 @@
                                                         class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
                                                     >
                                                         instagram
-                                                    </a>
-                                                
-                                                    <a
-                                                        href="gallery-december"
-                                                        role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
-                                                    >
-                                                        december
                                                     </a>
                                                 
                                                     <a
@@ -2993,7 +3000,7 @@
     <div
         x-data="{
             activeImage: 0,
-            amountOfImages: 205,
+            amountOfImages: 206,
             next() {
                 if (this.activeImage < this.amountOfImages - 1)
                     this.activeImage ++;
@@ -4195,7 +4202,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3b210798-0fb4-4ace-9413-b4e1229aa00a.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cc3c3590-70f9-463a-ace2-8209fcfc517a.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4208,7 +4215,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3b210798-0fb4-4ace-9413-b4e1229aa00a.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4221,7 +4228,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/eca16c55-d4e6-495a-980a-cf792f5f01db.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4234,7 +4241,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/db0236cc-5a68-4fea-bc46-7eb9bd7ef2e5.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4247,7 +4254,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4260,7 +4267,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4273,7 +4280,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a0d78739-6337-4eac-981e-fbe032127213.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4286,7 +4293,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4299,7 +4306,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/02845fba-b30f-4758-8493-d78b77690a89.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4312,7 +4319,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/16673996-f09b-47ce-b837-4647f1fcbc26.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/02845fba-b30f-4758-8493-d78b77690a89.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4325,7 +4332,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/38fa1cc4-f22e-416a-8649-6e15891bf148.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/16673996-f09b-47ce-b837-4647f1fcbc26.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4338,7 +4345,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/8ce1f240-3338-43b3-8a46-0c952f7f42eb.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/38fa1cc4-f22e-416a-8649-6e15891bf148.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4351,7 +4358,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f456f2c4-bb1b-4e44-b857-bae5f99f819d.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/8ce1f240-3338-43b3-8a46-0c952f7f42eb.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4364,7 +4371,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/fad09439-663e-43b2-9906-bb123997c4e7.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f456f2c4-bb1b-4e44-b857-bae5f99f819d.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4377,7 +4384,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/640d6d53-dada-44ad-b7da-82bdd40168a8.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/fad09439-663e-43b2-9906-bb123997c4e7.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4390,7 +4397,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/b85fdc14-50b9-4e04-8cb4-d129f289fa4b.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/640d6d53-dada-44ad-b7da-82bdd40168a8.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4403,7 +4410,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d50cd817-dc35-4fd3-b4f3-25382419172b.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/b85fdc14-50b9-4e04-8cb4-d129f289fa4b.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4416,7 +4423,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ee8c583b-2ac5-449b-bff4-ed0c43e9a281.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d50cd817-dc35-4fd3-b4f3-25382419172b.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4429,7 +4436,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e22de999-7e8c-49f7-9994-13274733d620.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ee8c583b-2ac5-449b-bff4-ed0c43e9a281.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4442,7 +4449,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/0a473d2f-4cd4-4282-9ca7-c81ace08cd48.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e22de999-7e8c-49f7-9994-13274733d620.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4455,7 +4462,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/0a473d2f-4cd4-4282-9ca7-c81ace08cd48.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4468,7 +4475,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/19f6d7d3-8143-449d-bf8c-77334faed071.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/831ab27e-cb27-447b-b8b8-15aa2e8ad755.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4481,7 +4488,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/19f6d7d3-8143-449d-bf8c-77334faed071.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4494,7 +4501,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/21c7ceb2-e141-4dd2-be0d-19758f7d02b5.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4507,7 +4514,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/00d2a6b1-3b93-404c-a31a-6fa28d8afb50.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4520,7 +4527,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/65e0317d-5df5-4d5a-b7ac-3c1b69d6036a.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4533,7 +4540,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f20426b8-5fb2-4750-aec5-97db5f952580.jpeg"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4546,7 +4553,7 @@
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/185a4de6-e11b-4dcf-927e-4963997c43e1.png"
                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                     />
                                                     <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -4556,6 +4563,19 @@
                                     
                                         <li class="flex flex-col" x-show="activeImage === 94">
                                             
+                                                
+                                                    <img
+                                                        class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f47bdeb7-7d1d-490d-9aa7-09d8de28ef71.png"
+                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                    />
+                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                
+                                            
+                                        </li>
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 95">
+                                            
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/68e2e365-418c-4134-ae5b-99dda0f6d68d.mp4#t=0.5" >
                                                     Your browser does not support the video tag.
@@ -4564,7 +4584,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 95">
+                                        <li class="flex flex-col" x-show="activeImage === 96">
                                             
                                                 
                                                     <div class="m-auto">
@@ -4578,7 +4598,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 96">
+                                        <li class="flex flex-col" x-show="activeImage === 97">
                                             
                                                 
                                                     <div class="m-auto">
@@ -4592,7 +4612,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 97">
+                                        <li class="flex flex-col" x-show="activeImage === 98">
                                             
                                                 
                                                     <img
@@ -4605,7 +4625,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 98">
+                                        <li class="flex flex-col" x-show="activeImage === 99">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e3447bf6-2187-4156-9753-53b203a460ec.mp4#t=0.5" >
@@ -4615,7 +4635,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 99">
+                                        <li class="flex flex-col" x-show="activeImage === 100">
                                             
                                                 
                                                     <img
@@ -4628,7 +4648,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 100">
+                                        <li class="flex flex-col" x-show="activeImage === 101">
                                             
                                                 
                                                     <img
@@ -4641,7 +4661,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 101">
+                                        <li class="flex flex-col" x-show="activeImage === 102">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/57b62039-d225-4b3e-b4b6-701ac77dc824.mp4#t=0.5" >
@@ -4651,7 +4671,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 102">
+                                        <li class="flex flex-col" x-show="activeImage === 103">
                                             
                                                 
                                                     <img
@@ -4664,7 +4684,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 103">
+                                        <li class="flex flex-col" x-show="activeImage === 104">
                                             
                                                 
                                                     <img
@@ -4677,7 +4697,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 104">
+                                        <li class="flex flex-col" x-show="activeImage === 105">
                                             
                                                 
                                                     <img
@@ -4690,7 +4710,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 105">
+                                        <li class="flex flex-col" x-show="activeImage === 106">
                                             
                                                 
                                                     <img
@@ -4703,7 +4723,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 106">
+                                        <li class="flex flex-col" x-show="activeImage === 107">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ff99b5b0-d0dc-4ed2-a235-6208495e6998.mp4#t=0.5" >
@@ -4713,7 +4733,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 107">
+                                        <li class="flex flex-col" x-show="activeImage === 108">
                                             
                                                 
                                                     <img
@@ -4726,7 +4746,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 108">
+                                        <li class="flex flex-col" x-show="activeImage === 109">
                                             
                                                 
                                                     <img
@@ -4739,7 +4759,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 109">
+                                        <li class="flex flex-col" x-show="activeImage === 110">
                                             
                                                 
                                                     <img
@@ -4752,7 +4772,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 110">
+                                        <li class="flex flex-col" x-show="activeImage === 111">
                                             
                                                 
                                                     <img
@@ -4765,7 +4785,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 111">
+                                        <li class="flex flex-col" x-show="activeImage === 112">
                                             
                                                 
                                                     <img
@@ -4778,7 +4798,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 112">
+                                        <li class="flex flex-col" x-show="activeImage === 113">
                                             
                                                 
                                                     <img
@@ -4791,7 +4811,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 113">
+                                        <li class="flex flex-col" x-show="activeImage === 114">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/fafd4c66-b291-48bd-873a-d1cf8f7b74cc.mp4#t=0.5" >
@@ -4801,7 +4821,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 114">
+                                        <li class="flex flex-col" x-show="activeImage === 115">
                                             
                                                 
                                                     <img
@@ -4814,7 +4834,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 115">
+                                        <li class="flex flex-col" x-show="activeImage === 116">
                                             
                                                 
                                                     <img
@@ -4827,7 +4847,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 116">
+                                        <li class="flex flex-col" x-show="activeImage === 117">
                                             
                                                 
                                                     <img
@@ -4840,7 +4860,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 117">
+                                        <li class="flex flex-col" x-show="activeImage === 118">
                                             
                                                 
                                                     <img
@@ -4853,7 +4873,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 118">
+                                        <li class="flex flex-col" x-show="activeImage === 119">
                                             
                                                 
                                                     <img
@@ -4866,7 +4886,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 119">
+                                        <li class="flex flex-col" x-show="activeImage === 120">
                                             
                                                 
                                                     <img
@@ -4879,7 +4899,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 120">
+                                        <li class="flex flex-col" x-show="activeImage === 121">
                                             
                                                 
                                                     <img
@@ -4892,7 +4912,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 121">
+                                        <li class="flex flex-col" x-show="activeImage === 122">
                                             
                                                 
                                                     <img
@@ -4905,7 +4925,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 122">
+                                        <li class="flex flex-col" x-show="activeImage === 123">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/4346bbfa-05ab-448b-ac42-043e4f17c42e.mp4#t=0.5" >
@@ -4915,7 +4935,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 123">
+                                        <li class="flex flex-col" x-show="activeImage === 124">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/032f3d7a-b06e-4df1-adca-061105617ba6.mp4#t=0.5" >
@@ -4925,7 +4945,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 124">
+                                        <li class="flex flex-col" x-show="activeImage === 125">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d4f0fd20-51fd-46f7-ade8-1159c4f29194.mp4#t=0.5" >
@@ -4935,7 +4955,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 125">
+                                        <li class="flex flex-col" x-show="activeImage === 126">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/fa222428-b1b5-4f66-acda-ee19050d08e6.mp4#t=0.5" >
@@ -4945,7 +4965,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 126">
+                                        <li class="flex flex-col" x-show="activeImage === 127">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a36309ff-2516-4a92-80bd-f4258405c951.mp4#t=0.5" >
@@ -4955,7 +4975,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 127">
+                                        <li class="flex flex-col" x-show="activeImage === 128">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e642a67f-fc1d-4731-9f39-638fa8a56898.mp4#t=0.5" >
@@ -4965,7 +4985,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 128">
+                                        <li class="flex flex-col" x-show="activeImage === 129">
                                             
                                                 
                                                     <img
@@ -4978,7 +4998,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 129">
+                                        <li class="flex flex-col" x-show="activeImage === 130">
                                             
                                                 
                                                     <img
@@ -4991,7 +5011,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 130">
+                                        <li class="flex flex-col" x-show="activeImage === 131">
                                             
                                                 
                                                     <img
@@ -5004,7 +5024,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 131">
+                                        <li class="flex flex-col" x-show="activeImage === 132">
                                             
                                                 
                                                     <img
@@ -5017,7 +5037,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 132">
+                                        <li class="flex flex-col" x-show="activeImage === 133">
                                             
                                                 
                                                     <img
@@ -5030,7 +5050,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 133">
+                                        <li class="flex flex-col" x-show="activeImage === 134">
                                             
                                                 
                                                     <img
@@ -5043,7 +5063,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 134">
+                                        <li class="flex flex-col" x-show="activeImage === 135">
                                             
                                                 
                                                     <img
@@ -5056,7 +5076,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 135">
+                                        <li class="flex flex-col" x-show="activeImage === 136">
                                             
                                                 
                                                     <img
@@ -5069,7 +5089,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 136">
+                                        <li class="flex flex-col" x-show="activeImage === 137">
                                             
                                                 
                                                     <img
@@ -5082,7 +5102,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 137">
+                                        <li class="flex flex-col" x-show="activeImage === 138">
                                             
                                                 
                                                     <img
@@ -5095,7 +5115,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 138">
+                                        <li class="flex flex-col" x-show="activeImage === 139">
                                             
                                                 
                                                     <img
@@ -5108,7 +5128,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 139">
+                                        <li class="flex flex-col" x-show="activeImage === 140">
                                             
                                                 
                                                     <img
@@ -5121,7 +5141,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 140">
+                                        <li class="flex flex-col" x-show="activeImage === 141">
                                             
                                                 
                                                     <img
@@ -5134,7 +5154,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 141">
+                                        <li class="flex flex-col" x-show="activeImage === 142">
                                             
                                                 
                                                     <img
@@ -5147,7 +5167,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 142">
+                                        <li class="flex flex-col" x-show="activeImage === 143">
                                             
                                                 
                                                     <img
@@ -5160,7 +5180,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 143">
+                                        <li class="flex flex-col" x-show="activeImage === 144">
                                             
                                                 
                                                     <img
@@ -5173,7 +5193,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 144">
+                                        <li class="flex flex-col" x-show="activeImage === 145">
                                             
                                                 
                                                     <img
@@ -5186,7 +5206,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 145">
+                                        <li class="flex flex-col" x-show="activeImage === 146">
                                             
                                                 
                                                     <img
@@ -5199,7 +5219,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 146">
+                                        <li class="flex flex-col" x-show="activeImage === 147">
                                             
                                                 
                                                     <img
@@ -5212,7 +5232,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 147">
+                                        <li class="flex flex-col" x-show="activeImage === 148">
                                             
                                                 
                                                     <img
@@ -5225,7 +5245,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 148">
+                                        <li class="flex flex-col" x-show="activeImage === 149">
                                             
                                                 
                                                     <img
@@ -5238,7 +5258,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 149">
+                                        <li class="flex flex-col" x-show="activeImage === 150">
                                             
                                                 
                                                     <img
@@ -5251,7 +5271,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 150">
+                                        <li class="flex flex-col" x-show="activeImage === 151">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d6cfb207-f466-4bf6-a794-8b5e01df135d.mp4#t=0.5" >
@@ -5261,7 +5281,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 151">
+                                        <li class="flex flex-col" x-show="activeImage === 152">
                                             
                                                 
                                                     <img
@@ -5274,7 +5294,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 152">
+                                        <li class="flex flex-col" x-show="activeImage === 153">
                                             
                                                 
                                                     <img
@@ -5287,7 +5307,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 153">
+                                        <li class="flex flex-col" x-show="activeImage === 154">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a6fb34a1-1bc6-4dc9-b6d6-63fafb307e0d.mp4#t=0.5" >
@@ -5297,7 +5317,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 154">
+                                        <li class="flex flex-col" x-show="activeImage === 155">
                                             
                                                 
                                                     <img
@@ -5310,7 +5330,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 155">
+                                        <li class="flex flex-col" x-show="activeImage === 156">
                                             
                                                 
                                                     <img
@@ -5323,7 +5343,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 156">
+                                        <li class="flex flex-col" x-show="activeImage === 157">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3ba2e15e-3024-4d20-85d2-192f0c52e192.mp4#t=0.5" >
@@ -5333,7 +5353,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 157">
+                                        <li class="flex flex-col" x-show="activeImage === 158">
                                             
                                                 
                                                     <img
@@ -5346,7 +5366,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 158">
+                                        <li class="flex flex-col" x-show="activeImage === 159">
                                             
                                                 
                                                     <img
@@ -5359,7 +5379,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 159">
+                                        <li class="flex flex-col" x-show="activeImage === 160">
                                             
                                                 
                                                     <img
@@ -5372,7 +5392,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 160">
+                                        <li class="flex flex-col" x-show="activeImage === 161">
                                             
                                                 
                                                     <img
@@ -5385,7 +5405,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 161">
+                                        <li class="flex flex-col" x-show="activeImage === 162">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/cb36fabb-83c6-430c-807f-0551cd878563.mp4#t=0.5" >
@@ -5395,7 +5415,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 162">
+                                        <li class="flex flex-col" x-show="activeImage === 163">
                                             
                                                 
                                                     <img
@@ -5408,7 +5428,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 163">
+                                        <li class="flex flex-col" x-show="activeImage === 164">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a4bd8da4-f79e-41b8-a1df-17a9a13bbe9e.mp4#t=0.5" >
@@ -5418,7 +5438,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 164">
+                                        <li class="flex flex-col" x-show="activeImage === 165">
                                             
                                                 
                                                     <img
@@ -5431,7 +5451,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 165">
+                                        <li class="flex flex-col" x-show="activeImage === 166">
                                             
                                                 
                                                     <img
@@ -5444,7 +5464,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 166">
+                                        <li class="flex flex-col" x-show="activeImage === 167">
                                             
                                                 
                                                     <img
@@ -5457,7 +5477,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 167">
+                                        <li class="flex flex-col" x-show="activeImage === 168">
                                             
                                                 
                                                     <img
@@ -5470,7 +5490,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 168">
+                                        <li class="flex flex-col" x-show="activeImage === 169">
                                             
                                                 
                                                     <img
@@ -5483,7 +5503,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 169">
+                                        <li class="flex flex-col" x-show="activeImage === 170">
                                             
                                                 
                                                     <img
@@ -5496,7 +5516,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 170">
+                                        <li class="flex flex-col" x-show="activeImage === 171">
                                             
                                                 
                                                     <img
@@ -5509,7 +5529,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 171">
+                                        <li class="flex flex-col" x-show="activeImage === 172">
                                             
                                                 
                                                     <img
@@ -5522,7 +5542,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 172">
+                                        <li class="flex flex-col" x-show="activeImage === 173">
                                             
                                                 
                                                     <img
@@ -5535,7 +5555,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 173">
+                                        <li class="flex flex-col" x-show="activeImage === 174">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/98c6e571-7e3f-4c6e-b1bd-ac42c7627ba7.mp4#t=0.5" >
@@ -5545,7 +5565,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 174">
+                                        <li class="flex flex-col" x-show="activeImage === 175">
                                             
                                                 
                                                     <img
@@ -5558,7 +5578,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 175">
+                                        <li class="flex flex-col" x-show="activeImage === 176">
                                             
                                                 
                                                     <img
@@ -5571,7 +5591,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 176">
+                                        <li class="flex flex-col" x-show="activeImage === 177">
                                             
                                                 
                                                     <img
@@ -5584,7 +5604,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 177">
+                                        <li class="flex flex-col" x-show="activeImage === 178">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/786c7fc1-723a-4eee-a281-060336c3a581.mp4#t=0.5" >
@@ -5594,7 +5614,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 178">
+                                        <li class="flex flex-col" x-show="activeImage === 179">
                                             
                                                 
                                                     <img
@@ -5607,7 +5627,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 179">
+                                        <li class="flex flex-col" x-show="activeImage === 180">
                                             
                                                 
                                                     <img
@@ -5620,7 +5640,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 180">
+                                        <li class="flex flex-col" x-show="activeImage === 181">
                                             
                                                 
                                                     <img
@@ -5633,7 +5653,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 181">
+                                        <li class="flex flex-col" x-show="activeImage === 182">
                                             
                                                 
                                                     <img
@@ -5646,7 +5666,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 182">
+                                        <li class="flex flex-col" x-show="activeImage === 183">
                                             
                                                 
                                                     <img
@@ -5659,7 +5679,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 183">
+                                        <li class="flex flex-col" x-show="activeImage === 184">
                                             
                                                 
                                                     <img
@@ -5672,7 +5692,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 184">
+                                        <li class="flex flex-col" x-show="activeImage === 185">
                                             
                                                 
                                                     <img
@@ -5685,7 +5705,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 185">
+                                        <li class="flex flex-col" x-show="activeImage === 186">
                                             
                                                 
                                                     <img
@@ -5698,7 +5718,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 186">
+                                        <li class="flex flex-col" x-show="activeImage === 187">
                                             
                                                 
                                                     <img
@@ -5711,7 +5731,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 187">
+                                        <li class="flex flex-col" x-show="activeImage === 188">
                                             
                                                 
                                                     <img
@@ -5724,7 +5744,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 188">
+                                        <li class="flex flex-col" x-show="activeImage === 189">
                                             
                                                 
                                                     <img
@@ -5737,7 +5757,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 189">
+                                        <li class="flex flex-col" x-show="activeImage === 190">
                                             
                                                 
                                                     <img
@@ -5750,7 +5770,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 190">
+                                        <li class="flex flex-col" x-show="activeImage === 191">
                                             
                                                 
                                                     <img
@@ -5763,7 +5783,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 191">
+                                        <li class="flex flex-col" x-show="activeImage === 192">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9f0dfda6-8c0d-4294-8eab-db7a7f92df3c.mp4#t=0.5" >
@@ -5773,7 +5793,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 192">
+                                        <li class="flex flex-col" x-show="activeImage === 193">
                                             
                                                 
                                                     <img
@@ -5786,7 +5806,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 193">
+                                        <li class="flex flex-col" x-show="activeImage === 194">
                                             
                                                 
                                                     <img
@@ -5799,7 +5819,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 194">
+                                        <li class="flex flex-col" x-show="activeImage === 195">
                                             
                                                 
                                                     <img
@@ -5812,7 +5832,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 195">
+                                        <li class="flex flex-col" x-show="activeImage === 196">
                                             
                                                 
                                                     <img
@@ -5825,7 +5845,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 196">
+                                        <li class="flex flex-col" x-show="activeImage === 197">
                                             
                                                 
                                                     <img
@@ -5838,7 +5858,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 197">
+                                        <li class="flex flex-col" x-show="activeImage === 198">
                                             
                                                 
                                                     <img
@@ -5851,7 +5871,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 198">
+                                        <li class="flex flex-col" x-show="activeImage === 199">
                                             
                                                 
                                                     <img
@@ -5864,7 +5884,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 199">
+                                        <li class="flex flex-col" x-show="activeImage === 200">
                                             
                                                 <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
                                                     <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e1f9c772-7db4-4c9d-ae6f-a4a2b1d19057.mp4#t=0.5" >
@@ -5874,7 +5894,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 200">
+                                        <li class="flex flex-col" x-show="activeImage === 201">
                                             
                                                 
                                                     <img
@@ -5887,7 +5907,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 201">
+                                        <li class="flex flex-col" x-show="activeImage === 202">
                                             
                                                 
                                                     <img
@@ -5900,7 +5920,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 202">
+                                        <li class="flex flex-col" x-show="activeImage === 203">
                                             
                                                 
                                                     <img
@@ -5913,7 +5933,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 203">
+                                        <li class="flex flex-col" x-show="activeImage === 204">
                                             
                                                 
                                                     <img
@@ -5926,7 +5946,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 204">
+                                        <li class="flex flex-col" x-show="activeImage === 205">
                                             
                                                 
                                                     <img
@@ -6354,102 +6374,6 @@
                                                                     <div class="relative pt-2">
                                                                         
                                                                             <span class="review-body relative text-lg font-medium line-clamp-7">
-                                                                                God... Where do I even start? Dylan and the entire team are just so athletic, spry, and downright witty. They saved my cat from a tree and unlocked my chakras! Insane customer service with a warm personality to match. ProPhone Cypress is my new religion and I look forward to donating my savings to Dylan&#x27;s just cause - to the end brothers!
-                                                                            </span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
-                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
-                                                                        
-                                                                    </div>
-                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
-                                                                        <div>
-                                                                            
-                                                                                <span class="block font-medium uppercase text-gray-900">Richard Benjamin</span>
-                                                                            
-                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase"></div>
-                                                                        </div>
-                                                                    </footer>
-                                                                </blockquote>
-                                                            </li>
-                                                        
-                                                    </ul>
-                                                
-                                                <ul class="space-y-8">
-                                                        
-                                                            <li
-                                                                style="min-height: 460px;"
-                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
-                                                            >
-                                                                <div class="flex w-full justify-between">
-                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
-                                                                                <g clip-path="url(#clip0_5535_27332)">
-                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
-                                                                                </g>
-                                                                                <defs>
-                                                                                <clipPath id="clip0_5535_27332">
-                                                                                <rect width="40" height="40" fill="white"/>
-                                                                                </clipPath>
-                                                                                </defs>
-                                                                            </svg>
-                                                                        
-                                                                    </div>
-                                                                    <span class="sr-only"> out of 5 stars</span>
-                                                                    <div>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
-                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
-                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
-                                                                    <div class="relative pt-2">
-                                                                        
-                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
                                                                                 Amazing service! Very responsive!
                                                                             </span>
                                                                             <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
@@ -6750,6 +6674,102 @@
                                                                                 <span class="block font-medium uppercase text-gray-900">Rachel Godsey</span>
                                                                             
                                                                             <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase">GO BUKS</div>
+                                                                        </div>
+                                                                    </footer>
+                                                                </blockquote>
+                                                            </li>
+                                                        
+                                                    </ul>
+                                                
+                                                <ul class="space-y-8">
+                                                        
+                                                            <li
+                                                                style="min-height: 460px;"
+                                                                class=" hidden  px-6 py-8 border border-primary shadow bg-gray-50 "
+                                                            >
+                                                                <div class="flex w-full justify-between">
+                                                                    <div aria-hidden="true" class="space-x-1.5 flex">
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 40 40" fill="none">
+                                                                                <g clip-path="url(#clip0_5535_27332)">
+                                                                                <path d="M19.0489 2.92705C19.3483 2.00574 20.6517 2.00574 20.9511 2.92705L24.2658 13.1287C24.3996 13.5407 24.7836 13.8197 25.2168 13.8197H35.9434C36.9122 13.8197 37.3149 15.0593 36.5312 15.6287L27.8532 21.9336C27.5027 22.1883 27.3561 22.6396 27.4899 23.0517L30.8046 33.2533C31.104 34.1746 30.0495 34.9407 29.2658 34.3713L20.5878 28.0664C20.2373 27.8117 19.7627 27.8117 19.4122 28.0664L10.7342 34.3713C9.95048 34.9407 8.896 34.1746 9.19535 33.2533L12.5101 23.0517C12.6439 22.6396 12.4973 22.1883 12.1468 21.9336L3.46877 15.6287C2.68505 15.0593 3.08783 13.8197 4.05655 13.8197H14.7832C15.2164 13.8197 15.6004 13.5407 15.7342 13.1287L19.0489 2.92705Z" fill="#FCD34D"/>
+                                                                                </g>
+                                                                                <defs>
+                                                                                <clipPath id="clip0_5535_27332">
+                                                                                <rect width="40" height="40" fill="white"/>
+                                                                                </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        
+                                                                    </div>
+                                                                    <span class="sr-only"> out of 5 stars</span>
+                                                                    <div>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 41 38" fill="none">
+                                                                            <path d="M29.6315 37.6207C35.7257 37.6207 40.666 32.6803 40.666 26.5862V5.20686C40.666 2.54066 38.5046 0.379275 35.8384 0.379275L28.2522 0.379274C25.586 0.379274 23.4246 2.54066 23.4246 5.20686L23.4246 15.5517C23.4246 18.2179 25.586 20.3793 28.2522 20.3793H33.7695C34.5312 20.3793 35.1488 20.9968 35.1488 21.7586V26.5862C35.1488 29.6333 32.6786 32.1034 29.6315 32.1034H25.8384C25.0767 32.1034 24.4591 32.721 24.4591 33.4827V36.2413C24.4591 37.0031 25.0767 37.6207 25.8384 37.6207H29.6315Z" fill="#37602e"/>
+                                                                            <path d="M6.87291 37.6207C12.9671 37.6207 17.9074 32.6803 17.9074 26.5862L17.9074 5.20686C17.9074 2.54066 15.746 0.379273 13.0798 0.379273L5.4936 0.379272C2.8274 0.379272 0.666017 2.54066 0.666017 5.20686L0.666016 15.5517C0.666015 18.2179 2.8274 20.3793 5.4936 20.3793H11.0108C11.7726 20.3793 12.3902 20.9968 12.3902 21.7586L12.3902 26.5862C12.3902 29.6333 9.92 32.1034 6.87291 32.1034H3.07981C2.31803 32.1034 1.7005 32.721 1.7005 33.4827L1.7005 36.2413C1.7005 37.0031 2.31804 37.6207 3.07981 37.6207H6.87291Z" fill="#37602e"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <blockquote class="flex flex-grow flex-col justify-between h-full mt-6">
+                                                                    <div class="relative pt-2">
+                                                                        
+                                                                            <span class="review-body relative text-lg font-medium line-clamp-7">
+                                                                                God... Where do I even start? Dylan and the entire team are just so athletic, spry, and downright witty. They saved my cat from a tree and unlocked my chakras! Insane customer service with a warm personality to match. ProPhone Cypress is my new religion and I look forward to donating my savings to Dylan&#x27;s just cause - to the end brothers!
+                                                                            </span>
+                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See more</span>
+                                                                            <span style="display: none;" class="text-secondary font-bold inline uppercase cursor-pointer">See less</span>
+                                                                        
+                                                                    </div>
+                                                                    <footer class="flex items-center justify-between mt-8 space-x-4">
+                                                                        <div>
+                                                                            
+                                                                                <span class="block font-medium uppercase text-gray-900">Richard Benjamin</span>
+                                                                            
+                                                                            <div class="mt-1 bg-gray-300 text-primary py-1 px-3 font-black text-lg uppercase"></div>
                                                                         </div>
                                                                     </footer>
                                                                 </blockquote>
@@ -10307,7 +10327,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="55151"
+                                aria-controls="55217"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is our business <strong>hours?﻿</strong></p></span>
@@ -10328,7 +10348,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55151">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55217">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We are open every (262) 957-4136 weekday from<strong> 9-5﻿</strong></p>
                         </dd>
@@ -10340,7 +10360,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="55152"
+                                aria-controls="55218"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What types of landscaping services do you offer ?</span>
@@ -10361,7 +10381,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55152">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55218">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">some (262) 957-4136</p>
                         </dd>
@@ -10373,7 +10393,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="55153"
+                                aria-controls="55219"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill">What services does caro-landscapings oy oy oy!!!!! offer ?</span>
@@ -10394,7 +10414,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55153">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55219">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">(262) 957-4136 some</p>
                         </dd>
@@ -10406,7 +10426,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="55154"
+                                aria-controls="55220"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What type of landscaping services do you offer</p></span>
@@ -10427,7 +10447,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55154">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55220">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer a variety of landscaping services, including lawn care, flower gardens, mulching, tree trimming, and more.</p>
                         </dd>
@@ -10439,7 +10459,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="55155"
+                                aria-controls="55221"
                                 :aria-expanded="expanded"
                             >
                                 <span class="text-xl sm:text-2xl font-extrabold quill"><p>What is your pricing</p></span>
@@ -10460,7 +10480,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </button>
                         </dt>
 
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55155">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="55221">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base sm:text-lg font-medium">We offer competitive pricing and free estimates.</p>
                         </dd>
@@ -10919,7 +10939,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                         <ul role="list" class="mt-4  space-y-4">
                             
                                 <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Sun: <br class="sm:hidden" /> Closed 
+                                    Sun: <br class="sm:hidden" /> 10:02am - 10:03pm 
                                 </li>
                             
                                 <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
@@ -10935,7 +10955,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                 </li>
                             
                                 <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Thu: <br class="sm:hidden" /> Closed 
+                                    Thu: <br class="sm:hidden" /> 7:00am - 7:00pm 
                                 </li>
                             
                                 <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
