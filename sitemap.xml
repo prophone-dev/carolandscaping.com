@@ -39,6 +39,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-Cookin-Some-Chilli</loc>
         <lastmod>2024-12-23</lastmod>
         <changefreq>weekly</changefreq>
@@ -68,13 +75,6 @@
 
     <url>
         <loc>https://carolandscaping.com/service-Professional-Fertilization</loc>
-        <lastmod>2024-12-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Cheese-Making</loc>
         <lastmod>2024-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -130,14 +130,21 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-December-gallery-test</loc>
+        <loc>https://carolandscaping.com/gallery-New-gallery-for-testing</loc>
         <lastmod>2024-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-New-gallery-for-testing</loc>
+        <loc>https://carolandscaping.com/gallery-December-gallery</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Happy-December</loc>
         <lastmod>2024-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -173,13 +180,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-instagram</loc>
-        <lastmod>2024-12-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-test-1234</loc>
         <lastmod>2024-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
