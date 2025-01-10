@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/16e5ccbf-9f9e-4770-8a4f-c7fffd7d7cbe.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/e58c919f-5392-4dbe-a141-56b77e504931.png");
       background-size: cover;
   }
   
@@ -549,10 +549,13 @@
             >
                 <div id="slider">
                     
-                    <video class="slider-media absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted>
-                        <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c4eb6c02-df6c-4766-a0fc-3ac794e01866.quicktime">
-                        Your browser does not support the video tag.
-                    </video>
+                        <video class="slider-media absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted>
+                            <source
+                                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c4eb6c02-df6c-4766-a0fc-3ac794e01866.quicktime"
+                                    data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c4eb6c02-df6c-4766-a0fc-3ac794e01866.quicktime"
+                            >
+                            Your browser does not support the video tag.
+                        </video>
                     
                     
                         
@@ -685,12 +688,12 @@
 
 
 
-<script>
-    var heroSliderType = "fade" // django variable
-</script>
-<script>
-    async function transform(e,t,a){"enter"===a&&e.classList.remove("hidden"),e.classList.add(`${t}-${a}`),e.classList.add(`${t}-${a}-start`),await nextFrame(),e.classList.remove(`${t}-${a}-start`),e.classList.add(`${t}-${a}-end`),await afterTransition(e),e.classList.remove(`${t}-${a}-end`),e.classList.remove(`${t}-${a}`),"leave"===a&&e.classList.add("hidden")}function nextFrame(){return new Promise((e=>{requestAnimationFrame((()=>{requestAnimationFrame(e)}))}))}function afterTransition(e){return new Promise((t=>{const a=1e3*Number(getComputedStyle(e).transitionDuration.replace("s",""));setTimeout((()=>{t()}),a)}))}function runSlider(e){let t=e.length,a=1;setInterval((()=>{let r=a;a=a===t?1:a+1,transform(e[a-1],heroSliderType,"enter"),transform(e[r-1],heroSliderType,"leave")}),5e3)}window.addEventListener("load",(function(){const e=Array.from(document.querySelectorAll(".slider-media"));Promise.all(e.map(((e,t)=>e instanceof HTMLMediaElement&&"video"===e.tagName.toLowerCase()?Promise.resolve(e):e.complete?Promise.resolve(0!==e.naturalHeight?e:null):new Promise((t=>{e.addEventListener("load",(()=>t(e))),e.addEventListener("error",(()=>t(null)))}))))).then((e=>{e.some((e=>!e))&&console.log("some images failed to load, all finished loading",e),runSlider(e)})),setTimeout((()=>{e.forEach((e=>{e instanceof HTMLMediaElement&&"video"===e.tagName.toLowerCase()?e.src=e.children[0].dataset.src:e.loading="auto"}))}),3e3)}));
-</script>
+    <script>
+        var heroSliderType = "fade" // django variable
+    </script>
+    <script>
+        async function transform(e,t,a){"enter"===a&&e.classList.remove("hidden"),e.classList.add(`${t}-${a}`),e.classList.add(`${t}-${a}-start`),await nextFrame(),e.classList.remove(`${t}-${a}-start`),e.classList.add(`${t}-${a}-end`),await afterTransition(e),e.classList.remove(`${t}-${a}-end`),e.classList.remove(`${t}-${a}`),"leave"===a&&e.classList.add("hidden")}function nextFrame(){return new Promise((e=>{requestAnimationFrame((()=>{requestAnimationFrame(e)}))}))}function afterTransition(e){return new Promise((t=>{const a=1e3*Number(getComputedStyle(e).transitionDuration.replace("s",""));setTimeout((()=>{t()}),a)}))}function runSlider(e){let t=e.length,a=1;setInterval((()=>{let r=a;a=a===t?1:a+1,transform(e[a-1],heroSliderType,"enter"),transform(e[r-1],heroSliderType,"leave")}),5e3)}window.addEventListener("load",(function(){const e=Array.from(document.querySelectorAll(".slider-media"));Promise.all(e.map(((e,t)=>e instanceof HTMLMediaElement&&"video"===e.tagName.toLowerCase()?Promise.resolve(e):e.complete?Promise.resolve(0!==e.naturalHeight?e:null):new Promise((t=>{e.addEventListener("load",(()=>t(e))),e.addEventListener("error",(()=>t(null)))}))))).then((e=>{e.some((e=>!e))&&console.log("some images failed to load, all finished loading",e),runSlider(e)})),setTimeout((()=>{e.forEach((e=>{e instanceof HTMLMediaElement&&"video"===e.tagName.toLowerCase()?e.src=e.children[0].dataset.src:e.loading="auto"}))}),3e3)}));
+    </script>
 
 
 <style>
