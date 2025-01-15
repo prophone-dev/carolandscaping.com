@@ -39,6 +39,20 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/service-carpet-cleaning</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-grooming</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/service-Cheese-Making</loc>
         <lastmod>2025-01-15</lastmod>
         <changefreq>weekly</changefreq>
@@ -187,6 +201,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-New-test-gallery</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-TPB</loc>
         <lastmod>2025-01-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
