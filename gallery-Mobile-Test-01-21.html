@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/9b4e322f-3acd-45b5-8d83-e0ce6476db14.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/832e753b-4e28-4134-81f9-04c77b1f1504.png");
       background-size: cover;
   }
   
@@ -1961,7 +1961,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 4,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1978,9 +1978,73 @@
     data-heap-version="v4"
 >
     
-        <ul class="px-2 flex gap-2 flex-wrap md:flex-nowrap">
+        <div role="list" class="responsive-columns mx-auto w-full">
             
-        </ul>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 1/1;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/832e753b-4e28-4134-81f9-04c77b1f1504.png"  alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 2/3;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/d42c784c-840e-41e1-9071-2fb6835b2bb3.png"  alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 1/1;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/d7f48812-316e-488c-a4fa-cf95e8a55ace.png"  alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 2/3;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/189f5705-bc25-4159-9ff5-e906158175dc.png"  alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+        </div>
     
 
     <!-- Modal template -->
@@ -2029,6 +2093,58 @@
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative flex items-center">
                                 
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/832e753b-4e28-4134-81f9-04c77b1f1504.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d42c784c-840e-41e1-9071-2fb6835b2bb3.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 2">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d7f48812-316e-488c-a4fa-cf95e8a55ace.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/189f5705-bc25-4159-9ff5-e906158175dc.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -2059,6 +2175,98 @@
                     <div class="absolute flex justify-center w-full z-30 -bottom-6  md:bottom-12 inset-x-0">
                         <div class="-skew-y-[4deg] bg-secondary/50 p-6 py-12 md:py-6 w-screen md:w-auto">
                             <div class="flex skew-y-[4deg] justify-center flex gap-2">
+                                
+                                    <div x-show="activeImage === 0 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/832e753b-4e28-4134-81f9-04c77b1f1504.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 0 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/832e753b-4e28-4134-81f9-04c77b1f1504.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 1 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d42c784c-840e-41e1-9071-2fb6835b2bb3.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 1 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d42c784c-840e-41e1-9071-2fb6835b2bb3.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 2 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d7f48812-316e-488c-a4fa-cf95e8a55ace.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 2 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d7f48812-316e-488c-a4fa-cf95e8a55ace.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 3 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/189f5705-bc25-4159-9ff5-e906158175dc.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 3 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/189f5705-bc25-4159-9ff5-e906158175dc.png"
+                                                    alt="Mobile Test 01/21 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
                                 
                             </div>
                         </div>
