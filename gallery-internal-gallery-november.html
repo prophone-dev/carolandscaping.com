@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/7da3f07c-90f5-49ab-bd64-ac379a3d8fba.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png");
       background-size: cover;
   }
   
@@ -497,16 +497,6 @@
                                                             
                                                         
                                                             
-                                                            <a
-                                                                href=" service-Professional-Fertilization "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Professional Fertilization
-                                                            </a>
-                                                            
-                                                        
-                                                            
                                                         
                                                             
                                                         
@@ -529,6 +519,14 @@
                                                         
                                                             
                                                         
+                                                            
+                                                            <a
+                                                                href=" service-Professional-Fertilization "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                Professional Fertilization
+                                                            </a>
                                                             
                                                         
                                                             
@@ -568,16 +566,6 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 Softscaping, and Hardscaping
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-sprinkler-install "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Sprinkler Install
                                                             </a>
                                                             
                                                         
@@ -1303,17 +1291,6 @@
 
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-sprinkler-install"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Sprinkler Install
-                                                        </span>
-
-                                                    </a>
-                                                
                                             </div>
                                         </div>
                                     
@@ -1932,7 +1909,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 3,
+        amountOfImages: 7,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1949,27 +1926,121 @@
     data-heap-version="v4"
 >
     
-        <ul class="px-2 flex gap-2 flex-wrap md:flex-nowrap">
+        <div role="list" class="responsive-columns mx-auto w-full">
             
-                <li @click="activeImage = 0; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                    
-                        <img class="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                    
-                </li>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 1/1;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
             
-                <li @click="activeImage = 1; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                    
-                        <img class="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                    
-                </li>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 2/3;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/38a75dd1-6c11-4f4e-9a02-c4304cfc2a0f.png"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
             
-                <li @click="activeImage = 2; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                    
-                        <img class="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                    
-                </li>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 1/1;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/e8551d32-4791-4e0a-8077-29148b3ba9d4.png"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
             
-        </ul>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 2/3;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/4e993f91-591a-4c78-8202-11260eac8083.png"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 1/1;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 2/3;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 1/1;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"  alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+        </div>
     
 
     <!-- Modal template -->
@@ -2023,7 +2094,7 @@
                                             
                                                 <img
                                                     class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png"
                                                     alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                                 <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -2036,7 +2107,7 @@
                                             
                                                 <img
                                                     class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/38a75dd1-6c11-4f4e-9a02-c4304cfc2a0f.png"
                                                     alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                                 <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -2045,6 +2116,58 @@
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 2">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e8551d32-4791-4e0a-8077-29148b3ba9d4.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4e993f91-591a-4c78-8202-11260eac8083.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 4">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 5">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 6">
                                         
                                             
                                                 <img
@@ -2093,7 +2216,7 @@
                                             
                                                 <img
                                                     class="w-[172px] h-[100px] object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png"
                                                     alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -2104,7 +2227,7 @@
                                             
                                                 <img
                                                     class="w-[172px] h-[100px] object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png"
                                                     alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -2116,7 +2239,7 @@
                                             
                                                 <img
                                                     class="w-[172px] h-[100px] object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/38a75dd1-6c11-4f4e-9a02-c4304cfc2a0f.png"
                                                     alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -2127,7 +2250,7 @@
                                             
                                                 <img
                                                     class="w-[172px] h-[100px] object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/38a75dd1-6c11-4f4e-9a02-c4304cfc2a0f.png"
                                                     alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -2139,13 +2262,105 @@
                                             
                                                 <img
                                                     class="w-[172px] h-[100px] object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e8551d32-4791-4e0a-8077-29148b3ba9d4.png"
                                                     alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
                                         
                                     </div>
                                     <div x-show="activeImage === 2 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e8551d32-4791-4e0a-8077-29148b3ba9d4.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 3 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4e993f91-591a-4c78-8202-11260eac8083.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 3 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4e993f91-591a-4c78-8202-11260eac8083.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 4 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 4 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 5 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 5 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 6 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png"
+                                                    alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 6 + 1">
                                         
                                             
                                                 <img
@@ -3565,14 +3780,6 @@
                                         href="service-landscape-management-softscaping-and-hardscaping"
                                         class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
                                         >Softscaping, and Hardscaping</a
-                                    >
-                                </li>
-                                
-                                <li>
-                                    <a
-                                        href="service-sprinkler-install"
-                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
-                                        >Sprinkler Install</a
                                     >
                                 </li>
                                 
