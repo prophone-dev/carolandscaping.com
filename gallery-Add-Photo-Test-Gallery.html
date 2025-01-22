@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/b753ed21-375e-4819-8889-dd3a89a1ab6f.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/a987e4a2-30d0-4630-9f7e-08cd727006a1.png");
       background-size: cover;
   }
   
@@ -641,16 +641,6 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gallery "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                New Gallery
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
                                                                 href=" gallery-New-Gallery-2 "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
@@ -676,6 +666,16 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 work
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-New-Gallery "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                New Gallery
                                                             </a>
                                                             
                                                         
@@ -1328,17 +1328,6 @@
                                             <div class="flex flex-col py-4 px-4 gap-4">
                                                 
                                                     <a
-                                                        href="gallery-New-Gallery"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery
-                                                        </span>
-
-                                                    </a>
-                                                
-                                                    <a
                                                         href="gallery-New-Gallery-2"
                                                         role="menuitem"
                                                         class="block"
@@ -1367,6 +1356,17 @@
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
                                                             work
+                                                        </span>
+
+                                                    </a>
+                                                
+                                                    <a
+                                                        href="gallery-New-Gallery"
+                                                        role="menuitem"
+                                                        class="block"
+                                                    >
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            New Gallery
                                                         </span>
 
                                                     </a>
@@ -1958,7 +1958,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 2,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1976,6 +1976,18 @@
 >
     
         <ul class="px-2 flex gap-2 flex-wrap md:flex-nowrap">
+            
+                <li @click="activeImage = 0; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                    
+                        <img class="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a987e4a2-30d0-4630-9f7e-08cd727006a1.png"  alt="Add Photo Test Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                    
+                </li>
+            
+                <li @click="activeImage = 1; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                    
+                        <img class="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/a91811bc-16bd-4f8f-8d2f-823d58b535b2.png"  alt="Add Photo Test Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                    
+                </li>
             
         </ul>
     
@@ -2026,6 +2038,32 @@
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative flex items-center">
                                 
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a987e4a2-30d0-4630-9f7e-08cd727006a1.png"
+                                                    alt="Add Photo Test Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a91811bc-16bd-4f8f-8d2f-823d58b535b2.png"
+                                                    alt="Add Photo Test Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -2056,6 +2094,52 @@
                     <div class="absolute flex justify-center w-full z-30 -bottom-6  md:bottom-12 inset-x-0">
                         <div class="-skew-y-[4deg] bg-secondary/50 p-6 py-12 md:py-6 w-screen md:w-auto">
                             <div class="flex skew-y-[4deg] justify-center flex gap-2">
+                                
+                                    <div x-show="activeImage === 0 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a987e4a2-30d0-4630-9f7e-08cd727006a1.png"
+                                                    alt="Add Photo Test Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 0 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a987e4a2-30d0-4630-9f7e-08cd727006a1.png"
+                                                    alt="Add Photo Test Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 1 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a91811bc-16bd-4f8f-8d2f-823d58b535b2.png"
+                                                    alt="Add Photo Test Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 1 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a91811bc-16bd-4f8f-8d2f-823d58b535b2.png"
+                                                    alt="Add Photo Test Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
                                 
                             </div>
                         </div>
