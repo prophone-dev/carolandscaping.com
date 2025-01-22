@@ -109,7 +109,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-instagram</loc>
+        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
         <lastmod>2025-01-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -151,7 +151,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
+        <loc>https://carolandscaping.com/gallery-instagram</loc>
         <lastmod>2025-01-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -215,6 +215,13 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-Add-Test-2</loc>
+        <lastmod>2025-01-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-add-test-3</loc>
         <lastmod>2025-01-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
