@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/d03d0f1b-0c8b-41c2-af44-61b06f909d70.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c5dae362-c87d-40ca-aab0-75e0287f484f.png");
       background-size: cover;
   }
   
@@ -497,6 +497,16 @@
                                                             
                                                         
                                                             
+                                                            <a
+                                                                href=" service-Professional-Fertilization "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                Professional Fertilization
+                                                            </a>
+                                                            
+                                                        
+                                                            
                                                         
                                                             
                                                         
@@ -519,14 +529,6 @@
                                                         
                                                             
                                                         
-                                                            
-                                                            <a
-                                                                href=" service-Professional-Fertilization "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Professional Fertilization
-                                                            </a>
                                                             
                                                         
                                                             
@@ -566,6 +568,16 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 Softscaping, and Hardscaping
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" service-test-delete "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                Test delete
                                                             </a>
                                                             
                                                         
@@ -1329,6 +1341,17 @@
 
                                                     </a>
                                                 
+                                                    <a
+                                                        href="service-test-delete"
+                                                        role="menuitem"
+                                                        class="block"
+                                                    >
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Test delete
+                                                        </span>
+
+                                                    </a>
+                                                
                                             </div>
                                         </div>
                                     
@@ -1991,7 +2014,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 3,
+        amountOfImages: 4,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -2008,30 +2031,74 @@
     data-heap-version="v4"
 >
     
-        <ul class="px-2 flex gap-2 flex-wrap md:flex-nowrap">
+        <div role="list" class="responsive-columns mx-auto w-full">
             
-                <li @click="activeImage = 0; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                    
-                        <img class="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"  alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                    
-                </li>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 1/1;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/5ac76c74-1e4f-4c1a-88c0-3045f8129e46.png"  alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
             
-                <li @click="activeImage = 1; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                    
-                        <video class="lazy mb-[14px] object-cover w-full h-full hover:scale-110 transition-all ease-out duration-300 lazy" preload="none" autoplay loop playsinline controls muted>
-                            <source  data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c4eb6c02-df6c-4766-a0fc-3ac794e01866.quicktime#t=0.5">
-                            Your browser does not support the video tag.
-                        </video>
-                    
-                </li>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 2/3;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"  alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
             
-                <li @click="activeImage = 2; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                    
-                        <img class="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"  alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                    
-                </li>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                <video class="lazy mb-4 object-cover w-full h-full hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 3/2;" preload="none" autoplay loop playsinline controls muted>
+                                    <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c4eb6c02-df6c-4766-a0fc-3ac794e01866.quicktime#t=0.5">
+                                    Your browser does not support the video tag.
+                                </video>
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
             
-        </ul>
+                <div id="container" class=" mt-1 cursor-pointer">
+                    <div  @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                        
+                            
+                                
+                                    <img class="mb-4 w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy" style="aspect-ratio: 2/3;" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/1cc34f4c-35c0-49e5-8261-6cf93daba94c.png"  alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+                                
+                            
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+        </div>
     
 
     <!-- Modal template -->
@@ -2085,7 +2152,7 @@
                                             
                                                 <img
                                                     class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/5ac76c74-1e4f-4c1a-88c0-3045f8129e46.png"
                                                     alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                                 <p lorem="1" class="mt-3 text-gray-500"></p>
@@ -2095,6 +2162,19 @@
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                         
+                                            
+                                                <img
+                                                    class="w-full md:h-[300px] lg:h-[400px] self-center object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"
+                                                    alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 2">
+                                        
                                             <video class="gallery-modal-video lazy bg-black shadow-md object-contain w-full md:h-[300px] lg:h-[400px]" preload="none" autoplay loop controls muted>
                                                 <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/c4eb6c02-df6c-4766-a0fc-3ac794e01866.quicktime#t=0.5" >
                                                 Your browser does not support the video tag.
@@ -2103,7 +2183,7 @@
                                         
                                     </li>
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 2">
+                                    <li class="flex flex-col" x-show="activeImage === 3">
                                         
                                             
                                                 <img
@@ -2152,13 +2232,36 @@
                                             
                                                 <img
                                                     class="w-[172px] h-[100px] object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/5ac76c74-1e4f-4c1a-88c0-3045f8129e46.png"
                                                     alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
                                         
                                     </div>
                                     <div x-show="activeImage === 0 + 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/5ac76c74-1e4f-4c1a-88c0-3045f8129e46.png"
+                                                    alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                
+                                    <div x-show="activeImage === 1 - 1">
+                                        
+                                            
+                                                <img
+                                                    class="w-[172px] h-[100px] object-cover"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9de3c084-bcf1-4e71-b5d1-3b5a3e075b09.png"
+                                                    alt="moving showcases for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
+                                            
+                                        
+                                    </div>
+                                    <div x-show="activeImage === 1 + 1">
                                         
                                             
                                                 <img
@@ -2170,7 +2273,7 @@
                                         
                                     </div>
                                 
-                                    <div x-show="activeImage === 1 - 1">
+                                    <div x-show="activeImage === 2 - 1">
                                         
                                             <video
                                                 preload="none" autoplay loop controls muted
@@ -2181,7 +2284,7 @@
                                             </video>
                                         
                                     </div>
-                                    <div x-show="activeImage === 1 + 1">
+                                    <div x-show="activeImage === 2 + 1">
                                         
                                             <video
                                                 preload="none" autoplay loop controls muted
@@ -2193,7 +2296,7 @@
                                         
                                     </div>
                                 
-                                    <div x-show="activeImage === 2 - 1">
+                                    <div x-show="activeImage === 3 - 1">
                                         
                                             
                                                 <img
@@ -2204,7 +2307,7 @@
                                             
                                         
                                     </div>
-                                    <div x-show="activeImage === 2 + 1">
+                                    <div x-show="activeImage === 3 + 1">
                                         
                                             
                                                 <img
@@ -6175,6 +6278,14 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                         href="service-landscape-management-softscaping-and-hardscaping"
                                         class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
                                         >Softscaping, and Hardscaping</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-delete"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >Test delete</a
                                     >
                                 </li>
                                 
