@@ -1948,11 +1948,11 @@
                         <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div class="aspect-w-3 aspect-h-3">
-                                    <img-comparison-slider class="w-full h-full cursor-pointer rounded-md" hover>
-                                        <img style="width: 100%; height: 262px; object-fit: cover;" width="100%" slot="first" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/bffd6c60-38b1-426d-bf12-37d662d12b9a.png" loading="lazy" decoding="async"/>
-                                        <img style="width: 100%; height: 262px; object-fit: cover;" width="100%" slot="second" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/6f4966df-6392-4069-b573-54d9d3d8e334.png" loading="lazy" decoding="async"/>
-                                        <div slot="handle" class="custom-animated-handle" style="background-color: #fff; border-radius: 50px; transform: rotate(90deg); display: flex; justify-content: center; align-items: center; width: 28px; height: 28px; cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5"><path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div>
-                                    </img-comparison-slider>
+                                    
+                                        <video class="lazy rounded shadow-md object-cover w-full h-full" preload="none" autoplay loop controls muted>
+                                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3d2c96da-a568-45b4-bd2b-8774884973e4.mp4#t=0.5" >
+                                        </video>
+                                    
                                 </div>
                             
 
@@ -1971,11 +1971,11 @@
                         <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        <video class="lazy rounded shadow-md object-cover w-full h-full" preload="none" autoplay loop controls muted>
-                                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3d2c96da-a568-45b4-bd2b-8774884973e4.mp4#t=0.5" >
-                                        </video>
-                                    
+                                    <img-comparison-slider class="w-full h-full cursor-pointer rounded-md" hover>
+                                        <img style="width: 100%; height: 262px; object-fit: cover;" width="100%" slot="first" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/bffd6c60-38b1-426d-bf12-37d662d12b9a.png" loading="lazy" decoding="async"/>
+                                        <img style="width: 100%; height: 262px; object-fit: cover;" width="100%" slot="second" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/6f4966df-6392-4069-b573-54d9d3d8e334.png" loading="lazy" decoding="async"/>
+                                        <div slot="handle" class="custom-animated-handle" style="background-color: #fff; border-radius: 50px; transform: rotate(90deg); display: flex; justify-content: center; align-items: center; width: 28px; height: 28px; cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5"><path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div>
+                                    </img-comparison-slider>
                                 </div>
                             
 
@@ -2064,19 +2064,19 @@
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 1">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/92916347-4ac7-4709-8b2a-f772b8efaafc.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-
+                                        
+                                            <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                                <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3d2c96da-a568-45b4-bd2b-8774884973e4.mp4#t=0.5" >
+                                            </video>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 2">
-                                        
-                                            <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
-                                                <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3d2c96da-a568-45b4-bd2b-8774884973e4.mp4#t=0.5" >
-                                            </video>
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/92916347-4ac7-4709-8b2a-f772b8efaafc.png" alt="New Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
