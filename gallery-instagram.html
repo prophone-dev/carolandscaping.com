@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/43e77b91-1366-4ce7-a157-d112dac7d99e.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/34a45616-9c19-47b4-abe1-f5fa463f4ea2.jpeg");
       background-size: cover;
   }
   
@@ -641,11 +641,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gallery "
+                                                                href=" gallery-New-Gallery-2 "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                New Gallery
+                                                                New Gallery 2
                                                             </a>
                                                             
                                                         
@@ -671,11 +671,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gallery-2 "
+                                                                href=" gallery-New-Gallery "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                New Gallery 2
+                                                                New Gallery
                                                             </a>
                                                             
                                                         
@@ -686,6 +686,16 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 moving showcases
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-01-27-test "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                01/27 test
                                                             </a>
                                                             
                                                         
@@ -749,6 +759,8 @@
                                                         
                                                     </div>
                                                     <div class="flex-1">
+                                                        
+                                                            
                                                         
                                                             
                                                         
@@ -1350,12 +1362,12 @@
                                             <div class="flex flex-col py-4 px-4 gap-4">
                                                 
                                                     <a
-                                                        href="gallery-New-Gallery"
+                                                        href="gallery-New-Gallery-2"
                                                         role="menuitem"
                                                         class="block"
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery
+                                                            New Gallery 2
                                                         </span>
 
                                                     </a>
@@ -1383,12 +1395,12 @@
                                                     </a>
                                                 
                                                     <a
-                                                        href="gallery-New-Gallery-2"
+                                                        href="gallery-New-Gallery"
                                                         role="menuitem"
                                                         class="block"
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery 2
+                                                            New Gallery
                                                         </span>
 
                                                     </a>
@@ -1400,6 +1412,17 @@
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
                                                             moving showcases
+                                                        </span>
+
+                                                    </a>
+                                                
+                                                    <a
+                                                        href="gallery-01-27-test"
+                                                        role="menuitem"
+                                                        class="block"
+                                                    >
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            01/27 test
                                                         </span>
 
                                                     </a>
@@ -1846,6 +1869,8 @@
                                 
                             
                                 
+                            
+                                
                                     <section class="overflow-hidden bg-white">
 
     <div
@@ -1854,19 +1879,14 @@
         data-heap-version="v3"
     >
         
-            
+              
             <div
-                class="relative screen-height-minus-navbar flex w-full overflow-hidden items-center justify-center"
+                class="flex gallery-hero-image screen-height-minus-navbar w-full bg-center bg-cover bg-fixed"
+                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png')"
             >
-                <video
-                    id="hero-gallery-video"
-                    class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted
-                >
-                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
-                </video>
                 <main
                     style="--tw-bg-opacity:75%;"
-                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary"
+                    class="flex screen-height-minus-navbar justify-center m-auto w-full bg-primary"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1925,12 +1945,14 @@
                     
                 
                     
+                
+                    
                         
 
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 4,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1947,6 +1969,98 @@
     data-heap-version="v2.3"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4 sm:space-y-0 lg:grid-cols-4 lg:gap-x-4">
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/4e993f91-591a-4c78-8202-11260eac8083.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
         
     </ul>
 
@@ -1990,6 +2104,42 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 1">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4e993f91-591a-4c78-8202-11260eac8083.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 2">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 3">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
                                 
                             </ul>
 

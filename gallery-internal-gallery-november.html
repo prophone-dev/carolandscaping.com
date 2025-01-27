@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/43e77b91-1366-4ce7-a157-d112dac7d99e.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/34a45616-9c19-47b4-abe1-f5fa463f4ea2.jpeg");
       background-size: cover;
   }
   
@@ -641,11 +641,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gallery "
+                                                                href=" gallery-New-Gallery-2 "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                New Gallery
+                                                                New Gallery 2
                                                             </a>
                                                             
                                                         
@@ -671,11 +671,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gallery-2 "
+                                                                href=" gallery-New-Gallery "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                New Gallery 2
+                                                                New Gallery
                                                             </a>
                                                             
                                                         
@@ -686,6 +686,16 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 moving showcases
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-01-27-test "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                01/27 test
                                                             </a>
                                                             
                                                         
@@ -749,6 +759,8 @@
                                                         
                                                     </div>
                                                     <div class="flex-1">
+                                                        
+                                                            
                                                         
                                                             
                                                         
@@ -1350,12 +1362,12 @@
                                             <div class="flex flex-col py-4 px-4 gap-4">
                                                 
                                                     <a
-                                                        href="gallery-New-Gallery"
+                                                        href="gallery-New-Gallery-2"
                                                         role="menuitem"
                                                         class="block"
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery
+                                                            New Gallery 2
                                                         </span>
 
                                                     </a>
@@ -1383,12 +1395,12 @@
                                                     </a>
                                                 
                                                     <a
-                                                        href="gallery-New-Gallery-2"
+                                                        href="gallery-New-Gallery"
                                                         role="menuitem"
                                                         class="block"
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery 2
+                                                            New Gallery
                                                         </span>
 
                                                     </a>
@@ -1400,6 +1412,17 @@
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
                                                             moving showcases
+                                                        </span>
+
+                                                    </a>
+                                                
+                                                    <a
+                                                        href="gallery-01-27-test"
+                                                        role="menuitem"
+                                                        class="block"
+                                                    >
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            01/27 test
                                                         </span>
 
                                                     </a>
@@ -1847,7 +1870,7 @@
               
             <div
                 class="flex gallery-hero-image screen-height-minus-navbar w-full bg-center bg-cover bg-fixed"
-                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png')"
+                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/e8551d32-4791-4e0a-8077-29148b3ba9d4.png')"
             >
                 <main
                     style="--tw-bg-opacity:75%;"
@@ -1905,7 +1928,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 7,
+        amountOfImages: 1,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1931,145 +1954,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/38a75dd1-6c11-4f4e-9a02-c4304cfc2a0f.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
                                             <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/e8551d32-4791-4e0a-8077-29148b3ba9d4.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/4e993f91-591a-4c78-8202-11260eac8083.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2130,61 +2015,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/45ec2327-2cd7-458f-9fb4-1e916d555699.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 1">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/38a75dd1-6c11-4f4e-9a02-c4304cfc2a0f.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 2">
-                                            
-                                            
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e8551d32-4791-4e0a-8077-29148b3ba9d4.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 3">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4e993f91-591a-4c78-8202-11260eac8083.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 4">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cba23f21-e8cf-4ed6-bd0c-13a559b5d664.webp" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 5">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/f8097560-1901-4350-94df-622f71557ebe.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 6">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ebeec74f-1c0a-420a-8353-14e543971eb5.png" alt="internal gallery november for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2256,6 +2087,8 @@
     }
 
 </script>
+                    
+                
                     
                 
                     
@@ -3031,6 +2864,8 @@
 </template>
 
                                     
+                                
+                            
                                 
                             
                                 
