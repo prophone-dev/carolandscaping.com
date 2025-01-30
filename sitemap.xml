@@ -102,14 +102,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-New-Gallery-3</loc>
-        <lastmod>2025-01-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-internal-gallery-november</loc>
+        <loc>https://carolandscaping.com/gallery-</loc>
         <lastmod>2025-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -123,21 +116,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-New-Gallery</loc>
-        <lastmod>2025-01-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-moving-showcases</loc>
-        <lastmod>2025-01-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Rename-Test-2</loc>
+        <loc>https://carolandscaping.com/gallery-New-Gallery-3</loc>
         <lastmod>2025-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -145,6 +124,20 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-instagram</loc>
+        <lastmod>2025-01-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-moving-showcases-2</loc>
+        <lastmod>2025-01-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Rename-Test-2</loc>
         <lastmod>2025-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -200,13 +193,6 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Add-Test-Gallery-1</loc>
-        <lastmod>2025-01-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-Add-Test-2</loc>
         <lastmod>2025-01-30</lastmod>
         <changefreq>weekly</changefreq>
@@ -215,13 +201,6 @@
 
     <url>
         <loc>https://carolandscaping.com/gallery-add-test-3</loc>
-        <lastmod>2025-01-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Test-Gallery</loc>
         <lastmod>2025-01-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
