@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/a566d914-87e5-4a69-8493-e2495c223817.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/e3c5046b-2369-41d5-a768-9f5518d55617.png");
       background-size: cover;
   }
   
@@ -229,7 +229,7 @@
 <nav
     id="nav-bar"
     x-ref="navbar"
-    x-data="{ scrolledFromTop: false, customNavTransparent:  true  }"
+    x-data="{ scrolledFromTop: false, customNavTransparent:  true , primaryWhite:  false  }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false; "
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     class="w-screen fixed top-0 inset-x-0 z-50"
@@ -504,6 +504,8 @@
                                                         
                                                             
                                                         
+                                                            
+                                                        
                                                     </div>
                                                     <div class="flex-1">
                                                         
@@ -554,6 +556,16 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 Softscaping, and Hardscaping
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" service-shrub-trimming "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                Shrub Trimming
                                                             </a>
                                                             
                                                         
@@ -629,21 +641,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gallery-3 "
+                                                                href=" gallery- "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                New Gallery 3
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-internal-gallery-november "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                internal gallery november
+                                                                New Gallery
                                                             </a>
                                                             
                                                         
@@ -659,31 +661,11 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-New-Gallery "
+                                                                href=" gallery-New-Gallery-3 "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
-                                                                New Gallery
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-moving-showcases "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                moving showcases
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Rename-Test-2 "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Rename Test 2
+                                                                New Gallery 3
                                                             </a>
                                                             
                                                         
@@ -694,6 +676,26 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 instagram
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-moving-showcases-2 "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                moving showcases 2
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-Rename-Test-2 "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                Rename Test 2
                                                             </a>
                                                             
                                                         
@@ -755,14 +757,8 @@
                                                         
                                                             
                                                         
-                                                            
-                                                        
-                                                            
-                                                        
                                                     </div>
                                                     <div class="flex-1">
-                                                        
-                                                            
                                                         
                                                             
                                                         
@@ -816,16 +812,6 @@
                                                         
                                                             
                                                             <a
-                                                                href=" gallery-Add-Test-Gallery-1 "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Add Test Gallery 1
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
                                                                 href=" gallery-Add-Test-2 "
                                                                 role="menuitem"
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
@@ -841,16 +827,6 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 add test 3
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Test-Gallery "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Test Gallery
                                                             </a>
                                                             
                                                         
@@ -1121,6 +1097,7 @@
                                 <div
                                     onclick="postCtaClick('link')"
                                     class="w-full sm:w-auto cta_text_button rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300 border-2 border-primary hover:border-white box-border"
+                                    :class="primaryWhite ? 'hover:ring-secondary border-secondary hover:border-secondary' : ''"
                                 >
                                     <a
                                         target="_blank"
@@ -1340,6 +1317,17 @@
 
                                                     </a>
                                                 
+                                                    <a
+                                                        href="service-shrub-trimming"
+                                                        role="menuitem"
+                                                        class="block"
+                                                    >
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Shrub Trimming
+                                                        </span>
+
+                                                    </a>
+                                                
                                             </div>
                                         </div>
                                     
@@ -1375,23 +1363,12 @@
                                             <div class="flex flex-col py-4 px-4 gap-4">
                                                 
                                                     <a
-                                                        href="gallery-New-Gallery-3"
+                                                        href="gallery-"
                                                         role="menuitem"
                                                         class="block"
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery 3
-                                                        </span>
-
-                                                    </a>
-                                                
-                                                    <a
-                                                        href="gallery-internal-gallery-november"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            internal gallery november
+                                                            New Gallery
                                                         </span>
 
                                                     </a>
@@ -1408,34 +1385,12 @@
                                                     </a>
                                                 
                                                     <a
-                                                        href="gallery-New-Gallery"
+                                                        href="gallery-New-Gallery-3"
                                                         role="menuitem"
                                                         class="block"
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery
-                                                        </span>
-
-                                                    </a>
-                                                
-                                                    <a
-                                                        href="gallery-moving-showcases"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            moving showcases
-                                                        </span>
-
-                                                    </a>
-                                                
-                                                    <a
-                                                        href="gallery-Rename-Test-2"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Rename Test 2
+                                                            New Gallery 3
                                                         </span>
 
                                                     </a>
@@ -1447,6 +1402,28 @@
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
                                                             instagram
+                                                        </span>
+
+                                                    </a>
+                                                
+                                                    <a
+                                                        href="gallery-moving-showcases-2"
+                                                        role="menuitem"
+                                                        class="block"
+                                                    >
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            moving showcases 2
+                                                        </span>
+
+                                                    </a>
+                                                
+                                                    <a
+                                                        href="gallery-Rename-Test-2"
+                                                        role="menuitem"
+                                                        class="block"
+                                                    >
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Rename Test 2
                                                         </span>
 
                                                     </a>
@@ -1529,17 +1506,6 @@
                                                     </a>
                                                 
                                                     <a
-                                                        href="gallery-Add-Test-Gallery-1"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Add Test Gallery 1
-                                                        </span>
-
-                                                    </a>
-                                                
-                                                    <a
                                                         href="gallery-Add-Test-2"
                                                         role="menuitem"
                                                         class="block"
@@ -1557,17 +1523,6 @@
                                                     >
                                                         <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
                                                             add test 3
-                                                        </span>
-
-                                                    </a>
-                                                
-                                                    <a
-                                                        href="gallery-Test-Gallery"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Test Gallery
                                                         </span>
 
                                                     </a>
@@ -1762,11 +1717,7 @@
     }
 </script>
 
-<style>
 
-
-
-</style>
         
         
             
@@ -3144,6 +3095,14 @@
                                         href="service-landscape-management-softscaping-and-hardscaping"
                                         class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
                                         >Softscaping, and Hardscaping</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-shrub-trimming"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >Shrub Trimming</a
                                     >
                                 </li>
                                 
