@@ -116,7 +116,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-instagram</loc>
+        <loc>https://carolandscaping.com/gallery-Gallery-Rename</loc>
         <lastmod>2025-02-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -130,21 +130,21 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/gallery-Rename-Test-2</loc>
-        <lastmod>2025-02-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/gallery-Gallery-Rename</loc>
-        <lastmod>2025-02-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/gallery-moving-showcases-2</loc>
+        <lastmod>2025-02-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-instagram</loc>
+        <lastmod>2025-02-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/gallery-Rename-Test-2</loc>
         <lastmod>2025-02-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -277,6 +277,13 @@
     </url>
 
     <url>
+        <loc>https://carolandscaping.com/gallery-mobile-gallery-test</loc>
+        <lastmod>2025-02-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://carolandscaping.com/give-away</loc>
         <lastmod>2025-02-03</lastmod>
         <changefreq>weekly</changefreq>
@@ -285,6 +292,13 @@
 
     <url>
         <loc>https://carolandscaping.com/blog</loc>
+        <lastmod>2025-02-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/blog-16767</loc>
         <lastmod>2025-02-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
