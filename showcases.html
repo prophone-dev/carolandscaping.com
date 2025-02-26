@@ -847,6 +847,15 @@
                                 </div>
                             
                             
+                                <a
+                                    href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
+                                    target="_blank"
+                                    class=" border-transparent  py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                    :class="{  'hover:border-gray-300 hover:text-gray-700 text-gray-900': true }"
+                                >
+                                    Pay now
+                                </a>
+                            
 
                         </div>
 
@@ -1257,6 +1266,16 @@
                                     
                                 </div>
                             
+                            
+                                <div x-trap.inert="openMenu == ''">
+                                    <a
+                                        href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
+                                        target="_blank"
+                                        class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                    >
+                                        Pay Now
+                                    </a>
+                                </div>
                             
                         </div>
                         <div class="flex flex-col gap-4 w-full py-6 px-4 bg-primary flex-initial">
@@ -3447,7 +3466,6 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                         
                             
 
-
 <template x-teleport="body">
     <div
             x-show="contactModalOpen"
@@ -3460,405 +3478,395 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
             data-heap-component-name="send-text-modal"
-	        data-heap-version="v4"
+	        data-heap-version="v3"
     >
-        <div  id="error-state-modal"></div>
         <div
-            x-show="contactModalOpen"
-            x-transition:enter="ease-out duration-300"
-            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-            x-transition:leave="ease-in duration-200"
-            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            onclick="handleClose('showcases')"
-            class="relative flex items-center justify-center w-full h-full bg-black/30"
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                aria-hidden="true"
+                class="fixed inset-0 bg-black bg-opacity-50"
+        ></div>
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                onclick="handleClose('showcases')"
+                @click="contactModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full bg-primary"
         >
+            
+                
+                    <picture
+                        aria-hidden="true"
+                        class="absolute inset-0 object-cover"
+                    >
+                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/78fc95ec-8e59-4375-b6d5-2544779ae393.png" type="image/webp">
+                        <img
+                            aria-hidden="true"
+                            class="object-cover w-full h-full"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/78fc95ec-8e59-4375-b6d5-2544779ae393.png"
+                            alt="cover-photo"
+                            fetchpriority="high"
+                            loading="auto"
+                            decoding="sync"
+                        />
+                    </picture>
+                
 
+                
+                <div class="absolute inset-0 bg-black opacity-75"></div>
+            
+
+            <button
+                onclick="handleClose('showcases')"
+                @click="contactModalOpen = false;"
+                class="absolute z-10 p-1 transition rounded top-5 right-5 hover:bg-gray-100 text-white hover:text-gray-900 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+            >
+                    <span class="sr-only">Close modal</span>
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
 
             <div
-                @click.away="contactModalOpen = false"
-                class="inset-auto relative bg-white flex flex-row xl:pt-12 xl:pl-12 h-[90%] w-[90%] xl:w-5/6 xl:h-3/4 overflow-hidden text-left align-bottom transition-all transform  border border-secondary"
+                @click.stop
+                class="fixed inset-0 sm:inset-auto sm:relative bg-primary flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full sm:border sm:border-secondary"
             >
-                <button
-                    onclick="handleClose('showcases')"
-                    @click="contactModalOpen = false;"
-                    class="absolute z-30 bg-white xl:hidden transition group p-2 border-2 border-primary top-4 right-4 hover:bg-primary text-white hover:text-gray-900 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
-                >
-                    <span class="sr-only">Close modal</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path class="stroke-primary group-hover:stroke-white" d="M6 18L17.94 6M18 18L6.06 6" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <div class="hidden pb-20 mr-8 xl:block">
-                    <h2 class="text-5xl font-extrabold whitespace-nowrap text-center text-secondary" id="send-us-a-text-header">Send us a text</h2>
-                    <div>
+                <div class="sm:hidden relative px-6">
+                    <h2 class="mt-6 text-2xl font-bold text-center text-white" id="mobile-screen-send-us-a-text-header">Send us a text</h2>
+                    <p class="mb-3 mt-1 font-normal text-base text-center text-white" id="mobile-screen-send-us-a-text-subheader">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                </div>
+                <div class="hidden sm:relative sm:px-6 sm:flex sm:flex-col">
+                    <h2 class="mt-6 text-6xl font-extrabold text-center text-white" id="send-us-a-text-header">Send us a text</h2>
+                    <p class="my-6 text-lg text-center text-white" id="send-us-a-text-subheader">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                </div>
+                <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
+                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('caro-landscaping', 'contact-modal', '+19083889616')">
+                    <div class="flex flex-col flex-shrink-1 h-auto sm:h-full overflow-x-hidden overflow-y-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                         
-                            
-                                <picture class="">
-                                    <source
-                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0766b6fa-76cf-43a9-9fcf-42f0a94b6ab5.png"
-                                        alt="Gunderson &amp; Ranieri Remodeling &amp; Rentals team in Boston, MA - people or person"
-                                    >
-                                    <img
-                                        class="relative z-10 max-h-[480px] xl:max-w-[360px] mx-auto xl:m-0  xl:mt-4 shadow-[5px_5px_0px_0px] shadow-secondary/30"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0766b6fa-76cf-43a9-9fcf-42f0a94b6ab5.png"
-                                        alt="Gunderson &amp; Ranieri Remodeling &amp; Rentals team in Boston, MA - people or person"
-                                        loading="lazy"
-                                    />
-                                </picture>
-                            
+                        
+                        <div>
+                            <label for="contact-full-name" class="font-medium text-base text-white">Full name *</label>
+                            <input
+                                type="text"
+                                name="full-name"
+                                id="contact-full-name"
+                                class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                placeholder="Jane Rodgers"
+                                required
+                            />
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div>
+                            <label for="contact-phone-number" class="font-medium text-base text-white">Photo number *</label>
+                            <input
+                                type="tel"
+                                name="phone-number"
+                                autocomplete="on"
+                                id="contact-phone-number"
+                                class="contact-phone-number block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                required
+                            />
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div>
+                                <label for="contact-address" class="font-medium text-base text-white">
+                                    Address<span> *</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    name="address"
+                                    id="contact-address"
+                                    class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                    placeholder="123 Main Street, Boston, MA 02212"
+                                    required
+                                />
+                            </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div>
+                            <label for="contact-short-answer-b558cbc3-6187-4576-b360-29a36ac96253" class="font-medium text-base text-white">Zipcode</label>
+                            <input
+                                type="text"
+                                name="short-answer-b558cbc3-6187-4576-b360-29a36ac96253"
+                                id="contact-short-answer-b558cbc3-6187-4576-b360-29a36ac96253"
+                                class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                placeholder="Type your response here..."
+                                
+                            />
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div>
+                            <label for="contact-email" class="font-medium text-base text-white">Email<span> *</span></label>
+                            <input
+                                type="text"
+                                name="email"
+                                id="contact-email"
+                                class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                placeholder="name@example.com"
+                                required
+                            />
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="relative">
+                            <label for="contact-date" class="font-medium text-base text-white">Preferred date</label>
+                            <div class="w-4 h-4 absolute transform translate-y-4.5 left-4"></div>
+                            <input id="contact-date" name="date" type="date" class="block text-left z-50 w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary" >
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="block sm:grid sm:col-span-2">
+                                <label class="font-medium text-base text-white">Services list</label>
+                                <fieldset class="bg-white p-4 sm:p-6 mt-1 rounded-sm" >
+                                    <div class="grid auto-cols-auto gap-4 grid-cols-2">
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-168398"
+                                                name="service-168398"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Cookin Some Chilli"
+                                            />
+                                            <label for="contact-service-168398" class="ml-3 text-sm font-normal text-gray-700">Cookin Some Chilli</label>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-168400"
+                                                name="service-168400"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Driveway Design & Build"
+                                            />
+                                            <label for="contact-service-168400" class="ml-3 text-sm font-normal text-gray-700">Driveway Design & Build</label>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-168401"
+                                                name="service-168401"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Fall and Spring Clean Up"
+                                            />
+                                            <label for="contact-service-168401" class="ml-3 text-sm font-normal text-gray-700">Fall and Spring Clean Up</label>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-168403"
+                                                name="service-168403"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Cheese Making"
+                                            />
+                                            <label for="contact-service-168403" class="ml-3 text-sm font-normal text-gray-700">Cheese Making</label>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-168404"
+                                                name="service-168404"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Stone Wall Installation"
+                                            />
+                                            <label for="contact-service-168404" class="ml-3 text-sm font-normal text-gray-700">Stone Wall Installation</label>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-168407"
+                                                name="service-168407"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Retaining Wall Construction"
+                                            />
+                                            <label for="contact-service-168407" class="ml-3 text-sm font-normal text-gray-700">Retaining Wall Construction</label>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-168417"
+                                                name="service-168417"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Pressure Washing"
+                                            />
+                                            <label for="contact-service-168417" class="ml-3 text-sm font-normal text-gray-700">Pressure Washing</label>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-171432"
+                                                name="service-171432"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Softscaping, and Hardscaping"
+                                            />
+                                            <label for="contact-service-171432" class="ml-3 text-sm font-normal text-gray-700">Softscaping, and Hardscaping</label>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center">
+                                            <input
+                                                id="contact-service-171710"
+                                                name="service-171710"
+                                                type="checkbox"
+                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                value="Guard Dogs"
+                                            />
+                                            <label for="contact-service-171710" class="ml-3 text-sm font-normal text-gray-700">Guard Dogs</label>
+                                        </div>
+
+                                        
+
+                                        <div class="flex flex-col">
+                                                <div class="flex items-center">
+                                                     <input
+                                                            id="contact-service-other-checkbox"
+                                                            name="service-other"
+                                                            type="checkbox"
+                                                            class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
+                                                            value="Other"
+                                                            onclick="toggleOtherServices()"
+                                                        />
+                                                    <label for="contact-label-service-other-checkbox" class="ml-3 text-sm text-gray-600">Other</label>
+                                                </div>
+                                            <input
+                                                id="contact-service-other-text"
+                                                name="service-other-text"
+                                                type="text"
+                                                class="ml-4 block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
+                                            />
+                                            </div>
+
+                                    </div>
+                                </fieldset>
+                            </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="block sm:grid sm:col-span-2">
+                                <label for="contact-paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0" class="font-medium text-base text-white">How can we help?<span> *</span></label>
+                                <textarea
+                                    id="contact-paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0"
+                                    name="paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0"
+                                    rows="4"
+                                    class="block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
+                                    placeholder="Type your response here..."
+                                    required
+                                ></textarea>
+                            </div>
+                        
+                        
+                        
+                        
+                        
+                        
                         
                     </div>
-                </div>
-
-                <form id="contactModal" class="w-full relative overflow-y-auto" onsubmit="send_sms('caro-landscaping', 'contact-modal', '+19083889616')">
-                    <div class="h-full pb-24 overflow-y-auto">
-                        <div class="flex flex-col justify-center gap-12 p-4 pb-0 xl:p-0 mx-auto">
-
-                            <div class="h-auto gap-12 xl:pr-8 flex flex-col justify-center xl:flex-row">
-                                <div class="xl:hidden">
-                                    <div class="">
-                                        
-                                            
-                                                <picture class="">
-                                                    <source
-                                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/0766b6fa-76cf-43a9-9fcf-42f0a94b6ab5.png"
-                                                        alt="Gunderson &amp; Ranieri Remodeling &amp; Rentals team in Boston, MA - people or person"
-                                                    >
-                                                    <img
-                                                        class="relative z-10 h-[200px] mx-auto  xl:m-0 xl:min-h-lg xl:mt-4 shadow-[5px_5px_0px_0px] shadow-secondary/30"
-                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/0766b6fa-76cf-43a9-9fcf-42f0a94b6ab5.png"
-                                                        alt="Gunderson &amp; Ranieri Remodeling &amp; Rentals team in Boston, MA - people or person"
-                                                        loading="lazy"
-                                                    />
-                                                </picture>
-                                            
-                                        
-                                    </div>
-                                    <h2 class="text-[40px] xl:text-5xl font-extrabold sm:whitespace-nowrap text-secondary" id="send-us-a-text-header">Send us a text</h2>
-                                </div>
-
-                                <div>
-                                    <span class="text-2xl font-semibold">Contact Information</span>
-                                    
-                                        
-                                            <div>
-                                                <label for="contact-full-name" class="font-medium xl:text-base text-gray-600 text-sm">Full name *</label>
-                                                <input
-                                                    type="text"
-                                                    name="full-name"
-                                                    id="contact-full-name"
-                                                    class="block w-full  py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200  focus:ring-secondary focus:border-secondary"
-                                                    placeholder="Jane Rodgers"
-                                                    required
-                                                />
-                                            </div>
-                                        
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-                                        
-                                        
-                                            <div>
-                                                <label for="contact-email" class="font-medium xl:text-base text-gray-600 text-sm">Email<span> *</span></label>
-                                                <input
-                                                    type="text"
-                                                    name="email"
-                                                    id="contact-email"
-                                                    class="block w-full py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
-                                                    placeholder="name@example.com"
-                                                    required
-                                                />
-                                            </div>
-                                        
-                                    
-                                        
-                                        
-                                            <div>
-                                                <label for="contact-phone-number" class="font-medium xl:text-base text-gray-600 text-sm">Photo number *</label>
-                                                <input
-                                                    type="tel"
-                                                    name="phone-number"
-                                                    autocomplete="on"
-                                                    id="contact-phone-number"
-                                                    class="contact-phone-number block w-full  py-2.5 mt-1 border-2 border-gray-200 rounded-sm shadow-sm focus:ring-secondary focus:border-secondary"
-                                                    required
-                                                />
-                                            </div>
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-                                        
-                                            <div>
-                                                <label for="contact-address" class="font-medium xl:text-base text-gray-600 text-sm">
-                                                    Address
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    name="address"
-                                                    id="contact-address"
-                                                    class="block w-full  py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
-                                                    placeholder="123 Main Street, Boston, MA 02212"
-                                                    
-                                                />
-                                            </div>
-                                        
-                                        
-                                    
-                                        
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-                                        
-                                        
-                                    
-                                </div>
-                                <div>
-                                    <span class="text-2xl font-semibold ">Booking</span>
-                                    
-                                        
-                                        
-
-
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-
-
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-
-
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-
-
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-                                            <div class="block sm:grid sm:col-span-2">
-                                                <label for="contact-paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0" class="font-medium xl:text-base text-gray-600 text-sm">Would you like free flowers as part of your service?</label>
-                                                <textarea
-                                                    id="contact-paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0"
-                                                    name="paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0"
-                                                    rows="4"
-                                                    class="block py-2.5 px-2.5 mt-1 w-full  rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
-                                                    placeholder="Type your response here..."
-                                                    
-                                                ></textarea>
-                                            </div>
-                                        
-
-
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        <div>
-                                            <label for="contact-short-answer-b558cbc3-6187-4576-b360-29a36ac96253" class="font-medium xl:text-base text-gray-600 text-sm">short response test </label>
-                                            <input
-                                                type="text"
-                                                name="short-answer-b558cbc3-6187-4576-b360-29a36ac96253"
-                                                id="contact-short-answer-b558cbc3-6187-4576-b360-29a36ac96253"
-                                                class="block w-full  py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
-                                                placeholder="Type your response here..."
-                                                
-                                            />
-                                        </div>
-                                        
-                                        
-
-
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        <div>
-                                            <label for="contact-short-answer-bfaa9f19-2d70-479d-969e-62b788417528" class="font-medium xl:text-base text-gray-600 text-sm">Budget?</label>
-                                            <input
-                                                type="text"
-                                                name="short-answer-bfaa9f19-2d70-479d-969e-62b788417528"
-                                                id="contact-short-answer-bfaa9f19-2d70-479d-969e-62b788417528"
-                                                class="block w-full  py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
-                                                placeholder="Type your response here..."
-                                                
-                                            />
-                                        </div>
-                                        
-                                        
-
-
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
-
-
-                                        
-                                        
-                                            <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
-                                                <label class="font-medium text-base text-gray-600">Photo upload</label>
-                                                <div class='bg-white mt-1 rounded-sm border-2 border-gray-200 rounded-sm'>
-                                                    <div
-                                                            x-data="{
-                                                                imageUrl: '',
-                                                                fileTooLarge: false,
-                                                                fileChosen(event) {
-                                                                    if (this.isProperlySized(event)) {
-                                                                        this.fileToDataUrl(event, (src) => (this.imageUrl = src));
-                                                                        this.fileTooLarge = false;
-                                                                    }
-                                                                    else
-                                                                        this.fileTooLarge = true;
-                                                                },
-                                                                fileToDataUrl(event, callback) {
-                                                                    if (!event.target.files.length) return;
-                                                                    let file = event.target.files[0],
-                                                                        reader = new FileReader();
-                                                                    reader.readAsDataURL(file);
-                                                                    reader.onload = (e) => callback(e.target.result);
-                                                                },
-                                                                isProperlySized(event) {
-                                                                    const files = event.currentTarget.files;
-                                                                    for (const file in files) {
-                                                                        const filesize = ((files[file].size/1024)/1024).toFixed(4);
-                                                                        if (filesize > 10)
-                                                                            return false;
-                                                                    }
-                                                                    return true;
-                                                                },
-                                                            }"
-                                                    >
-                                                        <div x-show="imageUrl !== ''" x-collapse>
-                                                            <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
-                                                                <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
-                                                                <button
-                                                                        @click="imageUrl = ''; $refs.fileInput.value = '';"
-                                                                        type="button"
-                                                                        class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-600  shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                                                >
-                                                                    Change
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <label
-                                                            for="file-upload"
-                                                            class="relative font-medium rounded-sm cursor-pointer text-gray-600"
-                                                        >
-                                                            <div x-show="imageUrl === ''" x-collapse>
-                                                                <div
-                                                                    x-on:dragenter.prevent.stop
-                                                                    x-on:dragleave.prevent.stop
-                                                                    class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 rounded-sm"
-                                                                >
-                                                                    <div class="space-y-1 text-center">
-                                                                        <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                                                            <path
-                                                                                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                                                                    stroke-width="2"
-                                                                                    stroke-linecap="round"
-                                                                                    stroke-linejoin="round"
-                                                                            />
-                                                                        </svg>
-                                                                        <div class="flex justify-center text-sm text-gray-600">
-                                                                            <span class="text-gray-600">Upload a photo</span>
-                                                                            <input
-                                                                                x-ref="fileInput"
-                                                                                id="file-upload"
-                                                                                name="file-upload"
-                                                                                type="file"
-                                                                                class="sr-only"
-                                                                                @change="fileChosen"
-                                                                            />
-                                                                        </div>
-                                                                        <p class="text-xs text-gray-600">PNG, JPG, GIF up to 10MB</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                        <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
-                                                            The selected file is too large. Please reduce the size or choose another file.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                        
-                                    
-                                </div>
-                            </div>
-                            
-                                <div class="text-gray-600 flex-1 text-sm font-normal mt-1.5">
+                    
+                    <div class="flex flex-col flex-shrink-0 z-50 px-6 pt-3 pb-4 bg-primary w-full align-middle items-center justify-center shadow-top-lg">
+                        
+                            <div class="text-gray-300 text-sm font-normal mt-1.5">
                                 By providing your phone number, you agree to receive text messages (SMS) from Gunderson &amp; Ranieri Remodeling &amp; Rentals. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.
                             </div>
-                            
-                        </div>
-
                         
-                        <div class="z-50 absolute bottom-0  flex-row gap-8 p-5 xl:pr-12 bg-white flex w-full align-middle items-center justify-end">
-                            <button
-                                onclick="handleClose('showcases')"
-                                @click="contactModalOpen = false;"
-                                class="hidden sm:block w-full sm:w-auto"
-                            >
-                                <span
-                                    class="flex justify-center rounded-sm font-bold w-full  px-6 py-4 overflow-hidden bg-white text-black  hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300 border-2 border-primary hover:border-tertiary box-border uppercase"
-                                >
-                                    Close
-                                </span>
-                            </button>
-                            <div class="relative w-full sm:w-auto">
-                                <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -top-2 -right-[10px]"></div>
-                                <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -bottom-2 -left-[10px]"></div>
-                                <div
-                                        class="relative w-full sm:w-auto gap-8 sm:gap-4 cta_text_button text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
-                                >
-                                    <button
-                                        id='sendButton'
-                                        class="flex py-4 px-6 justify-center items-center font-bold w-full whitespace-nowrap overflow-hidden  uppercase">
-                                            submit form
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        <button
+                            id='sendButton'
+                            class="custom_text_color text-white cta_text_conversion flex justify-center relative rounded-sm mx-4 py-2.5 mt-6 sm:mt-4 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase"
+                        >
+                            Send
+                        </button>
                     </div>
                 </form>
             </div>
@@ -4174,6 +4182,8 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </li>
                         
                     
+                        
+                    
                 </ul>
             </div>
         </div>
@@ -4277,7 +4287,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="mailto:jahmar+1@toplinepro.com?subject=landscaping near me Job - Requesting a quote&body=Hi Jahmar,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                                href="mailto:jahmar@toplinepro.com?subject=landscaping near me Job - Requesting a quote&body=Hi jahmar,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
                                 class="flex justify-center rounded-sm px-6 py-4  overflow-hidden bg-tertiary text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border-2 border-secondary hover:border-tertiary box-border uppercase whitespace-nowrap"
                             >
                                 Email Us
