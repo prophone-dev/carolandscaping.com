@@ -896,15 +896,6 @@
                                 </div>
                             
                             
-                                <a
-                                    href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
-                                    target="_blank"
-                                    class=" border-transparent  py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                    :class="{ 'hover:border-gray-100 hover:text-gray-100 text-white': !scrolledFromTop, 'hover:border-gray-300 hover:text-gray-700 text-gray-900': scrolledFromTop }"
-                                >
-                                    Pay now
-                                </a>
-                            
 
                         </div>
 
@@ -1347,16 +1338,6 @@
                                     
                                 </div>
                             
-                            
-                                <div x-trap.inert="openMenu == ''">
-                                    <a
-                                        href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
-                                        target="_blank"
-                                        class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
-                                    >
-                                        Pay Now
-                                    </a>
-                                </div>
                             
                         </div>
                         <div class="flex flex-col gap-4 w-full py-6 px-4 bg-primary flex-initial">
@@ -2079,6 +2060,7 @@
                                     id="contact-address"
                                     class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
                                     placeholder="123 Main Street, Boston, MA 02212"
+                                    onkeydown="if(event.key === 'Enter') event.preventDefault();"
                                     
                                 />
                             </div>
@@ -2788,7 +2770,7 @@
                             
                               <div class="text-base leading-6 break-all">+17742619415</div>
                             
-                            <div class="text-base leading-6 break-all">ann.kolivanova@gmail.com</div>
+                            <div class="text-base leading-6 break-all"></div>
                         </div>
                     </div>
     
