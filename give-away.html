@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/ea4dc594-4286-444d-bfb6-2717ce33545f.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/b8674bcf-6df3-40d1-b95a-f462a4f1f178.jpeg");
       background-size: cover;
   }
   
@@ -221,7 +221,6 @@
             
 
 <style>
-
     .mobile-navbar-content-height {
         height: calc(100vh - 76px);
     }
@@ -230,12 +229,20 @@
 <nav
     id="nav-bar"
     x-ref="navbar"
-    x-data="{ scrolledFromTop: false, customNavTransparent:  true  }"
+    x-data="{ scrolledFromTop: false, customNavTransparent:  true , primaryWhite:  false  }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false; "
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     class="w-screen fixed top-0 inset-x-0 z-50"
+    :class="{
+         
+             'bg-transparent': !scrolledFromTop,
+             
+                 'bg-white': scrolledFromTop
+             
+         
+     }"
     data-heap-component-name="navigation"
-    data-heap-version="v3"
+    data-heap-version="v4"
 >
 
     <div
@@ -246,7 +253,10 @@
         x-transition:leave-end="max-h-0"
         class="overflow-hidden"
     >
-        <div style="background-color:#a5559a" class="flex p-4 space-x-3 bg-green-50 text-sm font-medium text-green-500 align-center">
+        <div    class="flex p-4 space-x-3 bg-green-50 text-sm font-medium text-green-500 align-center"
+                style="background-color:#a5559a"
+
+        >
             
                 <span style="color:#1310bc;" class="flex items-center">
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
@@ -269,42 +279,48 @@
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-ref="nav_menu"
         x-init="
-        window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false
+            window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false
 
-        const root = document.querySelector(':root');
+            const root = document.querySelector(':root');
 
-        const observer = new ResizeObserver(() => {
-            navbarHeight = calculateTopMargin ? 
-                $refs.navbar.offsetHeight + 'px' :
-                $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px';
-               
-            root.style.setProperty('--navbarHeight', navbarHeight);
-        });
-        observer.observe($refs.navbar);
+            const observer = new ResizeObserver(() => {
+                navbarHeight = calculateTopMargin ?
+                    $refs.navbar.offsetHeight + 'px' :
+                    $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px';
+
+                root.style.setProperty('--navbarHeight', navbarHeight);
+            });
+            observer.observe($refs.navbar);
+            "
+            @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+            :class="{
+                
+                    'translate-y-0 h-16  xl:h-[160px] ': !scrolledFromTop,
+                    'h-16 xl:h-[92px] shadow-magical': scrolledFromTop
+                
+            }
         "
-        @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-        :class="{ 'bg-transparent translate-y-0 h-16 xl:h-[84px]': !scrolledFromTop, 'bg-white h-16 xl:h-[84px] shadow-magical': scrolledFromTop }"
-        class="relative transition-all duration-200 "
+        class="relative transition-all duration-500"
     >
         <div
             x-cloak
-            class="h-full transition duration-0 border-b border-secondary"
-            :class="{ 'border-b border-secondary pl-0 sm:pl-0': scrolledFromTop,'px-4 sm:px-6 xl:px-10': !scrolledFromTop, 'px-4 sm:px-6 xl:pr-10 xl:pl-0': scrolledFromTop }"
+            class="h-full  transition duration-0"
+            :class="scrolledFromTop ? 'border-b border-slate-700 px-4 xl:px-8' : 'px-4 xl:px-8'"
         >
-            <div class="flex justify-between items-center xl:items-start h-full gap-6">
+            <div class="flex justify-between items-center  xl:items-start  h-full gap-6">
                 
                     <a
-                        href= " ./"
-                        class="h-full max-h-full "
-                        :class="{ 'sm:h-full': scrolledFromTop, 'sm:h-none': !scrolledFromTop }"
+                        href=" ./"
+                        class=" transition-all ease-out duration-300"
+                        :class="scrolledFromTop ? 'h-12 xl:h-[90px] flex justify-center items-center' : 'sm:h-none h-16 xl:h-[160px]'"
                     >
                         
                             <img
                                 src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/de5d9a25-7133-4487-bf0c-fe8654c6c4d4.jpeg"
                                 class="object-contain max-h-full  max-w-xs sm:max-w-sm "
-                                :class="{ 'sm:h-full sm:max-h-full': scrolledFromTop, 'sm:h-auto sm:max-h-none': !scrolledFromTop, 'border-r border-secondary': scrolledFromTop, 'rounded-b-sm border-b border-l border-r border-secondary': !scrolledFromTop }"
+                                :class=""
                                 alt="Brand Logo"
-                                
+                                style="max-width: 265px;"
                                 loading="auto"
                                 fetchpriority="high"
                                 decoding="auto"
@@ -318,21 +334,28 @@
 
                 
                     <div
-                        class="flex flex-row items-center xl:hidden"
-                        :class="{ 'text-white': !scrolledFromTop, 'text-gray-900': scrolledFromTop }"
+                        class="xl:hidden border-[3px] border-box  shadow-[5px_5px_0px_0px] shadow-primary/30"
+                        :class="{
+                            
+                                'text-white border-white' : !scrolledFromTop,
+                                'text-primary border-primary' : scrolledFromTop
+                            
+                        }"
                     >
-                        <span class="uppercase">MENU</span>
-                        <button @click="mobileOpen = !mobileOpen" class="p-2" aria-label="mobile menu button">
-                            <span hidden class="sr-only">Open/CLose menu TODO:</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                        <button @click="mobileOpen = !mobileOpen" class="flex flex-row items-center px-4 py-[10px] gap-[10px]" aria-label="mobile menu button">
+                            <span class="uppercase text-sm font-bold">MENU</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
                     </div>
 
-                    <div class="h-full items-center hidden xl:flex xl:flex-1 xl:justify-between text-base font-bold gap-6">
+                    <div
+                        class="items-center py-4  hidden xl:flex w-full justify-end text-base font-bold"
+                    >
                         <div
-                            class="hidden transition-all duration-200 xl:flex xl:gap-4 items-center"
+                            class="mx-auto hidden transition-all  duration-200 xl:flex xl:gap-4 items-center"
                         >
                             
                                 <div
@@ -345,10 +368,18 @@
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-center  border-transparent   hover:border-gray-300 hover:text-gray-700  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-100 hover:text-gray-100 text-white': !scrolledFromTop, 'hover:border-gray-300 hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            Home
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                Home
+                                            </span>
                                         </a>
                                     
                                     
@@ -369,10 +400,16 @@
                                             :aria-expanded="desktopOpen"
                                             aria-controls="navitem_2"
                                             @click="desktopOpen = !desktopOpen"
-                                            class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                            :class="{ 'text-white hover:text-gray-100': !scrolledFromTop, 'hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            <span class="block py-3.5 ">Services</span>
+                                            <span class="block px-2 py-1 uppercase ">Services</span>
                                             <svg
                                                 class="w-5 h-5 ml-2 transition-transform duration-300"
                                                 :class="{ '-rotate-180': desktopOpen }"
@@ -401,7 +438,7 @@
                                             x-transition:leave-end="opacity-0 translate-y-1"
                                             id="navitem_2"
                                             role="menu"
-                                            class="absolute z-20  -left-6"
+                                            class="absolute z-50  -left-6"
                                             aria-orientation="vertical"
                                         >
                                             <div class="overflow-hidden rounded-lg shadow-lg">
@@ -555,10 +592,16 @@
                                             :aria-expanded="desktopOpen"
                                             aria-controls="navitem_3"
                                             @click="desktopOpen = !desktopOpen"
-                                            class="text-center inline-flex items-center pl-1.5 pr-1 transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
-                                            :class="{ 'text-white hover:text-gray-100': !scrolledFromTop, 'hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            <span class="block py-3.5 ">Galleries</span>
+                                            <span class="block px-2 py-1 uppercase ">Galleries</span>
                                             <svg
                                                 class="w-5 h-5 ml-2 transition-transform duration-300"
                                                 :class="{ '-rotate-180': desktopOpen }"
@@ -587,7 +630,7 @@
                                             x-transition:leave-end="opacity-0 translate-y-1"
                                             id="navitem_3"
                                             role="menu"
-                                            class="absolute z-20  -left-6"
+                                            class="absolute z-50  -left-6"
                                             aria-orientation="vertical"
                                         >
                                             <div class="overflow-hidden rounded-lg shadow-lg">
@@ -785,10 +828,18 @@
                                     
                                         <a
                                             href=" showcases "
-                                            class="text-center  border-transparent   hover:border-gray-300 hover:text-gray-700  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-100 hover:text-gray-100 text-white': !scrolledFromTop, 'hover:border-gray-300 hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            Showcases
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                Showcases
+                                            </span>
                                         </a>
                                     
                                     
@@ -805,10 +856,18 @@
                                     
                                         <a
                                             href=" reviews "
-                                            class="text-center  border-transparent   hover:border-gray-300 hover:text-gray-700  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-100 hover:text-gray-100 text-white': !scrolledFromTop, 'hover:border-gray-300 hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            Reviews
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                Reviews
+                                            </span>
                                         </a>
                                     
                                     
@@ -825,10 +884,18 @@
                                     
                                         <a
                                             href=" our-team "
-                                            class="text-center  border-transparent   hover:border-gray-300 hover:text-gray-700  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-100 hover:text-gray-100 text-white': !scrolledFromTop, 'hover:border-gray-300 hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            Our team
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                Our team
+                                            </span>
                                         </a>
                                     
                                     
@@ -845,10 +912,18 @@
                                     
                                         <a
                                             href=" jobs "
-                                            class="text-center  border-transparent   hover:border-gray-300 hover:text-gray-700  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-100 hover:text-gray-100 text-white': !scrolledFromTop, 'hover:border-gray-300 hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            Jobs
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                Jobs
+                                            </span>
                                         </a>
                                     
                                     
@@ -865,10 +940,18 @@
                                     
                                         <a
                                             href=" blog "
-                                            class="text-center  border-transparent   hover:border-gray-300 hover:text-gray-700  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-100 hover:text-gray-100 text-white': !scrolledFromTop, 'hover:border-gray-300 hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            Blog
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                Blog
+                                            </span>
                                         </a>
                                     
                                     
@@ -885,10 +968,18 @@
                                     
                                         <a
                                             href=" give-away "
-                                            class="text-center  border-secondary hover:border-gray-300    hover:border-gray-300 hover:text-gray-700  group pl-1.5 pr-1 py-3.5 inline-flex items-center px-1 transition  border-b-2  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
-                                            :class="{ 'hover:border-gray-100 hover:text-gray-100 text-white': !scrolledFromTop, 'hover:border-gray-300 hover:text-gray-700 text-gray-900': scrolledFromTop }"
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    
+                                                        'text-gray-900' : true
+                                                    
+                                                
+                                            }"
                                         >
-                                            GIVE AWAY
+                                            <span class="block px-2 py-1 text-center uppercase  bg-secondary/60 ">
+                                                GIVE AWAY
+                                            </span>
                                         </a>
                                     
                                     
@@ -896,35 +987,73 @@
                                 </div>
                             
                             
+                                <a
+                                    href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
+                                    target="_blank"
+                                    class="text-center inline-flex items-center transition hover:text-secondary"
+                                    :class="{
+                                        
+                                            
+                                                'text-gray-900' : true
+                                            
+                                        
+                                    }"
+                                >
+                                    <span class="block px-2 py-1 text-center uppercase ">
+                                        PAY NOW
+                                    </span>
+                                </a>
+                            
 
                         </div>
 
-                        <div class="flex gap-4 items-center">
+                        <div class="flex gap-4 xl:gap-8 items-center">
+
 
                             
+
+
                             
+
                             
+
                             
+
                             
-                            <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button">
-                                <button
-                                    @click="contactModalOpen = true"
-                                    class="flex justify-center w-full rounded-sm px-6 py-[13px] overflow-hidden bg-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 text-sm uppercase tracking-tight font-black text-tertiary"
+                            <div class="relative">
+                                <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -top-2 -right-[10px]"></div>
+                                <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -bottom-2 -left-[10px]"></div>
+                                <div
+                                    onclick="postCtaClick('text')"
+                                    class="relative w-full  sm:w-auto cta_text_button text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
                                 >
-                                    Get a Quote
-                                </button>
+
+                                    <button
+                                        @click="contactModalOpen = true"
+                                        class="flex justify-center items-center w-full  py-4 px-6  overflow-hidden  uppercase text-base font-bold"
+
+                                    >
+                                        Get a Quote
+                                    </button>
+                                </div>
                             </div>
                             
 
 
                             
+
+
                             
-                                <div onclick="postCtaClick('link')" class="w-full sm:w-auto cta_text_button">
+                                <div
+                                    onclick="postCtaClick('link')"
+                                    class="w-full sm:w-auto cta_text_button rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300 border-2 border-primary hover:border-white box-border"
+                                    :class="primaryWhite ? 'hover:ring-secondary border-secondary hover:border-secondary' : ''"
+                                >
                                     <a
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         href="https://calendly.com/caro-landscaping/15min"
-                                        class="flex justify-center rounded-sm px-6 py-[13px] overflow-hidden bg-tertiary text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border border-secondary hover:border-tertiary box-border text-sm uppercase tracking-tight font-black"
+                                        class="flex justify-center w-full  px-6 py-4 overflow-hidden bg-white text-black  uppercase"
                                     >
                                         Book Now
                                     </a>
@@ -951,14 +1080,14 @@
                 x-transition:leave="duration-100 ease-in"
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-95"
-                class="fixed inset-0 z-50 transition transform xl:hidden"
+                class="fixed inset-0 z-[9999] transition transform xl:hidden"
             >
-                <div class="w-full h-full bg-tertiary ring-1 ring-black ring-opacity-5 flex flex-col">
+                <div class="w-full px-6 py-2 h-full bg-tertiary ring-1 ring-black ring-opacity-5">
                     <div class="flex bg-tertiary items-center justify-between flex-initial">
                         
                             <a
                                 href=" ./"
-                                class="flex items-center justify-center flex-shrink-0 bg-tertiary rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
+                                class="flex flex-1 items-center flex-shrink-0 bg-tertiary rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                             >
                             
                                 <picture>
@@ -967,7 +1096,7 @@
                                         srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/de5d9a25-7133-4487-bf0c-fe8654c6c4d4.jpeg" loading="auto"
                                     >
                                     <img
-                                        class="h-[76px] w-auto object-contain"
+                                        class="h-[76px] w-full object-contain"
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/de5d9a25-7133-4487-bf0c-fe8654c6c4d4.jpeg"
                                         alt="Brand Logo"
                                         width="76"
@@ -983,24 +1112,28 @@
                         <button
                             @click="mobileOpen = false"
                             type="button"
-                            class="mr-4 p-3 inline-flex items-center justify-center text-gray-900 bg-tertiary rounded-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-900"
+                            class="flex flex-row items-center xl:hidden border-[3px] px-4 border-primary py-[10px] gap-[10px] shadow-[5px_5px_0px_0px] shadow-primary/30"
                         >
-                            <span class="sr-only">Close menu</span>
-                            <svg class="text-gray-900" width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 18L18 2M2 2L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <span class="uppercase text-sm text-primary font-bold">Close</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path class="stroke-primary" d="M6 18L17.94 6M18 18L6.06 6" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </div>
                     <div class="flex flex-col justify-between h-full">
-                        <div x-data="{ openMenu: '' }" class="overflow-y-auto pt-2 pb-3 space-y-1 flex-auto">
+                        <div x-data="{ openMenu: '' }" class="overflow-y-auto pt-8 pb-28 flex flex-col gap-4 flex-auto">
                             
                                 <div x-trap.inert="openMenu == 'navitem_1'">
                                     
                                         <a
                                             href=" ./ "
-                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="block text-base font-bold transition duration-75 uppercase"
                                         >
-                                            Home
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                Home
+                                            </span>
                                         </a>
                                     
                                     
@@ -1013,9 +1146,9 @@
                                             :aria-expanded="openMenu == 'navitem_2'"
                                             aria-controls="mobile-navitem_2"
                                             @click="openMenu = openMenu == 'navitem_2' ? '' : 'navitem_2'"
-                                            class="flex justify-between items-center w-full p-4 text-base font-bold text-gray-900 transition duration-75 uppercase"
+                                            class="flex justify-between items-center w-full  transition duration-75 uppercase"
                                         >
-                                            <span>Services</span>
+                                            <span class=" px-2 text-2xl font-bold hover:bg-primary hover:text-white">Services</span>
                                             <svg x-show="openMenu == 'navitem_2'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path d="M15 10H5" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
@@ -1033,86 +1166,116 @@
                                             role="menu"
                                             aria-orientation="vertical"
                                         >
-                                            <div class="flex flex-col">
+                                            <div class="flex flex-col py-4 px-4 gap-4">
                                                 
                                                     <a
                                                         href="service-Cookin-Some-Chilli"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Cookin Some Chilli
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Cookin Some Chilli
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-Driveway-Design---Build"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Driveway Design &amp; Build
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Driveway Design &amp; Build
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-Fall-and-Spring-Clean-Up"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Fall and Spring Clean Up
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Fall and Spring Clean Up
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-Cheese-Making"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Cheese Making
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Cheese Making
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-Stone-Wall-Installation"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Stone Wall Installation
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Stone Wall Installation
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-Retaining-Wall-Construction"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Retaining Wall Construction
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Retaining Wall Construction
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-pressure-washing"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Pressure Washing
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Pressure Washing
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-landscape-management-softscaping-and-hardscaping"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Softscaping, and Hardscaping
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Softscaping, and Hardscaping
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-guard-dogs"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Guard Dogs
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Guard Dogs
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="service-backyard-band"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Backyard Band
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Backyard Band
+                                                        </span>
+
                                                     </a>
                                                 
                                             </div>
@@ -1127,9 +1290,9 @@
                                             :aria-expanded="openMenu == 'navitem_3'"
                                             aria-controls="mobile-navitem_3"
                                             @click="openMenu = openMenu == 'navitem_3' ? '' : 'navitem_3'"
-                                            class="flex justify-between items-center w-full p-4 text-base font-bold text-gray-900 transition duration-75 uppercase"
+                                            class="flex justify-between items-center w-full  transition duration-75 uppercase"
                                         >
-                                            <span>Galleries</span>
+                                            <span class=" px-2 text-2xl font-bold hover:bg-primary hover:text-white">Galleries</span>
                                             <svg x-show="openMenu == 'navitem_3'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path d="M15 10H5" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
@@ -1147,118 +1310,160 @@
                                             role="menu"
                                             aria-orientation="vertical"
                                         >
-                                            <div class="flex flex-col">
+                                            <div class="flex flex-col py-4 px-4 gap-4">
                                                 
                                                     <a
                                                         href="gallery-2-18-Gallery"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        2/18 Gallery
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            2/18 Gallery
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-Gallery-Rename"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Gallery Rename
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Gallery Rename
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-work"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        work
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            work
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-New-Gallery"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        New Gallery
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            New Gallery
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-moving-showcases-2-rename-"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        moving showcases 2 rename 
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            moving showcases 2 rename 
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-instagram"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        instagram
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            instagram
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-Moving-gallery-"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Moving gallery 
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Moving gallery 
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-Adam-New-Gallery-Test-Load"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Adam New Gallery Test Load
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Adam New Gallery Test Load
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-Adam-New-Gallery-Test-2"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Adam New Gallery Test 2
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Adam New Gallery Test 2
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-new-gallery-test"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        new gallery test
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            new gallery test
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-3-3-Gallery-Test-Edit-"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        3/3 Gallery Test Edit 
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            3/3 Gallery Test Edit 
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-New-Gallery-2"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        New Gallery 2
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            New Gallery 2
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-Test"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        Test
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            Test
+                                                        </span>
+
                                                     </a>
                                                 
                                                     <a
                                                         href="gallery-All"
                                                         role="menuitem"
-                                                        class="block py-4 px-8 transition duration-75 text-base font-semibold text-gray-900 hover:bg-primary hover:text-white uppercase"
+                                                        class="block"
                                                     >
-                                                        All Photos
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            All Photos
+                                                        </span>
+
                                                     </a>
                                                 
                                             </div>
@@ -1270,9 +1475,13 @@
                                     
                                         <a
                                             href=" showcases "
-                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="block text-base font-bold transition duration-75 uppercase"
                                         >
-                                            Showcases
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                Showcases
+                                            </span>
                                         </a>
                                     
                                     
@@ -1282,9 +1491,13 @@
                                     
                                         <a
                                             href=" reviews "
-                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="block text-base font-bold transition duration-75 uppercase"
                                         >
-                                            Reviews
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                Reviews
+                                            </span>
                                         </a>
                                     
                                     
@@ -1294,9 +1507,13 @@
                                     
                                         <a
                                             href=" our-team "
-                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="block text-base font-bold transition duration-75 uppercase"
                                         >
-                                            Our team
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                Our team
+                                            </span>
                                         </a>
                                     
                                     
@@ -1306,9 +1523,13 @@
                                     
                                         <a
                                             href=" jobs "
-                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="block text-base font-bold transition duration-75 uppercase"
                                         >
-                                            Jobs
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                Jobs
+                                            </span>
                                         </a>
                                     
                                     
@@ -1318,9 +1539,13 @@
                                     
                                         <a
                                             href=" blog "
-                                            class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="block text-base font-bold transition duration-75 uppercase"
                                         >
-                                            Blog
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                Blog
+                                            </span>
                                         </a>
                                     
                                     
@@ -1330,36 +1555,26 @@
                                     
                                         <a
                                             href=" give-away "
-                                            class="text-secondary block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                            class="block text-base font-bold transition duration-75 uppercase"
                                         >
-                                            GIVE AWAY
+                                            <span
+                                                class="bg-secondary/30 text-black text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                GIVE AWAY
+                                            </span>
                                         </a>
                                     
                                     
                                 </div>
                             
                             
-                        </div>
-                        <div class="flex flex-col gap-4 w-full py-6 px-4 bg-primary flex-initial">
-                            
-                                <div onclick="postCtaClick('text')">
-                                    <button
-                                    @click="contactModalOpen = true"
-                                    class="block w-full px-8 py-[13px] whitespace-nowrap font-bold text-center rounded-sm bg-secondary text-white hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 text-lg leading-6 font-black tracking-tight uppercase"
-                                    >
-                                        Get a Quote
-                                    </button>
-                                </div>
-                            
-
-                            
-                                <div onclick="postCtaClick('link')">
+                                <div x-trap.inert="openMenu == ''">
                                     <a
-                                        target="_blank" rel="noopener noreferrer"
-                                        href="https://calendly.com/caro-landscaping/15min"
-                                        class="flex items-center justify-center w-full px-8 py-[13px] whitespace-nowrap transition bg-white text-secondary rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border border-secondary hover:border-tertiary box-border text-lg leading-6 font-black tracking-tight uppercase"
+                                        href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
+                                        target="_blank"
+                                        class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
                                     >
-                                        Book Now
+                                        Pay Now
                                     </a>
                                 </div>
                             
@@ -1383,15 +1598,15 @@
      || window.location.href.includes('localhost')) && window.location.href.includes('m/v2/b/'))) {
         launchBanner.style.display = 'block'
         if (isMobile) {
-            navBar.className = "fixed inset-x-0 sm:top-16 z-50 transition-all duration-200"
+            navBar.className = "fixed inset-x-0 sm:top-16 z-40 transition-all duration-200"
             contactUsButton.href = "tel:8573653045"
         } else {
-            navBar.className = "fixed inset-x-0 top-0 sm:top-16 z-50 transition-all duration-200"
+            navBar.className = "fixed inset-x-0 top-0 sm:top-16 z-40 transition-all duration-200"
             contactUsButton.href = "mailto:support@prophone.com?subject=ProPhone - Sales Inquiry"
         }
     } else {
         launchBanner.style.display = 'none'
-        navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-50 transition-all duration-200"
+        navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-40 transition-all duration-200"
     }
 
     async function postCtaClick(type) {
@@ -1407,15 +1622,7 @@
     }
 </script>
 
-<style>
 
-    @media (max-width: 500px) {
-        .logo {
-            width: 160px;
-        }
-    }
-
-</style>
         
         
             
@@ -2557,7 +2764,7 @@
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="mailto:ann.kolivanova@gmail.com?subject=landscaping near me Job - Requesting a quote&body=Hi ,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                                href="mailto:jahmar@toplinepro.com?subject=landscaping near me Job - Requesting a quote&body=Hi jahmar,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
                                 class="flex justify-center rounded-sm px-6 py-4  overflow-hidden bg-tertiary text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border-2 border-secondary hover:border-tertiary box-border uppercase whitespace-nowrap"
                             >
                                 Email Us
@@ -2618,7 +2825,7 @@
                             
                               <div class="text-base leading-6 break-all">+17742619415</div>
                             
-                            <div class="text-base leading-6 break-all"></div>
+                            <div class="text-base leading-6 break-all">ann.kolivanova@gmail.com</div>
                         </div>
                     </div>
     
