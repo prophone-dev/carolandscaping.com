@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/b8674bcf-6df3-40d1-b95a-f462a4f1f178.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/fce98c04-926d-45a7-8c66-22b9901afb05.jpeg");
       background-size: cover;
   }
   
@@ -4496,7 +4496,7 @@
                     <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
                 </div>
                 <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
-                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('caro-landscaping', 'contact-modal', '+17742619415')">
+                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('caro-landscaping', 'contact-modal', '+19083889616')">
                     <div class="flex flex-col flex-shrink-1 h-auto sm:h-full overflow-x-hidden overflow-y-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                         
                         
@@ -4636,8 +4636,8 @@
                         
                         
                             <div class="block sm:grid sm:col-span-2">
-                                <label class="font-medium text-base text-white">Services list</label>
-                                <fieldset class="bg-white p-4 sm:p-6 mt-1 rounded-sm" >
+                                <label class="font-medium text-base text-white">Services list<span> *</span></label>
+                                <fieldset class="bg-white p-4 sm:p-6 mt-1 rounded-sm" required>
                                     <div class="grid auto-cols-auto gap-4 grid-cols-2">
                                         
                                         <div class="flex items-center">
@@ -4792,16 +4792,95 @@
                         
                         
                         
-                            <div class="block sm:grid sm:col-span-2">
-                                <label for="contact-paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0" class="font-medium text-base text-white">How can we help?<span> *</span></label>
-                                <textarea
-                                    id="contact-paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0"
-                                    name="paragraph-99163c2e-4111-4cd8-a0d5-691ff970f5b0"
-                                    rows="4"
-                                    class="block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                    placeholder="Type your response here..."
-                                    required
-                                ></textarea>
+                        
+                        
+                        
+                        
+                            <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
+                                <label class="font-medium text-base text-white">Photo upload</label>
+                                <div class='bg-white p-3 mt-1 rounded-sm border border-gray-500'>
+                                    <div
+                                            x-data="{
+                                                imageUrl: '',
+                                                fileTooLarge: false,
+                                                fileChosen(event) {
+                                                    if (this.isProperlySized(event)) {
+                                                        this.fileToDataUrl(event, (src) => (this.imageUrl = src));
+                                                        this.fileTooLarge = false;
+                                                    }
+                                                    else
+                                                        this.fileTooLarge = true;
+                                                },
+                                                fileToDataUrl(event, callback) {
+                                                    if (!event.target.files.length) return;
+                                                    let file = event.target.files[0],
+                                                        reader = new FileReader();
+                                                    reader.readAsDataURL(file);
+                                                    reader.onload = (e) => callback(e.target.result);
+                                                },
+                                                isProperlySized(event) {
+                                                    const files = event.currentTarget.files;
+                                                    for (const file in files) {
+                                                        const filesize = ((files[file].size/1024)/1024).toFixed(4);
+                                                        if (filesize > 10)
+                                                            return false;
+                                                    }
+                                                    return true;
+                                                },
+                                            }"
+                                    >
+                                        <div x-show="imageUrl !== ''" x-collapse>
+                                            <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
+                                                <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
+                                                <button
+                                                        @click="imageUrl = ''; $refs.fileInput.value = '';"
+                                                        type="button"
+                                                        class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-500 rounded-sm shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                >
+                                                    Change
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <label
+                                            for="file-upload"
+                                            class="relative font-medium rounded-sm cursor-pointer text-primary"
+                                        >
+                                            <div x-show="imageUrl === ''" x-collapse>
+                                                <div
+                                                    x-on:dragenter.prevent.stop
+                                                    x-on:dragleave.prevent.stop
+                                                    class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-sm"
+                                                >
+                                                    <div class="space-y-1 text-center">
+                                                        <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                            <path
+                                                                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                        <div class="flex justify-center text-sm text-gray-600">
+                                                            <span class="text-primary">Upload a photo</span>
+                                                            <input
+                                                                x-ref="fileInput"
+                                                                id="file-upload"
+                                                                name="file-upload"
+                                                                type="file"
+                                                                class="sr-only"
+                                                                @change="fileChosen"
+                                                            />
+                                                        </div>
+                                                        <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
+                                            The selected file is too large. Please reduce the size or choose another file.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         
                         
@@ -4810,19 +4889,15 @@
                         
                         
                         
-                        
-                        
-                        
-                        
                             <div class="block sm:grid sm:col-span-2">
-                                <label for="contact-paragraph-82ca33aa-09e1-4d34-a382-77197e3209ed" class="font-medium text-base text-white">Photo upload</label>
+                                <label for="contact-paragraph-6e1a7adf-94e5-499f-aca0-4faf86bc1b81" class="font-medium text-base text-white">How many trees? <span> *</span></label>
                                 <textarea
-                                    id="contact-paragraph-82ca33aa-09e1-4d34-a382-77197e3209ed"
-                                    name="paragraph-82ca33aa-09e1-4d34-a382-77197e3209ed"
+                                    id="contact-paragraph-6e1a7adf-94e5-499f-aca0-4faf86bc1b81"
+                                    name="paragraph-6e1a7adf-94e5-499f-aca0-4faf86bc1b81"
                                     rows="4"
                                     class="block py-2.5 px-2.5 mt-1 w-full border border-gray-500 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
                                     placeholder="Type your response here..."
-                                    
+                                    required
                                 ></textarea>
                             </div>
                         
@@ -5380,422 +5455,6 @@
                 
              
             
-        
-            
-
-
-<footer
-    class="bg-primary"
-    aria-labelledby="footer-heading"
-    data-heap-component-name="footer"
-    data-heap-version="v3"
-    id="footer"
->
-    <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-10 lg:px-8">
-        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div>
-                <div class="px-4 py-6 bg-white flex flex-col items-center rounded-sm border border-primary-darker">
-                    <div class="flex flex-row items-center">
-                        
-                            <picture class="flex pr-6">
-                                <source
-                                    type="image/webp"
-                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/de5d9a25-7133-4487-bf0c-fe8654c6c4d4.jpeg, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/530x530/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/de5d9a25-7133-4487-bf0c-fe8654c6c4d4.jpeg 2x" 
-                                    alt="Footer logo"
-                                >
-                                <img
-                                    class="h-max-[80px] w-auto flex object-contain"
-                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/media/de5d9a25-7133-4487-bf0c-fe8654c6c4d4.jpeg"
-                                    width="80" 
-                                    height="80"
-                                    alt="Footer logo"
-                                    loading="lazy"
-                                />
-                            </picture>
-                        
-        
-                        <div>
-                            <div class="text-base leading-6 font-black uppercase break-word">Caro Landscaping</div>
-                            <div class="text-base leading-6 break-word">US</div>
-                            
-                              <div class="text-base leading-6 break-all">+17742619415</div>
-                            
-                            <div class="text-base leading-6 break-all">ann.kolivanova@gmail.com</div>
-                        </div>
-                    </div>
-    
-                    <div class="bg-secondary flex w-full justify-between items-center p-4 mt-4">
-                        <div class="text-white font-black text-lg uppercase">Contact Us</div>
-                        <div onclick="postCtaClick('text')" class="cta_text_button">
-                            <button
-                                @click="contactModalOpen = true"
-                                class="flex justify-center rounded-sm shadow p-3 sm:px-6 sm:py-2 overflow-hidden bg-tertiary hover:border-tertiary text-primary hover:ring-2 hover:ring-offset-2 hover:ring-primary border-2 border-primary transition-all ease-out duration-300 box-border uppercase whitespace-nowrap font-black"
-                            >
-                                Book Now
-                            </button>
-                        </div>
-                    </div>
-    
-                    <div class="flex w-full justify-start mt-2">
-                        <ul class="flex flex-wrap">
-                            
-                                <li class="transition-transform hover:-translate-y-1.5 pr-6 pt-6">
-                                    <a
-                                        class="w-10 h-10"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="https://maps.google.com/maps?cid=9997683482332390031"
-                                    >
-                                        <span class="sr-only">Google</span>
-                                        <svg style="width: 40px; height: 40px;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_5362_55204)">
-                                                <path d="M54 27C54 12.0883 41.9117 0 27 0C12.0883 0 0 12.0883 0 27C0 41.9117 12.0883 54 27 54C41.9117 54 54 41.9117 54 27Z" fill="white"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.213 27.3069C40.213 26.3496 40.127 25.4291 39.9675 24.5455H27.2529V29.7675H34.5184C34.2054 31.455 33.2543 32.8848 31.8245 33.8421V37.2294H36.1875C38.7402 34.8791 40.213 31.4182 40.213 27.3069Z" fill="#4285F4"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.2526 40.5C30.8976 40.5 33.9535 39.2911 36.1872 37.2293L31.8242 33.842C30.6153 34.652 29.069 35.1306 27.2526 35.1306C23.7364 35.1306 20.7603 32.7558 19.6987 29.5649H15.1885V33.0627C17.4098 37.4747 21.9753 40.5 27.2526 40.5Z" fill="#34A853"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6991 29.5649C19.4291 28.7549 19.2757 27.8897 19.2757 26.9999C19.2757 26.1102 19.4291 25.2449 19.6991 24.4349V20.9372H15.1888C14.2745 22.7597 13.7529 24.8215 13.7529 26.9999C13.7529 29.1783 14.2745 31.2402 15.1888 33.0627L19.6991 29.5649Z" fill="#FBBC05"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.2526 18.8693C29.2346 18.8693 31.0142 19.5505 32.4133 20.8882L36.2853 17.0161C33.9474 14.8377 30.8915 13.5 27.2526 13.5C21.9753 13.5 17.4098 16.5252 15.1885 20.9373L19.6987 24.435C20.7603 21.2441 23.7364 18.8693 27.2526 18.8693Z" fill="#EA4335"/>
-                                            </g>
-                                            <rect x="0.5" y="0.5" width="53" height="53" rx="26.5" stroke="#111827"/>
-                                            <defs>
-                                                <clipPath id="clip0_5362_55204">
-                                                    <rect width="54" height="54" rx="27" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </a>
-                                </li>
-                            
-                            
-                                <li class="transition-transform hover:-translate-y-1.5 pr-6 pt-6">
-                                    <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="https://www.facebook.com/104865895776827"
-                                    >
-                                        <span class="sr-only">Facebook</span>
-                                        <svg style="width: 40px; height: 40px;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_5434_993)">
-                                                <path d="M54 27.0009C54 40.6376 43.8917 51.9114 30.7601 53.7408C29.5323 53.9111 28.2761 54 27.0009 54C25.5291 54 24.0837 53.8827 22.6761 53.6557C9.81887 51.586 0 40.439 0 27.0009C0 12.0891 12.0891 0 26.9991 0C41.909 0 54 12.0891 54 27.0009Z" fill="#1877F2"/>
-                                                <path d="M30.7603 21.6791V27.5609H38.0365L36.8844 35.4841H30.7603V53.7389C29.5325 53.9092 28.2763 53.9981 27.0012 53.9981C25.5293 53.9981 24.0839 53.8808 22.6763 53.6538V35.4841H15.9658V27.5609H22.6763V20.3642C22.6763 15.8994 26.2955 12.2783 30.7622 12.2783V12.2821C30.7755 12.2821 30.7868 12.2783 30.8001 12.2783H38.0384V19.1307H33.3087C31.903 19.1307 30.7622 20.2715 30.7622 21.6772L30.7603 21.6791Z" fill="white"/>
-                                            </g>
-                                            <rect x="0.5" y="0.5" width="53" height="53" rx="26.5" stroke="#111827"/>
-                                            <defs>
-                                                <clipPath id="clip0_5434_993">
-                                                    <rect width="54" height="54" rx="27" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </a>
-                                </li>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                                <li class="transition-transform hover:-translate-y-1.5 pr-6 pt-6">
-                                    <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="https://www.nextdoor.co"
-                                    >
-                                        <span class="sr-only">Nextdoor</span>
-                                        <svg style="width: 40px; height: 40px;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.5" y="0.5" width="53" height="53" rx="26.5" fill="#8ED500"/>
-                                            <rect x="0.5" y="0.5" width="53" height="53" rx="26.5" stroke="#111827"/>
-                                            <path d="M28.207 15.5C24.0884 15.5 20.5791 17.3917 18.6103 20.2848C18.4463 20.5259 18.1679 21.0408 17.7937 21.0438C15.9915 21.0576 15.8803 18.8363 15.8229 16.8564C15.8145 16.5652 15.5635 16.3256 15.2723 16.3256L10.0541 16.2965C9.74574 16.2965 9.49293 16.551 9.50015 16.8591C9.61527 21.6987 10.5058 24.985 16.3689 26.292C16.6901 26.3636 16.9141 26.6546 16.9141 26.9838C16.9141 28.9937 16.9141 35.8544 16.9141 37.8492C16.9141 38.1538 17.1612 38.3972 17.4657 38.3972H22.5339C22.8386 38.3972 23.0855 38.1504 23.0855 37.8455V26.6232C23.0855 24.1298 24.8541 21.2997 28.207 21.2997C31.4002 21.2997 33.3283 24.1298 33.3283 26.6232V37.8455C33.3283 38.1504 33.5754 38.3972 33.8801 38.3972H38.9483C39.2527 38.3972 39.5 38.1504 39.5 37.8455V25.7905C39.5 20.0261 34.5802 15.5 28.207 15.5Z" fill="white"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                            
-                            
-                                <li class="transition-transform hover:-translate-y-1.5 pr-6 pt-6">
-                                    <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="https://www.nextdoor.com"
-                                    >
-                                        <span class="sr-only">Etsy</span>
-                                        <svg style="width: 40px; height: 40px;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_5447_6034)">
-                                                <rect width="54" height="54" rx="27" fill="#F27224"/>
-                                                <path d="M12.448 25.8827V20.9345C12.448 20.7512 12.4663 20.6412 12.7792 20.6412H16.9914C17.7272 20.6412 18.1319 21.2644 18.4263 22.4372L18.6654 23.3721H19.3827C19.5113 20.7148 19.6216 19.5602 19.6216 19.5602C19.6216 19.5602 17.819 19.7617 16.7522 19.7617H11.363L8.47461 19.67V20.4398L9.4497 20.623C10.1303 20.7514 10.2955 20.8978 10.3511 21.5212C10.3511 21.5212 10.4064 23.3538 10.4064 26.3778C10.4064 29.4015 10.3511 31.216 10.3511 31.216C10.3511 31.7657 10.1303 31.9673 9.4497 32.096L8.47461 32.2793V33.0486L11.363 32.9572H16.1823C17.2675 32.9572 19.7875 33.0486 19.7875 33.0486C19.8424 32.3887 20.2106 29.4015 20.2658 29.072H19.5852L18.8678 30.7031C18.2975 31.9857 17.4699 32.0774 16.55 32.0774H13.8091C12.8893 32.0774 12.4478 31.7109 12.4478 30.9229V26.7443C12.4478 26.7443 14.4527 26.7443 15.1515 26.7994C15.6667 26.8362 15.9792 26.9828 16.145 27.6974L16.3658 28.6504H17.1564L17.1014 26.2494L17.2117 23.8304H16.4209L16.1636 24.8933C15.9978 25.5897 15.8876 25.7183 15.1701 25.7913C14.3609 25.8832 12.4477 25.8648 12.4477 25.8648V25.883H12.448V25.8827ZM23.3558 21.4478C23.0982 22.584 22.8406 23.4636 21.9393 24.0502C21.3875 24.4165 20.8356 24.5447 20.6152 24.5631V25.2594H22.2522V30.8857C22.2522 32.462 23.3008 33.2319 24.6986 33.2319C25.7839 33.2319 26.9058 32.7737 27.2922 31.8205L26.9058 31.3256C26.7218 31.6374 26.1335 32.0954 25.3976 32.0954C24.5884 32.0954 24.1469 31.5455 24.1469 30.1529V25.1865L26.8695 25.3883L27.0165 24.1417L24.147 24.2518V21.466L23.3558 21.4478ZM29.1685 30.1018L28.4696 30.1201C28.5063 30.5231 28.5249 31.0365 28.5249 31.5129C28.5249 32.0078 28.5065 32.4659 28.4696 32.6857C28.4696 32.6857 29.8676 33.1984 31.2839 33.1984C33.197 33.1984 34.7238 32.2821 34.7238 30.4861C34.7238 27.4076 30.0884 27.8659 30.0884 25.7946C30.0884 24.9334 30.8609 24.6034 31.7071 24.6034C32.3693 24.6034 32.921 24.8416 33.0314 25.1901L33.4914 26.5646L34.1721 26.528C34.2274 25.7948 34.264 24.9518 34.3744 24.2738C33.7857 24.0172 32.5531 23.8703 31.7812 23.8703C29.9781 23.8703 28.5252 24.6584 28.5252 26.4179C28.5252 29.4783 33.05 28.8552 33.05 31.1097C33.05 31.9158 32.5531 32.484 31.4314 32.484C30.4015 32.484 29.8863 31.9527 29.6843 31.4209L29.1685 30.1018ZM40.2552 32.219C39.1903 35.1827 37.8867 35.9505 36.7117 35.9505C36.2157 35.9505 35.9772 35.7308 35.9035 35.3838L35.6281 33.9566L34.8568 33.9931C34.7099 34.8348 34.5631 35.7681 34.3613 36.5362C34.8204 36.8833 35.5912 37.0666 36.1973 37.0666C37.4645 37.0666 39.3922 36.9017 41.1545 32.731L44.1109 25.7798C44.3497 25.2125 44.4412 25.1576 45.139 24.8831L45.5246 24.7371V24.0968L43.7802 24.1882L41.9075 24.0968V24.7371L42.3846 24.8831C42.8618 25.0297 43.0826 25.2125 43.0826 25.5419C43.0826 25.7064 43.0273 25.8711 42.9352 26.127C42.6599 26.8226 40.9523 30.9567 40.4937 31.835L40.9522 31.67C40.1442 29.6762 38.9145 26.3465 38.7307 25.7799C38.694 25.67 38.6757 25.5786 38.6757 25.4867C38.6757 25.1941 38.8776 24.9562 39.3183 24.8649L39.9243 24.7372V24.0969L37.4086 24.1883L35.4074 24.0969V24.7372L35.7379 24.8468C36.1969 24.9931 36.3072 25.1213 36.5825 25.7615C38.106 29.2374 38.8225 31.1396 39.7952 33.6277L40.2552 32.219Z" fill="white"/>
-                                            </g>
-                                            <rect x="0.5" y="0.5" width="53" height="53" rx="26.5" stroke="#111827"/>
-                                            <defs>
-                                                <clipPath id="clip0_5447_6034">
-                                                    <rect width="54" height="54" rx="27" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </a>
-                                </li>
-                            
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
-                <div class="md:grid md:grid-cols-2 md:gap-8">
-                    <div>
-                        <h3 class="text-sm font-black leading-5 text-white uppercase">Company</h3>
-                        <ul role="list" class="mt-4  space-y-4">
-                            <li>
-                                <a
-                                    href="./"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Home</a
-                                >
-                            </li>
-                            
-                                
-                                <li>
-                                    <a
-                                        href="gallery-All"
-                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                        >Galleries</a
-                                    >
-                                </li>
-                                
-                            
-                            
-                            <li>
-                                <a
-                                    href="reviews"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Reviews</a
-                                >
-                            </li>
-                            
-                            
-                            <li>
-                                <a
-                                    href="our-team"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Our team</a
-                                >
-                            </li>
-                            
-                            
-                            <li>
-                                <a
-                                    href="jobs"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Jobs</a
-                                >
-                            </li>
-                            
-                            
-                            <li>
-                                <a
-                                    href='sitemap.xml'
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Sitemap</a
-                                >
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div class="mt-12 md:mt-0">
-                        <h3 class="text-sm font-black leading-5 text-white uppercase">Services</h3>
-                        <ul role="list" class="mt-4 space-y-4">
-                            
-                            <li>
-                                <a
-                                    href="service-Cookin-Some-Chilli"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Cookin Some Chilli</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-Driveway-Design---Build"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Driveway Design &amp; Build</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-Fall-and-Spring-Clean-Up"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Fall and Spring Clean Up</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-Cheese-Making"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Cheese Making</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-Stone-Wall-Installation"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Stone Wall Installation</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-Retaining-Wall-Construction"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Retaining Wall Construction</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-pressure-washing"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Pressure Washing</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-landscape-management-softscaping-and-hardscaping"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Softscaping, and Hardscaping</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-guard-dogs"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Guard Dogs</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a
-                                    href="service-backyard-band"
-                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
-                                    >Backyard Band</a
-                                >
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="md:grid md:grid-cols-2 md:gap-8">
-                    <div>
-                        <h3 class="text-sm font-black leading-5 text-white uppercase">Service Areas</h3>
-                        <ul role="list" class="mt-4  space-y-4">
-                            
-                            <li>
-                                
-                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        Boston, MA
-                                    </span>
-                            </li>
-                            
-                            <li>
-                                
-                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        Somerville, MA
-                                    </span>
-                            </li>
-                            
-                            <li>
-                                
-                                    <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
-                                        South Boston, MA
-                                    </span>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div class="mt-12 md:mt-0">
-                        <h3 class="text-sm font-black leading-5 text-white uppercase">Hours</h3>
-                        <ul role="list" class="mt-4  space-y-4">
-                            
-                                <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Sun: <br class="sm:hidden" /> Closed 
-                                </li>
-                            
-                                <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Mon: <br class="sm:hidden" /> 8:00am - 7:00pm 
-                                </li>
-                            
-                                <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Tue: <br class="sm:hidden" /> 10:00am - 4:00pm 
-                                </li>
-                            
-                                <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Wed: <br class="sm:hidden" /> 12:00am - 6:00pm 
-                                </li>
-                            
-                                <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Thu: <br class="sm:hidden" /> Closed 
-                                </li>
-                            
-                                <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Fri: <br class="sm:hidden" /> Closed 
-                                </li>
-                            
-                                <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
-                                    Sat: <br class="sm:hidden" /> Closed 
-                                </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="pt-10 mt-12 border-t-2 border-secondary">
-            <div class="flex sm:flex-row flex-col sm:justify-between">
-                <div >
-                    <div class="text-white">
-                        Powered by
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="24" viewBox="0 0 395 70" fill="none">
-                            <g clip-path="url(#clip0_1497_36)">
-                            <path d="M118.27 17.389V24.5215H108.586V53.9364H99.6836V24.5215H90.0001V17.389H118.27Z" fill="white"/>
-                            <path d="M137.94 54.3009C134.504 54.3009 131.345 53.5026 128.464 51.906C125.618 50.3094 123.345 48.0881 121.644 45.2421C119.978 42.3613 119.145 39.1335 119.145 35.5586C119.145 31.9837 119.978 28.7732 121.644 25.9271C123.345 23.0811 125.618 20.8598 128.464 19.2632C131.345 17.6667 134.504 16.8684 137.94 16.8684C141.376 16.8684 144.517 17.6667 147.363 19.2632C150.244 20.8598 152.5 23.0811 154.131 25.9271C155.797 28.7732 156.63 31.9837 156.63 35.5586C156.63 39.1335 155.797 42.3613 154.131 45.2421C152.465 48.0881 150.209 50.3094 147.363 51.906C144.517 53.5026 141.376 54.3009 137.94 54.3009ZM137.94 46.1792C140.855 46.1792 143.181 45.2074 144.916 43.2637C146.686 41.3201 147.571 38.7517 147.571 35.5586C147.571 32.3308 146.686 29.7624 144.916 27.8534C143.181 25.9098 140.855 24.938 137.94 24.938C134.989 24.938 132.629 25.8924 130.859 27.8014C129.124 29.7103 128.256 32.2961 128.256 35.5586C128.256 38.7864 129.124 41.3722 130.859 43.3158C132.629 45.2247 134.989 46.1792 137.94 46.1792Z" fill="white"/>
-                            <path d="M188.394 29.155C188.394 31.2722 187.909 33.2158 186.937 34.9859C185.965 36.7213 184.472 38.127 182.459 39.2029C180.446 40.2789 177.947 40.8168 174.963 40.8168H169.444V53.9364H160.541V17.389H174.963C177.878 17.389 180.342 17.8923 182.355 18.8988C184.368 19.9053 185.878 21.2936 186.885 23.0637C187.891 24.8339 188.394 26.8643 188.394 29.155ZM174.286 33.7364C175.986 33.7364 177.253 33.3373 178.086 32.539C178.919 31.7407 179.336 30.6127 179.336 29.155C179.336 27.6973 178.919 26.5692 178.086 25.771C177.253 24.9727 175.986 24.5735 174.286 24.5735H169.444V33.7364H174.286Z" fill="white"/>
-                            <path d="M200.89 47.0643H212.552V53.9364H191.988V17.389H200.89V47.0643Z" fill="white"/>
-                            <path d="M224.66 17.389V53.9364H215.757V17.389H224.66Z" fill="white"/>
-                            <path d="M262.765 53.9364H253.863L238.973 31.3936V53.9364H230.07V17.389H238.973L253.863 40.0359V17.389H262.765V53.9364Z" fill="white"/>
-                            <path d="M277.08 24.5215V31.9143H289.002V38.7864H277.08V46.804H290.564V53.9364H268.177V17.389H290.564V24.5215H277.08Z" fill="white"/>
-                            <path d="M326.051 28.0234C326.051 31.1472 325.027 33.6635 322.979 35.5724C320.931 37.4813 317.86 38.4358 313.764 38.4358H306.424V53.9502H302.779V17.559H313.764C317.825 17.559 320.879 18.5135 322.927 20.4224C325.01 22.3313 326.051 24.865 326.051 28.0234ZM313.764 35.3121C319.456 35.3121 322.302 32.8825 322.302 28.0234C322.302 25.5939 321.626 23.7544 320.272 22.5049C318.918 21.2554 316.749 20.6307 313.764 20.6307H306.424V35.3121H313.764Z" fill="white"/>
-                            <path d="M350.491 53.9502L341.485 38.7482H334.769V53.9502H331.124V17.559H342.057C346.118 17.559 349.19 18.5308 351.272 20.4745C353.39 22.4181 354.448 24.9691 354.448 28.1276C354.448 30.7654 353.685 33.0214 352.157 34.8956C350.665 36.7351 348.444 37.9325 345.494 38.4879L354.865 53.9502H350.491ZM334.769 35.7807H342.11C344.956 35.7807 347.09 35.0865 348.513 33.6982C349.971 32.3099 350.7 30.453 350.7 28.1276C350.7 25.7327 350.006 23.8932 348.617 22.609C347.229 21.2901 345.042 20.6307 342.057 20.6307H334.769V35.7807Z" fill="white"/>
-                            <path d="M376.986 54.3147C373.62 54.3147 370.566 53.5337 367.824 51.9719C365.082 50.3753 362.912 48.1714 361.316 45.36C359.754 42.514 358.973 39.3035 358.973 35.7286C358.973 32.1537 359.754 28.9606 361.316 26.1492C362.912 23.3032 365.082 21.0992 367.824 19.5374C370.566 17.9408 373.62 17.1425 376.986 17.1425C380.388 17.1425 383.459 17.9408 386.201 19.5374C388.943 21.0992 391.095 23.3032 392.657 26.1492C394.219 28.9606 395 32.1537 395 35.7286C395 39.3035 394.219 42.514 392.657 45.36C391.095 48.1714 388.943 50.3753 386.201 51.9719C383.459 53.5337 380.388 54.3147 376.986 54.3147ZM376.986 51.1389C379.694 51.1389 382.123 50.5142 384.275 49.2647C386.427 48.0152 388.128 46.2277 389.377 43.9023C390.627 41.5422 391.251 38.8176 391.251 35.7286C391.251 32.6396 390.627 29.9324 389.377 27.6069C388.128 25.2815 386.427 23.4941 384.275 22.2446C382.123 20.9951 379.694 20.3704 376.986 20.3704C374.279 20.3704 371.85 20.9951 369.698 22.2446C367.546 23.4941 365.845 25.2815 364.596 27.6069C363.346 29.9324 362.722 32.6396 362.722 35.7286C362.722 38.8176 363.346 41.5422 364.596 43.9023C365.845 46.2277 367.546 48.0152 369.698 49.2647C371.85 50.5142 374.279 51.1389 376.986 51.1389Z" fill="white"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M70.0001 35.0001C70.0001 54.3301 54.3301 70.0001 35.0001 70.0001C15.6701 70.0001 0 54.3301 0 35.0001C0 15.6701 15.6701 0 35.0001 0C54.3301 0 70.0001 15.6701 70.0001 35.0001ZM19.1817 25.403C19.1675 24.9951 19.4865 24.653 19.8944 24.6387L34.4316 24.1311C34.9503 24.113 35.3256 24.6214 35.1554 25.1118L25.2705 53.6008C25.1704 53.8892 24.9032 54.0864 24.5982 54.097L20.9276 54.2252C20.5197 54.2394 20.1775 53.9204 20.1633 53.5125L19.1817 25.403ZM49.0358 46.5678C49.4437 46.5535 49.7627 46.2114 49.7485 45.8035L48.7669 17.694C48.7526 17.2861 48.4105 16.9671 48.0026 16.9813L44.332 17.1095C44.0269 17.1201 43.7598 17.3173 43.6597 17.6057L33.7748 46.0947C33.6046 46.5851 33.9799 47.0935 34.4986 47.0754L49.0358 46.5678Z" fill="white"/>
-                            <path d="M49.7485 45.8032C49.7627 46.2111 49.4437 46.5533 49.0358 46.5675L34.4986 47.0752C33.9799 47.0933 33.6046 46.5849 33.7748 46.0945L43.6597 17.6055C43.7598 17.317 44.0269 17.1199 44.332 17.1092L48.0026 16.981C48.4105 16.9668 48.7526 17.2859 48.7669 17.6937L49.7485 45.8032Z" fill="white" fill-opacity="0.3"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0_1497_36">
-                            <rect width="395" height="70" fill="white"/>
-                            </clipPath>
-                            </defs>
-                            </svg>
-                    </div>
-                </div>
-
-                <div class="text-white sm:pt-0 pt-6">
-                    ⓒ All Rights Reserved
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
         
     
 
