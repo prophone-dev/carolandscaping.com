@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/20f9f190-a5ab-43de-89eb-a1691f5ede11.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/59816a47-7936-441a-819c-1011a67b5e71.png");
       background-size: cover;
   }
   
@@ -217,8 +217,7 @@
 
     
         
-            
-<style>
+            <style>
   .fade-in-success {
     animation: 1s fadeIn;
     animation-fill-mode: forwards;
@@ -247,107 +246,106 @@
 <div
 	class="fixed inset-0"
     data-heap-component-name="contact-2-step"
-    data-heap-version="v4"
+    data-heap-version="v2.1"
 >
 	<div
-		class="fixed flex flex-col h-screen w-screen inset-x-0 z-50 mx-auto justify-center items-center p-6"
+		class="fixed flex flex-col h-screen w-screen inset-x-0 z-50 mx-auto justify-center items-center p-6 bg-primary"
 	>
-        
-        <button
-            onclick="handleCloseSecondStep()"
-            class="absolute z-10 p-1 transition rounded top-5 right-5 text-white hover:bg-gray-100 hover:text-gray-900 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 fade-in-close"
+    <div>
+      <button
+        onclick="handleCloseSecondStep()"
+        class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 hover:text-gray-900 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2 fade-in-close"
+      >
+        <span class="sr-only">Close modal</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+		<div class="flex flex-col mt-3 text-center fade-in-success">
+			<div class="flex gap-2 justify-center items-center">
+        <div
+          class="flex items-center justify-center h-6 w-6 rounded-full bg-green-100"
         >
-            <span class="sr-only">Close modal</span>
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-        </button>
-        <div class="fixed inset-0 md:inset-auto md:relative bg-primary rounded-sm border-secondary md:border flex flex-col h-full w-full max-w-4xl">
-            <div class="flex flex-col mt-3 text-center fade-in-success px-6 sm:p-0">
-                <div class="flex gap-2 justify-center items-center mt-4 sm:mt-0">
-                <div
-                    class="flex items-center justify-center h-6 w-6 rounded-full bg-green-100"
-                >
-                    <svg
-                    class="h-4 w-4 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                    ></path>
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-white">Message sent</h3>
-                </div>
-                <p class="mt-2 text-white">
-                We usually respond within a few minutes via SMS.
-                </p>
-            </div>
-            <div
-                class="flex flex-col w-full overflow-y-auto text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-4xl h-auto max-h-full fade-in-form"
-            >
-                <h2 style="font-size: 2rem;line-height: 2rem;" class="mt-6 font-extrabold text-center text-white">Want to request a time to chat about your job?</h2>
-                <div id="error-state-modal"></div>
-                <div class="w-full flex justify-center items-center my-4 mx-1">
-                    <nylas-scheduling
-                      id="nylas-booking-form"
-                      class="flex"
-                      nylas-branding=false
-                      mode="app"
-                      configuration-id=""
-                      scheduler-api-url="https://api.us.nylas.com"
-                      eventOverrides='{"timeslotConfirmed": timeslotConfirmedHandler}'
-                      bookingInfo='{"primaryParticipant": {"name": senderName }}'
-                    >
-                    </nylas-scheduling>
-                    <script type="module">
-                      const nylasScheduling = document.getElementById("nylas-booking-form");
-
-                      // Create event overrides
-                      async function timeslotConfirmedHandler(event, connector) {
-                        const senderName = sessionStorage.getItem("sender_name");
-                        const senderEmail = sessionStorage.getItem("sender_email");
-                        const bookingId = sessionStorage.getItem("booking_id");
-
-                        if (senderName && senderEmail) {
-                          const startTime = event.detail.start_time.toISOString();
-                          const endTime = event.detail.end_time.toISOString();
-                          await create_appointment('caro-landscaping', bookingId, startTime, endTime);
-
-                          nylasScheduling.bookingInfo = {
-                            primaryParticipant: { name: senderName, email: senderEmail }
-                          };
-                          event.preventDefault();
-                          const result = await connector.scheduler.bookTimeslot({
-                            primaryParticipant: {
-                              name: senderName,
-                              email: senderEmail
-                            }
-                          });
-
-                          const nylasBookingId = result?.data?.booking_id ?? "";
-                          sessionStorage.setItem("nylas_booking_id", nylasBookingId);
-
-                          send_sms('caro-landscaping', 'scheduler');
-                        } else {
-                          nylasScheduling.bookingInfo = {
-                            primaryParticipant: { name: senderName }
-                          };
-                        }
-                      }
-
-                      nylasScheduling.eventOverrides = { timeslotConfirmed: timeslotConfirmedHandler };
-
-                    </script>
-                  </div>
-            </div>
+          <svg
+            class="h-4 w-4 text-green-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            ></path>
+          </svg>
         </div>
+        <h3 class="text-2xl font-semibold text-white">Message sent</h3>
+      </div>
+			<p class="mt-2 text-white">
+				We usually respond within a few minutes via SMS.
+			</p>
+		</div>
+    <div
+      class="flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-4xl h-auto max-h-full fade-in-form"
+    >
+      <h2 style="font-size: 2rem;line-height: 2rem;" class="mt-6 font-extrabold text-center text-white">Want to request a time to chat about your job?</h2>
+      <div id="error-state-modal"></div>
+      <div class="w-max flex justify-center overflow-y-auto mt-4">
+        <nylas-scheduling
+            id="nylas-booking-form"
+            class="flex"
+            nylas-branding=false
+            mode="app"
+            configuration-id=""
+            scheduler-api-url="https://api.us.nylas.com"
+            eventOverrides='{"timeslotConfirmed": timeslotConfirmedHandler}'
+            bookingInfo='{"primaryParticipant": {"name": senderName }}'
+          >
+          </nylas-scheduling>
+          <script type="module">
+            const nylasScheduling = document.getElementById("nylas-booking-form");
+
+            // Create event overrides
+            async function timeslotConfirmedHandler(event, connector) {
+              const senderName = sessionStorage.getItem("sender_name");
+              const senderEmail = sessionStorage.getItem("sender_email");
+              const bookingId = sessionStorage.getItem("booking_id");
+
+              if (senderName && senderEmail) {
+                const startTime = event.detail.start_time.toISOString();
+                const endTime = event.detail.end_time.toISOString();
+                await create_appointment('caro-landscaping', bookingId, startTime, endTime);
+
+                nylasScheduling.bookingInfo = {
+                  primaryParticipant: { name: senderName, email: senderEmail }
+                };
+                event.preventDefault();
+                const result = await connector.scheduler.bookTimeslot({
+                  primaryParticipant: {
+                    name: senderName,
+                    email: senderEmail
+                  }
+                });
+
+                const nylasBookingId = result?.data?.booking_id ?? "";
+                sessionStorage.setItem("nylas_booking_id", nylasBookingId);
+
+                send_sms('caro-landscaping', 'scheduler');
+              } else {
+                nylasScheduling.bookingInfo = {
+                  primaryParticipant: { name: senderName }
+                };
+              }
+            }
+
+            nylasScheduling.eventOverrides = { timeslotConfirmed: timeslotConfirmedHandler };
+
+          </script>
+      </div>
+    </div>
 	</div>
 </div>
 
