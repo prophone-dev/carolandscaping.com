@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/0fca3c61-c5ef-49b2-899b-04ea28c6efbc.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/59eab280-841b-4f0e-bdf0-68ff94e0c52d.quicktime");
       background-size: cover;
   }
   
@@ -326,7 +326,7 @@
                                     <a
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href="mailto:jahmar@toplinepro.com?subject=landscaping near me Job - Requesting a quote&body=Hi jahmar,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                                        href="mailto:ann.kolivanova@gmail.com?subject=landscaping near me Job - Requesting a quote&body=Hi ,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
                                         class="flex justify-center w-full  px-6 py-4 overflow-hidden bg-white text-black text-base font-bold xl:text-lg  uppercase"
                                     >
                                         Email Us
@@ -1424,9 +1424,7 @@
                     class="sm:flex text-white text-sm mb-3 sm:mb-0"
                 >
                     
-
-                    jahmar, you’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
-
+                    You’re just a few clicks from going live! Don’t worry - we can still make edits after launching.
                     
                     bucks
                 </div>
@@ -2265,23 +2263,6 @@
                                 </div>
                             
                             
-                                <a
-                                    href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
-                                    target="_blank"
-                                    class="text-center inline-flex items-center transition hover:text-secondary"
-                                    :class="{
-                                        
-                                            
-                                                'text-white' : true
-                                            
-                                        
-                                    }"
-                                >
-                                    <span class="block px-2 py-1 text-center uppercase ">
-                                        PAY NOW
-                                    </span>
-                                </a>
-                            
 
                         </div>
 
@@ -2868,16 +2849,6 @@
                                 </div>
                             
                             
-                                <div x-trap.inert="openMenu == ''">
-                                    <a
-                                        href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
-                                        target="_blank"
-                                        class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
-                                    >
-                                        Pay Now
-                                    </a>
-                                </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -3085,7 +3056,7 @@
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="mailto:jahmar@toplinepro.com?subject=landscaping near me Job - Requesting a quote&body=Hi jahmar,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                                href="mailto:ann.kolivanova@gmail.com?subject=landscaping near me Job - Requesting a quote&body=Hi ,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
                                 class="flex justify-center rounded-sm px-6 py-4  overflow-hidden bg-tertiary text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 border-2 border-secondary hover:border-tertiary box-border uppercase whitespace-nowrap"
                             >
                                 Email Us
@@ -3204,7 +3175,7 @@
     <div
         x-data="{
             activeImage: 0,
-            amountOfImages: 3,
+            amountOfImages: 4,
             next() {
                 if (this.activeImage < this.amountOfImages - 1)
                     this.activeImage ++;
@@ -3250,12 +3221,14 @@
                     @click="activeImage = 0; galleryModalOpen = true"
                 >
                     
-                        <img
+                        <video
                             style="width: 300px; height: 185px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/0fca3c61-c5ef-49b2-899b-04ea28c6efbc.png"
-                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                        />
+                            class="lazy rounded-sm object-cover w-full h-full"
+                            preload="none" autoplay loop playsinline controls muted
+                        >
+                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/59eab280-841b-4f0e-bdf0-68ff94e0c52d.quicktime#t=0.5">
+                            Your browser does not support the video tag.
+                        </video>
                     
                 </div>
                 <div
@@ -3266,7 +3239,7 @@
                         <img
                             style="width: 300px; height: 185px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/dbb11bbe-8f85-4b53-8c9d-32cc96a8b9f8.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/0fca3c61-c5ef-49b2-899b-04ea28c6efbc.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3279,7 +3252,7 @@
                         <img
                             style="width: 300px; height: 320px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/dd95cd3a-f5d8-4d44-82df-ab02426e498c.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/dbb11bbe-8f85-4b53-8c9d-32cc96a8b9f8.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3292,14 +3265,12 @@
                     class="sm:pt-16"
                 >
                     
-                        <video
+                        <img
                             style="width: 300px; height: 185px;"
-                            class="lazy rounded-sm object-cover w-full h-full"
-                            preload="none" autoplay loop playsinline controls muted
-                        >
-                            <source data-src="#t=0.5">
-                            Your browser does not support the video tag.
-                        </video>
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/dd95cd3a-f5d8-4d44-82df-ab02426e498c.jpeg"
+                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                        />
                     
                 </div>
                 <div
@@ -3391,12 +3362,14 @@
                     @click="activeImage = 0; galleryModalOpen = true"
                 >
                     
-                        <img
+                        <video
                             style="width: 100%; height: 118px;"
-                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/0fca3c61-c5ef-49b2-899b-04ea28c6efbc.png"
-                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                        />
+                            class="lazy rounded-sm object-cover w-full h-full"
+                            preload="none" autoplay loop playsinline controls muted
+                        >
+                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/59eab280-841b-4f0e-bdf0-68ff94e0c52d.quicktime#t=0.5">
+                            Your browser does not support the video tag.
+                        </video>
                     
                 </div>
                 <div
@@ -3407,7 +3380,7 @@
                         <img
                             style="width: 100%; height: 118px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/dbb11bbe-8f85-4b53-8c9d-32cc96a8b9f8.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/0fca3c61-c5ef-49b2-899b-04ea28c6efbc.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3420,7 +3393,7 @@
                         <img
                             style="width: 100%; height: 208px;"
                             class="object-cover rounded-sm border border-primary-darker cursor-pointer"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/dd95cd3a-f5d8-4d44-82df-ab02426e498c.jpeg"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/dbb11bbe-8f85-4b53-8c9d-32cc96a8b9f8.png"
                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                         />
                     
@@ -3430,14 +3403,12 @@
                     class="pt-4"
                 >
                     
-                        <video
+                        <img
                             style="width: 100%; height: 118px;"
-                            class="lazy rounded-sm object-cover w-full h-full"
-                            preload="none" autoplay loop playsinline controls muted
-                        >
-                            <source data-src="#t=0.5">
-                            Your browser does not support the video tag.
-                        </video>
+                            class="object-cover rounded-sm border border-primary-darker cursor-pointer"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/dd95cd3a-f5d8-4d44-82df-ab02426e498c.jpeg"
+                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                        />
                     
                 </div>
                 <div
@@ -3586,6 +3557,16 @@
                                     
                                         <li class="flex flex-col" x-show="activeImage === 0">
                                             
+                                                <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" preload="none" autoplay loop controls muted>
+                                                    <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/59eab280-841b-4f0e-bdf0-68ff94e0c52d.quicktime#t=0.5" >
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                                <p lorem="1" class="mt-3 text-gray-500"></p>
+                                            
+                                        </li>
+                                    
+                                        <li class="flex flex-col" x-show="activeImage === 1">
+                                            
                                                 
                                                     <img
                                                         class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover lazy"
@@ -3597,7 +3578,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 1">
+                                        <li class="flex flex-col" x-show="activeImage === 2">
                                             
                                                 
                                                     <img
@@ -3610,7 +3591,7 @@
                                             
                                         </li>
                                     
-                                        <li class="flex flex-col" x-show="activeImage === 2">
+                                        <li class="flex flex-col" x-show="activeImage === 3">
                                             
                                                 
                                                     <img
@@ -8460,7 +8441,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             
                               <div class="text-base leading-6 break-all">+19083889616</div>
                             
-                            <div class="text-base leading-6 break-all">ann.kolivanova@gmail.com</div>
+                            <div class="text-base leading-6 break-all"></div>
                         </div>
                     </div>
     
