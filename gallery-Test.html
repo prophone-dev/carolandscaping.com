@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/caeb9a66-b202-4a94-8e5f-2727c00716a7.webp");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/4550d719-8d31-4152-aba2-dcefb49f9c6c.webp");
       background-size: cover;
   }
   
@@ -1011,6 +1011,23 @@
                                 </div>
                             
                             
+                                <a
+                                    href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
+                                    target="_blank"
+                                    class="text-center inline-flex items-center transition hover:text-secondary"
+                                    :class="{
+                                        
+                                            
+                                                'text-white' : true
+                                            
+                                        
+                                    }"
+                                >
+                                    <span class="block px-2 py-1 text-center uppercase ">
+                                        PAY NOW
+                                    </span>
+                                </a>
+                            
 
                         </div>
 
@@ -1597,6 +1614,16 @@
                                 </div>
                             
                             
+                                <div x-trap.inert="openMenu == ''">
+                                    <a
+                                        href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
+                                        target="_blank"
+                                        class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                    >
+                                        Pay Now
+                                    </a>
+                                </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -1810,19 +1837,14 @@
         data-heap-version="v3"
     >
         
-            
+              
             <div
-                class="relative screen-height-minus-navbar flex w-full overflow-hidden items-center justify-center"
+                class="flex gallery-hero-image screen-height-minus-navbar w-full bg-center bg-cover bg-fixed"
+                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/4550d719-8d31-4152-aba2-dcefb49f9c6c.webp')"
             >
-                <video
-                    id="hero-gallery-video"
-                    class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted
-                >
-                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
-                </video>
                 <main
                     style="--tw-bg-opacity:75%;"
-                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary"
+                    class="flex screen-height-minus-navbar justify-center m-auto w-full bg-primary"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1847,7 +1869,7 @@
                             
                             <div onclick="postCtaClick('email')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
                                 <a
-                                    target = "_blank" href="mailto:ann.kolivanova@gmail.com?subject=landscaping near me Job - Requesting a quote&body=Hi ,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                                    target = "_blank" href="mailto:jahmar@toplinepro.com?subject=landscaping near me Job - Requesting a quote&body=Hi jahmar,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
                                     class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
                                     <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                                     <span class="relative">Email Us</span>
@@ -1898,7 +1920,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 1,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1915,6 +1937,29 @@
     data-heap-version="v2.3"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4 sm:space-y-0 lg:grid-cols-4 lg:gap-x-4">
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/4550d719-8d31-4152-aba2-dcefb49f9c6c.webp" alt="Test for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
         
     </ul>
 
@@ -1958,6 +2003,15 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4550d719-8d31-4152-aba2-dcefb49f9c6c.webp" alt="Test for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
                                 
                             </ul>
 
@@ -2816,7 +2870,7 @@
                             
                               <div class="text-base leading-6 break-all">+19083889616</div>
                             
-                            <div class="text-base leading-6 break-all"></div>
+                            <div class="text-base leading-6 break-all">ann.kolivanova@gmail.com</div>
                         </div>
                     </div>
     
