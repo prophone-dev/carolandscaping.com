@@ -1786,14 +1786,19 @@
         data-heap-version="v3"
     >
         
-              
+            
             <div
-                class="flex gallery-hero-image screen-height-minus-navbar w-full bg-center bg-cover bg-fixed"
-                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/20f9f190-a5ab-43de-89eb-a1691f5ede11.png')"
+                class="relative screen-height-minus-navbar flex w-full overflow-hidden items-center justify-center"
             >
+                <video
+                    id="hero-gallery-video"
+                    class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted
+                >
+                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
+                </video>
                 <main
                     style="--tw-bg-opacity:75%;"
-                    class="flex screen-height-minus-navbar justify-center m-auto w-full bg-primary"
+                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1845,7 +1850,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 13,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1862,305 +1867,6 @@
     data-heap-version="v2.3"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4 sm:space-y-0 lg:grid-cols-4 lg:gap-x-4">
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/20f9f190-a5ab-43de-89eb-a1691f5ede11.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/c099912c-5c60-4b88-b955-c0b997661a7f.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a0e17fac-632e-440e-b2a9-aa3d820883bc.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/fce98c04-926d-45a7-8c66-22b9901afb05.jpeg" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/43f338c3-3c3e-4cd1-a537-422a077f803f.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/26560dbf-f05a-47fc-b136-477a1dcd7588.jpeg" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a3191151-a75e-4efd-ad79-7b0b11213241.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/e9324ce2-4ed0-4e97-a6d1-5d875ce88d0f.jpeg" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/179154c8-be22-4425-b35a-26e61b98c485.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/38e6daac-51ea-4a9f-86ba-ad3b2ef7433c.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/2f940cdb-7599-4fb1-b917-cf41a1aa3eb7.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/c96fe628-c123-4f37-9df3-b8bf67419e80.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                            
-                                <div class="aspect-w-3 aspect-h-3">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/4fc6eff2-24b2-43b8-9141-8f70c94ec746.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
-                                        
-                                    
-                                </div>
-                            
-
-                            <div class="space-y-1 text-lg font-medium leading-6">
-                                <p class="line-clamp-3"></p>
-                                <h3 class="text-primary"></h3>
-                            </div>
-                        </button>
-                    </div>
-                </li>
-            
         
     </ul>
 
@@ -2204,123 +1910,6 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 0">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/20f9f190-a5ab-43de-89eb-a1691f5ede11.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 1">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c099912c-5c60-4b88-b955-c0b997661a7f.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 2">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a0e17fac-632e-440e-b2a9-aa3d820883bc.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 3">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/fce98c04-926d-45a7-8c66-22b9901afb05.jpeg" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 4">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/43f338c3-3c3e-4cd1-a537-422a077f803f.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 5">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/26560dbf-f05a-47fc-b136-477a1dcd7588.jpeg" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 6">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a3191151-a75e-4efd-ad79-7b0b11213241.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 7">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e9324ce2-4ed0-4e97-a6d1-5d875ce88d0f.jpeg" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 8">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/179154c8-be22-4425-b35a-26e61b98c485.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 9">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/38e6daac-51ea-4a9f-86ba-ad3b2ef7433c.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 10">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/2f940cdb-7599-4fb1-b917-cf41a1aa3eb7.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 11">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c96fe628-c123-4f37-9df3-b8bf67419e80.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 12">
-                                            
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4fc6eff2-24b2-43b8-9141-8f70c94ec746.png" alt="Gallery Rename for Caro Landscaping in Boston, MA" loading="lazy"/>
-
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
                                 
                             </ul>
 
@@ -2891,7 +2480,7 @@
                     <div class="flex flex-col flex-shrink-0 z-50 px-6 pb-4 bg-primary w-full align-middle items-center justify-center shadow-top-lg">
                         
                             <div class="flex text-gray-300 text-sm font-normal mt-1.5">
-                                By providing your phone number, you agree to receive text messages (SMS) from Caro Landscaping. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.
+                                TEST
                             </div>
                         
                         <button
