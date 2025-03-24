@@ -74,6 +74,11 @@
 
     <style>
         
+            body {
+              background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><rect width="100%25" height="100%25" fill="%23333"/><rect x="0" y="0" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/><rect x="50" y="0" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/><rect x="100" y="0" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/><rect x="150" y="0" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/><rect x="-25" y="25" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/><rect x="25" y="25" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/><rect x="75" y="25" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/><rect x="125" y="25" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/><rect x="175" y="25" width="50" height="25" fill="%23444" stroke="%23000" stroke-width="1"/></svg>');
+              background-repeat: repeat;
+            }
+        
     </style>
 
 
@@ -220,32 +225,19 @@
         
             
 
-<style>
-    .mobile-navbar-content-height {
-        height: calc(100vh - 76px);
-    }
-</style>
 
 <nav
     id="nav-bar"
     x-ref="navbar"
-    x-data="{ scrolledFromTop: false, customNavTransparent:  true , primaryWhite:  true  }"
-    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false; "
+    x-data="{ scrolledFromTop: false, customNavTransparent:  true  }"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false;"
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     class="w-screen fixed top-0 inset-x-0 z-50"
-    :class="{
-         
-             'bg-transparent': !scrolledFromTop,
-             
-                 'bg-white': scrolledFromTop
-             
-         
-     }"
     data-heap-component-name="navigation"
-    data-heap-version="v4"
+    data-heap-version="v2.1"
 >
 
-    <div
+    <div 
         x-ref="announcement"
         x-show="showAnnouncement"
         x-transition:leave="transition-all duration-700"
@@ -253,10 +245,7 @@
         x-transition:leave-end="max-h-0"
         class="overflow-hidden"
     >
-        <div    class="flex p-4 space-x-3 bg-green-50 text-sm font-medium text-green-500 align-center"
-                style="background-color:#a5559a"
-
-        >
+        <div style="background-color:#a5559a" class="flex p-4 space-x-3 bg-green-50 text-sm font-medium text-green-500 align-center">
             
                 <span style="color:#1310bc;" class="flex items-center">
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
@@ -279,830 +268,718 @@
         x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
         x-ref="nav_menu"
         x-init="
-            window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false
+        window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false
 
-            const root = document.querySelector(':root');
+        const root = document.querySelector(':root');
 
-            const observer = new ResizeObserver(() => {
-                navbarHeight = calculateTopMargin ?
-                    $refs.navbar.offsetHeight + 'px' :
-                    $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px';
+        const observer = new ResizeObserver(() => {
+            navbarHeight = calculateTopMargin ?
+                $refs.navbar.offsetHeight + 'px' :
+                $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px'
 
-                root.style.setProperty('--navbarHeight', navbarHeight);
-            });
-            observer.observe($refs.navbar);
-            "
-            @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-            :class="{
-                
-                    'translate-y-0 h-16  xl:h-[160px] ': !scrolledFromTop,
-                    'h-16 xl:h-[92px] shadow-magical': scrolledFromTop
-                
-            }
+            root.style.setProperty('--navbarHeight', navbarHeight);
+        });
+        observer.observe($refs.navbar);
         "
-        class="relative transition-all duration-500"
+        @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+        :class="{ 'bg-transparent translate-y-0 xl:h-44': !scrolledFromTop, 'bg-white shadow-magical': scrolledFromTop }"
+        class="relative transition-all duration-200  h-24 xl:h-44"
     >
-        <div
-            x-cloak
-            class="h-full  transition duration-0"
-            :class="scrolledFromTop ? 'border-b border-slate-700 px-4 xl:px-8' : 'px-4 xl:px-8'"
-        >
-            <div class="flex justify-between items-center  xl:items-start  h-full gap-6">
-                
-                    <a
-                        href=" ./"
-                        class=" transition-all ease-out duration-300"
-                        :class="scrolledFromTop ? 'h-12 xl:h-[90px] flex justify-center items-center' : 'sm:h-none h-16 xl:h-[160px]'"
-                    >
-                        
-                            <img
-                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/366dcdf8-b470-4369-a059-9013cc92bb9b.png"
-                                class="object-contain max-h-full  max-w-xs sm:max-w-sm "
-                                :class=""
-                                alt="Brand Logo"
-                                style="max-width: 265px;"
-                                loading="auto"
-                                fetchpriority="high"
-                                decoding="auto"
-                            />
-                        
-                    </a>
-                
-
-
-                
-
-                
+        <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-full">
+                <div class="flex items-center">
                     <div
-                        class="xl:hidden border-[3px] border-box  shadow-[5px_5px_0px_0px] shadow-primary/30"
-                        :class="{
-                            
-                                'text-white border-white' : !scrolledFromTop,
-                                'text-primary border-primary' : scrolledFromTop
-                            
-                        }"
+                        :class="{'scale-100': !scrolledFromTop, 'xl:scale-50': scrolledFromTop}"
+                        class="flex items-center h-full transition-all duration-200 origin-left"
                     >
-
-                        <button @click="mobileOpen = !mobileOpen" class="flex flex-row items-center px-4 py-[10px] gap-[10px]" aria-label="mobile menu button">
-                            <span class="uppercase text-sm font-bold">MENU</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                    </div>
-
-                    <div
-                        class="items-center py-4  hidden xl:flex w-full justify-end text-base font-bold"
-                    >
-                        <div
-                            class="mx-auto hidden transition-all  duration-200 xl:flex xl:gap-4 items-center"
+                    
+                        <a
+                            href=" ./"
+                            class="flex items-center justify-center flex-shrink-0 pr-5  rounded-md focus:ring-0 focus:ring-offset-0"
+                            :class="{'bg-transparent': !scrolledFromTop, 'bg-white': scrolledFromTop}"
                         >
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
+                        
+                            <picture>
+                                <source
+                                    type="image/webp" 
+                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/366dcdf8-b470-4369-a059-9013cc92bb9b.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/530x530/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/366dcdf8-b470-4369-a059-9013cc92bb9b.png 2x"
                                 >
-                                    
-                                        <a
-                                            href=" ./ "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Home
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <button
-                                            type="button"
-                                            aria-haspopup="true"
-                                            :aria-expanded="desktopOpen"
-                                            aria-controls="navitem_2"
-                                            @click="desktopOpen = !desktopOpen"
-                                            class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 uppercase ">Services</span>
-                                            <svg
-                                                class="w-5 h-5 ml-2 transition-transform duration-300"
-                                                :class="{ '-rotate-180': desktopOpen }"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 20 20"
-                                                fill="currentColor"
-                                                aria-hidden="true"
-                                            >
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                    clip-rule="evenodd"
-                                                />
-                                            </svg>
-                                        </button>
-                                    
-                                    
-                                        <div
-                                            x-cloak
-                                            x-show="desktopOpen"
-                                            x-transition:enter="transition ease-out duration-200"
-                                            x-transition:enter-start="opacity-0 translate-y-1"
-                                            x-transition:enter-end="opacity-100 translate-y-0"
-                                            x-transition:leave="transition ease-in duration-150"
-                                            x-transition:leave-start="opacity-100 translate-y-0"
-                                            x-transition:leave-end="opacity-0 translate-y-1"
-                                            id="navitem_2"
-                                            role="menu"
-                                            class="absolute z-50  -left-6"
-                                            aria-orientation="vertical"
-                                        >
-                                            <div class="overflow-hidden rounded-lg shadow-lg">
-                                                
-                                                <div class="relative flex p-4 bg-white overflow-y-auto" style="max-height: 80vh;">
-                                                    <div class="flex-1">
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-Cookin-Some-Chilli "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Cookin Some Chilli
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-Driveway-Design---Build "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Driveway Design &amp; Build
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-Fall-and-Spring-Clean-Up "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Fall and Spring Clean Up
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-Cheese-Making "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Cheese Making
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-Stone-Wall-Installation "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Stone Wall Installation
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-pressure-washing "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Pressure Washing
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                    </div>
-                                                    <div class="flex-1">
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-landscape-management-softscaping-and-hardscaping "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Softscaping, and Hardscaping
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-guard-dogs "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Guard Dogs
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-backyard-band "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Backyard Band
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-lawn-ornamentation "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Lawn Ornamentation
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" service-weed-prevention "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Weed Prevention
-                                                            </a>
-                                                            
-                                                        
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <button
-                                            type="button"
-                                            aria-haspopup="true"
-                                            :aria-expanded="desktopOpen"
-                                            aria-controls="navitem_3"
-                                            @click="desktopOpen = !desktopOpen"
-                                            class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 uppercase  bg-secondary/60 ">Galleries</span>
-                                            <svg
-                                                class="w-5 h-5 ml-2 transition-transform duration-300"
-                                                :class="{ '-rotate-180': desktopOpen }"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 20 20"
-                                                fill="currentColor"
-                                                aria-hidden="true"
-                                            >
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                    clip-rule="evenodd"
-                                                />
-                                            </svg>
-                                        </button>
-                                    
-                                    
-                                        <div
-                                            x-cloak
-                                            x-show="desktopOpen"
-                                            x-transition:enter="transition ease-out duration-200"
-                                            x-transition:enter-start="opacity-0 translate-y-1"
-                                            x-transition:enter-end="opacity-100 translate-y-0"
-                                            x-transition:leave="transition ease-in duration-150"
-                                            x-transition:leave-start="opacity-100 translate-y-0"
-                                            x-transition:leave-end="opacity-0 translate-y-1"
-                                            id="navitem_3"
-                                            role="menu"
-                                            class="absolute z-50  -left-6"
-                                            aria-orientation="vertical"
-                                        >
-                                            <div class="overflow-hidden rounded-lg shadow-lg">
-                                                
-                                                <div class="relative flex p-4 bg-white overflow-y-auto" style="max-height: 80vh;">
-                                                    <div class="flex-1">
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Gallery-Rename "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Gallery Rename
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-instagram "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                instagram
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-2-18-Gallery "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                2/18 Gallery
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-work "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                work
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-New-Gallery "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                New Gallery
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-moving-showcases-2-rename- "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                moving showcases 2 rename 
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Moving-gallery- "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Moving gallery 
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Adam-New-Gallery-Test-Load "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Adam New Gallery Test Load
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                    </div>
-                                                    <div class="flex-1">
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Adam-New-Gallery-Test-2 "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Adam New Gallery Test 2
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-new-gallery-test "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                new gallery test
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-3-3-Gallery-Test-Edit- "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                3/3 Gallery Test Edit 
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-New-Gallery-2 "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                New Gallery 2
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-Test "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                Test
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-3-17-test-gallery-edit "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                3/17 test gallery edit
-                                                            </a>
-                                                            
-                                                        
-                                                            
-                                                            <a
-                                                                href=" gallery-All "
-                                                                role="menuitem"
-                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                            >
-                                                                All Photos
-                                                            </a>
-                                                            
-                                                        
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" showcases "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Showcases
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" reviews "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Reviews
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" our-team "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Our team
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" jobs "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Jobs
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" blog "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Blog
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" give-away "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                GIVE AWAY
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                            
-                                <a
-                                    href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
-                                    target="_blank"
-                                    class="text-center inline-flex items-center transition hover:text-secondary"
-                                    :class="{
-                                        
-                                            
-                                                'text-gray-900' : !scrolledFromTop,
-                                                'text-gray-900' : scrolledFromTop
-                                            
-                                        
-                                    }"
-                                >
-                                    <span class="block px-2 py-1 text-center uppercase ">
-                                        PAY NOW
-                                    </span>
-                                </a>
-                            
-
-                        </div>
-
-                        <div class="flex gap-4 xl:gap-8 items-center">
-
-
-                            
-
-
-                            
-
-                            
-
-                            
-
-                            
-                            <div class="relative">
-                                <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -top-2 -right-[10px]"></div>
-                                <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -bottom-2 -left-[10px]"></div>
-                                <div
-                                    onclick="postCtaClick('text')"
-                                    class="relative w-full  sm:w-auto cta_text_button text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
-                                >
-
-                                    <button
-                                        @click="contactModalOpen = true"
-                                        class="flex justify-center items-center w-full  py-4 px-6  overflow-hidden  uppercase text-base font-bold"
-
-                                    >
-                                        Get a Quote
-                                    </button>
-                                </div>
-                            </div>
-                            
-
-
-                            
-
-
-                            
-                                <div
-                                    onclick="postCtaClick('link')"
-                                    class="w-full sm:w-auto cta_text_button rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300 border-2 border-primary hover:border-white box-border"
-                                    :class="primaryWhite ? 'hover:ring-secondary border-secondary hover:border-secondary' : ''"
-                                >
-                                    <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        href="https://calendly.com/caro-landscaping/15min"
-                                        class="flex justify-center w-full  px-6 py-4 overflow-hidden bg-white text-black  uppercase"
-                                    >
-                                        Book Now
-                                    </a>
-                                </div>
-                            
-                            
-                            
-                            
-                        </div>
+                                <img
+                                    class="h-[80px] xl:h-[150px] object-contain logo  max-w-xs sm:max-w-sm "
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/366dcdf8-b470-4369-a059-9013cc92bb9b.png"
+                                    alt="Brand Logo"
+                                    width="265"
+                                    loading="auto"
+                                    fetchpriority="high"
+                                    decoding="auto"
+                                />
+                            </picture>
+                        
+                        </a>
+                    
                     </div>
+                </div>
+
+
+                <div >
+                
+                     </div>
+                
+                <div
+                    class="flex flex-row items-center xl:hidden"
+                    :class="{ 'text-gray-700': !scrolledFromTop, 'text-white': scrolledFromTop }"
+                >
+                    <span class="uppercase">Menu</span>
+                    <button @click="mobileOpen = !mobileOpen" class="p-2" aria-label="mobile menu button">
+                        <span hidden class="sr-only">Open/CLose menu TODO:</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="items-center hidden space-x-3 xl:flex">
+                    <div
+                        :class="{'h-16': !scrolledFromTop, 'h-16': scrolledFromTop}"
+                        class="hidden transition-all duration-200 xl:flex xl:space-x-5 mr-2"
+                    >
+
+                    
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" ./ "
+                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Home
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <button
+                                        type="button"
+                                        aria-haspopup="true"
+                                        :aria-expanded="desktopOpen"
+                                        aria-controls="navitem_2"
+                                        @click="desktopOpen = !desktopOpen"
+                                        class="inline-flex items-center px-1 pt-6 pb-5 text-sm font-medium transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
+                                        :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
+                                    >
+                                        <span 
+                                            class="block py-5 "
+                                        >Services</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 transition-transform duration-300"
+                                            :class="{ '-rotate-180': desktopOpen }"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="desktopOpen"
+                                        x-transition:enter="transition ease-out duration-200"
+                                        x-transition:enter-start="opacity-0 translate-y-1"
+                                        x-transition:enter-end="opacity-100 translate-y-0"
+                                        x-transition:leave="transition ease-in duration-150"
+                                        x-transition:leave-start="opacity-100 translate-y-0"
+                                        x-transition:leave-end="opacity-0 translate-y-1"
+                                        id="navitem_2"
+                                        role="menu"
+                                        class="absolute z-20  px-2 mt-6 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                            
+                                            <div class="relative flex gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto" style="max-height: 80vh;">
+                                                <div class="flex-1">
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-Cookin-Some-Chilli "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Cookin Some Chilli</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-Driveway-Design---Build "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Driveway Design &amp; Build</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-Fall-and-Spring-Clean-Up "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Fall and Spring Clean Up</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-Cheese-Making "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Cheese Making</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-Stone-Wall-Installation "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Stone Wall Installation</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-pressure-washing "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Pressure Washing</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                                <div class="flex-1">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-landscape-management-softscaping-and-hardscaping "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Softscaping, and Hardscaping</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-guard-dogs "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Guard Dogs</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-backyard-band "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Backyard Band</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-lawn-ornamentation "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Lawn Ornamentation</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-weed-prevention "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Weed Prevention</p>
+                                                        </a>
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <button
+                                        type="button"
+                                        aria-haspopup="true"
+                                        :aria-expanded="desktopOpen"
+                                        aria-controls="navitem_3"
+                                        @click="desktopOpen = !desktopOpen"
+                                        class="inline-flex items-center px-1 pt-6 pb-5 text-sm font-medium transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
+                                        :class="{ 'hover:text-gray-700 text-gray-900': !scrolledFromTop, 'text-white hover:text-gray-100': scrolledFromTop }"
+                                    >
+                                        <span 
+                                            class="block py-5 border-b-2 border-secondary hover:border-gray-300"
+                                        >Galleries</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 transition-transform duration-300"
+                                            :class="{ '-rotate-180': desktopOpen }"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="desktopOpen"
+                                        x-transition:enter="transition ease-out duration-200"
+                                        x-transition:enter-start="opacity-0 translate-y-1"
+                                        x-transition:enter-end="opacity-100 translate-y-0"
+                                        x-transition:leave="transition ease-in duration-150"
+                                        x-transition:leave-start="opacity-100 translate-y-0"
+                                        x-transition:leave-end="opacity-0 translate-y-1"
+                                        id="navitem_3"
+                                        role="menu"
+                                        class="absolute z-20  px-2 mt-6 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                            
+                                            <div class="relative flex gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto" style="max-height: 80vh;">
+                                                <div class="flex-1">
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-Gallery-Rename "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Gallery Rename</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-instagram "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">instagram</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-2-18-Gallery "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">2/18 Gallery</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-work "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">work</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-New-Gallery "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">New Gallery</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-moving-showcases-2-rename- "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">moving showcases 2 rename </p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-Moving-gallery- "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Moving gallery </p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-Adam-New-Gallery-Test-Load "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Adam New Gallery Test Load</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                </div>
+                                                <div class="flex-1">
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-Adam-New-Gallery-Test-2 "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Adam New Gallery Test 2</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-new-gallery-test "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">new gallery test</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-3-3-Gallery-Test-Edit- "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">3/3 Gallery Test Edit </p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-New-Gallery-2 "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">New Gallery 2</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-Test "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Test</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-3-17-test-gallery-edit "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">3/17 test gallery edit</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" gallery-All "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">All Photos</p>
+                                                        </a>
+                                                        
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" showcases "
+                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Showcases
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" reviews "
+                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Reviews
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" our-team "
+                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Our team
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" jobs "
+                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Jobs
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" blog "
+                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" give-away "
+                                        class=" border-transparent   hover:border-gray-100 hover:text-gray-100  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                                    >
+                                        GIVE AWAY
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                        
+                        <a
+                            href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
+                            target="_blank"
+                            class=" border-transparent  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                            :class="{ 'hover:border-gray-300 hover:text-gray-700 text-gray-900': !scrolledFromTop, 'hover:border-gray-100 hover:text-gray-100 text-white': scrolledFromTop }"
+                        >
+                            Pay now
+                        </a>
+                        
+
+                    </div>
+                    <p :class="{'translate-x-0': !scrolledFromTop, 'translate-x-12': scrolledFromTop}" class="text-gray-500 transition-transform">
+                        
+                    </p>
+                    <div class="w-full sm:w-auto">
+                        
+                        <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button hover:scale-110 transition duration-300 ease-in-out">
+                            <button
+                                :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
+                                @click="contactModalOpen = true"
+                                class="inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-primary hover:bg-primary-darker  focus:ring-0 focus:ring-offset-0"
+                                >
+                                Get a Quote
+                            </button>
+                        </div> 
+                        
+                    </div>
+
+                    <div class="inline-flex w-full sm:w-auto">
+                        
+                        <div onclick="postCtaClick('link')" class="inline-flex w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
+                            <a
+                                href="https://calendly.com/caro-landscaping/15min"
+                            :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
+                            class="inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md   text-primary border-primary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
+                                >
+                                Book Now
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
                 
             </div>
         </div>
 
-        
         <template x-teleport="body">
             <div
                 x-cloak
@@ -1114,27 +991,28 @@
                 x-transition:leave="duration-100 ease-in"
                 x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-95"
-                class="fixed inset-0 z-[9999] transition transform xl:hidden"
+                class="fixed inset-0 z-50 overflow-y-scroll transition origin-top-right transform xl:hidden"
             >
-                <div class="w-full px-6 py-2 h-full bg-tertiary ring-1 ring-black ring-opacity-5">
-                    <div class="flex bg-tertiary items-center justify-between flex-initial">
+                <div class="block w-full h-full overflow-y-scroll bg-white shadow-md ring-1 ring-black ring-opacity-5">
+                    <div class="flex sticky top-0 z-50 bg-white h-auto items-center justify-between px-5 pt-4">
+                        <div>
                         
                             <a
                                 href=" ./"
-                                class="flex flex-1 items-center flex-shrink-0 bg-tertiary rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
+                                class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                             >
                             
                                 <picture>
                                     <source
-                                        type="image/webp"
+                                        type="image/webp" 
                                         srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/366dcdf8-b470-4369-a059-9013cc92bb9b.png" loading="auto"
                                     >
                                     <img
-                                        class="h-[76px] w-full object-contain"
+                                        class="h-[80px] object-contain"
                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/265x265/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/366dcdf8-b470-4369-a059-9013cc92bb9b.png"
                                         alt="Brand Logo"
-                                        width="76"
-                                        height="76"
+                                        width="80"
+                                        height="80"
                                         loading="auto"
                                         fetchpriority="high"
                                         decoding="async"
@@ -1143,32 +1021,30 @@
                             
                             </a>
                         
-                        <button
-                            @click="mobileOpen = false"
-                            type="button"
-                            class="flex flex-row items-center xl:hidden border-[3px] px-4 border-primary py-[10px] gap-[10px] shadow-[5px_5px_0px_0px] shadow-primary/30"
-                        >
-                            <span class="uppercase text-sm text-primary font-bold">Close</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path class="stroke-primary" d="M6 18L17.94 6M18 18L6.06 6" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
+                        </div>
+                        <div class="-mr-2">
+                            <button
+                                @click="mobileOpen = false"
+                                type="button"
+                                class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            >
+                                <span class="sr-only">Close menu</span>
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    <div class="flex flex-col justify-between h-full">
-                        <div x-data="{ openMenu: '' }" class="overflow-y-auto pt-8 pb-28 flex flex-col gap-4 flex-auto">
+                    <div class="flex flex-col screen-height-minus-navbar overflow-y-scroll">
+                        <div x-data="{ openMenu: '' }" class="relative block overflow-y-scroll h-full px-2 pt-2 pb-3 space-y-1">
                             
                                 <div x-trap.inert="openMenu == 'navitem_1'">
                                     
                                         <a
                                             href=" ./ "
-                                            class="block text-base font-bold transition duration-75 uppercase"
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Home</a
                                         >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Home
-                                            </span>
-                                        </a>
                                     
                                     
                                 </div>
@@ -1180,14 +1056,23 @@
                                             :aria-expanded="openMenu == 'navitem_2'"
                                             aria-controls="mobile-navitem_2"
                                             @click="openMenu = openMenu == 'navitem_2' ? '' : 'navitem_2'"
-                                            class="flex justify-between items-center w-full  transition duration-75 uppercase"
+                                            class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
+                                            :class="openMenu == 'navitem_2' ? 'z-30' : 'z-0'"
                                         >
-                                            <span class=" px-2 text-2xl font-bold hover:bg-primary hover:text-white">Services</span>
-                                            <svg x-show="openMenu == 'navitem_2'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path d="M15 10H5" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <svg x-show="openMenu != 'navitem_2'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 3C10.5523 3 11 3.44772 11 4V9H16C16.5523 9 17 9.44772 17 10C17 10.5523 16.5523 11 16 11H11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11H4C3.44772 11 3 10.5523 3 10C3 9.44771 3.44772 9 4 9L9 9V4C9 3.44772 9.44772 3 10 3Z" fill="currentColor"/>
+                                            <span>Services</span>
+                                            <svg
+                                                class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                                :class="{ '-rotate-180': openMenu == 'navitem_2' }"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                />
                                             </svg>
                                         </button>
                                     
@@ -1198,129 +1083,53 @@
                                             x-collapse
                                             id="mobile-navitem_2"
                                             role="menu"
+                                            class="z-20 pt-1 pb-2"
                                             aria-orientation="vertical"
                                         >
-                                            <div class="flex flex-col py-4 px-4 gap-4">
+                                            <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                                 
-                                                    <a
-                                                        href="service-Cookin-Some-Chilli"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Cookin Some Chilli
-                                                        </span>
-
+                                                    <a href="service-Cookin-Some-Chilli" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Cookin Some Chilli</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-Driveway-Design---Build"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Driveway Design &amp; Build
-                                                        </span>
-
+                                                    <a href="service-Driveway-Design---Build" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Driveway Design &amp; Build</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-Fall-and-Spring-Clean-Up"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Fall and Spring Clean Up
-                                                        </span>
-
+                                                    <a href="service-Fall-and-Spring-Clean-Up" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Fall and Spring Clean Up</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-Cheese-Making"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Cheese Making
-                                                        </span>
-
+                                                    <a href="service-Cheese-Making" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Cheese Making</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-Stone-Wall-Installation"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Stone Wall Installation
-                                                        </span>
-
+                                                    <a href="service-Stone-Wall-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Stone Wall Installation</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-pressure-washing"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Pressure Washing
-                                                        </span>
-
+                                                    <a href="service-pressure-washing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Pressure Washing</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-landscape-management-softscaping-and-hardscaping"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Softscaping, and Hardscaping
-                                                        </span>
-
+                                                    <a href="service-landscape-management-softscaping-and-hardscaping" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Softscaping, and Hardscaping</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-guard-dogs"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Guard Dogs
-                                                        </span>
-
+                                                    <a href="service-guard-dogs" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Guard Dogs</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-backyard-band"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Backyard Band
-                                                        </span>
-
+                                                    <a href="service-backyard-band" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Backyard Band</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-lawn-ornamentation"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Lawn Ornamentation
-                                                        </span>
-
+                                                    <a href="service-lawn-ornamentation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Lawn Ornamentation</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="service-weed-prevention"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Weed Prevention
-                                                        </span>
-
+                                                    <a href="service-weed-prevention" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Weed Prevention</p>
                                                     </a>
                                                 
                                             </div>
@@ -1335,14 +1144,23 @@
                                             :aria-expanded="openMenu == 'navitem_3'"
                                             aria-controls="mobile-navitem_3"
                                             @click="openMenu = openMenu == 'navitem_3' ? '' : 'navitem_3'"
-                                            class="flex justify-between items-center w-full  transition duration-75 uppercase"
+                                            class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
+                                            :class="openMenu == 'navitem_3' ? 'z-30' : 'z-0'"
                                         >
-                                            <span class="bg-secondary/30 text-black px-2 text-2xl font-bold hover:bg-primary hover:text-white">Galleries</span>
-                                            <svg x-show="openMenu == 'navitem_3'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path d="M15 10H5" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <svg x-show="openMenu != 'navitem_3'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 3C10.5523 3 11 3.44772 11 4V9H16C16.5523 9 17 9.44772 17 10C17 10.5523 16.5523 11 16 11H11V16C11 16.5523 10.5523 17 10 17C9.44772 17 9 16.5523 9 16V11H4C3.44772 11 3 10.5523 3 10C3 9.44771 3.44772 9 4 9L9 9V4C9 3.44772 9.44772 3 10 3Z" fill="currentColor"/>
+                                            <span>Galleries</span>
+                                            <svg
+                                                class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                                :class="{ '-rotate-180': openMenu == 'navitem_3' }"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                />
                                             </svg>
                                         </button>
                                     
@@ -1353,173 +1171,69 @@
                                             x-collapse
                                             id="mobile-navitem_3"
                                             role="menu"
+                                            class="z-20 pt-1 pb-2"
                                             aria-orientation="vertical"
                                         >
-                                            <div class="flex flex-col py-4 px-4 gap-4">
+                                            <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
                                                 
-                                                    <a
-                                                        href="gallery-Gallery-Rename"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Gallery Rename
-                                                        </span>
-
+                                                    <a href="gallery-Gallery-Rename" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Gallery Rename</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-instagram"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            instagram
-                                                        </span>
-
+                                                    <a href="gallery-instagram" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">instagram</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-2-18-Gallery"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            2/18 Gallery
-                                                        </span>
-
+                                                    <a href="gallery-2-18-Gallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">2/18 Gallery</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-work"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            work
-                                                        </span>
-
+                                                    <a href="gallery-work" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">work</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-New-Gallery"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery
-                                                        </span>
-
+                                                    <a href="gallery-New-Gallery" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-moving-showcases-2-rename-"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            moving showcases 2 rename 
-                                                        </span>
-
+                                                    <a href="gallery-moving-showcases-2-rename-" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">moving showcases 2 rename </p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-Moving-gallery-"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Moving gallery 
-                                                        </span>
-
+                                                    <a href="gallery-Moving-gallery-" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Moving gallery </p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-Adam-New-Gallery-Test-Load"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Adam New Gallery Test Load
-                                                        </span>
-
+                                                    <a href="gallery-Adam-New-Gallery-Test-Load" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Adam New Gallery Test Load</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-Adam-New-Gallery-Test-2"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Adam New Gallery Test 2
-                                                        </span>
-
+                                                    <a href="gallery-Adam-New-Gallery-Test-2" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Adam New Gallery Test 2</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-new-gallery-test"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            new gallery test
-                                                        </span>
-
+                                                    <a href="gallery-new-gallery-test" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">new gallery test</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-3-3-Gallery-Test-Edit-"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            3/3 Gallery Test Edit 
-                                                        </span>
-
+                                                    <a href="gallery-3-3-Gallery-Test-Edit-" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">3/3 Gallery Test Edit </p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-New-Gallery-2"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            New Gallery 2
-                                                        </span>
-
+                                                    <a href="gallery-New-Gallery-2" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">New Gallery 2</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-Test"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            Test
-                                                        </span>
-
+                                                    <a href="gallery-Test" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Test</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-3-17-test-gallery-edit"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            3/17 test gallery edit
-                                                        </span>
-
+                                                    <a href="gallery-3-17-test-gallery-edit" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">3/17 test gallery edit</p>
                                                     </a>
                                                 
-                                                    <a
-                                                        href="gallery-All"
-                                                        role="menuitem"
-                                                        class="block"
-                                                    >
-                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
-                                                            All Photos
-                                                        </span>
-
+                                                    <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
                                                     </a>
                                                 
                                             </div>
@@ -1531,14 +1245,9 @@
                                     
                                         <a
                                             href=" showcases "
-                                            class="block text-base font-bold transition duration-75 uppercase"
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Showcases</a
                                         >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Showcases
-                                            </span>
-                                        </a>
                                     
                                     
                                 </div>
@@ -1547,14 +1256,9 @@
                                     
                                         <a
                                             href=" reviews "
-                                            class="block text-base font-bold transition duration-75 uppercase"
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Reviews</a
                                         >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Reviews
-                                            </span>
-                                        </a>
                                     
                                     
                                 </div>
@@ -1563,14 +1267,9 @@
                                     
                                         <a
                                             href=" our-team "
-                                            class="block text-base font-bold transition duration-75 uppercase"
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Our team</a
                                         >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Our team
-                                            </span>
-                                        </a>
                                     
                                     
                                 </div>
@@ -1579,14 +1278,9 @@
                                     
                                         <a
                                             href=" jobs "
-                                            class="block text-base font-bold transition duration-75 uppercase"
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Jobs</a
                                         >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Jobs
-                                            </span>
-                                        </a>
                                     
                                     
                                 </div>
@@ -1595,14 +1289,9 @@
                                     
                                         <a
                                             href=" blog "
-                                            class="block text-base font-bold transition duration-75 uppercase"
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
                                         >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Blog
-                                            </span>
-                                        </a>
                                     
                                     
                                 </div>
@@ -1611,14 +1300,9 @@
                                     
                                         <a
                                             href=" give-away "
-                                            class="block text-base font-bold transition duration-75 uppercase"
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >GIVE AWAY</a
                                         >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                GIVE AWAY
-                                            </span>
-                                        </a>
                                     
                                     
                                 </div>
@@ -1628,12 +1312,41 @@
                                     <a
                                         href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
                                         target="_blank"
-                                        class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
+                                        class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                     >
                                         Pay Now
                                     </a>
                                 </div>
                             
+                        </div>
+                            <div class="flex flex-col fixed bottom-0 w-full p-2 bg-primary">
+                                
+                                <div onclick="postCtaClick('text')" class="w-full sm:w-auto">
+                                    <button
+                                    @click="contactModalOpen = true"
+                                    class="relative block w-full px-5 py-3 whitespace-nowrap font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
+                                    >
+                                        Get a Quote
+                                    </button>
+                                </div>
+                                
+
+                                
+                                <div onclick="postCtaClick('link')" class="w-full">
+                                    <a
+                                        target="_blank" rel="noopener noreferrer"
+                                        href="https://calendly.com/caro-landscaping/15min"
+                                    :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
+                                    class="inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
+                                        >
+                                        Book Now
+                                    </a>
+                                </div>
+                                 
+                            
+                        
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1654,15 +1367,15 @@
      || window.location.href.includes('localhost')) && window.location.href.includes('m/v2/b/'))) {
         launchBanner.style.display = 'block'
         if (isMobile) {
-            navBar.className = "fixed inset-x-0 sm:top-16 z-40 transition-all duration-200"
+            navBar.className = "fixed inset-x-0 sm:top-16 z-50 transition-all duration-200"
             contactUsButton.href = "tel:8573653045"
         } else {
-            navBar.className = "fixed inset-x-0 top-0 sm:top-16 z-40 transition-all duration-200"
+            navBar.className = "fixed inset-x-0 top-0 sm:top-16 z-50 transition-all duration-200"
             contactUsButton.href = "mailto:support@prophone.com?subject=ProPhone - Sales Inquiry"
         }
     } else {
         launchBanner.style.display = 'none'
-        navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-40 transition-all duration-200"
+        navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-50 transition-all duration-200"
     }
 
     async function postCtaClick(type) {
@@ -1678,10 +1391,23 @@
     }
 </script>
 
+<style>
 
+    @media (max-width: 500px) {
+        .logo{
+            max-width: 160px;
+        }
+    }
+
+</style>
         
         
-            
+            <!--<script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>-->
+<!-- <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script> -->
+<!--<script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>-->
         
         
             
@@ -1860,7 +1586,7 @@
                     <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
                 </video>
                 <main
-                    style="--tw-bg-opacity:75%;"
+                    style="--tw-bg-opacity:25%;"
                     class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
@@ -2138,7 +1864,7 @@
                 </div>
                 <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
 
-                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('caro-landscaping', 'contact-modal', '+19083889616')">
+                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('caro-landscaping', 'contact-modal', '+17742619415')">
                     <div class="flex flex-shrink-1 h-auto overflow-x-hidden overflow-y-auto pb-3">
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                             
@@ -2827,7 +2553,7 @@
                             <div class="text-base leading-6 font-black uppercase break-word">Caro Landscaping</div>
                             <div class="text-base leading-6 break-word">testing testing, US</div>
                             
-                              <div class="text-base leading-6 break-all">+19083889616</div>
+                              <div class="text-base leading-6 break-all">+17742619415</div>
                             
                             <div class="text-base leading-6 break-all">ann.kolivanova@gmail.com</div>
                         </div>
