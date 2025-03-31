@@ -491,6 +491,8 @@
                                                     
                                                         
                                                     
+                                                        
+                                                    
                                                 </div>
                                                 <div class="flex-1">
                                                     
@@ -553,6 +555,16 @@
                                                             class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
                                                         >
                                                             <p class="mt-1 text-base font-medium uppercase">Weed Prevention</p>
+                                                        </a>
+                                                        
+                                                    
+                                                        
+                                                        <a
+                                                            href=" service-water-features "
+                                                            role="menuitem"
+                                                            class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50 whitespace-nowrap"
+                                                        >
+                                                            <p class="mt-1 text-base font-medium uppercase">Water Features </p>
                                                         </a>
                                                         
                                                     
@@ -1123,6 +1135,10 @@
                                                         <p class="mt-1 text-sm text-gray-500 uppercase">Weed Prevention</p>
                                                     </a>
                                                 
+                                                    <a href="service-water-features" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Water Features </p>
+                                                    </a>
+                                                
                                             </div>
                                         </div>
                                     
@@ -1546,19 +1562,14 @@
         data-heap-version="v3"
     >
         
-            
+              
             <div
-                class="relative screen-height-minus-navbar flex w-full overflow-hidden items-center justify-center"
+                class="flex gallery-hero-image screen-height-minus-navbar w-full bg-center bg-cover bg-fixed"
+                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/caeb9a66-b202-4a94-8e5f-2727c00716a7.webp')"
             >
-                <video
-                    id="hero-gallery-video"
-                    class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted
-                >
-                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
-                </video>
                 <main
                     style="--tw-bg-opacity:25%;"
-                    class="flex screen-height-minus-navbar relative justify-center m-auto w-full bg-primary"
+                    class="flex screen-height-minus-navbar justify-center m-auto w-full bg-primary"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1626,7 +1637,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 1,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1643,6 +1654,29 @@
     data-heap-version="v2.3"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4 sm:space-y-0 lg:grid-cols-4 lg:gap-x-4">
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/caeb9a66-b202-4a94-8e5f-2727c00716a7.webp" alt="Adam New Gallery Test 2 for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
         
     </ul>
 
@@ -1686,6 +1720,15 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/caeb9a66-b202-4a94-8e5f-2727c00716a7.webp" alt="Adam New Gallery Test 2 for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
                                 
                             </ul>
 
@@ -2808,6 +2851,14 @@
                                     href="service-weed-prevention"
                                     class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
                                     >Weed Prevention</a
+                                >
+                            </li>
+                            
+                            <li>
+                                <a
+                                    href="service-water-features"
+                                    class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                    >Water Features </a
                                 >
                             </li>
                             
