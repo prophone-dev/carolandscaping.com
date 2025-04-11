@@ -1617,7 +1617,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 9,
+        amountOfImages: 12,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1842,6 +1842,75 @@
                 </li>
             
         
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a9736422-689b-4c1a-bfd2-309fe27c814f.jpeg" alt="work for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a5d31c1e-3ce6-410f-84fc-255bffa31a00.jpeg" alt="work for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/e07bad3a-1997-471c-bceb-5933464b57bf.jpeg" alt="work for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
     </ul>
 
     <template x-teleport="body">
@@ -1961,6 +2030,33 @@
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ad0185f5-571b-474b-bed5-f6b3a87caf95.png" alt="work for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 9">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a9736422-689b-4c1a-bfd2-309fe27c814f.jpeg" alt="work for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 10">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a5d31c1e-3ce6-410f-84fc-255bffa31a00.jpeg" alt="work for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 11">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e07bad3a-1997-471c-bceb-5933464b57bf.jpeg" alt="work for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2178,55 +2274,6 @@
                             
                             
                             
-                            
-                            
-                            
-                              <div>
-                                  <label for="contact-address" class="font-medium text-base text-white">
-                                    Address
-                                  </label>
-                                  <input
-                                      type="text"
-                                      name="address"
-                                      id="contact-address"
-                                      class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
-                                      placeholder="123 Main Street, Boston, MA 02212"
-                                      onkeydown="if(event.key === 'Enter') event.preventDefault();"
-                                      
-                                    />
-                              </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                                <div>
-                                    <label for="contact-short-answer-b558cbc3-6187-4576-b360-29a36ac96253" class="font-medium text-base text-white">
-                                      Zipcode
-                                    </label>
-                                    <input
-                                      type="text"
-                                      name="short-answer-b558cbc3-6187-4576-b360-29a36ac96253"
-                                      id="contact-short-answer-b558cbc3-6187-4576-b360-29a36ac96253"
-                                      class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
-                                      placeholder="Type your response here..."
-                                      
-                                    />
-                                </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                                 <div>
                                     <label for="contact-email" class="font-medium text-base text-white">
                                       Email<span> *</span>
@@ -2247,23 +2294,6 @@
                             
                             
                             
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                                <div class="relative">
-                                    <label for="contact-date" class="font-medium text-base text-white">Preferred date</label>
-                                    <div class="w-4 h-4 absolute transform translate-y-4.5 left-4">
-                                    </div>
-                                    <input id="contact-date" name="date" type="date" class="block text-left z-50 w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary" >
-                                </div>
                             
                             
                             
@@ -2642,14 +2672,14 @@
                     
                     
                     <li class="hidden md:block">
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/104865895776827/reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/522520417619598/reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             
                                 Facebook
                             
                         </a>
                     </li>
                     <li class="block md:hidden">
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/104865895776827" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/522520417619598" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
                             
                                 Facebook
                             
@@ -2877,7 +2907,7 @@
                                     <a
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href="https://www.facebook.com/104865895776827"
+                                        href="https://www.facebook.com/522520417619598"
                                     >
                                         <span class="sr-only">Facebook</span>
                                         <svg style="width: 40px; height: 40px;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
