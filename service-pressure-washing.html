@@ -46,7 +46,7 @@
     <meta name="description" content="Enhance the curb appeal of your home with our professional Pressure Washing service." />
     
     
-    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png" type="image/x-icon">
+    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png" type="image/x-icon">
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
@@ -83,8 +83,8 @@
   :root {
       --contrastThreshold: 60%;
       --color-primary-h: 0;
-      --color-primary-s: 0%;
-      --color-primary-l: 100%;
+      --color-primary-s: 76%;
+      --color-primary-l: 80%;
       --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
       --color-secondary-h: 38;
       --color-secondary-s: 48%;
@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/fbff00c2-363d-4f82-b6b4-f1e7cd749ec8.webp");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/e0175083-96ab-491b-9fe2-87ad93f56290.jpeg");
       background-size: cover;
   }
   
@@ -193,7 +193,7 @@
 </head>
 
 <body
-    
+    class="xl:pt-44 pt-24 ease-in-out"
     x-data="{ 
         contactModalOpen: false,
         applyModalOpen: false,
@@ -205,10 +205,10 @@
         contactChatOpen: false,
         active: 0,
         showAnnouncement: true,
-        customNavTransparent:  true ,
+        customNavTransparent:  false ,
         showMessage: false,
         navbarHeight: '',
-        calculateTopMargin: false,
+        calculateTopMargin: true,
     }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ paddingTop: navbarHeight }"
@@ -229,16 +229,13 @@
 <nav
     id="nav-bar"
     x-ref="navbar"
-    x-data="{ scrolledFromTop: false, customNavTransparent:  true , primaryWhite:  true  }"
+    x-data="{ scrolledFromTop: false, customNavTransparent:  false , primaryWhite:  false  }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false; "
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     class="w-screen fixed top-0 inset-x-0 z-50"
     :class="{
          
-             'bg-transparent': !scrolledFromTop,
-             
-                 'bg-primary': scrolledFromTop
-             
+             'bg-gray-900': true
          
      }"
     data-heap-component-name="navigation"
@@ -295,7 +292,7 @@
             @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
             :class="{
                 
-                    'translate-y-0 h-16  xl:h-[160px] ': !scrolledFromTop,
+                    'translate-y-0 h-16 xl:h-[160px]': !scrolledFromTop,
                     'h-16 xl:h-[92px] shadow-magical': scrolledFromTop
                 
             }
@@ -307,17 +304,17 @@
             class="h-full  transition duration-0"
             :class="scrolledFromTop ? 'border-b border-slate-700 px-4 xl:px-8' : 'px-4 xl:px-8'"
         >
-            <div class="flex justify-between items-center  xl:items-start  h-full gap-6">
+            <div class="flex justify-between items-center  h-full gap-6">
                 
                     <a
                         href=" ./"
-                        class=" transition-all ease-out duration-300"
+                        class=" flex justify-center items-center  transition-all ease-out duration-300"
                         :class="scrolledFromTop ? 'h-12 xl:h-[90px] flex justify-center items-center' : 'sm:h-none h-16 xl:h-[160px]'"
                     >
                         
                             <img
-                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
-                                class="object-contain max-h-full  max-w-xs sm:max-w-sm "
+                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
+                                class="object-contain max-h-full  sm:max-w-md "
                                 :class=""
                                 alt="Brand Logo"
                                 style="max-width: 448px;"
@@ -371,10 +368,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -404,10 +398,7 @@
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -621,10 +612,7 @@
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -870,10 +858,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -899,10 +884,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -924,106 +906,16 @@
                                 >
                                     
                                         <a
-                                            href=" our-team "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Our team
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" jobs "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Jobs
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
                                             href=" blog "
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
                                             <span class="block px-2 py-1 text-center uppercase ">
                                                 Blog
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" give-away "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                GIVE AWAY
                                             </span>
                                         </a>
                                     
@@ -1038,10 +930,7 @@
                                     class="text-center inline-flex items-center transition hover:text-secondary"
                                     :class="{
                                         
-                                            
-                                                'text-gray-900' : !scrolledFromTop,
-                                                'text-gray-900' : scrolledFromTop
-                                            
+                                            'text-primary' : true
                                         
                                     }"
                                 >
@@ -1139,11 +1028,11 @@
                                 <picture>
                                     <source
                                         type="image/webp"
-                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png" loading="auto"
+                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png" loading="auto"
                                     >
                                     <img
                                         class="h-[76px] w-full object-contain"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
                                         alt="Brand Logo"
                                         width="76"
                                         height="76"
@@ -1582,38 +1471,6 @@
                                     
                                 </div>
                             
-                                <div x-trap.inert="openMenu == 'navitem_5'">
-                                    
-                                        <a
-                                            href=" our-team "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Our team
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
-                                <div x-trap.inert="openMenu == 'navitem_6'">
-                                    
-                                        <a
-                                            href=" jobs "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Jobs
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
                                 <div x-trap.inert="openMenu == 'navitem_7'">
                                     
                                         <a
@@ -1624,22 +1481,6 @@
                                                 class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
                                             >
                                                 Blog
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
-                                <div x-trap.inert="openMenu == 'navitem_8'">
-                                    
-                                        <a
-                                            href=" give-away "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                GIVE AWAY
                                             </span>
                                         </a>
                                     
@@ -1846,7 +1687,7 @@
 </style>
 
 <section
-    class="bg-primary  pt-16 xl:pt-[160px] "
+    class="bg-primary "
     data-heap-component-name="service-photos"
     data-heap-version="v4"
 >
@@ -4130,11 +3971,11 @@
             
                 <a
                     href= " ./"
-                    class="absolute -left-[86px] lg:-left-[304px] top-0 h-[70px] w-[70px] lg:h-[240px] lg:w-[240px] "
+                    class="absolute -left-[86px] lg:-left-[304px] top-0 h-[70px] w-[70px] lg:h-[240px] lg:w-[240px] flex justify-center items-center"
                 >
                     
                         <img
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
                             class="object-contain h-[70px] w-[70px] lg:h-[240px] lg:w-[240px]"
                             alt="Brand Logo"
                             loading="auto"
@@ -5216,12 +5057,12 @@
                     <picture class="flex">
                         <source
                             type="image/webp"
-                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/896x896/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png 2x"
+                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/896x896/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png 2x"
                             alt="Footer logo"
                         >
                         <img
                             class="h-[160px] w-[160px] max-w-auto flex object-contain"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
                             alt="Footer logo"
                             loading="lazy"
                         />
@@ -5386,22 +5227,6 @@
                                 </li>
                                 
                                 
-                                <li>
-                                    <a
-                                        href="our-team"
-                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
-                                        >Our team</a
-                                    >
-                                </li>
-                                
-                                
-                                <li>
-                                    <a
-                                        href="jobs"
-                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
-                                        >Jobs</a
-                                    >
-                                </li>
                                 
                                 
                                 <li>

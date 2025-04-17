@@ -46,7 +46,7 @@
     <meta name="description" content="Our Stone Wall Installation service offers homeowners a sturdy and visually appealing solution to enhance their landscape by adding functional retaining wa" />
     
     
-    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png" type="image/x-icon">
+    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png" type="image/x-icon">
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
@@ -83,8 +83,8 @@
   :root {
       --contrastThreshold: 60%;
       --color-primary-h: 0;
-      --color-primary-s: 0%;
-      --color-primary-l: 100%;
+      --color-primary-s: 76%;
+      --color-primary-l: 80%;
       --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
       --color-secondary-h: 38;
       --color-secondary-s: 48%;
@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/fbff00c2-363d-4f82-b6b4-f1e7cd749ec8.webp");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/e0175083-96ab-491b-9fe2-87ad93f56290.jpeg");
       background-size: cover;
   }
   
@@ -193,7 +193,7 @@
 </head>
 
 <body
-    
+    class="xl:pt-44 pt-24 ease-in-out"
     x-data="{ 
         contactModalOpen: false,
         applyModalOpen: false,
@@ -205,10 +205,10 @@
         contactChatOpen: false,
         active: 0,
         showAnnouncement: true,
-        customNavTransparent:  true ,
+        customNavTransparent:  false ,
         showMessage: false,
         navbarHeight: '',
-        calculateTopMargin: false,
+        calculateTopMargin: true,
     }"
     x-effect="if (contactChatOpen === true) setTimeout(() => showMessage = true, 300)"
     :style="{ paddingTop: navbarHeight }"
@@ -229,16 +229,13 @@
 <nav
     id="nav-bar"
     x-ref="navbar"
-    x-data="{ scrolledFromTop: false, customNavTransparent:  true , primaryWhite:  true  }"
+    x-data="{ scrolledFromTop: false, customNavTransparent:  false , primaryWhite:  false  }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false; "
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     class="w-screen fixed top-0 inset-x-0 z-50"
     :class="{
          
-             'bg-transparent': !scrolledFromTop,
-             
-                 'bg-primary': scrolledFromTop
-             
+             'bg-gray-900': true
          
      }"
     data-heap-component-name="navigation"
@@ -295,7 +292,7 @@
             @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
             :class="{
                 
-                    'translate-y-0 h-16  xl:h-[160px] ': !scrolledFromTop,
+                    'translate-y-0 h-16 xl:h-[160px]': !scrolledFromTop,
                     'h-16 xl:h-[92px] shadow-magical': scrolledFromTop
                 
             }
@@ -307,17 +304,17 @@
             class="h-full  transition duration-0"
             :class="scrolledFromTop ? 'border-b border-slate-700 px-4 xl:px-8' : 'px-4 xl:px-8'"
         >
-            <div class="flex justify-between items-center  xl:items-start  h-full gap-6">
+            <div class="flex justify-between items-center  h-full gap-6">
                 
                     <a
                         href=" ./"
-                        class=" transition-all ease-out duration-300"
+                        class=" flex justify-center items-center  transition-all ease-out duration-300"
                         :class="scrolledFromTop ? 'h-12 xl:h-[90px] flex justify-center items-center' : 'sm:h-none h-16 xl:h-[160px]'"
                     >
                         
                             <img
-                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
-                                class="object-contain max-h-full  max-w-xs sm:max-w-sm "
+                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
+                                class="object-contain max-h-full  sm:max-w-md "
                                 :class=""
                                 alt="Brand Logo"
                                 style="max-width: 448px;"
@@ -371,10 +368,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -404,10 +398,7 @@
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -621,10 +612,7 @@
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -870,10 +858,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -899,10 +884,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -924,106 +906,16 @@
                                 >
                                     
                                         <a
-                                            href=" our-team "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Our team
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" jobs "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Jobs
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
                                             href=" blog "
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
                                             <span class="block px-2 py-1 text-center uppercase ">
                                                 Blog
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" give-away "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                GIVE AWAY
                                             </span>
                                         </a>
                                     
@@ -1038,10 +930,7 @@
                                     class="text-center inline-flex items-center transition hover:text-secondary"
                                     :class="{
                                         
-                                            
-                                                'text-gray-900' : !scrolledFromTop,
-                                                'text-gray-900' : scrolledFromTop
-                                            
+                                            'text-primary' : true
                                         
                                     }"
                                 >
@@ -1139,11 +1028,11 @@
                                 <picture>
                                     <source
                                         type="image/webp"
-                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png" loading="auto"
+                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png" loading="auto"
                                     >
                                     <img
                                         class="h-[76px] w-full object-contain"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
                                         alt="Brand Logo"
                                         width="76"
                                         height="76"
@@ -1582,38 +1471,6 @@
                                     
                                 </div>
                             
-                                <div x-trap.inert="openMenu == 'navitem_5'">
-                                    
-                                        <a
-                                            href=" our-team "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Our team
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
-                                <div x-trap.inert="openMenu == 'navitem_6'">
-                                    
-                                        <a
-                                            href=" jobs "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Jobs
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
                                 <div x-trap.inert="openMenu == 'navitem_7'">
                                     
                                         <a
@@ -1624,22 +1481,6 @@
                                                 class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
                                             >
                                                 Blog
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
-                                <div x-trap.inert="openMenu == 'navitem_8'">
-                                    
-                                        <a
-                                            href=" give-away "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                GIVE AWAY
                                             </span>
                                         </a>
                                     
@@ -1844,7 +1685,7 @@
 </style>
 
 <section
-    class="bg-primary  pt-16 xl:pt-[160px] "
+    class="bg-primary "
     data-heap-component-name="service-photos"
     data-heap-version="v4"
 >
@@ -4142,11 +3983,11 @@
             
                 <a
                     href= " ./"
-                    class="absolute -left-[86px] lg:-left-[304px] top-0 h-[70px] w-[70px] lg:h-[240px] lg:w-[240px] "
+                    class="absolute -left-[86px] lg:-left-[304px] top-0 h-[70px] w-[70px] lg:h-[240px] lg:w-[240px] flex justify-center items-center"
                 >
                     
                         <img
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
                             class="object-contain h-[70px] w-[70px] lg:h-[240px] lg:w-[240px]"
                             alt="Brand Logo"
                             loading="auto"
@@ -4607,7 +4448,7 @@
                     <div class="flex items-center">
                         <div onclick="copyShareLink()" class="cursor-pointer flex items-center pr-5">
                             <svg class="mr-2" width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.125 2.75C12.125 1.36929 13.2443 0.25 14.625 0.25C16.0057 0.25 17.125 1.36929 17.125 2.75C17.125 4.13071 16.0057 5.25 14.625 5.25C13.9111 5.25 13.2676 4.95062 12.8126 4.47186L5.79494 8.37057C5.84721 8.57195 5.875 8.78296 5.875 9C5.875 9.21704 5.84721 9.42805 5.79494 9.62944L12.8126 13.5281C13.2676 13.0494 13.9111 12.75 14.625 12.75C16.0057 12.75 17.125 13.8693 17.125 15.25C17.125 16.6307 16.0057 17.75 14.625 17.75C13.2443 17.75 12.125 16.6307 12.125 15.25C12.125 15.033 12.1528 14.8219 12.2051 14.6206L5.1874 10.7219C4.73237 11.2006 4.08889 11.5 3.375 11.5C1.99429 11.5 0.875 10.3807 0.875 9C0.875 7.61929 1.99429 6.5 3.375 6.5C4.08889 6.5 4.73237 6.79938 5.1874 7.27814L12.2051 3.37943C12.1528 3.17805 12.125 2.96704 12.125 2.75Z" fill="#ffffff"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.125 2.75C12.125 1.36929 13.2443 0.25 14.625 0.25C16.0057 0.25 17.125 1.36929 17.125 2.75C17.125 4.13071 16.0057 5.25 14.625 5.25C13.9111 5.25 13.2676 4.95062 12.8126 4.47186L5.79494 8.37057C5.84721 8.57195 5.875 8.78296 5.875 9C5.875 9.21704 5.84721 9.42805 5.79494 9.62944L12.8126 13.5281C13.2676 13.0494 13.9111 12.75 14.625 12.75C16.0057 12.75 17.125 13.8693 17.125 15.25C17.125 16.6307 16.0057 17.75 14.625 17.75C13.2443 17.75 12.125 16.6307 12.125 15.25C12.125 15.033 12.1528 14.8219 12.2051 14.6206L5.1874 10.7219C4.73237 11.2006 4.08889 11.5 3.375 11.5C1.99429 11.5 0.875 10.3807 0.875 9C0.875 7.61929 1.99429 6.5 3.375 6.5C4.08889 6.5 4.73237 6.79938 5.1874 7.27814L12.2051 3.37943C12.1528 3.17805 12.125 2.96704 12.125 2.75Z" fill="#f3a5a5"/>
                             </svg>
                             <div class="copy-share-link font-semibold text-primary">
                                 Copy share link
@@ -4624,7 +4465,7 @@
                 <div class="flex justify-end items-center absolute top-6 right-8">
                     <div onclick="copyShareLink()" class="cursor-pointer flex items-center">
                         <svg class="mr-2" width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.125 2.75C12.125 1.36929 13.2443 0.25 14.625 0.25C16.0057 0.25 17.125 1.36929 17.125 2.75C17.125 4.13071 16.0057 5.25 14.625 5.25C13.9111 5.25 13.2676 4.95062 12.8126 4.47186L5.79494 8.37057C5.84721 8.57195 5.875 8.78296 5.875 9C5.875 9.21704 5.84721 9.42805 5.79494 9.62944L12.8126 13.5281C13.2676 13.0494 13.9111 12.75 14.625 12.75C16.0057 12.75 17.125 13.8693 17.125 15.25C17.125 16.6307 16.0057 17.75 14.625 17.75C13.2443 17.75 12.125 16.6307 12.125 15.25C12.125 15.033 12.1528 14.8219 12.2051 14.6206L5.1874 10.7219C4.73237 11.2006 4.08889 11.5 3.375 11.5C1.99429 11.5 0.875 10.3807 0.875 9C0.875 7.61929 1.99429 6.5 3.375 6.5C4.08889 6.5 4.73237 6.79938 5.1874 7.27814L12.2051 3.37943C12.1528 3.17805 12.125 2.96704 12.125 2.75Z" fill="#ffffff"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.125 2.75C12.125 1.36929 13.2443 0.25 14.625 0.25C16.0057 0.25 17.125 1.36929 17.125 2.75C17.125 4.13071 16.0057 5.25 14.625 5.25C13.9111 5.25 13.2676 4.95062 12.8126 4.47186L5.79494 8.37057C5.84721 8.57195 5.875 8.78296 5.875 9C5.875 9.21704 5.84721 9.42805 5.79494 9.62944L12.8126 13.5281C13.2676 13.0494 13.9111 12.75 14.625 12.75C16.0057 12.75 17.125 13.8693 17.125 15.25C17.125 16.6307 16.0057 17.75 14.625 17.75C13.2443 17.75 12.125 16.6307 12.125 15.25C12.125 15.033 12.1528 14.8219 12.2051 14.6206L5.1874 10.7219C4.73237 11.2006 4.08889 11.5 3.375 11.5C1.99429 11.5 0.875 10.3807 0.875 9C0.875 7.61929 1.99429 6.5 3.375 6.5C4.08889 6.5 4.73237 6.79938 5.1874 7.27814L12.2051 3.37943C12.1528 3.17805 12.125 2.96704 12.125 2.75Z" fill="#f3a5a5"/>
                         </svg>
                         <div class="copy-share-link text-lg font-semibold text-primary pr-8">
                             Copy share link
@@ -4729,18 +4570,18 @@
         <div id="marker-${index}" class="advanced-marker" style="transform: translate(0px, 40px);">
           <div
             class="cursor-pointer overflow-hidden"
-            style="background-color: white; border: 2px solid #ffffff; border-radius: 5px;"
+            style="background-color: white; border: 2px solid #f3a5a5; border-radius: 5px;"
             onmouseover="this.style.borderColor='#e4d2b2'; document.querySelector('#marker-${index} svg path').setAttribute('fill', '#e4d2b2');"
-            onmouseout="this.style.borderColor='#ffffff'; document.querySelector('#marker-${index} svg path').setAttribute('fill', '#ffffff');"
+            onmouseout="this.style.borderColor='#f3a5a5'; document.querySelector('#marker-${index} svg path').setAttribute('fill', '#f3a5a5');"
           >
             ${featuredPhoto ? (
             imgHtml
         ) : (
-            `<div style="background-color: #ffffff;"></div>`
+            `<div style="background-color: #f3a5a5;"></div>`
         )}
           </div>
           <svg style="bottom: -10px; left: ${isMobile ? "12px" : "29.5px"}; position: absolute;" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#ffffff"/>
+            <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#f3a5a5"/>
           </svg>
         </div>`
 
@@ -4831,7 +4672,7 @@
       <div @click="showcasesModalOpen = true;" onclick="setActiveShowcase('${showcase.url_slug}')" id="${modalId}" class="info-modal cursor-pointer border border-white rounded-lg overflow-hidden bg-white">
         ${featuredPhoto ? (
             imgHtml
-        ) : `<div style="height: 40px; width: 100%; background-color: #ffffff;"></div>`}
+        ) : `<div style="height: 40px; width: 100%; background-color: #f3a5a5;"></div>`}
         <div class="p-4">
           <div class="text-xs font-medium text-gray-900 flex w-full justify-between">
             <div class="flex items-center">
@@ -5301,10 +5142,10 @@
       <div class="advanced-marker cursor-pointer overflow-hidden" style="background-color: white; border: 2px solid black; border-radius: 5px; transform: translate(0px, 40px);">
         ${featuredPhoto ? (
             `${imgHtml}`
-        ) : `<div style="background-color: #ffffff;"></div>`}
+        ) : `<div style="background-color: #f3a5a5;"></div>`}
       </div>
       <svg style="bottom: -50px; left: 29.5px; position: absolute;" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#ffffff"/>
+        <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#f3a5a5"/>
       </svg>
     </div>`
 
@@ -6203,12 +6044,12 @@
                     <picture class="flex">
                         <source
                             type="image/webp"
-                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/896x896/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png 2x"
+                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/896x896/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png 2x"
                             alt="Footer logo"
                         >
                         <img
                             class="h-[160px] w-[160px] max-w-auto flex object-contain"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
                             alt="Footer logo"
                             loading="lazy"
                         />
@@ -6373,22 +6214,6 @@
                                 </li>
                                 
                                 
-                                <li>
-                                    <a
-                                        href="our-team"
-                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
-                                        >Our team</a
-                                    >
-                                </li>
-                                
-                                
-                                <li>
-                                    <a
-                                        href="jobs"
-                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
-                                        >Jobs</a
-                                    >
-                                </li>
                                 
                                 
                                 <li>

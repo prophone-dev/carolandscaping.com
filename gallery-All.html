@@ -46,7 +46,7 @@
     <meta name="description" content="A collection of all photos to showcase our best work as a landscaping near me company. See what Caro Landscaping can do for you!" />
     
     
-    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png" type="image/x-icon">
+    <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png" type="image/x-icon">
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
@@ -83,8 +83,8 @@
   :root {
       --contrastThreshold: 60%;
       --color-primary-h: 0;
-      --color-primary-s: 0%;
-      --color-primary-l: 100%;
+      --color-primary-s: 76%;
+      --color-primary-l: 80%;
       --color-primary-darker: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) - 7.5%));
       --color-secondary-h: 38;
       --color-secondary-s: 48%;
@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/fbff00c2-363d-4f82-b6b4-f1e7cd749ec8.webp");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/e0175083-96ab-491b-9fe2-87ad93f56290.jpeg");
       background-size: cover;
   }
   
@@ -205,7 +205,7 @@
         contactChatOpen: false,
         active: 0,
         showAnnouncement: true,
-        customNavTransparent:  true ,
+        customNavTransparent:  false ,
         showMessage: false,
         navbarHeight: '',
         calculateTopMargin: true,
@@ -229,16 +229,13 @@
 <nav
     id="nav-bar"
     x-ref="navbar"
-    x-data="{ scrolledFromTop: false, customNavTransparent:  true , primaryWhite:  true  }"
+    x-data="{ scrolledFromTop: false, customNavTransparent:  false , primaryWhite:  false  }"
     x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false; "
     @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
     class="w-screen fixed top-0 inset-x-0 z-50"
     :class="{
          
-             'bg-transparent': !scrolledFromTop,
-             
-                 'bg-primary': scrolledFromTop
-             
+             'bg-gray-900': true
          
      }"
     data-heap-component-name="navigation"
@@ -295,7 +292,7 @@
             @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
             :class="{
                 
-                    'translate-y-0 h-16  xl:h-[160px] ': !scrolledFromTop,
+                    'translate-y-0 h-16 xl:h-[160px]': !scrolledFromTop,
                     'h-16 xl:h-[92px] shadow-magical': scrolledFromTop
                 
             }
@@ -307,17 +304,17 @@
             class="h-full  transition duration-0"
             :class="scrolledFromTop ? 'border-b border-slate-700 px-4 xl:px-8' : 'px-4 xl:px-8'"
         >
-            <div class="flex justify-between items-center  xl:items-start  h-full gap-6">
+            <div class="flex justify-between items-center  h-full gap-6">
                 
                     <a
                         href=" ./"
-                        class=" transition-all ease-out duration-300"
+                        class=" flex justify-center items-center  transition-all ease-out duration-300"
                         :class="scrolledFromTop ? 'h-12 xl:h-[90px] flex justify-center items-center' : 'sm:h-none h-16 xl:h-[160px]'"
                     >
                         
                             <img
-                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
-                                class="object-contain max-h-full  max-w-xs sm:max-w-sm "
+                                src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
+                                class="object-contain max-h-full  sm:max-w-md "
                                 :class=""
                                 alt="Brand Logo"
                                 style="max-width: 448px;"
@@ -371,10 +368,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -404,10 +398,7 @@
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -621,10 +612,7 @@
                                             class="text-center inline-flex items-center pl-1.5 pr-1 transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -870,10 +858,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -899,10 +884,7 @@
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
@@ -924,106 +906,16 @@
                                 >
                                     
                                         <a
-                                            href=" our-team "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Our team
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" jobs "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                Jobs
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
                                             href=" blog "
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
                                                 
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
+                                                    'text-primary' : true
                                                 
                                             }"
                                         >
                                             <span class="block px-2 py-1 text-center uppercase ">
                                                 Blog
-                                            </span>
-                                        </a>
-                                    
-                                    
-
-                                </div>
-                            
-                                <div
-                                    class="relative"
-                                    x-trap.inert="desktopOpen"
-                                    x-data="{ desktopOpen: false }"
-                                    @keydown.escape.stop="desktopOpen = false"
-                                    @click.away="desktopOpen = false"
-                                >
-                                    
-                                        <a
-                                            href=" give-away "
-                                            class="text-center inline-flex items-center transition hover:text-secondary"
-                                            :class="{
-                                                
-                                                    
-                                                        'text-gray-900' : !scrolledFromTop,
-                                                        'text-gray-900' : scrolledFromTop
-                                                    
-                                                
-                                            }"
-                                        >
-                                            <span class="block px-2 py-1 text-center uppercase ">
-                                                GIVE AWAY
                                             </span>
                                         </a>
                                     
@@ -1038,10 +930,7 @@
                                     class="text-center inline-flex items-center transition hover:text-secondary"
                                     :class="{
                                         
-                                            
-                                                'text-gray-900' : !scrolledFromTop,
-                                                'text-gray-900' : scrolledFromTop
-                                            
+                                            'text-primary' : true
                                         
                                     }"
                                 >
@@ -1139,11 +1028,11 @@
                                 <picture>
                                     <source
                                         type="image/webp"
-                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png" loading="auto"
+                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png" loading="auto"
                                     >
                                     <img
                                         class="h-[76px] w-full object-contain"
-                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
                                         alt="Brand Logo"
                                         width="76"
                                         height="76"
@@ -1582,38 +1471,6 @@
                                     
                                 </div>
                             
-                                <div x-trap.inert="openMenu == 'navitem_5'">
-                                    
-                                        <a
-                                            href=" our-team "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Our team
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
-                                <div x-trap.inert="openMenu == 'navitem_6'">
-                                    
-                                        <a
-                                            href=" jobs "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                Jobs
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
                                 <div x-trap.inert="openMenu == 'navitem_7'">
                                     
                                         <a
@@ -1624,22 +1481,6 @@
                                                 class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
                                             >
                                                 Blog
-                                            </span>
-                                        </a>
-                                    
-                                    
-                                </div>
-                            
-                                <div x-trap.inert="openMenu == 'navitem_8'">
-                                    
-                                        <a
-                                            href=" give-away "
-                                            class="block text-base font-bold transition duration-75 uppercase"
-                                        >
-                                            <span
-                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
-                                            >
-                                                GIVE AWAY
                                             </span>
                                         </a>
                                     
@@ -1900,7 +1741,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 13,
+        amountOfImages: 14,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1926,7 +1767,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/fbff00c2-363d-4f82-b6b4-f1e7cd749ec8.webp" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/e0175083-96ab-491b-9fe2-87ad93f56290.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -1949,7 +1790,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/83323bda-911f-4c67-b7dd-2e4c914154da.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/96d29d3a-4437-4998-9110-124f876f3c65.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -1972,7 +1813,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/84a3f754-ae51-4741-9218-c439cff555f8.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8ae5eea3-9d53-4ecf-9bcf-8b99787f9465.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -1995,7 +1836,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a7d4d9fc-a906-4263-9ebe-ae77ad0470ca.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/46c36298-ac49-4623-95c1-0e99075b05d5.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2018,7 +1859,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/3e71d102-3f74-4342-be50-66c62185e61b.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/52272026-6d61-4066-9c4e-49a630e99521.webp" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2041,7 +1882,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a0fb1030-403d-4497-a96f-ce0f89edf233.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/d05d81ff-b184-48a3-8ad0-d11294d8d37f.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2064,7 +1905,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/60b327a7-3983-4bce-aab5-90def2deb5f6.gif" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/80a1bd96-be6a-4315-b4c2-4fd4f7c65454.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2087,7 +1928,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8963eecc-46e3-4d13-a81b-50ba29e1affa.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/60b327a7-3983-4bce-aab5-90def2deb5f6.gif" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2110,7 +1951,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/415a788f-1e16-42fe-b593-778655d805d0.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/8963eecc-46e3-4d13-a81b-50ba29e1affa.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2133,7 +1974,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/95cb745d-231c-4dfe-9230-87daedffbff3.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/415a788f-1e16-42fe-b593-778655d805d0.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2156,7 +1997,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/866a0d9e-1ba8-4502-86db-1773aab80bf6.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/95cb745d-231c-4dfe-9230-87daedffbff3.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2179,7 +2020,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/4e020e9f-6fbf-4d27-b35c-9e413a306d2f.webp" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/866a0d9e-1ba8-4502-86db-1773aab80bf6.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -2198,6 +2039,29 @@
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/4e020e9f-6fbf-4d27-b35c-9e413a306d2f.webp" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 13; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div class="aspect-w-3 aspect-h-3">
                                     
@@ -2263,7 +2127,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/fbff00c2-363d-4f82-b6b4-f1e7cd749ec8.webp" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e0175083-96ab-491b-9fe2-87ad93f56290.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2272,7 +2136,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/83323bda-911f-4c67-b7dd-2e4c914154da.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/96d29d3a-4437-4998-9110-124f876f3c65.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2281,7 +2145,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 2">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/84a3f754-ae51-4741-9218-c439cff555f8.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/8ae5eea3-9d53-4ecf-9bcf-8b99787f9465.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2290,7 +2154,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 3">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a7d4d9fc-a906-4263-9ebe-ae77ad0470ca.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/46c36298-ac49-4623-95c1-0e99075b05d5.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2299,7 +2163,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 4">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3e71d102-3f74-4342-be50-66c62185e61b.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/52272026-6d61-4066-9c4e-49a630e99521.webp" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2308,7 +2172,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 5">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a0fb1030-403d-4497-a96f-ce0f89edf233.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d05d81ff-b184-48a3-8ad0-d11294d8d37f.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2317,7 +2181,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 6">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/60b327a7-3983-4bce-aab5-90def2deb5f6.gif" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/80a1bd96-be6a-4315-b4c2-4fd4f7c65454.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2326,7 +2190,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 7">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/8963eecc-46e3-4d13-a81b-50ba29e1affa.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/60b327a7-3983-4bce-aab5-90def2deb5f6.gif" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2335,7 +2199,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 8">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/415a788f-1e16-42fe-b593-778655d805d0.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/8963eecc-46e3-4d13-a81b-50ba29e1affa.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2344,7 +2208,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 9">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/95cb745d-231c-4dfe-9230-87daedffbff3.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/415a788f-1e16-42fe-b593-778655d805d0.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2353,7 +2217,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 10">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/866a0d9e-1ba8-4502-86db-1773aab80bf6.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/95cb745d-231c-4dfe-9230-87daedffbff3.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -2362,13 +2226,22 @@
                                     <li class="flex flex-col" x-show="activeImage === 11">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4e020e9f-6fbf-4d27-b35c-9e413a306d2f.webp" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/866a0d9e-1ba8-4502-86db-1773aab80bf6.png" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 12">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4e020e9f-6fbf-4d27-b35c-9e413a306d2f.webp" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 13">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/5d30ccd9-6179-48dd-814f-72b79bf7bd85.jpeg" alt="All Photos for Caro Landscaping in Boston, MA" loading="lazy"/>
@@ -3106,12 +2979,12 @@
                     <picture class="flex">
                         <source
                             type="image/webp"
-                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/896x896/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/5181f8dc-7700-476b-b1ba-97a883c40686.png 2x"
+                            srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/896x896/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png 2x"
                             alt="Footer logo"
                         >
                         <img
                             class="h-[160px] w-[160px] max-w-auto flex object-contain"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/media/5181f8dc-7700-476b-b1ba-97a883c40686.png"
+                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
                             alt="Footer logo"
                             loading="lazy"
                         />
@@ -3276,22 +3149,6 @@
                                 </li>
                                 
                                 
-                                <li>
-                                    <a
-                                        href="our-team"
-                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
-                                        >Our team</a
-                                    >
-                                </li>
-                                
-                                
-                                <li>
-                                    <a
-                                        href="jobs"
-                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
-                                        >Jobs</a
-                                    >
-                                </li>
                                 
                                 
                                 <li>
