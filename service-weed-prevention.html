@@ -114,7 +114,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/158e7b75-544a-4f8d-82ea-05c8bb80e5f5.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/be10f7c5-441e-4da3-bb21-5d40d6999e29.jpeg");
       background-size: cover;
   }
   
@@ -314,7 +314,7 @@
                         
                             <img
                                 src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/448x448/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
-                                class="object-contain max-h-full  sm:max-w-md "
+                                class="object-contain max-h-full  max-w-xs sm:max-w-sm "
                                 :class=""
                                 alt="Brand Logo"
                                 style="max-width: 448px;"
@@ -906,6 +906,58 @@
                                 >
                                     
                                         <a
+                                            href=" our-team "
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    'text-primary' : true
+                                                
+                                            }"
+                                        >
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                Our team
+                                            </span>
+                                        </a>
+                                    
+                                    
+
+                                </div>
+                            
+                                <div
+                                    class="relative"
+                                    x-trap.inert="desktopOpen"
+                                    x-data="{ desktopOpen: false }"
+                                    @keydown.escape.stop="desktopOpen = false"
+                                    @click.away="desktopOpen = false"
+                                >
+                                    
+                                        <a
+                                            href=" jobs "
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    'text-primary' : true
+                                                
+                                            }"
+                                        >
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                Jobs
+                                            </span>
+                                        </a>
+                                    
+                                    
+
+                                </div>
+                            
+                                <div
+                                    class="relative"
+                                    x-trap.inert="desktopOpen"
+                                    x-data="{ desktopOpen: false }"
+                                    @keydown.escape.stop="desktopOpen = false"
+                                    @click.away="desktopOpen = false"
+                                >
+                                    
+                                        <a
                                             href=" blog "
                                             class="text-center inline-flex items-center transition hover:text-secondary"
                                             :class="{
@@ -916,6 +968,32 @@
                                         >
                                             <span class="block px-2 py-1 text-center uppercase ">
                                                 Blog
+                                            </span>
+                                        </a>
+                                    
+                                    
+
+                                </div>
+                            
+                                <div
+                                    class="relative"
+                                    x-trap.inert="desktopOpen"
+                                    x-data="{ desktopOpen: false }"
+                                    @keydown.escape.stop="desktopOpen = false"
+                                    @click.away="desktopOpen = false"
+                                >
+                                    
+                                        <a
+                                            href=" give-away "
+                                            class="text-center inline-flex items-center transition hover:text-secondary"
+                                            :class="{
+                                                
+                                                    'text-primary' : true
+                                                
+                                            }"
+                                        >
+                                            <span class="block px-2 py-1 text-center uppercase ">
+                                                GIVE AWAY
                                             </span>
                                         </a>
                                     
@@ -1471,6 +1549,38 @@
                                     
                                 </div>
                             
+                                <div x-trap.inert="openMenu == 'navitem_5'">
+                                    
+                                        <a
+                                            href=" our-team "
+                                            class="block text-base font-bold transition duration-75 uppercase"
+                                        >
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                Our team
+                                            </span>
+                                        </a>
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_6'">
+                                    
+                                        <a
+                                            href=" jobs "
+                                            class="block text-base font-bold transition duration-75 uppercase"
+                                        >
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                Jobs
+                                            </span>
+                                        </a>
+                                    
+                                    
+                                </div>
+                            
                                 <div x-trap.inert="openMenu == 'navitem_7'">
                                     
                                         <a
@@ -1481,6 +1591,22 @@
                                                 class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
                                             >
                                                 Blog
+                                            </span>
+                                        </a>
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_8'">
+                                    
+                                        <a
+                                            href=" give-away "
+                                            class="block text-base font-bold transition duration-75 uppercase"
+                                        >
+                                            <span
+                                                class=" text-2xl font-bold px-2 hover:bg-primary hover:text-white"
+                                            >
+                                                GIVE AWAY
                                             </span>
                                         </a>
                                     
@@ -5241,6 +5367,22 @@
                                 </li>
                                 
                                 
+                                <li>
+                                    <a
+                                        href="our-team"
+                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >Our team</a
+                                    >
+                                </li>
+                                
+                                
+                                <li>
+                                    <a
+                                        href="jobs"
+                                        class="text-base text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >Jobs</a
+                                    >
+                                </li>
                                 
                                 
                                 <li>
