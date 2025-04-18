@@ -113,7 +113,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/019d1b36-6376-47ee-839e-cf33ab45b5a8.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/4b841f62-9dc7-4e52-b0e5-70b7d59a1c34.png");
       background-size: cover;
   }
   
@@ -1795,7 +1795,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 4,
+        amountOfImages: 6,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1905,6 +1905,52 @@
                 </li>
             
         
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" lg:col-start-2 ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a8675b34-24ac-4234-a94d-8766376191c2.jpeg" alt="2/18 Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" lg:col-start-3 ">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/461dbb86-7519-4027-a72a-69a5a6f3553b.jpeg" alt="2/18 Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
     </ul>
 
     <template x-teleport="body">
@@ -1979,6 +2025,24 @@
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/aff90eef-aca5-4515-abeb-04c8b3c6ce90.png" alt="2/18 Gallery for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 4">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a8675b34-24ac-4234-a94d-8766376191c2.jpeg" alt="2/18 Gallery for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 5">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/461dbb86-7519-4027-a72a-69a5a6f3553b.jpeg" alt="2/18 Gallery for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
