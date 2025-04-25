@@ -113,7 +113,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/9fcc33a0-4679-4e71-b438-4c4c78fd4e79.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/f9625d4f-3b81-4214-a074-b7873a44e166.jpeg");
       background-size: cover;
   }
   
@@ -313,10 +313,12 @@
                         
                             <img
                                 src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/300x300/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/39d02300-b8f0-454c-aac7-efd694ca27d1.png"
+                                x-data="{ wide: window.innerWidth > 1280 }"
+                                x-init="window.addEventListener('resize', () => wide = window.innerWidth > 1280)"
                                 class="object-contain max-h-full  sm:max-w-md "
                                 :class=""
                                 alt="Brand Logo"
-                                style="max-width: 300px;"
+                                :style="wide ? { 'max-width': '300px' } : {}"
                                 loading="auto"
                                 fetchpriority="high"
                                 decoding="auto"
@@ -333,8 +335,7 @@
                         class="xl:hidden border-[3px] border-box  shadow-[5px_5px_0px_0px] shadow-primary/30"
                         :class="{
                             
-                                'text-white border-white' : !scrolledFromTop,
-                                'text-primary border-primary' : scrolledFromTop
+                                'text-primary border-primary' : true
                             
                         }"
                     >
@@ -949,21 +950,6 @@
                                 </div>
                             
                             
-                                <a
-                                    href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
-                                    target="_blank"
-                                    class="text-center inline-flex items-center transition hover:text-secondary"
-                                    :class="{
-                                        
-                                            'text-primary' : true
-                                        
-                                    }"
-                                >
-                                    <span class="block px-2 py-1 text-center uppercase ">
-                                        PAY NOW
-                                    </span>
-                                </a>
-                            
 
                         </div>
 
@@ -1529,16 +1515,6 @@
                                 </div>
                             
                             
-                                <div x-trap.inert="openMenu == ''">
-                                    <a
-                                        href="https://buy.stripe.com/test_dR6186910e5q7ra4gg"
-                                        target="_blank"
-                                        class="text-gray-900 block p-4 text-base font-bold hover:bg-primary hover:text-white transition duration-75 uppercase"
-                                    >
-                                        Pay Now
-                                    </a>
-                                </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -1760,7 +1736,7 @@
                             
                             <div onclick="postCtaClick('email')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
                                 <a
-                                    target = "_blank" href="mailto:devansh@sa.com?subject=landscaping near me Job - Requesting a quote&body=Hi devansh,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
+                                    target = "_blank" href="mailto:ann.kolivanova@gmail.com?subject=landscaping near me Job - Requesting a quote&body=Hi ,%0d%0a %0d%0a  I&#x27;m writing from your website to request a quote. I&#x27;ve included more information below: %0d%0a%0d%0a My Name: %0d%0a Phone Number: %0d%0a Address: %0d%0a Preferred Date of Service: %0d%0a Description of Job: %0d%0a %0d%0a Thank you!"
                                     class="flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
                                     <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                                     <span class="relative">Email Us</span>
