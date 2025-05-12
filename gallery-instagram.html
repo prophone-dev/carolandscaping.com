@@ -113,7 +113,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/8aaa6caa-a1c9-4add-986e-0672ed29a512.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/30be7e87-dd50-4031-ac77-ae45402f40d8.png");
       background-size: cover;
   }
   
@@ -747,6 +747,8 @@
                                                         
                                                             
                                                         
+                                                            
+                                                        
                                                     </div>
                                                     <div class="flex-1">
                                                         
@@ -823,6 +825,16 @@
                                                                 class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                             >
                                                                 3/17 test gallery edit
+                                                            </a>
+                                                            
+                                                        
+                                                            
+                                                            <a
+                                                                href=" gallery-My-Testing-Gallery "
+                                                                role="menuitem"
+                                                                class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                            >
+                                                                My Testing Gallery
                                                             </a>
                                                             
                                                         
@@ -1435,6 +1447,17 @@
                                                     </a>
                                                 
                                                     <a
+                                                        href="gallery-My-Testing-Gallery"
+                                                        role="menuitem"
+                                                        class="block"
+                                                    >
+                                                        <span class="text-lg font-medium text-gray-900 hover:bg-primary hover:text-white uppercase transition duration-75 leading-8">
+                                                            My Testing Gallery
+                                                        </span>
+
+                                                    </a>
+                                                
+                                                    <a
                                                         href="gallery-All"
                                                         role="menuitem"
                                                         class="block"
@@ -1709,7 +1732,7 @@
               
             <div
                 class="flex gallery-hero-image screen-height-minus-navbar w-full bg-center bg-cover bg-fixed"
-                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/b018bc3b-b90c-436d-8831-d59377e60ee6.png')"
+                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/00de034f-eca3-48dc-8ba1-0af89d5d7506.jpeg')"
             >
                 <main
                     style="--tw-bg-opacity:25%;"
@@ -1767,7 +1790,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 3,
+        amountOfImages: 4,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1793,7 +1816,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/b018bc3b-b90c-436d-8831-d59377e60ee6.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/00de034f-eca3-48dc-8ba1-0af89d5d7506.jpeg" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -1816,7 +1839,7 @@
                                 <div class="aspect-w-3 aspect-h-3">
                                     
                                         
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a8675b34-24ac-4234-a94d-8766376191c2.jpeg" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/b018bc3b-b90c-436d-8831-d59377e60ee6.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
                                         
                                     
                                 </div>
@@ -1835,6 +1858,29 @@
                 <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
                     <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                         <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        
+                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/a8675b34-24ac-4234-a94d-8766376191c2.jpeg" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy" decoding="async" />
+                                        
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
                             
                                 <div class="aspect-w-3 aspect-h-3">
                                     
@@ -1900,7 +1946,7 @@
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/b018bc3b-b90c-436d-8831-d59377e60ee6.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/00de034f-eca3-48dc-8ba1-0af89d5d7506.jpeg" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
@@ -1909,13 +1955,22 @@
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                             
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a8675b34-24ac-4234-a94d-8766376191c2.jpeg" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/b018bc3b-b90c-436d-8831-d59377e60ee6.png" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy"/>
 
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
                                 
                                     <li class="flex flex-col" x-show="activeImage === 2">
+                                            
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/a8675b34-24ac-4234-a94d-8766376191c2.jpeg" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy"/>
+
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 3">
                                             
                                             
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9e5fbe94-41b0-4c95-b7f3-6ffe0f0ce427.jpeg" alt="instagram for Caro Landscaping in Boston, MA" loading="lazy"/>
@@ -1990,6 +2045,8 @@
     }
 
 </script>
+                    
+                
                     
                 
                     
@@ -2582,6 +2639,8 @@
 </template>
 
                                     
+                                
+                            
                                 
                             
                                 
