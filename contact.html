@@ -677,13 +677,21 @@
                     <div class="hidden xl:block absolute -skew-y-[4deg] -top-8 -right-12 w-3/4 h-4/6 bg-secondary opacity-70">
                     </div>
                     
-                        <video
-                            class="lazy relative z-10 w-full max-w-xl mx-auto  xl:m-0 xl:min-h-lg max-h-[435px] object-cover xl:object-contain xl:mt-4 shadow-[0_0px_20px_0px] shadow-secondary/50"
-                            autoplay loop playsinline muted 
-                        >
-                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ee4160d7-9498-4c4a-8aca-9e12733520f6.html" type = "video/html" >
-                            Your browser does not support the video tag.
-                        </video>
+                        
+
+                            <picture>
+                                <source
+                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/30be7e87-dd50-4031-ac77-ae45402f40d8.png"
+                                    alt="Caro Landscaping team in Boston, MA - people or person"
+                                >
+                                <img
+                                    class="relative z-10 w-full max-w-xl mx-auto  xl:m-0 xl:min-h-lg xl:max-h-[435px] object-contain xl:mt-4 shadow-[0_0px_20px_0px] shadow-secondary/50"
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/30be7e87-dd50-4031-ac77-ae45402f40d8.png"
+                                    alt="Caro Landscaping team in Boston, MA - people or person"
+                                    loading="lazy"
+                                />
+                            </picture>
+                        
                     
                 </div>
             </div>
