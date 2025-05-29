@@ -25,28 +25,7 @@
     </url>
 
     <url>
-        <loc>https://carolandscaping.com/service-pressure-washing</loc>
-        <lastmod>2025-05-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://carolandscaping.com/service-guard-dogs</loc>
-        <lastmod>2025-05-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-Stone-Wall-Installation</loc>
-        <lastmod>2025-05-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://carolandscaping.com/service-landscape-management-softscaping-and-hardscaping</loc>
         <lastmod>2025-05-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -61,6 +40,27 @@
 
     <url>
         <loc>https://carolandscaping.com/service-backyard-band</loc>
+        <lastmod>2025-05-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-Stone-Wall-Installation</loc>
+        <lastmod>2025-05-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-pressure-washing</loc>
+        <lastmod>2025-05-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://carolandscaping.com/service-landscape-management-softscaping-and-hardscaping</loc>
         <lastmod>2025-05-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
