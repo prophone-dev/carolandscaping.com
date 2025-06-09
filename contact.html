@@ -113,7 +113,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c526b818-2b14-405e-a160-a5b0e5adc1da.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/7ab16a61-2d3b-48c1-b0df-dd2996bf839f.jpeg");
       background-size: cover;
   }
   
@@ -3281,7 +3281,7 @@
         <div
             x-data="{
                 activeImage: 0,
-                amountOfImages: 1,
+                amountOfImages: 2,
                 next() {
                     if (this.activeImage < this.amountOfImages - 1)
                         this.activeImage ++;
@@ -3302,7 +3302,7 @@
                     <div
                         x-data="{
                             activeImage: 0,
-                            amountOfImages: 1,
+                            amountOfImages: 2,
                             next() {
                                 if (this.activeImage < this.amountOfImages - 1)
                                     this.activeImage ++;
@@ -3328,7 +3328,7 @@
                                             
                                                 <img
                                                     class="object-cover w-full h-full cursor-pointer"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/c526b818-2b14-405e-a160-a5b0e5adc1da.png"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7ab16a61-2d3b-48c1-b0df-dd2996bf839f.jpeg"
                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -3354,14 +3354,12 @@
                                             class="h-[35%]"
                                         >
                                             
-                                                <video
+                                                <img
 
-                                                    class="lazy rounded-sm object-cover w-full h-full"
-                                                    preload="none" autoplay loop playsinline controls muted
-                                                >
-                                                    <source data-src="#t=0.5">
-                                                    Your browser does not support the video tag.
-                                                </video>
+                                                    class="object-cover rounded-sm w-full h-full  cursor-pointer"
+                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/c526b818-2b14-405e-a160-a5b0e5adc1da.png"
+                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                />
                                             
                                         </div>
                                         <div
@@ -3473,7 +3471,7 @@
                                         <img
                                             style="width: 100%; height: 118px;"
                                             class="object-cover rounded-sm  cursor-pointer"
-                                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/c526b818-2b14-405e-a160-a5b0e5adc1da.png"
+                                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/7ab16a61-2d3b-48c1-b0df-dd2996bf839f.jpeg"
                                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                         />
                                     
@@ -3483,10 +3481,12 @@
                                     class="pt-4"
                                 >
                                     
-                                        <video style="width: 100%; height: 118px;" class="lazy rounded-sm object-cover w-full h-full" preload="none" autoplay loop playsinline controls muted>
-                                            <source data-src="#t=0.5">
-                                            Your browser does not support the video tag.
-                                        </video>
+                                        <img
+                                            style="width: 100%; height: 118px;"
+                                            class="object-cover rounded-sm  cursor-pointer"
+                                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/c526b818-2b14-405e-a160-a5b0e5adc1da.png"
+                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                        />
                                     
                                 </div>
                                 <div
@@ -3646,6 +3646,19 @@
                                                                 
                                                                     <img
                                                                         class="w-full md:h-[300px] lg:h-[400px] xl:h-[575px] self-center object-cover"
+                                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7ab16a61-2d3b-48c1-b0df-dd2996bf839f.jpeg"
+                                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                    />
+                                                                    <p lorem="1" class="mt-3 text-gray-500"></p>
+                                                                
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="flex flex-col" x-show="activeImage === 1">
+                                                            
+                                                                
+                                                                    <img
+                                                                        class="w-full md:h-[300px] lg:h-[400px] xl:h-[575px] self-center object-cover"
                                                                         src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c526b818-2b14-405e-a160-a5b0e5adc1da.png"
                                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                                     />
@@ -3690,13 +3703,36 @@
                                                                 
                                                                     <img
                                                                         class="w-[172px] h-[100px] object-cover"
-                                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c526b818-2b14-405e-a160-a5b0e5adc1da.png"
+                                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7ab16a61-2d3b-48c1-b0df-dd2996bf839f.jpeg"
                                                                         alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                                     />
                                                                 
                                                             
                                                         </div>
                                                         <div x-show="activeImage === 0 + 1">
+                                                            
+                                                                
+                                                                    <img
+                                                                        class="w-[172px] h-[100px] object-cover"
+                                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/7ab16a61-2d3b-48c1-b0df-dd2996bf839f.jpeg"
+                                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                    />
+                                                                
+                                                            
+                                                        </div>
+                                                    
+                                                        <div x-show="activeImage === 1 - 1">
+                                                            
+                                                                
+                                                                    <img
+                                                                        class="w-[172px] h-[100px] object-cover"
+                                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c526b818-2b14-405e-a160-a5b0e5adc1da.png"
+                                                                        alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                    />
+                                                                
+                                                            
+                                                        </div>
+                                                        <div x-show="activeImage === 1 + 1">
                                                             
                                                                 
                                                                     <img
