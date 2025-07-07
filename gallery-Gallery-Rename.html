@@ -113,7 +113,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/97bf833e-8b56-4111-9871-c120a6dfaee2.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/3cf6de78-f1eb-4a8e-a87d-75d0ee257268.quicktime");
       background-size: cover;
   }
   
@@ -1764,7 +1764,7 @@
                     id="hero-gallery-video"
                     class="absolute screen-height-minus-navbar top-0 left-0 w-full object-cover" autoplay loop playsinline muted
                 >
-                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
+                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3cf6de78-f1eb-4a8e-a87d-75d0ee257268.quicktime" type = "" >
                 </video>
                 <main
                     style="--tw-bg-opacity:25%;"
@@ -1820,7 +1820,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 0,
+        amountOfImages: 1,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1837,6 +1837,29 @@
     data-heap-version="v2.3"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4 sm:space-y-0 lg:grid-cols-4 lg:gap-x-4">
+        
+            
+                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class="">
+                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                        <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
+                            
+                                <div class="aspect-w-3 aspect-h-3">
+                                    
+                                        <video class="lazy rounded shadow-md object-cover w-full h-full" preload="none" autoplay loop controls muted>
+                                            <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3cf6de78-f1eb-4a8e-a87d-75d0ee257268.quicktime#t=0.5" >
+                                        </video>
+                                    
+                                </div>
+                            
+
+                            <div class="space-y-1 text-lg font-medium leading-6">
+                                <p class="line-clamp-3"></p>
+                                <h3 class="text-primary"></h3>
+                            </div>
+                        </button>
+                    </div>
+                </li>
+            
         
     </ul>
 
@@ -1880,6 +1903,15 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
+                                
+                                    <li class="flex flex-col" x-show="activeImage === 0">
+                                        
+                                            <video class="gallery-modal-video lazy bg-black rounded shadow-md object-contain w-full lg:h-[481px] h-[200px] sm:h-[300px]" autoplay loop controls muted>
+                                                <source data-src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3cf6de78-f1eb-4a8e-a87d-75d0ee257268.quicktime#t=0.5" >
+                                            </video>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
                                 
                             </ul>
 
