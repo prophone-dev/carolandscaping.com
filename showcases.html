@@ -113,7 +113,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/0a0112aa-d450-4b0c-a014-e66d5db43b7a.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/575ccb0f-ab4c-4cee-a9f0-be1d2cb047a6.webp");
       background-size: cover;
   }
   
@@ -3839,7 +3839,8 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
 
   function getFastQuoteDiv() {
   const fastQuoteDiv = `
-    <form id="contactModal" onsubmit="send_sms('caro-landscaping', 'contact-modal', '+19083889616')" style="height: 316px;" class="fast-quote-div top-0 sticky flex flex-col flex-shrink-0 bg-primary rounded-lg p-4">
+    <div id="error-state-modal-embedded" style="padding-left: 24px; padding-right: 24px;"></div>
+    <form id="embeddedForm" onsubmit="send_sms('caro-landscaping', 'contact-embedded', '+19083889616')" style="height: 316px;" class="fast-quote-div top-0 sticky flex flex-col flex-shrink-0 bg-primary rounded-lg p-4">
       <div class="flex justify-center text-primary-foreground text-2xl font-extrabold">Get a Fast Quote</div>
       <div class="flex flex-col space-y-5 w-full pt-4">
         <input
