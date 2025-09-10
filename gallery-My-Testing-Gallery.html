@@ -113,7 +113,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/11118190-b287-4708-8e95-9a737472b64c.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/89db6411-6a8c-47ce-ad63-be4e032560a8.png");
       background-size: cover;
   }
   
@@ -2132,7 +2132,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 1,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -2150,12 +2150,6 @@
 >
     
         <ul class="px-2 flex gap-2 flex-wrap md:flex-nowrap">
-            
-                <li @click="activeImage = 0; galleryModalOpen = true" class="cursor-pointer block w-[49%] h-[250px] md:h-full md:w-full  text-left focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0">
-                    
-                        <img class="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300 lazy"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/3a109b31-b548-4b6b-984a-17ec5dcb4803.jpeg"  alt="My Testing Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"/>
-                    
-                </li>
             
         </ul>
     
@@ -2206,19 +2200,6 @@
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative flex items-center">
                                 
-                                    <li class="flex flex-col" x-show="activeImage === 0">
-                                        
-                                            
-                                                <img
-                                                    class="w-full md:h-[300px] lg:h-[400px] xl:h-[575px] self-center object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3a109b31-b548-4b6b-984a-17ec5dcb4803.jpeg"
-                                                    alt="My Testing Gallery for Caro Landscaping in Boston, MA" loading="lazy"
-                                                />
-                                                <p lorem="1" class="mt-3 text-gray-500"></p>
-                                            
-                                        
-                                    </li>
-                                
                             </ul>
                         </div>
                     </div>
@@ -2249,29 +2230,6 @@
                     <div class="absolute flex justify-center w-full z-30 -bottom-6  md:bottom-12 inset-x-0">
                         <div class="-skew-y-[4deg] bg-secondary/50 p-6 py-12 md:py-6 w-screen md:w-auto">
                             <div class="flex skew-y-[4deg] justify-center flex gap-2">
-                                
-                                    <div x-show="activeImage === 0 - 1">
-                                        
-                                            
-                                                <img
-                                                    class="w-[172px] h-[100px] object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3a109b31-b548-4b6b-984a-17ec5dcb4803.jpeg"
-                                                    alt="My Testing Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                                                />
-                                            
-                                        
-                                    </div>
-                                    <div x-show="activeImage === 0 + 1">
-                                        
-                                            
-                                                <img
-                                                    class="w-[172px] h-[100px] object-cover"
-                                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3a109b31-b548-4b6b-984a-17ec5dcb4803.jpeg"
-                                                    alt="My Testing Gallery for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
-                                                />
-                                            
-                                        
-                                    </div>
                                 
                             </div>
                         </div>
