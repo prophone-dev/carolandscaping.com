@@ -116,7 +116,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/8689d0db-c3cc-4f67-8691-b294c2edd829.jpeg");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/1738ed5a-9ab6-4c08-b452-3cbb2b5b7fee.jpeg");
       background-size: cover;
   }
   
@@ -1707,222 +1707,6 @@
 
                 
                 
-                    <style>
-  @media(min-width: 640px){
-    .chat-text-us-desktop{
-        width: 400px; 
-        bottom: 65px; 
-        height: min(850px, 100vh - 200px); 
-        min-height: 80px; 
-        max-height: 850px;
-    }
-  }
-  @media(max-width: 639px) {
-      .chat-text-us-mobile{
-          top:0;
-          left:0;
-          right-0;
-          bottom-0;
-          height: 100vh;
-          max-height: 100vh;
-      }
-  } 
-
-  @keyframes appearMessage {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale(.1);
-      transform: scale(.1);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-  }
-
-  @keyframes chatFadeIn {
-    0% {
-      -webkit-transform: scale(.9);
-      transform: scale(.9);
-      opacity: 0;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
-  }
-
-  .message {
-    animation: appearMessage .2s ease 0s forwards;
-  }
-
-  .chat-popup {
-    animation: chatFadeIn .25s ease;
-    box-shadow: 0 8px 20px 0 rgba(0,0,0,.24);
-    border: 1px solid #e8e9eb;
-    border-radius: 13px;
-    max-width: 350px;
-  }
-
-  .chat-popup::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    bottom: -6px;
-    right: 18px;
-    background: #fff;
-    border-radius: 4px;
-    z-index: -1;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  
-</style>
-<div
-  x-data="{ buttonVisible: false, chatPopup: false, initialTimeout: null }"
-  x-init="setTimeout(() => buttonVisible = true, 500); initialTimeout = setTimeout(() => chatPopup = true, 1500)"
-  class="fixed z-50 right-7 bottom-7"
-  data-heap-component-name="text-us-button"
-  data-heap-version="v2.2"
->
-  <div
-    x-cloak
-    x-show="buttonVisible"
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="translate-x-full scale-50"
-    x-transition:enter-end="translate-x-0 scale-100"
-    x-transition:leave="transition ease-out duration-300"
-    x-transition:leave-start="translate-x-0 opacity-100"
-    x-transition:leave-end="translate-x-full opacity-0"
-    class="w-full sm:w-auto flex flex-col items-end"
-  >
-    <div
-      x-cloak
-      x-show="chatPopup"
-      @click="contactChatOpen = true; chatPopup = false"
-      class="chat-popup relative bg-white p-6 mb-6 cursor-pointer ml-4 z-40 message"
-    >
-      <p class="font-bold">Hi there 👋</p>
-      <p class="font-medium">Have a question?</p>
-    </div>
-    <button
-      @click="contactChatOpen = !contactChatOpen; chatPopup = false; clearTimeout(initialTimeout)"
-      class="block bg-secondary p-2 hover:scale-110 rounded-full shadow-md cursor-pointer transition duration-100"
-    >
-      <svg aria-hidden="true" viewBox="1 1 60 60" height="40" width="40" class="fill-current text-white">
-        <path d="M27.765 42.244c-8.614 0-15.622-7.008-15.622-15.622S19.151 11 27.765 11s15.622 7.008 15.622 15.622-7.007 15.622-15.622 15.622zm0-28.398c-7.045 0-12.775 5.73-12.775 12.775s5.73 12.775 12.775 12.775 12.775-5.73 12.775-12.775-5.73-12.775-12.775-12.775z"></path>
-        <path d="M34.869 39.146l4.014-3.738 9.286 9.114a3.164 3.164 0 01-.07 4.562l-.071.066a3.163 3.163 0 01-4.561-.257l-8.598-9.747zM27.77 34.173c-2.882 0-5.412-.876-7.656-2.526a1.002 1.002 0 01-.35-.81c.008-.461.445-.969 1.02-.959.284.005.493.153.713.308 1.837 1.302 3.832 1.971 6.275 1.971 1.875 0 4.492-.476 6.314-2.118a.98.98 0 01.638-.261.92.92 0 01.686.241c.222.209.33.527.336.735a1.02 1.02 0 01-.318.775c-1.333 1.237-4.262 2.644-7.658 2.644z"></path>
-      </svg>
-      
-    </button>
-  </div>
-
-  <div
-    x-cloak
-    x-show="contactChatOpen"
-    
-    x-trap.noscroll.inert="window.innerWidth <= 639 && contactChatOpen"
-    @keydown.escape.prevent.stop="contactChatOpen = false"
-    role="dialog"
-    aria-modal="true"
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="translate-x-1/2 translate-y-3/4 scale-0"
-    x-transition:enter-end="translate-x-0 translate-y-0 scale-100"
-    x-transition:leave="transition ease-out duration-300"
-    x-transition:leave-start="translate-x-0 translate-y-0 opacity-100"
-    x-transition:leave-end="translate-x-1/2 scale-0"
-    class="fixed chat-text-us-mobile chat-text-us-desktop z-40 sm:absolute text-gray-900 bg-gray-50 right-0 sm:rounded-lg shadow-md overflow-y-auto"
-  >
-    <div class="py-6 px-4 bg-black flex">
-      <p class="text-white text-center font-semibold flex-1">Caro Landscaping</p>
-      <div class="sm:hidden relative p-2">
-        <button
-                @click="contactChatOpen = false;"
-                class="absolute transition rounded top-0 right-0 text-white hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
-        >
-            <span class="sr-only">Close modal</span>
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-        </button>
-      </div>
-    </div>
-    <div class="flex flex-col pt-8 pb-6 gap-8 px-4">
-      <div
-        x-cloak
-        x-show="showMessage"
-        class="mr-4 bg-gray-200 p-6 text-lg message"
-        style="border-radius: 30px 30px 30px 0px;box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);"
-      >
-        <p class="font-bold">Hi there 👋</p>
-        <p class="font-medium">Have a question?</p>
-      </div>
-      <form
-        onsubmit="send_sms('caro-landscaping', 'chat')"
-        class="py-6 px-4 bg-white ml-4"
-        style="border-radius: 30px 30px 0px 30px;box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);"
-      >
-          <h3 class="text-lg font-bold px-2">Text us here</h3>
-          <div id="error-state-modal-chat" style="padding-left: 0.5rem; padding-right: 0.5rem;"></div>
-          <div class="h-auto px-2 pb-2 space-y-6 overflow-y-auto mt-2.5">
-                  <input
-                      type="text"
-                      name="full-name"
-                      id="contact-full-name-chat"
-                      class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                      placeholder="Full name"
-                  />
-                  <input
-                      type="tel"
-                      autocomplete="on"
-                      name="phone-number"
-                      id="contact-phone-number-chat"
-                      class="contact-phone-number block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                      placeholder="Phone number"
-                  />
-                  <input
-                      type="email"
-                      name="email"
-                      id="contact-email-chat"
-                      class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                      placeholder="Email"
-                  />
-                  <input
-                      type="text"
-                      name="address"
-                      id="contact-address-chat"
-                      class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                      placeholder="Address"
-                  />
-                  <textarea
-                      id="contact-concern-1-chat"
-                      name="concern"
-                      rows="4"
-                      class="block py-2.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"
-                      placeholder='How can we help you?'
-                  ></textarea>
-            </div>
-          <div class="flex-col w-full align-middle items-center justify-center bg-white relative px-2">
-            
-              <div class="text-gray-600 flex-1 text-sm font-normal mt-1.5">
-                  <p>TEST See our <a target="_blank" href="https://tlp-legal.s3.us-east-2.amazonaws.com/Customer+Privacy+Policy+-+09092025.pdf" class="text-sm font-normal underline">Privacy Policy</a> for more details.</p>
-              </div>
-            
-            <button
-                id='sendButton-chat'
-                class="flex justify-center relative rounded-lg py-3 bg-primary hover:bg-primary-darker w-full text-primary-foreground mt-4"
-            >
-                Send
-            </button>
-          </div>
-      </form>
-    </div>
-  </div>
-</div>
-                
             
         
             
@@ -2333,6 +2117,7 @@
                                     
                                         
 
+
 <template x-teleport="body">
     <div
             x-show="contactModalOpen"
@@ -2345,396 +2130,461 @@
             x-trap.noscroll.inert="contactModalOpen"
             id="send-text-modal"
             data-heap-component-name="send-text-modal"
-	        data-heap-version="v3"
+	        data-heap-version="v4"
     >
+        <div  id="error-state-modal"></div>
         <div
-                x-show="contactModalOpen"
-                x-transition:enter="ease-out duration-300"
-                x-transition:enter-start="opacity-0"
-                x-transition:enter-end="opacity-100"
-                x-transition:leave="ease-in duration-200"
-                x-transition:leave-start="opacity-100"
-                x-transition:leave-end="opacity-0"
-                aria-hidden="true"
-                class="fixed inset-0 bg-black bg-opacity-50"
-        ></div>
-        <div
-                x-show="contactModalOpen"
-                x-transition:enter="ease-out duration-300"
-                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                x-transition:leave="ease-in duration-200"
-                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                onclick="handleClose('gallery-3-17-test-gallery-edit')"
-                @click="contactModalOpen = false"
-                class="relative flex items-center justify-center w-full h-full bg-primary"
+            x-show="contactModalOpen"
+            x-transition:enter="ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            onclick="handleClose('gallery-3-17-test-gallery-edit')"
+            class="relative flex items-center justify-center w-full h-full bg-black/30"
         >
-            
-                
-                    <picture
-                        aria-hidden="true"
-                        class="absolute inset-0 object-cover"
-                    >
-                        <source srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/c0ef7795-166b-4ae6-bba8-e8838f60ab49.jpeg" type="image/webp">
-                        <img
-                            aria-hidden="true"
-                            class="object-cover w-full h-full"
-                            src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/c0ef7795-166b-4ae6-bba8-e8838f60ab49.jpeg"
-                            alt="cover-photo"
-                            fetchpriority="high"
-                            loading="auto"
-                            decoding="sync"
-                        />
-                    </picture>
-                
 
-                
-                <div class="absolute inset-0 bg-black opacity-75"></div>
-            
-
-            <button
-                onclick="handleClose('gallery-3-17-test-gallery-edit')"
-                @click="contactModalOpen = false;"
-                class="absolute z-10 p-1 transition rounded top-5 right-5 hover:bg-gray-100 text-white hover:text-gray-900 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
-            >
-                    <span class="sr-only">Close modal</span>
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
 
             <div
-                @click.stop
-                class="fixed inset-0 sm:inset-auto sm:relative bg-primary flex flex-col w-full overflow-hidden text-left align-bottom transition-all transform sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full sm:border sm:border-secondary"
+                @click.away="contactModalOpen = false"
+                class="inset-auto relative bg-white flex flex-row xl:pt-12 xl:pl-12 h-[90%] w-[90%] xl:w-5/6 xl:h-3/4 overflow-hidden text-left align-bottom transition-all transform  border border-secondary"
             >
-                <div class="sm:hidden relative px-6">
-                    <h2 class="mt-6 text-2xl font-bold text-center text-white" id="mobile-screen-send-us-a-text-header">Send us a text</h2>
-                    <p class="mb-3 mt-1 font-normal text-base text-center text-white" id="mobile-screen-send-us-a-text-subheader">We usually respond via text within a few minutes.</p>
-                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
-                </div>
-                <div class="hidden sm:relative sm:px-6 sm:flex sm:flex-col">
-                    <h2 class="mt-6 text-6xl font-extrabold text-center text-white" id="send-us-a-text-header">Send us a text</h2>
-                    <p class="my-6 text-lg text-center text-white" id="send-us-a-text-subheader">We usually respond via text within a few minutes.</p>
-                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
-                </div>
-                <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
-                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('caro-landscaping', 'contact-modal', deobfuscateNumber('dGpzbGo2MzQwOUlVRkgkKFQqSCkrMTkwODM4ODk2MTY='))">
-                    <div class="flex flex-col flex-shrink-1 h-auto sm:h-full overflow-x-hidden overflow-y-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
+                <button
+                    onclick="handleClose('gallery-3-17-test-gallery-edit')"
+                    @click="contactModalOpen = false;"
+                    class="absolute z-30 bg-white xl:hidden transition group p-2 border-2 border-primary top-4 right-4 hover:bg-primary text-white hover:text-gray-900 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                >
+                    <span class="sr-only">Close modal</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path class="stroke-primary group-hover:stroke-white" d="M6 18L17.94 6M18 18L6.06 6" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="hidden pb-20 mr-8 xl:block">
+                    <h2 class="text-5xl font-extrabold whitespace-nowrap text-center text-secondary" id="send-us-a-text-header">Send us a text</h2>
+                    <div>
                         
-                        
-                        <div>
-                            <label for="contact-full-name" class="font-medium text-base text-white">Full name *</label>
-                            <input
-                                type="text"
-                                name="full-name"
-                                id="contact-full-name"
-                                class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                placeholder="Jane Rodgers"
-                                required
-                            />
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <div>
-                            <label for="contact-phone-number" class="font-medium text-base text-white">Photo number *</label>
-                            <input
-                                type="tel"
-                                name="phone-number"
-                                autocomplete="on"
-                                id="contact-phone-number"
-                                class="contact-phone-number block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                required
-                            />
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <div>
-                            <label for="contact-email" class="font-medium text-base text-white">Email<span> *</span></label>
-                            <input
-                                type="text"
-                                name="email"
-                                id="contact-email"
-                                class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary"
-                                placeholder="name@example.com"
-                                required
-                            />
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                            <div class="block sm:grid sm:col-span-2">
-                                <label class="font-medium text-base text-white">Services list<span> *</span></label>
-                                <fieldset class="bg-white p-4 sm:p-6 mt-1 rounded-sm" required>
-                                    <div class="grid auto-cols-auto gap-4 grid-cols-2">
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                id="contact-service-168398"
-                                                name="service-168398"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                value="Cookin Some Chilli"
-                                            />
-                                            <label for="contact-service-168398" class="ml-3 text-sm font-normal text-gray-700">Cookin Some Chilli</label>
-                                        </div>
-
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                id="contact-service-168400"
-                                                name="service-168400"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                value="Driveway Design & Build"
-                                            />
-                                            <label for="contact-service-168400" class="ml-3 text-sm font-normal text-gray-700">Driveway Design & Build</label>
-                                        </div>
-
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                id="contact-service-168401"
-                                                name="service-168401"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                value="Fall and Spring Clean Up"
-                                            />
-                                            <label for="contact-service-168401" class="ml-3 text-sm font-normal text-gray-700">Fall and Spring Clean Up</label>
-                                        </div>
-
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                id="contact-service-168403"
-                                                name="service-168403"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                value="Cheese Making"
-                                            />
-                                            <label for="contact-service-168403" class="ml-3 text-sm font-normal text-gray-700">Cheese Making</label>
-                                        </div>
-
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                id="contact-service-168404"
-                                                name="service-168404"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                value="Stone Wall Installation"
-                                            />
-                                            <label for="contact-service-168404" class="ml-3 text-sm font-normal text-gray-700">Stone Wall Installation</label>
-                                        </div>
-
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                id="contact-service-168417"
-                                                name="service-168417"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                value="Pressure Washing"
-                                            />
-                                            <label for="contact-service-168417" class="ml-3 text-sm font-normal text-gray-700">Pressure Washing</label>
-                                        </div>
-
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                id="contact-service-171432"
-                                                name="service-171432"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                value="Softscaping, and Hardscaping"
-                                            />
-                                            <label for="contact-service-171432" class="ml-3 text-sm font-normal text-gray-700">Softscaping, and Hardscaping</label>
-                                        </div>
-
-                                        
-                                        <div class="flex items-center">
-                                            <input
-                                                id="contact-service-171710"
-                                                name="service-171710"
-                                                type="checkbox"
-                                                class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                value="Guard Dogs"
-                                            />
-                                            <label for="contact-service-171710" class="ml-3 text-sm font-normal text-gray-700">Guard Dogs</label>
-                                        </div>
-
-                                        
-
-                                        <div class="flex flex-col">
-                                                <div class="flex items-center">
-                                                     <input
-                                                            id="contact-service-other-checkbox"
-                                                            name="service-other"
-                                                            type="checkbox"
-                                                            class="w-4 h-4 border-gray-500 rounded text-primary focus:ring-primary"
-                                                            value="Other"
-                                                            onclick="toggleOtherServices()"
-                                                        />
-                                                    <label for="contact-label-service-other-checkbox" class="ml-3 text-sm text-gray-600">Other</label>
-                                                </div>
-                                            <input
-                                                id="contact-service-other-text"
-                                                name="service-other-text"
-                                                type="text"
-                                                class="ml-4 block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-primary focus:border-primary hidden"
-                                            />
-                                            </div>
-
-                                    </div>
-                                </fieldset>
-                            </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                            <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
-                                <label class="font-medium text-base text-white">Photo upload</label>
-                                <div class='bg-white p-3 mt-1 rounded-sm border border-gray-500'>
-                                    <div
-                                            x-data="{
-                                                imageUrl: '',
-                                                fileTooLarge: false,
-                                                fileChosen(event) {
-                                                    if (this.isProperlySized(event)) {
-                                                        this.fileToDataUrl(event, (src) => (this.imageUrl = src));
-                                                        this.fileTooLarge = false;
-                                                    }
-                                                    else
-                                                        this.fileTooLarge = true;
-                                                },
-                                                fileToDataUrl(event, callback) {
-                                                    if (!event.target.files.length) return;
-                                                    let file = event.target.files[0],
-                                                        reader = new FileReader();
-                                                    reader.readAsDataURL(file);
-                                                    reader.onload = (e) => callback(e.target.result);
-                                                },
-                                                isProperlySized(event) {
-                                                    const files = event.currentTarget.files;
-                                                    for (const file in files) {
-                                                        const filesize = ((files[file].size/1024)/1024).toFixed(4);
-                                                        if (filesize > 10)
-                                                            return false;
-                                                    }
-                                                    return true;
-                                                },
-                                            }"
+                            
+                                <picture class="">
+                                    <source
+                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc4fed75-6d86-46cc-a0db-a61f55f25a5c.png"
+                                        alt="Caro Landscaping team in Boston, MA - people or person"
                                     >
-                                        <div x-show="imageUrl !== ''" x-collapse>
-                                            <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
-                                                <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
-                                                <button
-                                                        @click="imageUrl = ''; $refs.fileInput.value = '';"
-                                                        type="button"
-                                                        class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 border border-gray-500 rounded-sm shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                                >
-                                                    Change
-                                                </button>
+                                    <img
+                                        class="relative z-10 max-h-[480px] xl:max-w-[360px] mx-auto xl:m-0  xl:mt-4 shadow-[5px_5px_0px_0px] shadow-secondary/30"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cc4fed75-6d86-46cc-a0db-a61f55f25a5c.png"
+                                        alt="Caro Landscaping team in Boston, MA - people or person"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            
+                        
+                    </div>
+                </div>
+
+                <form id="contactModal" class="w-full relative overflow-y-auto" onsubmit="send_sms('caro-landscaping', 'contact-modal', deobfuscateNumber('dGpzbGo2MzQwOUlVRkgkKFQqSCkrMTkwODM4ODk2MTY='))">
+                    <div class="h-full pb-24 overflow-y-auto">
+                        <div class="flex flex-col justify-center gap-12 p-4 pb-0 xl:p-0 mx-auto">
+
+                            <div class="h-auto gap-12 xl:pr-8 flex flex-col justify-center xl:flex-row">
+                                <div class="xl:hidden">
+                                    <div class="">
+                                        
+                                            
+                                                <picture class="">
+                                                    <source
+                                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cc4fed75-6d86-46cc-a0db-a61f55f25a5c.png"
+                                                        alt="Caro Landscaping team in Boston, MA - people or person"
+                                                    >
+                                                    <img
+                                                        class="relative z-10 h-[200px] mx-auto  xl:m-0 xl:min-h-lg xl:mt-4 shadow-[5px_5px_0px_0px] shadow-secondary/30"
+                                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1000x1000/filters:strip_exif()/filters:no_upscale()/media/cc4fed75-6d86-46cc-a0db-a61f55f25a5c.png"
+                                                        alt="Caro Landscaping team in Boston, MA - people or person"
+                                                        loading="lazy"
+                                                    />
+                                                </picture>
+                                            
+                                        
+                                    </div>
+                                    <h2 class="text-[40px] xl:text-5xl font-extrabold sm:whitespace-nowrap text-secondary" id="send-us-a-text-header">Send us a text</h2>
+                                </div>
+
+                                <div>
+                                    <span class="text-2xl font-semibold">Contact Information</span>
+                                    
+                                        
+                                            <div>
+                                                <label for="contact-full-name" class="font-medium xl:text-base text-gray-600 text-sm">Full name *</label>
+                                                <input
+                                                    type="text"
+                                                    name="full-name"
+                                                    id="contact-full-name"
+                                                    class="block w-full  py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200  focus:ring-secondary focus:border-secondary"
+                                                    placeholder="Jane Rodgers"
+                                                    required
+                                                />
                                             </div>
-                                        </div>
-                                        <label
-                                            for="file-upload"
-                                            class="relative font-medium rounded-sm cursor-pointer text-primary"
-                                        >
-                                            <div x-show="imageUrl === ''" x-collapse>
+                                        
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+                                            <div>
+                                                <label for="contact-phone-number" class="font-medium xl:text-base text-gray-600 text-sm">Photo number *</label>
+                                                <input
+                                                    type="tel"
+                                                    name="phone-number"
+                                                    autocomplete="on"
+                                                    id="contact-phone-number"
+                                                    class="contact-phone-number block w-full  py-2.5 mt-1 border-2 border-gray-200 rounded-sm shadow-sm focus:ring-secondary focus:border-secondary"
+                                                    required
+                                                />
+                                            </div>
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+                                        
+                                        
+                                            <div>
+                                                <label for="contact-email" class="font-medium xl:text-base text-gray-600 text-sm">Email<span> *</span></label>
+                                                <input
+                                                    type="text"
+                                                    name="email"
+                                                    id="contact-email"
+                                                    class="block w-full py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
+                                                    placeholder="name@example.com"
+                                                    required
+                                                />
+                                            </div>
+                                        
+                                    
+                                        
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+                                        
+                                        
+                                    
+                                </div>
+                                <div>
+                                    <span class="text-2xl font-semibold ">Booking</span>
+                                    
+                                        
+                                        
+
+
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+
+
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+
+
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+
+
+                                        
+                                            <div
+                                                x-data="{ serviceListOpen: false }"
+                                                @keydown.escape.stop="serviceListOpen = false"
+                                                @click.away="serviceListOpen = false"
+                                                class="relative"
+                                            >
+                                                <label class="font-medium xl:text-base text-gray-600 text-sm">Services list<span> *</span></label>
                                                 <div
-                                                    x-on:dragenter.prevent.stop
-                                                    x-on:dragleave.prevent.stop
-                                                    class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 border-2 border-dashed rounded-sm"
+                                                    @click="serviceListOpen = !serviceListOpen"
+                                                    class="pr-2 rounded-sm  cursor-pointer block ring p-2.5 mt-1 border-2 border-gray-200"
+                                                    :class="serviceListOpen ? 'ring-secondary' : 'ring-transparent'"
                                                 >
-                                                    <div class="space-y-1 text-center">
-                                                        <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                                            <path
-                                                                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                                                    stroke-width="2"
-                                                                    stroke-linecap="round"
-                                                                    stroke-linejoin="round"
-                                                            />
-                                                        </svg>
-                                                        <div class="flex justify-center text-sm text-gray-600">
-                                                            <span class="text-primary">Upload a photo</span>
+                                                    <span class="text-gray-600">--Select--</span>
+                                                </div>
+                                                <fieldset
+                                                    x-show="serviceListOpen"
+                                                    x-transition:enter="transition ease-out duration-200"
+                                                    x-transition:enter-start="opacity-0 translate-y-1"
+                                                    x-transition:enter-end="opacity-100 translate-y-0"
+                                                    x-transition:leave="transition ease-in duration-150"
+                                                    x-transition:leave-start="opacity-100 translate-y-0"
+                                                    x-transition:leave-end="opacity-0 translate-y-1"
+                                                    class="absolute right-0 bg-white block z-50 p-2.5 mt-1 rounded-sm shadow-sm border-2 border-secondary focus:ring-secondary focus:border-secondary"  required 
+                                                >
+                                                    
+                                                        <div class="flex items-center gap-1">
                                                             <input
-                                                                x-ref="fileInput"
-                                                                id="file-upload"
-                                                                name="file-upload"
-                                                                type="file"
-                                                                class="sr-only"
-                                                                @change="fileChosen"
+                                                                type="checkbox"
+                                                                class="w-4 h-4 rounded text-secondary focus:ring-transparent"
+                                                                id="contact-service-168398"
+                                                                name="service-168398"
+                                                                value="Cookin Some Chilli"
+
                                                             />
+                                                            <label for="contact-service-168398" class="text-gray-600 whitespace-nowrap">Cookin Some Chilli</label>
                                                         </div>
-                                                        <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <input
+                                                                type="checkbox"
+                                                                class="w-4 h-4 rounded text-secondary focus:ring-transparent"
+                                                                id="contact-service-168400"
+                                                                name="service-168400"
+                                                                value="Driveway Design & Build"
+
+                                                            />
+                                                            <label for="contact-service-168400" class="text-gray-600 whitespace-nowrap">Driveway Design & Build</label>
+                                                        </div>
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <input
+                                                                type="checkbox"
+                                                                class="w-4 h-4 rounded text-secondary focus:ring-transparent"
+                                                                id="contact-service-168401"
+                                                                name="service-168401"
+                                                                value="Fall and Spring Clean Up"
+
+                                                            />
+                                                            <label for="contact-service-168401" class="text-gray-600 whitespace-nowrap">Fall and Spring Clean Up</label>
+                                                        </div>
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <input
+                                                                type="checkbox"
+                                                                class="w-4 h-4 rounded text-secondary focus:ring-transparent"
+                                                                id="contact-service-168403"
+                                                                name="service-168403"
+                                                                value="Cheese Making"
+
+                                                            />
+                                                            <label for="contact-service-168403" class="text-gray-600 whitespace-nowrap">Cheese Making</label>
+                                                        </div>
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <input
+                                                                type="checkbox"
+                                                                class="w-4 h-4 rounded text-secondary focus:ring-transparent"
+                                                                id="contact-service-168404"
+                                                                name="service-168404"
+                                                                value="Stone Wall Installation"
+
+                                                            />
+                                                            <label for="contact-service-168404" class="text-gray-600 whitespace-nowrap">Stone Wall Installation</label>
+                                                        </div>
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <input
+                                                                type="checkbox"
+                                                                class="w-4 h-4 rounded text-secondary focus:ring-transparent"
+                                                                id="contact-service-168417"
+                                                                name="service-168417"
+                                                                value="Pressure Washing"
+
+                                                            />
+                                                            <label for="contact-service-168417" class="text-gray-600 whitespace-nowrap">Pressure Washing</label>
+                                                        </div>
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <input
+                                                                type="checkbox"
+                                                                class="w-4 h-4 rounded text-secondary focus:ring-transparent"
+                                                                id="contact-service-171432"
+                                                                name="service-171432"
+                                                                value="Softscaping, and Hardscaping"
+
+                                                            />
+                                                            <label for="contact-service-171432" class="text-gray-600 whitespace-nowrap">Softscaping, and Hardscaping</label>
+                                                        </div>
+                                                    
+                                                        <div class="flex items-center gap-1">
+                                                            <input
+                                                                type="checkbox"
+                                                                class="w-4 h-4 rounded text-secondary focus:ring-transparent"
+                                                                id="contact-service-171710"
+                                                                name="service-171710"
+                                                                value="Guard Dogs"
+
+                                                            />
+                                                            <label for="contact-service-171710" class="text-gray-600 whitespace-nowrap">Guard Dogs</label>
+                                                        </div>
+                                                    
+
+                                                    <div class="flex flex-col">
+                                                        <div class="flex items-center gap-1">
+                                                             <input
+                                                                    id="contact-service-other-checkbox"
+                                                                    name="service-other"
+                                                                    type="checkbox"
+                                                                    class="w-4 h-4 border-gray-500 rounded text-secondary focus:ring-transparent"
+                                                                    value="Other"
+                                                                    onclick="toggleOtherServices()"
+                                                                />
+                                                            <label for="contact-label-service-other-checkbox" class="text-gray-600">Other</label>
+                                                        </div>
+                                                        <input
+                                                            id="contact-service-other-text"
+                                                            name="service-other-text"
+                                                            type="text"
+                                                            class="block w-full border-gray-500 py-2.5 mt-1 rounded-sm shadow-sm focus:ring-secondary focus:border-secondary hidden"
+                                                        />
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+
+
+                                        
+                                        
+                                            <div class="block sm:flex sm:flex-col sm:w-full mt-5 sm:mt-0">
+                                                <label class="font-medium text-base text-gray-600">Photo upload</label>
+                                                <div class='bg-white mt-1 rounded-sm border-2 border-gray-200 rounded-sm'>
+                                                    <div
+                                                            x-data="{
+                                                                imageUrl: '',
+                                                                fileTooLarge: false,
+                                                                fileChosen(event) {
+                                                                    if (this.isProperlySized(event)) {
+                                                                        this.fileToDataUrl(event, (src) => (this.imageUrl = src));
+                                                                        this.fileTooLarge = false;
+                                                                    }
+                                                                    else
+                                                                        this.fileTooLarge = true;
+                                                                },
+                                                                fileToDataUrl(event, callback) {
+                                                                    if (!event.target.files.length) return;
+                                                                    let file = event.target.files[0],
+                                                                        reader = new FileReader();
+                                                                    reader.readAsDataURL(file);
+                                                                    reader.onload = (e) => callback(e.target.result);
+                                                                },
+                                                                isProperlySized(event) {
+                                                                    const files = event.currentTarget.files;
+                                                                    for (const file in files) {
+                                                                        const filesize = ((files[file].size/1024)/1024).toFixed(4);
+                                                                        if (filesize > 10)
+                                                                            return false;
+                                                                    }
+                                                                    return true;
+                                                                },
+                                                            }"
+                                                    >
+                                                        <div x-show="imageUrl !== ''" x-collapse>
+                                                            <div class="flex flex-col items-center space-y-2 sm:space-y-0 sm:flex-row sm:space-x-5">
+                                                                <img :src="imageUrl" class="object-cover rounded-sm w-[200px] h-[140px]" :value="imageUrl" id="contact-attachment"/>
+                                                                <button
+                                                                        @click="imageUrl = ''; $refs.fileInput.value = '';"
+                                                                        type="button"
+                                                                        class="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-600  shadow-sm  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                                                >
+                                                                    Change
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <label
+                                                            for="file-upload"
+                                                            class="relative font-medium rounded-sm cursor-pointer text-gray-600"
+                                                        >
+                                                            <div x-show="imageUrl === ''" x-collapse>
+                                                                <div
+                                                                    x-on:dragenter.prevent.stop
+                                                                    x-on:dragleave.prevent.stop
+                                                                    class="flex justify-center px-6 pt-5 pb-6 mt-1 sm:pt-2 sm:pb-2 sm:mt-0 rounded-sm"
+                                                                >
+                                                                    <div class="space-y-1 text-center">
+                                                                        <svg class="w-12 h-12 mx-auto text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                                            <path
+                                                                                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                                                    stroke-width="2"
+                                                                                    stroke-linecap="round"
+                                                                                    stroke-linejoin="round"
+                                                                            />
+                                                                        </svg>
+                                                                        <div class="flex justify-center text-sm text-gray-600">
+                                                                            <span class="text-gray-600">Upload a photo</span>
+                                                                            <input
+                                                                                x-ref="fileInput"
+                                                                                id="file-upload"
+                                                                                name="file-upload"
+                                                                                type="file"
+                                                                                class="sr-only"
+                                                                                @change="fileChosen"
+                                                                            />
+                                                                        </div>
+                                                                        <p class="text-xs text-gray-600">PNG, JPG, GIF up to 10MB</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                        <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
+                                                            The selected file is too large. Please reduce the size or choose another file.
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </label>
-                                        <p x-show="fileTooLarge" class="mt-2 text-sm text-red-600">
-                                            The selected file is too large. Please reduce the size or choose another file.
-                                        </p>
-                                    </div>
+                                        
+                                        
+                                    
                                 </div>
                             </div>
+                            
+                                <div class="text-gray-600 flex-1 text-sm font-normal mt-1.5">
+                                    <p>TEST See our <a target="_blank" href="https://tlp-legal.s3.us-east-2.amazonaws.com/Customer+Privacy+Policy+-+09092025.pdf" class="text-sm font-normal underline">Privacy Policy</a> for more details.</p>
+                                </div>
+                            
+                        </div>
+
                         
-                        
-                        
-                    </div>
-                    
-                    <div class="flex flex-col flex-shrink-0 z-50 px-6 pt-3 pb-4 bg-primary w-full align-middle items-center justify-center shadow-top-lg">
-                        
-                            <div class="text-gray-600 flex-1 text-sm font-normal mt-1.5">
-                                <p>TEST See our <a target="_blank" href="https://tlp-legal.s3.us-east-2.amazonaws.com/Customer+Privacy+Policy+-+09092025.pdf" class="text-sm font-normal underline">Privacy Policy</a> for more details.</p>
+                        <div class="z-50 absolute bottom-0  flex-row gap-8 p-5 xl:pr-12 bg-white flex w-full align-middle items-center justify-end">
+                            <button
+                                onclick="handleClose('gallery-3-17-test-gallery-edit')"
+                                @click="contactModalOpen = false;"
+                                class="hidden sm:block w-full sm:w-auto"
+                            >
+                                <span
+                                    class="flex justify-center rounded-sm font-bold w-full  px-6 py-4 overflow-hidden bg-white text-black  hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300 border-2 border-primary hover:border-tertiary box-border uppercase"
+                                >
+                                    Close
+                                </span>
+                            </button>
+                            <div class="relative w-full sm:w-auto">
+                                <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -top-2 -right-[10px]"></div>
+                                <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -bottom-2 -left-[10px]"></div>
+                                <div
+                                        class="relative w-full sm:w-auto gap-8 sm:gap-4 cta_text_button text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
+                                >
+                                    <button
+                                        id='sendButton'
+                                        class="flex py-4 px-6 justify-center items-center font-bold w-full whitespace-nowrap overflow-hidden  uppercase"
+                                    >
+                                            submit form
+                                    </button>
+                                </div>
                             </div>
-                        
-                        <button
-                            id='sendButton'
-                            class="custom_text_color text-white cta_text_conversion flex justify-center relative rounded-sm mx-4 py-2.5 mt-6 sm:mt-4 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300 uppercase"
-                        >
-                            Send
-                        </button>
+                        </div>
                     </div>
                 </form>
             </div>
