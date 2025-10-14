@@ -116,7 +116,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/3a1edf2e-06d9-4994-a7f7-d218bba606b5.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c05d7ac0-116d-449e-893c-4369aecd1aba.jpeg");
       background-size: cover;
   }
   
@@ -976,12 +976,12 @@
                             
 
                             
-                            <div class="relative">
+                            <div class="relative cta_text_button">
                                 <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -top-2 -right-[10px]"></div>
                                 <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -bottom-2 -left-[10px]"></div>
                                 <div
                                     onclick="postCtaClick('text')"
-                                    class="relative w-full  sm:w-auto cta_text_button text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
+                                    class="relative w-full sm:w-auto text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
                                 >
 
                                     <button
@@ -1002,7 +1002,7 @@
                             
                                 <div
                                     onclick="postCtaClick('link')"
-                                    class="w-full sm:w-auto cta_text_button rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300 border-2 border-primary hover:border-white box-border"
+                                    class="w-full sm:w-auto cta_link_button rounded-sm hover:ring-2 hover:ring-offset-2 hover:ring-primary transition-all ease-out duration-300 border-2 border-primary hover:border-white box-border"
                                     :class="primaryWhite ? 'hover:ring-secondary border-secondary hover:border-secondary' : ''"
                                 >
                                     <a
@@ -1840,15 +1840,15 @@
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-6 text-base sm:text-lg uppercase tracking-tight font-black">
 
 
-                                        
+                    
 
                     
-                        <div class="relative w-full sm:w-auto">
+                        <div class="relative w-full sm:w-auto cta_link_button">
                             <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -top-2 -right-[10px]"></div>
                             <div class="h-full w-8 absolute bg-secondary/90  -skew-y-[4deg] -bottom-2 -left-[10px]"></div>
                             <div
                                 onclick="postCtaClick('link')"
-                                class="relative w-full  sm:w-auto cta_text_button text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
+                                class="relative w-full sm:w-auto text-white bg-secondary border-2 hover:ring-2 hover:ring-offset-2 rounded-sm hover:ring-secondary transition-all ease-out duration-300"
                             >
                                 <a
                                     target="_blank"
@@ -1866,11 +1866,11 @@
                     
 
 
-                                        
+                    
 
                     
                     
-                        <div onclick="postCtaClick('email')" class="w-full sm:w-auto cta_text_button">
+                        <div onclick="postCtaClick('email')" class="w-full sm:w-auto cta_email_button">
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
