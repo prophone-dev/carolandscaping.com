@@ -116,7 +116,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d2sro2zadjtrg7.cloudfront.net/media/07160481-1359-45bd-8fd5-a852e7cf9fc5.png");
+      background-image: url("https://d2sro2zadjtrg7.cloudfront.net/media/e0cc9d62-4f64-4033-98e4-12e4cde83a46.png");
       background-size: cover;
   }
   
@@ -191,7 +191,7 @@
 
         
         
-        function detect_safari(){const e=navigator.userAgent;return!(!e.includes("Safari")||e.includes("Chrome"))}async function report_booking_submission_error(e,o,t){const n={slug:e,error:o,message:t,userAgent:navigator.userAgent};let r="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?r="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?r="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(r="http://127.0.0.1:8000"),await fetch(r+"/report-submission-error",{method:"POST",body:JSON.stringify(n)}).then((e=>{console.log("Submission error reported")})).catch((e=>{console.log("Failed to report submission error")}))}async function create_appointment(e,o,t,n,r=""){const s={booking_id:o,start_time:t,end_time:n};let i="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?i="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?i="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(i="http://127.0.0.1:8000");return await fetch(i+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(s)}).then((o=>{if(!o.ok)throw report_booking_submission_error(e,o,"Error in response to create Nylas appointment request"),o;return o.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((o=>{let t="There was a problem creating your appointment request.";return r&&(t+=" Please call us at "+r+" to request an appointment."),report_booking_submission_error(e,o,"Error creating Nylas appointment"),alert(t),""}))}function send_sms(e,o="contact-modal",t=""){try{const a="scheduler"===o;let c,l,d;"contact-embedded"===o?(c=document.forms.embeddedForm,d=document.getElementById("sendButton-embedded"),l="#error-state-modal-embedded"):(c=document.forms.contactModal,d=document.getElementById("sendButton"),l="#error-state-modal");const u=document.querySelector(l);u.innerHTML="",a||(d.disabled=!0,event.preventDefault());const p=e=>e.split(",")[0].match(/:(.*?);/)[1].split("/")[1],m=e=>`${([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,(e=>(e^crypto.getRandomValues(new Uint8Array(1))[0]&15>>e/4).toString(16)))}.${p(e)}`;function n(e,o){return new Promise((function(t,n){const r=new XMLHttpRequest,s=`${prositeURLUpload}?file_name=${o}&file_type=${e.type}`;r.open("GET",s),r.onreadystatechange=async function(){if(4===r.readyState)if(201===r.status){const n=JSON.parse(r.responseText);await function(e,o,t){return new Promise((function(n,r){const s=new XMLHttpRequest;s.open("PUT",o),s.onreadystatechange=()=>{4===s.readyState&&(200===s.status?(console.log(t,"url in uploadFile"),n(e.name)):alert("Could not upload file."))},s.send(e)}))}(e,n.signedRequest,n.url);t(o)}else alert("Could not get signed URL.")},r.send()}))}const g=()=>{const e=document.getElementById("contact-attachment");if(e){const o=e.value;if(!o)return Promise.resolve("");const t=m(o);return n(function(e,o){for(var t=e.split(","),n=t[0].match(/:(.*?);/)[1],r=atob(t[1]),s=r.length,i=new Uint8Array(s);s--;)i[s]=r.charCodeAt(s);return new File([i],o,{type:n})}(o,t),t).then((e=>e))}return Promise.resolve("")},h=(e="")=>{const o=new FormData(c),t={};for(const e of o.entries())t[e[0]]=e[1];return e&&(t["phone-number"]=e),t["phone-number"]=t["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),t},_=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};async function r(o,n=""){try{const r={ct:o},s=await g(),i=JSON.parse(sessionStorage.getItem("utmParams")||"{}");if(r.utm={utm_source:i.utm_source||null,utm_campaign:i.utm_campaign||null},a)r.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),r.message_id=sessionStorage.getItem("message_id"),r.start_time=sessionStorage.getItem("start_time"),r.end_time=sessionStorage.getItem("end_time");else{const e=h(n);sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),s&&(e["file-upload"]=s),r.fields=e}fetch(f+"/sms/"+e,{method:"POST",body:JSON.stringify(r)}).then((o=>{if(!o.ok)throw report_booking_submission_error(e,o,"Error in response from send_sms."),o;return o.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(a)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((o=>{a||(d.disabled=!1);let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,o,"Error calling send_sms backend").then((()=>{alert(n)}))}))}catch(o){let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request.");const r=o.toString()||"non-parsable error message";report_booking_submission_error(e,r,"Error assembling submission body").then((()=>{alert(n)}))}}let b;if(!a){const w=(s=c,i="#contact-phone-number",window.intlTelInputGlobals.getInstance(s.querySelector(i)));if(w){if(b=w.getNumber(),!b){return _("Phone number is required",u),void(d.disabled=!1)}if(!w.isValidNumber()){const y=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],v=w.getValidationError();return _(y[v]?y[v]:"Not a valid phone number",u),void(d.disabled=!1)}}}let f="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?f="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?f="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(f="http://127.0.0.1:8000"),detect_safari()?r("safari",b):grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(e){r(e,b)})).catch((o=>{let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,o,"Error executing captcha and/or submitting form").then((()=>{alert(n)}))}))}))}catch(S){let I="There was a problem submitting your request.";t&&(I+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,S,"General error in send_sms").then((()=>{alert(I)}))}var s,i}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
+        function detect_safari(){const e=navigator.userAgent;return!(!e.includes("Safari")||e.includes("Chrome"))}async function report_booking_submission_error(e,o,t){const n={slug:e,error:o,message:t,userAgent:navigator.userAgent};let r="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?r="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?r="https://stage.prosite.prophone.com":window.location.href.includes("prosite.stage.prophone.com")?r="https://prosite.stage.prophone.com":window.location.href.includes("8000")&&(r="http://127.0.0.1:8000"),await fetch(r+"/report-submission-error",{method:"POST",body:JSON.stringify(n)}).then((e=>{console.log("Submission error reported")})).catch((e=>{console.log("Failed to report submission error")}))}async function create_appointment(e,o,t,n,r=""){const s={booking_id:o,start_time:t,end_time:n};let i="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?i="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?i="https://stage.prosite.prophone.com":window.location.href.includes("prosite.stage.prophone.com")?i="https://prosite.stage.prophone.com":window.location.href.includes("8000")&&(i="http://127.0.0.1:8000");return await fetch(i+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(s)}).then((o=>{if(!o.ok)throw report_booking_submission_error(e,o,"Error in response to create Nylas appointment request"),o;return o.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((o=>{let t="There was a problem creating your appointment request.";return r&&(t+=" Please call us at "+r+" to request an appointment."),report_booking_submission_error(e,o,"Error creating Nylas appointment"),alert(t),""}))}function send_sms(e,o="contact-modal",t=""){try{const a="scheduler"===o;let c,l,d;"contact-embedded"===o?(c=document.forms.embeddedForm,d=document.getElementById("sendButton-embedded"),l="#error-state-modal-embedded"):(c=document.forms.contactModal,d=document.getElementById("sendButton"),l="#error-state-modal");const u=document.querySelector(l);u.innerHTML="",a||(d.disabled=!0,event.preventDefault());const p=e=>e.split(",")[0].match(/:(.*?);/)[1].split("/")[1],m=e=>`${([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,(e=>(e^crypto.getRandomValues(new Uint8Array(1))[0]&15>>e/4).toString(16)))}.${p(e)}`;function n(e,o){return new Promise((function(t,n){const r=new XMLHttpRequest,s=`${prositeURLUpload}?file_name=${o}&file_type=${e.type}`;r.open("GET",s),r.onreadystatechange=async function(){if(4===r.readyState)if(201===r.status){const n=JSON.parse(r.responseText);await function(e,o,t){return new Promise((function(n,r){const s=new XMLHttpRequest;s.open("PUT",o),s.onreadystatechange=()=>{4===s.readyState&&(200===s.status?(console.log(t,"url in uploadFile"),n(e.name)):alert("Could not upload file."))},s.send(e)}))}(e,n.signedRequest,n.url);t(o)}else alert("Could not get signed URL.")},r.send()}))}const g=()=>{const e=document.getElementById("contact-attachment");if(e){const o=e.value;if(!o)return Promise.resolve("");const t=m(o);return n(function(e,o){for(var t=e.split(","),n=t[0].match(/:(.*?);/)[1],r=atob(t[1]),s=r.length,i=new Uint8Array(s);s--;)i[s]=r.charCodeAt(s);return new File([i],o,{type:n})}(o,t),t).then((e=>e))}return Promise.resolve("")},h=(e="")=>{const o=new FormData(c),t={};for(const e of o.entries())t[e[0]]=e[1];return e&&(t["phone-number"]=e),t["phone-number"]=t["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),t},_=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};async function r(o,n=""){try{const r={ct:o},s=await g(),i=JSON.parse(sessionStorage.getItem("utmParams")||"{}");if(r.utm={utm_source:i.utm_source||null,utm_campaign:i.utm_campaign||null},a)r.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),r.message_id=sessionStorage.getItem("message_id"),r.start_time=sessionStorage.getItem("start_time"),r.end_time=sessionStorage.getItem("end_time");else{const e=h(n);sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),s&&(e["file-upload"]=s),r.fields=e}fetch(f+"/sms/"+e,{method:"POST",body:JSON.stringify(r)}).then((o=>{if(!o.ok)throw report_booking_submission_error(e,o,"Error in response from send_sms."),o;return o.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(a)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((o=>{a||(d.disabled=!1);let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,o,"Error calling send_sms backend").then((()=>{alert(n)}))}))}catch(o){let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request.");const r=o.toString()||"non-parsable error message";report_booking_submission_error(e,r,"Error assembling submission body").then((()=>{alert(n)}))}}let b;if(!a){const w=(s=c,i="#contact-phone-number",window.intlTelInputGlobals.getInstance(s.querySelector(i)));if(w){if(b=w.getNumber(),!b){return _("Phone number is required",u),void(d.disabled=!1)}if(!w.isValidNumber()){const y=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],v=w.getValidationError();return _(y[v]?y[v]:"Not a valid phone number",u),void(d.disabled=!1)}}}let f="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?f="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?f="https://stage.prosite.prophone.com":window.location.href.includes("prosite.stage.prophone.com")?f="https://prosite.stage.prophone.com":window.location.href.includes("8000")&&(f="http://127.0.0.1:8000"),detect_safari()?r("safari",b):grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(e){r(e,b)})).catch((o=>{let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,o,"Error executing captcha and/or submitting form").then((()=>{alert(n)}))}))}))}catch(S){let I="There was a problem submitting your request.";t&&(I+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,S,"General error in send_sms").then((()=>{alert(I)}))}var s,i}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
     </script>
     <script type="text/javascript">
         
@@ -511,6 +511,30 @@
                                                                     
                                                                 
                                                                     
+                                                                    <a
+                                                                        href=" service-guard-dogs "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        Guard Dogs
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-backyard-band "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        Backyard Band
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                
+                                                                    
+                                                                
+                                                                    
                                                                 
                                                                     
                                                                 
@@ -538,23 +562,7 @@
                                                                     
                                                                 
                                                                     
-                                                                    <a
-                                                                        href=" service-guard-dogs "
-                                                                        role="menuitem"
-                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                                    >
-                                                                        Guard Dogs
-                                                                    </a>
-                                                                    
                                                                 
-                                                                    
-                                                                    <a
-                                                                        href=" service-backyard-band "
-                                                                        role="menuitem"
-                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                                    >
-                                                                        Backyard Band
-                                                                    </a>
                                                                     
                                                                 
                                                                     
@@ -594,6 +602,46 @@
                                                                         class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                                     >
                                                                         Cool Service
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-test-1 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        Test 1
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-test-2 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test 2
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-test-3 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test 3
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-test-4 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test 4
                                                                     </a>
                                                                     
                                                                 
@@ -758,6 +806,18 @@
                                                                     
                                                                 
                                                                     
+                                                                    <a
+                                                                        href=" gallery-new-gallery-test "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        new gallery test gallery
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                
+                                                                    
                                                                 
                                                                     
                                                                 
@@ -796,14 +856,6 @@
                                                                 
                                                                     
                                                                 
-                                                                    
-                                                                    <a
-                                                                        href=" gallery-new-gallery-test "
-                                                                        role="menuitem"
-                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                                    >
-                                                                        new gallery test gallery
-                                                                    </a>
                                                                     
                                                                 
                                                                     
@@ -873,6 +925,26 @@
                                                                         class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                                     >
                                                                         Test Gallery 1234 gallery
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" gallery-test "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" gallery-test-gallery-23 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test gallery 23
                                                                     </a>
                                                                     
                                                                 
@@ -1325,6 +1397,50 @@
 
                                                             </a>
                                                         
+                                                            <a
+                                                                href="service-test-1"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    Test 1
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="service-test-2"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test 2
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="service-test-3"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test 3
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="service-test-4"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test 4
+                                                                </span>
+
+                                                            </a>
+                                                        
                                                     </div>
                                                 </div>
                                             
@@ -1544,6 +1660,28 @@
                                                             >
                                                                 <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
                                                                     Test Gallery 1234 gallery
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="gallery-test"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="gallery-test-gallery-23"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test gallery 23
                                                                 </span>
 
                                                             </a>
@@ -2311,6 +2449,10 @@
                     
                         
                     
+                        
+                    
+                        
+                    
                 
             </div>
         </div>
@@ -2757,7 +2899,7 @@
                             </div>
                             
                                 <div class="text-gray-600 flex-1 text-sm font-normal mt-1.5 xl:pr-12">
-                                    <p>By providing your phone number, you consent to receive calls and transactional/informational text messages (SMS) from Caro Landscaping, powered by Topline Pro, including calls and messages made using AI-powered technology. You can unsubscribe at any time by replying STOP. Message and data rates may apply. Message frequency varies. See our <a target="_blank" href="https://tlp-legal.s3.us-east-2.amazonaws.com/Customer+Privacy+Policy+-+09092025.html" class="text-sm font-normal underline">Privacy Policy</a> for more details.</p>
+                                    <p>By providing your phone number, you consent to receive calls and transactional/informational text messages (SMS) from Caro Landscaping, powered by Topline Pro, including calls and messages made using AI-powered technology. You can unsubscribe at any time by replying STOP. Message and data rates may apply. Message frequency varies. See our <a target="_blank" href="https://dev.prosite.prophone.com/legal/privacy-policy" class="text-sm font-normal underline">Privacy Policy</a> for more details.</p>
                                 </div>
                             
                         </div>
@@ -3090,6 +3232,10 @@
 </template>
 
                                     
+                                
+                            
+                                
+                            
                                 
                             
                                 
@@ -3593,7 +3739,7 @@
                     </div>
                     <div class="text-white">
                         ⓒ All Rights Reserved <span class="mx-2"> | </span>
-                        <a target="_blank" href="https://tlp-legal.s3.us-east-2.amazonaws.com/Customer+Privacy+Policy+-+09092025.html" class="text-base text-gray-100">Privacy Policy</a>
+                        <a target="_blank" href="https://dev.prosite.prophone.com/legal/privacy-policy" class="text-base text-gray-100">Privacy Policy</a>
                     </div>
                 </div>
             <div class="relative px-6 xl:pr-32 max-w-7xl mx-auto">
@@ -3740,6 +3886,38 @@
                                         href="service-cool-service"
                                         class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
                                         >Cool Service</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-1"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >Test 1</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-2"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >test 2</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-3"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >test 3</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-4"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >test 4</a
                                     >
                                 </li>
                                 

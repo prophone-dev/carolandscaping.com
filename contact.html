@@ -116,7 +116,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d2sro2zadjtrg7.cloudfront.net/media/07160481-1359-45bd-8fd5-a852e7cf9fc5.png");
+      background-image: url("https://d2sro2zadjtrg7.cloudfront.net/media/e0cc9d62-4f64-4033-98e4-12e4cde83a46.png");
       background-size: cover;
   }
   
@@ -191,7 +191,7 @@
 
         
         
-        function detect_safari(){const e=navigator.userAgent;return!(!e.includes("Safari")||e.includes("Chrome"))}async function report_booking_submission_error(e,o,t){const n={slug:e,error:o,message:t,userAgent:navigator.userAgent};let r="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?r="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?r="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(r="http://127.0.0.1:8000"),await fetch(r+"/report-submission-error",{method:"POST",body:JSON.stringify(n)}).then((e=>{console.log("Submission error reported")})).catch((e=>{console.log("Failed to report submission error")}))}async function create_appointment(e,o,t,n,r=""){const s={booking_id:o,start_time:t,end_time:n};let i="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?i="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?i="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(i="http://127.0.0.1:8000");return await fetch(i+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(s)}).then((o=>{if(!o.ok)throw report_booking_submission_error(e,o,"Error in response to create Nylas appointment request"),o;return o.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((o=>{let t="There was a problem creating your appointment request.";return r&&(t+=" Please call us at "+r+" to request an appointment."),report_booking_submission_error(e,o,"Error creating Nylas appointment"),alert(t),""}))}function send_sms(e,o="contact-modal",t=""){try{const a="scheduler"===o;let c,l,d;"contact-embedded"===o?(c=document.forms.embeddedForm,d=document.getElementById("sendButton-embedded"),l="#error-state-modal-embedded"):(c=document.forms.contactModal,d=document.getElementById("sendButton"),l="#error-state-modal");const u=document.querySelector(l);u.innerHTML="",a||(d.disabled=!0,event.preventDefault());const p=e=>e.split(",")[0].match(/:(.*?);/)[1].split("/")[1],m=e=>`${([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,(e=>(e^crypto.getRandomValues(new Uint8Array(1))[0]&15>>e/4).toString(16)))}.${p(e)}`;function n(e,o){return new Promise((function(t,n){const r=new XMLHttpRequest,s=`${prositeURLUpload}?file_name=${o}&file_type=${e.type}`;r.open("GET",s),r.onreadystatechange=async function(){if(4===r.readyState)if(201===r.status){const n=JSON.parse(r.responseText);await function(e,o,t){return new Promise((function(n,r){const s=new XMLHttpRequest;s.open("PUT",o),s.onreadystatechange=()=>{4===s.readyState&&(200===s.status?(console.log(t,"url in uploadFile"),n(e.name)):alert("Could not upload file."))},s.send(e)}))}(e,n.signedRequest,n.url);t(o)}else alert("Could not get signed URL.")},r.send()}))}const g=()=>{const e=document.getElementById("contact-attachment");if(e){const o=e.value;if(!o)return Promise.resolve("");const t=m(o);return n(function(e,o){for(var t=e.split(","),n=t[0].match(/:(.*?);/)[1],r=atob(t[1]),s=r.length,i=new Uint8Array(s);s--;)i[s]=r.charCodeAt(s);return new File([i],o,{type:n})}(o,t),t).then((e=>e))}return Promise.resolve("")},h=(e="")=>{const o=new FormData(c),t={};for(const e of o.entries())t[e[0]]=e[1];return e&&(t["phone-number"]=e),t["phone-number"]=t["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),t},_=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};async function r(o,n=""){try{const r={ct:o},s=await g(),i=JSON.parse(sessionStorage.getItem("utmParams")||"{}");if(r.utm={utm_source:i.utm_source||null,utm_campaign:i.utm_campaign||null},a)r.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),r.message_id=sessionStorage.getItem("message_id"),r.start_time=sessionStorage.getItem("start_time"),r.end_time=sessionStorage.getItem("end_time");else{const e=h(n);sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),s&&(e["file-upload"]=s),r.fields=e}fetch(f+"/sms/"+e,{method:"POST",body:JSON.stringify(r)}).then((o=>{if(!o.ok)throw report_booking_submission_error(e,o,"Error in response from send_sms."),o;return o.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(a)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((o=>{a||(d.disabled=!1);let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,o,"Error calling send_sms backend").then((()=>{alert(n)}))}))}catch(o){let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request.");const r=o.toString()||"non-parsable error message";report_booking_submission_error(e,r,"Error assembling submission body").then((()=>{alert(n)}))}}let b;if(!a){const w=(s=c,i="#contact-phone-number",window.intlTelInputGlobals.getInstance(s.querySelector(i)));if(w){if(b=w.getNumber(),!b){return _("Phone number is required",u),void(d.disabled=!1)}if(!w.isValidNumber()){const y=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],v=w.getValidationError();return _(y[v]?y[v]:"Not a valid phone number",u),void(d.disabled=!1)}}}let f="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?f="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?f="https://stage.prosite.prophone.com":window.location.href.includes("8000")&&(f="http://127.0.0.1:8000"),detect_safari()?r("safari",b):grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(e){r(e,b)})).catch((o=>{let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,o,"Error executing captcha and/or submitting form").then((()=>{alert(n)}))}))}))}catch(S){let I="There was a problem submitting your request.";t&&(I+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,S,"General error in send_sms").then((()=>{alert(I)}))}var s,i}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
+        function detect_safari(){const e=navigator.userAgent;return!(!e.includes("Safari")||e.includes("Chrome"))}async function report_booking_submission_error(e,o,t){const n={slug:e,error:o,message:t,userAgent:navigator.userAgent};let r="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?r="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?r="https://stage.prosite.prophone.com":window.location.href.includes("prosite.stage.prophone.com")?r="https://prosite.stage.prophone.com":window.location.href.includes("8000")&&(r="http://127.0.0.1:8000"),await fetch(r+"/report-submission-error",{method:"POST",body:JSON.stringify(n)}).then((e=>{console.log("Submission error reported")})).catch((e=>{console.log("Failed to report submission error")}))}async function create_appointment(e,o,t,n,r=""){const s={booking_id:o,start_time:t,end_time:n};let i="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?i="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?i="https://stage.prosite.prophone.com":window.location.href.includes("prosite.stage.prophone.com")?i="https://prosite.stage.prophone.com":window.location.href.includes("8000")&&(i="http://127.0.0.1:8000");return await fetch(i+`/api/landing-page/${e}/homeowner/appointments`,{method:"POST",body:JSON.stringify(s)}).then((o=>{if(!o.ok)throw report_booking_submission_error(e,o,"Error in response to create Nylas appointment request"),o;return o.json()})).then((e=>e?.appointment_id?e.appointment_id:"")).catch((o=>{let t="There was a problem creating your appointment request.";return r&&(t+=" Please call us at "+r+" to request an appointment."),report_booking_submission_error(e,o,"Error creating Nylas appointment"),alert(t),""}))}function send_sms(e,o="contact-modal",t=""){try{const a="scheduler"===o;let c,l,d;"contact-embedded"===o?(c=document.forms.embeddedForm,d=document.getElementById("sendButton-embedded"),l="#error-state-modal-embedded"):(c=document.forms.contactModal,d=document.getElementById("sendButton"),l="#error-state-modal");const u=document.querySelector(l);u.innerHTML="",a||(d.disabled=!0,event.preventDefault());const p=e=>e.split(",")[0].match(/:(.*?);/)[1].split("/")[1],m=e=>`${([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,(e=>(e^crypto.getRandomValues(new Uint8Array(1))[0]&15>>e/4).toString(16)))}.${p(e)}`;function n(e,o){return new Promise((function(t,n){const r=new XMLHttpRequest,s=`${prositeURLUpload}?file_name=${o}&file_type=${e.type}`;r.open("GET",s),r.onreadystatechange=async function(){if(4===r.readyState)if(201===r.status){const n=JSON.parse(r.responseText);await function(e,o,t){return new Promise((function(n,r){const s=new XMLHttpRequest;s.open("PUT",o),s.onreadystatechange=()=>{4===s.readyState&&(200===s.status?(console.log(t,"url in uploadFile"),n(e.name)):alert("Could not upload file."))},s.send(e)}))}(e,n.signedRequest,n.url);t(o)}else alert("Could not get signed URL.")},r.send()}))}const g=()=>{const e=document.getElementById("contact-attachment");if(e){const o=e.value;if(!o)return Promise.resolve("");const t=m(o);return n(function(e,o){for(var t=e.split(","),n=t[0].match(/:(.*?);/)[1],r=atob(t[1]),s=r.length,i=new Uint8Array(s);s--;)i[s]=r.charCodeAt(s);return new File([i],o,{type:n})}(o,t),t).then((e=>e))}return Promise.resolve("")},h=(e="")=>{const o=new FormData(c),t={};for(const e of o.entries())t[e[0]]=e[1];return e&&(t["phone-number"]=e),t["phone-number"]=t["phone-number"].replace("(","").replace(")","").replace("-","").replace(" ",""),t},_=(e,o)=>{var t=document.createElement("div"),n=document.createElement("h1");n.innerHTML="❌";var r=document.createElement("h1");r.innerHTML=e,r.className="ml-3",t.appendChild(n),t.appendChild(r),t.className="flex text-red-900 w-full p-4 rounded items-center align-center bg-red-100",o.className="",o.appendChild(t)};async function r(o,n=""){try{const r={ct:o},s=await g(),i=JSON.parse(sessionStorage.getItem("utmParams")||"{}");if(r.utm={utm_source:i.utm_source||null,utm_campaign:i.utm_campaign||null},a)r.nylas_booking_id=sessionStorage.getItem("nylas_booking_id"),r.message_id=sessionStorage.getItem("message_id"),r.start_time=sessionStorage.getItem("start_time"),r.end_time=sessionStorage.getItem("end_time");else{const e=h(n);sessionStorage.setItem("sender_name",e["full-name"]),sessionStorage.setItem("sender_email",e.email),s&&(e["file-upload"]=s),r.fields=e}fetch(f+"/sms/"+e,{method:"POST",body:JSON.stringify(r)}).then((o=>{if(!o.ok)throw report_booking_submission_error(e,o,"Error in response from send_sms."),o;return o.json()})).then((e=>{if(e?.message_id&&e?.booking_id&&e?.show_schedule_form){sessionStorage.setItem("message_id",e.message_id),sessionStorage.setItem("booking_id",e.booking_id),window.location.replace("contact-2-step");try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return e}if(a)return sessionStorage.removeItem("message_id"),sessionStorage.removeItem("sender_name"),sessionStorage.removeItem("sender_email"),sessionStorage.removeItem("booking_id"),setTimeout((()=>{window.location.replace("./")}),1e4),e;try{console.log("gtag_report_conversion"),gtag_report_conversion&&gtag_report_conversion()}catch(e){console.log("no gtag_report_conversion")}return window.location.replace("success"),e})).catch((o=>{a||(d.disabled=!1);let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,o,"Error calling send_sms backend").then((()=>{alert(n)}))}))}catch(o){let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request.");const r=o.toString()||"non-parsable error message";report_booking_submission_error(e,r,"Error assembling submission body").then((()=>{alert(n)}))}}let b;if(!a){const w=(s=c,i="#contact-phone-number",window.intlTelInputGlobals.getInstance(s.querySelector(i)));if(w){if(b=w.getNumber(),!b){return _("Phone number is required",u),void(d.disabled=!1)}if(!w.isValidNumber()){const y=["Invalid phone number","Invalid phone number country code","Phone number is too short","Phone number is too long","Invalid phone number"],v=w.getValidationError();return _(y[v]?y[v]:"Not a valid phone number",u),void(d.disabled=!1)}}}let f="https://prosite.prophone.com";window.location.href.includes("dev.prosite.prophone.com")||window.location.href.includes("dev.prosite.toplinepro.com")?f="https://dev.prosite.prophone.com":window.location.href.includes("stage.prosite.prophone.com")||window.location.href.includes("stage.prosite.toplinepro.com")?f="https://stage.prosite.prophone.com":window.location.href.includes("prosite.stage.prophone.com")?f="https://prosite.stage.prophone.com":window.location.href.includes("8000")&&(f="http://127.0.0.1:8000"),detect_safari()?r("safari",b):grecaptcha.ready((function(){grecaptcha.execute("6Ld-uOAnAAAAACS7jwMHAJ3Rbt3tvEafIIDkG5jR",{action:"submit"}).then((function(e){r(e,b)})).catch((o=>{let n="There was a problem submitting your request.";t&&(n+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,o,"Error executing captcha and/or submitting form").then((()=>{alert(n)}))}))}))}catch(S){let I="There was a problem submitting your request.";t&&(I+=" Please call us at "+t+" to discuss your request."),report_booking_submission_error(e,S,"General error in send_sms").then((()=>{alert(I)}))}var s,i}document.addEventListener("DOMContentLoaded",(function(e){document.querySelectorAll(".contact-phone-number").forEach((e=>{const o=window.intlTelInput(e,{nationalMode:!0,onlyCountries:["us","gb","ca"],utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"});function t(){o.setNumber(o.getNumber())}e.addEventListener("change",t),e.addEventListener("keyup",t)}))}));
     </script>
     <script type="text/javascript">
         
@@ -1417,6 +1417,114 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                             </li>
                         
                     
+                        
+
+                            <li class="w-full xs:w-[364px] h-[146px] bg-gray-300 rounded-md overflow-hidden
+                                       transform origin-bottom transition-all duration-500"
+                            >
+                                <a
+                                    href="service-test-1"
+                                    class="relative block overflow-hidden h-full flex justify-end"
+                                >
+                                    
+                                    <div class="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-t from-black/20 to-black/0"></div>
+                                    <div class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/50 to-black/20"></div>
+                                    <div class="w-full p-6 flex flex-col self-end justify-center overflow-hidden">
+                                        <div class="relative z-10 self-end">
+                                            <span class="flex relative items-center text-tertiary transition-all duration-500 leading-[166%] font-normal tracking-tight text-[24px]">
+                                                Test 1
+                                                <svg class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 -right-3 -top-1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-20 -16 48 48" fill="none">
+                                                    <path d="M1.7998 1.59961L10.1998 9.99961L1.7998 18.3996" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        
+                    
+                        
+
+                            <li class="w-full xs:w-[364px] h-[146px] bg-gray-300 rounded-md overflow-hidden
+                                       transform origin-bottom transition-all duration-500"
+                            >
+                                <a
+                                    href="service-test-2"
+                                    class="relative block overflow-hidden h-full flex justify-end"
+                                >
+                                    
+                                    <div class="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-t from-black/20 to-black/0"></div>
+                                    <div class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/50 to-black/20"></div>
+                                    <div class="w-full p-6 flex flex-col self-end justify-center overflow-hidden">
+                                        <div class="relative z-10 self-end">
+                                            <span class="flex relative items-center text-tertiary transition-all duration-500 leading-[166%] font-normal tracking-tight text-[24px]">
+                                                test 2
+                                                <svg class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 -right-3 -top-1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-20 -16 48 48" fill="none">
+                                                    <path d="M1.7998 1.59961L10.1998 9.99961L1.7998 18.3996" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        
+                    
+                        
+
+                            <li class="w-full xs:w-[364px] h-[146px] bg-gray-300 rounded-md overflow-hidden
+                                       transform origin-bottom transition-all duration-500"
+                            >
+                                <a
+                                    href="service-test-3"
+                                    class="relative block overflow-hidden h-full flex justify-end"
+                                >
+                                    
+                                    <div class="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-t from-black/20 to-black/0"></div>
+                                    <div class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/50 to-black/20"></div>
+                                    <div class="w-full p-6 flex flex-col self-end justify-center overflow-hidden">
+                                        <div class="relative z-10 self-end">
+                                            <span class="flex relative items-center text-tertiary transition-all duration-500 leading-[166%] font-normal tracking-tight text-[24px]">
+                                                test 3
+                                                <svg class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 -right-3 -top-1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-20 -16 48 48" fill="none">
+                                                    <path d="M1.7998 1.59961L10.1998 9.99961L1.7998 18.3996" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        
+                    
+                        
+
+                            <li class="w-full xs:w-[364px] h-[146px] bg-gray-300 rounded-md overflow-hidden
+                                       transform origin-bottom transition-all duration-500"
+                            >
+                                <a
+                                    href="service-test-4"
+                                    class="relative block overflow-hidden h-full flex justify-end"
+                                >
+                                    
+                                    <div class="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-t from-black/20 to-black/0"></div>
+                                    <div class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/50 to-black/20"></div>
+                                    <div class="w-full p-6 flex flex-col self-end justify-center overflow-hidden">
+                                        <div class="relative z-10 self-end">
+                                            <span class="flex relative items-center text-tertiary transition-all duration-500 leading-[166%] font-normal tracking-tight text-[24px]">
+                                                test 4
+                                                <svg class="absolute opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 -right-3 -top-1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-20 -16 48 48" fill="none">
+                                                    <path d="M1.7998 1.59961L10.1998 9.99961L1.7998 18.3996" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        
+                    
                 </ul>
             </div>
         </div>
@@ -1845,6 +1953,90 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                 </a>
                             </li>
                         
+                            <li class="splide__slide relative w-[320px] h-[410px] group overflow-hidden
+                                       transform origin-bottom transition-all duration-500"
+                            >
+                                <a
+                                    href="service-test-1"
+                                    class="absolute bottom-0 inset-x-0 block overflow-hidden h-[373px] transition-all duration-500 hover:h-[410px] rounded-b-md rounded-t-[160px] flex justify-end"
+                                >
+                                    
+                                    <div class="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-t from-black/20 to-black/0"></div>
+                                    <div class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/50 to-black/20"></div>
+                                    <div class="w-full px-6 py-8  h-full flex flex-col self-end justify-end overflow-hidden">
+                                        <div class="relative z-10 self-start">
+                                            <span class="flex items-center text-tertiary leading-[166%] font-normal tracking-tight text-[24px]">
+                                                Test 1
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        
+                            <li class="splide__slide relative w-[320px] h-[410px] group overflow-hidden
+                                       transform origin-bottom transition-all duration-500"
+                            >
+                                <a
+                                    href="service-test-2"
+                                    class="absolute bottom-0 inset-x-0 block overflow-hidden h-[373px] transition-all duration-500 hover:h-[410px] rounded-b-md rounded-t-[160px] flex justify-end"
+                                >
+                                    
+                                    <div class="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-t from-black/20 to-black/0"></div>
+                                    <div class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/50 to-black/20"></div>
+                                    <div class="w-full px-6 py-8  h-full flex flex-col self-end justify-end overflow-hidden">
+                                        <div class="relative z-10 self-start">
+                                            <span class="flex items-center text-tertiary leading-[166%] font-normal tracking-tight text-[24px]">
+                                                test 2
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        
+                            <li class="splide__slide relative w-[320px] h-[410px] group overflow-hidden
+                                       transform origin-bottom transition-all duration-500"
+                            >
+                                <a
+                                    href="service-test-3"
+                                    class="absolute bottom-0 inset-x-0 block overflow-hidden h-[373px] transition-all duration-500 hover:h-[410px] rounded-b-md rounded-t-[160px] flex justify-end"
+                                >
+                                    
+                                    <div class="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-t from-black/20 to-black/0"></div>
+                                    <div class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/50 to-black/20"></div>
+                                    <div class="w-full px-6 py-8  h-full flex flex-col self-end justify-end overflow-hidden">
+                                        <div class="relative z-10 self-start">
+                                            <span class="flex items-center text-tertiary leading-[166%] font-normal tracking-tight text-[24px]">
+                                                test 3
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        
+                            <li class="splide__slide relative w-[320px] h-[410px] group overflow-hidden
+                                       transform origin-bottom transition-all duration-500"
+                            >
+                                <a
+                                    href="service-test-4"
+                                    class="absolute bottom-0 inset-x-0 block overflow-hidden h-[373px] transition-all duration-500 hover:h-[410px] rounded-b-md rounded-t-[160px] flex justify-end"
+                                >
+                                    
+                                    <div class="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-t from-black/20 to-black/0"></div>
+                                    <div class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/50 to-black/20"></div>
+                                    <div class="w-full px-6 py-8  h-full flex flex-col self-end justify-end overflow-hidden">
+                                        <div class="relative z-10 self-start">
+                                            <span class="flex items-center text-tertiary leading-[166%] font-normal tracking-tight text-[24px]">
+                                                test 4
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        
                     </ul>
                 </div>
                 <div class="my-carousel-progress absolute rounded-md inset-x-0 bg-white mt-8 left-1/2 -translate-x-1/2 w-[526px]">
@@ -2228,6 +2420,30 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                                     
                                                                 
                                                                     
+                                                                    <a
+                                                                        href=" service-guard-dogs "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        Guard Dogs
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-backyard-band "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        Backyard Band
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                
+                                                                    
+                                                                
+                                                                    
                                                                 
                                                                     
                                                                 
@@ -2255,23 +2471,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                                     
                                                                 
                                                                     
-                                                                    <a
-                                                                        href=" service-guard-dogs "
-                                                                        role="menuitem"
-                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                                    >
-                                                                        Guard Dogs
-                                                                    </a>
-                                                                    
                                                                 
-                                                                    
-                                                                    <a
-                                                                        href=" service-backyard-band "
-                                                                        role="menuitem"
-                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                                    >
-                                                                        Backyard Band
-                                                                    </a>
                                                                     
                                                                 
                                                                     
@@ -2311,6 +2511,46 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                                         class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                                     >
                                                                         Cool Service
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-test-1 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        Test 1
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-test-2 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test 2
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-test-3 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test 3
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" service-test-4 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test 4
                                                                     </a>
                                                                     
                                                                 
@@ -2475,6 +2715,18 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                                     
                                                                 
                                                                     
+                                                                    <a
+                                                                        href=" gallery-new-gallery-test "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        new gallery test gallery
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                
+                                                                    
                                                                 
                                                                     
                                                                 
@@ -2513,14 +2765,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                                 
                                                                     
                                                                 
-                                                                    
-                                                                    <a
-                                                                        href=" gallery-new-gallery-test "
-                                                                        role="menuitem"
-                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
-                                                                    >
-                                                                        new gallery test gallery
-                                                                    </a>
                                                                     
                                                                 
                                                                     
@@ -2590,6 +2834,26 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                                         class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
                                                                     >
                                                                         Test Gallery 1234 gallery
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" gallery-test "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test
+                                                                    </a>
+                                                                    
+                                                                
+                                                                    
+                                                                    <a
+                                                                        href=" gallery-test-gallery-23 "
+                                                                        role="menuitem"
+                                                                        class="block p-4 rounded-md focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-primary hover:text-white text-base font-bold uppercase whitespace-nowrap"
+                                                                    >
+                                                                        test gallery 23
                                                                     </a>
                                                                     
                                                                 
@@ -3042,6 +3306,50 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
 
                                                             </a>
                                                         
+                                                            <a
+                                                                href="service-test-1"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    Test 1
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="service-test-2"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test 2
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="service-test-3"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test 3
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="service-test-4"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test 4
+                                                                </span>
+
+                                                            </a>
+                                                        
                                                     </div>
                                                 </div>
                                             
@@ -3261,6 +3569,28 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                             >
                                                                 <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
                                                                     Test Gallery 1234 gallery
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="gallery-test"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test
+                                                                </span>
+
+                                                            </a>
+                                                        
+                                                            <a
+                                                                href="gallery-test-gallery-23"
+                                                                role="menuitem"
+                                                                class="block"
+                                                            >
+                                                                <span class="text-[20px] leading-[120%] text-white hover:text-secondary">
+                                                                    test gallery 23
                                                                 </span>
 
                                                             </a>
@@ -3940,7 +4270,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                 <img
 
                                                     class="object-cover w-full h-full"
-                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/07160481-1359-45bd-8fd5-a852e7cf9fc5.png"
+                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/e0cc9d62-4f64-4033-98e4-12e4cde83a46.png"
                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -3956,7 +4286,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                 <img
 
                                                     class="object-cover w-full h-full"
-                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/d2d05e92-141c-4765-8c7d-04fcb3d4cb71.png"
+                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/9c389230-11a8-47a4-9347-dbd99362dd74.png"
                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -3972,7 +4302,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                 <img
 
                                                     class="object-cover w-full h-full"
-                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/f06c4d24-016e-498c-9da4-1c1b2e59eab9.png"
+                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/500f0386-091b-4e4b-af24-be06f0873519.png"
                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -3988,7 +4318,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                 <img
 
                                                     class="object-cover w-full h-full"
-                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/39692695-75e8-435d-93df-afea4ebd3cbe.png"
+                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/0c5faf3e-ee5f-4431-bbd0-a12f7505c95c.png"
                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -4043,7 +4373,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                 <img
 
                                                     class="object-cover w-full h-full"
-                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/12c2ca6e-a086-439f-a6a1-4202767e26fe.png"
+                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/ab601613-f935-4ed1-a892-3592b4ac0005.png"
                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -4059,7 +4389,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                 <img
 
                                                     class="object-cover w-full h-full"
-                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/77210851-6ff0-420d-8315-65685475b007.png"
+                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/d72e08ec-1a51-4334-9d48-f3d822d2854b.png"
                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -4075,7 +4405,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                 <img
 
                                                     class="object-cover w-full h-full"
-                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/6dd8e92a-e8cb-45cc-b4dd-70f128502836.png"
+                                                    src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/6bf9b9e2-bcfe-4bed-babb-b08af8c1353a.png"
                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                 />
                                             
@@ -4130,7 +4460,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                             <img
 
                                                 class="object-cover w-full h-full"
-                                                src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/91861353-0c68-40ce-9cbd-22cbe31c197c.jpg"
+                                                src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/998aee19-7a15-460d-b449-7da4d3d8a7cb.png"
                                                 alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                             />
                                         
@@ -4146,7 +4476,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                             <img
 
                                                 class="object-cover w-full h-full"
-                                                src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/6cb2b5f0-e2f1-42e7-9464-58c282aca2a0.jpg"
+                                                src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/c5eba529-1ddc-4bac-97c0-d9311f590508.png"
                                                 alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                             />
                                         
@@ -4162,7 +4492,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                             <img
 
                                                 class="object-cover w-full h-full"
-                                                src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/9dd7b41d-39d1-49d0-97ed-92e409a950fe.png"
+                                                src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/4bc884bb-1b7e-40bd-86c5-d8a45ee9cf6f.png"
                                                 alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                             />
                                         
@@ -4178,7 +4508,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                             <img
 
                                                 class="object-cover w-full h-full"
-                                                src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/d9ce3508-af6d-4016-8f1a-c37c4f4b20fa.png"
+                                                src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/bc06f370-8333-4fea-a5b3-a0b77f588acc.png"
                                                 alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                             />
                                         
@@ -4248,6 +4578,314 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                     <div id="gallery-main" class="splide gallery-splide flex items-center justify-center lg:px-20 w-full">
                                         <div class="splide__track">
                                             <ul class="splide__list">
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e0cc9d62-4f64-4033-98e4-12e4cde83a46.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9c389230-11a8-47a4-9347-dbd99362dd74.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/500f0386-091b-4e4b-af24-be06f0873519.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/0c5faf3e-ee5f-4431-bbd0-a12f7505c95c.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ab601613-f935-4ed1-a892-3592b4ac0005.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d72e08ec-1a51-4334-9d48-f3d822d2854b.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/6bf9b9e2-bcfe-4bed-babb-b08af8c1353a.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/998aee19-7a15-460d-b449-7da4d3d8a7cb.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c5eba529-1ddc-4bac-97c0-d9311f590508.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4bc884bb-1b7e-40bd-86c5-d8a45ee9cf6f.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/bc06f370-8333-4fea-a5b3-a0b77f588acc.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/fede64c8-ef7b-4a25-8576-d638faa522f3.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/6d5d9e86-9384-4411-aff5-a2ad2e9e43c3.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9face059-8285-467e-93db-c213e90ec514.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cd708744-f6da-4444-b12e-27f782fa7c29.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3c281a19-30b2-4d48-a06a-1dfd966d5fd7.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/18b86190-164e-480d-b98a-577ebded46bc.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/40542108-f9d4-4919-a008-49a8f142125f.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/b17708f3-7ddd-4d25-a7ed-ac635ce7e40f.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/742fa80e-92bb-46a6-8a12-dc33182a1132.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/b1d8ca19-7a7a-496e-8350-ad3d869af254.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/714fcdc6-421c-45ff-8bf8-46d078b22786.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/5b41322e-0dd0-478a-ac5a-3322143e39d0.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                            
+                                                                <img
+                                                                    class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/65a00ccd-b217-462b-9c0f-eca1a3f4bfa8.png"
+                                                                    alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                                />
+                                                            
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                                <video class="lazy bg-black rounded shadow-md object-contain w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px]"
+                                                                         preload="metadata" autoplay loop muted controls>
+                                                                        <source data-src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/e654d750-377e-4835-83f2-f6794e3e1945.mp4#t=0.5">
+                                                                        Your browser does not support the video tag.
+                                                                </video>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="splide__slide">
+                                                        
+                                                                <video class="lazy bg-black rounded shadow-md object-contain w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px]"
+                                                                         preload="metadata" autoplay loop muted controls>
+                                                                        <source data-src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/77ec74de-211c-45e3-8f44-9fc0c7b6e9ec.mp4#t=0.5">
+                                                                        Your browser does not support the video tag.
+                                                                </video>
+                                                        
+                                                    </li>
                                                 
                                                     <li class="splide__slide">
                                                         
@@ -10334,7 +10972,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                             
                                                                 <img
                                                                     class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
-                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d3824414-e50d-461e-a4d2-f6c5ce8c1987.png"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/85101649-5cce-48d3-b19d-2d84d039b419.jpeg"
                                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                                 />
                                                             
@@ -10346,7 +10984,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                             
                                                                 <img
                                                                     class="w-full h-[250px] sm:h-[360px] lg:h-[400px] xl:h-[500px] object-cover"
-                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/85101649-5cce-48d3-b19d-2d84d039b419.jpeg"
+                                                                    src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d3824414-e50d-461e-a4d2-f6c5ce8c1987.png"
                                                                     alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                                 />
                                                             
@@ -10384,6 +11022,310 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                             <div id="gallery-thumbs" class="splide">
                                 <div class="splide__track">
                                     <ul class="splide__list">
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/e0cc9d62-4f64-4033-98e4-12e4cde83a46.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9c389230-11a8-47a4-9347-dbd99362dd74.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/500f0386-091b-4e4b-af24-be06f0873519.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/0c5faf3e-ee5f-4431-bbd0-a12f7505c95c.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/ab601613-f935-4ed1-a892-3592b4ac0005.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d72e08ec-1a51-4334-9d48-f3d822d2854b.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/6bf9b9e2-bcfe-4bed-babb-b08af8c1353a.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/998aee19-7a15-460d-b449-7da4d3d8a7cb.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/c5eba529-1ddc-4bac-97c0-d9311f590508.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/4bc884bb-1b7e-40bd-86c5-d8a45ee9cf6f.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/bc06f370-8333-4fea-a5b3-a0b77f588acc.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/fede64c8-ef7b-4a25-8576-d638faa522f3.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/6d5d9e86-9384-4411-aff5-a2ad2e9e43c3.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/9face059-8285-467e-93db-c213e90ec514.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/cd708744-f6da-4444-b12e-27f782fa7c29.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3c281a19-30b2-4d48-a06a-1dfd966d5fd7.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/18b86190-164e-480d-b98a-577ebded46bc.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/40542108-f9d4-4919-a008-49a8f142125f.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/b17708f3-7ddd-4d25-a7ed-ac635ce7e40f.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/742fa80e-92bb-46a6-8a12-dc33182a1132.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/b1d8ca19-7a7a-496e-8350-ad3d869af254.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/714fcdc6-421c-45ff-8bf8-46d078b22786.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/5b41322e-0dd0-478a-ac5a-3322143e39d0.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    
+                                                        <img
+                                                            class="w-[100px] h-[80px] object-cover"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/65a00ccd-b217-462b-9c0f-eca1a3f4bfa8.png"
+                                                            alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
+                                                        />
+                                                    
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    <video class="w-[100px] h-[80px] lazy object-cover" preload="metadata" muted>
+                                                        <source data-src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/e654d750-377e-4835-83f2-f6794e3e1945.mp4#t=0.5">
+                                                    </video>
+                                                
+                                            </li>
+                                        
+                                            <li class="splide__slide">
+                                                
+                                                    <video class="w-[100px] h-[80px] lazy object-cover" preload="metadata" muted>
+                                                        <source data-src="https://landing-page-app-hero-images-dev.s3.amazonaws.com/media/77ec74de-211c-45e3-8f44-9fc0c7b6e9ec.mp4#t=0.5">
+                                                    </video>
+                                                
+                                            </li>
                                         
                                             <li class="splide__slide">
                                                 
@@ -16466,7 +17408,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                     
                                                         <img
                                                             class="w-[100px] h-[80px] object-cover"
-                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d3824414-e50d-461e-a4d2-f6c5ce8c1987.png"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/85101649-5cce-48d3-b19d-2d84d039b419.jpeg"
                                                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                         />
                                                     
@@ -16478,7 +17420,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css
                                                     
                                                         <img
                                                             class="w-[100px] h-[80px] object-cover"
-                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/85101649-5cce-48d3-b19d-2d84d039b419.jpeg"
+                                                            src="https://d2sro2zadjtrg7.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/d3824414-e50d-461e-a4d2-f6c5ce8c1987.png"
                                                             alt=" for Caro Landscaping in Boston, MA" loading="lazy" decoding="async"
                                                         />
                                                     
@@ -22340,7 +23282,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                     </div>
                     <div class="text-white">
                         ⓒ All Rights Reserved <span class="mx-2"> | </span>
-                        <a target="_blank" href="https://tlp-legal.s3.us-east-2.amazonaws.com/Customer+Privacy+Policy+-+09092025.html" class="text-base text-gray-100">Privacy Policy</a>
+                        <a target="_blank" href="https://dev.prosite.prophone.com/legal/privacy-policy" class="text-base text-gray-100">Privacy Policy</a>
                     </div>
                 </div>
             <div class="relative px-6 xl:pr-32 max-w-7xl mx-auto">
@@ -22487,6 +23429,38 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                                         href="service-cool-service"
                                         class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
                                         >Cool Service</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-1"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >Test 1</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-2"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >test 2</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-3"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >test 3</a
+                                    >
+                                </li>
+                                
+                                <li>
+                                    <a
+                                        href="service-test-4"
+                                        class="text-sm text-white rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0 opacity-70"
+                                        >test 4</a
                                     >
                                 </li>
                                 
@@ -23143,7 +24117,7 @@ We invite you to witness the transformation and consider ZZZ Beantown Tutoring &
                             </div>
                             
                                 <div class="text-gray-600 flex-1 text-sm font-normal mt-1.5 xl:pr-12">
-                                    <p>By providing your phone number, you consent to receive calls and transactional/informational text messages (SMS) from Caro Landscaping, powered by Topline Pro, including calls and messages made using AI-powered technology. You can unsubscribe at any time by replying STOP. Message and data rates may apply. Message frequency varies. See our <a target="_blank" href="https://tlp-legal.s3.us-east-2.amazonaws.com/Customer+Privacy+Policy+-+09092025.html" class="text-sm font-normal underline">Privacy Policy</a> for more details.</p>
+                                    <p>By providing your phone number, you consent to receive calls and transactional/informational text messages (SMS) from Caro Landscaping, powered by Topline Pro, including calls and messages made using AI-powered technology. You can unsubscribe at any time by replying STOP. Message and data rates may apply. Message frequency varies. See our <a target="_blank" href="https://dev.prosite.prophone.com/legal/privacy-policy" class="text-sm font-normal underline">Privacy Policy</a> for more details.</p>
                                 </div>
                             
                         </div>
