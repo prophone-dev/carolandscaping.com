@@ -4848,6 +4848,23 @@ document.addEventListener('DOMContentLoaded', () => {
                                     
                                         
                                         
+                                        
+                                        
+                                            <div>
+                                                <label for="contact-email" class="font-medium xl:text-base text-gray-600 text-sm">Email<span> *</span></label>
+                                                <input
+                                                    type="text"
+                                                    name="email"
+                                                    id="contact-email"
+                                                    class="block w-full py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
+                                                    placeholder="name@example.com"
+                                                    required
+                                                />
+                                            </div>
+                                        
+                                    
+                                        
+                                        
                                             <div>
                                                 <label for="contact-phone-number" class="font-medium xl:text-base text-gray-600 text-sm">Photo number *</label>
                                                 <input
@@ -4867,26 +4884,29 @@ document.addEventListener('DOMContentLoaded', () => {
                                         
                                         
                                         
+                                    
+                                        
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+                                        
                                             <div>
-                                                <label for="contact-email" class="font-medium xl:text-base text-gray-600 text-sm">Email<span> *</span></label>
+                                                <label for="contact-address" class="font-medium xl:text-base text-gray-600 text-sm">
+                                                    Address
+                                                </label>
                                                 <input
                                                     type="text"
-                                                    name="email"
-                                                    id="contact-email"
-                                                    class="block w-full py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
-                                                    placeholder="name@example.com"
-                                                    required
+                                                    name="address"
+                                                    id="contact-address"
+                                                    class="block w-full  py-2.5 mt-1 rounded-sm shadow-sm border-2 border-gray-200 focus:ring-secondary focus:border-secondary"
+                                                    placeholder="123 Main Street, Boston, MA, 11201"
+                                                    onkeydown="if(event.key === 'Enter') event.preventDefault();"
+                                                    
                                                 />
                                             </div>
-                                        
-                                    
-                                        
-                                        
-                                        
-                                        
-                                    
-                                        
-                                        
                                         
                                         
                                     
@@ -5162,6 +5182,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                                     </div>
                                                 </div>
                                             </div>
+                                        
+                                        
+                                    
+                                        
+                                        
+
+
+                                        
                                         
                                         
                                     
